@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours PHP - PHP Hero Academy</title>
+    <link rel="stylesheet" href="cours-style.css">
+</head>
+<body>
+    <!-- Navigation principale -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">PHP Hero Academy</span>
+            </a>
+            <div class="nav-actions">
+                <button class="theme-selector-btn" id="themeSelectorBtn">
+                    <span id="currentThemeIcon">🎮</span>
+                    <span id="currentThemeName">Choisir un thème</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="progress-indicator">
+                    <span class="progress-text">Progression</span>
+                    <div class="progress-bar-mini">
+                        <div class="progress-fill-mini" id="progressFillMini"></div>
+                    </div>
+                    <span class="progress-percent" id="progressPercent">0%</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteneur principal -->
+    <div class="main-container">
+        <!-- Sidebar de navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>
+                    <span id="sidebarThemeIcon">📚</span>
+                    <span id="sidebarThemeTitle">Cours PHP</span>
+                </h2>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="sidebar-content" id="sidebarContent">
+                <!-- Les modules seront injectés ici par JavaScript -->
+            </div>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="content-area">
+            <div class="lesson-container" id="lessonContainer">
+                <!-- État initial : sélection du thème -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-content">
+                        <h1>Bienvenue sur PHP Hero Academy</h1>
+                        <p class="welcome-subtitle">Choisissez votre univers préféré pour commencer l'aventure</p>
+
+                        <div class="theme-cards">
+                            <div class="theme-card" data-theme="macon">
+                                <div class="theme-card-icon">👷‍♂️</div>
+                                <h3>Mode Maçon</h3>
+                                <p>Construisez votre code comme un artisan bâtit un mur</p>
+                                <div class="theme-stats">
+                                    <span>🧱 4 Modules</span>
+                                    <span>📚 25+ Leçons</span>
+                                </div>
+                                <button class="btn-select-theme" onclick="selectTheme('macon')">
+                                    Commencer
+                                </button>
+                            </div>
+
+                            <div class="theme-card" data-theme="cuisinier">
+                                <div class="theme-card-icon">👨‍🍳</div>
+                                <h3>Mode Cuisinier</h3>
+                                <p>Cuisinez du code comme un chef prépare un plat</p>
+                                <div class="theme-stats">
+                                    <span>🍳 3 Modules</span>
+                                    <span>📚 20+ Leçons</span>
+                                </div>
+                                <button class="btn-select-theme" onclick="selectTheme('cuisinier')">
+                                    Commencer
+                                </button>
+                            </div>
+
+                            <div class="theme-card" data-theme="gamer">
+                                <div class="theme-card-icon">🎮</div>
+                                <h3>Mode Gamer</h3>
+                                <p>Gérez votre code comme un inventaire RPG</p>
+                                <div class="theme-stats">
+                                    <span>⚔️ 3 Modules</span>
+                                    <span>📚 20+ Leçons</span>
+                                </div>
+                                <button class="btn-select-theme" onclick="selectTheme('gamer')">
+                                    Commencer
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="welcome-note">
+                            <p>💡 Les mêmes concepts, 3 façons différentes de les apprendre</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zone de chargement -->
+                <div class="loading-state" id="loadingState" style="display: none;">
+                    <div class="loader"></div>
+                    <p>Chargement du cours...</p>
+                </div>
+
+                <!-- Zone d'erreur -->
+                <div class="error-state" id="errorState" style="display: none;">
+                    <div class="error-icon">⚠️</div>
+                    <h3>Oups ! Une erreur s'est produite</h3>
+                    <p id="errorMessage"></p>
+                    <button class="btn-retry" onclick="location.reload()">Réessayer</button>
+                </div>
+
+                <!-- Contenu de la leçon -->
+                <article class="lesson-content" id="lessonContent" style="display: none;">
+                    <div class="lesson-header">
+                        <div class="lesson-meta">
+                            <span class="lesson-module" id="lessonModule"></span>
+                            <span class="lesson-duration" id="lessonDuration"></span>
+                        </div>
+                        <h1 class="lesson-title" id="lessonTitle"></h1>
+                    </div>
+
+                    <div class="lesson-body" id="lessonBody">
+                        <!-- Le contenu Markdown sera affiché ici -->
+                    </div>
+
+                    <div class="lesson-footer">
+                        <div class="lesson-actions">
+                            <button class="btn-nav btn-prev" id="btnPrev" onclick="navigatePrev()">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                                Précédent
+                            </button>
+                            <button class="btn-complete" id="btnComplete" onclick="markComplete()">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Marquer comme terminé
+                            </button>
+                            <button class="btn-nav btn-next" id="btnNext" onclick="navigateNext()">
+                                Suivant
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de sélection de thème -->
+    <div class="modal" id="themeModal" style="display: none;">
+        <div class="modal-backdrop" onclick="closeThemeModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Changer de thème</h2>
+                <button class="modal-close" onclick="closeThemeModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Votre progression sera conservée. Vous pourrez revenir à ce thème à tout moment.</p>
+                <div class="theme-options">
+                    <div class="theme-option" onclick="changeTheme('macon')">
+                        <span class="theme-option-icon">👷‍♂️</span>
+                        <div class="theme-option-info">
+                            <h4>Mode Maçon</h4>
+                            <p>Construisez votre code</p>
+                        </div>
+                    </div>
+                    <div class="theme-option" onclick="changeTheme('cuisinier')">
+                        <span class="theme-option-icon">👨‍🍳</span>
+                        <div class="theme-option-info">
+                            <h4>Mode Cuisinier</h4>
+                            <p>Cuisinez du code</p>
+                        </div>
+                    </div>
+                    <div class="theme-option" onclick="changeTheme('gamer')">
+                        <span class="theme-option-icon">🎮</span>
+                        <div class="theme-option-info">
+                            <h4>Mode Gamer</h4>
+                            <p>Gérez votre inventaire</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="courses.js"></script>
+    <script src="markdown-parser.js"></script>
+    <script src="cours-app.js"></script>
+</body>
+</html>
