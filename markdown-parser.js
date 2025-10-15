@@ -70,22 +70,9 @@ class MarkdownParser {
         // Restaurer les blocs de code avec coloration
         codeBlocks.forEach((block, index) => {
             const highlighted = this.highlightCode(block.code, block.lang);
-            const codeHtml = `
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="code-lang">${block.lang}</span>
-                        <button class="copy-btn" onclick="copyCode(this)">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                            Copier
-                        </button>
-                    </div>
-                    <pre><code class="language-${block.lang}">${highlighted}</code></pre>
-                </div>
-            `;
-            html = html.replace(`__CODE_BLOCK_${index}__`, codeHtml);
+            const codeHtml = `<div class="code-block"><div class="code-header"><span class="code-lang">${block.lang}</span><button class="copy-btn" onclick="copyCode(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copier</button></div><pre><code class="language-${block.lang}">${highlighted}</code></pre></div>`;
+            const placeholder = `__CODE_BLOCK_${index}__`;
+            html = html.replace(new RegExp(placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), codeHtml);
         });
 
         return html;
