@@ -31,8 +31,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 20px;
+    line-height: 1.8;
     color: var(--dark);
     background: var(--light);
     overflow-x: hidden;
@@ -299,7 +299,7 @@ body {
 }
 
 .lesson-item-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
@@ -308,7 +308,7 @@ body {
 }
 
 .lesson-item-duration {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--gray);
     margin-top: 0.25rem;
 }
@@ -368,14 +368,17 @@ body {
 /* Contenu principal */
 .content-area {
     flex: 1;
-    background: var(--white);
+    background: linear-gradient(to bottom, #ffffff 0%, #fafbfc 100%);
     overflow-y: auto;
 }
 
 .lesson-container {
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
     padding: 3rem;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 /* Welcome screen */
@@ -587,16 +590,16 @@ body {
 }
 
 .lesson-title {
-    font-size: clamp(2.25rem, 4vw, 2.75rem);
+    font-size: clamp(2.5rem, 5vw, 3rem);
     font-weight: 800;
     color: var(--dark);
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 /* Markdown styling */
 .lesson-body {
-    font-size: 1.15rem;
-    line-height: 1.9;
+    font-size: 1.3rem;
+    line-height: 2;
     color: var(--dark);
 }
 
@@ -606,18 +609,18 @@ body {
 .lesson-body h4 {
     font-weight: 700;
     color: var(--dark);
-    margin: 2rem 0 1rem;
+    margin: 2.5rem 0 1.25rem;
     line-height: 1.3;
 }
 
-.lesson-body h1 { font-size: 2.25rem; }
-.lesson-body h2 { font-size: 2rem; }
-.lesson-body h3 { font-size: 1.75rem; }
-.lesson-body h4 { font-size: 1.5rem; }
+.lesson-body h1 { font-size: 2.5rem; }
+.lesson-body h2 { font-size: 2.25rem; }
+.lesson-body h3 { font-size: 2rem; }
+.lesson-body h4 { font-size: 1.75rem; }
 
 .lesson-body p {
-    margin-bottom: 1.5rem;
-    font-size: 1.15rem;
+    margin-bottom: 1.75rem;
+    font-size: 1.3rem;
 }
 
 .lesson-body a {
@@ -634,26 +637,26 @@ body {
 
 .lesson-body ul,
 .lesson-body ol {
-    margin: 1.5rem 0;
-    padding-left: 2rem;
-    font-size: 1.1rem;
+    margin: 1.75rem 0;
+    padding-left: 2.5rem;
+    font-size: 1.25rem;
 }
 
 .lesson-body li {
-    margin-bottom: 0.85rem;
-    line-height: 1.8;
+    margin-bottom: 1rem;
+    line-height: 1.9;
 }
 
 .lesson-body blockquote {
-    margin: 2rem 0;
-    padding: 1.5rem;
+    margin: 2.5rem 0;
+    padding: 2rem;
     background: var(--gray-lighter);
-    border-left: 4px solid var(--primary);
-    border-radius: 8px;
+    border-left: 5px solid var(--primary);
+    border-radius: 10px;
     font-style: italic;
     color: var(--gray);
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.25rem;
+    line-height: 1.9;
 }
 
 .lesson-body hr {
@@ -728,8 +731,8 @@ body {
 
 .code-block code {
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-    font-size: 1.25rem;
-    line-height: 2;
+    font-size: 1.35rem;
+    line-height: 2.1;
     color: #e2e8f0;
     font-weight: 500;
 }
@@ -788,17 +791,17 @@ body {
 }
 
 .markdown-table th {
-    padding: 1rem;
+    padding: 1.25rem;
     text-align: left;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--dark);
     border-bottom: 2px solid var(--gray-light);
 }
 
 .markdown-table td {
-    padding: 1rem;
-    font-size: 1.05rem;
+    padding: 1.25rem;
+    font-size: 1.2rem;
     border-bottom: 1px solid var(--gray-lighter);
 }
 
