@@ -92,6 +92,8 @@ const coursesData = {
                 title: 'Les Bases',
                 icon: '🥘',
                 lessons: [
+                    { id: 'variables', title: 'Les Variables', file: '01_LES BASES/01_variables.MD', duration: '15 min' },
+                    { id: 'conditions', title: 'Les Conditions', file: '01_LES BASES/02_conditions.MD', duration: '20 min' },
                     { id: 'boucle-for', title: 'La Boucle For', file: '01_LES BASES/03_boucle_for.md', duration: '20 min' },
                     { id: 'boucle-while', title: 'La Boucle While', file: '01_LES BASES/04_boucle_while.md', duration: '15 min' },
                     { id: 'tableaux', title: 'Les Tableaux', file: '01_LES BASES/05_tableaux.md', duration: '25 min' },
@@ -151,6 +153,8 @@ const coursesData = {
                 title: 'Les Bases',
                 icon: '🎯',
                 lessons: [
+                    { id: 'variables', title: 'Les Variables', file: '01_LES_BASES/01_variables.MD', duration: '15 min' },
+                    { id: 'conditions', title: 'Les Conditions', file: '01_LES_BASES/02_conditions.MD', duration: '20 min' },
                     { id: 'boucle-for', title: 'La Boucle For', file: '01_LES_BASES/03_boucle_for.md', duration: '20 min' },
                     { id: 'boucle-while', title: 'La Boucle While', file: '01_LES_BASES/04_boucle_while.md', duration: '15 min' },
                     { id: 'tableaux', title: 'Les Tableaux', file: '01_LES_BASES/05_tableaux.md', duration: '25 min' },
