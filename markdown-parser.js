@@ -96,10 +96,7 @@ class MarkdownParser {
         highlighted = highlighted.replace(/("(?:[^"\\]|\\.)*")/g, '___STRING_START___$1___STRING_END___');
         highlighted = highlighted.replace(/('(?:[^'\\]|\\.)*')/g, '___STRING_START___$1___STRING_END___');
 
-        // 3. Tags PHP
-        highlighted = highlighted.replace(/(&lt;\?php|\?&gt;)/g, '<span class="php-tag">$1</span>');
-
-        // 4. Mots-clés PHP
+        // 3. Mots-clés PHP
         const keywords = [
             'class', 'function', 'public', 'private', 'protected', 'static',
             'new', 'return', 'if', 'else', 'elseif', 'for', 'foreach',
