@@ -317,6 +317,54 @@ body {
     color: rgba(255,255,255,0.8);
 }
 
+/* Style spécial pour "Lis-moi d'abord" */
+.lesson-item.important {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border-left: 4px solid var(--accent);
+    font-weight: 700;
+    animation: pulse 2s infinite;
+    position: relative;
+}
+
+.lesson-item.important::after {
+    content: '⚠️ IMPORTANT';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.lesson-item.important:hover {
+    background: linear-gradient(135deg, #fde68a, #fcd34d);
+    transform: translateX(5px);
+}
+
+.lesson-item.important.active {
+    background: linear-gradient(135deg, var(--accent), #d97706);
+    color: var(--white);
+}
+
+.lesson-item.important.active::after {
+    background: rgba(255,255,255,0.3);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+    }
+}
+
 /* Contenu principal */
 .content-area {
     flex: 1;

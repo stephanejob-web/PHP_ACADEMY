@@ -168,9 +168,10 @@ class PHPHeroApp {
         const lessonKey = `${this.currentTheme}-${module.id}-${lesson.id}`;
         const isCompleted = this.completedLessons.has(lessonKey);
         const isActive = this.currentLesson?.id === lesson.id;
+        const isImportant = lesson.id === 'lis-moi';
 
         return `
-            <div class="lesson-item ${isCompleted ? 'completed' : ''} ${isActive ? 'active' : ''}"
+            <div class="lesson-item ${isCompleted ? 'completed' : ''} ${isActive ? 'active' : ''} ${isImportant ? 'important' : ''}"
                  onclick="app.loadLessonByIds('${module.id}', '${lesson.id}')">
                 <div class="lesson-info">
                     <div class="lesson-item-title">${lesson.title}</div>
