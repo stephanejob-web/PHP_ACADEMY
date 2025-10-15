@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Coloration Syntaxique</title>
+    <link rel="stylesheet" href="cours-style.css">
+</head>
+<body>
+    <div class="main-container">
+        <main class="content-area">
+            <div class="lesson-container">
+                <h1>Test de la coloration syntaxique PHP</h1>
+
+                <div id="testContainer"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="markdown-parser.js"></script>
+    <script>
+        const parser = new MarkdownParser();
+
+        const markdown = `
+# Test de code PHP
+
+\`\`\`php
+$stuff = [
+    "arme" => "épée légendaire",
+    "defense" => "bouclier de fer",
+    "soin" => "potion"
+];
+
+class Personnage {
+    public $nom;
+    public $pv;
+    public $force;
+    public $arme;
+}
+
+function attaquer($cible) {
+    echo "Attaque sur $cible !";
+    return true;
+}
+\`\`\`
+`;
+
+        const html = parser.parse(markdown);
+        console.log("HTML généré:", html);
+        document.getElementById('testContainer').innerHTML = html;
+    </script>
+</body>
+</html>

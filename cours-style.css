@@ -674,9 +674,10 @@ body {
 
 .code-block code {
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.25rem;
+    line-height: 2;
     color: #e2e8f0;
+    font-weight: 500;
 }
 
 .inline-code {
@@ -690,13 +691,33 @@ body {
 }
 
 /* Syntax highlighting */
-.keyword { color: #c084fc !important; font-weight: 700 !important; }
-.variable { color: #60a5fa !important; font-weight: 600 !important; }
-.string { color: #34d399 !important; }
-.comment { color: #64748b !important; font-style: italic !important; }
-.function { color: #fbbf24 !important; font-weight: 600 !important; }
-.number { color: #f472b6 !important; }
-.tag { color: #a78bfa !important; font-weight: 600 !important; }
+.keyword {
+    color: #d946ef !important;
+    font-weight: 700 !important;
+}
+.variable {
+    color: #3b82f6 !important;
+    font-weight: 600 !important;
+}
+.string {
+    color: #22c55e !important;
+}
+.comment {
+    color: #94a3b8 !important;
+    font-style: italic !important;
+}
+.function {
+    color: #fbbf24 !important;
+    font-weight: 600 !important;
+}
+.number {
+    color: #f472b6 !important;
+    font-weight: 600 !important;
+}
+.tag {
+    color: #a78bfa !important;
+    font-weight: 700 !important;
+}
 
 /* Tables */
 .markdown-table {
