@@ -771,7 +771,8 @@ body {
     color: #f472b6 !important;
     font-weight: 600 !important;
 }
-.tag {
+.tag,
+.php-tag {
     color: #a78bfa !important;
     font-weight: 700 !important;
 }
