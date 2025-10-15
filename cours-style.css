@@ -673,30 +673,30 @@ body {
 }
 
 .code-block code {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #94a3b8;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e2e8f0;
 }
 
 .inline-code {
-    padding: 0.2rem 0.5rem;
+    padding: 0.25rem 0.6rem;
     background: var(--gray-lighter);
     color: var(--danger);
     border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9em;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 1em;
     font-weight: 600;
 }
 
 /* Syntax highlighting */
-.keyword { color: #c084fc; font-weight: 600; }
-.variable { color: #60a5fa; }
-.string { color: #34d399; }
-.comment { color: #64748b; font-style: italic; }
-.function { color: #fbbf24; }
-.number { color: #f472b6; }
-.tag { color: #a78bfa; }
+.keyword { color: #c084fc !important; font-weight: 700 !important; }
+.variable { color: #60a5fa !important; font-weight: 600 !important; }
+.string { color: #34d399 !important; }
+.comment { color: #64748b !important; font-style: italic !important; }
+.function { color: #fbbf24 !important; font-weight: 600 !important; }
+.number { color: #f472b6 !important; }
+.tag { color: #a78bfa !important; font-weight: 600 !important; }
 
 /* Tables */
 .markdown-table {
