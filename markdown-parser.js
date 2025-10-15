@@ -98,7 +98,21 @@ class MarkdownParser {
 
         let highlighted = this.escapeHtml(code);
 
-        // Mots-clés PHP
+        // Ordre important: commencer par les éléments les plus spécifiques
+
+        // 1. Commentaires en premier (pour qu'ils ne soient pas affectés par d'autres règles)
+        highlighted = highlighted.replace(/(\/\/.*$)/gm, '___COMMENT_START___$1___COMMENT_END___');
+        highlighted = highlighted.replace(/(\/\*[\s\S]*?\*\/)/g, '___COMMENT_START___$1___COMMENT_END___');
+        highlighted = highlighted.replace(/(#.*$)/gm, '___COMMENT_START___$1___COMMENT_END___');
+
+        // 2. Strings (pour qu'elles ne soient pas affectées par d'autres règles)
+        highlighted = highlighted.replace(/("(?:[^"\\]|\\.)*")/g, '___STRING_START___$1___STRING_END___');
+        highlighted = highlighted.replace(/('(?:[^'\\]|\\.)*')/g, '___STRING_START___$1___STRING_END___');
+
+        // 3. Tags PHP
+        highlighted = highlighted.replace(/(&lt;\?php|\?&gt;)/g, '<span class="tag">$1</span>');
+
+        // 4. Mots-clés PHP
         const keywords = [
             'class', 'function', 'public', 'private', 'protected', 'static',
             'new', 'return', 'if', 'else', 'elseif', 'for', 'foreach',
@@ -113,26 +127,18 @@ class MarkdownParser {
             highlighted = highlighted.replace(regex, '<span class="keyword">$1</span>');
         });
 
-        // Variables PHP
-        highlighted = highlighted.replace(/(\$\w+)/g, '<span class="variable">$1</span>');
+        // 5. Variables PHP (éviter les doublons dans les commentaires/strings)
+        highlighted = highlighted.replace(/(\$[a-zA-Z_]\w*)/g, '<span class="variable">$1</span>');
 
-        // Strings
-        highlighted = highlighted.replace(/("(?:[^"\\]|\\.)*")/g, '<span class="string">$1</span>');
-        highlighted = highlighted.replace(/('(?:[^'\\]|\\.)*')/g, '<span class="string">$1</span>');
+        // 6. Fonctions (avant les nombres pour éviter les conflits)
+        highlighted = highlighted.replace(/\b([a-zA-Z_]\w*)(?=\()/g, '<span class="function">$1</span>');
 
-        // Commentaires
-        highlighted = highlighted.replace(/(\/\/.*$)/gm, '<span class="comment">$1</span>');
-        highlighted = highlighted.replace(/(\/\*[\s\S]*?\*\/)/g, '<span class="comment">$1</span>');
-        highlighted = highlighted.replace(/(#.*$)/gm, '<span class="comment">$1</span>');
-
-        // Fonctions
-        highlighted = highlighted.replace(/\b(\w+)(?=\()/g, '<span class="function">$1</span>');
-
-        // Nombres
+        // 7. Nombres
         highlighted = highlighted.replace(/\b(\d+)\b/g, '<span class="number">$1</span>');
 
-        // Tags PHP
-        highlighted = highlighted.replace(/(&lt;\?php|\?&gt;)/g, '<span class="tag">$1</span>');
+        // Restaurer les commentaires et strings avec leurs styles
+        highlighted = highlighted.replace(/___COMMENT_START___(.*?)___COMMENT_END___/g, '<span class="comment">$1</span>');
+        highlighted = highlighted.replace(/___STRING_START___(.*?)___STRING_END___/g, '<span class="string">$1</span>');
 
         return highlighted;
     }
