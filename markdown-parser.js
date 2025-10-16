@@ -80,7 +80,8 @@ class MarkdownParser {
 
     highlightCode(code, lang) {
         if (lang !== 'php') {
-            return this.escapeHtml(code);
+            const lines = this.escapeHtml(code).split('\n');
+            return lines.map(line => `<span class="line">${line || ' '}</span>`).join('\n');
         }
 
         let highlighted = this.escapeHtml(code);
@@ -123,6 +124,10 @@ class MarkdownParser {
         // Restaurer les commentaires et strings avec leurs styles
         highlighted = highlighted.replace(/___COMMENT_START___(.*?)___COMMENT_END___/g, '<span class="comment">$1</span>');
         highlighted = highlighted.replace(/___STRING_START___(.*?)___STRING_END___/g, '<span class="string">$1</span>');
+
+        // Envelopper chaque ligne dans un span avec la classe "line" pour les numéros de ligne
+        const lines = highlighted.split('\n');
+        highlighted = lines.map(line => `<span class="line">${line || ' '}</span>`).join('\n');
 
         return highlighted;
     }
@@ -217,7 +222,11 @@ class MarkdownParser {
 // Fonction utilitaire pour copier le code
 function copyCode(button) {
     const codeBlock = button.closest('.code-block');
-    const code = codeBlock.querySelector('code').textContent;
+    const codeElement = codeBlock.querySelector('code');
+
+    // Extraire le texte des lignes sans les numéros
+    const lines = codeElement.querySelectorAll('.line');
+    const code = Array.from(lines).map(line => line.textContent).join('\n');
 
     navigator.clipboard.writeText(code).then(() => {
         const originalText = button.innerHTML;
