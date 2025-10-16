@@ -11,7 +11,7 @@ Sur un chantier, tu prends **des décisions tout le temps** :
 > “Et s’il fait froid, je garde ma veste.”
 
 Eh bien ton ordinateur fait **exactement la même chose** !  
-Mais attention… il est un peu simple d’esprit 😅  
+Mais attention… il est un peu simple d’esprit 😅
 
 👉 Il ne comprend que **deux mots dans tout l’univers** :  
 - `true` → ça veut dire **OUI, c’est vrai** ✅  
@@ -58,10 +58,10 @@ if ($pluie) {
 }
 ```
 
-💬 PHP lit :
-> “Est-ce que $pluie est vrai (true) ?”  
-> Oui ✅ → il affiche “Il pleut, je reste à la maison.”  
-> Non ❌ → il ignore ce code.
+💬 PHP lit :  
+“Est-ce que $pluie est vrai (true) ?”  
+Oui ✅ → il affiche “Il pleut, je reste à la maison.”  
+Non ❌ → il ignore ce code.
 
 🧱 En langage de chantier :  
 > “Chef, il pleut ?”  
@@ -83,10 +83,10 @@ if ($pluie) {
 }
 ```
 
-💬 PHP réfléchit :
-> “Il pleut ? Non ❌ → alors je fais ce qu’il y a dans le `else`.”
+💬 PHP réfléchit :  
+“Il pleut ? Non ❌ → alors je fais ce qu’il y a dans le `else`.”
 
-🧱 Traduction humaine :
+🧱 Traduction humaine :  
 > “S’il pleut → je reste à la maison.”  
 > “Sinon → je travaille.” 💪
 
@@ -112,12 +112,12 @@ if ($temperature < 0) {
 }
 ```
 
-💬 PHP teste dans l’ordre :
+💬 PHP teste dans l’ordre :  
 1️⃣ Est-ce que la température < 0 ? ❌  
 2️⃣ Est-ce que la température < 5 ? ✅  
-➡️ Il affiche “Froid, on fait attention.”  
+➡️ Il affiche “Froid, on fait attention.”
 
-🧱 Comme sur ton chantier :
+🧱 Comme sur ton chantier :  
 > “S’il gèle → j’arrête.”  
 > “S’il fait froid → je fais attention.”  
 > “Sinon → je bosse.”
@@ -142,7 +142,7 @@ if ($briques && $mortier) {
 }
 ```
 
-💬 PHP réfléchit :
+💬 PHP réfléchit :  
 > “J’ai des briques ? ✅”  
 > “J’ai du mortier ? ✅”  
 ➡️ Les deux sont vrais → “On peut monter le mur !”
@@ -154,15 +154,8 @@ if ($briques && $mortier) {
 | ❌ | ✅ | Il manque les briques |
 | ❌ | ❌ | On reste au café ☕ |
 
-🧱 En résumé :
+🧱 En résumé :  
 > Avec **ET (`&&`)**, il faut que **les deux conditions soient vraies** pour que le code s’exécute.
-
----
-
-### 👷‍♂️ Autres exemples du chantier :
-- “Je peux peindre **si le mur est sec ET s’il fait chaud.**”  
-- “Je peux monter sur l’échafaudage **si j’ai mon casque ET mes gants.**”  
-- “Je peux couler la dalle **si j’ai du béton ET un coffrage.**”
 
 ---
 
@@ -184,12 +177,10 @@ if ($pluie || $vent) {
 }
 ```
 
-💬 PHP pense :
+💬 PHP pense :  
 > “Il pleut ? Non ❌”  
 > “Il y a du vent ? Oui ✅”  
 ➡️ Donc on reporte.
-
-🧱 En résumé :
 
 | Condition 1 | Condition 2 | Résultat |
 |--------------|--------------|-----------|
@@ -198,6 +189,7 @@ if ($pluie || $vent) {
 | ✅ | ✅ | On arrête |
 | ❌ | ❌ | On bosse |
 
+🧱 En résumé :  
 > Avec **OU (`||`)**, **une seule raison suffit** pour que le code s’exécute.
 
 ---
@@ -217,14 +209,225 @@ if ($pluie || $vent) {
 ## ❤️ Le mot du formateur
 
 Ton ordinateur, c’est un apprenti très obéissant... mais un peu **bête** 😆  
-Il ne connaît que **“Oui chef !” (`true`)** ou **“Non chef !” (`false`)**.  
+Il ne connaît que **“Oui chef !” (`true`)** ou **“Non chef !” (`false`)**.
 
 Pas de “je crois que…” ou de “peut-être”.  
 Toi, tu es **le cerveau** 🧠.  
 Lui, il exécute **ce que tu lui dis**, mais seulement **si la condition est vraie**.
 
-💬 Et souviens-toi :
+💬 Et souviens-toi :  
 > Quand tu écris `true` → ton code s’exécute.  
-> Quand tu écris `false` → ton ordinateur croise les bras et dit “Non chef, je bouge pas.” 😅  
+> Quand tu écris `false` → ton ordinateur croise les bras et dit “Non chef, je bouge pas.” 😅
 
 ---
+
+# 🧪 Exercices Pratiques
+
+## 🧩 Exercice 1 – Il pleut 🌧️
+**Objectif :** Comprendre le `if`.  
+**Résultat attendu :**  
+> Il pleut, je reste à la maison.
+
+💪 *Essaye par toi-même d'abord !*
+
+<details><summary>💡 Afficher la solution</summary>
+
+```php
+$pluie = true;
+if ($pluie) {
+    echo "Il pleut, je reste à la maison.";
+}
+```
+</details>
+
+---
+
+## 🧩 Exercice 2 – Météo du jour ☀️
+**Objectif :** Utiliser `if` et `else`.  
+**Résultat attendu :**  
+> Il ne pleut pas, je vais sur le chantier.
+
+💪 *Essaye par toi-même d'abord !*
+
+<details><summary>💡 Afficher la solution</summary>
+
+```php
+$pluie = false;
+if ($pluie) {
+    echo "Il pleut, je reste à la maison.";
+} else {
+    echo "Il ne pleut pas, je vais sur le chantier.";
+}
+```
+</details>
+
+---
+
+## 🧩 Exercice 3 – Température 🌡️
+**Objectif :** Utiliser `elseif`.  
+**Résultat attendu :**  
+> Froid, on fait attention.
+
+💪 *Essaye par toi-même d'abord !*
+
+<details><summary>💡 Afficher la solution</summary>
+
+```php
+$temperature = 3;
+if ($temperature < 0) {
+    echo "Trop froid, on arrête.";
+} elseif ($temperature < 5) {
+    echo "Froid, on fait attention.";
+} else {
+    echo "Bonne température, on travaille !";
+}
+```
+</details>
+
+---
+
+## 🧩 Exercice 4 – Conditions de travail 🧱
+**Objectif :** Utiliser `&&` (ET).  
+**Résultat attendu :**  
+> On peut travailler !
+
+💪 *Essaye par toi-même d'abord !*
+
+<details><summary>💡 Afficher la solution</summary>
+
+```php
+$briques = true;
+$mortier = true;
+if ($briques && $mortier) {
+    echo "On peut travailler !";
+} else {
+    echo "Il manque quelque chose.";
+}
+```
+</details>
+
+---
+
+## 🧩 Exercice 5 – Météo difficile 🌪️
+**Objectif :** Utiliser `||` (OU).  
+**Résultat attendu :**  
+> On reporte le chantier.
+
+💪 *Essaye par toi-même d'abord !*
+
+<details><summary>💡 Afficher la solution</summary>
+
+```php
+$pluie = false;
+$vent = true;
+if ($pluie || $vent) {
+    echo "On reporte le chantier.";
+} else {
+    echo "Conditions parfaites, on travaille !";
+}
+```
+</details>
+
+---
+
+## 🧩 Exercice 6 – Sécurité 🦺
+**Objectif :** Tester plusieurs conditions.  
+**Résultat attendu :**  
+> Tu peux travailler en sécurité.
+
+<details><summary>💡 Afficher la solution</summary>
+
+```php
+$casque = true;
+$gants = true;
+if ($casque && $gants) {
+    echo "Tu peux travailler en sécurité.";
+} else {
+    echo "Il te manque ton équipement.";
+}
+```
+</details>
+
+---
+
+## 🧩 Exercice 7 – Comparer une température 🔥
+**Objectif :** Comparer avec `<` et `>`.  
+**Résultat attendu :**  
+> Température correcte.
+
+<details><summary>💡 Afficher la solution</summary>
+
+```php
+$temp = 25;
+if ($temp < 0) {
+    echo "Trop froid.";
+} elseif ($temp > 35) {
+    echo "Trop chaud.";
+} else {
+    echo "Température correcte.";
+}
+```
+</details>
+
+---
+
+## 🧩 Exercice 8 – Niveau de note 🎓
+**Objectif :** Utiliser plusieurs `elseif`.  
+**Résultat attendu :**  
+> Bien
+
+<details><summary>💡 Afficher la solution</summary>
+
+```php
+$note = 14;
+if ($note >= 16) {
+    echo "Excellent";
+} elseif ($note >= 12) {
+    echo "Bien";
+} elseif ($note >= 8) {
+    echo "Moyen";
+} else {
+    echo "Insuffisant";
+}
+```
+</details>
+
+---
+
+## 🧩 Exercice 9 – Livraison 📦
+**Objectif :** Tester deux booléens.  
+**Résultat attendu :**  
+> La livraison peut partir !
+
+<details><summary>💡 Afficher la solution</summary>
+
+```php
+$commande_prete = true;
+$camion_disponible = true;
+if ($commande_prete && $camion_disponible) {
+    echo "La livraison peut partir !";
+} else {
+    echo "Il manque quelque chose.";
+}
+```
+</details>
+
+---
+
+## 🧩 Exercice 10 – Le chef est content 😄
+**Objectif :** Condition finale.  
+**Résultat attendu :**  
+> Le chef est content !
+
+<details><summary>💡 Afficher la solution</summary>
+
+```php
+$chantier_termine = true;
+$client_satisfait = true;
+if ($chantier_termine && $client_satisfait) {
+    echo "Le chef est content !";
+} else {
+    echo "On doit encore améliorer le travail.";
+}
+```
+</details>
