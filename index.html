@@ -20,6 +20,114 @@
             --gray: #64748b;
             --light: #f8fafc;
             --white: #ffffff;
+
+            /* Light theme (default) */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --border-color: #cbd5e1;
+        }
+
+        /* Dark theme */
+        [data-theme="dark"] {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --border-color: #475569;
+            --light: #1e293b;
+        }
+
+        [data-theme="dark"] nav {
+            background: rgba(15, 23, 42, 0.95);
+        }
+
+        [data-theme="dark"] .nav-links a {
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .logo {
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .trust {
+            background: var(--bg-secondary);
+        }
+
+        [data-theme="dark"] .features {
+            background: var(--bg-primary);
+        }
+
+        [data-theme="dark"] .feature-card {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .feature-card h3 {
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .feature-card p {
+            color: var(--text-secondary);
+        }
+
+        [data-theme="dark"] .section-title {
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .section-description {
+            color: var(--text-secondary);
+        }
+
+        [data-theme="dark"] .themes {
+            background: var(--bg-secondary);
+        }
+
+        [data-theme="dark"] .theme-card {
+            background: var(--bg-tertiary);
+        }
+
+        [data-theme="dark"] .theme-card h3 {
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .theme-card p {
+            color: var(--text-secondary);
+        }
+
+        [data-theme="dark"] .coming-soon {
+            background: var(--bg-primary);
+        }
+
+        [data-theme="dark"] .coming-card {
+            background: var(--bg-secondary);
+        }
+
+        [data-theme="dark"] .coming-card h3 {
+            color: var(--text-primary);
+        }
+
+        [data-theme="dark"] .coming-card p {
+            color: var(--text-secondary);
+        }
+
+        [data-theme="dark"] footer {
+            background: #000000;
+        }
+
+        [data-theme="dark"] .badge {
+            color: var(--text-secondary);
+        }
+
+        [data-theme="dark"] .path-item {
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        [data-theme="dark"] .path-item:hover {
+            background: rgba(30, 41, 59, 0.8);
         }
 
         body {
@@ -27,6 +135,7 @@
             line-height: 1.6;
             color: var(--dark);
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         /* Navigation */
@@ -52,6 +161,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
         }
 
         .logo {
@@ -106,6 +216,40 @@
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .theme-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle-btn:hover .theme-icon {
+            transform: rotate(20deg);
         }
 
         /* Hero Section */
@@ -930,7 +1074,12 @@
                 <li><a href="#parcours">Parcours</a></li>
                 <li><a href="#apropos">À propos</a></li>
             </ul>
-            <a href="cours.html" class="nav-cta">Commencer</a>
+            <div class="nav-right">
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="Changer le thème">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <a href="cours.html" class="nav-cta">Commencer</a>
+            </div>
             <button class="mobile-menu-btn">☰</button>
         </div>
     </nav>
@@ -1330,5 +1479,8 @@
         const heroSection = document.querySelector('.hero');
         if (heroSection) heroObserver.observe(heroSection);
     </script>
+
+    <!-- Theme Toggle Script -->
+    <script src="theme-toggle.js"></script>
 </body>
 </html>
