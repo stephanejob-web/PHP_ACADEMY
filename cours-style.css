@@ -805,17 +805,17 @@ body {
 
 .inline-code {
     padding: 0.15rem 0.4rem;
-    background: var(--bg-tertiary);
-    color: #f472b6;
+    /* background: var(--bg-tertiary); */
+    color: #0b0a0b;
     border-radius: 3px;
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: 500;
 }
 
 [data-theme="dark"] .inline-code {
-    color: #a78bfa;
-    background: rgba(167, 139, 250, 0.15);
+    color: #fdfcffc3;
+    /* background: rgba(167, 139, 250, 0.15); */
 }
 
 /* Syntax highlighting */
