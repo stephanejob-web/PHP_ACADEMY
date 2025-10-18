@@ -218,7 +218,7 @@ Plutôt que de réécrire 5 fois la même formule, on crée une fonction réutil
 **Ajoute ce code juste après ton tableau `$materiaux` :**
 
 ```php
-// 💰 Fonction pour calculer le prix d'un matériau
+// 💰 Fonction pour calculer le prix d un matériau
 function calculerPrix($prix_unitaire, $quantite) {
     return $prix_unitaire * $quantite;
 }
@@ -232,7 +232,7 @@ function appliquerReduction($prix_total, $quantite) {
     return 0; // Pas de réduction
 }
 
-// 💶 Fonction pour formater un prix (afficher avec le symbole €)
+// 💶 Fonction pour formater un prix (afficher avec le symbole euro)
 function formaterPrix($montant) {
     return number_format($montant, 2, ',', ' ') . " €";
 }
@@ -288,25 +288,25 @@ foreach ($materiaux as $materiau) {
     // 👉 Attention : maintenant on va "cracher" du HTML avec PHP
     // On utilise "echo" pour dire à PHP : "affiche ça sur la page"
 
-    echo "<h3>🧱 " . $materiau["nom"] . "</h3>";
-    echo "<p><strong>Prix unitaire :</strong> " . formaterPrix($materiau["prix_unitaire"]) . "</p>";
-    echo "<p><strong>Quantité commandée :</strong> " . $materiau["quantite_commandee"] . "</p>";
-    echo "<p><strong>Stock disponible :</strong> " . $materiau["stock"] . "</p>";
+    echo '<h3>🧱 ' . $materiau["nom"] . '</h3>';
+    echo '<p><strong>Prix unitaire :</strong> ' . formaterPrix($materiau["prix_unitaire"]) . '</p>';
+    echo '<p><strong>Quantité commandée :</strong> ' . $materiau["quantite_commandee"] . '</p>';
+    echo '<p><strong>Stock disponible :</strong> ' . $materiau["stock"] . '</p>';
 
 
     // ========== CONDITION : Alerte stock faible ==========
 
     // Si le stock est en dessous de 10, on affiche un message rouge
     if ($materiau["stock"] < 10) {
-        echo "<p style='color: red;'><strong>⚠️ ATTENTION : Stock faible !</strong></p>";
+        echo '<p style="color: red;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>';
     }
 
 
     // ========== CONDITION : Afficher la réduction ==========
 
-    // Si il y a une réduction, on l'affiche en vert
+    // Si il y a une réduction, on affiche en vert
     if ($reduction > 0) {
-        echo "<p style='color: green;'><strong>🎁 Réduction de -10% : -" . formaterPrix($reduction) . "</strong></p>";
+        echo '<p style="color: green;"><strong>🎁 Réduction de -10% : -' . formaterPrix($reduction) . '</strong></p>';
     }
 
 
@@ -368,7 +368,7 @@ Si tu bloques ici, **c'est que t'as pas bien compris les cours précédents**. P
 **Maintenant attention, c'est là que ça devient bizarre.**
 
 ```php
-echo "<h3>🧱 " . $materiau["nom"] . "</h3>";
+echo '<h3>🧱 ' . $materiau["nom"] . '</h3>';
 ```
 
 💬 **Ça veut dire quoi ?**
@@ -377,12 +377,12 @@ echo "<h3>🧱 " . $materiau["nom"] . "</h3>";
 
 **Le truc à comprendre :**
 - `echo` = affiche quelque chose sur la page
-- `"<h3>…</h3>"` = du code HTML **écrit comme du texte**
+- `'<h3>…</h3>'` = du code HTML **écrit comme du texte**
 - Le point `.` sert à **coller des morceaux ensemble**
 
 **Donc ce code PHP :**
 ```php
-echo "<h3>🧱 " . $materiau["nom"] . "</h3>";
+echo '<h3>🧱 ' . $materiau["nom"] . '</h3>';
 ```
 
 **Va produire ce HTML :**
@@ -402,7 +402,7 @@ Le navigateur affiche le HTML.
 
 ```php
 if ($materiau["stock"] < 10) {
-    echo "<p style='color: red;'><strong>⚠️ ATTENTION : Stock faible !</strong></p>";
+    echo '<p style="color: red;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>';
 }
 ```
 
@@ -429,7 +429,7 @@ Maintenant qu'on a calculé tous les prix, on affiche le **total général** !
 ```php
 // 💰 Affichage du total final
 echo "<hr>";
-echo "<h2 style='color: orange;'>💰 TOTAL DU DEVIS : " . formaterPrix($total_general) . "</h2>";
+echo '<h2 style="color: orange;">💰 TOTAL DU DEVIS : ' . formaterPrix($total_general) . '</h2>';
 
 ?>
 ```
@@ -582,25 +582,25 @@ Si jamais tu veux vérifier ton code, voici **le fichier complet** :
         $total_general += $prix_final;
 
         // Affichage
-        echo "<h3>🧱 " . $materiau["nom"] . "</h3>";
-        echo "<p><strong>Prix unitaire :</strong> " . formaterPrix($materiau["prix_unitaire"]) . "</p>";
-        echo "<p><strong>Quantité commandée :</strong> " . $materiau["quantite_commandee"] . "</p>";
-        echo "<p><strong>Stock disponible :</strong> " . $materiau["stock"] . "</p>";
+        echo '<h3>🧱 ' . $materiau["nom"] . '</h3>';
+        echo '<p><strong>Prix unitaire :</strong> ' . formaterPrix($materiau["prix_unitaire"]) . '</p>';
+        echo '<p><strong>Quantité commandée :</strong> ' . $materiau["quantite_commandee"] . '</p>';
+        echo '<p><strong>Stock disponible :</strong> ' . $materiau["stock"] . '</p>';
 
         if ($materiau["stock"] < 10) {
-            echo "<p style='color: red;'><strong>⚠️ ATTENTION : Stock faible !</strong></p>";
+            echo '<p style="color: red;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>';
         }
 
         if ($reduction > 0) {
-            echo "<p style='color: green;'><strong>🎁 Réduction de -10% : -" . formaterPrix($reduction) . "</strong></p>";
+            echo '<p style="color: green;"><strong>🎁 Réduction de -10% : -' . formaterPrix($reduction) . '</strong></p>';
         }
 
-        echo "<p><strong>Prix total :</strong> " . formaterPrix($prix_final) . "</p>";
+        echo '<p><strong>Prix total :</strong> ' . formaterPrix($prix_final) . '</p>';
         echo "<hr>";
     }
 
     // Total final
-    echo "<h2 style='color: orange;'>💰 TOTAL DU DEVIS : " . formaterPrix($total_general) . "</h2>";
+    echo '<h2 style="color: orange;">💰 TOTAL DU DEVIS : ' . formaterPrix($total_general) . '</h2>';
 
     ?>
 
