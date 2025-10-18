@@ -99,7 +99,7 @@ const coursesData = {
                     { id: 'tableaux', title: 'Les Tableaux', file: '01_LES BASES/05_tableaux.md', duration: '25 min' },
                     { id: 'tableaux-associatifs', title: 'Tableaux Associatifs', file: '01_LES BASES/06_tableaux_associatifs.md', duration: '20 min' },
                     { id: 'fonctions', title: 'Les Fonctions', file: '01_LES BASES/07_function.md', duration: '30 min' },
-                    { id: 'premier-projet', title: 'Premier Projet', file: '01_LES BASES/08_premier_projet_tableaux_associatifs.md', duration: '45 min' }
+                    { id: 'projet-recettes', title: 'Projet Coût de Recettes', file: '01_LES BASES/08_projet_calculateur_cout_recettes.md', duration: '60 min' }
                 ]
             },
             {

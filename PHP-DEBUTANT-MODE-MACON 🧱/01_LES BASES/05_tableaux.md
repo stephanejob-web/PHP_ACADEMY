@@ -20,20 +20,20 @@ $outil6 = "pelle";
 Mais si tu as 10 outils, ou 100 ?  
 Ce serait **trop long et fatigant** !
 
-👉 C'est pour ça qu'en PHP, on utilise les **tableaux** (appelés *arrays* en anglais).  
+👉 C`est pour ça qu`en PHP, on utilise les **tableaux** (appelés *arrays* en anglais).  
 
-## 🪣 C'est quoi un tableau ?
+## 🪣 C`est quoi un tableau ?
 
-Un **tableau**, c'est comme une **grande caisse à outils** où tu ranges **plusieurs choses à la fois**.
+Un **tableau**, c`est comme une **grande caisse à outils** où tu ranges **plusieurs choses à la fois**.
 
-Au lieu d'avoir 10 variables différentes, tu as **UNE SEULE caisse** qui contient tout !
+Au lieu d`avoir 10 variables différentes, tu as **UNE SEULE caisse** qui contient tout !
 
 ```php
 $outils = ["truelle", "niveau", "mètre", "marteau", "scie"];
 ```
 
 💬 Tu peux lire ça comme :
-> "J'ai une caisse qui s'appelle `$outils` avec 5 outils dedans."
+> "J`ai une caisse qui s`appelle `$outils` avec 5 outils dedans."
 
 ---
 
@@ -46,7 +46,7 @@ $outils = ["truelle", "niveau", "mètre"];
 ```
 
 🧠 **À retenir :**
-- Les crochets `[ ]` = "C'est une caisse"
+- Les crochets `[ ]` = "C`est une caisse"
 - Les virgules `,` = "Séparent les objets dans la caisse"
 - Les guillemets `" "` = "Pour du texte"
 
@@ -56,15 +56,15 @@ $outils = ["truelle", "niveau", "mètre"];
 $prix = [15, 25, 30, 12];
 ```
 
-💬 "J'ai une caisse de prix qui contient 4 montants."
+💬 "J`ai une caisse de prix qui contient 4 montants."
 
 ---
 
 ## 🔢 2️⃣ Comprendre les crochets [ ] et les numéros (INDEX)
 
-### 🚨 C'EST LA PARTIE LA PLUS IMPORTANTE !
+### 🚨 C`EST LA PARTIE LA PLUS IMPORTANTE !
 
-C'est souvent la partie la plus difficile au début, alors on va prendre notre temps.
+C`est souvent la partie la plus difficile au début, alors on va prendre notre temps.
 
 Quand tu crées un tableau, PHP range automatiquement les éléments dans des **cases numérotées**.
 
@@ -93,10 +93,10 @@ Imagine une **étagère avec des cases** :
 ### 🚨 QUESTION QUE TOUT LE MONDE SE POSE !
 
 Tu te demandes sûrement :  
-> "Pourquoi la première case, c'est **0** et pas **1** ?"
+> "Pourquoi la première case, c`est **0** et pas **1** ?"
 
-C'est parce que **les ordinateurs comptent à partir de zéro**.  
-C'est une vieille habitude des langages de programmation.
+C`est parce que **les ordinateurs comptent à partir de zéro**.  
+C`est une vieille habitude des langages de programmation.
 
 ### 🪜 Imagine une échelle de chantier :
 
@@ -110,7 +110,7 @@ C'est une vieille habitude des langages de programmation.
 - 1 = deuxième barreau
 - 2 = troisième barreau
 
-C'est juste une **autre façon de compter**, mais on s'y habitue vite !
+C`est juste une **autre façon de compter**, mais on s`y habitue vite !
 
 ### 📊 Tableau comparatif :
 
@@ -121,13 +121,13 @@ C'est juste une **autre façon de compter**, mais on s'y habitue vite !
 | 3ème élément | 2 | mètre |
 
 🧠 **Phrase à retenir :**
-> "Le premier, c'est ZÉRO. Le deuxième, c'est UN. Le troisième, c'est DEUX."
+> "Le premier, c`est ZÉRO. Le deuxième, c`est UN. Le troisième, c`est DEUX."
 
 ---
 
 ## 👀 4️⃣ Accéder à un seul élément (lire une case)
 
-Tu veux voir ce qu'il y a dans une case précise de la caisse.
+Tu veux voir ce qu`il y a dans une case précise de la caisse.
 
 Pour ça, tu utilises les **crochets avec un numéro** :
 
@@ -138,7 +138,7 @@ echo $outils[0]; // Affiche "truelle"
 ```
 
 💬 Les crochets `[0]` veulent dire :
-> "Va chercher ce qu'il y a **dans la case numéro 0**."
+> "Va chercher ce qu`il y a **dans la case numéro 0**."
 
 ### Autres exemples :
 
@@ -172,18 +172,18 @@ Le troisième outil est : mètre
 ### ❌ MAUVAIS :
 ```php
 $outils = ["truelle", "niveau", "mètre"];
-echo $outils[3]; // ERREUR ! Il n'y a que 3 éléments (0, 1, 2)
+echo $outils[3]; // ERREUR ! Il n`y a que 3 éléments (0, 1, 2)
 ```
 
-💬 **Pourquoi c'est une erreur ?**  
+💬 **Pourquoi c`est une erreur ?**  
 Ton tableau a 3 éléments :
 - Case 0 = truelle
 - Case 1 = niveau
 - Case 2 = mètre
 
-Il n'y a **pas de case 3** ! PHP va afficher un message d'erreur.
+Il n`y a **pas de case 3** ! PHP va afficher un message d`erreur.
 
-🧠 **Règle d'or :**
+🧠 **Règle d`or :**
 > Si tu as **N éléments**, les index vont de **0 à N-1**.  
 > 3 éléments → index de 0 à 2  
 > 10 éléments → index de 0 à 9
@@ -200,7 +200,7 @@ Au lieu de faire plein de `echo`, on utilise une **boucle foreach** :
 $outils = ["truelle", "niveau", "mètre"];
 
 foreach ($outils as $outil) {
-    echo "J'utilise un $outil<br>";
+    echo "J`utilise un $outil<br>";
 }
 ```
 
@@ -213,7 +213,7 @@ foreach ($outils as $outil)
 | Partie | Signification |
 |--------|---------------|
 | `foreach` | "Pour chaque" |
-| `$outils` | "Dans ma caisse d'outils" |
+| `$outils` | "Dans ma caisse d`outils" |
 | `as` | "En tant que" |
 | `$outil` | "Appelle chaque objet : un outil" |
 
@@ -222,18 +222,18 @@ foreach ($outils as $outil)
 
 **Résultat :**
 ```
-J'utilise un truelle
-J'utilise un niveau
-J'utilise un mètre
+J`utilise une truelle
+J`utilise un niveau
+J`utilise un mètre
 ```
 
 ### 🎯 Ce qui se passe en coulisses :
 
-**Tour 1 :** `$outil` = "truelle" → affiche "J'utilise un truelle"  
-**Tour 2 :** `$outil` = "niveau" → affiche "J'utilise un niveau"  
-**Tour 3 :** `$outil` = "mètre" → affiche "J'utilise un mètre"  
+**Tour 1 :** `$outil` = "truelle" → affiche "J`utilise un truelle"  
+**Tour 2 :** `$outil` = "niveau" → affiche "J`utilise un niveau"  
+**Tour 3 :** `$outil` = "mètre" → affiche "J`utilise un mètre"  
 
-C'est **automatique** ! 🎉
+C`est **automatique** ! 🎉
 
 ---
 
@@ -261,10 +261,10 @@ Maintenant ton tableau contient :
 
 ```php
 $outils = ["truelle", "niveau", "mètre"];
-echo "J'ai " . count($outils) . " outils<br>";
+echo "J`ai " . count($outils) . " outils<br>";
 
 $outils[] = "marteau";
-echo "J'ai maintenant " . count($outils) . " outils<br>";
+echo "J`ai maintenant " . count($outils) . " outils<br>";
 
 foreach ($outils as $outil) {
     echo "- $outil<br>";
@@ -273,8 +273,8 @@ foreach ($outils as $outil) {
 
 **Résultat :**
 ```
-J'ai 3 outils
-J'ai maintenant 4 outils
+J`ai 3 outils
+J`ai maintenant 4 outils
 - truelle
 - niveau
 - mètre
@@ -293,7 +293,7 @@ $outils[2] = "règle";
 ```
 
 💬 Les crochets `[2]` indiquent :
-> "Va dans la **case numéro 2** et remplace ce qu'il y a dedans."
+> "Va dans la **case numéro 2** et remplace ce qu`il y a dedans."
 
 Maintenant ton tableau contient :
 ```
@@ -324,7 +324,7 @@ Après : règle
 
 ## 🧮 8️⃣ Compter les éléments avec `count()`
 
-Tu veux savoir **combien d'outils** tu as dans ta caisse :
+Tu veux savoir **combien d`outils** tu as dans ta caisse :
 
 ```php
 $outils = ["truelle", "niveau", "mètre"];
@@ -337,7 +337,7 @@ echo count($outils);
 ```
 
 💬 `count()` veut dire :
-> "Compte combien d'éléments il y a dans le tableau."
+> "Compte combien d`éléments il y a dans le tableau."
 
 ### Exemple pratique :
 
@@ -345,19 +345,19 @@ echo count($outils);
 $outils = ["truelle", "niveau", "mètre"];
 $nombre = count($outils);
 
-echo "J'ai $nombre outils dans ma caisse.<br>";
+echo "J`ai $nombre outils dans ma caisse.<br>";
 
 $outils[] = "marteau";
 $outils[] = "scie";
 
 $nombre = count($outils);
-echo "Maintenant j'ai $nombre outils !<br>";
+echo "Maintenant j`ai $nombre outils !<br>";
 ```
 
 **Résultat :**
 ```
-J'ai 3 outils dans ma caisse.
-Maintenant j'ai 5 outils !
+J`ai 3 outils dans ma caisse.
+Maintenant j`ai 5 outils !
 ```
 
 ---
@@ -402,18 +402,18 @@ Total de sacs : 23
 $outils = ["truelle", "niveau", "mètre"];
 
 echo "=== Au début du chantier ===<br>";
-echo "J'ai " . count($outils) . " outils<br><br>";
+echo "J`ai " . count($outils) . " outils<br><br>";
 
-// Ajout d'outils
+// Ajout d`outils
 $outils[] = "marteau";
 $outils[] = "scie";
 
 echo "=== Après avoir reçu du matériel ===<br>";
-echo "J'ai maintenant " . count($outils) . " outils<br><br>";
+echo "J`ai maintenant " . count($outils) . " outils<br><br>";
 
 // Modification
 $outils[2] = "règle";
-echo "=== J'ai remplacé le mètre par une règle ===<br><br>";
+echo "=== J`ai remplacé le mètre par une règle ===<br><br>";
 
 // Affichage de tous les outils
 echo "=== Liste complète de mes outils ===<br>";
@@ -425,12 +425,12 @@ foreach ($outils as $outil) {
 **Résultat :**
 ```
 === Au début du chantier ===
-J'ai 3 outils
+J`ai 3 outils
 
 === Après avoir reçu du matériel ===
-J'ai maintenant 5 outils
+J`ai maintenant 5 outils
 
-=== J'ai remplacé le mètre par une règle ===
+=== J`ai remplacé le mètre par une règle ===
 
 === Liste complète de mes outils ===
 - truelle
@@ -459,15 +459,15 @@ J'ai maintenant 5 outils
 
 ## 💬 Phrases à retenir
 
-> Un tableau, c'est comme une **caisse à outils** :  
+> Un tableau, c`est comme une **caisse à outils** :  
 > Tu ranges tout dedans, et chaque objet a un **numéro de case** ! 🪣
 
 > Les crochets `[ ]` = "regarde dans une case"  
-> Le nombre à l'intérieur = "le numéro de la case"  
+> Le nombre à l`intérieur = "le numéro de la case"  
 > Et **on commence toujours à zéro** !
 
 > `foreach` = "pour chaque élément, fais quelque chose"  
-> C'est la boucle magique des tableaux ! 🔄
+> C`est la boucle magique des tableaux ! 🔄
 
 ---
 
@@ -480,7 +480,7 @@ Crée un tableau `$outils` qui contient :
 
 Affiche ensuite chaque outil avec `echo` en utilisant les index [0], [1], [2].
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Un tableau avec 3 éléments
 - 3 affichages séparés utilisant les crochets
 
@@ -512,9 +512,9 @@ echo $outils[2] . "<br>";
 Crée un tableau `$outils = ["truelle", "niveau", "mètre"]`.  
 Affiche **seulement le deuxième outil** (niveau).
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Un tableau créé
-- Affichage de l'index [1] uniquement
+- Affichage de l`index [1] uniquement
 
 **Exemple de résultat attendu :**
 ```
@@ -540,9 +540,9 @@ Crée un tableau `$outils = ["truelle", "niveau", "mètre"]`.
 Ajoute "marteau" à la fin du tableau.  
 Affiche tous les outils avec une boucle `foreach`.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Un tableau de 3 éléments
-- Ajout d'un 4ème élément
+- Ajout d`un 4ème élément
 - Boucle foreach pour afficher tout
 
 **Exemple de résultat attendu :**
@@ -576,8 +576,8 @@ Crée un tableau `$outils = ["truelle", "niveau", "mètre"]`.
 Remplace "mètre" par "règle".  
 Affiche le tableau avec foreach.
 
-**Ce qu'on attend :**  
-- Modification de l'index [2]
+**Ce qu`on attend :**  
+- Modification de l`index [2]
 - Affichage du tableau modifié
 
 **Exemple de résultat attendu :**
@@ -607,15 +607,15 @@ foreach ($outils as $outil) {
 ## 📝 Exercice 5 : Compter les éléments
 **Énoncé :**  
 Crée un tableau `$outils = ["truelle", "niveau", "mètre"]`.  
-Affiche combien d'outils tu as dans ta caisse en utilisant `count()`.
+Affiche combien d`outils tu as dans ta caisse en utilisant `count()`.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Utilisation de count()
 - Message clair avec le résultat
 
 **Exemple de résultat attendu :**
 ```
-J'ai 3 outils dans ma caisse.
+J`ai 3 outils dans ma caisse.
 ```
 
 <details>
@@ -625,7 +625,7 @@ J'ai 3 outils dans ma caisse.
 <?php
 $outils = ["truelle", "niveau", "mètre"];
 $nombre = count($outils);
-echo "J'ai $nombre outils dans ma caisse.";
+echo "J`ai $nombre outils dans ma caisse.";
 ?>
 ```
 </details>
@@ -636,17 +636,17 @@ echo "J'ai $nombre outils dans ma caisse.";
 **Énoncé :**  
 Crée un tableau `$clients = ["Dupont", "Martin", "Durand"]`.  
 Utilise foreach pour afficher :  
-"J'appelle le client [nom]." pour chaque client.
+"J`appelle le client [nom]." pour chaque client.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Un tableau de 3 noms
 - Boucle foreach avec message personnalisé
 
 **Exemple de résultat attendu :**
 ```
-J'appelle le client Dupont.
-J'appelle le client Martin.
-J'appelle le client Durand.
+J`appelle le client Dupont.
+J`appelle le client Martin.
+J`appelle le client Durand.
 ```
 
 <details>
@@ -657,7 +657,7 @@ J'appelle le client Durand.
 $clients = ["Dupont", "Martin", "Durand"];
 
 foreach ($clients as $client) {
-    echo "J'appelle le client $client.<br>";
+    echo "J`appelle le client $client.<br>";
 }
 ?>
 ```
@@ -671,7 +671,7 @@ Crée un tableau `$materiaux = ["briques", "ciment", "sable"]`.
 Affiche chaque matériau avec foreach en utilisant ce format :  
 "Matériau : [nom]"
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Un tableau de 3 matériaux
 - Affichage formaté avec foreach
 
@@ -705,9 +705,9 @@ Crée un tableau `$materiaux = ["briques", "ciment", "sable"]`.
 2. Ajoute "eau" à la fin
 3. Affiche tout avec foreach
 
-**Ce qu'on attend :**  
-- Modification d'un élément existant
-- Ajout d'un nouvel élément
+**Ce qu`on attend :**  
+- Modification d`un élément existant
+- Ajout d`un nouvel élément
 - Affichage du résultat
 
 **Exemple de résultat attendu :**
@@ -744,7 +744,7 @@ Calcule et affiche le total de sacs.
 
 💡 Indice : additionne `$sacs[0] + $sacs[1] + $sacs[2]`.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Un tableau de nombres
 - Addition des 3 valeurs
 - Affichage du total
@@ -780,7 +780,7 @@ Tâche 3 : Nettoyer le chantier
 
 💡 Astuce : avant la boucle, crée `$numero = 1;` et fais `$numero++` à chaque tour.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Un tableau de 3 tâches
 - Un compteur qui commence à 1
 - Affichage numéroté

@@ -12,10 +12,10 @@ Dessus, tu poses tout ce dont tu as besoin pour ta journée :
 Mais pour ne pas te perdre, tu **mets une étiquette devant chaque chose** :  
 > "Ciment", "Sable", "Client", "Prix au m²"…
 
-Ainsi, quand tu veux quelque chose, tu n'as pas besoin de réfléchir :  
-tu regardes l'étiquette et tu trouves **directement** ce que tu veux.
+Ainsi, quand tu veux quelque chose, tu n`as pas besoin de réfléchir :  
+tu regardes l`étiquette et tu trouves **directement** ce que tu veux.
 
-💬 En PHP, c'est pareil :  
+💬 En PHP, c`est pareil :  
 - Chaque **étiquette** correspond à un **nom de variable**.  
 - Chaque **objet sur la table** correspond à une **valeur**.
 
@@ -37,9 +37,9 @@ Chaque fois que tu crées une variable, il pose la valeur sur sa table et colle 
 
 ---
 
-## 💡 Pourquoi c'est utile
+## 💡 Pourquoi c`est utile
 
-Si tu veux calculer un devis, tu n'as pas besoin de tout retenir dans ta tête.  
+Si tu veux calculer un devis, tu n`as pas besoin de tout retenir dans ta tête.  
 Tu peux **réutiliser les étiquettes** autant que tu veux :
 
 ```php
@@ -63,7 +63,7 @@ Le total de matériaux est 14.
 ## 🧰 1️⃣ Créer une variable
 
 Chaque variable commence **toujours** par `$` en PHP.  
-C'est comme si tu mettais une étiquette sur ton plan de travail.
+C`est comme si tu mettais une étiquette sur ton plan de travail.
 
 ```php
 $client = "Dupont";
@@ -82,7 +82,7 @@ $prix_m2 = 40;
 
 ## 🧮 2️⃣ Utiliser une variable
 
-Tu veux lire ce qu'il y a sur une étiquette ?  
+Tu veux lire ce qu`il y a sur une étiquette ?  
 Tu appelles simplement son nom :
 ```php
 echo $client;
@@ -93,11 +93,11 @@ Résultat :
 Dupont
 ```
 
-💬 Ton ordinateur regarde sur sa table, trouve l'étiquette "client" et lit ce qu'il y a devant.
+💬 Ton ordinateur regarde sur sa table, trouve l`étiquette "client" et lit ce qu`il y a devant.
 
 ---
 
-## 🔁 3️⃣ Changer la valeur d'une variable
+## 🔁 3️⃣ Changer la valeur d`une variable
 
 Tu veux remplacer le devis du client ?  
 Pas besoin de refaire la table — tu **remplaces juste la valeur** :
@@ -106,24 +106,24 @@ Pas besoin de refaire la table — tu **remplaces juste la valeur** :
 $client = "Martin";
 ```
 
-💬 L'étiquette reste la même, mais ce qu'il y a devant change.
+💬 L`étiquette reste la même, mais ce qu`il y a devant change.
 
 ---
 
 ## 🧱 4️⃣ Pourquoi "variable" ?
 
 Parce que son **contenu peut varier**.  
-Tu peux **changer ce qu'il y a dessus** sans changer le nom.
+Tu peux **changer ce qu`il y a dessus** sans changer le nom.
 
-C'est comme si tu avais une étiquette "seau" sur ton établi :  
+C`est comme si tu avais une étiquette "seau" sur ton établi :  
 parfois tu y mets du sable, parfois du ciment.  
-Mais l'étiquette, elle, reste "seau".
+Mais l`étiquette, elle, reste "seau".
 
 ---
 
 ## ⚙️ 5️⃣ Exemple concret
 
-Tu veux calculer le prix d'un mur :
+Tu veux calculer le prix d`un mur :
 ```php
 $largeur = 5;
 $hauteur = 2;
@@ -151,15 +151,15 @@ et PHP fait le calcul pour toi.
 |----------------|-------------------|--------|
 | Tu poses un objet sur ta table | Tu ranges une donnée | Tu crées une variable |
 | Tu mets une étiquette dessus | Tu donnes un nom | Tu écris `$nom = valeur;` |
-| Tu lis l'étiquette | Tu veux savoir ce que c'est | Tu fais `echo $nom;` |
+| Tu lis l`étiquette | Tu veux savoir ce que c`est | Tu fais `echo $nom;` |
 | Tu remplaces le contenu | Tu changes la valeur | Tu réassignes `$nom = ...` |
 
 ---
 
 ## 💬 Phrase à retenir :
-> Une variable, c'est comme une **étiquette sur ta table de chantier**.  
-> Tu peux y poser n'importe quelle valeur, la changer quand tu veux,  
-> et ton ordinateur s'en souviendra jusqu'à la fin du travail.
+> Une variable, c`est comme une **étiquette sur ta table de chantier**.  
+> Tu peux y poser n`importe quelle valeur, la changer quand tu veux,  
+> et ton ordinateur s`en souviendra jusqu`à la fin du travail.
 
 ---
 
@@ -180,12 +180,12 @@ $total = $sacs_matin + $sacs_aprem;
 echo $total; // Affiche 8
 ```
 
-💬 **Dans la vraie vie :** Tu avais 5 sacs le matin, tu en reçois 3 l'après-midi → tu as 8 sacs au total.
+💬 **Dans la vraie vie :** Tu avais 5 sacs le matin, tu en reçois 3 l`après-midi → tu as 8 sacs au total.
 
 ---
 
 ### ➖ Soustraction : `-`
-Pour **enlever** une valeur d'une autre.
+Pour **enlever** une valeur d`une autre.
 
 ```php
 $sacs_debut = 10;
@@ -194,7 +194,7 @@ $sacs_restants = $sacs_debut - $sacs_utilises;
 echo $sacs_restants; // Affiche 6
 ```
 
-💬 **Dans la vraie vie :** Tu avais 10 sacs, tu en utilises 4 → il t'en reste 6.
+💬 **Dans la vraie vie :** Tu avais 10 sacs, tu en utilises 4 → il t`en reste 6.
 
 ---
 
@@ -226,22 +226,22 @@ echo $budget_par_jour; // Affiche 200
 
 ---
 
-## 🎯 Les Opérateurs d'Incrémentation (++, --)
+## 🎯 Les Opérateurs d`Incrémentation (++, --)
 
 ### 🪜 Imagine une échelle sur ton chantier
 
 Tu es sur une **échelle** avec des barreaux numérotés.  
 Chaque barreau représente un **numéro** : 1, 2, 3, 4, 5...
 
-**L'opérateur `++`** = **Monter d'un barreau** 🔼  
-**L'opérateur `--`** = **Descendre d'un barreau** 🔽
+**L`opérateur `++`** = **Monter d`un barreau** 🔼  
+**L`opérateur `--`** = **Descendre d`un barreau** 🔽
 
 ---
 
-### 📈 L'opérateur `++` (Incrémenter = Ajouter 1)
+### 📈 L`opérateur `++` (Incrémenter = Ajouter 1)
 
 Imagine que tu comptes tes **seaux** sur le chantier.  
-Tu en as **3**, puis ton collègue t'en apporte **1 de plus**.
+Tu en as **3**, puis ton collègue t`en apporte **1 de plus**.
 
 **Méthode longue :**
 ```php
@@ -258,13 +258,13 @@ echo $seaux; // Affiche 4
 ```
 
 💬 **En langage maçon :**  
-> "J'avais 3 seaux, j'en reçois 1 → `$seaux++` → j'ai maintenant 4 seaux."
+> "J`avais 3 seaux, j`en reçois 1 → `$seaux++` → j`ai maintenant 4 seaux."
 
 🧠 **À retenir :** `$seaux++` veut dire "ajoute 1 à `$seaux`".
 
 ---
 
-### 📉 L'opérateur `--` (Décrémenter = Enlever 1)
+### 📉 L`opérateur `--` (Décrémenter = Enlever 1)
 
 Maintenant, tu **utilises** un seau. Tu passes de **4 seaux à 3 seaux**.
 
@@ -283,7 +283,7 @@ echo $seaux; // Affiche 3
 ```
 
 💬 **En langage maçon :**  
-> "J'avais 4 seaux, j'en utilise 1 → `$seaux--` → il m'en reste 3."
+> "J`avais 4 seaux, j`en utilise 1 → `$seaux--` → il m`en reste 3."
 
 🧠 **À retenir :** `$seaux--` veut dire "enlève 1 à `$seaux`".
 
@@ -295,7 +295,7 @@ Tu poses des **briques** sur un mur.
 Chaque fois que tu poses une brique, tu veux **compter** combien tu en as posées.
 
 ```php
-$briques_posees = 0; // Au début, tu n'as posé aucune brique
+$briques_posees = 0; // Au début, tu n`as posé aucune brique
 
 // Tu poses une brique
 $briques_posees++;
@@ -316,7 +316,7 @@ echo "Briques posées : $briques_posees<br>"; // Affiche 3
 - Après `$briques_posees++` : `$briques_posees = 2`
 - Après `$briques_posees++` : `$briques_posees = 3`
 
-🧠 **C'est comme si tu montais l'échelle barreau par barreau !**
+🧠 **C`est comme si tu montais l`échelle barreau par barreau !**
 
 ---
 
@@ -347,7 +347,7 @@ echo "Sacs restants : $sacs_restants<br>"; // Affiche 7
 - Après `$sacs_restants--` : `$sacs_restants = 8`
 - Après `$sacs_restants--` : `$sacs_restants = 7`
 
-🧠 **C'est comme si tu descendais l'échelle barreau par barreau !**
+🧠 **C`est comme si tu descendais l`échelle barreau par barreau !**
 
 ---
 
@@ -355,14 +355,14 @@ echo "Sacs restants : $sacs_restants<br>"; // Affiche 7
 
 | Opérateur | Signification | Exemple | Résultat |
 |-----------|---------------|---------|----------|
-| `++` | Ajoute 1 (monte d'un barreau) | `$x = 5; $x++;` | `$x` vaut maintenant **6** |
-| `--` | Enlève 1 (descend d'un barreau) | `$x = 5; $x--;` | `$x` vaut maintenant **4** |
+| `++` | Ajoute 1 (monte d`un barreau) | `$x = 5; $x++;` | `$x` vaut maintenant **6** |
+| `--` | Enlève 1 (descend d`un barreau) | `$x = 5; $x--;` | `$x` vaut maintenant **4** |
 
 ---
 
 ### ⚠️ Attention : Avant ou Après ?
 
-Il y a **deux façons** d'utiliser `++` et `--` :
+Il y a **deux façons** d`utiliser `++` et `--` :
 
 #### 🔵 Après la variable : `$x++` ou `$x--`
 Le changement se fait **après** avoir utilisé la variable.
@@ -374,35 +374,35 @@ echo $seaux;   // Affiche 6
 ```
 
 💬 **En langage maçon :**  
-> "Regarde combien j'ai de seaux (5), **puis** ajoute-en 1."
+> "Regarde combien j`ai de seaux (5), **puis** ajoute-en 1."
 
 ---
 
 #### 🔴 Avant la variable : `++$x` ou `--$x`
-Le changement se fait **avant** d'utiliser la variable.
+Le changement se fait **avant** d`utiliser la variable.
 
 ```php
 $seaux = 5;
-echo ++$seaux; // Ajoute 1 d'abord, puis affiche 6
+echo ++$seaux; // Ajoute 1 d`abord, puis affiche 6
 echo $seaux;   // Affiche 6
 ```
 
 💬 **En langage maçon :**  
-> "Ajoute-en 1 **d'abord**, puis regarde combien j'en ai (6)."
+> "Ajoute-en 1 **d`abord**, puis regarde combien j`en ai (6)."
 
 ---
 
 ### 🧠 Astuce pour retenir
 
 🪜 **Imagine ton échelle :**
-- `$seaux++` → "Je compte d'abord où je suis (5), **puis** je monte d'un barreau (6)"
-- `++$seaux` → "Je monte d'un barreau **d'abord** (6), puis je regarde où je suis"
+- `$seaux++` → "Je compte d`abord où je suis (5), **puis** je monte d`un barreau (6)"
+- `++$seaux` → "Je monte d`un barreau **d`abord** (6), puis je regarde où je suis"
 
 👉 **Dans 95% des cas, tu utiliseras `$seaux++` ou `$seaux--`** (après la variable).
 
 ---
 
-## 🔗 Les Opérateurs d'Affectation Combinés
+## 🔗 Les Opérateurs d`Affectation Combinés
 
 ### 🧰 Les raccourcis pour les calculs
 
@@ -424,7 +424,7 @@ $seaux += 3; // Pareil que $seaux = $seaux + 3
 echo $seaux; // Affiche 8
 ```
 
-💬 **En langage maçon :** "J'avais 5 seaux, on m'en livre 3 → `$seaux += 3` → j'en ai 8 maintenant."
+💬 **En langage maçon :** "J`avais 5 seaux, on m`en livre 3 → `$seaux += 3` → j`en ai 8 maintenant."
 
 ---
 
@@ -436,7 +436,7 @@ $briques -= 20; // Pareil que $briques = $briques - 20
 echo $briques; // Affiche 80
 ```
 
-💬 **En langage maçon :** "J'avais 100 briques, j'en utilise 20 → il m'en reste 80."
+💬 **En langage maçon :** "J`avais 100 briques, j`en utilise 20 → il m`en reste 80."
 
 ---
 
@@ -460,7 +460,7 @@ $budget /= 2; // Pareil que $budget = $budget / 2
 echo $budget; // Affiche 500
 ```
 
-💬 **En langage maçon :** "J'avais 1000€, je le partage en 2 → j'ai 500€ de chaque côté."
+💬 **En langage maçon :** "J`avais 1000€, je le partage en 2 → j`ai 500€ de chaque côté."
 
 ---
 
@@ -485,33 +485,33 @@ echo $budget; // Affiche 500
 
 | Action | Opérateur | Ce que ça fait |
 |--------|-----------|----------------|
-| Monter d'un barreau (ajouter 1) | `$seaux++` | Tu passes de 5 à 6 seaux |
-| Descendre d'un barreau (enlever 1) | `$seaux--` | Tu passes de 5 à 4 seaux |
+| Monter d`un barreau (ajouter 1) | `$seaux++` | Tu passes de 5 à 6 seaux |
+| Descendre d`un barreau (enlever 1) | `$seaux--` | Tu passes de 5 à 4 seaux |
 | Ajouter plusieurs barreaux | `$seaux += 3` | Tu passes de 5 à 8 seaux |
 | Enlever plusieurs barreaux | `$seaux -= 2` | Tu passes de 5 à 3 seaux |
 
 🧠 **Phrase à retenir :**
 > `++` et `--` sont comme **monter ou descendre une échelle, un barreau à la fois**.  
-> C'est le moyen le plus rapide d'ajouter ou d'enlever 1 !
+> C`est le moyen le plus rapide d`ajouter ou d`enlever 1 !
 
 ---
 
 # 🧪 Exercices Pratiques
 
-## 📝 Exercice 1 : Comprendre l'incrémentation
+## 📝 Exercice 1 : Comprendre l`incrémentation
 **Énoncé :**  
 Tu commences ta journée avec `$briques_posees = 0`.  
-Utilise l'opérateur `++` pour incrémenter cette variable **5 fois** (comme si tu posais 5 briques).  
+Utilise l`opérateur `++` pour incrémenter cette variable **5 fois** (comme si tu posais 5 briques).  
 Affiche le résultat final.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable initialisée à 0
 - Utilisation de `++` cinq fois
-- L'affichage du nombre final de briques posées
+- L`affichage du nombre final de briques posées
 
 **Exemple de résultat attendu :**
 ```
-J'ai posé 5 briques.
+J`ai posé 5 briques.
 ```
 
 <details>
@@ -525,7 +525,7 @@ $briques_posees++;
 $briques_posees++;
 $briques_posees++;
 $briques_posees++;
-echo "J'ai posé $briques_posees briques.";
+echo "J`ai posé $briques_posees briques.";
 ?>
 ```
 </details>
@@ -535,13 +535,13 @@ echo "J'ai posé $briques_posees briques.";
 ## 📝 Exercice 2 : Comprendre la décrémentation
 **Énoncé :**  
 Tu as `$sacs_ciment = 10` au début du chantier.  
-Utilise l'opérateur `--` pour décrémenter cette variable **3 fois** (comme si tu utilisais 3 sacs).  
+Utilise l`opérateur `--` pour décrémenter cette variable **3 fois** (comme si tu utilisais 3 sacs).  
 Affiche combien de sacs il te reste.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable initialisée à 10
 - Utilisation de `--` trois fois
-- L'affichage du nombre de sacs restants
+- L`affichage du nombre de sacs restants
 
 **Exemple de résultat attendu :**
 ```
@@ -567,16 +567,16 @@ echo "Il me reste $sacs_ciment sacs de ciment.";
 ## 📝 Exercice 3 : Utiliser +=
 **Énoncé :**  
 Tu as `$briques = 50` briques sur le chantier.  
-Un camion t'en livre 30 de plus. Utilise l'opérateur `+=` pour ajouter ces briques.  
+Un camion t`en livre 30 de plus. Utilise l`opérateur `+=` pour ajouter ces briques.  
 Affiche le nouveau total.
 
-**Ce qu'on attend :**  
-- Utilisation de l'opérateur `+=`
-- L'affichage du total après livraison
+**Ce qu`on attend :**  
+- Utilisation de l`opérateur `+=`
+- L`affichage du total après livraison
 
 **Exemple de résultat attendu :**
 ```
-J'ai maintenant 80 briques.
+J`ai maintenant 80 briques.
 ```
 
 <details>
@@ -586,7 +586,7 @@ J'ai maintenant 80 briques.
 <?php
 $briques = 50;
 $briques += 30;
-echo "J'ai maintenant $briques briques.";
+echo "J`ai maintenant $briques briques.";
 ?>
 ```
 </details>
@@ -596,12 +596,12 @@ echo "J'ai maintenant $briques briques.";
 ## 📝 Exercice 4 : Utiliser -=
 **Énoncé :**  
 Tu as `$budget = 500` euros.  
-Tu achètes du matériel pour 150 euros. Utilise l'opérateur `-=` pour soustraire cette dépense.  
+Tu achètes du matériel pour 150 euros. Utilise l`opérateur `-=` pour soustraire cette dépense.  
 Affiche le budget restant.
 
-**Ce qu'on attend :**  
-- Utilisation de l'opérateur `-=`
-- L'affichage du budget après achat
+**Ce qu`on attend :**  
+- Utilisation de l`opérateur `-=`
+- L`affichage du budget après achat
 
 **Exemple de résultat attendu :**
 ```
@@ -626,9 +626,9 @@ echo "Budget restant : $budget euros.";
 **Énoncé :**  
 Crée une variable appelée `$prenom` qui contient ton prénom, puis affiche-la avec `echo`.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable `$prenom` correctement créée
-- L'affichage de ton prénom à l'écran
+- L`affichage de ton prénom à l`écran
 
 **Exemple de résultat attendu :**
 ```
@@ -651,15 +651,15 @@ echo $prenom;
 ## 📝 Exercice 6 : Présentation complète
 **Énoncé :**  
 Crée deux variables : `$prenom` avec ton prénom et `$age` avec ton âge.  
-Affiche ensuite une phrase complète : "Je m'appelle [prénom] et j'ai [âge] ans."
+Affiche ensuite une phrase complète : "Je m`appelle [prénom] et j`ai [âge] ans."
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Deux variables correctement déclarées
 - Une phrase complète qui utilise ces deux variables
 
 **Exemple de résultat attendu :**
 ```
-Je m'appelle Laurent et j'ai 45 ans.
+Je m`appelle Laurent et j`ai 45 ans.
 ```
 
 <details>
@@ -669,7 +669,7 @@ Je m'appelle Laurent et j'ai 45 ans.
 <?php
 $prenom = "Laurent";
 $age = 45;
-echo "Je m'appelle $prenom et j'ai $age ans.";
+echo "Je m`appelle $prenom et j`ai $age ans.";
 ?>
 ```
 </details>
@@ -678,14 +678,14 @@ echo "Je m'appelle $prenom et j'ai $age ans.";
 
 ## 📝 Exercice 7 : Calculer une surface
 **Énoncé :**  
-Tu dois calculer la surface d'un mur rectangulaire.  
+Tu dois calculer la surface d`un mur rectangulaire.  
 Crée deux variables : `$largeur = 5` et `$longueur = 3`.  
 Calcule la surface dans une nouvelle variable `$surface` et affiche le résultat.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Trois variables : `$largeur`, `$longueur` et `$surface`
 - Le calcul correct de la multiplication
-- L'affichage de la surface
+- L`affichage de la surface
 
 **Exemple de résultat attendu :**
 ```
@@ -713,10 +713,10 @@ Tu achètes 8 sacs de ciment. Chaque sac coûte 12 euros.
 Crée une variable `$prix_sac = 12` et une variable `$quantite = 8`.  
 Calcule le prix total et affiche-le.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Deux variables pour le prix unitaire et la quantité
 - Une variable pour le total
-- L'affichage du montant total
+- L`affichage du montant total
 
 **Exemple de résultat attendu :**
 ```
@@ -741,10 +741,10 @@ echo "Le prix total est de $total euros.";
 ## 📝 Exercice 9 : Modifier une variable
 **Énoncé :**  
 Crée une variable `$client = "Dupont"`.  
-Affiche d'abord "Bonjour Dupont".  
+Affiche d`abord "Bonjour Dupont".  
 Ensuite, change la valeur de `$client` en "Martin" et affiche "Bonjour Martin".
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable créée puis modifiée
 - Deux affichages différents montrant que la variable a changé
 
@@ -774,14 +774,14 @@ echo "Bonjour $client";
 Sur ton chantier, tu as `$sacs_ciment = 5` et `$sacs_sable = 7`.  
 Calcule le nombre total de sacs dans une variable `$total_sacs` et affiche le résultat.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Trois variables au total
 - Une addition correcte
 - Un message clair avec le résultat
 
 **Exemple de résultat attendu :**
 ```
-J'ai un total de 12 sacs sur le chantier.
+J`ai un total de 12 sacs sur le chantier.
 ```
 
 <details>
@@ -792,7 +792,7 @@ J'ai un total de 12 sacs sur le chantier.
 $sacs_ciment = 5;
 $sacs_sable = 7;
 $total_sacs = $sacs_ciment + $sacs_sable;
-echo "J'ai un total de $total_sacs sacs sur le chantier.";
+echo "J`ai un total de $total_sacs sacs sur le chantier.";
 ?>
 ```
 </details>
@@ -807,9 +807,9 @@ Crée les variables suivantes :
 - `$longueur_piece = 5`
 - `$prix_m2 = 35`
 
-Calcule d'abord la surface de la pièce, puis le prix total du carrelage, et affiche les deux résultats.
+Calcule d`abord la surface de la pièce, puis le prix total du carrelage, et affiche les deux résultats.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Calcul de la surface (largeur × longueur)
 - Calcul du prix total (surface × prix au m²)
 - Affichage des deux informations
@@ -843,12 +843,12 @@ echo "Prix total du carrelage : $prix_total euros";
 ## 📝 Exercice 12 : Incrémenter une variable
 **Énoncé :**  
 Tu commences la journée avec `$seaux = 3` sur le chantier.  
-Un collègue t'en apporte 4 de plus. Modifie la variable `$seaux` en lui ajoutant 4, puis affiche le nouveau nombre de seaux.
+Un collègue t`en apporte 4 de plus. Modifie la variable `$seaux` en lui ajoutant 4, puis affiche le nouveau nombre de seaux.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable initialisée à 3
 - Une modification qui ajoute 4 à cette variable
-- L'affichage du résultat final
+- L`affichage du résultat final
 
 **Exemple de résultat attendu :**
 ```
@@ -876,15 +876,15 @@ Crée trois variables :
 - `$ville = "Lyon"`
 - `$telephone = "04 78 12 34 56"`
 
-Affiche ensuite un message complet : "L'entreprise [entreprise] située à [ville] - Tél : [telephone]"
+Affiche ensuite un message complet : "L`entreprise [entreprise] située à [ville] - Tél : [telephone]"
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Trois variables de type texte (string)
 - Un message formaté qui utilise toutes les variables
 
 **Exemple de résultat attendu :**
 ```
-L'entreprise BTP Services située à Lyon - Tél : 04 78 12 34 56
+L`entreprise BTP Services située à Lyon - Tél : 04 78 12 34 56
 ```
 
 <details>
@@ -895,7 +895,7 @@ L'entreprise BTP Services située à Lyon - Tél : 04 78 12 34 56
 $entreprise = "BTP Services";
 $ville = "Lyon";
 $telephone = "04 78 12 34 56";
-echo "L'entreprise $entreprise située à $ville - Tél : $telephone";
+echo "L`entreprise $entreprise située à $ville - Tél : $telephone";
 ?>
 ```
 </details>
@@ -904,16 +904,16 @@ echo "L'entreprise $entreprise située à $ville - Tél : $telephone";
 
 ## 📝 Exercice 14 : Calcul complexe avec plusieurs variables
 **Énoncé :**  
-Tu dois calculer le coût total d'un chantier. Tu as besoin de :
-- `$heures_travail = 16` (nombre d'heures travaillées)
+Tu dois calculer le coût total d`un chantier. Tu as besoin de :
+- `$heures_travail = 16` (nombre d`heures travaillées)
 - `$taux_horaire = 25` (euros par heure)
 - `$materiel = 150` (coût du matériel en euros)
 
-Calcule d'abord le coût de la main d'œuvre (`$cout_main_oeuvre`), puis le coût total du chantier (`$cout_total`) qui est la somme de la main d'œuvre et du matériel. Affiche tous les détails.
+Calcule d`abord le coût de la main d`œuvre (`$cout_main_oeuvre`), puis le coût total du chantier (`$cout_total`) qui est la somme de la main d`œuvre et du matériel. Affiche tous les détails.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Plusieurs calculs intermédiaires
-- L'utilisation de toutes les variables créées
+- L`utilisation de toutes les variables créées
 - Un affichage détaillé du devis
 
 **Exemple de résultat attendu :**
@@ -951,8 +951,8 @@ Si tu as réussi tous ces exercices, tu maîtrises maintenant les bases des vari
 Tu sais maintenant :
 - ✅ Créer une variable avec le symbole `$`
 - ✅ Stocker différents types de valeurs (nombres, texte)
-- ✅ Afficher le contenu d'une variable
-- ✅ Modifier la valeur d'une variable
+- ✅ Afficher le contenu d`une variable
+- ✅ Modifier la valeur d`une variable
 - ✅ Faire des calculs avec plusieurs variables
 - ✅ Combiner des variables dans des messages
 
