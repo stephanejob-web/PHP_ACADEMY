@@ -551,58 +551,76 @@ Si jamais tu veux vérifier ton code, voici **le fichier complet** :
         ]
     ];
 
-    // 💰 Fonction pour calculer le prix d`un matériau
-    function calculerPrix($prix_unitaire, $quantite) {
+    // 💰 Fonction pour calculer le prix d'un matériau
+    function calculerPrix(float $prix_unitaire, int $quantite): float {
         return $prix_unitaire * $quantite;
     }
 
     // 🎁 Fonction pour calculer une réduction
-    function appliquerReduction($prix_total, $quantite) {
+    // Retourne le montant de la réduction (positif)
+    function appliquerReduction(float $prix_total, int $quantite): float {
         if ($quantite >= 100) {
-            return $prix_total * 0.10;
+            return $prix_total * 0.10; // 10% de réduction
         }
-        return 0;
+        return 0.0;
     }
 
-    // 💶 Fonction pour formater un prix
-    function formaterPrix($montant) {
-        return number_format($montant, 2, `,`, ` `) . " €";
+    // 💶 Fonction pour formater un prix (ex: 1 234,56 €)
+    function formaterPrix(float $montant): string {
+        return number_format($montant, 2, ',', ' ') . " €";
     }
 
     // 🧱 Variable pour stocker le total général
-    $total_general = 0;
+    $total_general = 0.0;
 
     // 🔁 On parcourt tous les matériaux
     foreach ($materiaux as $materiau) {
 
+        // Récupération en variables locales pour lisibilité
+        $nom = $materiau["nom"];
+        $prix_unitaire = (float) $materiau["prix_unitaire"];
+        $stock = (int) $materiau["stock"];
+        $quantite = (int) $materiau["quantite_commandee"];
+
         // Calculs
-        $prix = calculerPrix($materiau["prix_unitaire"], $materiau["quantite_commandee"]);
-        $reduction = appliquerReduction($prix, $materiau["quantite_commandee"]);
+        $prix = calculerPrix($prix_unitaire, $quantite);
+        $reduction = appliquerReduction($prix, $quantite);
         $prix_final = $prix - $reduction;
         $total_general += $prix_final;
 
-        // Affichage
-        echo `<h3>🧱 ` . $materiau["nom"] . `</h3>`;
-        echo `<p><strong>Prix unitaire :</strong> ` . formaterPrix($materiau["prix_unitaire"]) . `</p>`;
-        echo `<p><strong>Quantité commandée :</strong> ` . $materiau["quantite_commandee"] . `</p>`;
-        echo `<p><strong>Stock disponible :</strong> ` . $materiau["stock"] . `</p>`;
+        // Affichage (avec htmlspecialchars pour sécurité)
+        echo '<h3>🧱 ' . htmlspecialchars($nom, ENT_QUOTES, 'UTF-8') . '</h3>';
+        echo '<p><strong>Prix unitaire :</strong> ' . formaterPrix($prix_unitaire) . '</p>';
+        echo '<p><strong>Quantité commandée :</strong> ' . $quantite . '</p>';
+        echo '<p><strong>Stock disponible :</strong> ' . $stock . '</p>';
 
-        if ($materiau["stock"] < 10) {
-            echo `<p style="color: red;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>`;
+        // Alerte si commande > stock
+        if ($quantite > $stock) {
+            echo '<p style="color: red;"><strong>⚠️ ATTENTION : Quantité commandée (' . $quantite . ') supérieure au stock disponible (' . $stock . ') !</strong></p>';
         }
 
-        if ($reduction > 0) {
-            echo `<p style="color: green;"><strong>🎁 Réduction de -10% : -` . formaterPrix($reduction) . `</strong></p>`;
+        // Alerte stock faible
+        if ($stock < 10) {
+            echo '<p style="color: orange;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>';
         }
 
-        echo `<p><strong>Prix total :</strong> ` . formaterPrix($prix_final) . `</p>`;
+        // Afficher la réduction si applicable
+        if ($reduction > 0.0) {
+            echo '<p style="color: green;"><strong>🎁 Réduction de -10% : -' . formaterPrix($reduction) . '</strong></p>';
+        }
+
+        echo '<p><strong>Prix total :</strong> ' . formaterPrix($prix_final) . '</p>';
         echo "<hr>";
     }
 
     // Total final
-    echo `<h2 style="color: orange;">💰 TOTAL DU DEVIS : ` . formaterPrix($total_general) . `</h2>`;
+    echo '<h2 style="color: orange;">💰 TOTAL DU DEVIS : ' . formaterPrix($total_general) . '</h2>';
 
     ?>
+
+</body>
+</html>
+
 
 </body>
 </html>
