@@ -1385,7 +1385,13 @@
             padding: 1.5rem 2rem;
             z-index: 999;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            animation: slideDown 0.5s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .construction-banner.hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
         }
 
         @keyframes slideDown {
@@ -1474,31 +1480,71 @@
             border-color: white;
         }
 
-        .construction-close {
+        .construction-toggle {
             position: absolute;
             top: 0.5rem;
             right: 1rem;
-            background: none;
-            border: none;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.5);
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             cursor: pointer;
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
+            border-radius: 8px;
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
-        .construction-close:hover {
-            background: rgba(255,255,255,0.2);
-            transform: rotate(90deg);
+        .construction-toggle:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: white;
+            transform: scale(1.05);
         }
 
-        .banner-hidden {
+        /* Toggle Button when banner is hidden */
+        .banner-toggle-btn {
+            position: fixed;
+            top: 85px;
+            right: 2rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            z-index: 998;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+            transition: all 0.3s ease;
             display: none;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .banner-toggle-btn.show {
+            display: flex;
+            animation: slideInRight 0.3s ease;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .banner-toggle-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.5);
         }
 
         /* Adjust hero section when banner is visible */
@@ -1540,6 +1586,7 @@
                 gap: 1rem;
                 flex-direction: column;
                 align-items: flex-start;
+                padding-right: 3rem;
             }
 
             .construction-avatar {
@@ -1564,6 +1611,19 @@
                 justify-content: center;
                 font-size: 0.85rem;
                 padding: 0.6rem 1rem;
+            }
+
+            .construction-toggle {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            .banner-toggle-btn {
+                top: 75px;
+                right: 1rem;
+                padding: 0.6rem 1.2rem;
+                font-size: 0.85rem;
             }
 
             .hero-with-banner {
@@ -1719,7 +1779,9 @@
 
     <!-- Construction Banner -->
     <div class="construction-banner" id="constructionBanner">
-        <button class="construction-close" id="closeBanner" aria-label="Fermer la bannière">✕</button>
+        <button class="construction-toggle" id="hideBanner" aria-label="Masquer la bannière" title="Masquer">
+            ▲
+        </button>
         <div class="construction-content">
             <img src="https://github.com/stephanejob-web.png" alt="Stéphane Job" class="construction-avatar">
             <div class="construction-text">
@@ -1728,7 +1790,7 @@
                 </div>
                 <div class="construction-description">
                     Ce projet est activement développé. Vous pourriez rencontrer des bugs d'affichage ou des fonctionnalités incomplètes.
-                    Tous les cours sont disponibles en fichiers Markdown sur GitHub. N'hésitez pas à signaler tout problème via les Issues !
+                    Tous les cours sont disponibles en fichiers Markdown sur GitHub. N'hésitez pas à signaler tout problème via les Issues ou par email : <a href="mailto:stephane.job@laplateforme.io" style="color: white; text-decoration: underline; font-weight: 600;">stephane.job@laplateforme.io</a>
                 </div>
             </div>
             <div class="construction-actions">
@@ -1741,6 +1803,11 @@
             </div>
         </div>
     </div>
+
+    <!-- Toggle Button (appears when banner is hidden) -->
+    <button class="banner-toggle-btn" id="showBanner">
+        🚧 Infos Construction
+    </button>
 
     <!-- Hero Section -->
     <section class="hero" id="heroSection">
@@ -2146,7 +2213,7 @@
                 <h4>Contact</h4>
                 <ul>
                     <li><a href="https://github.com/stephanejob-web" target="_blank">GitHub Profile</a></li>
-                    <li><a href="mailto:contact@example.com">Email</a></li>
+                    <li><a href="mailto:stephane.job@laplateforme.io">stephane.job@laplateforme.io</a></li>
                 </ul>
             </div>
         </div>
@@ -2233,28 +2300,39 @@
 
     <!-- Construction Banner Script -->
     <script>
-        // Gestion de la bannière de construction
+        // Gestion de la bannière de construction avec toggle
         document.addEventListener('DOMContentLoaded', function() {
             const banner = document.getElementById('constructionBanner');
-            const closeBtn = document.getElementById('closeBanner');
+            const hideBannerBtn = document.getElementById('hideBanner');
+            const showBannerBtn = document.getElementById('showBanner');
             const heroSection = document.getElementById('heroSection');
 
-            // Vérifier si la bannière a déjà été fermée
-            const bannerClosed = localStorage.getItem('constructionBannerClosed');
+            // Vérifier l'état sauvegardé
+            const bannerHidden = localStorage.getItem('bannerHidden') === 'true';
 
-            if (bannerClosed === 'true') {
-                banner.classList.add('banner-hidden');
+            // Appliquer l'état initial
+            if (bannerHidden) {
+                banner.classList.add('hidden');
+                showBannerBtn.classList.add('show');
+                heroSection.classList.remove('hero-with-banner');
             } else {
-                // Ajouter la classe au hero pour l'ajuster
                 heroSection.classList.add('hero-with-banner');
             }
 
-            // Gérer le clic sur le bouton de fermeture
-            closeBtn.addEventListener('click', function() {
-                banner.classList.add('banner-hidden');
+            // Masquer la bannière
+            hideBannerBtn.addEventListener('click', function() {
+                banner.classList.add('hidden');
+                showBannerBtn.classList.add('show');
                 heroSection.classList.remove('hero-with-banner');
-                // Sauvegarder la préférence dans localStorage
-                localStorage.setItem('constructionBannerClosed', 'true');
+                localStorage.setItem('bannerHidden', 'true');
+            });
+
+            // Afficher la bannière
+            showBannerBtn.addEventListener('click', function() {
+                banner.classList.remove('hidden');
+                showBannerBtn.classList.remove('show');
+                heroSection.classList.add('hero-with-banner');
+                localStorage.setItem('bannerHidden', 'false');
             });
         });
     </script>
