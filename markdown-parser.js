@@ -2,12 +2,15 @@
 class MarkdownParser {
     constructor() {
         this.rules = [
-            // Headers
+            // Headers (ordre important : du plus long au plus court)
+            { pattern: /^###### (.*$)/gim, replacement: '<h6>$1</h6>' },
+            { pattern: /^##### (.*$)/gim, replacement: '<h5>$1</h5>' },
+            { pattern: /^#### (.*$)/gim, replacement: '<h4>$1</h4>' },
             { pattern: /^### (.*$)/gim, replacement: '<h3>$1</h3>' },
             { pattern: /^## (.*$)/gim, replacement: '<h2>$1</h2>' },
             { pattern: /^# (.*$)/gim, replacement: '<h1>$1</h1>' },
 
-            // Bold et Italic
+            // Bold et Italic (ordre important)
             { pattern: /\*\*\*(.*?)\*\*\*/g, replacement: '<strong><em>$1</em></strong>' },
             { pattern: /\*\*(.*?)\*\*/g, replacement: '<strong>$1</strong>' },
             { pattern: /\*(.*?)\*/g, replacement: '<em>$1</em>' },

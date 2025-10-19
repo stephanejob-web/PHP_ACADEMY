@@ -155,7 +155,7 @@ const coursesData = {
                 title: 'Les Bases',
                 icon: '🎯',
                 lessons: [
-                    { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES BASES/001_introduction_programmation.md', duration: '15 min' },
+                    { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES_BASES/001_introduction_programmation.md', duration: '15 min' },
                     { id: 'variables', title: 'Les Variables', file: '01_LES_BASES/01_variables.MD', duration: '15 min' },
                     { id: 'conditions', title: 'Les Conditions', file: '01_LES_BASES/02_conditions.MD', duration: '20 min' },
                     { id: 'boucle-for', title: 'La Boucle For', file: '01_LES_BASES/03_boucle_for.md', duration: '20 min' },
