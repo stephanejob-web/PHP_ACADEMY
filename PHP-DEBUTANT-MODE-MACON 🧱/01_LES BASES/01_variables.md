@@ -226,7 +226,7 @@ echo $budget_par_jour; // Affiche 200
 
 ---
 
-## 🎯 Les Opérateurs d`Incrémentation (++, --)
+## 🎯 Les Opérateurs d`Incrémentation (++, --)   😱😱😱😱😱😱😱 c'est quoi ce bordel !!!!
 
 ### 🪜 Imagine une échelle sur ton chantier
 

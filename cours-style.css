@@ -930,7 +930,7 @@ var {
     font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
     font-size: 0.9em;
     font-weight: 500;
-    border: 1px solid var(--border-color);
+    /* border: 1px solid var(--border-color); */
 }
 
 [data-theme="dark"] .inline-code {
