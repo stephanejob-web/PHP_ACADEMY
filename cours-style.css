@@ -892,13 +892,13 @@ var {
     font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
     font-size: 1rem;
     line-height: 1.75;
-    color: #e2e8f0;
+    color: #1e293b;  /* Couleur sombre pour le thème clair */
     font-weight: 400;
     display: block;
 }
 
 [data-theme="dark"] .code-block code {
-    color: #d6deeb;
+    color: #d6deeb;  /* Couleur claire pour le thème dark */
 }
 
 .code-block code .line {
@@ -911,8 +911,8 @@ var {
     display: inline-block;
     width: 2.5rem;
     margin-right: 1.5rem;
-    color: var(--text-secondary);
-    opacity: 0.5;
+    color: #475569;  /* Couleur sombre pour le thème clair */
+    opacity: 0.7;
     text-align: right;
     user-select: none;
     font-weight: 400;
