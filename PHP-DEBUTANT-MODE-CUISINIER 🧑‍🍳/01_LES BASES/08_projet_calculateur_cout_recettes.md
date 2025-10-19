@@ -152,7 +152,7 @@ C'est comme ton garde-manger : chaque ingrédient a un nom, un prix, un stock…
 ```php
 <?php
 
-// 🍳 Notre stock d ingrédients du garde-manger
+// 🍳 Notre stock d'ingrédients du garde-manger
 $ingredients = [
     [
         "nom" => "Farine (1kg)",
@@ -218,7 +218,7 @@ Plutôt que de réécrire 5 fois la même formule, on crée une fonction réutil
 **Ajoute ce code juste après ton tableau `$ingredients` :**
 
 ```php
-// 💰 Fonction pour calculer le prix d un ingrédient
+// 💰 Fonction pour calculer le prix d'un ingrédient
 function calculerPrix($prix_unitaire, $quantite) {
     return $prix_unitaire * $quantite;
 }
@@ -314,7 +314,7 @@ foreach ($ingredients as $ingredient) {
     echo '<p><strong>Prix total :</strong> ' . formaterPrix($prix_final) . '</p>';
 
     // Petite ligne de séparation pour que ce soit plus clair
-    echo "<hr>";
+    echo '<hr>';
 }
 ```
 
@@ -428,7 +428,7 @@ Maintenant qu'on a calculé tous les prix, on affiche le **total général** !
 
 ```php
 // 💰 Affichage du total final
-echo "<hr>";
+echo '<hr>';
 echo '<h2 style="color: orange;">💰 COÛT TOTAL DE LA RECETTE : ' . formaterPrix($total_general) . '</h2>';
 
 ?>
@@ -499,8 +499,6 @@ Mais **plus tu le fais, plus c'est naturel** ! 🍳
 
 Si jamais tu veux vérifier ton code, voici **le fichier complet** :
 
-<details><summary>📂 Clique ici pour voir le code final complet</summary>
-
 ```php
 <!DOCTYPE html>
 <html lang="fr">
@@ -517,7 +515,7 @@ Si jamais tu veux vérifier ton code, voici **le fichier complet** :
 
     <?php
 
-    // 🍳 Notre stock d ingrédients du garde-manger
+    // 🍳 Notre stock d'ingrédients du garde-manger
     $ingredients = [
         [
             "nom" => "Farine (1kg)",
@@ -551,7 +549,7 @@ Si jamais tu veux vérifier ton code, voici **le fichier complet** :
         ]
     ];
 
-    // 💰 Fonction pour calculer le prix d un ingrédient
+    // 💰 Fonction pour calculer le prix d'un ingrédient
     function calculerPrix($prix_unitaire, $quantite) {
         return $prix_unitaire * $quantite;
     }
@@ -596,7 +594,7 @@ Si jamais tu veux vérifier ton code, voici **le fichier complet** :
         }
 
         echo '<p><strong>Prix total :</strong> ' . formaterPrix($prix_final) . '</p>';
-        echo "<hr>";
+        echo '<hr>';
     }
 
     // Total final
@@ -607,8 +605,6 @@ Si jamais tu veux vérifier ton code, voici **le fichier complet** :
 </body>
 </html>
 ```
-
-</details>
 
 ---
 
