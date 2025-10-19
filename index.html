@@ -1380,12 +1380,13 @@
             top: 80px;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
             color: white;
-            padding: 1.5rem 2rem;
+            padding: 2rem;
             z-index: 999;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
             transition: transform 0.3s ease, opacity 0.3s ease;
+            border-bottom: 3px solid rgba(255,255,255,0.2);
         }
 
         .construction-banner.hidden {
@@ -1409,100 +1410,196 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .construction-header {
+            display: flex;
             align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
         }
 
-        .construction-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        .construction-icon {
+            font-size: 3rem;
+            animation: pulse 2s ease-in-out infinite;
         }
 
-        .construction-text {
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .construction-title-wrapper {
             flex: 1;
-            min-width: 300px;
         }
 
         .construction-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 0 0 0.3rem 0;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .construction-description {
-            font-size: 0.95rem;
-            opacity: 0.95;
+        .construction-subtitle {
+            font-size: 1rem;
+            margin: 0;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .construction-body {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .construction-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .construction-section:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateX(5px);
+        }
+
+        .construction-section-highlight {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(217, 119, 6, 0.3));
+            border: 2px solid rgba(245, 158, 11, 0.5);
+        }
+
+        .construction-section-highlight:hover {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.4), rgba(217, 119, 6, 0.4));
+            border-color: rgba(245, 158, 11, 0.7);
+        }
+
+        .construction-section-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .construction-section-content {
+            flex: 1;
+        }
+
+        .construction-section-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+            color: white;
+        }
+
+        .construction-section-content p {
+            margin: 0 0 0.5rem 0;
             line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .construction-section-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .construction-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .construction-email:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .construction-actions {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
+            padding-top: 1rem;
+            border-top: 2px solid rgba(255,255,255,0.2);
         }
 
         .construction-btn {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.7rem 1.5rem;
-            background: white;
-            color: #d97706;
-            border-radius: 8px;
+            padding: 0.8rem 1.8rem;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .construction-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        .construction-btn-primary {
+            background: white;
+            color: #2563eb;
+        }
+
+        .construction-btn-primary:hover {
+            background: #f8fafc;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
 
         .construction-btn-secondary {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.15);
             color: white;
             backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.5);
+            border: 2px solid rgba(255,255,255,0.4);
         }
 
         .construction-btn-secondary:hover {
-            background: rgba(255,255,255,0.3);
-            border-color: white;
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.7);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
 
         .construction-toggle {
             position: absolute;
-            top: 0.5rem;
+            top: 1rem;
             right: 1rem;
-            background: rgba(255,255,255,0.2);
-            border: 2px solid rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.15);
+            border: 2px solid rgba(255,255,255,0.4);
             color: white;
             font-size: 1.2rem;
             cursor: pointer;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 8px;
+            border-radius: 10px;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
 
         .construction-toggle:hover {
-            background: rgba(255,255,255,0.3);
-            border-color: white;
-            transform: scale(1.05);
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.7);
+            transform: rotate(180deg) scale(1.05);
         }
 
         /* Toggle Button when banner is hidden */
@@ -1579,44 +1676,68 @@
         @media (max-width: 768px) {
             .construction-banner {
                 top: 70px;
-                padding: 1rem;
+                padding: 1.5rem 1rem;
             }
 
             .construction-content {
                 gap: 1rem;
-                flex-direction: column;
-                align-items: flex-start;
                 padding-right: 3rem;
             }
 
-            .construction-avatar {
-                width: 50px;
-                height: 50px;
+            .construction-header {
+                gap: 1rem;
+            }
+
+            .construction-icon {
+                font-size: 2rem;
             }
 
             .construction-title {
+                font-size: 1.3rem;
+            }
+
+            .construction-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .construction-section {
+                padding: 0.8rem;
+            }
+
+            .construction-section-icon {
+                font-size: 1.5rem;
+            }
+
+            .construction-section-content h3 {
                 font-size: 1.1rem;
             }
 
-            .construction-description {
-                font-size: 0.85rem;
+            .construction-section-content p {
+                font-size: 0.9rem;
+            }
+
+            .construction-email {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.8rem;
             }
 
             .construction-actions {
-                width: 100%;
+                gap: 0.8rem;
             }
 
             .construction-btn {
                 flex: 1;
                 justify-content: center;
-                font-size: 0.85rem;
-                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+                padding: 0.7rem 1.2rem;
             }
 
             .construction-toggle {
-                width: 35px;
-                height: 35px;
-                font-size: 1rem;
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+                top: 0.8rem;
+                right: 0.8rem;
             }
 
             .banner-toggle-btn {
@@ -1627,7 +1748,26 @@
             }
 
             .hero-with-banner {
-                padding-top: 14rem;
+                padding-top: 16rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .construction-title {
+                font-size: 1.1rem;
+            }
+
+            .construction-subtitle {
+                font-size: 0.85rem;
+            }
+
+            .construction-section-content p {
+                font-size: 0.85rem;
+            }
+
+            .construction-btn {
+                font-size: 0.85rem;
+                padding: 0.6rem 1rem;
             }
         }
 
@@ -1783,22 +1923,51 @@
             ▲
         </button>
         <div class="construction-content">
-            <img src="https://github.com/stephanejob-web.png" alt="Stéphane Job" class="construction-avatar">
-            <div class="construction-text">
-                <div class="construction-title">
-                    🚧 Site en Construction
-                </div>
-                <div class="construction-description">
-                    Ce projet est activement développé. Vous pourriez rencontrer des bugs d'affichage ou des fonctionnalités incomplètes.
-                    Tous les cours sont disponibles en fichiers Markdown sur GitHub. N'hésitez pas à signaler tout problème via les Issues ou par email : <a href="mailto:stephane.job@laplateforme.io" style="color: white; text-decoration: underline; font-weight: 600;">stephane.job@laplateforme.io</a>
+            <div class="construction-header">
+                <div class="construction-icon">🚀</div>
+                <div class="construction-title-wrapper">
+                    <h2 class="construction-title">Un projet en évolution constante</h2>
+                    <p class="construction-subtitle">Ce projet est en développement actif</p>
                 </div>
             </div>
+
+            <div class="construction-body">
+                <div class="construction-section">
+                    <div class="construction-section-icon">⚠️</div>
+                    <div class="construction-section-content">
+                        <p>Il se peut donc que vous rencontriez quelques bugs d'affichage ou des fonctionnalités encore incomplètes. Tous les cours sont disponibles en fichiers Markdown sur GitHub.</p>
+                    </div>
+                </div>
+
+                <div class="construction-section construction-section-highlight">
+                    <div class="construction-section-icon">💡</div>
+                    <div class="construction-section-content">
+                        <h3>Votre aide est la bienvenue !</h3>
+                        <p>Je recherche des contributeurs motivés pour faire grandir cette plateforme et en faire un véritable espace d'apprentissage ouvert à tous.</p>
+                        <p>L'objectif est de proposer des thèmes adaptés à chaque profil, pour apprendre à son rythme, simplement et gratuitement.</p>
+                    </div>
+                </div>
+
+                <div class="construction-section">
+                    <div class="construction-section-icon">👉</div>
+                    <div class="construction-section-content">
+                        <p>N'hésitez pas à signaler un problème ou à proposer une amélioration via les Issues GitHub, ou à me contacter directement par email :</p>
+                        <a href="mailto:stephane.job@laplateforme.io" class="construction-email">
+                            📧 stephane.job@laplateforme.io
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <div class="construction-actions">
-                <a href="https://github.com/stephanejob-web/PHP_ACADEMY/issues" target="_blank" class="construction-btn">
-                    🐛 Signaler un Bug
+                <a href="https://github.com/stephanejob-web/PHP_ACADEMY/issues" target="_blank" class="construction-btn construction-btn-primary">
+                    🐛 Signaler un problème
                 </a>
                 <a href="https://github.com/stephanejob-web/PHP_ACADEMY" target="_blank" class="construction-btn construction-btn-secondary">
-                    📚 Voir les Cours (MD)
+                    📚 Voir les cours (GitHub)
+                </a>
+                <a href="mailto:stephane.job@laplateforme.io" class="construction-btn construction-btn-secondary">
+                    📧 Me contacter
                 </a>
             </div>
         </div>
