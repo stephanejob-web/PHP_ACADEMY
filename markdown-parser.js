@@ -184,7 +184,11 @@ class MarkdownParser {
 
                 // Première ligne = header
                 const tag = (inTable && !tableHtml.includes('<tbody>')) ? 'th' : 'td';
-                const row = cells.map(cell => `<${tag}>${cell}</${tag}>`).join('');
+                // Parser le Markdown dans chaque cellule
+                const row = cells.map(cell => {
+                    const parsedCell = this.parseInlineMarkdown(cell);
+                    return `<${tag}>${parsedCell}</${tag}>`;
+                }).join('');
 
                 if (tag === 'th') {
                     tableHtml += `<thead><tr>${row}</tr></thead><tbody>`;
@@ -208,6 +212,24 @@ class MarkdownParser {
         }
 
         return result.join('\n');
+    }
+
+    // Nouvelle méthode pour parser uniquement le Markdown inline (gras, italique, code)
+    parseInlineMarkdown(text) {
+        let parsed = text;
+
+        // Code inline en premier
+        parsed = parsed.replace(/`([^`]+)`/g, '<code class="inline-code">$1</code>');
+
+        // Gras et italique (ordre important)
+        parsed = parsed.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
+        parsed = parsed.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        parsed = parsed.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+        // Links
+        parsed = parsed.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+
+        return parsed;
     }
 
     escapeHtml(text) {
