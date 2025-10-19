@@ -1042,6 +1042,243 @@
             font-size: 0.95rem;
         }
 
+        /* Enrichments Section */
+        .enrichments-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+        }
+
+        [data-theme="dark"] .enrichments-section {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #1e293b 100%);
+        }
+
+        .enrichments-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .enrichments-section .section-header {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        .enrichments-section .section-header.visible {
+            animation: fadeInDown 0.8s ease forwards;
+        }
+
+        @keyframes fadeInDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .enrichments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .enrichment-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .enrichment-card.visible {
+            animation: slideInUp 0.8s ease forwards;
+        }
+
+        .enrichment-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .enrichment-card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .enrichment-card:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        [data-theme="dark"] .enrichment-card {
+            background: var(--bg-tertiary);
+        }
+
+        .enrichment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(37, 99, 235, 0.15);
+            border-color: var(--primary);
+        }
+
+        .enrichment-card.highlight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .enrichment-card.highlight-card h3,
+        .enrichment-card.highlight-card p,
+        .enrichment-card.highlight-card li {
+            color: white;
+        }
+
+        .enrichment-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .enrichment-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .enrichment-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .enrichment-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .enrichment-features li {
+            padding: 0.5rem 0;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .enrichment-features li {
+            color: var(--text-secondary);
+        }
+
+        /* Roadmap Timeline */
+        .roadmap-timeline {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        [data-theme="dark"] .roadmap-timeline {
+            background: var(--bg-tertiary);
+        }
+
+        .roadmap-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .roadmap-title.visible {
+            animation: zoomIn 0.6s ease forwards;
+        }
+
+        @keyframes zoomIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .timeline-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 1.5rem;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        .timeline-item.visible {
+            animation: slideInRight 0.7s ease forwards;
+        }
+
+        .timeline-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .timeline-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .timeline-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .timeline-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        [data-theme="dark"] .timeline-item {
+            background: var(--bg-secondary);
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            border-left-color: var(--accent);
+        }
+
+        .timeline-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
         /* CTA Section */
         .cta-section {
             padding: 6rem 2rem;
@@ -1293,6 +1530,7 @@
                 <li><a href="#features">Avantages</a></li>
                 <li><a href="#themes">Thèmes</a></li>
                 <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#evolution">Évolution</a></li>
                 <li><a href="#apropos">À propos</a></li>
             </ul>
             <div class="nav-right">
@@ -1582,6 +1820,87 @@
         </div>
     </section>
 
+    <!-- Future Enrichments Section -->
+    <section class="enrichments-section" id="evolution">
+        <div class="enrichments-container">
+            <div class="section-header">
+                <span class="section-label">ÉVOLUTION CONTINUE</span>
+                <h2 class="section-title">Un Cours Qui Grandit Avec Vous</h2>
+                <p class="section-description">PHP Hero Academy est en constante évolution pour vous offrir la meilleure expérience d'apprentissage possible.</p>
+            </div>
+
+            <div class="enrichments-grid">
+                <div class="enrichment-card">
+                    <div class="enrichment-icon">🎨</div>
+                    <h3>Enrichissement HTML/CSS</h3>
+                    <p>Bientôt, les cours seront enrichis avec des exercices interactifs en HTML et CSS. Vous apprendrez à créer des interfaces visuelles directement intégrées à vos projets PHP.</p>
+                    <ul class="enrichment-features">
+                        <li>✨ Exercices interactifs en direct</li>
+                        <li>🎯 Validation automatique du code</li>
+                        <li>📱 Design responsive immédiat</li>
+                    </ul>
+                </div>
+
+                <div class="enrichment-card highlight-card">
+                    <div class="enrichment-icon">🚀</div>
+                    <h3>Projets Pratiques Guidés</h3>
+                    <p>Construisez des applications réelles pas à pas avec des guides détaillés. Chaque projet sera conçu professionnellement pour renforcer vos compétences.</p>
+                    <ul class="enrichment-features">
+                        <li>💼 Projets professionnels complets</li>
+                        <li>📊 Dashboard administrateur</li>
+                        <li>🛒 E-commerce thématique</li>
+                        <li>👥 Système de gestion utilisateurs</li>
+                    </ul>
+                </div>
+
+                <div class="enrichment-card">
+                    <div class="enrichment-icon">🎓</div>
+                    <h3>Contenu Professionnel</h3>
+                    <p>Tous les ajouts seront créés avec une approche professionnelle : code propre, bonnes pratiques, architecture moderne et sécurité renforcée.</p>
+                    <ul class="enrichment-features">
+                        <li>✅ Standards de l'industrie</li>
+                        <li>🔒 Sécurité avancée</li>
+                        <li>📚 Documentation complète</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="roadmap-timeline">
+                <h3 class="roadmap-title">🗓️ Feuille de Route</h3>
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="timeline-badge">Phase 1</div>
+                        <div class="timeline-content">
+                            <h4>Exercices HTML/CSS Interactifs</h4>
+                            <p>Intégration d'éditeurs de code en ligne avec prévisualisation instantanée</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">Phase 2</div>
+                        <div class="timeline-content">
+                            <h4>Premiers Projets Guidés</h4>
+                            <p>Lancement des projets thématiques pour chaque univers (Maçon, Cuisinier, Gamer)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">Phase 3</div>
+                        <div class="timeline-content">
+                            <h4>API & Bases de Données</h4>
+                            <p>Modules avancés sur MySQL, création d'API REST et intégration de services tiers</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-badge">Phase 4</div>
+                        <div class="timeline-content">
+                            <h4>Certification & Portfolio</h4>
+                            <p>Système de certification et création de portfolio professionnel automatisé</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-container">
@@ -1676,7 +1995,7 @@
         }, observerOptions);
 
         // Observe all animated elements
-        document.querySelectorAll('.feature-card, .theme-card, .path-item, .coming-card').forEach(el => {
+        document.querySelectorAll('.feature-card, .theme-card, .path-item, .coming-card, .enrichment-card, .timeline-item, .roadmap-title, .enrichments-section .section-header').forEach(el => {
             observer.observe(el);
         });
 
