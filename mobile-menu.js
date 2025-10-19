@@ -11,9 +11,15 @@ class MobileMenu {
         // Créer l'overlay
         this.createOverlay();
 
-        // Écouter le clic sur le bouton hamburger
+        // Écouter le clic sur le bouton hamburger dans la sidebar
         if (this.sidebarToggle) {
             this.sidebarToggle.addEventListener('click', () => this.toggleSidebar());
+        }
+
+        // Écouter le clic sur le bouton hamburger dans le header
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => this.toggleSidebar());
         }
 
         // Écouter le clic sur le bouton flottant
