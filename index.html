@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Hero Academy - Apprenez PHP Autrement</title>
     <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -131,11 +134,40 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--dark);
+            color: var(--text-primary);
+            background: var(--bg-secondary);
             overflow-x: hidden;
             transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        [data-theme="dark"] body {
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        /* Force Inter font on all text elements */
+        button,
+        input,
+        select,
+        textarea,
+        h1, h2, h3, h4, h5, h6,
+        p, li, a, span, div,
+        .nav-container,
+        .hero-content,
+        .feature-card,
+        .theme-card {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        /* Force JetBrains Mono for code elements */
+        code,
+        pre,
+        .code-content,
+        .code-line,
+        kbd {
+            font-family: 'JetBrains Mono', 'Courier New', monospace !important;
         }
 
         /* Navigation */
@@ -180,7 +212,7 @@
         }
 
         .nav-links a {
-            color: var(--dark);
+            color: var(--text-primary);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
@@ -669,7 +701,7 @@
             gap: 0.5rem;
             font-size: 1rem;
             font-weight: 600;
-            color: var(--gray);
+            color: var(--text-secondary);
         }
 
         /* Features Section */
@@ -702,13 +734,13 @@
         .section-title {
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 800;
-            color: var(--dark);
+            color: var(--text-primary);
             margin-bottom: 1rem;
         }
 
         .section-description {
             font-size: 1.2rem;
-            color: var(--gray);
+            color: var(--text-secondary);
             max-width: 700px;
             margin: 0 auto;
         }
@@ -753,12 +785,12 @@
         .feature-card h3 {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--dark);
+            color: var(--text-primary);
             margin-bottom: 1rem;
         }
 
         .feature-card p {
-            color: var(--gray);
+            color: var(--text-secondary);
             line-height: 1.8;
         }
 
@@ -838,12 +870,12 @@
         .theme-card h3 {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--dark);
+            color: var(--text-primary);
             margin-bottom: 1rem;
         }
 
         .theme-card p {
-            color: var(--gray);
+            color: var(--text-secondary);
             line-height: 1.8;
             font-size: 1.05rem;
         }
@@ -1001,12 +1033,12 @@
 
         .coming-card h3 {
             font-size: 1.3rem;
-            color: var(--dark);
+            color: var(--text-primary);
             margin-bottom: 0.5rem;
         }
 
         .coming-card p {
-            color: var(--gray);
+            color: var(--text-secondary);
             font-size: 0.95rem;
         }
 
@@ -1112,7 +1144,7 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--dark);
+            color: var(--text-primary);
         }
 
         /* Responsive */
@@ -1132,10 +1164,48 @@
 
             .nav-links {
                 display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--bg-primary, white);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                z-index: 999;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                transform: translateX(-100%);
+            }
+
+            .nav-links-mobile-open {
+                display: flex !important;
+                transform: translateX(0) !important;
+            }
+
+            .nav-links li {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeInUp 0.3s ease forwards;
+            }
+
+            .nav-links-mobile-open li:nth-child(1) { animation-delay: 0.1s; }
+            .nav-links-mobile-open li:nth-child(2) { animation-delay: 0.2s; }
+            .nav-links-mobile-open li:nth-child(3) { animation-delay: 0.3s; }
+            .nav-links-mobile-open li:nth-child(4) { animation-delay: 0.4s; }
+
+            .nav-links a {
+                font-size: 1.5rem;
+                padding: 1rem 2rem;
             }
 
             .mobile-menu-btn {
                 display: block;
+                position: relative;
+                z-index: 1000;
+                font-size: 1.5rem;
+                transition: all 0.3s ease;
             }
         }
 
@@ -1629,6 +1699,43 @@
 
         const heroSection = document.querySelector('.hero');
         if (heroSection) heroObserver.observe(heroSection);
+    </script>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        // Menu mobile pour la page d'accueil
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            let isMenuOpen = false;
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    isMenuOpen = !isMenuOpen;
+
+                    if (isMenuOpen) {
+                        navLinks.classList.add('nav-links-mobile-open');
+                        mobileMenuBtn.innerHTML = '✕';
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        navLinks.classList.remove('nav-links-mobile-open');
+                        mobileMenuBtn.innerHTML = '☰';
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                // Fermer le menu au clic sur un lien
+                const links = navLinks.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('nav-links-mobile-open');
+                        mobileMenuBtn.innerHTML = '☰';
+                        document.body.style.overflow = '';
+                        isMenuOpen = false;
+                    });
+                });
+            }
+        });
     </script>
 
     <!-- Theme Toggle Script -->
