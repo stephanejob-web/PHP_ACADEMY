@@ -82,14 +82,53 @@ Par exemple, le mot "Bonjour" en binaire, ça donne :
 
 😱 **C'est illisible, non ?**
 
-Imagine si tu devais écrire **toutes tes instructions** comme ça :
+---
 
-- Une simple addition : **des centaines** de 0 et de 1 😵
-- Afficher ton nom : **des milliers** de 0 et de 1 😵‍💫
-- Créer un site web : **des millions** de 0 et de 1 💀
-- Créer TikTok : **des milliards** de 0 et de 1 (et plusieurs années de thérapie) 🧠💥
+### 🔢 Minute culture : C'est quoi le binaire exactement ?
 
-**Bref, c'est impossible !** À moins d'être un robot. Ou de ne plus avoir de vie sociale depuis 20 ans. 🤓
+Bon, on va être honnêtes : **le binaire, c'est complexe comme truc**. 🤯
+
+Genre, t'as des mecs qui ont fait des thèses de mathématiques dessus. Il y a des bouquins de 500 pages qui expliquent juste comment ça fonctionne. Des ingénieurs se prennent la tête pendant des années pour optimiser des trucs en binaire.
+
+Bref, c'est **le boss final des concepts informatiques**. 👾
+
+#### 🎭 La blague du binaire
+
+Tu connais celle-là ?
+
+> **Il y a 10 types de personnes dans ce monde :**
+> - Ceux qui comprennent le binaire
+> - Ceux qui ne le comprennent pas
+> - Et ceux qui ne s'attendaient pas à une blague en base 3
+>
+> *(10 en binaire = 2 en décimal, tu vois ? Non ? Pas grave, c'est exactement le problème.)* 😅
+
+#### 🙏 La bonne nouvelle
+
+**TU N'AS PAS BESOIN DE COMPRENDRE LE BINAIRE POUR PROGRAMMER !**
+
+Sérieux. Zéro. Nada. Que dalle.
+
+C'est comme conduire une voiture : tu n'as pas besoin de comprendre **comment fonctionne le moteur** pour rouler. Tu tournes la clé, tu appuies sur l'accélérateur, et ça roule. 🚗💨
+
+Pareil pour la programmation :
+- Tu écris du code **lisible** (genre `print("Bonjour")`)
+- Le langage se charge de tout traduire en binaire
+- L'ordinateur comprend et exécute
+- **Toi, tu restes sain d'esprit** 🧠✨
+
+#### 💡 Ce qu'il faut retenir sur le binaire
+
+Juste ça :
+
+1. **Le binaire = le langage de la machine** (que des 0 et des 1)
+2. **C'est chiant et illisible** pour nous, les humains
+3. **C'est pour ça qu'on a inventé les langages de programmation** (pour traduire)
+4. **Tu n'auras JAMAIS à l'écrire toi-même** (ouf ! 😮‍💨)
+
+Si un jour quelqu'un te demande "C'est quoi le binaire ?", tu réponds :
+
+> "C'est le langage de l'ordinateur avec des 0 et des 1. C'est super compliqué, mais heureusement j'utilise Python/PHP/JavaScript, donc je m'en fous." 😎
 
 ---
 
@@ -396,6 +435,12 @@ Le processeur reçoit les instructions en binaire et les exécute :
 - Un traducteur entre toi et la machine (ton pote bilingue)
 - Il permet d'écrire des instructions lisibles (au lieu de parler alien)
 - Ces instructions sont traduites en binaire (pour que l'ordinateur capte)
+
+### 🔢 Le binaire :
+- C'est le langage de l'ordinateur (que des 0 et des 1)
+- C'est super compliqué et illisible
+- **La bonne nouvelle** : Tu n'as pas besoin de le comprendre ! 🎉
+- Les langages de programmation traduisent pour toi
 
 ### 📚 Les différents langages :
 - Chaque langage a sa spécialité (web, mobile, jeux, IA, etc.)
