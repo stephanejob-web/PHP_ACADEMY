@@ -1,5 +1,5 @@
 /* Import de polices agréables à lire */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Lato:wght@400;700;900&family=Merriweather:wght@400;700&display=swap');
 
 /* Variables CSS */
 :root {
@@ -73,7 +73,7 @@
 }
 
 body {
-    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 20px;
     line-height: 1.8;
     color: var(--text-primary);
@@ -84,7 +84,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Force JetBrains Mono font on all text elements */
+/* Force Inter font on all text elements */
 button,
 input,
 select,
@@ -94,7 +94,7 @@ textarea,
 .lesson-container,
 h1, h2, h3, h4, h5, h6,
 p, li, a, span, div {
-    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* Force JetBrains Mono for code elements */
@@ -150,6 +150,30 @@ var {
 
 .logo-icon {
     font-size: 1.75rem;
+}
+
+.mobile-menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-primary);
+}
+
+.mobile-menu-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.mobile-menu-btn svg {
+    pointer-events: none;
 }
 
 .nav-actions {
@@ -298,8 +322,10 @@ var {
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    color: var(--gray);
+    color: var(--text-primary);
     display: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .sidebar-content {
@@ -709,7 +735,7 @@ var {
 .lesson-body h4,
 .lesson-body h5,
 .lesson-body h6 {
-    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
     color: var(--text-primary);
     margin: 2.5rem 0 1.25rem;
@@ -1245,6 +1271,10 @@ var {
         padding: 0 1rem;
     }
 
+    .mobile-menu-btn {
+        display: flex !important;
+    }
+
     .logo-text {
         display: none; /* Cacher le texte sur petit écran */
     }
@@ -1338,12 +1368,21 @@ var {
 
     .sidebar-toggle {
         display: flex !important;
+        align-items: center;
+        justify-content: center;
         color: var(--text-primary);
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
     }
 
     .sidebar-toggle:hover {
         background: var(--bg-tertiary);
-        border-radius: 8px;
+    }
+
+    .sidebar-toggle svg {
+        pointer-events: none;
     }
 
     /* Overlay pour fermer la sidebar */
