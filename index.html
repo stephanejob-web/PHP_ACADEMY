@@ -1374,6 +1374,138 @@
             text-decoration: none;
         }
 
+        /* Construction Banner */
+        .construction-banner {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            z-index: 999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .construction-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .construction-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .construction-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .construction-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .construction-description {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .construction-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .construction-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            background: white;
+            color: #d97706;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .construction-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .construction-btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+
+        .construction-btn-secondary:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: white;
+        }
+
+        .construction-close {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .construction-close:hover {
+            background: rgba(255,255,255,0.2);
+            transform: rotate(90deg);
+        }
+
+        .banner-hidden {
+            display: none;
+        }
+
+        /* Adjust hero section when banner is visible */
+        .hero-with-banner {
+            padding-top: 12rem;
+        }
+
         /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
@@ -1395,6 +1527,48 @@
             color: var(--white);
             border-color: var(--primary);
             transform: scale(1.05);
+        }
+
+        /* Responsive for construction banner */
+        @media (max-width: 768px) {
+            .construction-banner {
+                top: 70px;
+                padding: 1rem;
+            }
+
+            .construction-content {
+                gap: 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .construction-avatar {
+                width: 50px;
+                height: 50px;
+            }
+
+            .construction-title {
+                font-size: 1.1rem;
+            }
+
+            .construction-description {
+                font-size: 0.85rem;
+            }
+
+            .construction-actions {
+                width: 100%;
+            }
+
+            .construction-btn {
+                flex: 1;
+                justify-content: center;
+                font-size: 0.85rem;
+                padding: 0.6rem 1rem;
+            }
+
+            .hero-with-banner {
+                padding-top: 14rem;
+            }
         }
 
         /* Responsive - Tablettes */
@@ -1543,8 +1717,33 @@
         </div>
     </nav>
 
+    <!-- Construction Banner -->
+    <div class="construction-banner" id="constructionBanner">
+        <button class="construction-close" id="closeBanner" aria-label="Fermer la bannière">✕</button>
+        <div class="construction-content">
+            <img src="https://github.com/stephanejob-web.png" alt="Stéphane Job" class="construction-avatar">
+            <div class="construction-text">
+                <div class="construction-title">
+                    🚧 Site en Construction
+                </div>
+                <div class="construction-description">
+                    Ce projet est activement développé. Vous pourriez rencontrer des bugs d'affichage ou des fonctionnalités incomplètes.
+                    Tous les cours sont disponibles en fichiers Markdown sur GitHub. N'hésitez pas à signaler tout problème via les Issues !
+                </div>
+            </div>
+            <div class="construction-actions">
+                <a href="https://github.com/stephanejob-web/PHP_ACADEMY/issues" target="_blank" class="construction-btn">
+                    🐛 Signaler un Bug
+                </a>
+                <a href="https://github.com/stephanejob-web/PHP_ACADEMY" target="_blank" class="construction-btn construction-btn-secondary">
+                    📚 Voir les Cours (MD)
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="heroSection">
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Enfin un Cours PHP Simple et Amusant</h1>
@@ -1910,7 +2109,7 @@
                 <a href="cours.html" class="btn btn-primary">
                     🚀 Accéder au Cours Gratuit
                 </a>
-                <a href="https://github.com/stephanejob-web/PHP_-DEBUTANT" class="btn btn-secondary" target="_blank">
+                <a href="https://github.com/stephanejob-web/PHP_ACADEMY" class="btn btn-secondary" target="_blank">
                     ⭐ Voir sur GitHub
                 </a>
             </div>
@@ -1928,17 +2127,17 @@
             <div class="footer-links">
                 <h4>Ressources</h4>
                 <ul>
-                    <li><a href="https://github.com/stephanejob-web/PHP_-DEBUTANT" target="_blank">Dépôt GitHub</a></li>
-                    <li><a href="https://github.com/stephanejob-web/PHP_-DEBUTANT/issues" target="_blank">Signaler un Bug</a></li>
-                    <li><a href="https://github.com/stephanejob-web/PHP_-DEBUTANT/blob/main/README.md" target="_blank">Documentation</a></li>
+                    <li><a href="https://github.com/stephanejob-web/PHP_ACADEMY" target="_blank">Dépôt GitHub</a></li>
+                    <li><a href="https://github.com/stephanejob-web/PHP_ACADEMY/issues" target="_blank">Signaler un Bug</a></li>
+                    <li><a href="https://github.com/stephanejob-web/PHP_ACADEMY/blob/main/README.md" target="_blank">Documentation</a></li>
                 </ul>
             </div>
 
             <div class="footer-links">
                 <h4>Communauté</h4>
                 <ul>
-                    <li><a href="https://github.com/stephanejob-web/PHP_-DEBUTANT/discussions" target="_blank">Forum</a></li>
-                    <li><a href="https://github.com/stephanejob-web/PHP_-DEBUTANT/blob/main/CONTRIBUTING.md" target="_blank">Contribuer</a></li>
+                    <li><a href="https://github.com/stephanejob-web/PHP_ACADEMY/discussions" target="_blank">Forum</a></li>
+                    <li><a href="https://github.com/stephanejob-web/PHP_ACADEMY/blob/main/CONTRIBUTING.md" target="_blank">Contribuer</a></li>
                     <li><a href="https://github.com/stephanejob-web" target="_blank">Autres Projets</a></li>
                 </ul>
             </div>
@@ -1954,7 +2153,7 @@
 
         <div class="footer-bottom">
             <p>© 2025 PHP Hero Academy. Créé avec 💜 pour rendre la programmation accessible à tous.</p>
-            <p>Projet Open Source sous licence MIT - <a href="https://github.com/stephanejob-web/PHP_-DEBUTANT" target="_blank">Contribuez sur GitHub</a></p>
+            <p>Projet Open Source sous licence MIT - <a href="https://github.com/stephanejob-web/PHP_ACADEMY" target="_blank">Contribuez sur GitHub</a></p>
         </div>
     </footer>
 
@@ -2030,6 +2229,34 @@
 
         const heroSection = document.querySelector('.hero');
         if (heroSection) heroObserver.observe(heroSection);
+    </script>
+
+    <!-- Construction Banner Script -->
+    <script>
+        // Gestion de la bannière de construction
+        document.addEventListener('DOMContentLoaded', function() {
+            const banner = document.getElementById('constructionBanner');
+            const closeBtn = document.getElementById('closeBanner');
+            const heroSection = document.getElementById('heroSection');
+
+            // Vérifier si la bannière a déjà été fermée
+            const bannerClosed = localStorage.getItem('constructionBannerClosed');
+
+            if (bannerClosed === 'true') {
+                banner.classList.add('banner-hidden');
+            } else {
+                // Ajouter la classe au hero pour l'ajuster
+                heroSection.classList.add('hero-with-banner');
+            }
+
+            // Gérer le clic sur le bouton de fermeture
+            closeBtn.addEventListener('click', function() {
+                banner.classList.add('banner-hidden');
+                heroSection.classList.remove('hero-with-banner');
+                // Sauvegarder la préférence dans localStorage
+                localStorage.setItem('constructionBannerClosed', 'true');
+            });
+        });
     </script>
 
     <!-- Mobile Menu Script -->
