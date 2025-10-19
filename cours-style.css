@@ -1008,35 +1008,42 @@ var {
 /* Tables */
 .markdown-table {
     width: 100%;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
     border-collapse: collapse;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px var(--shadow);
+    box-shadow: 0 4px 12px var(--shadow);
 }
 
 .markdown-table thead {
-    background: var(--bg-tertiary);
+    background: var(--primary);
 }
 
 .markdown-table th {
-    padding: 0.875rem 1rem;
+    padding: 1.25rem 1.5rem;
     text-align: left;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--text-primary);
-    border-bottom: 2px solid var(--border-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--white);
+    border-bottom: 3px solid var(--primary-dark);
 }
 
 .markdown-table td {
-    padding: 0.875rem 1rem;
-    font-size: 0.95rem;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.1rem;
     border-bottom: 1px solid var(--border-color);
     color: var(--text-primary);
+    line-height: 1.6;
 }
 
 .markdown-table tbody tr:hover {
     background: var(--bg-tertiary);
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+.markdown-table tbody tr {
+    transition: all 0.2s ease;
 }
 
 /* Lesson footer */
