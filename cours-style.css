@@ -924,7 +924,7 @@ var {
 
 .inline-code {
     padding: 0.2rem 0.5rem;
-    background: var(--bg-tertiary);
+    /* background: var(--bg-tertiary); */
     color: var(--text-primary);
     border-radius: 4px;
     font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
@@ -934,8 +934,8 @@ var {
 }
 
 [data-theme="dark"] .inline-code {
-    background: #0b2942;
-    color: #82aaff;
+    /* background: #0b2942; */
+    /* color: #82aaff; */
     border-color: #1e3a50;
 }
 
