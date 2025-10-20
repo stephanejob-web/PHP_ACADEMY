@@ -25,9 +25,29 @@
                 <span class="logo-text">PHP Hero Academy</span>
             </a>
             <div class="nav-actions">
-                <button class="theme-toggle-btn" id="themeToggleBtn" title="Changer le thème">
-                    <span class="theme-icon">🌙</span>
-                </button>
+                <div class="theme-dropdown">
+                    <button class="theme-toggle-btn" id="themeToggleBtn" title="Choisir le thème de couleur">
+                        <span class="theme-icon" id="themeIcon">🌙</span>
+                        <span class="theme-label" id="themeLabel">Clair</span>
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="theme-menu" id="themeMenu">
+                        <button class="theme-option" data-theme="light">
+                            <span class="theme-option-icon">🌙</span>
+                            <span class="theme-option-name">Thème Clair</span>
+                        </button>
+                        <button class="theme-option" data-theme="dark">
+                            <span class="theme-option-icon">🌙</span>
+                            <span class="theme-option-name">Winter is Coming</span>
+                        </button>
+                        <button class="theme-option" data-theme="dracula">
+                            <span class="theme-option-icon">🧛</span>
+                            <span class="theme-option-name">Dracula</span>
+                        </button>
+                    </div>
+                </div>
                 <button class="theme-selector-btn" id="themeSelectorBtn">
                     <span id="currentThemeIcon">🎮</span>
                     <span id="currentThemeName">Choisir un thème</span>

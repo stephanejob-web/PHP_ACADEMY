@@ -106,6 +106,53 @@
     --code-number: #f78c6c;       /* Orange pour les nombres */
 }
 
+/* Dracula theme - Le thème iconique */
+[data-theme="dracula"] {
+    /* Couleurs de base Dracula */
+    --bg-primary: #282a36;        /* Fond principal gris foncé */
+    --bg-secondary: #21222c;      /* Fond un peu plus sombre */
+    --bg-tertiary: #343746;       /* Fond éléments */
+    --text-primary: #f8f8f2;      /* Texte blanc cassé */
+    --text-secondary: #6272a4;    /* Texte secondaire bleu gris */
+    --border-color: #44475a;      /* Bordures grises */
+    --shadow: rgba(0, 0, 0, 0.6); /* Ombres prononcées */
+    --gray-lighter: #44475a;
+    --light: #21222c;
+
+    /* Couleurs d'accent Dracula */
+    --primary: #bd93f9;           /* Violet/Purple */
+    --primary-dark: #9580d4;
+    --secondary: #ff79c6;         /* Rose/Pink */
+    --accent: #f1fa8c;            /* Jaune/Yellow */
+    --success: #50fa7b;           /* Vert/Green */
+    --danger: #ff5555;            /* Rouge/Red */
+
+    /* Module colors - Dracula theme */
+    --module-intro: #bd93f9;      /* Violet pour intro */
+    --module-intro-light: #343746;
+    --module-bases: #8be9fd;      /* Cyan pour bases */
+    --module-bases-light: #343746;
+    --module-poo: #ff79c6;        /* Rose pour POO */
+    --module-poo-light: #3d2f42;
+    --module-database: #50fa7b;   /* Vert pour BDD */
+    --module-database-light: #2d3d2f;
+    --module-git: #ff5555;        /* Rouge pour Git */
+    --module-git-light: #3d2f2f;
+    --module-html: #ffb86c;       /* Orange pour HTML */
+    --module-html-light: #3d362f;
+    --module-css: #8be9fd;        /* Cyan pour CSS */
+    --module-css-light: #2f363d;
+
+    /* Couleurs pour le code - Dracula */
+    --code-bg: #21222c;
+    --code-keyword: #ff79c6;      /* Rose pour les mots-clés */
+    --code-string: #f1fa8c;       /* Jaune pour les strings */
+    --code-function: #50fa7b;     /* Vert pour les fonctions */
+    --code-variable: #8be9fd;     /* Cyan pour les variables */
+    --code-comment: #6272a4;      /* Bleu gris pour les commentaires */
+    --code-number: #bd93f9;       /* Violet pour les nombres */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -381,32 +428,139 @@ var {
     font-size: 1.25rem;
 }
 
+/* Menu déroulant de sélection de thème */
+.theme-dropdown {
+    position: relative;
+}
+
 .theme-toggle-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
-    border-radius: 50%;
+    border-radius: 10px;
     cursor: pointer;
     transition: var(--transition);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
 }
 
 .theme-toggle-btn:hover {
     background: var(--bg-primary);
     border-color: var(--primary);
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .theme-icon {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: transform 0.3s ease;
 }
 
-.theme-toggle-btn:hover .theme-icon {
-    transform: rotate(20deg);
+.theme-label {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+    opacity: 0.6;
+}
+
+.theme-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Menu déroulant */
+.theme-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 220px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.theme-dropdown.active .theme-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Options du menu */
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.theme-option:hover {
+    background: var(--bg-tertiary);
+}
+
+.theme-option.active {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+}
+
+.theme-option.active::before {
+    content: '✓';
+    position: absolute;
+    right: 1.25rem;
+    font-weight: bold;
+}
+
+.theme-option-icon {
+    font-size: 1.3rem;
+}
+
+.theme-option-name {
+    font-weight: 500;
+}
+
+/* Animation d'entrée pour chaque option */
+.theme-menu .theme-option:nth-child(1) {
+    animation: slideIn 0.2s ease-out 0.05s backwards;
+}
+
+.theme-menu .theme-option:nth-child(2) {
+    animation: slideIn 0.2s ease-out 0.1s backwards;
+}
+
+.theme-menu .theme-option:nth-child(3) {
+    animation: slideIn 0.2s ease-out 0.15s backwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .progress-indicator {
