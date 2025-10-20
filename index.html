@@ -991,6 +991,43 @@
             box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.3);
         }
 
+        /* Badge Bientôt pour les modules */
+        .path-badge {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+            animation: pulseGlowPath 2s infinite;
+        }
+
+        @keyframes pulseGlowPath {
+            0%, 100% {
+                box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(245, 158, 11, 0.7), 0 0 30px rgba(245, 158, 11, 0.4);
+                transform: scale(1.05);
+            }
+        }
+
+        .coming-soon-item {
+            opacity: 0.75;
+            position: relative;
+        }
+
+        .coming-soon-item:hover {
+            opacity: 0.85;
+        }
+
         /* Coming Soon */
         .coming-soon {
             padding: 6rem 2rem;
@@ -2225,54 +2262,75 @@
             <div class="section-header">
                 <span class="section-label">VOTRE FORMATION</span>
                 <h2 class="section-title">Parcours d'Apprentissage Complet</h2>
-                <p class="section-description">De débutant absolu à développeur PHP compétent en 12 modules progressifs.</p>
+                <p class="section-description">De débutant absolu à développeur web full-stack en 14 modules progressifs.</p>
             </div>
 
             <div class="path-timeline">
-                <div class="path-item">
+                <div class="path-item highlight coming-soon-item">
                     <span class="path-number">Module 01</span>
-                    <h3>Les Variables</h3>
+                    <span class="path-badge">Bientôt</span>
+                    <h3>HTML - Les Fondations du Web 🌐</h3>
+                    <p>Créez la structure de vos pages web. Apprenez les balises, la sémantique HTML5 et les bonnes pratiques pour bâtir des sites solides.</p>
+                </div>
+
+                <div class="path-item highlight coming-soon-item">
+                    <span class="path-number">Module 02</span>
+                    <span class="path-badge">Bientôt</span>
+                    <h3>CSS - Le Design de vos Pages 🎨</h3>
+                    <p>Donnez vie à vos pages avec les styles CSS. Maîtrisez les couleurs, la mise en page, Flexbox, Grid et le design responsive.</p>
+                </div>
+
+                <div class="path-item">
+                    <span class="path-number">Module 03</span>
+                    <h3>Les Variables PHP</h3>
                     <p>Apprenez à stocker et manipuler des données. Comprendre les types, la portée et la nomenclature des variables.</p>
                 </div>
 
                 <div class="path-item">
-                    <span class="path-number">Module 02</span>
+                    <span class="path-number">Module 04</span>
                     <h3>Les Conditions</h3>
                     <p>Prenez des décisions dans votre code avec if, else, elseif et switch. Maîtrisez la logique conditionnelle.</p>
                 </div>
 
                 <div class="path-item">
-                    <span class="path-number">Module 03-04</span>
+                    <span class="path-number">Module 05-06</span>
                     <h3>Les Boucles</h3>
                     <p>Automatisez vos tâches avec les boucles for et while. Répétez des actions efficacement et évitez la duplication de code.</p>
                 </div>
 
                 <div class="path-item">
-                    <span class="path-number">Module 05-06</span>
+                    <span class="path-number">Module 07-08</span>
                     <h3>Les Tableaux</h3>
                     <p>Organisez vos données en collections. Tableaux indexés et associatifs pour gérer des ensembles d'informations complexes.</p>
                 </div>
 
                 <div class="path-item">
-                    <span class="path-number">Module 07</span>
+                    <span class="path-number">Module 09</span>
                     <h3>Les Fonctions</h3>
                     <p>Créez vos propres outils réutilisables. Structurez votre code avec des fonctions personnalisées et des paramètres.</p>
                 </div>
 
                 <div class="path-item highlight">
-                    <span class="path-number">Module 08</span>
+                    <span class="path-number">Module 10</span>
                     <h3>Programmation Orientée Objet (POO)</h3>
                     <p>Passez au niveau supérieur avec les classes, objets, héritage et encapsulation. La POO pour des applications robustes et maintenables.</p>
                 </div>
 
+                <div class="path-item highlight coming-soon-item">
+                    <span class="path-number">Module 11</span>
+                    <span class="path-badge">Bientôt</span>
+                    <h3>Bases de Données SQL 💾</h3>
+                    <p>Stockez et gérez vos données avec MySQL. Créez, lisez, modifiez et supprimez des informations. Maîtrisez les relations et les jointures.</p>
+                </div>
+
                 <div class="path-item highlight">
-                    <span class="path-number">Module 09</span>
+                    <span class="path-number">Module 12</span>
                     <h3>Git & GitHub</h3>
                     <p>Maîtrisez le versioning de code. Collaborez, sauvegardez et gérez vos projets comme un professionnel avec Git et GitHub.</p>
                 </div>
 
                 <div class="path-item">
-                    <span class="path-number">Module 10-12</span>
+                    <span class="path-number">Module 13-14</span>
                     <h3>Mini-Projets Thématiques</h3>
                     <p>Construisez des applications réelles : catalogue de matériaux (maçon), inventaire RPG (gamer), ou gestionnaire de recettes (cuisinier).</p>
                 </div>
