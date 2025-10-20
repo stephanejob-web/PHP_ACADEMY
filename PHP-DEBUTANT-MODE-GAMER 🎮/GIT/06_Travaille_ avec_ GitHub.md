@@ -2,7 +2,7 @@
 🌐 Leçon 06 : Mettre ton jeu dans le cloud (GitHub)
 Salut maître du cloud ! 🧙‍♂️☁️
 
-Jusqu'ici, tu as travaillé sur ta save locale (ton ordinateur).
+Jusqu`ici, tu as travaillé sur ta save locale (ton ordinateur).
 Mais imagine...
 
 😱 Ton PC crashe. Ta save est perdue.
@@ -16,17 +16,17 @@ Mettre ta save dans le **cloud avec GitHub** ! 🚀
 Comme ça :
 
 - ✅ Ton code est sauvegardé dans le cloud (si ton PC explose, tout est safe)
-- ✅ Tu peux jouer depuis n'importe quel ordinateur
+- ✅ Tu peux jouer depuis n`importe quel ordinateur
 - ✅ Tu peux partager ton jeu avec le monde entier
 - ✅ Les recruteurs peuvent voir ton code (ton portfolio de dev !)
 
-Aujourd'hui, tu vas apprendre à **connecter ta save locale avec GitHub** !
+Aujourd`hui, tu vas apprendre à **connecter ta save locale avec GitHub** !
 
 ---
 
-## 🤔 C'est quoi GitHub ?
+## 🤔 C`est quoi GitHub ?
 
-GitHub, c'est comme un **cloud gaming pour ton code**.
+GitHub, c`est comme un **cloud gaming pour ton code**.
 
 **Analogie jeu :**
 
@@ -39,7 +39,7 @@ Imagine que tu joues à un RPG. ⚔️
 Tu synchronises ta save avec le cloud.
 
 **Résultat ?**
-N'importe qui peut voir ta progression depuis n'importe où dans le monde ! 🌍
+N`importe qui peut voir ta progression depuis n`importe où dans le monde ! 🌍
 
 ---
 
@@ -56,7 +56,7 @@ Beaucoup de débutants confondent. Voici la différence :
 
 **En résumé :**
 
-- **Git** = L'outil pour gérer tes saves localement
+- **Git** = L`outil pour gérer tes saves localement
 - **GitHub** = Le site pour stocker tes saves dans le cloud
 
 **Autres alternatives à GitHub :**
@@ -70,9 +70,9 @@ Pour jouer avec GitHub, tu dois comprendre 4 concepts :
 
 ### 1️⃣ Le repository (repo)
 
-**C'est quoi ?** Un projet sur GitHub.
+**C`est quoi ?** Un projet sur GitHub.
 
-**Analogie jeu :** C'est ton profil de jeu en ligne avec toutes tes sauvegardes.
+**Analogie jeu :** C`est ton profil de jeu en ligne avec toutes tes sauvegardes.
 
 **Exemple :** `https://github.com/ton-nom/mon-site`
 
@@ -80,9 +80,9 @@ Pour jouer avec GitHub, tu dois comprendre 4 concepts :
 
 ### 2️⃣ Remote (distant)
 
-**C'est quoi ?** Le lien entre ta save locale et ta save GitHub.
+**C`est quoi ?** Le lien entre ta save locale et ta save GitHub.
 
-**Analogie jeu :** C'est l'adresse de ton cloud gaming (comme ton compte Steam).
+**Analogie jeu :** C`est l`adresse de ton cloud gaming (comme ton compte Steam).
 
 **Commande :**
 
@@ -90,13 +90,13 @@ Pour jouer avec GitHub, tu dois comprendre 4 concepts :
 git remote add origin https://github.com/ton-nom/mon-site.git
 ```
 
-**Traduction :** "Git, voici l'adresse de mon cloud. Appelle-le 'origin'."
+**Traduction :** "Git, voici l`adresse de mon cloud. Appelle-le 'origin`."
 
 ---
 
 ### 3️⃣ Push (pousser)
 
-**C'est quoi ?** Envoyer tes commits locaux vers GitHub.
+**C`est quoi ?** Envoyer tes commits locaux vers GitHub.
 
 **Analogie jeu :** Synchroniser ta save locale vers le cloud.
 
@@ -112,7 +112,7 @@ git push
 
 ### 4️⃣ Pull (tirer)
 
-**C'est quoi ?** Récupérer les commits de GitHub vers ton PC.
+**C`est quoi ?** Récupérer les commits de GitHub vers ton PC.
 
 **Analogie jeu :** Télécharger ta save depuis le cloud vers ton PC.
 
@@ -128,20 +128,20 @@ git pull
 
 ## 🚀 Créer ton compte GitHub
 
-Avant de commencer, tu dois créer un compte GitHub (c'est gratuit !).
+Avant de commencer, tu dois créer un compte GitHub (c`est gratuit !).
 
 **Étapes :**
 
 1. Va sur https://github.com
-2. Clique sur **Sign up** (S'inscrire)
-3. Choisis un nom d'utilisateur (ton pseudo de dev !)
+2. Clique sur **Sign up** (S`inscrire)
+3. Choisis un nom d`utilisateur (ton pseudo de dev !)
 4. Entre ton email
 5. Crée un mot de passe
 6. Valide ton compte
 
 **Conseil pro :** Choisis un nom pro (ex: `kevin-dev`, `sophie-coder`), pas `dark-killer-666` 😅
 
-**C'est bon ? Tu as ton compte ? On continue !**
+**C`est bon ? Tu as ton compte ? On continue !**
 
 ---
 
@@ -158,15 +158,15 @@ Maintenant, tu vas créer ton projet sur GitHub.
 5. Laisse tout par défaut
 6. Clique sur **Create repository**
 
-**C'est fait ! Tu as créé ton cloud gaming !** 🎉
+**C`est fait ! Tu as créé ton cloud gaming !** 🎉
 
 ---
 
 ### Étape 2 : Connecter ta save locale à GitHub
 
-GitHub va t'afficher des instructions. Tu vas utiliser celles-ci :
+GitHub va t`afficher des instructions. Tu vas utiliser celles-ci :
 
-**Si tu as DÉJÀ un projet local (c'est ton cas) :**
+**Si tu as DÉJÀ un projet local (c`est ton cas) :**
 
 ```bash
 git remote add origin https://github.com/ton-nom/mon-site.git
@@ -176,14 +176,14 @@ git push -u origin main
 
 **Décryptage :**
 
-| Commande | Ce qu'elle fait |
+| Commande | Ce qu`elle fait |
 |----------|----------------|
 | `git remote add origin URL` | Connecte ta save locale au cloud |
 | `git branch -M main` | Renomme ta branche principale en "main" |
 | `git push -u origin main` | Envoie tout vers GitHub pour la première fois |
 
 **Analogie jeu :**
-Tu donnes l'adresse de ton cloud à Git et tu synchronises toutes tes saves !
+Tu donnes l`adresse de ton cloud à Git et tu synchronises toutes tes saves !
 
 ---
 
@@ -215,7 +215,7 @@ Parfait ! ✅
 
 **🖱️ MÉTHODE FACILE :**
 1. Va dans ton dossier `mon-site`
-2. Clique dans la barre d'adresse
+2. Clique dans la barre d`adresse
 3. Tape `cmd` → Entrée
 
 **Dans le terminal :**
@@ -224,9 +224,9 @@ Parfait ! ✅
 git remote add origin https://github.com/ton-nom/mon-site.git
 ```
 
-⚠️ **Remplace `ton-nom` par TON nom d'utilisateur GitHub !**
+⚠️ **Remplace `ton-nom` par TON nom d`utilisateur GitHub !**
 
-**Traduction :** "Git, voici l'adresse de mon cloud !"
+**Traduction :** "Git, voici l`adresse de mon cloud !"
 
 ---
 
@@ -266,7 +266,7 @@ To https://github.com/ton-nom/mon-site.git
  * [new branch]      main -> main
 ```
 
-**Traduction :** "J'ai envoyé 6 sauvegardes sur GitHub ! Tout est dans le cloud !"
+**Traduction :** "J`ai envoyé 6 sauvegardes sur GitHub ! Tout est dans le cloud !"
 
 ---
 
@@ -280,7 +280,7 @@ Tu peux voir :
 
 - Tous tes fichiers
 - Toutes tes sauvegardes
-- L'historique complet
+- L`historique complet
 
 **Bravo ! Ta save est maintenant dans le cloud !** 🌍
 
@@ -326,7 +326,7 @@ git clone https://github.com/ton-nom/mon-site.git
 Tu récupères ta save depuis le cloud et tu continues à jouer sur ton nouveau PC.
 
 **Résultat :**
-Tu as un dossier `mon-site` avec TOUT ton code et TOUT l'historique ! 🎉
+Tu as un dossier `mon-site` avec TOUT ton code et TOUT l`historique ! 🎉
 
 ---
 
@@ -352,7 +352,7 @@ Un coéquipier a débloqué un nouveau niveau. Tu synchronises pour voir le nouv
 
 ## 🎯 Les commandes essentielles avec GitHub
 
-| Commande | Ce qu'elle fait | Analogie jeu | Quand l'utiliser |
+| Commande | Ce qu`elle fait | Analogie jeu | Quand l`utiliser |
 |----------|----------------|--------------|------------------|
 | `git remote add origin URL` | Connecte ton projet à GitHub | Lier ton compte au cloud | 1 fois au début |
 | `git push` | Envoie tes commits vers GitHub | Synchroniser ta save | Après chaque commit |
@@ -361,7 +361,7 @@ Un coéquipier a débloqué un nouveau niveau. Tu synchronises pour voir le nouv
 
 ---
 
-## ✅ Les règles d'or avec GitHub
+## ✅ Les règles d`or avec GitHub
 
 ### Règle 1 : Push régulièrement 📤
 
@@ -390,7 +390,7 @@ Télécharge les derniers patchs avant de commencer à jouer.
 
 ### Règle 3 : Commit AVANT de push 💾
 
-Tu ne peux pas push si tu n'as pas fait de commit avant.
+Tu ne peux pas push si tu n`as pas fait de commit avant.
 
 **Cycle correct :**
 
@@ -424,16 +424,16 @@ Tu sauvegardes ta partie AVANT de synchroniser avec le cloud (logique !).
 
 **3️⃣ Va dans ton projet local**
    - Ouvre le dossier `mon-portfolio`
-   - Clique dans la barre d'adresse → `cmd` → Entrée
+   - Clique dans la barre d`adresse → `cmd` → Entrée
 
 **4️⃣ Connecte-le à GitHub**
-   - Copie l'URL de ton repo depuis GitHub
+   - Copie l`URL de ton repo depuis GitHub
    - Tape : `git remote add origin URL`
-   - (Remplace URL par l'adresse de ton repo)
+   - (Remplace URL par l`adresse de ton repo)
 
 **5️⃣ Vérifie la connexion**
    - Tape : `git remote -v`
-   - Tu dois voir l'URL affichée 2 fois
+   - Tu dois voir l`URL affichée 2 fois
 
 **6️⃣ Envoie tout sur GitHub**
    - Tape : `git push -u origin main`
@@ -457,11 +457,11 @@ Tu sauvegardes ta partie AVANT de synchroniser avec le cloud (logique !).
    - Rafraîchis la page GitHub
    - **Ta nouvelle modif est là !** 🚀
 
-**🎉 Si t'as réussi, t'es un GAMER CONNECTÉ AU CLOUD !** 💪
+**🎉 Si t`as réussi, t`es un GAMER CONNECTÉ AU CLOUD !** 💪
 
 ---
 
-## 🔑 Antisèche : GitHub en un coup d'œil
+## 🔑 Antisèche : GitHub en un coup d`œil
 
 | Action | Commande | Explication rapide |
 |--------|----------|-------------------|
@@ -469,7 +469,7 @@ Tu sauvegardes ta partie AVANT de synchroniser avec le cloud (logique !).
 | Envoyer | `git push` | Synchronise tes saves vers le cloud |
 | Récupérer | `git pull` | Télécharge les nouvelles saves |
 | Cloner | `git clone URL` | Télécharge le jeu complet |
-| Vérifier | `git remote -v` | Voir l'URL de ton cloud |
+| Vérifier | `git remote -v` | Voir l`URL de ton cloud |
 
 ---
 

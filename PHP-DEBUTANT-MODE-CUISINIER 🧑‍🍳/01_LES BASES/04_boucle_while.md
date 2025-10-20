@@ -2,8 +2,8 @@
 
 ---
 💬 "Quelle différence entre `for` et `while` ?"
-`for` c'est quand tu sais combien d'assiettes tu dois servir.
-`while` c'est quand tu sers des assiettes "tant que le service n'est pas fini" ! 😅
+`for` c`est quand tu sais combien d`assiettes tu dois servir.
+`while` c`est quand tu sers des assiettes "tant que le service n`est pas fini" ! 😅
 
 ---
 
@@ -16,29 +16,29 @@ for ($i = 1; $i <= 10; $i++) {
 }
 ```
 
-Mais parfois en cuisine, tu ne sais **pas à l'avance** combien de temps tu vas travailler !
+Mais parfois en cuisine, tu ne sais **pas à l`avance** combien de temps tu vas travailler !
 
 Par exemple :
-- 🥣 "Fouette la crème **tant qu'elle n'est pas ferme**"
-- 🍳 "Cuis les crêpes **tant que la pâte n'est pas terminée**"
-- 💶 "Achète des ingrédients **tant que ton budget n'est pas épuisé**"
+- 🥣 "Fouette la crème **tant qu`elle n`est pas ferme**"
+- 🍳 "Cuis les crêpes **tant que la pâte n`est pas terminée**"
+- 💶 "Achète des ingrédients **tant que ton budget n`est pas épuisé**"
 
 👉 Dans ces cas, tu utilises la boucle **`while`** !
 
 ---
 
-## 💡 C'est quoi une boucle while ?
+## 💡 C`est quoi une boucle while ?
 
 Une boucle **`while`** veut dire **"tant que"** en anglais.
 
 Tu dis à ton commis :
-> "Continue à servir des assiettes **TANT QUE** le service n'est pas fini !"
+> "Continue à servir des assiettes **TANT QUE** le service n`est pas fini !"
 
 Et lui, il vérifie **avant chaque assiette** :
 - ❓ "Le service est fini ?"
 - ❌ "Non ? Alors je sers une assiette !"
 - ❓ "Le service est fini maintenant ?"
-- ✅ "Oui ! J'arrête !"
+- ✅ "Oui ! J`arrête !"
 
 ---
 
@@ -102,7 +102,7 @@ On crée la variable : `$assiettes_servies = 0`
 
 2. **PHP exécute le code** :
    - `$assiettes_servies++` → la variable passe de 0 à **1**
-   - `echo "Je sers l'assiette numéro 1"`
+   - `echo "Je sers l`assiette numéro 1"`
 
 3. **PHP retourne vérifier la condition** (il remonte en haut du while)
 
@@ -116,7 +116,7 @@ On crée la variable : `$assiettes_servies = 0`
 
 2. **PHP exécute le code** :
    - `$assiettes_servies++` → la variable passe de 1 à **2**
-   - `echo "Je sers l'assiette numéro 2"`
+   - `echo "Je sers l`assiette numéro 2"`
 
 3. **PHP retourne vérifier la condition**
 
@@ -124,7 +124,7 @@ On crée la variable : `$assiettes_servies = 0`
 
 #### 🟢 **TOURS 3, 4, 5...**
 
-Le même processus continue jusqu'à ce que `$assiettes_servies` atteigne **5**.
+Le même processus continue jusqu`à ce que `$assiettes_servies` atteigne **5**.
 
 ---
 
@@ -134,7 +134,7 @@ Le même processus continue jusqu'à ce que `$assiettes_servies` atteigne **5**.
    → `$assiettes_servies` vaut **5**, et 5 < 5 → **NON** ❌
    → Donc on **SORT de la boucle**
 
-2. **C'est fini !** Le code continue après le while.
+2. **C`est fini !** Le code continue après le while.
 
 ---
 
@@ -154,7 +154,7 @@ Le même processus continue jusqu'à ce que `$assiettes_servies` atteigne **5**.
 ## 🔍 Différence entre for et while
 
 ### 🔹 Boucle FOR
-Tu utilises `for` quand tu **sais à l'avance** combien de tours tu vas faire.
+Tu utilises `for` quand tu **sais à l`avance** combien de tours tu vas faire.
 
 ```php
 // Je sais que je vais servir EXACTEMENT 10 assiettes
@@ -169,7 +169,7 @@ for ($i = 1; $i <= 10; $i++) {
 ---
 
 ### 🔹 Boucle WHILE
-Tu utilises `while` quand tu ne sais **pas à l'avance** combien de tours tu vas faire.
+Tu utilises `while` quand tu ne sais **pas à l`avance** combien de tours tu vas faire.
 
 ```php
 // Je ne sais pas combien de portions il faut, je sers TANT QU'il y a des clients
@@ -191,8 +191,8 @@ while ($portions_servies < $clients_en_attente) {
 
 | Critère | `for` | `while` |
 |---------|-------|---------|
-| **Quand l'utiliser** | Nombre de tours connu | Nombre de tours inconnu |
-| **Exemple** | "Sers 10 assiettes" | "Sers des assiettes tant que le service n'est pas fini" |
+| **Quand l`utiliser** | Nombre de tours connu | Nombre de tours inconnu |
+| **Exemple** | "Sers 10 assiettes" | "Sers des assiettes tant que le service n`est pas fini" |
 | **Structure** | `for ($i=1; $i<=10; $i++)` | `while ($condition)` |
 | **Compteur** | Géré automatiquement | Tu dois le gérer toi-même |
 
@@ -202,7 +202,7 @@ while ($portions_servies < $clients_en_attente) {
 
 ### 🚨 Le danger mortel du while
 
-Si tu oublies de **modifier la condition** dans la boucle, elle ne s'arrêtera **JAMAIS** !
+Si tu oublies de **modifier la condition** dans la boucle, elle ne s`arrêtera **JAMAIS** !
 
 #### ❌ **MAUVAIS EXEMPLE (boucle infinie) :**
 ```php
@@ -219,7 +219,7 @@ while ($assiettes < 5) {
 - Tour 1 : `$assiettes` vaut 0, condition vraie → on entre
 - Tour 2 : `$assiettes` vaut TOUJOURS 0, condition vraie → on entre
 - Tour 3 : `$assiettes` vaut TOUJOURS 0, condition vraie → on entre
-- ... **À L'INFINI** 😱
+- ... **À L`INFINI** 😱
 
 Ton ordinateur va **planter** !
 
@@ -239,14 +239,14 @@ while ($assiettes < 5) {
 - `$assiettes` augmente à chaque tour
 - Un moment, `$assiettes` vaut 5
 - La condition devient fausse
-- La boucle **s'arrête** ✅
+- La boucle **s`arrête** ✅
 
 ---
 
-### 🧠 Règle d'or du while
+### 🧠 Règle d`or du while
 
-> **À l'intérieur du while, tu DOIS modifier la variable de la condition !**
-> Sinon, c'est la boucle infinie assurée ! 💥
+> **À l`intérieur du while, tu DOIS modifier la variable de la condition !**
+> Sinon, c`est la boucle infinie assurée ! 💥
 
 ---
 
@@ -316,7 +316,7 @@ Je ne peux plus acheter d'ingrédients ! Il me reste 10 euros.
 
 ---
 
-### Exemple 3 : Cuire des gâteaux jusqu'à une quantité
+### Exemple 3 : Cuire des gâteaux jusqu`à une quantité
 
 ```php
 $gateaux_cuits = 0; // nombre
@@ -343,9 +343,9 @@ Tous les gâteaux sont cuits ! 🎂
 
 ---
 
-## 🔄 While avec décrémentation (compter à l'envers)
+## 🔄 While avec décrémentation (compter à l`envers)
 
-Tu peux aussi utiliser `while` pour compter à l'envers !
+Tu peux aussi utiliser `while` pour compter à l`envers !
 
 ### Exemple : Vider des bols de préparation
 
@@ -439,14 +439,14 @@ while ($compteur < 5) {
 
 ## 💬 Phrases à retenir
 
-> La boucle `while` c'est comme dire à ton commis :
-> **"Continue ton service TANT QUE je ne te dis pas d'arrêter !"** 🍳🤖
+> La boucle `while` c`est comme dire à ton commis :
+> **"Continue ton service TANT QUE je ne te dis pas d`arrêter !"** 🍳🤖
 
-> **Règle d'or :** Dans un `while`, tu DOIS modifier la variable de la condition,
-> sinon c'est la boucle infinie ! 💥
+> **Règle d`or :** Dans un `while`, tu DOIS modifier la variable de la condition,
+> sinon c`est la boucle infinie ! 💥
 
 > `for` = "Fais-le 10 fois"
-> `while` = "Fais-le tant que ce n'est pas fini"
+> `while` = "Fais-le tant que ce n`est pas fini"
 
 ---
 
@@ -457,7 +457,7 @@ while ($compteur < 5) {
 Crée une variable `$nombre = 1`.
 Utilise une boucle `while` pour afficher les nombres de **1 à 5**.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable initialisée à 1
 - Une boucle while avec condition < ou <= 5
 - Incrémentation de la variable dans la boucle
@@ -492,9 +492,9 @@ while ($nombre <= 5) {
 **Énoncé :**
 Crée une variable `$assiettes = 0`.
 Utilise une boucle `while` pour servir **7 assiettes**.
-Affiche : "Je sers l'assiette numéro X" pour chaque assiette.
+Affiche : "Je sers l`assiette numéro X" pour chaque assiette.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable compteur qui commence à 0
 - Une boucle qui tourne 7 fois
 - Un message pour chaque assiette servie
@@ -527,12 +527,12 @@ while ($assiettes < 7) {
 
 ---
 
-## 📝 Exercice 3 : Compter à l'envers
+## 📝 Exercice 3 : Compter à l`envers
 **Énoncé :**
 Crée une variable `$compte = 5`.
 Utilise une boucle `while` pour afficher un décompte de **5 à 1**.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable qui commence à 5
 - Une boucle avec condition > 0
 - Décrémentation dans la boucle
@@ -570,9 +570,9 @@ Utilise une boucle `while` pour remplir le plateau.
 Affiche : "Portion X servie" pour chaque portion.
 Après la boucle, affiche : "Le plateau est plein !"
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Deux variables (compteur et limite)
-- Une boucle qui s'arrête à la capacité
+- Une boucle qui s`arrête à la capacité
 - Un message final
 
 **Exemple de résultat attendu :**
@@ -609,10 +609,10 @@ echo "Le plateau est plein !<br>";
 ## 📝 Exercice 5 : Dépenser un budget
 **Énoncé :**
 Tu as `$budget = 80` euros. Chaque ingrédient coûte `$prix = 20` euros.
-Utilise une boucle `while` pour acheter des ingrédients **tant que tu as assez d'argent**.
+Utilise une boucle `while` pour acheter des ingrédients **tant que tu as assez d`argent**.
 Affiche : "Ingrédient X acheté (reste Y euros)" pour chaque achat.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle qui vérifie le budget restant
 - Soustraction du prix à chaque tour
 - Affichage du budget restant
@@ -649,11 +649,11 @@ while ($budget >= $prix) {
 **Énoncé :**
 Crée `$gateaux_cuits = 0` et `$quantite_voulue = 4`.
 Utilise une boucle `while` pour cuire les gâteaux un par un.
-Affiche : "J'ai cuit X gâteau(x)".
+Affiche : "J`ai cuit X gâteau(x)".
 Après la boucle : "Tous les gâteaux sont cuits !"
 
-**Ce qu'on attend :**
-- Une boucle qui s'arrête à la quantité voulue
+**Ce qu`on attend :**
+- Une boucle qui s`arrête à la quantité voulue
 - Un message à chaque gâteau cuit
 - Un message final
 
@@ -689,11 +689,11 @@ echo "Tous les gâteaux sont cuits !<br>";
 ## 📝 Exercice 7 : Vider des bols
 **Énoncé :**
 Tu as `$bols = 8` bols pleins.
-Utilise une boucle `while` pour les vider un par un (en comptant à l'envers).
+Utilise une boucle `while` pour les vider un par un (en comptant à l`envers).
 Affiche : "Je vide le bol numéro X".
 Après : "Tous les bols sont vides !"
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle qui décrémente
 - Affichage du numéro de bol
 - Message final
@@ -736,7 +736,7 @@ Crée `$nombre = 1` et `$somme = 0`.
 Utilise une boucle `while` pour additionner tous les nombres de **1 à 10**.
 Affiche la somme totale à la fin.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 10
 - Addition de chaque nombre à la somme
 - Affichage du résultat final (devrait être 55)
@@ -772,8 +772,8 @@ Crée `$nombre = 0`.
 Utilise une boucle `while` pour afficher tous les nombres **pairs** de 0 à 20.
 (Astuce : augmente de 2 à chaque tour)
 
-**Ce qu'on attend :**
-- Une boucle qui s'arrête à 20
+**Ce qu`on attend :**
+- Une boucle qui s`arrête à 20
 - Incrémentation de 2 en 2
 - Affichage des nombres pairs
 
@@ -813,14 +813,14 @@ while ($nombre <= 20) {
 **Énoncé :**
 Tu as `$budget = 100` euros et tu veux préparer **maximum 10 plats**.
 Chaque plat coûte `$cout = 15` euros.
-Utilise une boucle `while` qui s'arrête quand :
-- Tu n'as plus assez d'argent OU
+Utilise une boucle `while` qui s`arrête quand :
+- Tu n`as plus assez d`argent OU
 - Tu as préparé 10 plats
 
 Affiche : "Plat X préparé (reste Y euros)".
-À la fin, affiche combien de plats tu as préparé et combien d'argent il reste.
+À la fin, affiche combien de plats tu as préparé et combien d`argent il reste.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle avec deux conditions (&&)
 - Gestion du budget et du compteur
 - Message final récapitulatif
@@ -866,7 +866,7 @@ Si tu as réussi tous ces exercices, tu maîtrises maintenant la boucle `while` 
 Tu sais maintenant :
 - ✅ Créer une boucle `while` avec une condition
 - ✅ Faire une boucle qui compte en montant
-- ✅ Faire une boucle qui compte à l'envers
+- ✅ Faire une boucle qui compte à l`envers
 - ✅ Éviter les boucles infinies (en modifiant la variable)
 - ✅ Utiliser des conditions complexes
 - ✅ Gérer un budget ou une limite dans une boucle

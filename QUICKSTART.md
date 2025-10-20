@@ -58,10 +58,10 @@ Cliquez sur le bouton thème en haut à droite
 ### "Fichier introuvable"
 ➜ Vous devez utiliser un serveur web, pas ouvrir le fichier directement
 
-### Les styles ne s'affichent pas
+### Les styles ne s`affichent pas
 ➜ Videz le cache : Ctrl+F5 (Windows) ou Cmd+Shift+R (Mac)
 
-### La progression n'est pas sauvegardée
+### La progression n`est pas sauvegardée
 ➜ Vérifiez que le localStorage est activé dans votre navigateur
 
 ## Structure des fichiers
@@ -88,7 +88,7 @@ Cliquez sur le bouton thème en haut à droite
 
 ## URLs utiles
 
-- **Page d'accueil** : http://localhost:8000/index.html
+- **Page d`accueil** : http://localhost:8000/index.html
 - **Plateforme de cours** : http://localhost:8000/cours.html
 - **Cours spécifique** : http://localhost:8000/cours.html?theme=gamer&lesson=variables
 

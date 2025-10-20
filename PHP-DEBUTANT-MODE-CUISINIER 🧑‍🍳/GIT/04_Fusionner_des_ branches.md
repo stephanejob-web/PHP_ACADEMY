@@ -2,23 +2,23 @@
 
 ## Salut chef exécutif ! 🧙‍♂️🏗️
 
-Dans la leçon 03, t'as appris à créer des **versions parallèles** (les branches).  
+Dans la leçon 03, t`as appris à créer des **versions parallèles** (les branches).  
 Maintenant, on va apprendre le truc le plus important...
 
 **Le problème :**
 
 Tu as créé une version test avec du basilic frais. 🌿  
-Tu l'as goûtée... C'est délicieux ! Tu veux l'adopter !  
+Tu l`as goûtée... C`est délicieux ! Tu veux l`adopter !  
 
 **Mais comment tu fais pour que cette variante devienne ta recette principale ?**
 
-C'est ça qu'on va voir aujourd'hui : **le MERGE (la fusion)** ! 🔥
+C`est ça qu`on va voir aujourd`hui : **le MERGE (la fusion)** ! 🔥
 
 ---
 
-## 🤔 C'est quoi le merge ?
+## 🤔 C`est quoi le merge ?
 
-Le merge, c'est **fusionner deux versions de ta recette** en une seule.
+Le merge, c`est **fusionner deux versions de ta recette** en une seule.
 
 **Analogie cuisine :**
 
@@ -26,18 +26,18 @@ Tu as deux versions :
 - 🍅 **Recette principale** : Ta sauce tomate classique
 - 🌿 **Version test** : La même sauce avec du basilic frais
 
-Tu goûtes la version avec basilic frais... C'est parfait ! Tu veux l'adopter.
+Tu goûtes la version avec basilic frais... C`est parfait ! Tu veux l`adopter.
 
 **Comment tu fais ?**
 
 Tu prends ta version test, tu la ramènes dans ta recette principale, et tu dis :  
-*"Maintenant, ma sauce officielle c'est celle avec le basilic frais !"*
+*"Maintenant, ma sauce officielle c`est celle avec le basilic frais !"*
 
 **Résultat ?**  
 Ta recette principale intègre maintenant le basilic frais ! 🎉  
 Et tu peux jeter tes notes de test.
 
-**Avec Git, c'est exactement pareil ! Le merge ramène le travail d'une branche vers une autre.**
+**Avec Git, c`est exactement pareil ! Le merge ramène le travail d`une branche vers une autre.**
 
 ---
 
@@ -57,7 +57,7 @@ git switch main
 
 ---
 
-### Étape 2 : Ramène les changements de l'autre version
+### Étape 2 : Ramène les changements de l`autre version
 
 ```bash
 git merge nom-de-la-branche
@@ -73,7 +73,7 @@ git merge test-basilic
 
 **Analogie cuisine :** Tu notes dans ta recette principale : "Désormais on utilise du basilic frais au lieu du séché"
 
-**C'est tout ! 🎉**
+**C`est tout ! 🎉**
 
 ---
 
@@ -105,7 +105,7 @@ Tu es sur `test-formulaire`. Parfait ! ✅
 
 ---
 
-### Étape 2 : Assure-toi d'avoir tout sauvegardé
+### Étape 2 : Assure-toi d`avoir tout sauvegardé
 
 ```bash
 git status
@@ -167,7 +167,7 @@ Tu as réussi ton premier merge ! 💪
 
 Maintenant que tu as fusionné, la branche `test-formulaire` ne sert plus à rien.
 
-**C'est comme tes notes de test :** Une fois que t'as adopté le basilic frais dans ta recette principale, tu peux jeter tes brouillons de test.
+**C`est comme tes notes de test :** Une fois que t`as adopté le basilic frais dans ta recette principale, tu peux jeter tes brouillons de test.
 
 ### Supprimer une branche
 
@@ -175,7 +175,7 @@ Maintenant que tu as fusionné, la branche `test-formulaire` ne sert plus à rie
 git branch -d test-formulaire
 ```
 
-**En français :** "Supprime la version `test-formulaire`, j'en ai plus besoin"
+**En français :** "Supprime la version `test-formulaire`, j`en ai plus besoin"
 
 **Résultat :**
 
@@ -185,7 +185,7 @@ Deleted branch test-formulaire (was z9y8x7w).
 
 **Analogie cuisine :** Tu jettes tes notes de test et tu gardes seulement la recette principale mise à jour. 🗑️
 
-**Note :** Git refuse de supprimer une branche si elle contient des changements non fusionnés. C'est une sécurité ! 🛡️
+**Note :** Git refuse de supprimer une branche si elle contient des changements non fusionnés. C`est une sécurité ! 🛡️
 
 ---
 
@@ -196,7 +196,7 @@ Il existe **deux types** de merge. Comprends bien la différence !
 ### 1️⃣ Le Fast-Forward (fusion rapide) ⚡
 
 **Situation :**  
-Tu as créé une branche, tu as testé des trucs, mais PERSONNE n'a touché à la recette principale pendant ce temps.
+Tu as créé une branche, tu as testé des trucs, mais PERSONNE n`a touché à la recette principale pendant ce temps.
 
 ```
     main: A --- B --- C
@@ -212,16 +212,16 @@ Git déplace juste la flèche de `main` vers `E`. Facile ! ⚡
 ```
 
 **Analogie cuisine :**  
-La recette principale n'a pas changé. Tu adoptes simplement ta nouvelle version avec le basilic. Simple !
+La recette principale n`a pas changé. Tu adoptes simplement ta nouvelle version avec le basilic. Simple !
 
-**C'est le cas le plus simple. Git fait ça automatiquement.**
+**C`est le cas le plus simple. Git fait ça automatiquement.**
 
 ---
 
 ### 2️⃣ Le Three-Way Merge (fusion à trois points) 🔀
 
 **Situation :**  
-Tu as créé une branche ET testé le basilic, mais quelqu'un a AUSSI modifié la recette principale pendant ce temps (ajouté du sel, par exemple).
+Tu as créé une branche ET testé le basilic, mais quelqu`un a AUSSI modifié la recette principale pendant ce temps (ajouté du sel, par exemple).
 
 ```
     main: A --- B --- C --- F (ajout sel)
@@ -241,7 +241,7 @@ Git crée un **nouveau commit de fusion** qui combine les deux changements.
 **Analogie cuisine :**  
 La recette principale a déjà changé (F = ajout de sel). Git doit combiner intelligemment le sel (F) avec ton basilic (D-E).
 
-**Git crée un commit automatique qui s'appelle "Merge branch 'test-basilic' into main"**
+**Git crée un commit automatique qui s`appelle "Merge branch 'test-basilic` into main"**
 
 **Résultat final :** Ta recette a maintenant le sel ET le basilic ! 🎉
 
@@ -269,13 +269,13 @@ Voici comment les pros travaillent TOUS LES JOURS :
 8. Recommence pour le prochain test ! 🔁
 ```
 
-**C'est comme ça que bossent Google, Facebook, Netflix... TOUT LE MONDE ! 🌍**
+**C`est comme ça que bossent Google, Facebook, Netflix... TOUT LE MONDE ! 🌍**
 
 ---
 
-## ✅ Les règles d'or du merge
+## ✅ Les règles d`or du merge
 
-### Règle 1 : Toujours merger VERS main (pas l'inverse)
+### Règle 1 : Toujours merger VERS main (pas l`inverse)
 
 ❌ **MAUVAIS :**
 ```bash
@@ -290,10 +290,10 @@ git merge test-basilic
 ```
 
 **Pourquoi ?**  
-`main` est ta recette principale. C'est elle qui reçoit les nouveaux ingrédients, pas l'inverse !
+`main` est ta recette principale. C`est elle qui reçoit les nouveaux ingrédients, pas l`inverse !
 
 **Analogie cuisine :**  
-Tu intègres le basilic dans la recette principale, pas l'inverse !
+Tu intègres le basilic dans la recette principale, pas l`inverse !
 
 ---
 
@@ -305,7 +305,7 @@ Avant de faire `git merge`, assure-toi que tout est commit :
 git status
 ```
 
-Si tu vois des fichiers modifiés, sauvegarde d'abord :
+Si tu vois des fichiers modifiés, sauvegarde d`abord :
 
 ```bash
 git add .
@@ -313,7 +313,7 @@ git commit -m "Sauvegarde avant fusion"
 ```
 
 **Analogie cuisine :**  
-Avant d'adopter la nouvelle version, assure-toi que tout est bien noté dans le livre !
+Avant d`adopter la nouvelle version, assure-toi que tout est bien noté dans le livre !
 
 ---
 
@@ -335,7 +335,7 @@ Une fois le basilic adopté dans la recette principale, jette tes brouillons de 
 **Mission : Crée une branche, teste une variante, et fusionne**
 
 1. Va dans ton projet `mon-portfolio`
-2. Assure-toi d'être sur `main` avec `git branch`
+2. Assure-toi d`être sur `main` avec `git branch`
 3. Crée une nouvelle branche `test-competences` avec `git switch -c test-competences`
 4. Modifie `index.html` : ajoute une liste de tes compétences (HTML, CSS, PHP...)
 5. Sauvegarde avec `git add .` puis `git commit -m "Test - ajout compétences"`
@@ -343,15 +343,15 @@ Une fois le basilic adopté dans la recette principale, jette tes brouillons de 
 7. Fusionne avec `git merge test-competences`
 8. Vérifie que tes compétences apparaissent dans `index.html` sur `main` ! 🎉
 9. Supprime la branche avec `git branch -d test-competences`
-10. Vérifie qu'elle est bien supprimée avec `git branch`
+10. Vérifie qu`elle est bien supprimée avec `git branch`
 
-**Si t'as réussi, t'es un MAÎTRE DE LA FUSION CULINAIRE ! 💪**
+**Si t`as réussi, t`es un MAÎTRE DE LA FUSION CULINAIRE ! 💪**
 
 ---
 
 ## 🔑 Antisèche : Les commandes de fusion
 
-| Commande | Ce qu'elle fait | Analogie cuisine |
+| Commande | Ce qu`elle fait | Analogie cuisine |
 |----------|-----------------|------------------|
 | `git switch main` | Aller sur la recette principale | Ouvrir le livre à la recette principale |
 | `git merge nom-branche` | Fusionner une version dans la version actuelle | Adopter les changements testés |
@@ -380,7 +380,7 @@ Maintenant tu connais le **cycle complet** du développeur pro :
 7. Recommence ! 🔁
 ```
 
-**C'est exactement comme ça que travaillent les développeurs dans le monde entier ! 🌍**
+**C`est exactement comme ça que travaillent les développeurs dans le monde entier ! 🌍**
 
 ---
 
@@ -401,7 +401,7 @@ Dans la **leçon 05**, tu vas apprendre à gérer les **CONFLITS** :
 - 🤔 Comment Git gère ces situations ?
 - 🛠️ Comment résoudre un conflit comme un pro ?
 
-**Prépare-toi, c'est là que ça devient sérieux ! 🔥**
+**Prépare-toi, c`est là que ça devient sérieux ! 🔥**
 
 ---
 

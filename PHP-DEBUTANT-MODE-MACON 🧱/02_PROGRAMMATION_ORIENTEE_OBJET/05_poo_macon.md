@@ -1,34 +1,34 @@
-# 🧱 POO pour Maçons - Cours 05 : L'héritage (le fils hérite du père !)
+# 🧱 POO pour Maçons - Cours 05 : L`héritage (le fils hérite du père !)
 
 ## 👷 Salut le bâtisseur !
 
-Aujourd'hui, on attaque un concept **SUPER PUISSANT** : **l'héritage** !
+Aujourd`hui, on attaque un concept **SUPER PUISSANT** : **l`héritage** !
 
-C'est un peu comme dans la vraie vie :
+C`est un peu comme dans la vraie vie :
 - Un **fils** hérite des compétences de son **père**
 - Mais il peut aussi apprendre **ses propres compétences** en plus !
 
-En POO, c'est pareil ! 💪
+En POO, c`est pareil ! 💪
 
 ---
 
-## 🤔 L'héritage, c'est quoi ?
+## 🤔 L`héritage, c`est quoi ?
 
 Imagine que tu as créé une classe `Mur` qui marche super bien.
 
 Maintenant, tu veux créer une classe `MurPorteur` (un mur qui supporte le poids de la maison).
 
-Un mur porteur, c'est quoi ? **C'est un mur... MAIS EN MIEUX !**
+Un mur porteur, c`est quoi ? **C`est un mur... MAIS EN MIEUX !**
 
 Il a :
-- ✅ Tout ce qu'un mur normal a (hauteur, largeur, matériau...)
+- ✅ Tout ce qu`un mur normal a (hauteur, largeur, matériau...)
 - ✅ **PLUS** des trucs en plus (épaisseur, charge supportée...)
 
 **Plutôt que de TOUT réécrire**, tu peux dire :
 
 > *"MurPorteur, tu hérites de Mur, et tu ajoutes juste ce qui te manque !"*
 
-**C'est ça l'héritage !** ✨
+**C`est ça l`héritage !** ✨
 
 ---
 
@@ -60,7 +60,7 @@ class Mur {
 ?>
 ```
 
-Bon, ça tu connais déjà ! C'est un mur classique.
+Bon, ça tu connais déjà ! C`est un mur classique.
 
 ---
 
@@ -116,9 +116,9 @@ Surface : 15 m²
 ===================
 ```
 
-**Regarde !** Le `MurPorteur` peut utiliser `calculerSurface()` alors qu'on ne l'a **PAS** réécrit !
+**Regarde !** Le `MurPorteur` peut utiliser `calculerSurface()` alors qu`on ne l`a **PAS** réécrit !
 
-**Il l'a hérité de son parent `Mur` !** 🎉
+**Il l`a hérité de son parent `Mur` !** 🎉
 
 ---
 
@@ -130,7 +130,7 @@ Surface : 15 m²
 class MurPorteur extends Mur {
 ```
 
-**`class MurPorteur`** → Je crée une nouvelle classe qui s'appelle `MurPorteur`
+**`class MurPorteur`** → Je crée une nouvelle classe qui s`appelle `MurPorteur`
 
 **`extends`** → **LE MOT MAGIQUE !** Ça veut dire **"hérite de"**
 
@@ -158,7 +158,7 @@ Ce sont des propriétés **EN PLUS** de celles héritées.
 
 ---
 
-### Le constructeur de l'enfant :
+### Le constructeur de l`enfant :
 
 ```php
     public function __construct($h, $l, $m, $ep, $ch) {
@@ -179,7 +179,7 @@ Ensuite, on remplit nos **propres** propriétés (épaisseur, charge_max).
 
 ---
 
-## 🧠 Schéma de l'héritage
+## 🧠 Schéma de l`héritage
 
 ```
         Mur (classe PARENT)
@@ -196,7 +196,7 @@ Ensuite, on remplit nos **propres** propriétés (épaisseur, charge_max).
 
 ---
 
-## 💪 Ce que l'enfant peut faire
+## 💪 Ce que l`enfant peut faire
 
 ### 1️⃣ Utiliser les méthodes du parent
 
@@ -207,9 +207,9 @@ $mur_porteur = new MurPorteur(3, 5, "béton", 0.3, 50);
 echo $mur_porteur->calculerSurface(); // 15
 ```
 
-**Même si on n'a PAS écrit `calculerSurface()` dans `MurPorteur`, ça marche !**
+**Même si on n`a PAS écrit `calculerSurface()` dans `MurPorteur`, ça marche !**
 
-Parce qu'il l'a **hérité** ! ✨
+Parce qu`il l`a **hérité** ! ✨
 
 ---
 
@@ -238,7 +238,7 @@ $mur_porteur->verifierSolidite(60); // ⚠️ DANGER
 
 ### 3️⃣ Modifier (surcharger) une méthode du parent
 
-Tu peux **RÉÉCRIRE** une méthode du parent pour l'adapter.
+Tu peux **RÉÉCRIRE** une méthode du parent pour l`adapter.
 
 ```php
 <?php
@@ -294,7 +294,7 @@ Mur PORTEUR : 3m × 5m, épaisseur 0.3m, charge 50t
 
 **Même nom de méthode, mais comportement différent !**
 
-C'est ce qu'on appelle la **surcharge** (ou **override** en anglais).
+C`est ce qu`on appelle la **surcharge** (ou **override** en anglais).
 
 ---
 
@@ -362,13 +362,13 @@ Surface : 15 m²
 
 **`MurRenforce` hérite de `MurPorteur` qui hérite de `Mur` !**
 
-C'est comme une famille : grand-père → père → fils ! 👴👨👦
+C`est comme une famille : grand-père → père → fils ! 👴👨👦
 
 ---
 
-## ⚠️ Ce qu'il faut retenir sur `parent::`
+## ⚠️ Ce qu`il faut retenir sur `parent::`
 
-**`parent::`** permet d'appeler une méthode du parent.
+**`parent::`** permet d`appeler une méthode du parent.
 
 ### Utilisation la plus fréquente : dans le constructeur
 
@@ -380,7 +380,7 @@ public function __construct($h, $l, $m, $ep, $ch) {
 }
 ```
 
-**Pourquoi c'est important ?**
+**Pourquoi c`est important ?**
 
 Le parent a déjà du code pour initialiser `hauteur`, `largeur`, `materiaux`.  
 **Plutôt que de TOUT réécrire**, tu appelles le parent et tu complètes !
@@ -477,7 +477,7 @@ $camion->afficherInfoComplete();
 
 ## 🧠 Ce que tu DOIS retenir de ce cours
 
-✅ **`extends`** → Mot magique pour hériter d'une classe
+✅ **`extends`** → Mot magique pour hériter d`une classe
 
 ✅ **La classe enfant a TOUT ce que le parent a + ses propres trucs**
 
@@ -487,7 +487,7 @@ $camion->afficherInfoComplete();
 
 ✅ **Tu peux réécrire (surcharger) une méthode du parent**
 
-✅ **L'héritage évite de dupliquer du code**
+✅ **L`héritage évite de dupliquer du code**
 
 ---
 
@@ -520,7 +520,7 @@ MurPorteur (extends Mur)
 
 Tu vas apprendre **PUBLIC, PRIVATE, PROTECTED** !
 
-**C'est quoi ?**
+**C`est quoi ?**
 
 Comment **PROTÉGER** les propriétés de tes classes !
 
@@ -528,18 +528,18 @@ Parfois, tu ne veux PAS que tout le monde puisse modifier directement une propri
 
 Par exemple :
 - Un mur porteur ne peut PAS avoir une charge_max négative !
-- On doit **contrôler** ce qu'on met dedans !
+- On doit **contrôler** ce qu`on met dedans !
 
-Tu vas apprendre les **GETTERS** et **SETTERS** pour contrôler l'accès aux propriétés ! 🔒
+Tu vas apprendre les **GETTERS** et **SETTERS** pour contrôler l`accès aux propriétés ! 🔒
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE** !
+Mais pour l`instant, **FAIS L`EXERCICE** !
 
-L'héritage est un concept **fondamental** en POO. Tu vas l'utiliser **tout le temps** !
+L`héritage est un concept **fondamental** en POO. Tu vas l`utiliser **tout le temps** !
 
 ---
 
 **👷 Bravo, tu maîtrises de mieux en mieux la POO !**
 
-*PS : L'héritage, c'est comme les outils : plus tu t'en sers, plus tu comprends son utilité ! 🔧*
+*PS : L`héritage, c`est comme les outils : plus tu t`en sers, plus tu comprends son utilité ! 🔧*

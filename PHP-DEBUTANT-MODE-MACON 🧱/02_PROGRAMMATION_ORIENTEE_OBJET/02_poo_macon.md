@@ -3,10 +3,10 @@
 ## 👷 Re-salut le bâtisseur !
 
 Dans le cours 01, tu as compris que :
-- **CLASSE** = le plan d'architecte
+- **CLASSE** = le plan d`architecte
 - **OBJET** = la construction réelle
 
-C'était de la théorie. **Maintenant, on passe à la pratique !**
+C`était de la théorie. **Maintenant, on passe à la pratique !**
 
 On va **VRAIMENT** créer ton premier mur en PHP, avec du vrai code que tu vas taper toi-même ! 💻
 
@@ -22,7 +22,7 @@ Quand tu dessines un plan de mur, tu notes quelles infos ?
 - **La largeur** (3m, 4m, 5m...)
 - **Le matériau** (brique, parpaing, placo...)
 
-**En PHP, c'est exactement pareil !**
+**En PHP, c`est exactement pareil !**
 
 Voici comment on crée un plan de mur :
 
@@ -44,19 +44,19 @@ class Mur {
 
 ### Ligne 1 : `<?php`
 
-Ça, tu connais déjà. C'est le début du code PHP.
+Ça, tu connais déjà. C`est le début du code PHP.
 
 ---
 
 ### Ligne 2 : `class Mur {`
 
-**`class`** → C'est le mot magique pour dire "je crée un plan"
+**`class`** → C`est le mot magique pour dire "je crée un plan"
 
-**`Mur`** → C'est le nom de ton plan  
-*Tu peux l'appeler comme tu veux : `Mur`, `Wall`, `Cloison`...  
+**`Mur`** → C`est le nom de ton plan  
+*Tu peux l`appeler comme tu veux : `Mur`, `Wall`, `Cloison`...  
 Mais utilise un nom qui a du sens ! Pas `Truc` ou `Machin`* 😄
 
-**`{`** → C'est l'accolade ouvrante. Elle marque le **début** du plan.
+**`{`** → C`est l`accolade ouvrante. Elle marque le **début** du plan.
 
 **Important :** En PHP, les noms de classes commencent par une **MAJUSCULE** : `Mur`, pas `mur`.
 
@@ -71,7 +71,7 @@ Mais utilise un nom qui a du sens ! Pas `Truc` ou `Machin`* 😄
 ```
 
 **`public`** → Ça veut dire "visible par tout le monde"  
-C'est comme un plan affiché sur le mur du bureau : tout le monde peut le voir et le modifier.
+C`est comme un plan affiché sur le mur du bureau : tout le monde peut le voir et le modifier.
 
 **`$hauteur`** → Une info que chaque mur doit avoir : sa hauteur
 
@@ -81,13 +81,13 @@ C'est comme un plan affiché sur le mur du bureau : tout le monde peut le voir e
 
 **Le point-virgule `;`** → OBLIGATOIRE à la fin de chaque ligne ! Sinon PHP va râler. 😤
 
-**Ces infos s'appellent des PROPRIÉTÉS.**
+**Ces infos s`appellent des PROPRIÉTÉS.**
 
 ---
 
 ### Ligne 6 : `}`
 
-**`}`** → L'accolade fermante. Elle marque la **fin** du plan.
+**`}`** → L`accolade fermante. Elle marque la **fin** du plan.
 
 **SUPER IMPORTANT :** Chaque `{` doit avoir son `}` !
 
@@ -95,23 +95,23 @@ C'est comme un plan affiché sur le mur du bureau : tout le monde peut le voir e
 
 ### Ligne 7 : `?>`
 
-La fin du code PHP. (Tu peux même l'oublier en fin de fichier, PHP s'en fiche.)
+La fin du code PHP. (Tu peux même l`oublier en fin de fichier, PHP s`en fiche.)
 
 ---
 
 **ATTENTION !** ⚠️
 
-À ce stade, **tu n'as construit AUCUN mur !**
+À ce stade, **tu n`as construit AUCUN mur !**
 
 Tu as juste **dessiné le plan sur papier**.
 
-C'est comme si tu avais le dessin d'une maison, mais que tu n'as encore rien construit sur le chantier.
+C`est comme si tu avais le dessin d`une maison, mais que tu n`as encore rien construit sur le chantier.
 
 ---
 
 ## 🧱 Étape 2 : Construire un vrai mur (créer un objet)
 
-Maintenant qu'on a le plan, **construisons un vrai mur !**
+Maintenant qu`on a le plan, **construisons un vrai mur !**
 
 ```php
 <?php
@@ -141,10 +141,10 @@ Décortiquons cette ligne **super importante** :
 
 ---
 
-**`$mur_salon`** → C'est le **nom** de ton mur  
+**`$mur_salon`** → C`est le **nom** de ton mur  
 *Comme quand tu dis "le mur du salon" ou "le mur de la chambre"*
 
-Tu peux l'appeler comme tu veux :
+Tu peux l`appeler comme tu veux :
 - `$mur_chambre`
 - `$mur_garage`
 - `$premier_mur`
@@ -157,17 +157,17 @@ Tu peux l'appeler comme tu veux :
 
 **`new`** → **LE MOT LE PLUS IMPORTANT !**
 
-C'est le mot magique qui dit à PHP :  
+C`est le mot magique qui dit à PHP :  
 *"Construis-moi quelque chose MAINTENANT !"*
 
-C'est comme si tu disais à ton équipe :  
+C`est comme si tu disais à ton équipe :  
 *"Allez, on construit ce mur !"*
 
 ---
 
-**`Mur()`** → Tu construis d'après le plan qui s'appelle `Mur`
+**`Mur()`** → Tu construis d`après le plan qui s`appelle `Mur`
 
-Les **parenthèses `()`** sont **obligatoires**. Pour l'instant, on met rien dedans.  
+Les **parenthèses `()`** sont **obligatoires**. Pour l`instant, on met rien dedans.  
 *(On verra pourquoi plus tard dans le cours sur le constructeur)*
 
 ---
@@ -184,11 +184,11 @@ Les **parenthèses `()`** sont **obligatoires**. Pour l'instant, on met rien ded
 
 ## 🤔 Mais... mon mur est vide !
 
-Oui, t'as raison ! 👍
+Oui, t`as raison ! 👍
 
-Ton mur **existe**, mais il n'a **pas encore de dimensions**.
+Ton mur **existe**, mais il n`a **pas encore de dimensions**.
 
-C'est comme si tu avais posé les premières briques, mais que tu ne lui as pas encore donné sa hauteur, sa largeur, etc.
+C`est comme si tu avais posé les premières briques, mais que tu ne lui as pas encore donné sa hauteur, sa largeur, etc.
 
 **Il faut maintenant lui donner ses caractéristiques !**
 
@@ -196,7 +196,7 @@ C'est comme si tu avais posé les premières briques, mais que tu ne lui as pas 
 
 ## 📏 Étape 3 : Donner les dimensions au mur
 
-Maintenant qu'on a construit le mur, on va lui dire :
+Maintenant qu`on a construit le mur, on va lui dire :
 - Quelle **hauteur** il fait
 - Quelle **largeur** il fait
 - Quel **matériau** on utilise
@@ -229,22 +229,22 @@ $mur_salon->materiaux = "brique rouge";
 $mur_salon->hauteur = 2.5;
 ```
 
-**La flèche `->` c'est ta RÈGLE de maçon !** 📏
+**La flèche `->` c`est ta RÈGLE de maçon !** 📏
 
-Elle sert à **accéder aux propriétés** d'un objet.
+Elle sert à **accéder aux propriétés** d`un objet.
 
 ---
 
 ### Traduction en français :
 
 **`$mur_salon->hauteur = 2.5;`**  
-→ *"Le mur du salon, sa hauteur, c'est 2.5 mètres."*
+→ *"Le mur du salon, sa hauteur, c`est 2.5 mètres."*
 
 **`$mur_salon->largeur = 4;`**  
-→ *"Le mur du salon, sa largeur, c'est 4 mètres."*
+→ *"Le mur du salon, sa largeur, c`est 4 mètres."*
 
 **`$mur_salon->materiaux = "brique rouge";`**  
-→ *"Le mur du salon, son matériau, c'est de la brique rouge."*
+→ *"Le mur du salon, son matériau, c`est de la brique rouge."*
 
 ---
 
@@ -262,17 +262,17 @@ Tu peux la lire comme **"de"** ou **"du"**.
 
 **Ne confonds pas le point `.` et la flèche `->` !**
 
-❌ **FAUX :** `$mur_salon.hauteur = 2.5;` (ça marche dans d'autres langages, mais PAS en PHP !)
+❌ **FAUX :** `$mur_salon.hauteur = 2.5;` (ça marche dans d`autres langages, mais PAS en PHP !)
 
 ✅ **JUSTE :** `$mur_salon->hauteur = 2.5;`
 
-En PHP, c'est **TOUJOURS** la flèche `->` pour accéder aux propriétés d'un objet.
+En PHP, c`est **TOUJOURS** la flèche `->` pour accéder aux propriétés d`un objet.
 
 ---
 
 ## 🎉 Étape 4 : Afficher les infos du mur
 
-Maintenant qu'on a construit le mur et qu'on lui a donné ses dimensions...
+Maintenant qu`on a construit le mur et qu`on lui a donné ses dimensions...
 
 **On veut voir le résultat !**
 
@@ -314,7 +314,7 @@ Tu viens de créer, construire et afficher ton **premier objet en POO** !
 
 ## 🔥 La VRAIE puissance : créer plusieurs murs avec le même plan !
 
-Maintenant, tu vas comprendre **POURQUOI** la POO c'est génial.
+Maintenant, tu vas comprendre **POURQUOI** la POO c`est génial.
 
 **UN SEUL PLAN, AUTANT DE MURS QUE TU VEUX !**
 
@@ -370,7 +370,7 @@ Garage : parpaing (3m de haut)
 - Chaque mur a **ses propres dimensions**
 - Mais ils utilisent tous **le même modèle** !
 
-C'est comme une usine qui fabrique des voitures : **un seul plan, mille voitures différentes** !
+C`est comme une usine qui fabrique des voitures : **un seul plan, mille voitures différentes** !
 
 ---
 
@@ -411,15 +411,15 @@ Si ça marche, **BRAVO, TU ES UN CHAMPION !** 🏆
 
 ✅ **`class Mur { }`** → Je crée le plan
 
-✅ **`$mur = new Mur();`** → Je construis un objet réel d'après le plan
+✅ **`$mur = new Mur();`** → Je construis un objet réel d`après le plan
 
 ✅ **`$mur->hauteur = 2.5;`** → Je donne une valeur à une propriété
 
-✅ **`$mur->hauteur`** → Je lis la valeur d'une propriété
+✅ **`$mur->hauteur`** → Je lis la valeur d`une propriété
 
-✅ **La flèche `->` permet d'accéder aux propriétés d'un objet**
+✅ **La flèche `->` permet d`accéder aux propriétés d`un objet**
 
-✅ **Un plan, autant d'objets que tu veux !**
+✅ **Un plan, autant d`objets que tu veux !**
 
 ---
 
@@ -427,7 +427,7 @@ Si ça marche, **BRAVO, TU ES UN CHAMPION !** 🏆
 
 Tu vas apprendre à créer des **MÉTHODES**.
 
-**C'est quoi une méthode ?**  
+**C`est quoi une méthode ?**  
 Les **ACTIONS** que peut faire ton mur !
 
 Par exemple :
@@ -439,9 +439,9 @@ Ton mur va devenir **INTELLIGENT** ! 🧠
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE !**
+Mais pour l`instant, **FAIS L`EXERCICE !**
 
-Sérieux, prends 10 minutes et fais-le. C'est en **PRATIQUANT** qu'on apprend, pas en lisant.
+Sérieux, prends 10 minutes et fais-le. C`est en **PRATIQUANT** qu`on apprend, pas en lisant.
 
 Si tu sautes cet exercice, tu vas galérer au prochain cours. Je te préviens ! 😊
 
@@ -449,4 +449,4 @@ Si tu sautes cet exercice, tu vas galérer au prochain cours. Je te préviens ! 
 
 **👷 Allez, au boulot ! Tu es sur la bonne voie !**
 
-*PS : Si tu as réussi l'exercice du premier coup, tu peux te féliciter. Tu es en train de devenir un vrai développeur ! 🎉*
+*PS : Si tu as réussi l`exercice du premier coup, tu peux te féliciter. Tu es en train de devenir un vrai développeur ! 🎉*

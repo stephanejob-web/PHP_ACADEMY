@@ -7,15 +7,15 @@ Vous avez maintenant un système complet pour afficher vos cours Markdown direct
 ## Fichiers créés
 
 1. **cours.html** - Page principale des cours avec interface de lecture
-2. **cours-style.css** - Styles professionnels pour l'interface
-3. **cours-app.js** - Logique de l'application (navigation, progression, etc.)
+2. **cours-style.css** - Styles professionnels pour l`interface
+3. **cours-app.js** - Logique de l`application (navigation, progression, etc.)
 4. **courses.js** - Structure et données des cours
 5. **markdown-parser.js** - Parseur Markdown avec coloration syntaxique PHP
 
 ## Fonctionnalités
 
-### Pour l'utilisateur
-- Sélection du thème d'apprentissage (Maçon, Cuisinier, Gamer)
+### Pour l`utilisateur
+- Sélection du thème d`apprentissage (Maçon, Cuisinier, Gamer)
 - Navigation par modules et leçons
 - Barre latérale avec progression visuelle
 - Coloration syntaxique pour le code PHP
@@ -117,7 +117,7 @@ PHP_-DEBUTANT-/
 
 ### Modifier les thèmes
 
-Dans `courses.js`, modifiez l'objet `coursesData` :
+Dans `courses.js`, modifiez l`objet `coursesData` :
 
 ```javascript
 macon: {
@@ -193,13 +193,13 @@ class Hero {
 2. Vérifiez les chemins dans `courses.js`
 3. Vérifiez que les noms de fichiers correspondent exactement (attention aux espaces et emojis)
 
-### Les styles ne s'appliquent pas
+### Les styles ne s`appliquent pas
 
 **Solution** : Videz le cache du navigateur (Ctrl+F5 ou Cmd+Shift+R)
 
-### La progression n'est pas sauvegardée
+### La progression n`est pas sauvegardée
 
-**Solution** : Vérifiez que le localStorage n'est pas désactivé dans votre navigateur
+**Solution** : Vérifiez que le localStorage n`est pas désactivé dans votre navigateur
 
 ## Performance
 

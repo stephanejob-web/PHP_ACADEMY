@@ -228,7 +228,7 @@ Lui, il exécute **ce que tu lui dis**, mais seulement **si la condition est vra
 **Résultat attendu :**  
 > Il pleut, je reste à la maison.
 
-💪 *Essaye par toi-même d'abord !*
+💪 *Essaye par toi-même d`abord !*
 
 <details><summary>💡 Afficher la solution</summary>
 
@@ -247,7 +247,7 @@ if ($pluie) {
 **Résultat attendu :**  
 > Il ne pleut pas, je vais sur le chantier.
 
-💪 *Essaye par toi-même d'abord !*
+💪 *Essaye par toi-même d`abord !*
 
 <details><summary>💡 Afficher la solution</summary>
 
@@ -268,7 +268,7 @@ if ($pluie) {
 **Résultat attendu :**  
 > Froid, on fait attention.
 
-💪 *Essaye par toi-même d'abord !*
+💪 *Essaye par toi-même d`abord !*
 
 <details><summary>💡 Afficher la solution</summary>
 
@@ -291,7 +291,7 @@ if ($temperature < 0) {
 **Résultat attendu :**  
 > On peut travailler !
 
-💪 *Essaye par toi-même d'abord !*
+💪 *Essaye par toi-même d`abord !*
 
 <details><summary>💡 Afficher la solution</summary>
 
@@ -313,7 +313,7 @@ if ($briques && $mortier) {
 **Résultat attendu :**  
 > On reporte le chantier.
 
-💪 *Essaye par toi-même d'abord !*
+💪 *Essaye par toi-même d`abord !*
 
 <details><summary>💡 Afficher la solution</summary>
 

@@ -5,10 +5,10 @@
 ## 🚨 Pourquoi les tableaux sont très importants
 
 Avant tout, arrêtons-nous un instant 👋
-Ce que tu vas apprendre ici, c'est l'un des concepts les plus importants de tout le PHP (et même de la programmation en général).
+Ce que tu vas apprendre ici, c`est l`un des concepts les plus importants de tout le PHP (et même de la programmation en général).
 
-Les **tableaux**, c'est le **cœur du code** :
-➡️ c'est la façon de **ranger, organiser et retrouver les informations**.
+Les **tableaux**, c`est le **cœur du code** :
+➡️ c`est la façon de **ranger, organiser et retrouver les informations**.
 
 ---
 
@@ -20,8 +20,8 @@ Dans ta cuisine, tu ranges tes ingrédients dans des tiroirs :
 - un autre pour les farines,
 - un autre pour les sucres.
 
-En PHP, c'est pareil :
-> Un **tableau**, c'est comme un **plan de travail organisé** pour tes données.
+En PHP, c`est pareil :
+> Un **tableau**, c`est comme un **plan de travail organisé** pour tes données.
 
 Sans tableaux, tu devrais créer une variable pour chaque chose 😩
 ```php
@@ -36,7 +36,7 @@ $ingredients = ["farine", "sucre", "sel"];
 ```
 
 💬 En résumé :
-> Savoir utiliser les tableaux, c'est comme bien organiser ta cuisine.
+> Savoir utiliser les tableaux, c`est comme bien organiser ta cuisine.
 > Si tes tiroirs sont en ordre, ton service devient plus simple et plus rapide !
 
 ---
@@ -64,7 +64,7 @@ echo $ingredients[1]; // sucre
 Tu dois **te souvenir du numéro (1)**.
 Pas pratique quand on a la tête pleine de recettes 😅
 
-Si tu as 50 ingrédients, comment tu te rappelles que la farine c'est le numéro 0, le sel le numéro 12, etc. ?
+Si tu as 50 ingrédients, comment tu te rappelles que la farine c`est le numéro 0, le sel le numéro 12, etc. ?
 
 ---
 
@@ -73,7 +73,7 @@ Si tu as 50 ingrédients, comment tu te rappelles que la farine c'est le numéro
 ### 🤔 Le problème des numéros
 
 En cuisine, tu ne dis JAMAIS :
-> "Apporte-moi l'ingrédient numéro 2 !"
+> "Apporte-moi l`ingrédient numéro 2 !"
 
 Tu dis :
 > "Apporte-moi **la farine** !"
@@ -81,9 +81,9 @@ Tu dis :
 
 Tu utilises un **NOM**, pas un **NUMÉRO** !
 
-### ✨ C'est ça, un tableau associatif !
+### ✨ C`est ça, un tableau associatif !
 
-> Chaque case a un **nom (clé)** au lieu d'un **numéro**.
+> Chaque case a un **nom (clé)** au lieu d`un **numéro**.
 
 Au lieu de dire "donne-moi la case 0", tu dis "donne-moi la case **épices**" !
 
@@ -130,7 +130,7 @@ LA CLÉ   LA VALEUR
 └─────────────┴────────────────────┘
 ```
 
-C'est comme un **annuaire** :
+C`est comme un **annuaire** :
 - Le **nom** (clé) te permet de trouver
 - Le **contenu** (valeur)
 
@@ -140,8 +140,8 @@ C'est comme un **annuaire** :
 
 ### 🔹 La CLÉ (Key en anglais)
 
-C'est le **nom** que tu donnes à un tiroir.
-C'est **TOI** qui choisis ce nom.
+C`est le **nom** que tu donnes à un tiroir.
+C`est **TOI** qui choisis ce nom.
 
 Exemples de clés :
 - `"base"`
@@ -150,14 +150,14 @@ Exemples de clés :
 - `"nom"`
 
 🧠 **Retiens :**
-> La clé, c'est l'**étiquette** sur le tiroir.
+> La clé, c`est l`**étiquette** sur le tiroir.
 
 ---
 
 ### 🔹 La VALEUR (Value en anglais)
 
-C'est le **contenu** du tiroir.
-C'est ce que tu ranges dedans.
+C`est le **contenu** du tiroir.
+C`est ce que tu ranges dedans.
 
 Exemples de valeurs :
 - `"farine"` (du texte)
@@ -165,13 +165,13 @@ Exemples de valeurs :
 - `"Dupont"` (un nom)
 
 🧠 **Retiens :**
-> La valeur, c'est ce qu'il y a **dans** le tiroir.
+> La valeur, c`est ce qu`il y a **dans** le tiroir.
 
 ---
 
 ### 📋 Tableau récapitulatif :
 
-| Terme | C'est quoi ? | Exemple |
+| Terme | C`est quoi ? | Exemple |
 |-------|--------------|---------|
 | **CLÉ** | Le nom du tiroir | `"base"` |
 | **VALEUR** | Le contenu du tiroir | `"farine"` |
@@ -218,7 +218,7 @@ cassonade
 ```
 
 💬 PHP comprend :
-> "Va dans le tiroir appelé **sucre**, et dis-moi ce qu'il y a dedans."
+> "Va dans le tiroir appelé **sucre**, et dis-moi ce qu`il y a dedans."
 
 ---
 
@@ -262,7 +262,7 @@ $ingredients["liquide"] = "crème";
 $ingredients["épice"] = "cannelle";
 ```
 
-💬 Tu viens d'ajouter un **nouveau tiroir** appelé "épice" avec de la "cannelle" dedans !
+💬 Tu viens d`ajouter un **nouveau tiroir** appelé "épice" avec de la "cannelle" dedans !
 
 ---
 
@@ -297,7 +297,7 @@ Après : Array ( [base] => farine [sucre] => sucre glace [fruit] => fraise )
 
 ## 🧾 7️⃣ Voir tout le tableau avec print_r()
 
-Pour voir **TOUT** ce qu'il y a dans ton tableau :
+Pour voir **TOUT** ce qu`il y a dans ton tableau :
 
 ```php
 $ingredients = [
@@ -320,7 +320,7 @@ Array
 ```
 
 💬 `print_r()` veut dire **"print readable"** (affiche de façon lisible).
-C'est super utile pour **vérifier** ce qu'il y a dans ton tableau !
+C`est super utile pour **vérifier** ce qu`il y a dans ton tableau !
 
 ---
 
@@ -338,13 +338,13 @@ C'est super utile pour **vérifier** ce qu'il y a dans ton tableau !
 
 ### 🤯 *Petite pause humour :*
 
-> "C'est quoi ce bazar ?! J'ai la tête qui chauffe, j'comprends plus rien à ces crochets et ces flèches !" 😵‍💫
+> "C`est quoi ce bazar ?! J`ai la tête qui chauffe, j`comprends plus rien à ces crochets et ces flèches !" 😵‍💫
 
-C'est **NORMAL** de penser ça la première fois.
+C`est **NORMAL** de penser ça la première fois.
 **TOUT LE MONDE** passe par là.
 
 Mais rassure-toi 👨‍🍳 :
-➡️ À force d'en faire, ton cerveau va s'y habituer.
+➡️ À force d`en faire, ton cerveau va s`y habituer.
 ➡️ Et un jour, tu feras des tableaux sans même y penser — comme un chef qui fait une sauce sans mesurer 🍳.
 
 💪 **Continue, tu es sur la bonne voie !**
@@ -354,13 +354,13 @@ Mais rassure-toi 👨‍🍳 :
 # 🔁 9️⃣ La boucle `foreach` – Parcourir tout le tableau
 
 Maintenant que tu sais **ouvrir un tiroir avec les crochets**,
-on va apprendre à **ouvrir TOUS les tiroirs d'un coup** avec une boucle.
+on va apprendre à **ouvrir TOUS les tiroirs d`un coup** avec une boucle.
 
 ---
 
 ## 🧺 A) Version simple : parcourir seulement les VALEURS
 
-Si tu veux juste voir **ce qu'il y a dans les tiroirs** (sans les noms) :
+Si tu veux juste voir **ce qu`il y a dans les tiroirs** (sans les noms) :
 
 ```php
 $ingredients = ["farine", "sucre", "sel"];
@@ -386,17 +386,17 @@ J'utilise sel
 
 | Tour | `$ingredient` contient | Affichage |
 |------|------------------------|-----------|
-| 1 | farine | J'utilise farine |
-| 2 | sucre | J'utilise sucre |
-| 3 | sel | J'utilise sel |
+| 1 | farine | J`utilise farine |
+| 2 | sucre | J`utilise sucre |
+| 3 | sel | J`utilise sel |
 
-C'est comme si PHP sortait **un ingrédient à la fois** de ton tiroir, te le montrait, puis passait au suivant !
+C`est comme si PHP sortait **un ingrédient à la fois** de ton tiroir, te le montrait, puis passait au suivant !
 
 ---
 
 ## 🍳 B) Version complète : les CLÉS + les VALEURS
 
-### 🚨 C'EST LA PARTIE LA PLUS IMPORTANTE !
+### 🚨 C`EST LA PARTIE LA PLUS IMPORTANTE !
 
 Quand ton tableau a des **noms de tiroirs** (clés), tu veux souvent voir **le nom ET le contenu** !
 
@@ -425,8 +425,8 @@ Dans la catégorie liquide, j'utilise lait.
 
 ### 🚨 LA LIGNE QUI REND FOU ! 😵‍💫
 
-Bon, là c'est **LA** fameuse ligne qui fait peur à tout le monde la première fois.
-Mais t'inquiète, on va la **décortiquer tranquillement** 👇
+Bon, là c`est **LA** fameuse ligne qui fait peur à tout le monde la première fois.
+Mais t`inquiète, on va la **décortiquer tranquillement** 👇
 
 ```php
 foreach ($ingredients as $categorie => $ingredient)
@@ -436,7 +436,7 @@ foreach ($ingredients as $categorie => $ingredient)
 
 > "Pour **chaque paire** dans `$ingredients`,
 > mets le **nom du tiroir** dans `$categorie`,
-> et ce qu'il y a **dedans** dans `$ingredient`."
+> et ce qu`il y a **dedans** dans `$ingredient`."
 
 ---
 
@@ -482,22 +482,22 @@ foreach ($ingredients as $toto => $truc) {
 ```
 
 PHP le comprendrait **très bien**.
-Mais… c'est **moche** et **incompréhensible** 😅
+Mais… c`est **moche** et **incompréhensible** 😅
 
-Le code, c'est comme une recette :
-**Si tu ne mets pas d'étiquettes claires, plus personne ne s'y retrouve.**
+Le code, c`est comme une recette :
+**Si tu ne mets pas d`étiquettes claires, plus personne ne s`y retrouve.**
 
-👉 C'est pour ça qu'on donne des noms **logiques** :
+👉 C`est pour ça qu`on donne des noms **logiques** :
 - `$ingredients` → le tableau complet (ton plan de travail)
 - `$categorie` → le nom du tiroir (la CLÉ)
-- `$ingredient` → ce qu'il y a dedans (la VALEUR)
+- `$ingredient` → ce qu`il y a dedans (la VALEUR)
 
 🧠 **Retiens :**
 > Plus tu choisis des noms clairs, plus ton code est facile à lire !
 
 ---
 
-### 🎯 Exemple avec d'autres noms :
+### 🎯 Exemple avec d`autres noms :
 
 ```php
 $chefs = [
@@ -526,7 +526,7 @@ Ici :
 
 ### 🤯 "Pfff… ça me rend fou tout ça !"
 
-C'est **NORMAL** 😅
+C`est **NORMAL** 😅
 **Tous les débutants** passent par là.
 
 Voici la vérité :
@@ -604,10 +604,10 @@ echo count($ingredients);
 
 ## 🍳 Phrase à retenir
 
-> Un **tableau associatif**, c'est comme un **plan de travail organisé** :
+> Un **tableau associatif**, c`est comme un **plan de travail organisé** :
 > chaque **tiroir a un nom (CLÉ)** et un **contenu (VALEUR)**.
 > La **flèche `=>`** relie les deux.
-> Et grâce à **`foreach`**, tu peux **ouvrir tous les tiroirs** sans t'y perdre ! 🧺
+> Et grâce à **`foreach`**, tu peux **ouvrir tous les tiroirs** sans t`y perdre ! 🧺
 
 ---
 
@@ -622,9 +622,9 @@ Crée un tableau `$ingredients` avec :
 
 Affiche la quantité de farine en utilisant les crochets.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Un tableau associatif avec 3 paires
-- Affichage d'une valeur avec sa clé
+- Affichage d`une valeur avec sa clé
 
 **Exemple de résultat attendu :**
 ```
@@ -651,12 +651,12 @@ echo $ingredients["farine"];
 
 ## 📝 Exercice 2 : Ajouter un élément
 **Énoncé :**
-Reprends le tableau `$ingredients` de l'exercice 1.
+Reprends le tableau `$ingredients` de l`exercice 1.
 Ajoute une nouvelle paire : `"beurre" => 200`.
 Affiche tout le tableau avec `print_r()`.
 
-**Ce qu'on attend :**
-- Ajout d'une nouvelle clé-valeur
+**Ce qu`on attend :**
+- Ajout d`une nouvelle clé-valeur
 - Affichage du tableau complet
 
 **Exemple de résultat attendu :**
@@ -690,8 +690,8 @@ Reprends le tableau `$ingredients`.
 Change la quantité de sucre de 250 à 300.
 Affiche la nouvelle quantité de sucre.
 
-**Ce qu'on attend :**
-- Modification d'une valeur existante
+**Ce qu`on attend :**
+- Modification d`une valeur existante
 - Affichage de la nouvelle valeur
 
 **Exemple de résultat attendu :**
@@ -729,7 +729,7 @@ Crée un tableau `$chefs` avec :
 Utilise foreach pour afficher :
 "Chef [nom] : [spécialité]" pour chaque chef.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Un tableau associatif de 3 chefs
 - Boucle foreach qui affiche clé et valeur
 
@@ -762,12 +762,12 @@ foreach ($chefs as $nom => $specialite) {
 
 ## 📝 Exercice 5 : Ajouter un chef
 **Énoncé :**
-Reprends le tableau `$chefs` de l'exercice 4.
+Reprends le tableau `$chefs` de l`exercice 4.
 Ajoute un nouveau chef : `"Sophie"` => `"poissonnier"`.
 Affiche tous les chefs avec foreach.
 
-**Ce qu'on attend :**
-- Ajout d'une paire clé-valeur
+**Ce qu`on attend :**
+- Ajout d`une paire clé-valeur
 - Affichage de tous les chefs
 
 **Exemple de résultat attendu :**
@@ -808,9 +808,9 @@ Crée un tableau `$ustensiles` avec :
 - `"couteau"` => `"découpe"`
 
 Affiche pour chaque ustensile :
-"L'ustensile [nom] sert pour [catégorie]."
+"L`ustensile [nom] sert pour [catégorie]."
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Tableau associatif de 3 ustensiles
 - Phrase personnalisée avec foreach
 
@@ -843,11 +843,11 @@ foreach ($ustensiles as $ustensile => $categorie) {
 
 ## 📝 Exercice 7 : Compter les éléments
 **Énoncé :**
-Reprends le tableau `$ustensiles` de l'exercice 6.
-Compte combien d'ustensiles tu as et affiche :
-"J'ai X ustensiles différents."
+Reprends le tableau `$ustensiles` de l`exercice 6.
+Compte combien d`ustensiles tu as et affiche :
+"J`ai X ustensiles différents."
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Utilisation de count()
 - Message avec le résultat
 
@@ -887,7 +887,7 @@ Affiche : "Total : X euros"
 
 💡 Astuce : Crée une variable `$total = 0` avant la boucle, et ajoute chaque prix dedans.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable pour stocker le total
 - Une boucle qui additionne les valeurs
 - Affichage du résultat final
@@ -929,9 +929,9 @@ Crée un tableau `$stock` avec :
 - `"bols"` => `12`
 
 Affiche pour chaque élément :
-"J'ai [quantité] [objet]."
+"J`ai [quantité] [objet]."
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Tableau avec quantités
 - Boucle foreach qui affiche clé et valeur
 

@@ -2,7 +2,7 @@
 
 ## 🍳 Salut le chef !
 
-Jusqu'à maintenant, pour créer une recette, tu faisais comment ?
+Jusqu`à maintenant, pour créer une recette, tu faisais comment ?
 
 ```php
 $gateau = new Recette();
@@ -17,21 +17,21 @@ $gateau->calories_par_portion = 350;
 
 Et si tu dois créer 10 recettes ? **60 lignes !**
 
-C'est **LOURD**, non ?
+C`est **LOURD**, non ?
 
-Aujourd'hui, on va voir comment faire **TOUT ÇA en UNE SEULE LIGNE** ! 🔥
+Aujourd`hui, on va voir comment faire **TOUT ÇA en UNE SEULE LIGNE** ! 🔥
 
 ---
 
-## 🤔 Le constructeur, c'est quoi ?
+## 🤔 Le constructeur, c`est quoi ?
 
-Le **constructeur**, c'est une méthode **spéciale** qui s'exécute **AUTOMATIQUEMENT** quand tu crées une recette.
+Le **constructeur**, c`est une méthode **spéciale** qui s`exécute **AUTOMATIQUEMENT** quand tu crées une recette.
 
 **Imagine :**
 
 ❌ **Avant (méthode longue)** :
 - "Hé chef, je prépare un gâteau."
-- "OK, il s'appelle comment ?"
+- "OK, il s`appelle comment ?"
 - "Gâteau au chocolat."
 - "Temps de cuisson ?"
 - "35 minutes."
@@ -46,7 +46,7 @@ Le **constructeur**, c'est une méthode **spéciale** qui s'exécute **AUTOMATIQ
 
 ✅ **Avec le constructeur (méthode rapide)** :
 - "Hé chef, je prépare un gâteau au chocolat : 35 min, 180°C, 8 portions."
-- "OK, c'est noté !"
+- "OK, c`est noté !"
 
 **TOUT EN UNE FOIS !** 💪
 
@@ -124,13 +124,13 @@ echo "Recette : " . $gateau_chocolat->nom;
 public function __construct($n, $t, $temp, $p) {
 ```
 
-**`public`** → Visible par tout le monde (comme d'habitude)
+**`public`** → Visible par tout le monde (comme d`habitude)
 
-**`function`** → C'est une méthode (tu connais)
+**`function`** → C`est une méthode (tu connais)
 
 **`__construct`** → **LE NOM MAGIQUE !**  
 ⚠️ **ATTENTION** : Ce nom est **OBLIGATOIRE** et ne change JAMAIS !  
-C'est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
+C`est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
 
 **`($n, $t, $temp, $p)`** → Les **paramètres** que tu vas donner lors de la création
 - `$n` = nom
@@ -138,13 +138,13 @@ C'est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
 - `$temp` = température
 - `$p` = portions
 
-*Tu peux les nommer comme tu veux : `$nom`, `$temps`, `$temperature`... Mais des noms courts, c'est plus rapide à écrire !*
+*Tu peux les nommer comme tu veux : `$nom`, `$temps`, `$temperature`... Mais des noms courts, c`est plus rapide à écrire !*
 
 **`{`** → Le début du constructeur
 
 ---
 
-### Le code à l'intérieur :
+### Le code à l`intérieur :
 
 ```php
     $this->nom = $n;
@@ -181,7 +181,7 @@ C'est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
 $gateau_chocolat = new Recette("Gâteau au chocolat", 35, 180, 8);
 ```
 
-**Voici ce qui se passe dans l'ordre :**
+**Voici ce qui se passe dans l`ordre :**
 
 1. PHP crée une nouvelle recette `Recette`
 2. PHP voit que tu as donné 4 valeurs : `"Gâteau au chocolat"`, `35`, `180`, `8`
@@ -240,13 +240,13 @@ $recette3 = new Recette("Cookies", 12, 175, 20);
 
 **3 lignes** pour créer 3 recettes ! 🎉
 
-**C'est 5 fois plus court !**
+**C`est 5 fois plus court !**
 
 ---
 
 ## 💡 Exemple complet avec méthodes
 
-On peut combiner le constructeur avec les méthodes qu'on a vues au cours 03 !
+On peut combiner le constructeur avec les méthodes qu`on a vues au cours 03 !
 
 ```php
 <?php
@@ -329,7 +329,7 @@ Calories totales : 2400 kcal
 =========================
 ```
 
-**Regarde comme c'est propre et rapide !** 😎
+**Regarde comme c`est propre et rapide !** 😎
 
 ---
 
@@ -420,7 +420,7 @@ $gateau = new Recette("Gâteau au chocolat", 35, 180, 8);
 
 ---
 
-### Erreur 3 : Se tromper dans l'ordre
+### Erreur 3 : Se tromper dans l`ordre
 
 Les paramètres sont dans un **ordre précis** !
 
@@ -519,9 +519,9 @@ $plat3->afficherInfo();
 
 ## 🧠 Ce que tu DOIS retenir de ce cours
 
-✅ **Le constructeur s'appelle TOUJOURS `__construct`** (avec 2 underscores !)
+✅ **Le constructeur s`appelle TOUJOURS `__construct`** (avec 2 underscores !)
 
-✅ **Il s'exécute AUTOMATIQUEMENT** quand tu crées une recette
+✅ **Il s`exécute AUTOMATIQUEMENT** quand tu crées une recette
 
 ✅ **Il permet de créer une recette en 1 ligne** au lieu de 6
 
@@ -529,7 +529,7 @@ $plat3->afficherInfo();
 
 ✅ **Tu peux mettre des valeurs par défaut** : `__construct($n, $t, $temp, $p, $diff = "facile")`
 
-✅ **L'ordre des paramètres est important !**
+✅ **L`ordre des paramètres est important !**
 
 ---
 
@@ -548,29 +548,29 @@ $plat3->afficherInfo();
 
 ## ⏭️ Dans le prochain cours...
 
-Tu vas apprendre **L'HÉRITAGE** !
+Tu vas apprendre **L`HÉRITAGE** !
 
-**C'est quoi ?**
+**C`est quoi ?**
 
-Créer des classes qui **héritent** d'autres classes !
+Créer des classes qui **héritent** d`autres classes !
 
 **Exemple :**
 - Tu as une classe `Recette`
 - Tu crées une classe `Dessert` qui hérite de `Recette`
 - `Dessert` a **TOUT** ce que `Recette` a, **PLUS** des trucs en plus !
 
-C'est comme un apprenti cuisinier qui hérite des compétences de son chef, et qui ajoute ses propres spécialités ! 👨‍🍳👨‍🍳
+C`est comme un apprenti cuisinier qui hérite des compétences de son chef, et qui ajoute ses propres spécialités ! 👨‍🍳👨‍🍳
 
 **Tu vas adorer !** 🚀
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE** !
+Mais pour l`instant, **FAIS L`EXERCICE** !
 
-Le constructeur est **SUPER IMPORTANT**. Tu vas l'utiliser **TOUT LE TEMPS** en POO.
+Le constructeur est **SUPER IMPORTANT**. Tu vas l`utiliser **TOUT LE TEMPS** en POO.
 
 ---
 
 **👨‍🍳 Bravo, tu progresses vraiment bien !**
 
-*PS : Si tu as réussi l'exercice, tu mérites une pause. Va boire un café, tu l'as mérité ! ☕*
+*PS : Si tu as réussi l`exercice, tu mérites une pause. Va boire un café, tu l`as mérité ! ☕*

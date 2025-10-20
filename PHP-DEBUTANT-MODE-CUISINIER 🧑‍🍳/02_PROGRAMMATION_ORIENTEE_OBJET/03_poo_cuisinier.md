@@ -7,15 +7,15 @@ Dans les cours précédents, tu as appris à :
 - Préparer des **plats** (objets)
 - Leur donner des **informations** (propriétés)
 
-Mais jusqu'ici, ta recette, elle fait quoi ? **Elle reste là comme un bout de papier !** 😄
+Mais jusqu`ici, ta recette, elle fait quoi ? **Elle reste là comme un bout de papier !** 😄
 
-Aujourd'hui, on va lui apprendre à **FAIRE DES CHOSES** !
+Aujourd`hui, on va lui apprendre à **FAIRE DES CHOSES** !
 
 ---
 
-## 🤔 Les méthodes, c'est quoi exactement ?
+## 🤔 Les méthodes, c`est quoi exactement ?
 
-Jusqu'à maintenant, tu as appris les **PROPRIÉTÉS**.
+Jusqu`à maintenant, tu as appris les **PROPRIÉTÉS**.
 
 **Les PROPRIÉTÉS** = Ce que la recette **EST**
 
@@ -35,15 +35,15 @@ Exemple : une recette **CALCULE** ses calories, **AJUSTE** ses portions, **AFFIC
 
 **Dans une cuisine :**
 
-- **Propriété :** "Cette recette a 8 portions" → **C'EST une caractéristique**
-- **Méthode :** "Calcule combien de calories dans cette recette" → **C'EST une action**
+- **Propriété :** "Cette recette a 8 portions" → **C`EST une caractéristique**
+- **Méthode :** "Calcule combien de calories dans cette recette" → **C`EST une action**
 
 ---
 
-**Une recette avec des méthodes, c'est une recette qui peut TRAVAILLER TOUTE SEULE !**
+**Une recette avec des méthodes, c`est une recette qui peut TRAVAILLER TOUTE SEULE !**
 
 Plus besoin de calculer les calories toi-même : la recette le fait !  
-Plus besoin d'ajuster les portions à la main : la recette s'ajuste toute seule !
+Plus besoin d`ajuster les portions à la main : la recette s`ajuste toute seule !
 
 **Ta recette devient comme un robot de cuisine autonome !** 💪
 
@@ -51,9 +51,9 @@ Plus besoin d'ajuster les portions à la main : la recette s'ajuste toute seule 
 
 ## 🔨 Exemple 1 : La recette calcule ses calories
 
-Dans une cuisine, pour calculer les calories d'une recette, tu fais comment ?
+Dans une cuisine, pour calculer les calories d`une recette, tu fais comment ?
 
-**nombre d'ingrédients × calories par ingrédient = calories totales**
+**nombre d`ingrédients × calories par ingrédient = calories totales**
 
 Maintenant, on va apprendre à la recette à **faire ce calcul ELLE-MÊME** !
 
@@ -110,18 +110,18 @@ public function calculerCaloriesTotales() {
 
 **`function`** → Le mot magique pour dire **"je crée une action"**
 
-**`calculerCaloriesTotales`** → Le **nom** de l'action  
-*Tu peux l'appeler comme tu veux : `calculer()`, `getCalories()`, `calories()`...*  
+**`calculerCaloriesTotales`** → Le **nom** de l`action  
+*Tu peux l`appeler comme tu veux : `calculer()`, `getCalories()`, `calories()`...*  
 *Mais choisis un nom qui décrit bien ce que fait la méthode !*
 
 **`()`** → Les **parenthèses** sont obligatoires après le nom  
-*Pour l'instant, on met rien dedans. On verra pourquoi plus tard.*
+*Pour l`instant, on met rien dedans. On verra pourquoi plus tard.*
 
-**`{`** → L'accolade ouvrante : le **début** de la méthode
+**`{`** → L`accolade ouvrante : le **début** de la méthode
 
 ---
 
-### Le code à l'intérieur :
+### Le code à l`intérieur :
 
 ```php
     return $this->portions * $this->calories_par_portion;
@@ -132,11 +132,11 @@ public function calculerCaloriesTotales() {
 **`$this`** → **MOT SUPER IMPORTANT !**  
 Ça veut dire **"MOI-MÊME"** (la recette qui exécute la méthode)
 
-**`$this->portions`** → **MES** portions (celles de cette recette-ci, pas d'une autre recette)
+**`$this->portions`** → **MES** portions (celles de cette recette-ci, pas d`une autre recette)
 
 **`$this->calories_par_portion`** → **MES** calories par portion (celles de cette recette-ci)
 
-**`*`** → L'opérateur de multiplication (tu connais déjà)
+**`*`** → L`opérateur de multiplication (tu connais déjà)
 
 ---
 
@@ -146,7 +146,7 @@ public function calculerCaloriesTotales() {
 }
 ```
 
-**`}`** → L'accolade fermante : la **fin** de la méthode
+**`}`** → L`accolade fermante : la **fin** de la méthode
 
 ---
 
@@ -154,7 +154,7 @@ public function calculerCaloriesTotales() {
 
 **`$this`** = **"MOI-MÊME"**
 
-C'est le mot que la recette utilise pour parler d'elle-même.
+C`est le mot que la recette utilise pour parler d`elle-même.
 
 ---
 
@@ -176,17 +176,17 @@ Quand tu demandes au **gâteau au chocolat** de calculer SES calories :
 
 ### Analogie :
 
-C'est comme si tu disais :
+C`est comme si tu disais :
 - **"Ma recette"** → la recette que **TU** utilises
-- **"Ta recette"** → la recette d'un autre
+- **"Ta recette"** → la recette d`un autre
 
-**`$this`** c'est comme dire **"MA"** ou **"MON"**.
+**`$this`** c`est comme dire **"MA"** ou **"MON"**.
 
 ---
 
 ## 🎯 Appeler une méthode
 
-Pour **utiliser** une méthode, c'est simple :
+Pour **utiliser** une méthode, c`est simple :
 
 ```php
 $calories_totales = $gateau_chocolat->calculerCaloriesTotales();
@@ -210,7 +210,7 @@ La recette fait le calcul et **renvoie** le résultat.
 
 ## 🎨 Exemple 2 : Ajuster les portions
 
-Une recette peut s'adapter au nombre d'invités, non ?
+Une recette peut s`adapter au nombre d`invités, non ?
 
 Créons une méthode pour ça !
 
@@ -261,7 +261,7 @@ Portions ajustées de 8 à 12 personnes !
 Nouvelles portions : 12
 ```
 
-**La recette s'est ajustée toute seule !** 🎨
+**La recette s`est ajustée toute seule !** 🎨
 
 ---
 
@@ -275,13 +275,13 @@ public function ajusterPortions($nouvelles_portions) {
 
 **Tu vois le `$nouvelles_portions` entre les parenthèses ?**
 
-Ça s'appelle un **PARAMÈTRE**.
+Ça s`appelle un **PARAMÈTRE**.
 
 ---
 
-### C'est quoi un paramètre ?
+### C`est quoi un paramètre ?
 
-Un paramètre, c'est une **information que tu DOIS donner** à la méthode pour qu'elle fonctionne.
+Un paramètre, c`est une **information que tu DOIS donner** à la méthode pour qu`elle fonctionne.
 
 **Exemple :**
 
@@ -301,7 +301,7 @@ public function ajusterPortions($nouvelles_portions) {
 }
 ```
 
-**`$nouvelles_portions`** → C'est une variable qui **reçoit** l'info que tu donnes
+**`$nouvelles_portions`** → C`est une variable qui **reçoit** l`info que tu donnes
 
 **`$this->portions = $nouvelles_portions;`** → Je change **MES** portions avec les nouvelles portions reçues
 
@@ -313,15 +313,15 @@ public function ajusterPortions($nouvelles_portions) {
 $gateau_chocolat->ajusterPortions(12);
 ```
 
-**`12`** → C'est la valeur que tu **passes** au paramètre `$nouvelles_portions`
+**`12`** → C`est la valeur que tu **passes** au paramètre `$nouvelles_portions`
 
-La méthode reçoit `12` et l'utilise pour ajuster les portions.
+La méthode reçoit `12` et l`utilise pour ajuster les portions.
 
 ---
 
 ## 📋 Exemple 3 : Afficher la fiche complète
 
-On peut aussi créer une méthode qui **affiche toutes les infos** de la recette d'un coup !
+On peut aussi créer une méthode qui **affiche toutes les infos** de la recette d`un coup !
 
 ```php
 <?php
@@ -395,7 +395,7 @@ echo "Calories totales : " . $this->calculerCaloriesTotales() . " kcal<br>";
 
 Ici, `afficherFiche()` appelle `calculerCaloriesTotales()` pour récupérer les calories.
 
-**C'est puissant !** Les méthodes peuvent travailler ensemble ! 💪
+**C`est puissant !** Les méthodes peuvent travailler ensemble ! 💪
 
 ---
 
@@ -515,7 +515,7 @@ $lasagnes->afficherResume();
 
 ✅ **Méthode** = Ce que la recette **FAIT** (calculer, ajuster, afficher...)
 
-✅ **`$this`** = **"MOI-MÊME"** (la recette qui parle d'elle)
+✅ **`$this`** = **"MOI-MÊME"** (la recette qui parle d`elle)
 
 ✅ **Méthode sans paramètre** : `calculerCaloriesTotales()`
 
@@ -543,11 +543,11 @@ $lasagnes->afficherResume();
 
 Tu vas apprendre le **CONSTRUCTEUR** !
 
-**C'est quoi ?**
+**C`est quoi ?**
 
 Une recette qui se crée **directement avec toutes ses infos** !
 
-Plus besoin d'écrire 10 lignes pour créer une recette... tout se fait **en une seule ligne** ! 🚀
+Plus besoin d`écrire 10 lignes pour créer une recette... tout se fait **en une seule ligne** ! 🚀
 
 **Exemple de ce que tu pourras faire :**
 
@@ -569,12 +569,12 @@ $gateau->portions = 8;
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE !**
+Mais pour l`instant, **FAIS L`EXERCICE !**
 
-C'est en **pratiquant** qu'on devient bon. Pas en lisant. 💪
+C`est en **pratiquant** qu`on devient bon. Pas en lisant. 💪
 
 ---
 
 **👨‍🍳 Continue comme ça, tu deviens un vrai chef du code !**
 
-*PS : Si tu galères sur l'exercice, relis le cours. La réponse est dedans ! 😊*
+*PS : Si tu galères sur l`exercice, relis le cours. La réponse est dedans ! 😊*

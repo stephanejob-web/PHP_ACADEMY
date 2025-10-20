@@ -1,52 +1,52 @@
 🕰️ Leçon 02 : Vérifier tes stats (status, log, diff)
 Salut joueur ! 🧙‍♂️🎮
 
-Dans la leçon 01, t'as appris à sauvegarder ta partie avec Git.
+Dans la leçon 01, t`as appris à sauvegarder ta partie avec Git.
 Cool ! Mais maintenant tu te demandes sûrement :
 
-🤔 "Euh... j'ai sauvegardé QUOI exactement ?"
+🤔 "Euh... j`ai sauvegardé QUOI exactement ?"
 🤔 "Comment je vois toutes mes sauvegardes ?"
-🤔 "Comment je sais ce que j'ai changé depuis la dernière fois ?"
+🤔 "Comment je sais ce que j`ai changé depuis la dernière fois ?"
 
-Aujourd'hui, tu vas apprendre à :
+Aujourd`hui, tu vas apprendre à :
 
-- Vérifier l'état actuel de ta partie
+- Vérifier l`état actuel de ta partie
 - Consulter toutes tes sauvegardes
-- Comparer ce que t'as changé depuis la dernière sauvegarde
+- Comparer ce que t`as changé depuis la dernière sauvegarde
 
-C'est parti ! 🚀
+C`est parti ! 🚀
 
 ---
 
 ## 🎮 Retour dans le jeu
 
-Imagine : t'es en plein milieu d'un RPG.
+Imagine : t`es en plein milieu d`un RPG.
 
 Tu veux savoir :
 
-- **Où j'en suis ?** → Qu'est-ce qui a changé depuis ma dernière sauvegarde ? → `git status`
+- **Où j`en suis ?** → Qu`est-ce qui a changé depuis ma dernière sauvegarde ? → `git status`
 - **Voir mes sauvegardes** → Consulter mon journal de jeu complet → `git log`
 - **Comparer avant/après** → Voir exactement ce qui a changé entre deux saves → `git diff`
 
-Voilà les 3 commandes d'inspection qu'on va apprendre ! 💪
+Voilà les 3 commandes d`inspection qu`on va apprendre ! 💪
 
 ---
 
 ## 🔍 Commande 1 : git status (Vérifier tes stats)
 
-C'est LA commande que tu vas utiliser 1000 fois par jour.
+C`est LA commande que tu vas utiliser 1000 fois par jour.
 
 ```bash
 git status
 ```
 
-**En français :** "Git, dis-moi où j'en suis dans ma partie !"
+**En français :** "Git, dis-moi où j`en suis dans ma partie !"
 
-**Analogie jeu :** C'est comme ouvrir ton menu de stats dans un RPG :
+**Analogie jeu :** C`est comme ouvrir ton menu de stats dans un RPG :
 
-- "Ah tiens, j'ai gagné de nouveaux items depuis hier"
+- "Ah tiens, j`ai gagné de nouveaux items depuis hier"
 - "Oh, ma barre de vie a changé"
-- "Y'a une nouvelle quête qui vient d'apparaître"
+- "Y'a une nouvelle quête qui vient d`apparaître"
 
 ### 🎯 À quoi ça sert ?
 
@@ -74,7 +74,7 @@ Reprends ton projet `mon-site` de la leçon 01.
 
 **Étape 2 : Vérifie tes stats**
 
-Ouvre le terminal dans ton dossier (clique dans la barre d'adresse → tape `cmd` → Entrée)
+Ouvre le terminal dans ton dossier (clique dans la barre d`adresse → tape `cmd` → Entrée)
 
 ```bash
 git status
@@ -89,7 +89,7 @@ Changes not staged for commit:
 ```
 
 **Traduction en langage gamer :**
-*"Hé joueur ! Le fichier index.html a été modifié, mais t'as pas encore sauvegardé ça dans ton journal."*
+*"Hé joueur ! Le fichier index.html a été modifié, mais t`as pas encore sauvegardé ça dans ton journal."*
 
 ---
 
@@ -101,7 +101,7 @@ Quand tu fais `git status`, tes fichiers peuvent être dans 3 états :
 |------|---------------------|--------------|---------|
 | 🔴 **Modifié (pas ajouté)** | Tu as joué mais pas encore préparé la sauvegarde | Nouveaux items dans ton sac, pas encore équipés | Rouge |
 | 🟢 **Prêt à être sauvegardé** | Tu as fait `git add`, il attend le `git commit` | Items équipés, prêts pour la sauvegarde | Vert |
-| ⚪ **Non suivi** | C'est un nouveau fichier que Git ne connaît pas | Nouvel item trouvé, pas encore dans l'inventaire | Rouge |
+| ⚪ **Non suivi** | C`est un nouveau fichier que Git ne connaît pas | Nouvel item trouvé, pas encore dans l`inventaire | Rouge |
 
 **Astuce pro de gamer :**
 Tape `git status` AVANT chaque `git commit` pour être sûr de ce que tu vas sauvegarder !
@@ -118,7 +118,7 @@ git log
 
 **En français :** "Montre-moi toutes les sauvegardes de ma partie"
 
-**Analogie jeu :** C'est comme ouvrir ton journal de quêtes du début à aujourd'hui.
+**Analogie jeu :** C`est comme ouvrir ton journal de quêtes du début à aujourd`hui.
 
 ### 🧪 Exemple pratique
 
@@ -153,24 +153,24 @@ Chaque bloc = 1 sauvegarde dans ton journal (1 commit)
 - **Qui a joué ?** Kevin Dupont
 - **Son contact :** kevin@mail.com
 - **Quand ?** Le 12 octobre 2025 à 10h30
-- **Qu'est-ce qui a été fait ?** "Niveau 1 créé - page d'accueil"
+- **Qu`est-ce qui a été fait ?** "Niveau 1 créé - page d`accueil"
 
 **💾 Save 2 :**
 - **Qui ?** Sophie Martin
 - **Quand ?** Le 12 octobre 2025 à 9h15
 - **Quoi ?** "Système de combat ajouté"
 
-**Pourquoi c'est génial ?**
+**Pourquoi c`est génial ?**
 
-Imagine qu'il y a un bug dans le système de combat.
-Tu regardes le journal et tu vois : "C'est Sophie qui l'a codé le 12 octobre à 9h15"
-Tu peux la contacter : "Hé Sophie, tu peux m'expliquer ce système ?"
+Imagine qu`il y a un bug dans le système de combat.
+Tu regardes le journal et tu vois : "C`est Sophie qui l`a codé le 12 octobre à 9h15"
+Tu peux la contacter : "Hé Sophie, tu peux m`expliquer ce système ?"
 
 ---
 
 ## 🎨 Rendre git log plus lisible
 
-Le `git log` de base, c'est comme un journal mal organisé. Voici une version plus claire :
+Le `git log` de base, c`est comme un journal mal organisé. Voici une version plus claire :
 
 ```bash
 git log --oneline
@@ -185,14 +185,14 @@ z9y8x7w Sophie - Système de combat ajouté
 
 Beaucoup plus facile à lire, non ? 😎
 
-C'est comme si tu ne gardais que l'essentiel dans ton journal :
-- L'ID de la save
+C`est comme si tu ne gardais que l`essentiel dans ton journal :
+- L`ID de la save
 - Le pseudo du joueur
 - Ce qui a été fait
 
 ### 🎯 Autres variantes utiles
 
-**Voir l'arbre des sauvegardes :**
+**Voir l`arbre des sauvegardes :**
 ```bash
 git log --oneline --graph
 ```
@@ -204,20 +204,20 @@ git log --oneline --graph
 git log --oneline -5
 ```
 
-Pratique si t'en as 500 dans le journal !
+Pratique si t`en as 500 dans le journal !
 
 **Voir seulement les saves de Kevin :**
 ```bash
 git log --author="Kevin"
 ```
 
-Pour voir tout le travail d'un joueur spécifique.
+Pour voir tout le travail d`un joueur spécifique.
 
 ---
 
 ## 🔀 Commande 3 : git diff (Comparer avant/après)
 
-Tu as joué, mais tu te souviens plus exactement de ce que t'as fait.
+Tu as joué, mais tu te souviens plus exactement de ce que t`as fait.
 
 ```bash
 git diff
@@ -225,15 +225,15 @@ git diff
 
 **En français :** "Montre-moi ce qui a changé depuis ma dernière sauvegarde"
 
-**Analogie jeu :** C'est comme comparer deux saves :
+**Analogie jeu :** C`est comme comparer deux saves :
 
-- **Save d'hier :** Niveau 5, 100 HP, 50 gold
-- **Save d'aujourd'hui :** Niveau 6, 120 HP, 75 gold
+- **Save d`hier :** Niveau 5, 100 HP, 50 gold
+- **Save d`aujourd`hui :** Niveau 6, 120 HP, 75 gold
 - **Différence :** +1 niveau, +20 HP, +25 gold ! 🎮
 
 ### 🧪 Exemple pratique
 
-Tu as modifié `index.html` tout à l'heure. Tape :
+Tu as modifié `index.html` tout à l`heure. Tape :
 
 ```bash
 git diff
@@ -256,12 +256,12 @@ index a1b2c3d..z9y8x7w 100644
 - Les lignes avec un **-** (en rouge) = Ce que tu as supprimé/retiré
 - Les lignes avec un **+** (en vert) = Ce que tu as ajouté/créé
 
-Ici, tu as ajouté la ligne `<p>Je m'appelle Kevin...</p>`
+Ici, tu as ajouté la ligne `<p>Je m`appelle Kevin...</p>`
 
-C'est comme si tu comparais :
+C`est comme si tu comparais :
 
-- 💾 **Save d'hier :** Inventaire avec 10 items
-- 💾 **Save d'aujourd'hui :** Inventaire avec 12 items
+- 💾 **Save d`hier :** Inventaire avec 10 items
+- 💾 **Save d`aujourd`hui :** Inventaire avec 12 items
 - **Différence :** +2 nouveaux items ! ⚔️
 
 ---
@@ -290,20 +290,20 @@ git diff HEAD
 
 ## 🎮 Exercice : À toi de jouer !
 
-**Mission :** Utilise les 3 commandes d'inspection qu'on vient de voir
+**Mission :** Utilise les 3 commandes d`inspection qu`on vient de voir
 
 ### 📝 Étapes détaillées (pour débutants) :
 
 **1️⃣ Reprends ton projet `mon-portfolio`**
    - Ouvre le dossier
-   - Clique dans la barre d'adresse → tape `cmd` → Entrée
+   - Clique dans la barre d`adresse → tape `cmd` → Entrée
 
 **2️⃣ Modifie le fichier index.html**
    - Ouvre `index.html` avec le Bloc-notes
-   - Ajoute ton âge, par exemple : `<p>J'ai 25 ans</p>`
+   - Ajoute ton âge, par exemple : `<p>J`ai 25 ans</p>`
    - Sauvegarde (Ctrl+S)
 
-**3️⃣ Vérifie l'état**
+**3️⃣ Vérifie l`état**
    - Dans le terminal, tape : `git status`
    - Tu dois voir le fichier en rouge (modifié)
 
@@ -323,19 +323,19 @@ git diff HEAD
    - Tape : `git log --oneline`
    - Tu vas voir ton nouvel historique avec ton nom !
 
-**🎉 Si t'as réussi, t'es un PRO GAMER DE GIT !** 💪
+**🎉 Si t`as réussi, t`es un PRO GAMER DE GIT !** 💪
 
 ---
 
-## 🔑 Antisèche : Les commandes d'inspection du gamer
+## 🔑 Antisèche : Les commandes d`inspection du gamer
 
-| Commande | Ce qu'elle fait | Analogie jeu | Quand tu l'utilises |
+| Commande | Ce qu`elle fait | Analogie jeu | Quand tu l`utilises |
 |----------|----------------|--------------|---------------------|
-| `git status` | Voir l'état actuel de ta partie | Ouvrir ton menu de stats | Tout le temps (avant chaque commit) |
-| `git log` | Voir toutes les sauvegardes | Consulter ton journal de jeu | Quand tu veux voir l'historique |
+| `git status` | Voir l`état actuel de ta partie | Ouvrir ton menu de stats | Tout le temps (avant chaque commit) |
+| `git log` | Voir toutes les sauvegardes | Consulter ton journal de jeu | Quand tu veux voir l`historique |
 | `git log --oneline` | Version compacte du journal | Liste rapide des saves | Pareil, mais plus lisible |
-| `git log --author="Kevin"` | Voir le travail d'un joueur | Filtrer par pseudo | Pour voir ce qu'une personne a fait |
-| `git diff` | Voir ce qui a changé | Comparer save d'hier vs aujourd'hui | Avant de faire `git add` |
+| `git log --author="Kevin"` | Voir le travail d`un joueur | Filtrer par pseudo | Pour voir ce qu`une personne a fait |
+| `git diff` | Voir ce qui a changé | Comparer save d`hier vs aujourd`hui | Avant de faire `git add` |
 | `git diff --staged` | Voir ce qui est prêt | Voir ce qui est équipé pour la save | Après `git add`, avant `git commit` |
 
 ---
@@ -362,12 +362,12 @@ Voici le cycle complet que tu vas faire maintenant :
 8. Recommence ! 🔁
 ```
 
-**T'as compris le truc ?**
+**T`as compris le truc ?**
 Un bon gamer vérifie ses stats tout le temps ! 🎮
 
 ---
 
-## 🎯 Pourquoi c'est important de tout tracer ?
+## 🎯 Pourquoi c`est important de tout tracer ?
 
 **Histoire vraie :**
 
@@ -375,7 +375,7 @@ Sur un MMO, un boss devient unkillable après une mise à jour. 💥
 Les joueurs sont furieux. Le game designer veut savoir qui a fait ça.
 
 **Sans journal de bord :**
-😱 Personne se souvient. C'était qui ? Quand ? Pourquoi ?
+😱 Personne se souvient. C`était qui ? Quand ? Pourquoi ?
 Impossible de savoir. Le jeu reste bugué pendant des semaines.
 
 **Avec un journal de bord (Git) :**
@@ -383,17 +383,17 @@ Impossible de savoir. Le jeu reste bugué pendant des semaines.
 *"Stats du boss modifiées par Marc le 5 octobre à 14h - Défense x10"*
 
 Il appelle Marc :
-*"Hé Marc, pourquoi t'as multiplié sa défense par 10 ?"*
+*"Hé Marc, pourquoi t`as multiplié sa défense par 10 ?"*
 Marc répond :
-*"J'ai fait une typo, je voulais mettre 1.0 pas 10 !"*
+*"J`ai fait une typo, je voulais mettre 1.0 pas 10 !"*
 
 **Résultat :**
-✅ On sait exactement ce qui s'est passé
+✅ On sait exactement ce qui s`est passé
 ✅ On peut corriger le bug en 2 minutes
 ✅ On évite de refaire la même erreur
 
-**Avec Git, c'est pareil !**
-Si y'a un bug, tu peux remonter jusqu'à la personne qui a écrit le code et lui demander pourquoi. 🔍
+**Avec Git, c`est pareil !**
+Si y'a un bug, tu peux remonter jusqu`à la personne qui a écrit le code et lui demander pourquoi. 🔍
 
 ---
 

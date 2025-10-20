@@ -2,7 +2,7 @@
 
 ## Salut architecte ! 🧙‍♂️🏗️
 
-Dans la leçon 02, t'as appris à **inspecter ton chantier** avec Git.  
+Dans la leçon 02, t`as appris à **inspecter ton chantier** avec Git.  
 Maintenant, on va apprendre un truc DE MALADE...
 
 **Imagine :**
@@ -23,22 +23,22 @@ Tu crées **deux chantiers parallèles** :
 - Chantier A : Tu testes le bleu
 - Chantier B : Tu testes le rouge
 
-Tu compares. Tu choisis le meilleur. **Et tu jettes l'autre !**
+Tu compares. Tu choisis le meilleur. **Et tu jettes l`autre !**
 
-**Avec Git, c'est exactement ça : les BRANCHES ! 🌿**
+**Avec Git, c`est exactement ça : les BRANCHES ! 🌿**
 
 ---
 
-## 🤔 C'est quoi une branche ?
+## 🤔 C`est quoi une branche ?
 
-Une branche, c'est un **chantier parallèle** où tu peux expérimenter sans risque.
+Une branche, c`est un **chantier parallèle** où tu peux expérimenter sans risque.
 
 **Analogie chantier :**
 
 Tu as ton **chantier principal** (la maison qui fonctionne).  
 Tu veux tester une nouvelle idée ? Tu ouvres un **chantier parallèle**.
 
-- ✅ Si ton idée marche → Tu l'intègres au chantier principal
+- ✅ Si ton idée marche → Tu l`intègres au chantier principal
 - ❌ Si ton idée marche pas → Tu fermes le chantier parallèle et tu jettes tout
 
 **Résultat ?**  
@@ -46,7 +46,7 @@ Ton chantier principal reste **toujours intact** ! 💪
 
 ---
 
-## 🎯 Pourquoi les branches, c'est GÉNIAL ?
+## 🎯 Pourquoi les branches, c`est GÉNIAL ?
 
 ### 1️⃣ Tu peux expérimenter sans risque 🧪
 
@@ -59,14 +59,14 @@ Tu crées une branche. Tu testes. Si ça casse tout, tu supprimes la branche.
 Imagine un vrai chantier avec 5 ouvriers :
 - **Marc** travaille sur les fondations → Branche "fondations"
 - **Sophie** travaille sur le toit → Branche "toit"
-- **Alex** travaille sur l'électricité → Branche "electricite"
+- **Alex** travaille sur l`électricité → Branche "electricite"
 
 Chacun bosse sur son chantier parallèle.  
 **Personne ne gêne personne !**
 
 À la fin, on assemble tout. 🎉
 
-### 3️⃣ C'est comme ça que bossent TOUS les pros 💼
+### 3️⃣ C`est comme ça que bossent TOUS les pros 💼
 
 Dans les entreprises, PERSONNE ne code directement sur le chantier principal.  
 Tout le monde crée des branches :
@@ -74,7 +74,7 @@ Tout le monde crée des branches :
 - Branche "correction-bug"
 - Branche "test-design"
 
-**C'est LA manière professionnelle de travailler !**
+**C`est LA manière professionnelle de travailler !**
 
 ---
 
@@ -136,9 +136,9 @@ git branch
   test-extension
 ```
 
-L'étoile `*` indique sur quel chantier tu es actuellement.
+L`étoile `*` indique sur quel chantier tu es actuellement.
 
-**Analogie chantier :** C'est comme avoir une liste de tous tes chantiers en cours.
+**Analogie chantier :** C`est comme avoir une liste de tous tes chantiers en cours.
 
 ---
 
@@ -154,7 +154,7 @@ git branch nom-de-la-branche
 git branch test-garage
 ```
 
-**En français :** "Ouvre un nouveau chantier parallèle qui s'appelle `test-garage`"
+**En français :** "Ouvre un nouveau chantier parallèle qui s`appelle `test-garage`"
 
 **Analogie chantier :** Tu ouvres un nouveau terrain à côté pour expérimenter.
 
@@ -204,9 +204,9 @@ git switch -c test-garage
 
 **En français :** "Ouvre un nouveau chantier `test-garage` et vas-y direct"
 
-**Analogie chantier :** Tu ouvres un nouveau terrain et tu t'y téléportes instantanément.
+**Analogie chantier :** Tu ouvres un nouveau terrain et tu t`y téléportes instantanément.
 
-**C'est la commande que tu vas utiliser 90% du temps !** 🔥
+**C`est la commande que tu vas utiliser 90% du temps !** 🔥
 
 ---
 
@@ -236,7 +236,7 @@ Tu es sur le chantier principal. 🏠
 git switch -c ajout-formulaire
 ```
 
-**Traduction :** "Ouvre un chantier parallèle pour tester l'ajout d'un formulaire"
+**Traduction :** "Ouvre un chantier parallèle pour tester l`ajout d`un formulaire"
 
 **Résultat :**
 
@@ -269,7 +269,7 @@ git commit -m "Ajout du formulaire de contact"
 
 **Ce qui se passe :**  
 Tu viens de prendre une photo sur le chantier parallèle `ajout-formulaire`.  
-**Ton chantier principal (`main`) n'a PAS bougé !**
+**Ton chantier principal (`main`) n`a PAS bougé !**
 
 ---
 
@@ -282,7 +282,7 @@ git switch main
 **Maintenant, ouvre ton fichier `index.html`...**
 
 💥 **MAGIE !**  
-Le formulaire a disparu ! Tu es revenu sur le chantier principal où il n'y a pas de formulaire !
+Le formulaire a disparu ! Tu es revenu sur le chantier principal où il n`y a pas de formulaire !
 
 ---
 
@@ -297,11 +297,11 @@ git switch ajout-formulaire
 🎉 **Le formulaire est de retour !**
 
 **Tu vois le pouvoir des branches ?**  
-Tu peux passer d'un chantier à l'autre **instantanément** ! ⚡
+Tu peux passer d`un chantier à l`autre **instantanément** ! ⚡
 
 ---
 
-## 🎯 Les règles d'or des branches
+## 🎯 Les règles d`or des branches
 
 ### ✅ Règle 1 : Une branche = Une fonctionnalité
 
@@ -342,7 +342,7 @@ test-nouveau-design
 
 **ATTENTION !**
 
-Avant de faire `git switch`, assure-toi d'avoir fait un `git commit` !
+Avant de faire `git switch`, assure-toi d`avoir fait un `git commit` !
 
 **Pourquoi ?**
 
@@ -364,7 +364,7 @@ Toujours sauvegarder avant de changer de chantier ! 📸
 
 ## 🔑 Antisèche : Les commandes des chantiers parallèles
 
-| Commande | Ce qu'elle fait | Analogie chantier |
+| Commande | Ce qu`elle fait | Analogie chantier |
 |----------|-----------------|-------------------|
 | `git branch` | Voir tous les chantiers | Liste de tous tes terrains |
 | `git branch nom` | Créer un nouveau chantier | Acheter un nouveau terrain |
@@ -388,7 +388,7 @@ Toujours sauvegarder avant de changer de chantier ! 📸
 8. Retourne sur ta branche avec `git switch ajout-description`
 9. Ouvre `index.html` → Ta description est revenue ! 🎉
 
-**Si t'as réussi, t'es un CHEF DE CHANTIER MULTI-TERRAINS ! 💪**
+**Si t`as réussi, t`es un CHEF DE CHANTIER MULTI-TERRAINS ! 💪**
 
 ---
 
@@ -401,11 +401,11 @@ Toujours sauvegarder avant de changer de chantier ! 📸
 
 **Avec les branches :**
 - 😎 Tu crées un chantier parallèle pour tester
-- 😎 Si ça marche pas, tu supprimes et c'est fini
+- 😎 Si ça marche pas, tu supprimes et c`est fini
 - 😎 Ton chantier principal reste toujours fonctionnel
 - 😎 Tu peux travailler en équipe sans conflit
 
-**Les branches, c'est la liberté totale ! 🚀**
+**Les branches, c`est la liberté totale ! 🚀**
 
 ---
 

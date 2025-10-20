@@ -1,22 +1,22 @@
-# 🧱 POO pour Maçons - Cours 01 : C'est quoi cette histoire de POO ?
+# 🧱 POO pour Maçons - Cours 01 : C`est quoi cette histoire de POO ?
 
 ## 👷 Salut toi, futur chef de chantier du code !
 
-Bon, jusqu'à maintenant, t'as appris à coder en PHP. Tu faisais des variables, des boucles, des conditions... **tu te débrouilles pas mal !**
+Bon, jusqu`à maintenant, t`as appris à coder en PHP. Tu faisais des variables, des boucles, des conditions... **tu te débrouilles pas mal !**
 
-Mais imagine que t'as un GROS chantier avec 50 murs à construire. Si tu crées une variable pour chaque mur, **tu vas devenir dingue** ! 🤯
+Mais imagine que t`as un GROS chantier avec 50 murs à construire. Si tu crées une variable pour chaque mur, **tu vas devenir dingue** ! 🤯
 
-Aujourd'hui, on va voir comment **organiser ton code proprement**, comme un vrai chef de chantier qui range ses outils.
+Aujourd`hui, on va voir comment **organiser ton code proprement**, comme un vrai chef de chantier qui range ses outils.
 
 ---
 
-## 🤔 La POO, c'est quoi exactement ?
+## 🤔 La POO, c`est quoi exactement ?
 
 **POO** = **Programmation Orientée Objet**
 
-Ouais, je sais, ça fait peur ce nom. Mais en vrai, c'est **SUPER SIMPLE** !
+Ouais, je sais, ça fait peur ce nom. Mais en vrai, c`est **SUPER SIMPLE** !
 
-La POO, c'est juste une façon de **RANGER ton code** pour pas que ça parte en cacahuète.
+La POO, c`est juste une façon de **RANGER ton code** pour pas que ça parte en cacahuète.
 
 **Imagine :**
 
@@ -66,7 +66,7 @@ $materiaux_mur_garage = "parpaing";
 
 - 4 murs = **12 variables**
 - Si tu as 50 murs = **150 variables** !
-- Et si tu te trompes dans un nom de variable ? **Bon courage pour trouver l'erreur !**
+- Et si tu te trompes dans un nom de variable ? **Bon courage pour trouver l`erreur !**
 
 ---
 
@@ -105,7 +105,7 @@ $mur_cuisine->materiaux = "brique";
 
 ✅ **UN SEUL PLAN** (la classe `Mur`)  
 ✅ Tu construis **autant de murs que tu veux**  
-✅ **C'est organisé**, tu t'y retrouves !
+✅ **C`est organisé**, tu t`y retrouves !
 
 ---
 
@@ -113,9 +113,9 @@ $mur_cuisine->materiaux = "brique";
 
 ### 1️⃣ **CLASSE** = Le plan de construction 📋
 
-Une **classe**, c'est comme **un plan d'architecte**.
+Une **classe**, c`est comme **un plan d`architecte**.
 
-C'est le **modèle** que tu vas utiliser pour construire plein de trucs identiques.
+C`est le **modèle** que tu vas utiliser pour construire plein de trucs identiques.
 
 ```php
 class Mur {
@@ -130,13 +130,13 @@ class Mur {
 Ton patron te donne un plan et te dit :  
 *"Tous les murs de cette maison doivent avoir : une hauteur, une largeur, et un matériau."*
 
-**Le plan, ce n'est PAS le mur en vrai !** C'est juste le dessin sur papier.
+**Le plan, ce n`est PAS le mur en vrai !** C`est juste le dessin sur papier.
 
 ---
 
 ### 2️⃣ **OBJET** = Le vrai mur construit 🧱
 
-Un **objet**, c'est un truc **RÉEL** que tu construis d'après le plan.
+Un **objet**, c`est un truc **RÉEL** que tu construis d`après le plan.
 
 ```php
 $mur_salon = new Mur();
@@ -144,7 +144,7 @@ $mur_salon = new Mur();
 
 **Sur un chantier, ça ressemble à quoi ?**
 
-C'est le **vrai mur en brique** que tu montes avec tes mains.
+C`est le **vrai mur en brique** que tu montes avec tes mains.
 
 **Tu peux avoir UN SEUL PLAN, mais construire 50 MURS différents !**
 
@@ -186,15 +186,15 @@ Tu crées **3 plans** :
 
 Ensuite, tu construis **proprement** tes 18 éléments.
 
-**C'est RANGÉ, CLAIR, et FACILE à gérer !**
+**C`est RANGÉ, CLAIR, et FACILE à gérer !**
 
 ---
 
-## 🔥 Pourquoi la POO c'est GÉNIAL
+## 🔥 Pourquoi la POO c`est GÉNIAL
 
 ### ✅ Avantage 1 : Tu te répètes PAS
 
-Tu écris le plan **UNE SEULE FOIS**, et tu l'utilises **1000 fois**.
+Tu écris le plan **UNE SEULE FOIS**, et tu l`utilises **1000 fois**.
 
 Plus besoin de recopier les mêmes lignes encore et encore.
 
@@ -225,10 +225,10 @@ Imagine que tu vas au bistrot du coin.
 
 Le patron a **UNE RECETTE** pour faire un pastis :
 - 2cl de pastis
-- 10cl d'eau
+- 10cl d`eau
 - Des glaçons
 
-Cette recette, c'est comme **une CLASSE**.
+Cette recette, c`est comme **une CLASSE**.
 
 ---
 
@@ -237,25 +237,25 @@ Maintenant, 3 clients commandent un pastis :
 - Le verre de Marcel
 - Le verre de Gérard
 
-Chaque verre, c'est un **OBJET**.
+Chaque verre, c`est un **OBJET**.
 
 **MÊME RECETTE, mais 3 VERRES DIFFÉRENTS.**
 
 Le patron ne refait pas la recette à chaque fois, il **applique la même** pour chaque client.
 
-**C'est EXACTEMENT ça la POO !**
+**C`est EXACTEMENT ça la POO !**
 
 ---
 
 ## 📝 Ce que tu DOIS absolument retenir
 
-🧱 **CLASSE** = Le plan d'architecte (le modèle sur papier)
+🧱 **CLASSE** = Le plan d`architecte (le modèle sur papier)
 
 🏠 **OBJET** = La vraie construction (celle que tu touches)
 
 > **"Un plan, mille constructions."**
 
-Si t'as compris ça, **t'as déjà compris 80% de la POO !**
+Si t`as compris ça, **t`as déjà compris 80% de la POO !**
 
 ---
 
@@ -288,9 +288,9 @@ $mur2 = new Mur();
 
 On va **VRAIMENT créer ton premier plan** et **construire ton premier mur** !
 
-Tu vas taper du VRAI code PHP, et tu vas voir que c'est **plus simple que tu penses**.
+Tu vas taper du VRAI code PHP, et tu vas voir que c`est **plus simple que tu penses**.
 
-Mais pour l'instant, **relis bien ce cours** jusqu'à ce que tu comprennes la différence entre :
+Mais pour l`instant, **relis bien ce cours** jusqu`à ce que tu comprennes la différence entre :
 
 📋 **CLASSE** (le plan)  
 🧱 **OBJET** (le truc construit)
@@ -300,11 +300,11 @@ Mais pour l'instant, **relis bien ce cours** jusqu'à ce que tu comprennes la di
 ## 💬 Dernier truc avant de partir...
 
 Si après ce cours tu te dis :  
-*"OK, c'est juste du bon sens en fait..."*
+*"OK, c`est juste du bon sens en fait..."*
 
 **BRAVO !** 🎉
 
-C'est exactement ça. La POO, c'est juste **du bon sens de chef de chantier appliqué au code**.
+C`est exactement ça. La POO, c`est juste **du bon sens de chef de chantier appliqué au code**.
 
 Allez, prends une pause, bois un coup, et on se retrouve au prochain cours ! 🍻
 

@@ -2,40 +2,40 @@
 
 ## Salut médiateur culinaire ! 🧙‍♂️⚖️
 
-Dans la leçon 04, t'as appris à **fusionner des versions** avec Git.  
+Dans la leçon 04, t`as appris à **fusionner des versions** avec Git.  
 Mais parfois... ça se passe pas comme prévu...
 
 **Le problème :**
 
 **Marc** teste une recette et ajoute du BASILIC. 🌿  
-**Sophie** teste la MÊME recette et ajoute de l'ORIGAN. 🌿
+**Sophie** teste la MÊME recette et ajoute de l`ORIGAN. 🌿
 
 **Quand tu veux fusionner les deux versions...**
 
 💥 **CONFLIT !**
 
-Git te dit : *"Hé chef ! Marc veut du basilic, Sophie veut de l'origan... Tu veux quoi TOI ?"*
+Git te dit : *"Hé chef ! Marc veut du basilic, Sophie veut de l`origan... Tu veux quoi TOI ?"*
 
-**Aujourd'hui, tu vas apprendre à résoudre ces conflits comme un PRO ! 🔥**
+**Aujourd`hui, tu vas apprendre à résoudre ces conflits comme un PRO ! 🔥**
 
 ---
 
-## 🤔 C'est quoi un conflit ?
+## 🤔 C`est quoi un conflit ?
 
-Un conflit, c'est quand **deux personnes modifient la même chose** en même temps.
+Un conflit, c`est quand **deux personnes modifient la même chose** en même temps.
 
 **Analogie cuisine :**
 
 Tu as deux chefs :
 - 🧑 **Marc** teste une version et ajoute du basilic
-- 👩 **Sophie** teste une autre version et ajoute de l'origan à la MÊME ligne de la recette
+- 👩 **Sophie** teste une autre version et ajoute de l`origan à la MÊME ligne de la recette
 
 **Quand tu veux fusionner les deux versions...**
 
 Git te dit :  
-*"Attends chef ! Y'a un problème ! Marc a ajouté du basilic, Sophie de l'origan... C'est QUOI la bonne épice ?!"*
+*"Attends chef ! Y'a un problème ! Marc a ajouté du basilic, Sophie de l`origan... C`est QUOI la bonne épice ?!"*
 
-**Git ne peut pas décider tout seul. C'est TOI qui dois trancher ! ⚖️**
+**Git ne peut pas décider tout seul. C`est TOI qui dois trancher ! ⚖️**
 
 ---
 
@@ -67,7 +67,7 @@ On va **volontairement créer un conflit** pour apprendre à le résoudre.
 
 ### Étape 1 : Prépare ton projet
 
-Va dans ton projet `mon-site` et assure-toi d'être sur `main` :
+Va dans ton projet `mon-site` et assure-toi d`être sur `main` :
 
 ```bash
 git switch main
@@ -147,7 +147,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 **Traduction :**  
-*"Hé chef ! J'ai un problème avec `recette.txt`. Marc et toi avez modifié la même ligne. Dis-moi quoi garder !"*
+*"Hé chef ! J`ai un problème avec `recette.txt`. Marc et toi avez modifié la même ligne. Dis-moi quoi garder !"*
 
 **Bravo ! Tu viens de créer ton premier conflit ! 🎉**
 
@@ -184,10 +184,10 @@ Sauce tomate avec basilic frais
 ```
 
 **Git te dit :**  
-*"Voilà les deux versions. C'est à TOI de décider laquelle garder !"*
+*"Voilà les deux versions. C`est à TOI de décider laquelle garder !"*
 
 **Analogie cuisine :**  
-C'est comme si tu avais une recette avec deux variantes :
+C`est comme si tu avais une recette avec deux variantes :
 - Haut : Origan (ta version)
 - Bas : Basilic (version de Marc)
 
@@ -207,7 +207,7 @@ Tu supprimes tout et tu gardes seulement ta version :
 Sauce tomate avec origan
 ```
 
-**Traduction :** *"Désolé Marc, c'est MA version qui gagne."*
+**Traduction :** *"Désolé Marc, c`est MA version qui gagne."*
 
 ---
 
@@ -288,13 +288,13 @@ Sauvegarde ton fichier dans ton éditeur (Ctrl+S).
 
 ---
 
-### Étape 5 : Dis à Git que t'as résolu le conflit
+### Étape 5 : Dis à Git que t`as résolu le conflit
 
 ```bash
 git add recette.txt
 ```
 
-**Traduction :** *"Git, j'ai résolu le conflit, voilà la version finale de ma recette !"*
+**Traduction :** *"Git, j`ai résolu le conflit, voilà la version finale de ma recette !"*
 
 ---
 
@@ -313,9 +313,9 @@ Merge branch 'test-marc'
 #   recette.txt
 ```
 
-Sauvegarde et ferme l'éditeur.
+Sauvegarde et ferme l`éditeur.
 
-**C'est bon ! Le conflit est résolu ! 🎉**
+**C`est bon ! Le conflit est résolu ! 🎉**
 
 ---
 
@@ -341,7 +341,7 @@ Tu vois bien les deux versions qui se sont fusionnées !
 
 ---
 
-## 🔑 Les outils pour t'aider
+## 🔑 Les outils pour t`aider
 
 ### 1️⃣ Voir quels fichiers sont en conflit
 
@@ -360,9 +360,9 @@ Unmerged paths:
 
 ---
 
-### 2️⃣ Annuler le merge si t'es perdu
+### 2️⃣ Annuler le merge si t`es perdu
 
-Si t'as peur, tu peux annuler le merge :
+Si t`as peur, tu peux annuler le merge :
 
 ```bash
 git merge --abort
@@ -371,11 +371,11 @@ git merge --abort
 **Traduction :** *"Annule tout ! Je veux revenir en arrière !"*
 
 **Analogie cuisine :**  
-C'est comme dire : *"Stop ! On recommence la recette demain."*
+C`est comme dire : *"Stop ! On recommence la recette demain."*
 
 ---
 
-## ✅ Les règles d'or pour éviter les conflits
+## ✅ Les règles d`or pour éviter les conflits
 
 ### Règle 1 : Communique avec ton équipe 💬
 
@@ -393,7 +393,7 @@ Ne garde pas une branche ouverte pendant 3 semaines.
 Fais des petits tests, merge vite, et recommence.
 
 **Analogie cuisine :**  
-Teste le basilic en 2 jours, adopte-le, et passe à l'origan.  
+Teste le basilic en 2 jours, adopte-le, et passe à l`origan.  
 Ne teste pas 10 épices en même temps !
 
 ---
@@ -404,7 +404,7 @@ Plus tu attends, plus y'aura de conflits.
 Merge régulièrement pour éviter les gros problèmes.
 
 **Analogie cuisine :**  
-Adopte le basilic dès que tu l'as goûté, attends pas d'avoir testé 50 épices !
+Adopte le basilic dès que tu l`as goûté, attends pas d`avoir testé 50 épices !
 
 ---
 
@@ -413,7 +413,7 @@ Adopte le basilic dès que tu l'as goûté, attends pas d'avoir testé 50 épice
 **Mission : Crée et résous un conflit**
 
 1. Va dans ton projet `mon-portfolio`
-2. Assure-toi d'être sur `main`
+2. Assure-toi d`être sur `main`
 3. Crée un fichier `titre.txt` avec écrit : "Mon Portfolio"
 4. Sauvegarde avec `git add titre.txt` et `git commit -m "Ajout du titre"`
 5. Crée une branche `version-a` avec `git switch -c version-a`

@@ -1,22 +1,22 @@
-# 🎮 POO pour Gamers - Cours 01 : C'est quoi cette histoire de POO ?
+# 🎮 POO pour Gamers - Cours 01 : C`est quoi cette histoire de POO ?
 
 ## 🕹️ Salut toi, futur dev de jeux vidéo !
 
-Alors voilà, t'as appris à coder en PHP. Tu faisais des variables, des boucles, des conditions... **tu te débrouilles pas mal !**
+Alors voilà, t`as appris à coder en PHP. Tu faisais des variables, des boucles, des conditions... **tu te débrouilles pas mal !**
 
 Mais imagine que tu dois gérer **50 personnages** dans ton jeu. Si tu crées une variable pour chaque stat de chaque personnage, **tu vas devenir fou** ! 🤯
 
-Aujourd'hui, on va voir comment **organiser ton code proprement**, comme un vrai game designer qui range son inventaire.
+Aujourd`hui, on va voir comment **organiser ton code proprement**, comme un vrai game designer qui range son inventaire.
 
 ---
 
-## 🤔 La POO, c'est quoi exactement ?
+## 🤔 La POO, c`est quoi exactement ?
 
 **POO** = **Programmation Orientée Objet**
 
-Ouais, je sais, ça fait peur ce nom. Mais en vrai, c'est **SUPER SIMPLE** !
+Ouais, je sais, ça fait peur ce nom. Mais en vrai, c`est **SUPER SIMPLE** !
 
-La POO, c'est juste une façon de **RANGER ton code** pour pas que ça parte en cacahuète.
+La POO, c`est juste une façon de **RANGER ton code** pour pas que ça parte en cacahuète.
 
 **Imagine :**
 
@@ -70,7 +70,7 @@ $arme_voleur = "Dagues empoisonnées";
 
 - 4 personnages = **16 variables**
 - Si tu as 50 personnages = **200 variables** !
-- Et si tu te trompes dans un nom de variable ? **Bon courage pour trouver l'erreur !**
+- Et si tu te trompes dans un nom de variable ? **Bon courage pour trouver l`erreur !**
 
 ---
 
@@ -113,7 +113,7 @@ $archer->arme = "Arc elfique";
 
 ✅ **UN SEUL TEMPLATE** (la classe `Personnage`)  
 ✅ Tu crées **autant de personnages que tu veux**  
-✅ **C'est organisé**, tu t'y retrouves !
+✅ **C`est organisé**, tu t`y retrouves !
 
 ---
 
@@ -121,9 +121,9 @@ $archer->arme = "Arc elfique";
 
 ### 1️⃣ **CLASSE** = Le template de création de personnage 📋
 
-Une **classe**, c'est comme **un template de création de personnage** dans un jeu.
+Une **classe**, c`est comme **un template de création de personnage** dans un jeu.
 
-C'est le **modèle** que tu vas utiliser pour créer plein de personnages identiques.
+C`est le **modèle** que tu vas utiliser pour créer plein de personnages identiques.
 
 ```php
 class Personnage {
@@ -136,16 +136,16 @@ class Personnage {
 
 **Dans un jeu, ça ressemble à quoi ?**
 
-C'est l'écran de création de personnage où tu choisis :  
+C`est l`écran de création de personnage où tu choisis :  
 *"Tous les personnages doivent avoir : un nom, des PV, de la force, et une arme."*
 
-**Le template, ce n'est PAS le personnage en jeu !** C'est juste l'écran de création.
+**Le template, ce n`est PAS le personnage en jeu !** C`est juste l`écran de création.
 
 ---
 
 ### 2️⃣ **OBJET** = Le personnage spawné dans le jeu 🎮
 
-Un **objet**, c'est un personnage **RÉEL** que tu crées d'après le template.
+Un **objet**, c`est un personnage **RÉEL** que tu crées d`après le template.
 
 ```php
 $guerrier = new Personnage();
@@ -153,7 +153,7 @@ $guerrier = new Personnage();
 
 **Dans un jeu, ça ressemble à quoi ?**
 
-C'est le **vrai personnage** qui apparaît dans ton monde, celui que tu contrôles.
+C`est le **vrai personnage** qui apparaît dans ton monde, celui que tu contrôles.
 
 **Tu peux avoir UN SEUL TEMPLATE, mais créer 50 PERSONNAGES différents !**
 
@@ -165,7 +165,7 @@ Chaque personnage est un **objet** différent, mais ils suivent tous le même **
 
 Imagine que tu dois gérer dans ton jeu :
 - **10 personnages jouables**
-- **5 types d'armes**
+- **5 types d`armes**
 - **3 types de potions**
 
 ---
@@ -195,15 +195,15 @@ Tu crées **3 templates** :
 
 Ensuite, tu spawn **proprement** tes 18 éléments.
 
-**C'est RANGÉ, CLAIR, et FACILE à gérer !**
+**C`est RANGÉ, CLAIR, et FACILE à gérer !**
 
 ---
 
-## 🔥 Pourquoi la POO c'est GÉNIAL
+## 🔥 Pourquoi la POO c`est GÉNIAL
 
 ### ✅ Avantage 1 : Tu te répètes PAS
 
-Tu écris le template **UNE SEULE FOIS**, et tu l'utilises **1000 fois**.
+Tu écris le template **UNE SEULE FOIS**, et tu l`utilises **1000 fois**.
 
 Plus besoin de recopier les mêmes lignes encore et encore.
 
@@ -237,7 +237,7 @@ Le game designer a créé **UN TEMPLATE** pour la classe "Guerrier" :
 - Peut équiper épées et boucliers
 - Compétence : Charge héroïque
 
-Ce template, c'est comme **une CLASSE**.
+Ce template, c`est comme **une CLASSE**.
 
 ---
 
@@ -246,13 +246,13 @@ Maintenant, 3 joueurs créent leur guerrier :
 - Le guerrier de Marc (niveau 12)
 - Le guerrier de Sophie (niveau 8)
 
-Chaque guerrier, c'est un **OBJET**.
+Chaque guerrier, c`est un **OBJET**.
 
 **MÊME TEMPLATE, mais 3 GUERRIERS DIFFÉRENTS.**
 
 Le game designer ne refait pas le template à chaque fois, il **utilise le même** pour chaque joueur.
 
-**C'est EXACTEMENT ça la POO !**
+**C`est EXACTEMENT ça la POO !**
 
 ---
 
@@ -264,7 +264,7 @@ Le game designer ne refait pas le template à chaque fois, il **utilise le même
 
 > **"Un template, mille personnages."**
 
-Si t'as compris ça, **t'as déjà compris 80% de la POO !**
+Si t`as compris ça, **t`as déjà compris 80% de la POO !**
 
 ---
 
@@ -297,9 +297,9 @@ $perso2 = new Personnage();
 
 On va **VRAIMENT créer ton premier template** et **spawn ton premier personnage** !
 
-Tu vas taper du VRAI code PHP, et tu vas voir que c'est **plus simple que tu penses**.
+Tu vas taper du VRAI code PHP, et tu vas voir que c`est **plus simple que tu penses**.
 
-Mais pour l'instant, **relis bien ce cours** jusqu'à ce que tu comprennes la différence entre :
+Mais pour l`instant, **relis bien ce cours** jusqu`à ce que tu comprennes la différence entre :
 
 📋 **CLASSE** (le template)  
 🎮 **OBJET** (le personnage spawné)
@@ -309,11 +309,11 @@ Mais pour l'instant, **relis bien ce cours** jusqu'à ce que tu comprennes la di
 ## 💬 Dernier truc avant de partir...
 
 Si après ce cours tu te dis :  
-*"OK, c'est juste du bon sens en fait..."*
+*"OK, c`est juste du bon sens en fait..."*
 
 **BRAVO !** 🎉
 
-C'est exactement ça. La POO, c'est juste **du bon sens de game designer appliqué au code**.
+C`est exactement ça. La POO, c`est juste **du bon sens de game designer appliqué au code**.
 
 Allez, prends une pause, bois un coup, et on se retrouve au prochain cours ! 🥤
 

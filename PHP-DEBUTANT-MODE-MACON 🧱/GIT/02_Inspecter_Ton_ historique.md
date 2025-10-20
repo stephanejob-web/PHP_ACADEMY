@@ -2,50 +2,50 @@
 
 ## Salut inspecteur ! 🧙‍♂️🔍
 
-Dans la leçon 01, t'as appris à **prendre des photos de ton chantier** avec Git.  
+Dans la leçon 01, t`as appris à **prendre des photos de ton chantier** avec Git.  
 Cool ! Mais maintenant tu te demandes sûrement :
 
-🤔 "Euh... j'ai pris une photo de QUOI exactement ?"  
+🤔 "Euh... j`ai pris une photo de QUOI exactement ?"  
 🤔 "Comment je vois toutes mes photos du chantier ?"  
-🤔 "Comment je sais ce que j'ai changé depuis la dernière fois ?"
+🤔 "Comment je sais ce que j`ai changé depuis la dernière fois ?"
 
-**Aujourd'hui, tu vas apprendre à :**
-- Vérifier l'état actuel de ton chantier
+**Aujourd`hui, tu vas apprendre à :**
+- Vérifier l`état actuel de ton chantier
 - Consulter toutes les photos de ton carnet
-- Comparer ce que t'as changé depuis la dernière photo
+- Comparer ce que t`as changé depuis la dernière photo
 
-C'est parti ! 🚀
+C`est parti ! 🚀
 
 ---
 
 ## 🧱 Retour sur le chantier
 
-Imagine : t'es chef de chantier.
+Imagine : t`es chef de chantier.
 
 **Tu arrives le matin et tu veux savoir :**
 
-1. **Où on en est ?** → Qu'est-ce qui a changé depuis hier ? → `git status`
-2. **Voir l'historique complet** → Feuilleter le carnet avec toutes les photos → `git log`
+1. **Où on en est ?** → Qu`est-ce qui a changé depuis hier ? → `git status`
+2. **Voir l`historique complet** → Feuilleter le carnet avec toutes les photos → `git log`
 3. **Comparer avant/après** → Voir exactement ce qui a changé entre deux photos → `git diff`
 
-Voilà les 3 commandes d'inspection qu'on va apprendre ! 💪
+Voilà les 3 commandes d`inspection qu`on va apprendre ! 💪
 
 ---
 
-## 🔍 Commande 1 : `git status` (L'état du chantier)
+## 🔍 Commande 1 : `git status` (L`état du chantier)
 
-C'est LA commande que tu vas utiliser **1000 fois par jour**.
+C`est LA commande que tu vas utiliser **1000 fois par jour**.
 
 ```bash
 git status
 ```
 
-**En français :** "Git, dis-moi où j'en suis sur mon chantier !"
+**En français :** "Git, dis-moi où j`en suis sur mon chantier !"
 
-**Analogie chantier :** C'est comme arriver le matin et faire le tour du chantier :
+**Analogie chantier :** C`est comme arriver le matin et faire le tour du chantier :
 - "Ah tiens, y'a des briques qui ont été posées hier"
 - "Oh, ce mur a été modifié"
-- "Y'a du nouveau matériel qui vient d'arriver"
+- "Y'a du nouveau matériel qui vient d`arriver"
 
 ---
 
@@ -86,7 +86,7 @@ Changes not staged for commit:
 ```
 
 **Traduction en langage chantier :**  
-"Hé chef ! Le fichier `index.html` a été modifié, mais t'as pas encore pris de photo pour le carnet."
+"Hé chef ! Le fichier `index.html` a été modifié, mais t`as pas encore pris de photo pour le carnet."
 
 ---
 
@@ -98,7 +98,7 @@ Quand tu fais `git status`, tes fichiers peuvent être dans **3 états** :
 |------|---------------------|-------------------|---------|
 | 🔴 **Modifié** (pas ajouté) | Tu as travaillé dessus mais pas encore préparé la photo | Du nouveau matériel sur le chantier, pas encore rangé | Rouge |
 | 🟢 **Prêt à être photographié** | Tu as fait `git add`, il attend le `git commit` | Matériel rangé, prêt pour la photo | Vert |
-| ⚪ **Non suivi** | C'est un nouveau fichier que Git ne connaît pas | Nouvelle livraison de briques, pas encore inventoriées | Rouge |
+| ⚪ **Non suivi** | C`est un nouveau fichier que Git ne connaît pas | Nouvelle livraison de briques, pas encore inventoriées | Rouge |
 
 **Astuce pro de chef de chantier :**  
 Tape `git status` AVANT chaque `git commit` pour être sûr de ce que tu vas photographier !
@@ -113,9 +113,9 @@ Maintenant, tu veux consulter **toutes** les photos de ton carnet.
 git log
 ```
 
-**En français :** "Montre-moi toutes les photos qu'on a prises sur ce chantier"
+**En français :** "Montre-moi toutes les photos qu`on a prises sur ce chantier"
 
-**Analogie chantier :** C'est comme feuilleter ton carnet de chantier du début à aujourd'hui.
+**Analogie chantier :** C`est comme feuilleter ton carnet de chantier du début à aujourd`hui.
 
 ---
 
@@ -152,24 +152,24 @@ Chaque bloc = **1 photo dans le carnet** (1 commit)
 - **Qui a fait le travail ?** Kevin Dupont
 - **Son contact :** kevin@mail.com
 - **Quand ?** Le 12 octobre 2025 à 10h30
-- **Qu'est-ce qui a été fait ?** "Première brique posée - page d'accueil"
+- **Qu`est-ce qui a été fait ?** "Première brique posée - page d`accueil"
 
 📸 **Photo 2 :**
 - **Qui ?** Sophie Martin
 - **Quand ?** Le 12 octobre 2025 à 9h15
 - **Quoi ?** "Fondations coulées"
 
-**Pourquoi c'est génial ?**
+**Pourquoi c`est génial ?**
 
-Imagine qu'il y a un problème avec la page d'accueil.  
-Tu regardes le carnet et tu vois : *"C'est Kevin qui l'a faite le 12 octobre à 10h30"*  
-Tu peux l'appeler et lui demander : *"Hé Kevin, tu peux m'expliquer ce que t'as fait ?"*
+Imagine qu`il y a un problème avec la page d`accueil.  
+Tu regardes le carnet et tu vois : *"C`est Kevin qui l`a faite le 12 octobre à 10h30"*  
+Tu peux l`appeler et lui demander : *"Hé Kevin, tu peux m`expliquer ce que t`as fait ?"*
 
 ---
 
 ### 🎨 Rendre `git log` plus lisible
 
-Le `git log` de base, c'est comme un carnet mal organisé. Voici une version plus claire :
+Le `git log` de base, c`est comme un carnet mal organisé. Voici une version plus claire :
 
 ```bash
 git log --oneline
@@ -184,9 +184,9 @@ z9y8x7w Sophie - Fondations coulées
 
 **Beaucoup plus facile à lire, non ?** 😎
 
-C'est comme si tu ne gardais que l'essentiel dans ton carnet :
+C`est comme si tu ne gardais que l`essentiel dans ton carnet :
 - La référence de la photo
-- Le nom de l'ouvrier
+- Le nom de l`ouvrier
 - Ce qui a été fait
 
 ---
@@ -203,7 +203,7 @@ git log --oneline --graph
 git log --oneline -5
 ```
 
-**Ça affiche seulement les 5 dernières photos** (pratique si t'en as 500 dans le carnet).
+**Ça affiche seulement les 5 dernières photos** (pratique si t`en as 500 dans le carnet).
 
 ```bash
 git log --author="Kevin"
@@ -223,16 +223,16 @@ git diff
 
 **En français :** "Montre-moi ce qui a changé depuis la dernière photo"
 
-**Analogie chantier :** C'est comme comparer deux photos :
-- Photo d'hier : Le mur fait 2 mètres
-- Photo d'aujourd'hui : Le mur fait 3 mètres
+**Analogie chantier :** C`est comme comparer deux photos :
+- Photo d`hier : Le mur fait 2 mètres
+- Photo d`aujourd`hui : Le mur fait 3 mètres
 - **Différence** : On a ajouté 1 mètre de mur ! 🧱
 
 ---
 
 ### 🧪 Exemple pratique
 
-Tu as modifié `index.html` tout à l'heure. Tape :
+Tu as modifié `index.html` tout à l`heure. Tape :
 
 ```bash
 git diff
@@ -255,11 +255,11 @@ index a1b2c3d..z9y8x7w 100644
 - Les lignes avec un **`-`** (en rouge) = Ce que tu as **démoli/supprimé**
 - Les lignes avec un **`+`** (en vert) = Ce que tu as **construit/ajouté**
 
-Ici, tu as **ajouté** la ligne `<p>Je m'appelle Kévin...</p>`
+Ici, tu as **ajouté** la ligne `<p>Je m`appelle Kévin...</p>`
 
-C'est comme si tu comparais :
-- 📸 **Photo d'hier** : Un mur avec 10 briques
-- 📸 **Photo d'aujourd'hui** : Un mur avec 12 briques
+C`est comme si tu comparais :
+- 📸 **Photo d`hier** : Un mur avec 10 briques
+- 📸 **Photo d`aujourd`hui** : Un mur avec 12 briques
 - **Différence** : +2 briques ajoutées ! 🧱
 
 ---
@@ -286,7 +286,7 @@ git diff HEAD
 
 ## 🎮 Exercice : À toi de jouer !
 
-**Mission : Utilise les 3 commandes d'inspection qu'on vient de voir**
+**Mission : Utilise les 3 commandes d`inspection qu`on vient de voir**
 
 1. Reprends ton projet `mon-portfolio` de la leçon 01
 2. Modifie le fichier `index.html` (ajoute ton âge, par exemple)
@@ -297,19 +297,19 @@ git diff HEAD
 7. Sauvegarde avec `git commit -m "Ajout de mon âge dans la page"`
 8. Tape `git log --oneline` pour voir ton nouvel historique avec ton nom !
 
-**Si t'as réussi, t'es un INSPECTEUR DE CHANTIER PRO ! 💪**
+**Si t`as réussi, t`es un INSPECTEUR DE CHANTIER PRO ! 💪**
 
 ---
 
-## 🔑 Antisèche : Les outils d'inspection du chef de chantier
+## 🔑 Antisèche : Les outils d`inspection du chef de chantier
 
-| Commande | Ce qu'elle fait | Analogie chantier | Quand tu l'utilises |
+| Commande | Ce qu`elle fait | Analogie chantier | Quand tu l`utilises |
 |----------|-----------------|-------------------|---------------------|
-| `git status` | Voir l'état actuel du chantier | Faire le tour du chantier le matin | **Tout le temps** (avant chaque commit) |
-| `git log` | Voir toutes les photos du carnet | Feuilleter le carnet de A à Z | Quand tu veux voir l'historique |
+| `git status` | Voir l`état actuel du chantier | Faire le tour du chantier le matin | **Tout le temps** (avant chaque commit) |
+| `git log` | Voir toutes les photos du carnet | Feuilleter le carnet de A à Z | Quand tu veux voir l`historique |
 | `git log --oneline` | Version compacte du carnet | Index rapide du carnet | Pareil, mais plus lisible |
-| `git log --author="Kevin"` | Voir le travail d'un ouvrier | Filtrer par ouvrier | Pour voir ce qu'une personne a fait |
-| `git diff` | Voir ce qui a changé | Comparer photo d'hier vs aujourd'hui | Avant de faire `git add` |
+| `git log --author="Kevin"` | Voir le travail d`un ouvrier | Filtrer par ouvrier | Pour voir ce qu`une personne a fait |
+| `git diff` | Voir ce qui a changé | Comparer photo d`hier vs aujourd`hui | Avant de faire `git add` |
 | `git diff --staged` | Voir ce qui est prêt | Voir ce qui est rangé pour la photo | Après `git add`, avant `git commit` |
 
 ---
@@ -336,38 +336,38 @@ Voici le **cycle complet** que tu vas faire maintenant :
 8. Recommence ! 🔁
 ```
 
-**T'as compris le truc ?**  
+**T`as compris le truc ?**  
 Un bon chef de chantier inspecte tout le temps ! 🔍
 
 ---
 
-## 👷‍♂️ Pourquoi c'est important de tout tracer ?
+## 👷‍♂️ Pourquoi c`est important de tout tracer ?
 
 **Histoire vraie :**
 
-Sur un chantier, un mur s'écroule. 💥  
+Sur un chantier, un mur s`écroule. 💥  
 Le client est furieux. Il veut savoir qui a fait ça.
 
 **Sans carnet de chantier :**  
-😱 Personne se souvient. C'était qui ? Quand ? Comment ?  
-Impossible de savoir. L'entreprise paye les pots cassés.
+😱 Personne se souvient. C`était qui ? Quand ? Comment ?  
+Impossible de savoir. L`entreprise paye les pots cassés.
 
 **Avec un carnet de chantier (Git) :**  
 😎 Le chef ouvre le carnet et voit :  
 *"Mur monté par Marc le 5 octobre à 14h - Ciment type A utilisé"*
 
 Il appelle Marc :  
-*"Hé Marc, pourquoi t'as utilisé du ciment type A ?"*  
+*"Hé Marc, pourquoi t`as utilisé du ciment type A ?"*  
 Marc répond :  
-*"Parce que c'est ce qu'il y avait en stock ce jour-là"*
+*"Parce que c`est ce qu`il y avait en stock ce jour-là"*
 
 **Résultat :**  
-✅ On sait exactement ce qui s'est passé  
+✅ On sait exactement ce qui s`est passé  
 ✅ On peut corriger le problème  
 ✅ On évite de refaire la même erreur
 
-**Avec Git, c'est pareil !**  
-Si y'a un bug, tu peux remonter jusqu'à la personne qui a écrit le code et lui demander pourquoi. 🔍
+**Avec Git, c`est pareil !**  
+Si y'a un bug, tu peux remonter jusqu`à la personne qui a écrit le code et lui demander pourquoi. 🔍
 
 ---
 

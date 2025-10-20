@@ -2,7 +2,7 @@
 
 ## 👷 Salut le bâtisseur !
 
-Jusqu'à maintenant, pour créer un mur, tu faisais comment ?
+Jusqu`à maintenant, pour créer un mur, tu faisais comment ?
 
 ```php
 $mur = new Mur();
@@ -16,15 +16,15 @@ $mur->couleur = "blanc";
 
 Et si tu dois créer 10 murs ? **50 lignes !**
 
-C'est **LOURD**, non ?
+C`est **LOURD**, non ?
 
-Aujourd'hui, on va voir comment faire **TOUT ÇA en UNE SEULE LIGNE** ! 🔥
+Aujourd`hui, on va voir comment faire **TOUT ÇA en UNE SEULE LIGNE** ! 🔥
 
 ---
 
-## 🤔 Le constructeur, c'est quoi ?
+## 🤔 Le constructeur, c`est quoi ?
 
-Le **constructeur**, c'est une méthode **spéciale** qui s'exécute **AUTOMATIQUEMENT** quand tu crées un objet.
+Le **constructeur**, c`est une méthode **spéciale** qui s`exécute **AUTOMATIQUEMENT** quand tu crées un objet.
 
 **Imagine :**
 
@@ -43,7 +43,7 @@ Le **constructeur**, c'est une méthode **spéciale** qui s'exécute **AUTOMATIQ
 
 ✅ **Avec le constructeur (méthode rapide)** :
 - "Hé chef, je construis un mur : 2.5m de haut, 4m de large, en brique."
-- "OK, c'est noté !"
+- "OK, c`est noté !"
 
 **TOUT EN UNE FOIS !** 💪
 
@@ -117,26 +117,26 @@ echo "Mon mur fait " . $mur_salon->hauteur . "m de haut";
 public function __construct($h, $l, $m) {
 ```
 
-**`public`** → Visible par tout le monde (comme d'habitude)
+**`public`** → Visible par tout le monde (comme d`habitude)
 
-**`function`** → C'est une méthode (tu connais)
+**`function`** → C`est une méthode (tu connais)
 
 **`__construct`** → **LE NOM MAGIQUE !**  
 ⚠️ **ATTENTION** : Ce nom est **OBLIGATOIRE** et ne change JAMAIS !  
-C'est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
+C`est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
 
 **`($h, $l, $m)`** → Les **paramètres** que tu vas donner lors de la création
 - `$h` = hauteur
 - `$l` = largeur  
 - `$m` = matériaux
 
-*Tu peux les nommer comme tu veux : `$hauteur`, `$largeur`, `$materiaux`... Mais des noms courts, c'est plus rapide à écrire !*
+*Tu peux les nommer comme tu veux : `$hauteur`, `$largeur`, `$materiaux`... Mais des noms courts, c`est plus rapide à écrire !*
 
 **`{`** → Le début du constructeur
 
 ---
 
-### Le code à l'intérieur :
+### Le code à l`intérieur :
 
 ```php
     $this->hauteur = $h;
@@ -150,7 +150,7 @@ C'est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
 
 **`$this->materiaux = $m;`** → Je mets la valeur reçue (`$m`) dans MA propriété `materiaux`
 
-**En gros :** Je **transfère** les valeurs reçues dans les propriétés de l'objet.
+**En gros :** Je **transfère** les valeurs reçues dans les propriétés de l`objet.
 
 ---
 
@@ -164,13 +164,13 @@ C'est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
 
 ---
 
-## 🎯 Comment ça marche quand tu crées l'objet ?
+## 🎯 Comment ça marche quand tu crées l`objet ?
 
 ```php
 $mur_salon = new Mur(2.5, 4, "brique");
 ```
 
-**Voici ce qui se passe dans l'ordre :**
+**Voici ce qui se passe dans l`ordre :**
 
 1. PHP crée un nouvel objet `Mur`
 2. PHP voit que tu as donné 3 valeurs : `2.5`, `4`, `"brique"`
@@ -183,7 +183,7 @@ $mur_salon = new Mur(2.5, 4, "brique");
    - `$this->hauteur` = 2.5
    - `$this->largeur` = 4
    - `$this->materiaux` = "brique"
-6. L'objet est créé **COMPLÈTEMENT REMPLI** !
+6. L`objet est créé **COMPLÈTEMENT REMPLI** !
 
 **MAGIE !** ✨
 
@@ -224,13 +224,13 @@ $mur3 = new Mur(2.8, 3.5, "placo");
 
 **3 lignes** pour créer 3 murs ! 🎉
 
-**C'est 5 fois plus court !**
+**C`est 5 fois plus court !**
 
 ---
 
 ## 💡 Exemple complet avec méthodes
 
-On peut combiner le constructeur avec les méthodes qu'on a vues au cours 03 !
+On peut combiner le constructeur avec les méthodes qu`on a vues au cours 03 !
 
 ```php
 <?php
@@ -301,7 +301,7 @@ Matériau : placo
 ========================
 ```
 
-**Regarde comme c'est propre et rapide !** 😎
+**Regarde comme c`est propre et rapide !** 😎
 
 ---
 
@@ -389,7 +389,7 @@ $mur = new Mur(2.5, 4, "brique");
 
 ---
 
-### Erreur 3 : Se tromper dans l'ordre
+### Erreur 3 : Se tromper dans l`ordre
 
 Les paramètres sont dans un **ordre précis** !
 
@@ -422,7 +422,7 @@ Crée un fichier `exercice_constructeur.php` et fais ceci :
    - Méthode `afficherInfo()` qui affiche toutes les infos + la surface
 
 2. Crée 3 portes :
-   - Porte d'entrée : 2.1m × 0.9m, bois, marron
+   - Porte d`entrée : 2.1m × 0.9m, bois, marron
    - Porte chambre : 2m × 0.8m, bois, blanc
    - Porte garage : 2.5m × 2.5m, métal, gris
 
@@ -488,9 +488,9 @@ $porte3->afficherInfo();
 
 ## 🧠 Ce que tu DOIS retenir de ce cours
 
-✅ **Le constructeur s'appelle TOUJOURS `__construct`** (avec 2 underscores !)
+✅ **Le constructeur s`appelle TOUJOURS `__construct`** (avec 2 underscores !)
 
-✅ **Il s'exécute AUTOMATIQUEMENT** quand tu crées un objet
+✅ **Il s`exécute AUTOMATIQUEMENT** quand tu crées un objet
 
 ✅ **Il permet de créer un objet en 1 ligne** au lieu de 5
 
@@ -498,7 +498,7 @@ $porte3->afficherInfo();
 
 ✅ **Tu peux mettre des valeurs par défaut** : `__construct($h, $l, $m = "brique")`
 
-✅ **L'ordre des paramètres est important !**
+✅ **L`ordre des paramètres est important !**
 
 ---
 
@@ -516,29 +516,29 @@ $porte3->afficherInfo();
 
 ## ⏭️ Dans le prochain cours...
 
-Tu vas apprendre **L'HÉRITAGE** !
+Tu vas apprendre **L`HÉRITAGE** !
 
-**C'est quoi ?**
+**C`est quoi ?**
 
-Créer des classes qui **héritent** d'autres classes !
+Créer des classes qui **héritent** d`autres classes !
 
 **Exemple :**
 - Tu as une classe `Mur`
 - Tu crées une classe `MurPorteur` qui hérite de `Mur`
 - `MurPorteur` a **TOUT** ce que `Mur` a, **PLUS** des trucs en plus !
 
-C'est comme un fils qui hérite des compétences de son père, et qui ajoute ses propres compétences ! 👨‍👦
+C`est comme un fils qui hérite des compétences de son père, et qui ajoute ses propres compétences ! 👨‍👦
 
 **Tu vas adorer !** 🚀
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE** !
+Mais pour l`instant, **FAIS L`EXERCICE** !
 
-Le constructeur est **SUPER IMPORTANT**. Tu vas l'utiliser **TOUT LE TEMPS** en POO.
+Le constructeur est **SUPER IMPORTANT**. Tu vas l`utiliser **TOUT LE TEMPS** en POO.
 
 ---
 
 **👷 Bravo, tu progresses vraiment bien !**
 
-*PS : Si tu as réussi l'exercice, tu mérites une pause. Va boire un café, tu l'as mérité ! ☕*
+*PS : Si tu as réussi l`exercice, tu mérites une pause. Va boire un café, tu l`as mérité ! ☕*

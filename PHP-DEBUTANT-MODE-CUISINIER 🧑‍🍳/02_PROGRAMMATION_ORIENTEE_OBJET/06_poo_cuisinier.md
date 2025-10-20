@@ -2,24 +2,24 @@
 
 ## 🍳 Salut le chef !
 
-Jusqu'à maintenant, toutes tes propriétés étaient **`public`**.
+Jusqu`à maintenant, toutes tes propriétés étaient **`public`**.
 
-Ça veut dire que **N'IMPORTE QUI** peut les modifier :
+Ça veut dire que **N`IMPORTE QUI** peut les modifier :
 
 ```php
 $recette->temps_cuisson = 35;
 $recette->temps_cuisson = -10; // PROBLÈME ! Un temps négatif ?!
 ```
 
-**C'est dangereux !** 😱
+**C`est dangereux !** 😱
 
-Aujourd'hui, tu vas apprendre à **PROTÉGER** tes propriétés pour éviter que n'importe qui fasse n'importe quoi avec tes recettes !
+Aujourd`hui, tu vas apprendre à **PROTÉGER** tes propriétés pour éviter que n`importe qui fasse n`importe quoi avec tes recettes !
 
-C'est ce qu'on appelle **l'encapsulation**. 🔒
+C`est ce qu`on appelle **l`encapsulation**. 🔒
 
 ---
 
-## 🤔 C'est quoi le problème avec `public` ?
+## 🤔 C`est quoi le problème avec `public` ?
 
 Regarde ce code :
 
@@ -60,9 +60,9 @@ Temps de cuisson : -20 min
 
 **UN TEMPS DE CUISSON DE -20 MINUTES ?!** 🤯
 
-Ça n'a **AUCUN SENS** !
+Ça n`a **AUCUN SENS** !
 
-**Le problème** : Avec `public`, n'importe qui peut mettre n'importe quoi !
+**Le problème** : Avec `public`, n`importe qui peut mettre n`importe quoi !
 
 ---
 
@@ -104,7 +104,7 @@ $recette = new Recette();
 $recette->temps_cuisson = 35; // ❌ ERREUR ! PHP va râler
 ```
 
-**Utilise `private` pour :** Les données sensibles qu'on doit protéger.
+**Utilise `private` pour :** Les données sensibles qu`on doit protéger.
 
 ---
 
@@ -125,7 +125,7 @@ $recette = new Dessert();
 $recette->temps_cuisson = 35; // ❌ ERREUR ! Pas accessible de l'extérieur
 ```
 
-**Utilise `protected` pour :** Les données partagées avec les classes enfants, mais pas avec l'extérieur.
+**Utilise `protected` pour :** Les données partagées avec les classes enfants, mais pas avec l`extérieur.
 
 ---
 
@@ -288,7 +288,7 @@ Recette : Gâteau au chocolat (40 min, 180°C, 8 portions)
 
 ## 🔍 Décortiquons les getters et setters
 
-### Structure d'un GETTER
+### Structure d`un GETTER
 
 ```php
 public function getNom() {
@@ -296,7 +296,7 @@ public function getNom() {
 }
 ```
 
-**`public`** → Accessible de partout (c'est une porte d'accès)
+**`public`** → Accessible de partout (c`est une porte d`accès)
 
 **`function getNom()`** → Nom : **get** + **Nom de la propriété** (convention)
 
@@ -306,7 +306,7 @@ public function getNom() {
 
 ---
 
-### Structure d'un SETTER
+### Structure d`un SETTER
 
 ```php
 public function setTempsCuisson($t) {
@@ -322,15 +322,15 @@ public function setTempsCuisson($t) {
 
 **`function setTempsCuisson($t)`** → Nom : **set** + **Nom de la propriété** + **paramètre**
 
-**`if ($t < 0) { ... }`** → **CONTRÔLE** de la valeur avant de l'accepter
+**`if ($t < 0) { ... }`** → **CONTRÔLE** de la valeur avant de l`accepter
 
-**`$this->temps_cuisson = $t;`** → Si c'est bon, je modifie la propriété
+**`$this->temps_cuisson = $t;`** → Si c`est bon, je modifie la propriété
 
 **Traduction :** *"Change le temps de cuisson, mais seulement si la valeur est correcte"*
 
 ---
 
-## 💡 Pourquoi c'est GÉNIAL
+## 💡 Pourquoi c`est GÉNIAL
 
 ### ✅ Avantage 1 : Sécurité
 
@@ -378,7 +378,7 @@ Le code qui utilise `getTempsCuisson()` continue de fonctionner sans modificatio
 
 ## 👨‍🍳 `protected` : pour les recettes de famille
 
-Quand tu veux qu'une propriété soit **accessible aux classes enfants** mais **pas à l'extérieur** :
+Quand tu veux qu`une propriété soit **accessible aux classes enfants** mais **pas à l`extérieur** :
 
 ```php
 <?php
@@ -425,7 +425,7 @@ Dessert : Tiramisu (20 min, 100g de sucre)
 
 **`protected` = accès familial (parent + enfants) mais pas public !**
 
-C'est comme les recettes de famille : seuls les membres de la famille y ont accès ! 👨‍👩‍👧‍👦
+C`est comme les recettes de famille : seuls les membres de la famille y ont accès ! 👨‍👩‍👧‍👦
 
 ---
 
@@ -459,7 +459,7 @@ Crée un fichier `exercice_encapsulation.php` et fais ceci :
    - Ajouter 500g
    - Retirer 300g
    - Essayer de retirer 2000g (ça doit être refusé)
-   - Essayer d'ajouter -100g (ça doit être refusé)
+   - Essayer d`ajouter -100g (ça doit être refusé)
 
 ---
 
@@ -551,7 +551,7 @@ $farine->afficherStock();
 
 ✅ **SETTER** = Méthode pour **MODIFIER** une propriété privée avec contrôle (`setNom($n)`)
 
-✅ **L'encapsulation protège les données et évite les erreurs**
+✅ **L`encapsulation protège les données et évite les erreurs**
 
 ---
 
@@ -574,7 +574,7 @@ Tu peux maintenant :
 
 ✅ Créer tes propres classes de recettes  
 ✅ Organiser ton code proprement  
-✅ Réutiliser du code avec l'héritage  
+✅ Réutiliser du code avec l`héritage  
 ✅ Protéger tes données  
 ✅ Lire et comprendre du code orienté objet  
 
@@ -587,15 +587,15 @@ Tu peux maintenant :
 
 ## 💪 Conseil final
 
-La POO, c'est comme la cuisine :
+La POO, c`est comme la cuisine :
 
 **Au début**, ça semble compliqué et abstrait.  
 **Avec la pratique**, ça devient naturel et logique.  
-**Avec l'expérience**, tu te demandes comment tu faisais avant !
+**Avec l`expérience**, tu te demandes comment tu faisais avant !
 
 **Continue à pratiquer, crée des projets, fais des erreurs, corrige-les !**
 
-C'est en **CODANT** qu'on devient développeur, pas en lisant ! 💻
+C`est en **CODANT** qu`on devient développeur, pas en lisant ! 💻
 
 ---
 
@@ -605,4 +605,4 @@ C'est en **CODANT** qu'on devient développeur, pas en lisant ! 💻
 
 *PS : Garde ces cours comme référence. Relis-les quand tu as un doute. Et surtout... CODE, CODE, CODE ! 🔥*
 
-*PPS : N'oublie pas : les meilleures recettes sont celles qu'on partage. Partage ton code, aide les autres, et continue d'apprendre ! 🍳*
+*PPS : N`oublie pas : les meilleures recettes sont celles qu`on partage. Partage ton code, aide les autres, et continue d`apprendre ! 🍳*

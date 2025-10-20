@@ -2,7 +2,7 @@
 
 ## Salut médiateur ! 🧙‍♂️⚖️
 
-Dans la leçon 04, t'as appris à **fusionner des chantiers** avec Git.  
+Dans la leçon 04, t`as appris à **fusionner des chantiers** avec Git.  
 Mais parfois... ça se passe pas comme prévu...
 
 **Le problème :**
@@ -16,13 +16,13 @@ Mais parfois... ça se passe pas comme prévu...
 
 Git te dit : *"Hé chef ! Marc veut du bleu, Sophie veut du rouge... Tu veux quoi TOI ?"*
 
-**Aujourd'hui, tu vas apprendre à résoudre ces conflits comme un PRO ! 🔥**
+**Aujourd`hui, tu vas apprendre à résoudre ces conflits comme un PRO ! 🔥**
 
 ---
 
-## 🤔 C'est quoi un conflit ?
+## 🤔 C`est quoi un conflit ?
 
-Un conflit, c'est quand **deux personnes modifient la même chose** en même temps.
+Un conflit, c`est quand **deux personnes modifient la même chose** en même temps.
 
 **Analogie chantier :**
 
@@ -33,9 +33,9 @@ Tu as deux ouvriers :
 **Quand tu veux fusionner les deux chantiers...**
 
 Git te dit :  
-*"Attends chef ! Y'a un problème ! Marc a peint en bleu, Sophie en rouge... C'est QUOI la bonne couleur ?!"*
+*"Attends chef ! Y'a un problème ! Marc a peint en bleu, Sophie en rouge... C`est QUOI la bonne couleur ?!"*
 
-**Git ne peut pas décider tout seul. C'est TOI qui dois trancher ! ⚖️**
+**Git ne peut pas décider tout seul. C`est TOI qui dois trancher ! ⚖️**
 
 ---
 
@@ -67,7 +67,7 @@ On va **volontairement créer un conflit** pour apprendre à le résoudre.
 
 ### Étape 1 : Prépare ton projet
 
-Va dans ton projet `mon-site` et assure-toi d'être sur `main` :
+Va dans ton projet `mon-site` et assure-toi d`être sur `main` :
 
 ```bash
 git switch main
@@ -147,7 +147,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 **Traduction :**  
-*"Hé chef ! J'ai un problème avec `message.txt`. Marc et toi avez modifié la même chose. Dis-moi quoi garder !"*
+*"Hé chef ! J`ai un problème avec `message.txt`. Marc et toi avez modifié la même chose. Dis-moi quoi garder !"*
 
 **Bravo ! Tu viens de créer ton premier conflit ! 🎉**
 
@@ -184,10 +184,10 @@ Bonjour sur mon site !
 ```
 
 **Git te dit :**  
-*"Voilà les deux versions. C'est à TOI de décider laquelle garder !"*
+*"Voilà les deux versions. C`est à TOI de décider laquelle garder !"*
 
 **Analogie chantier :**  
-C'est comme si tu avais un mur avec deux couleurs :
+C`est comme si tu avais un mur avec deux couleurs :
 - Haut du mur : Rouge (ta version)
 - Bas du mur : Bleu (version de Marc)
 
@@ -207,7 +207,7 @@ Tu supprimes tout et tu gardes seulement ta version :
 Hello sur mon site !
 ```
 
-**Traduction :** *"Désolé Marc, c'est MA version qui gagne."*
+**Traduction :** *"Désolé Marc, c`est MA version qui gagne."*
 
 ---
 
@@ -288,13 +288,13 @@ Sauvegarde ton fichier dans ton éditeur (Ctrl+S).
 
 ---
 
-### Étape 5 : Dis à Git que t'as résolu le conflit
+### Étape 5 : Dis à Git que t`as résolu le conflit
 
 ```bash
 git add message.txt
 ```
 
-**Traduction :** *"Git, j'ai résolu le conflit, voilà la version finale !"*
+**Traduction :** *"Git, j`ai résolu le conflit, voilà la version finale !"*
 
 ---
 
@@ -313,9 +313,9 @@ Merge branch 'version-marc'
 #   message.txt
 ```
 
-Sauvegarde et ferme l'éditeur.
+Sauvegarde et ferme l`éditeur.
 
-**C'est bon ! Le conflit est résolu ! 🎉**
+**C`est bon ! Le conflit est résolu ! 🎉**
 
 ---
 
@@ -341,7 +341,7 @@ Tu vois bien les deux branches qui se sont fusionnées !
 
 ---
 
-## 🔑 Les outils pour t'aider
+## 🔑 Les outils pour t`aider
 
 ### 1️⃣ Voir quels fichiers sont en conflit
 
@@ -360,9 +360,9 @@ Unmerged paths:
 
 ---
 
-### 2️⃣ Annuler le merge si t'es perdu
+### 2️⃣ Annuler le merge si t`es perdu
 
-Si t'as peur, tu peux annuler le merge :
+Si t`as peur, tu peux annuler le merge :
 
 ```bash
 git merge --abort
@@ -371,11 +371,11 @@ git merge --abort
 **Traduction :** *"Annule tout ! Je veux revenir en arrière !"*
 
 **Analogie chantier :**  
-C'est comme dire : *"Stop ! On recommence demain."*
+C`est comme dire : *"Stop ! On recommence demain."*
 
 ---
 
-## ✅ Les règles d'or pour éviter les conflits
+## ✅ Les règles d`or pour éviter les conflits
 
 ### Règle 1 : Communique avec ton équipe 💬
 
@@ -404,7 +404,7 @@ Plus tu attends, plus y'aura de conflits.
 Merge régulièrement pour éviter les gros problèmes.
 
 **Analogie chantier :**  
-Intègre le garage dès qu'il est fini, attends pas que tout soit terminé !
+Intègre le garage dès qu`il est fini, attends pas que tout soit terminé !
 
 ---
 
@@ -413,7 +413,7 @@ Intègre le garage dès qu'il est fini, attends pas que tout soit terminé !
 **Mission : Crée et résous un conflit**
 
 1. Va dans ton projet `mon-portfolio`
-2. Assure-toi d'être sur `main`
+2. Assure-toi d`être sur `main`
 3. Crée un fichier `titre.txt` avec écrit : "Mon Portfolio"
 4. Sauvegarde avec `git add titre.txt` et `git commit -m "Ajout du titre"`
 5. Crée une branche `version-a` avec `git switch -c version-a`
@@ -426,16 +426,16 @@ Intègre le garage dès qu'il est fini, attends pas que tout soit terminé !
 12. Ouvre `titre.txt` et choisis la version que tu préfères
 13. Supprime tous les marqueurs (`<<<<<<<`, `=======`, `>>>>>>>`)
 14. Sauvegarde le fichier
-15. Dis à Git que c'est résolu avec `git add titre.txt`
+15. Dis à Git que c`est résolu avec `git add titre.txt`
 16. Termine le merge avec `git commit`
 
-**Si t'as réussi, t'es un MAÎTRE DE LA RÉSOLUTION DE CONFLITS ! 💪**
+**Si t`as réussi, t`es un MAÎTRE DE LA RÉSOLUTION DE CONFLITS ! 💪**
 
 ---
 
 ## 🔑 Antisèche : Gérer les conflits
 
-| Commande | Ce qu'elle fait | Quand l'utiliser |
+| Commande | Ce qu`elle fait | Quand l`utiliser |
 |----------|-----------------|------------------|
 | `git status` | Voir les fichiers en conflit | Pendant un conflit |
 | `git add fichier` | Marquer un conflit comme résolu | Après avoir édité le fichier |
@@ -462,7 +462,7 @@ Intègre le garage dès qu'il est fini, attends pas que tout soit terminé !
 7. C'est fini ! 🎉
 ```
 
-**C'est aussi simple que ça !**
+**C`est aussi simple que ça !**
 
 ---
 

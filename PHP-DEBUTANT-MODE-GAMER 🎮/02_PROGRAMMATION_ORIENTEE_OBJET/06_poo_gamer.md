@@ -2,24 +2,24 @@
 
 ## 🕹️ Salut le gamer !
 
-Jusqu'à maintenant, toutes tes stats étaient **`public`**.
+Jusqu`à maintenant, toutes tes stats étaient **`public`**.
 
-Ça veut dire que **N'IMPORTE QUI** peut les modifier :
+Ça veut dire que **N`IMPORTE QUI** peut les modifier :
 
 ```php
 $guerrier->pv = 120;
 $guerrier->pv = 99999; // PROBLÈME ! Un tricheur peut modifier les PV !
 ```
 
-**C'est dangereux !** 😱
+**C`est dangereux !** 😱
 
-Aujourd'hui, tu vas apprendre à **PROTÉGER** tes stats pour éviter que n'importe qui triche avec ton jeu !
+Aujourd`hui, tu vas apprendre à **PROTÉGER** tes stats pour éviter que n`importe qui triche avec ton jeu !
 
-C'est ce qu'on appelle **l'encapsulation**. 🔒
+C`est ce qu`on appelle **l`encapsulation**. 🔒
 
 ---
 
-## 🤔 C'est quoi le problème avec `public` ?
+## 🤔 C`est quoi le problème avec `public` ?
 
 Regarde ce code :
 
@@ -60,9 +60,9 @@ PV : 99999
 
 **DES PV À 99999 ?!** 🤯
 
-Ça n'a **AUCUN SENS** !
+Ça n`a **AUCUN SENS** !
 
-**Le problème** : Avec `public`, n'importe qui peut mettre n'importe quoi, même tricher !
+**Le problème** : Avec `public`, n`importe qui peut mettre n`importe quoi, même tricher !
 
 ---
 
@@ -104,7 +104,7 @@ $perso = new Personnage();
 $perso->pv = 120; // ❌ ERREUR ! PHP va râler
 ```
 
-**Utilise `private` pour :** Les stats sensibles qu'on doit protéger (comme les PV).
+**Utilise `private` pour :** Les stats sensibles qu`on doit protéger (comme les PV).
 
 ---
 
@@ -125,7 +125,7 @@ $perso = new Guerrier();
 $perso->pv = 120; // ❌ ERREUR ! Pas accessible de l'extérieur
 ```
 
-**Utilise `protected` pour :** Les stats partagées avec les classes enfants, mais pas avec l'extérieur.
+**Utilise `protected` pour :** Les stats partagées avec les classes enfants, mais pas avec l`extérieur.
 
 ---
 
@@ -293,7 +293,7 @@ Thorin - PV: 90/120, Force: 30
 
 ## 🔍 Décortiquons les getters et setters
 
-### Structure d'un GETTER
+### Structure d`un GETTER
 
 ```php
 public function getPV() {
@@ -301,7 +301,7 @@ public function getPV() {
 }
 ```
 
-**`public`** → Accessible de partout (c'est une porte d'accès)
+**`public`** → Accessible de partout (c`est une porte d`accès)
 
 **`function getPV()`** → Nom : **get** + **Nom de la stat** (convention)
 
@@ -311,7 +311,7 @@ public function getPV() {
 
 ---
 
-### Structure d'un SETTER
+### Structure d`un SETTER
 
 ```php
 public function setPV($pv) {
@@ -333,15 +333,15 @@ public function setPV($pv) {
 
 **`function setPV($pv)`** → Nom : **set** + **Nom de la stat** + **paramètre**
 
-**`if ($pv < 0) { ... }`** → **CONTRÔLE ANTI-TRICHE** avant d'accepter
+**`if ($pv < 0) { ... }`** → **CONTRÔLE ANTI-TRICHE** avant d`accepter
 
-**`$this->pv = $pv;`** → Si c'est bon, je modifie la stat
+**`$this->pv = $pv;`** → Si c`est bon, je modifie la stat
 
-**Traduction :** *"Change les PV, mais seulement si c'est pas de la triche"*
+**Traduction :** *"Change les PV, mais seulement si c`est pas de la triche"*
 
 ---
 
-## 💡 Pourquoi c'est GÉNIAL
+## 💡 Pourquoi c`est GÉNIAL
 
 ### ✅ Avantage 1 : Anti-triche
 
@@ -391,7 +391,7 @@ Le code qui utilise `getPV()` continue de fonctionner sans modification !
 
 ## 🛡️ `protected` : pour les classes enfants
 
-Quand tu veux qu'une stat soit **accessible aux classes enfants** mais **pas à l'extérieur** :
+Quand tu veux qu`une stat soit **accessible aux classes enfants** mais **pas à l`extérieur** :
 
 ```php
 <?php
@@ -437,7 +437,7 @@ Guerrier : Thorin (PV: 150, Rage: 20)
 
 **`protected` = accès familial (parent + enfants) mais pas public !**
 
-C'est comme les stats cachées dans un jeu : seul le système de jeu y a accès ! 🎮
+C`est comme les stats cachées dans un jeu : seul le système de jeu y a accès ! 🎮
 
 ---
 
@@ -458,20 +458,20 @@ Crée un fichier `exercice_encapsulation.php` et fais ceci :
 ### Instructions :
 
 1. Crée une classe `Inventaire` avec :
-   - Propriété **privée** : `$or` (l'argent du joueur)
-   - Constructeur qui initialise l'or
-   - Méthode `getOr()` pour lire l'or
-   - Méthode `ajouterOr($montant)` qui ajoute de l'or (seulement si montant > 0)
-   - Méthode `retirerOr($montant)` qui retire de l'or (seulement si assez d'or)
-   - Méthode `afficherInventaire()` qui affiche l'or
+   - Propriété **privée** : `$or` (l`argent du joueur)
+   - Constructeur qui initialise l`or
+   - Méthode `getOr()` pour lire l`or
+   - Méthode `ajouterOr($montant)` qui ajoute de l`or (seulement si montant > 0)
+   - Méthode `retirerOr($montant)` qui retire de l`or (seulement si assez d`or)
+   - Méthode `afficherInventaire()` qui affiche l`or
 
-2. Crée un inventaire avec 100 pièces d'or
+2. Crée un inventaire avec 100 pièces d`or
 
 3. Teste :
    - Ajouter 50 pièces
    - Retirer 30 pièces
    - Essayer de retirer 200 pièces (ça doit être refusé)
-   - Essayer d'ajouter -50 pièces (ça doit être refusé)
+   - Essayer d`ajouter -50 pièces (ça doit être refusé)
 
 ---
 
@@ -557,13 +557,13 @@ $inventaire->afficherInventaire();
 
 ✅ **`private`** = Accessible seulement dans la classe (protection maximale)
 
-✅ **`protected`** = Accessible dans la classe + les enfants (pour l'héritage)
+✅ **`protected`** = Accessible dans la classe + les enfants (pour l`héritage)
 
 ✅ **GETTER** = Méthode pour **LIRE** une stat privée (`getPV()`)
 
 ✅ **SETTER** = Méthode pour **MODIFIER** une stat privée avec contrôle (`setPV($pv)`)
 
-✅ **L'encapsulation protège contre la triche et les erreurs**
+✅ **L`encapsulation protège contre la triche et les erreurs**
 
 ---
 
@@ -586,7 +586,7 @@ Tu peux maintenant :
 
 ✅ Créer tes propres systèmes de personnages  
 ✅ Organiser ton code de jeu proprement  
-✅ Réutiliser du code avec l'héritage  
+✅ Réutiliser du code avec l`héritage  
 ✅ Protéger contre la triche  
 ✅ Lire et comprendre du code orienté objet  
 
@@ -599,15 +599,15 @@ Tu peux maintenant :
 
 ## 💪 Conseil final
 
-La POO, c'est comme un jeu vidéo :
+La POO, c`est comme un jeu vidéo :
 
 **Au début**, ça semble compliqué avec plein de règles.  
 **Avec la pratique**, ça devient naturel et amusant.  
-**Avec l'expérience**, tu te demandes comment tu codais avant !
+**Avec l`expérience**, tu te demandes comment tu codais avant !
 
 **Continue à pratiquer, crée des projets, fais des erreurs, corrige-les !**
 
-C'est en **CODANT** qu'on devient développeur, pas en lisant ! 💻
+C`est en **CODANT** qu`on devient développeur, pas en lisant ! 💻
 
 ---
 
@@ -617,4 +617,4 @@ C'est en **CODANT** qu'on devient développeur, pas en lisant ! 💻
 
 *PS : Garde ces cours comme référence. Relis-les quand tu as un doute. Et surtout... CODE, CODE, CODE ! 🔥*
 
-*PPS : N'oublie pas : les meilleurs jeux sont ceux qu'on partage. Partage ton code, aide les autres gamers, et continue d'apprendre ! 🎮*
+*PPS : N`oublie pas : les meilleurs jeux sont ceux qu`on partage. Partage ton code, aide les autres gamers, et continue d`apprendre ! 🎮*

@@ -4,13 +4,13 @@
 
 Bon, soyons honnêtes...
 
-**T'as déjà perdu un fichier important ?**  
+**T`as déjà perdu un fichier important ?**  
 Genre... tu travailles 3 heures sur un projet, tu fais une mauvaise manip, et POUF 💥  
 Tout disparaît.
 
 Ou pire encore...
 
-**T'as déjà eu 50 versions d'un même fichier ?**  
+**T`as déjà eu 50 versions d`un même fichier ?**  
 ```
 mon-site.html
 mon-site-v2.html
@@ -21,32 +21,32 @@ mon-site-v2-final-VRAIMENT-FINAL-cette-fois-cest-la-bonne.html
 
 😭 **Ça suffit !**
 
-Aujourd'hui, je vais t'apprendre à utiliser **Git**.  
+Aujourd`hui, je vais t`apprendre à utiliser **Git**.  
 Et crois-moi, après ça, tu ne perdras plus JAMAIS ton travail.
 
 ## 🧑‍🤝‍🧑 Bonus : Qui a fait quoi sur le chantier ?
 
 Quand tu fais un commit, Git enregistre automatiquement :
 
-| Info | Exemple | Pourquoi c'est utile |
+| Info | Exemple | Pourquoi c`est utile |
 |------|---------|----------------------|
 | 👤 **Ton nom** | Kevin Dupont | Pour savoir qui a fait le travail |
 | 📧 **Ton email** | kevin@mail.com | Pour pouvoir te contacter si besoin |
-| 📅 **La date et l'heure** | 12 oct 2025, 10h30 | Pour savoir quand ça a été fait |
+| 📅 **La date et l`heure** | 12 oct 2025, 10h30 | Pour savoir quand ça a été fait |
 | 💬 **Ton message** | "Fondations coulées" | Pour savoir ce qui a été fait |
 
 **Exemple concret :**
 
 Sur un vrai chantier, si un inspecteur arrive et demande :  
-*"Qui a coulé les fondations ? C'était quand ?"*
+*"Qui a coulé les fondations ? C`était quand ?"*
 
 Le chef ouvre le carnet et lit :  
 *"Fondations coulées par Marc le 5 octobre à 14h00"*
 
-**Avec Git, c'est pareil !**
+**Avec Git, c`est pareil !**
 
 Si ton collègue demande :  
-*"Qui a ajouté le formulaire de contact ? C'était quand ?"*
+*"Qui a ajouté le formulaire de contact ? C`était quand ?"*
 
 On tape `git log` et on voit :  
 *"Ajout du formulaire - par Sophie le 10 octobre à 9h15"*
@@ -54,15 +54,15 @@ On tape `git log` et on voit :
 **Résultat ?**  
 ✅ Tout le monde sait qui a fait quoi  
 ✅ On peut demander des explications si besoin  
-✅ On peut suivre l'évolution du projet  
-✅ Si y'a un bug, on sait d'où ça vient
+✅ On peut suivre l`évolution du projet  
+✅ Si y'a un bug, on sait d`où ça vient
 
 ---
 
-## 🤔 Mais attends... c'est quoi Git exactement ?
+## 🤔 Mais attends... c`est quoi Git exactement ?
 
 **Réponse rapide :**  
-Git, c'est comme un **carnet de chantier d'un maçon** 🧱
+Git, c`est comme un **carnet de chantier d`un maçon** 🧱
 
 Tu sais quand un maçon construit une maison ?  
 Il prend des photos à chaque étape :
@@ -77,7 +77,7 @@ Parce que si un inspecteur vient et dit "Hé, y'a un problème avec les fondatio
 - Voir qui a fait quoi
 - Revenir en arrière si besoin
 
-**Eh bien avec Git, c'est EXACTEMENT pareil avec ton code ! 🚀**
+**Eh bien avec Git, c`est EXACTEMENT pareil avec ton code ! 🚀**
 
 ---
 
@@ -86,16 +86,16 @@ Parce que si un inspecteur vient et dit "Hé, y'a un problème avec les fondatio
 **Attention, écoute bien ça :**
 
 Beaucoup de débutants pensent :  
-❌ "Bah Git c'est juste pour sauvegarder mon code, je peux faire Ctrl+S non ?"  
+❌ "Bah Git c`est juste pour sauvegarder mon code, je peux faire Ctrl+S non ?"  
 ❌ "Ou copier mon dossier sur une clé USB ?"
 
-## 🔥 NON ! Git c'est BEAUCOUP plus puissant que ça !
+## 🔥 NON ! Git c`est BEAUCOUP plus puissant que ça !
 
-Laisse-moi t'expliquer avec une histoire vraie...
+Laisse-moi t`expliquer avec une histoire vraie...
 
 ---
 
-## 📖 L'histoire du maçon Kevin qui a tout cassé (et qui s'en est sorti grâce à Git)
+## 📖 L`histoire du maçon Kevin qui a tout cassé (et qui s`en est sorti grâce à Git)
 
 **Lundi matin - 9h00**  
 Kevin construit son site web. Tout marche nickel.  
@@ -112,13 +112,13 @@ Kevin veut repeindre les murs (modifier le CSS). Il bidouille pendant 2 heures..
 
 **Mardi midi - 12h00**  
 💥 **CATASTROPHE !**  
-Kevin a tellement démoli de murs qu'il sait plus ce qu'il a fait.  
+Kevin a tellement démoli de murs qu`il sait plus ce qu`il a fait.  
 Le site est tout cassé. Plus rien ne marche. RIEN.
 
 ### 😱 Sans Git, Kevin est MORT
 
 Il devrait :
-- Se rappeler de TOUT ce qu'il a démoli (impossible)
+- Se rappeler de TOUT ce qu`il a démoli (impossible)
 - Tout reconstruire à la main (des heures de travail)
 - Pleurer dans un coin 😭
 
@@ -145,12 +145,12 @@ Il est de retour à lundi matin, quand tout était nickel !
 
 ---
 
-## 🎯 Donc Git, c'est quoi VRAIMENT ?
+## 🎯 Donc Git, c`est quoi VRAIMENT ?
 
-Git c'est :
+Git c`est :
 
 ### 1️⃣ Un carnet de chantier avec photos à chaque étape 📸
-Tu peux revenir à **n'importe quelle étape** de la construction.
+Tu peux revenir à **n`importe quelle étape** de la construction.
 
 ### 2️⃣ Un historique complet de ton chantier 📜
 Tu sais **qui** a posé **quelle brique**, **quand**, et **pourquoi**.
@@ -164,20 +164,20 @@ Tu regardes ce qui rend le mieux → tu gardes le meilleur.
 Imagine un vrai chantier avec plusieurs ouvriers :
 - **Marc** pose les fondations → Il prend une photo et signe : *"Marc - Fondations coulées"*
 - **Sophie** monte les murs → Elle prend une photo et signe : *"Sophie - Murs du RDC montés"*
-- **Alex** installe l'électricité → Il prend une photo et signe : *"Alex - Câblage électrique fait"*
+- **Alex** installe l`électricité → Il prend une photo et signe : *"Alex - Câblage électrique fait"*
 
 **Résultat ?**  
 Le chef de chantier peut consulter le carnet et voir **qui** a fait **quoi** et **quand** !
 
-Si y'a un problème avec l'électricité, il sait direct que c'est Alex qu'il faut appeler.  
-Si les murs ont un souci, c'est Sophie.
+Si y'a un problème avec l`électricité, il sait direct que c`est Alex qu`il faut appeler.  
+Si les murs ont un souci, c`est Sophie.
 
-**Avec Git, c'est EXACTEMENT pareil !**  
+**Avec Git, c`est EXACTEMENT pareil !**  
 Chaque développeur signe son travail. Si y'a un bug, on sait qui a ajouté quoi !
 
 ---
 
-## 🧱 L'analogie du chantier (pour bien comprendre)
+## 🧱 L`analogie du chantier (pour bien comprendre)
 
 Imagine que tu construis une maison :
 
@@ -189,13 +189,13 @@ Imagine que tu construis une maison :
 | 🏗️ **Ouvrir un chantier parallèle** (pour tester) | `git branch` |
 | 🔀 **Fusionner deux chantiers** | `git merge` |
 
-**Tu vois ? C'est exactement comme un vrai chantier ! 🧱**
+**Tu vois ? C`est exactement comme un vrai chantier ! 🧱**
 
 ---
 
 ## 🚀 OK, passons à la pratique !
 
-Maintenant que tu as compris **POURQUOI** Git est génial, on va apprendre à l'utiliser.
+Maintenant que tu as compris **POURQUOI** Git est génial, on va apprendre à l`utiliser.
 
 ### 🎯 Les 3 gestes de base du maçon
 
@@ -209,9 +209,9 @@ Pour prendre une photo de ton chantier, tu fais **3 gestes** :
 git init
 ```
 
-**En français :** "Je commence un nouveau chantier, j'ouvre mon carnet"
+**En français :** "Je commence un nouveau chantier, j`ouvre mon carnet"
 
-**Analogie chantier :** C'est comme acheter un carnet neuf pour noter toutes les étapes.
+**Analogie chantier :** C`est comme acheter un carnet neuf pour noter toutes les étapes.
 
 Tu fais ça **UNE SEULE FOIS** au début de ton projet.
 
@@ -223,7 +223,7 @@ Tu fais ça **UNE SEULE FOIS** au début de ton projet.
 git add index.html
 ```
 
-Ou pour tout sélectionner d'un coup :
+Ou pour tout sélectionner d`un coup :
 
 ```bash
 git add .
@@ -241,12 +241,12 @@ git add .
 git commit -m "Fondations coulées"
 ```
 
-**En français :** "Je prends la photo et j'écris dans mon carnet : 'Fondations coulées'"
+**En français :** "Je prends la photo et j`écris dans mon carnet : 'Fondations coulées`"
 
 **Analogie chantier :** Tu colles la photo dans ton carnet avec la date et une note : "Fondations - béton coulé le 12/10/2025"
 
 Le `-m` veut dire **"message"**.  
-C'est ta légende pour te souvenir de ce que tu as fait.
+C`est ta légende pour te souvenir de ce que tu as fait.
 
 ---
 
@@ -268,7 +268,7 @@ Tape ça :
 mkdir mon-site
 ```
 
-**Traduction :** "Crée-moi un terrain vide qui s'appelle `mon-site`"
+**Traduction :** "Crée-moi un terrain vide qui s`appelle `mon-site`"
 
 Ensuite, va sur le terrain :
 
@@ -293,9 +293,9 @@ git init
 💬 **Ce qui se passe dans les coulisses :**
 
 Git crée un dossier caché `.git` (tu ne le vois pas, mais il est là).  
-C'est ton **carnet de chantier invisible** qui va tout enregistrer.
+C`est ton **carnet de chantier invisible** qui va tout enregistrer.
 
-**Analogie chantier :** C'est ton carnet neuf où tu vas coller toutes les photos.
+**Analogie chantier :** C`est ton carnet neuf où tu vas coller toutes les photos.
 
 🎉 **Félicitations ! Ton terrain est maintenant un chantier Git !**
 
@@ -303,7 +303,7 @@ C'est ton **carnet de chantier invisible** qui va tout enregistrer.
 
 ### 🧱 Étape 3 : Poser ta première brique
 
-On va créer une page HTML toute simple (c'est ta première brique).
+On va créer une page HTML toute simple (c`est ta première brique).
 
 Tape ça :
 
@@ -346,26 +346,26 @@ git commit -m "Première brique posée - page d'accueil"
 💬 **Ce qui se passe :**
 
 Git prend une **photo** de ton fichier et écrit dans le carnet :  
-*"Première brique posée - page d'accueil"*  
+*"Première brique posée - page d`accueil"*  
 *"Par : Kevin"*  
 *"Le : 12 octobre 2025 à 10h30"*
 
 **Analogie chantier :** Tu colles la photo dans ton carnet avec :
 - 📝 La légende : "Première brique posée"
 - ✍️ Ton nom : "Kevin"
-- 📅 La date et l'heure : "12/10/2025 - 10h30"
+- 📅 La date et l`heure : "12/10/2025 - 10h30"
 
-**Pourquoi c'est important ?**
+**Pourquoi c`est important ?**
 
-Imagine qu'il y a 5 ouvriers sur le chantier.  
-Si un mur s'écroule, le chef peut regarder le carnet et voir : *"Ah ! C'est Marc qui a monté ce mur le 10 octobre"*  
+Imagine qu`il y a 5 ouvriers sur le chantier.  
+Si un mur s`écroule, le chef peut regarder le carnet et voir : *"Ah ! C`est Marc qui a monté ce mur le 10 octobre"*  
 Il sait qui appeler pour réparer !
 
-**Avec Git, c'est pareil :**  
+**Avec Git, c`est pareil :**  
 Si y'a un bug dans le code, on peut voir qui a écrit cette ligne et quand.  
-Pas pour punir ! Mais pour demander : *"Hé Marc, tu peux m'expliquer pourquoi t'as fait ça ?"*
+Pas pour punir ! Mais pour demander : *"Hé Marc, tu peux m`expliquer pourquoi t`as fait ça ?"*
 
-**C'est bon ! Ta première photo de chantier est dans le carnet ! 🎉**
+**C`est bon ! Ta première photo de chantier est dans le carnet ! 🎉**
 
 ---
 
@@ -383,7 +383,7 @@ Voilà le processus magique que tu vas faire **encore et encore** :
 4. Recommence ! 🔁
 ```
 
-**C'est exactement comme un vrai chantier :**  
+**C`est exactement comme un vrai chantier :**  
 Tu construis → Tu prends une photo → Tu continues → Tu prends une photo → etc.
 
 ---
@@ -393,7 +393,7 @@ Tu construis → Tu prends une photo → Tu continues → Tu prends une photo �
 Quand tu fais un `git commit`, ton message doit être :
 
 ✅ **Court** : pas de roman  
-✅ **Clair** : on comprend direct ce que t'as fait  
+✅ **Clair** : on comprend direct ce que t`as fait  
 ✅ **Professionnel** : comme dans un vrai carnet de chantier
 
 ### ✅ Exemples de BONS messages :
@@ -414,7 +414,7 @@ git commit -m "update"  ← Merci captain obvious 🙄
 git commit -m "test"  ← Test de quoi ?!
 ```
 
-**Règle d'or :** Imagine qu'un inspecteur vient dans 6 mois. Est-ce qu'il va comprendre ce que t'as fait ?
+**Règle d`or :** Imagine qu`un inspecteur vient dans 6 mois. Est-ce qu`il va comprendre ce que t`as fait ?
 
 **Pense à un vrai carnet de chantier :**  
 ❌ "Travaux 1", "Travaux 2" → On sait rien  
@@ -431,9 +431,9 @@ git commit -m "test"  ← Test de quoi ?!
 3. Ouvre ton carnet avec `git init`
 4. Pose ta première brique : crée un fichier `index.html` avec ton prénom dedans
 5. Cadre ton appareil avec `git add index.html`
-6. Prends la photo avec `git commit -m "Première brique posée - page d'accueil avec mon prénom"`
+6. Prends la photo avec `git commit -m "Première brique posée - page d`accueil avec mon prénom"`
 
-**Si t'as réussi, t'es un CHEF DE CHANTIER ! 💪**
+**Si t`as réussi, t`es un CHEF DE CHANTIER ! 💪**
 
 Tu viens de prendre ta première photo de chantier Git, comme un vrai pro ! 🚀
 
@@ -441,10 +441,10 @@ Tu viens de prendre ta première photo de chantier Git, comme un vrai pro ! 🚀
 
 ## 🔑 Antisèche : les outils du maçon
 
-| Commande | Ce qu'elle fait | Analogie chantier |
+| Commande | Ce qu`elle fait | Analogie chantier |
 |----------|-----------------|-------------------|
 | `git init` | Ouvre ton carnet de chantier | Acheter un carnet neuf |
-| `git add nom-fichier` | Cadre sur UN élément | Pointer l'appareil sur le mur |
+| `git add nom-fichier` | Cadre sur UN élément | Pointer l`appareil sur le mur |
 | `git add .` | Cadre sur TOUT | Prendre une photo large du chantier |
 | `git commit -m "..."` | Prendre la photo + légende | Coller la photo dans le carnet avec la date |
 
@@ -465,17 +465,17 @@ Dans la **leçon 02**, tu vas apprendre à :
 
 - 🕰️ Consulter toutes les photos de ton carnet de chantier
 - 🔍 Vérifier ce qui a changé depuis la dernière photo
-- ⏪ Revenir en arrière si t'as démoli le mauvais mur
+- ⏪ Revenir en arrière si t`as démoli le mauvais mur
 
 **Prépare-toi, ça va être du lourd ! 😎**
 
 ---
 
-## 📌 Note importante pour l'installation
+## 📌 Note importante pour l`installation
 
-> **Git n'est pas encore installé sur ton PC ?**  
-> Pas de panique ! Demande à ton prof de t'aider à l'installer.  
-> Une fois que c'est fait, reviens ici et éclate-toi ! 🎯
+> **Git n`est pas encore installé sur ton PC ?**  
+> Pas de panique ! Demande à ton prof de t`aider à l`installer.  
+> Une fois que c`est fait, reviens ici et éclate-toi ! 🎯
 
 ---
 

@@ -2,24 +2,24 @@
 
 ## 👷 Salut le bâtisseur !
 
-Jusqu'à maintenant, toutes tes propriétés étaient **`public`**.
+Jusqu`à maintenant, toutes tes propriétés étaient **`public`**.
 
-Ça veut dire que **N'IMPORTE QUI** peut les modifier :
+Ça veut dire que **N`IMPORTE QUI** peut les modifier :
 
 ```php
 $mur->hauteur = 2.5;
 $mur->hauteur = -10; // PROBLÈME ! Une hauteur négative ?!
 ```
 
-**C'est dangereux !** 😱
+**C`est dangereux !** 😱
 
-Aujourd'hui, tu vas apprendre à **PROTÉGER** tes propriétés pour éviter que n'importe qui fasse n'importe quoi !
+Aujourd`hui, tu vas apprendre à **PROTÉGER** tes propriétés pour éviter que n`importe qui fasse n`importe quoi !
 
-C'est ce qu'on appelle **l'encapsulation**. 🔒
+C`est ce qu`on appelle **l`encapsulation**. 🔒
 
 ---
 
-## 🤔 C'est quoi le problème avec `public` ?
+## 🤔 C`est quoi le problème avec `public` ?
 
 Regarde ce code :
 
@@ -58,9 +58,9 @@ Hauteur : -5m
 
 **UN MUR DE -5 MÈTRES ?!** 🤯
 
-Ça n'a **AUCUN SENS** !
+Ça n`a **AUCUN SENS** !
 
-**Le problème** : Avec `public`, n'importe qui peut mettre n'importe quoi !
+**Le problème** : Avec `public`, n`importe qui peut mettre n`importe quoi !
 
 ---
 
@@ -102,7 +102,7 @@ $mur = new Mur();
 $mur->hauteur = 2.5; // ❌ ERREUR ! PHP va râler
 ```
 
-**Utilise `private` pour :** Les données sensibles qu'on doit protéger.
+**Utilise `private` pour :** Les données sensibles qu`on doit protéger.
 
 ---
 
@@ -123,7 +123,7 @@ $mur = new MurPorteur();
 $mur->hauteur = 2.5; // ❌ ERREUR ! Pas accessible de l'extérieur
 ```
 
-**Utilise `protected` pour :** Les données partagées avec les classes enfants, mais pas avec l'extérieur.
+**Utilise `protected` pour :** Les données partagées avec les classes enfants, mais pas avec l`extérieur.
 
 ---
 
@@ -270,7 +270,7 @@ Mur : 3m × 4m en brique
 
 ## 🔍 Décortiquons les getters et setters
 
-### Structure d'un GETTER
+### Structure d`un GETTER
 
 ```php
 public function getHauteur() {
@@ -278,7 +278,7 @@ public function getHauteur() {
 }
 ```
 
-**`public`** → Accessible de partout (c'est une porte d'accès)
+**`public`** → Accessible de partout (c`est une porte d`accès)
 
 **`function getHauteur()`** → Nom : **get** + **Nom de la propriété** (convention)
 
@@ -288,7 +288,7 @@ public function getHauteur() {
 
 ---
 
-### Structure d'un SETTER
+### Structure d`un SETTER
 
 ```php
 public function setHauteur($h) {
@@ -304,15 +304,15 @@ public function setHauteur($h) {
 
 **`function setHauteur($h)`** → Nom : **set** + **Nom de la propriété** + **paramètre**
 
-**`if ($h <= 0) { ... }`** → **CONTRÔLE** de la valeur avant de l'accepter
+**`if ($h <= 0) { ... }`** → **CONTRÔLE** de la valeur avant de l`accepter
 
-**`$this->hauteur = $h;`** → Si c'est bon, je modifie la propriété
+**`$this->hauteur = $h;`** → Si c`est bon, je modifie la propriété
 
 **Traduction :** *"Change la hauteur, mais seulement si la valeur est correcte"*
 
 ---
 
-## 💡 Pourquoi c'est GÉNIAL
+## 💡 Pourquoi c`est GÉNIAL
 
 ### ✅ Avantage 1 : Sécurité
 
@@ -360,7 +360,7 @@ Le code qui utilise `getHauteur()` continue de fonctionner sans modification !
 
 ## 👨‍👦 `protected` : pour les enfants
 
-Quand tu veux qu'une propriété soit **accessible aux classes enfants** mais **pas à l'extérieur** :
+Quand tu veux qu`une propriété soit **accessible aux classes enfants** mais **pas à l`extérieur** :
 
 ```php
 <?php
@@ -430,8 +430,8 @@ Crée un fichier `exercice_encapsulation.php` et fais ceci :
    - Propriété **privée** : `$solde`
    - Constructeur qui initialise le solde
    - Méthode `getSolde()` pour lire le solde
-   - Méthode `deposer($montant)` qui ajoute de l'argent (seulement si montant > 0)
-   - Méthode `retirer($montant)` qui retire de l'argent (seulement si assez d'argent)
+   - Méthode `deposer($montant)` qui ajoute de l`argent (seulement si montant > 0)
+   - Méthode `retirer($montant)` qui retire de l`argent (seulement si assez d`argent)
    - Méthode `afficherSolde()` qui affiche le solde
 
 2. Crée un compte avec 1000€
@@ -532,7 +532,7 @@ $compte->afficherSolde();
 
 ✅ **SETTER** = Méthode pour **MODIFIER** une propriété privée avec contrôle (`setHauteur($h)`)
 
-✅ **L'encapsulation protège les données et évite les erreurs**
+✅ **L`encapsulation protège les données et évite les erreurs**
 
 ---
 
@@ -555,7 +555,7 @@ Tu peux maintenant :
 
 ✅ Créer tes propres classes  
 ✅ Organiser ton code proprement  
-✅ Réutiliser du code avec l'héritage  
+✅ Réutiliser du code avec l`héritage  
 ✅ Protéger tes données  
 ✅ Lire et comprendre du code orienté objet  
 
@@ -568,15 +568,15 @@ Tu peux maintenant :
 
 ## 💪 Conseil final
 
-La POO, c'est comme le métier de maçon :
+La POO, c`est comme le métier de maçon :
 
 **Au début**, ça semble compliqué et abstrait.  
 **Avec la pratique**, ça devient naturel et logique.  
-**Avec l'expérience**, tu te demandes comment tu faisais avant !
+**Avec l`expérience**, tu te demandes comment tu faisais avant !
 
 **Continue à pratiquer, crée des projets, fais des erreurs, corrige-les !**
 
-C'est en **CODANT** qu'on devient développeur, pas en lisant ! 💻
+C`est en **CODANT** qu`on devient développeur, pas en lisant ! 💻
 
 ---
 

@@ -6,35 +6,35 @@
 
 Dans un jeu, tu prends **des décisions tout le temps** :
 
-> "Si j'ai assez de HP, j'attaque."  
+> "Si j`ai assez de HP, j`attaque."  
 > "Si mes munitions sont vides, je recharge."  
 > "Et si un boss apparaît, je fuis."
 
 Eh bien ton ordinateur fait **exactement la même chose** dans le code du jeu !  
-Mais attention… il est un peu simple d'esprit 😅
+Mais attention… il est un peu simple d`esprit 😅
 
-👉 Il ne comprend que **deux mots dans tout l'univers** :  
-- `true` → ça veut dire **OUI, c'est vrai** ✅  
-- `false` → ça veut dire **NON, c'est faux** ❌  
+👉 Il ne comprend que **deux mots dans tout l`univers** :  
+- `true` → ça veut dire **OUI, c`est vrai** ✅  
+- `false` → ça veut dire **NON, c`est faux** ❌  
 
-C'est tout.  
-Ton ordinateur, c'est comme un NPC qui ne peut répondre que par "Oui" ou "Non" 😆
+C`est tout.  
+Ton ordinateur, c`est comme un NPC qui ne peut répondre que par "Oui" ou "Non" 😆
 
 ---
 
 ## 💡 1️⃣ `true` et `false` — le cerveau de ton ordinateur 🧠💻
 
 Imagine ton ordinateur comme un interrupteur dans un jeu :  
-> 🔆 Activé = `true` (OUI, c'est vrai)  
-> 🌑 Désactivé = `false` (NON, c'est faux)
+> 🔆 Activé = `true` (OUI, c`est vrai)  
+> 🌑 Désactivé = `false` (NON, c`est faux)
 
 Pas de "peut-être", pas de "on verra" 😅  
-C'est **OUI ou NON**, point barre.
+C`est **OUI ou NON**, point barre.
 
 | Situation | Valeur PHP | Signification |
 |------------|-------------|----------------|
-| Tu as des munitions | `true` | Oui, c'est vrai ✅ |
-| Tu n'as pas de munitions | `false` | Non, c'est faux ❌ |
+| Tu as des munitions | `true` | Oui, c`est vrai ✅ |
+| Tu n`as pas de munitions | `false` | Non, c`est faux ❌ |
 
 ```php
 $munitions = true;  // Oui, j'ai des munitions 🔫
@@ -42,11 +42,11 @@ $munitions = false; // Non, je suis à sec ❌
 ```
 
 🧠 Quand PHP voit une **valeur vraie (`true`)**, il exécute ton code.  
-Quand c'est **faux (`false`)**, il ne fait rien.
+Quand c`est **faux (`false`)**, il ne fait rien.
 
 ---
 
-## 🎯 2️⃣ Le mot `if` – "SI c'est vrai, fais-le"
+## 🎯 2️⃣ Le mot `if` – "SI c`est vrai, fais-le"
 
 > "Si quelque chose est vrai, exécute ce bloc de code."
 
@@ -64,7 +64,7 @@ Oui ✅ → il affiche "Je peux tirer !"
 Non ❌ → il ignore ce code.
 
 🎮 En langage gamer :  
-> "J'ai des munitions ?"  
+> "J`ai des munitions ?"  
 > "Oui ! Alors je tire." 💥
 
 ---
@@ -84,10 +84,10 @@ if ($munitions) {
 ```
 
 💬 PHP réfléchit :  
-"J'ai des munitions ? Non ❌ → alors je fais ce qu'il y a dans le `else`."
+"J`ai des munitions ? Non ❌ → alors je fais ce qu`il y a dans le `else`."
 
 🎮 Traduction gamer :  
-> "Si j'ai des munitions → je tire."  
+> "Si j`ai des munitions → je tire."  
 > "Sinon → je recharge." 🔄
 
 ---
@@ -112,7 +112,7 @@ if ($hp < 20) {
 }
 ```
 
-💬 PHP teste dans l'ordre :  
+💬 PHP teste dans l`ordre :  
 1️⃣ Est-ce que HP < 20 ? ❌  
 2️⃣ Est-ce que HP < 50 ? ✅  
 ➡️ Il affiche "HP bas, je prends une potion. 🧪"
@@ -127,9 +127,9 @@ if ($hp < 20) {
 ## ⚙️ 5️⃣ Le `&&` — le mot **ET**
 
 Le symbole `&&` se lit **"ET"**.  
-Tu l'utilises quand il faut **que les deux conditions soient vraies** pour agir.
+Tu l`utilises quand il faut **que les deux conditions soient vraies** pour agir.
 
-> "Je peux attaquer le boss **si j'ai des munitions ET si mes HP sont suffisants.**"
+> "Je peux attaquer le boss **si j`ai des munitions ET si mes HP sont suffisants.**"
 
 ```php
 $munitions = true;
@@ -143,9 +143,9 @@ if ($munitions && $hp_suffisants) {
 ```
 
 💬 PHP réfléchit :  
-> "J'ai des munitions ? ✅"  
+> "J`ai des munitions ? ✅"  
 > "Mes HP sont bons ? ✅"  
-➡️ Les deux sont vrais → "J'attaque le boss ! 💪"
+➡️ Les deux sont vrais → "J`attaque le boss ! 💪"
 
 | Munitions | HP suffisants | Résultat |
 |-----------|---------------|-----------|
@@ -155,14 +155,14 @@ if ($munitions && $hp_suffisants) {
 | ❌ | ❌ | On reste au spawn 🏠 |
 
 🎮 En résumé :  
-> Avec **ET (`&&`)**, il faut que **les deux conditions soient vraies** pour que le code s'exécute.
+> Avec **ET (`&&`)**, il faut que **les deux conditions soient vraies** pour que le code s`exécute.
 
 ---
 
 ## 💨 6️⃣ Le `||` — le mot **OU**
 
 Le symbole `||` se lit **"OU"**.  
-Tu l'utilises quand **une seule condition suffit**.
+Tu l`utilises quand **une seule condition suffit**.
 
 > "Je quitte la partie **si je rage OU si je lag.**"
 
@@ -190,25 +190,25 @@ if ($rage || $lag) {
 | ❌ | ❌ | Je reste |
 
 🎮 En résumé :  
-> Avec **OU (`||`)**, **une seule raison suffit** pour que le code s'exécute.
+> Avec **OU (`||`)**, **une seule raison suffit** pour que le code s`exécute.
 
 ---
 
 ## 🧩 7️⃣ Le grand résumé
 
-| Mot / Signe | Lecture humaine | Quand c'est exécuté ? | Exemple concret |
+| Mot / Signe | Lecture humaine | Quand c`est exécuté ? | Exemple concret |
 |--------------|----------------|------------------------|----------------|
-| `if` | Si | Quand c'est vrai (`true`) | "Si j'ai des munitions…" |
-| `else` | Sinon | Quand c'est faux (`false`) | "Sinon, je recharge." |
+| `if` | Si | Quand c`est vrai (`true`) | "Si j`ai des munitions…" |
+| `else` | Sinon | Quand c`est faux (`false`) | "Sinon, je recharge." |
 | `elseif` | Sinon si | Quand le précédent est faux, mais celui-ci vrai | "Sinon, si mes HP sont bas…" |
-| `&&` | ET | Quand **les deux** sont vrais | "J'ai des munitions **et** des HP." |
+| `&&` | ET | Quand **les deux** sont vrais | "J`ai des munitions **et** des HP." |
 | `||` | OU | Quand **une seule** est vraie | "Je lag **ou** je rage." |
 
 ---
 
 ## ❤️ Le mot du formateur
 
-Ton ordinateur, c'est un NPC très obéissant... mais un peu **bête** 😆  
+Ton ordinateur, c`est un NPC très obéissant... mais un peu **bête** 😆  
 Il ne connaît que **"Yes !" (`true`)** ou **"Nope !" (`false`)**.
 
 Pas de "je crois que…" ou de "peut-être".  
@@ -216,8 +216,8 @@ Toi, tu es **le game designer** 🧠.
 Lui, il exécute **ce que tu lui dis**, mais seulement **si la condition est vraie**.
 
 💬 Et souviens-toi :  
-> Quand tu écris `true` → ton code s'exécute.  
-> Quand tu écris `false` → ton ordinateur reste AFK et dit "Nope, pas aujourd'hui." 😅
+> Quand tu écris `true` → ton code s`exécute.  
+> Quand tu écris `false` → ton ordinateur reste AFK et dit "Nope, pas aujourd`hui." 😅
 
 ---
 
@@ -225,11 +225,11 @@ Lui, il exécute **ce que tu lui dis**, mais seulement **si la condition est vra
 
 ## 🧩 Exercice 1 – Plus de munitions 🔫
 **Objectif :** Comprendre le `if`.  
-**Énoncé :** Tu as des munitions (`$munitions = true`). Affiche "Je peux tirer !" si c'est vrai.  
+**Énoncé :** Tu as des munitions (`$munitions = true`). Affiche "Je peux tirer !" si c`est vrai.  
 **Résultat attendu :**  
 > Je peux tirer !
 
-💪 *Essaye par toi-même d'abord !*
+💪 *Essaye par toi-même d`abord !*
 
 <details><summary>💡 Afficher la solution</summary>
 
@@ -245,11 +245,11 @@ if ($munitions) {
 
 ## 🧩 Exercice 2 – État des munitions 🔄
 **Objectif :** Utiliser `if` et `else`.  
-**Énoncé :** Si tu n'as pas de munitions (`$munitions = false`), affiche "Je dois recharger !", sinon affiche "Je peux tirer !".  
+**Énoncé :** Si tu n`as pas de munitions (`$munitions = false`), affiche "Je dois recharger !", sinon affiche "Je peux tirer !".  
 **Résultat attendu :**  
 > Je dois recharger !
 
-💪 *Essaye par toi-même d'abord !*
+💪 *Essaye par toi-même d`abord !*
 
 <details><summary>💡 Afficher la solution</summary>
 
@@ -271,7 +271,7 @@ if ($munitions) {
 **Résultat attendu :**  
 > HP bas, je prends une potion.
 
-💪 *Essaye par toi-même d'abord !*
+💪 *Essaye par toi-même d`abord !*
 
 <details><summary>💡 Afficher la solution</summary>
 
@@ -293,9 +293,9 @@ if ($hp < 20) {
 **Objectif :** Utiliser `&&` (ET).  
 **Énoncé :** Tu peux attaquer le boss si tu as des munitions ET des HP suffisants (les deux à `true`). Sinon, affiche "Je ne suis pas prêt...".  
 **Résultat attendu :**  
-> J'attaque le boss !
+> J`attaque le boss !
 
-💪 *Essaye par toi-même d'abord !*
+💪 *Essaye par toi-même d`abord !*
 
 <details><summary>💡 Afficher la solution</summary>
 
@@ -318,7 +318,7 @@ if ($munitions && $hp_suffisants) {
 **Résultat attendu :**  
 > Je quitte la partie !
 
-💪 *Essaye par toi-même d'abord !*
+💪 *Essaye par toi-même d`abord !*
 
 <details><summary>💡 Afficher la solution</summary>
 
@@ -337,7 +337,7 @@ if ($rage || $lag) {
 
 ## 🧩 Exercice 6 – Équipement requis 🎒
 **Objectif :** Tester plusieurs conditions.  
-**Énoncé :** Tu peux entrer dans le donjon si tu as une épée (`$epee = true`) ET une armure (`$armure = true`). Sinon, affiche "Il te manque de l'équipement.".  
+**Énoncé :** Tu peux entrer dans le donjon si tu as une épée (`$epee = true`) ET une armure (`$armure = true`). Sinon, affiche "Il te manque de l`équipement.".  
 **Résultat attendu :**  
 > Tu peux entrer dans le donjon !
 
@@ -530,7 +530,7 @@ if ($streak >= 10) {
 
 ## 🧩 Exercice 15 – Connexion au serveur 🌐
 **Objectif :** Conditions multiples avec OU.  
-**Énoncé :** Le serveur est indisponible si c'est une maintenance (`$maintenance = false`) OU si le serveur est plein (`$serveur_plein = true`).  
+**Énoncé :** Le serveur est indisponible si c`est une maintenance (`$maintenance = false`) OU si le serveur est plein (`$serveur_plein = true`).  
 **Résultat attendu :**  
 > Serveur indisponible.
 
@@ -551,7 +551,7 @@ if ($maintenance || $serveur_plein) {
 
 ## 🧩 Exercice 16 – Système de craft 🔨
 **Objectif :** Vérifier plusieurs ressources avec ET.  
-**Énoncé :** Pour crafter une épée, tu as besoin de fer (`$fer = true`) ET de bois (`$bois = true`) ET d'un marteau (`$marteau = false`).  
+**Énoncé :** Pour crafter une épée, tu as besoin de fer (`$fer = true`) ET de bois (`$bois = true`) ET d`un marteau (`$marteau = false`).  
 **Résultat attendu :**  
 > Il te manque des ressources.
 
@@ -573,7 +573,7 @@ if ($fer && $bois && $marteau) {
 
 ## 🧩 Exercice 17 – Système de sauvegarde 💾
 **Objectif :** Vérifier avant de sauvegarder.  
-**Énoncé :** Tu peux sauvegarder si tu n'es pas en combat (`$en_combat = false`) ET si tu es dans une zone sûre (`$zone_sure = true`).  
+**Énoncé :** Tu peux sauvegarder si tu n`es pas en combat (`$en_combat = false`) ET si tu es dans une zone sûre (`$zone_sure = true`).  
 **Résultat attendu :**  
 > Partie sauvegardée !
 
@@ -592,9 +592,9 @@ if (!$en_combat && $zone_sure) {
 
 ---
 
-## 🧩 Exercice 18 – Bonus d'XP 🌟
+## 🧩 Exercice 18 – Bonus d`XP 🌟
 **Objectif :** Calculer un bonus avec conditions.  
-**Énoncé :** Tu gagnes 100 XP de base (`$xp_base = 100`). Si tu as un boost actif (`$boost = true`), multiplie l'XP par 2. Affiche l'XP final.  
+**Énoncé :** Tu gagnes 100 XP de base (`$xp_base = 100`). Si tu as un boost actif (`$boost = true`), multiplie l`XP par 2. Affiche l`XP final.  
 **Résultat attendu :**  
 > Tu gagnes 200 XP !
 
@@ -637,7 +637,7 @@ if ($niveau >= 30 && $kd >= 1.0) {
 
 ## 🧩 Exercice 20 – Le système de quête complet 📜
 **Objectif :** Mini-projet final.  
-**Énoncé :** Tu as une quête. Pour la valider, tu dois avoir tué le boss (`$boss_tue = true`), récupéré l'objet (`$objet_recupere = true`) ET être retourné voir le PNJ (`$pnj_visite = true`). Si toutes les conditions sont remplies, affiche "Quête terminée ! +500 XP +200 Gold". Sinon, affiche ce qu'il reste à faire.  
+**Énoncé :** Tu as une quête. Pour la valider, tu dois avoir tué le boss (`$boss_tue = true`), récupéré l`objet (`$objet_recupere = true`) ET être retourné voir le PNJ (`$pnj_visite = true`). Si toutes les conditions sont remplies, affiche "Quête terminée ! +500 XP +200 Gold". Sinon, affiche ce qu`il reste à faire.  
 **Résultat attendu :**  
 > Quête terminée ! +500 XP +200 Gold
 
@@ -670,7 +670,7 @@ Tu sais maintenant :
 - ✅ Utiliser `else` pour gérer le cas contraire
 - ✅ Utiliser `elseif` pour tester plusieurs conditions
 - ✅ Utiliser `&&` (ET) pour combiner des conditions qui doivent toutes être vraies
-- ✅ Utiliser `||` (OU) pour accepter qu'une seule condition soit vraie
+- ✅ Utiliser `||` (OU) pour accepter qu`une seule condition soit vraie
 - ✅ Comparer des valeurs avec `<`, `>`, `<=`, `>=`, `==`
 - ✅ Créer des systèmes de jeu intelligents
 

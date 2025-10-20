@@ -12,7 +12,7 @@ Comment vous faites pour pas tout gâcher ?
 Comment vous validez les recettes de chacun ?  
 Comment les pros bossent dans les grandes cuisines ?
 
-**Aujourd'hui, tu vas apprendre le workflow des VRAIS chefs ! 🚀**
+**Aujourd`hui, tu vas apprendre le workflow des VRAIS chefs ! 🚀**
 
 ---
 
@@ -27,11 +27,11 @@ Tu travailles sur un livre de recettes avec Marc et Sophie.
 - 👨 **Toi** tu ajoutes tes recettes direct dans le livre principal → 💥 **TOUT EST GÂCHÉ !**
 
 **Pourquoi ?**  
-Parce que personne n'a goûté tes recettes avant !
+Parce que personne n`a goûté tes recettes avant !
 
 **Analogie cuisine :**
 
-Imagine une brigade où chaque chef fait ce qu'il veut sans demander l'avis du chef exécutif.  
+Imagine une brigade où chaque chef fait ce qu`il veut sans demander l`avis du chef exécutif.  
 - Marc prépare une sauce
 - Sophie fait cuire la viande
 - Toi tu ajoutes du piment fort dans TOUT... 💥
@@ -40,31 +40,31 @@ Imagine une brigade où chaque chef fait ce qu'il veut sans demander l'avis du c
 
 **La solution des pros ?**  
 Personne ne modifie directement le livre principal.  
-Tout le monde teste ses recettes à part et demande l'autorisation avant d'intégrer.  
+Tout le monde teste ses recettes à part et demande l`autorisation avant d`intégrer.  
 
-**C'est ça, la Pull Request ! 🔥**
+**C`est ça, la Pull Request ! 🔥**
 
 ---
 
-## 🎯 C'est quoi une Pull Request (PR) ?
+## 🎯 C`est quoi une Pull Request (PR) ?
 
-Une Pull Request, c'est une **demande de validation**.
+Une Pull Request, c`est une **demande de validation**.
 
 **En français :**  
-*"Hé chef, j'ai fini de tester ma recette. Tu peux goûter et l'ajouter au livre si c'est OK ?"*
+*"Hé chef, j`ai fini de tester ma recette. Tu peux goûter et l`ajouter au livre si c`est OK ?"*
 
 **Analogie cuisine :**
 
 Tu as testé une nouvelle sauce dans ton coin.  
-Avant de l'ajouter au menu principal, tu appelles le chef exécutif :
+Avant de l`ajouter au menu principal, tu appelles le chef exécutif :
 
-*"Chef ! J'ai fini ma sauce. Goûte-la pour voir si c'est bon avant qu'on l'intègre au menu !"*
+*"Chef ! J`ai fini ma sauce. Goûte-la pour voir si c`est bon avant qu`on l`intègre au menu !"*
 
 Le chef goûte, et dit :
-- ✅ *"Délicieux ! On l'ajoute au menu !"*
-- ❌ *"Non, réduis le sel d'abord"*
+- ✅ *"Délicieux ! On l`ajoute au menu !"*
+- ❌ *"Non, réduis le sel d`abord"*
 
-**Avec Git, c'est exactement pareil !**
+**Avec Git, c`est exactement pareil !**
 
 ---
 
@@ -102,7 +102,7 @@ git commit -m "Test sauce basilic avec ail confit"
 git push origin test-sauce-basilic
 ```
 
-**Traduction :** *"J'envoie ma recette test sur le cloud"*
+**Traduction :** *"J`envoie ma recette test sur le cloud"*
 
 **Résultat :**  
 Ta version test est maintenant sur GitHub, mais PAS encore dans le livre principal.
@@ -117,7 +117,7 @@ Ta version test est maintenant sur GitHub, mais PAS encore dans le livre princip
 4. Écris un message : *"Nouvelle sauce basilic avec ail confit"*
 5. Clique sur **Create pull request**
 
-**Traduction :** *"Chef, j'ai fini ! Tu peux goûter ma recette ?"*
+**Traduction :** *"Chef, j`ai fini ! Tu peux goûter ma recette ?"*
 
 ---
 
@@ -126,11 +126,11 @@ Ta version test est maintenant sur GitHub, mais PAS encore dans le livre princip
 Le chef (ou un collègue) va :
 - 👅 Goûter ta recette
 - 💬 Laisser des commentaires : *"Réduis le sel"*, *"Ajoute du poivre"*
-- ✅ Approuver si c'est bon
+- ✅ Approuver si c`est bon
 - ❌ Demander des modifications si besoin
 
 **Analogie cuisine :**  
-Le chef exécutif vérifie que la recette est parfaite avant de l'ajouter au menu.
+Le chef exécutif vérifie que la recette est parfaite avant de l`ajouter au menu.
 
 ---
 
@@ -215,13 +215,13 @@ Ta version test `test-dessert-tiramisu` est maintenant sur GitHub ! 🚀
    ```
 6. Clique sur **Create pull request**
 
-**C'est fait ! Ta PR est créée ! 🎉**
+**C`est fait ! Ta PR est créée ! 🎉**
 
 ---
 
 ### Étape 5 : Attendre la dégustation
 
-Maintenant, tu attends que quelqu'un (ton chef, un collègue) :
+Maintenant, tu attends que quelqu`un (ton chef, un collègue) :
 - 👅 Goûte ta recette
 - 💬 Laisse des commentaires
 - ✅ Approuve
@@ -229,22 +229,22 @@ Maintenant, tu attends que quelqu'un (ton chef, un collègue) :
 **Dans une vraie brigade, tu peux :**
 - Répondre aux commentaires
 - Ajuster la recette si demandé
-- Pousser de nouvelles versions sur ta branche (elles s'ajoutent automatiquement à la PR)
+- Pousser de nouvelles versions sur ta branche (elles s`ajoutent automatiquement à la PR)
 
 ---
 
 ### Étape 6 : Merger la PR
 
-Une fois approuvée, quelqu'un (souvent toi ou ton chef) clique sur **Merge pull request**.
+Une fois approuvée, quelqu`un (souvent toi ou ton chef) clique sur **Merge pull request**.
 
 **Choix possibles :**
-- **Merge commit** : Garde l'historique complet (recommandé pour débuter)
+- **Merge commit** : Garde l`historique complet (recommandé pour débuter)
 - **Squash and merge** : Combine toutes les versions en une seule
-- **Rebase and merge** : Réécrit l'historique (avancé)
+- **Rebase and merge** : Réécrit l`historique (avancé)
 
 **Choisis "Merge commit"** pour commencer.
 
-**C'est bon ! Ton tiramisu est maintenant dans le livre principal ! 🎉**
+**C`est bon ! Ton tiramisu est maintenant dans le livre principal ! 🎉**
 
 ---
 
@@ -273,16 +273,16 @@ git branch -d test-dessert-tiramisu
 Imagine : tu veux contribuer à un livre de recettes célèbre (comme celui de Bocuse, Ducasse, etc.).
 
 **Problème :**  
-Tu n'as pas les droits d'écriture sur leur livre.
+Tu n`as pas les droits d`écriture sur leur livre.
 
 **Solution : Le FORK ! 🍴**
 
-### C'est quoi un Fork ?
+### C`est quoi un Fork ?
 
-Un fork, c'est une **copie** d'un livre de recettes dans ton compte GitHub.
+Un fork, c`est une **copie** d`un livre de recettes dans ton compte GitHub.
 
 **Analogie cuisine :**  
-C'est comme si tu copiais un livre de recettes célèbre, tu testes tes propres variantes, et tu proposes tes améliorations au chef original.
+C`est comme si tu copiais un livre de recettes célèbre, tu testes tes propres variantes, et tu proposes tes améliorations au chef original.
 
 ---
 
@@ -334,13 +334,13 @@ git push origin amelioration-sauce-tomate
 5. Clique sur **Create pull request**
 
 **Résultat :**  
-Les chefs du livre original vont voir ta PR et décider de l'accepter ou non ! 🎉
+Les chefs du livre original vont voir ta PR et décider de l`accepter ou non ! 🎉
 
-**C'est comme ça qu'on contribue aux grands livres de recettes du monde ! 🌍**
+**C`est comme ça qu`on contribue aux grands livres de recettes du monde ! 🌍**
 
 ---
 
-## ✅ Les règles d'or du travail en brigade
+## ✅ Les règles d`or du travail en brigade
 
 ### Règle 1 : Jamais modifier direct le livre principal 🚫
 
@@ -371,8 +371,8 @@ Ne teste pas sauce + dessert + entrée en même temps !
 
 Une bonne description de PR contient :
 - 📋 Ce que tu as testé
-- 🎯 Pourquoi tu l'as fait
-- 🖼️ Des photos si c'est visuel
+- 🎯 Pourquoi tu l`as fait
+- 🖼️ Des photos si c`est visuel
 - ✅ Une checklist si besoin
 
 **Exemple :**
@@ -402,13 +402,13 @@ Les clients demandaient une sauce plus parfumée.
 
 ### Règle 4 : Goûte les recettes des autres 👅
 
-Quand quelqu'un crée une PR, prends le temps de :
+Quand quelqu`un crée une PR, prends le temps de :
 - 👅 Goûter sa recette
 - 💬 Laisser des commentaires constructifs
-- ✅ Approuver si c'est bon
+- ✅ Approuver si c`est bon
 
 **Ne sois pas méchant !**  
-Sois constructif : *"Peut-être qu'on pourrait réduire le sel..."*
+Sois constructif : *"Peut-être qu`on pourrait réduire le sel..."*
 
 ---
 
@@ -425,11 +425,11 @@ Sois constructif : *"Peut-être qu'on pourrait réduire le sel..."*
 7. Pousse avec `git push origin test-nouvelle-recette`
 8. Va sur GitHub et crée une Pull Request
 9. Écris une belle description
-10. Merge ta PR (simule que c'est ton chef qui valide)
+10. Merge ta PR (simule que c`est ton chef qui valide)
 11. Supprime la branche sur GitHub
 12. Sur ton PC : `git switch main` puis `git pull` puis `git branch -d test-nouvelle-recette`
 
-**Si t'as réussi, t'es un CHEF PRO NIVEAU RESTAURANT ÉTOILÉ ! 💪🔥**
+**Si t`as réussi, t`es un CHEF PRO NIVEAU RESTAURANT ÉTOILÉ ! 💪🔥**
 
 ---
 
@@ -441,7 +441,7 @@ Sois constructif : *"Peut-être qu'on pourrait réduire le sel..."*
 | 2 | Code + `git commit` | PC | Tester la recette |
 | 3 | `git push origin ma-branche` | PC | Envoyer sur GitHub |
 | 4 | Create Pull Request | GitHub | Demander la dégustation |
-| 5 | Review & Comments | GitHub | Dégustation par l'équipe |
+| 5 | Review & Comments | GitHub | Dégustation par l`équipe |
 | 6 | Merge PR | GitHub | Adopter dans le livre principal |
 | 7 | `git pull` sur `main` | PC | Récupérer la version à jour |
 
@@ -484,7 +484,7 @@ Tu maîtrises maintenant :
 
 - Utilise GitHub comme ton **portfolio culinaire**
 - Les recruteurs regardent ton profil GitHub !
-- Plus tu as de recettes, mieux c'est
+- Plus tu as de recettes, mieux c`est
 
 ### 🔥 Concepts avancés (quand tu seras prêt)
 

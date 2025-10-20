@@ -12,10 +12,10 @@ Dedans, tu stockes tout ce dont tu as besoin pour ta quête :
 Mais pour ne pas te perdre, tu **mets un nom sur chaque slot** :  
 > "Épée", "Armure", "Potions", "Gold", "XP"...
 
-Ainsi, quand tu veux quelque chose, tu n'as pas besoin de chercher :  
+Ainsi, quand tu veux quelque chose, tu n`as pas besoin de chercher :  
 tu regardes le nom du slot et tu trouves **directement** ce que tu veux.
 
-💬 En PHP, c'est pareil :  
+💬 En PHP, c`est pareil :  
 - Chaque **nom de slot** correspond à un **nom de variable**.  
 - Chaque **objet dans le slot** correspond à une **valeur**.
 
@@ -37,9 +37,9 @@ Chaque fois que tu crées une variable, il place la valeur dans un slot et lui d
 
 ---
 
-## 💡 Pourquoi c'est utile
+## 💡 Pourquoi c`est utile
 
-Si tu veux calculer ton score total, tu n'as pas besoin de tout retenir.  
+Si tu veux calculer ton score total, tu n`as pas besoin de tout retenir.  
 Tu peux **réutiliser les slots** autant que tu veux :
 
 ```php
@@ -56,14 +56,14 @@ Ton score total est 23.
 ```
 
 💬 Tu viens de dire à ton ordinateur :
-> "Regarde les deux valeurs dans l'inventaire (kills et assists), additionne-les, et mets le résultat dans un nouveau slot appelé score."
+> "Regarde les deux valeurs dans l`inventaire (kills et assists), additionne-les, et mets le résultat dans un nouveau slot appelé score."
 
 ---
 
 ## 🎒 1️⃣ Créer une variable
 
 Chaque variable commence **toujours** par `$` en PHP.  
-C'est comme si tu créais un slot dans ton inventaire.
+C`est comme si tu créais un slot dans ton inventaire.
 
 ```php
 $pseudo = "DragonSlayer";
@@ -82,7 +82,7 @@ $hp = 100;
 
 ## 🎯 2️⃣ Utiliser une variable
 
-Tu veux voir ce qu'il y a dans un slot ?  
+Tu veux voir ce qu`il y a dans un slot ?  
 Tu appelles simplement son nom :
 ```php
 echo $pseudo;
@@ -93,11 +93,11 @@ Résultat :
 DragonSlayer
 ```
 
-💬 Ton ordinateur regarde dans son inventaire, trouve le slot "pseudo" et lit ce qu'il contient.
+💬 Ton ordinateur regarde dans son inventaire, trouve le slot "pseudo" et lit ce qu`il contient.
 
 ---
 
-## 🔄 3️⃣ Changer la valeur d'une variable
+## 🔄 3️⃣ Changer la valeur d`une variable
 
 Tu veux changer ton pseudo ?  
 Pas besoin de recréer le slot — tu **remplaces juste la valeur** :
@@ -106,16 +106,16 @@ Pas besoin de recréer le slot — tu **remplaces juste la valeur** :
 $pseudo = "ShadowHunter";
 ```
 
-💬 Le slot reste le même, mais ce qu'il contient change.
+💬 Le slot reste le même, mais ce qu`il contient change.
 
 ---
 
 ## 🎮 4️⃣ Pourquoi "variable" ?
 
 Parce que son **contenu peut varier**.  
-Tu peux **changer ce qu'il y a dedans** sans changer le nom.
+Tu peux **changer ce qu`il y a dedans** sans changer le nom.
 
-C'est comme si tu avais un slot "arme" dans ton inventaire :  
+C`est comme si tu avais un slot "arme" dans ton inventaire :  
 parfois tu y mets une épée, parfois un arc.  
 Mais le slot, lui, reste "arme".
 
@@ -151,15 +151,15 @@ et PHP fait le calcul pour toi.
 |----------------|-------------|--------|
 | Tu ranges un objet dans ton inventaire | Tu stockes une donnée | Tu crées une variable |
 | Tu nommes le slot | Tu donnes un nom | Tu écris `$nom = valeur;` |
-| Tu regardes ce qu'il y a dans le slot | Tu veux savoir ce que c'est | Tu fais `echo $nom;` |
-| Tu remplaces l'objet | Tu changes la valeur | Tu réassignes `$nom = ...` |
+| Tu regardes ce qu`il y a dans le slot | Tu veux savoir ce que c`est | Tu fais `echo $nom;` |
+| Tu remplaces l`objet | Tu changes la valeur | Tu réassignes `$nom = ...` |
 
 ---
 
 ## 💬 Phrase à retenir :
-> Une variable, c'est comme un **slot dans ton inventaire de jeu**.  
-> Tu peux y mettre n'importe quelle valeur, la changer quand tu veux,  
-> et ton ordinateur s'en souviendra jusqu'à la fin de la partie.
+> Une variable, c`est comme un **slot dans ton inventaire de jeu**.  
+> Tu peux y mettre n`importe quelle valeur, la changer quand tu veux,  
+> et ton ordinateur s`en souviendra jusqu`à la fin de la partie.
 
 ---
 
@@ -185,7 +185,7 @@ echo $total_kills; // Affiche 23
 ---
 
 ### ➖ Soustraction : `-`
-Pour **enlever** une valeur d'une autre.
+Pour **enlever** une valeur d`une autre.
 
 ```php
 $hp_max = 100;
@@ -226,19 +226,19 @@ echo $gold_par_joueur; // Affiche 250
 
 ---
 
-## 🎯 Les Opérateurs d'Incrémentation (++, --)
+## 🎯 Les Opérateurs d`Incrémentation (++, --)
 
 ### 📊 Imagine ta barre de level-up
 
 Tu es en train de grind et tu comptes tes **levels**.  
 Chaque level représente un **numéro** : 1, 2, 3, 4, 5...
 
-**L'opérateur `++`** = **Monter d'un level** 🔼  
-**L'opérateur `--`** = **Descendre d'un level** 🔽
+**L`opérateur `++`** = **Monter d`un level** 🔼  
+**L`opérateur `--`** = **Descendre d`un level** 🔽
 
 ---
 
-### 📈 L'opérateur `++` (Incrémenter = Ajouter 1)
+### 📈 L`opérateur `++` (Incrémenter = Ajouter 1)
 
 Imagine que tu comptes tes **kills** dans une partie.  
 Tu en as **5**, puis tu élimines **1 ennemi de plus**.
@@ -258,13 +258,13 @@ echo $kills; // Affiche 6
 ```
 
 💬 **En langage gamer :**  
-> "J'avais 5 kills, j'en fais 1 de plus → `$kills++` → j'ai maintenant 6 kills."
+> "J`avais 5 kills, j`en fais 1 de plus → `$kills++` → j`ai maintenant 6 kills."
 
 🧠 **À retenir :** `$kills++` veut dire "ajoute 1 à `$kills`".
 
 ---
 
-### 📉 L'opérateur `--` (Décrémenter = Enlever 1)
+### 📉 L`opérateur `--` (Décrémenter = Enlever 1)
 
 Maintenant, tu **utilises** une potion. Tu passes de **4 potions à 3 potions**.
 
@@ -283,7 +283,7 @@ echo $potions; // Affiche 3
 ```
 
 💬 **En langage gamer :**  
-> "J'avais 4 potions, j'en utilise 1 → `$potions--` → il m'en reste 3."
+> "J`avais 4 potions, j`en utilise 1 → `$potions--` → il m`en reste 3."
 
 🧠 **À retenir :** `$potions--` veut dire "enlève 1 à `$potions`".
 
@@ -295,7 +295,7 @@ Tu élimines des **ennemis** dans un FPS.
 Chaque fois que tu fais un kill, tu veux **compter** combien tu en as faits.
 
 ```php
-$kills = 0; // Au début, tu n'as fait aucun kill
+$kills = 0; // Au début, tu n`as fait aucun kill
 
 // Tu fais un kill
 $kills++;
@@ -316,7 +316,7 @@ echo "Kills : $kills<br>"; // Affiche 3
 - Après `$kills++` : `$kills = 2`
 - Après `$kills++` : `$kills = 3`
 
-🧠 **C'est comme si tu montais dans le leaderboard score par score !**
+🧠 **C`est comme si tu montais dans le leaderboard score par score !**
 
 ---
 
@@ -347,7 +347,7 @@ echo "Munitions restantes : $munitions<br>"; // Affiche 27
 - Après `$munitions--` : `$munitions = 28`
 - Après `$munitions--` : `$munitions = 27`
 
-🧠 **C'est comme si tu vidais ton chargeur balle par balle !**
+🧠 **C`est comme si tu vidais ton chargeur balle par balle !**
 
 ---
 
@@ -362,7 +362,7 @@ echo "Munitions restantes : $munitions<br>"; // Affiche 27
 
 ### ⚠️ Attention : Avant ou Après ?
 
-Il y a **deux façons** d'utiliser `++` et `--` :
+Il y a **deux façons** d`utiliser `++` et `--` :
 
 #### 🔵 Après la variable : `$x++` ou `$x--`
 Le changement se fait **après** avoir utilisé la variable.
@@ -379,30 +379,30 @@ echo $niveau;   // Affiche 11
 ---
 
 #### 🔴 Avant la variable : `++$x` ou `--$x`
-Le changement se fait **avant** d'utiliser la variable.
+Le changement se fait **avant** d`utiliser la variable.
 
 ```php
 $niveau = 10;
-echo ++$niveau; // Level-up d'abord, puis affiche 11
+echo ++$niveau; // Level-up d`abord, puis affiche 11
 echo $niveau;   // Affiche 11
 ```
 
 💬 **En langage gamer :**  
-> "Level-up **d'abord**, puis affiche mon nouveau niveau (11)."
+> "Level-up **d`abord**, puis affiche mon nouveau niveau (11)."
 
 ---
 
 ### 🧠 Astuce pour retenir
 
 🎮 **Imagine ton compteur de kills :**
-- `$kills++` → "J'affiche mon score actuel (10), **puis** j'ajoute le kill (11)"
-- `++$kills` → "J'ajoute le kill **d'abord** (11), puis j'affiche le nouveau score"
+- `$kills++` → "J`affiche mon score actuel (10), **puis** j`ajoute le kill (11)"
+- `++$kills` → "J`ajoute le kill **d`abord** (11), puis j`affiche le nouveau score"
 
 👉 **Dans 95% des cas, tu utiliseras `$kills++` ou `$potions--`** (après la variable).
 
 ---
 
-## 🔗 Les Opérateurs d'Affectation Combinés
+## 🔗 Les Opérateurs d`Affectation Combinés
 
 ### 🎒 Les raccourcis pour les calculs
 
@@ -424,7 +424,7 @@ $gold += 300; // Pareil que $gold = $gold + 300
 echo $gold; // Affiche 800
 ```
 
-💬 **En langage gamer :** "J'avais 500 gold, je loot 300 gold → `$gold += 300` → j'ai 800 gold maintenant."
+💬 **En langage gamer :** "J`avais 500 gold, je loot 300 gold → `$gold += 300` → j`ai 800 gold maintenant."
 
 ---
 
@@ -436,7 +436,7 @@ $hp -= 40; // Pareil que $hp = $hp - 40
 echo $hp; // Affiche 60
 ```
 
-💬 **En langage gamer :** "J'avais 100 HP, je prends 40 de dégâts → il me reste 60 HP."
+💬 **En langage gamer :** "J`avais 100 HP, je prends 40 de dégâts → il me reste 60 HP."
 
 ---
 
@@ -448,7 +448,7 @@ $xp *= 2; // Pareil que $xp = $xp * 2
 echo $xp; // Affiche 200
 ```
 
-💬 **En langage gamer :** "J'avais 100 XP, j'active un bonus x2 → j'ai 200 XP."
+💬 **En langage gamer :** "J`avais 100 XP, j`active un bonus x2 → j`ai 200 XP."
 
 ---
 
@@ -460,7 +460,7 @@ $cooldown /= 2; // Pareil que $cooldown = $cooldown / 2
 echo $cooldown; // Affiche 30
 ```
 
-💬 **En langage gamer :** "Mon cooldown était 60s, j'ai un buff -50% → il est maintenant à 30s."
+💬 **En langage gamer :** "Mon cooldown était 60s, j`ai un buff -50% → il est maintenant à 30s."
 
 ---
 
@@ -492,26 +492,26 @@ echo $cooldown; // Affiche 30
 
 🧠 **Phrase à retenir :**
 > `++` et `--` sont comme **gagner ou perdre 1 point à la fois**.  
-> C'est le moyen le plus rapide d'ajouter ou d'enlever 1 !
+> C`est le moyen le plus rapide d`ajouter ou d`enlever 1 !
 
 ---
 
 # 🧪 Exercices Pratiques
 
-## 📝 Exercice 1 : Comprendre l'incrémentation
+## 📝 Exercice 1 : Comprendre l`incrémentation
 **Énoncé :**  
 Tu commences ta partie avec `$kills = 0`.  
-Utilise l'opérateur `++` pour incrémenter cette variable **5 fois** (comme si tu faisais 5 kills).  
+Utilise l`opérateur `++` pour incrémenter cette variable **5 fois** (comme si tu faisais 5 kills).  
 Affiche le résultat final.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable initialisée à 0
 - Utilisation de `++` cinq fois
-- L'affichage du nombre final de kills
+- L`affichage du nombre final de kills
 
 **Exemple de résultat attendu :**
 ```
-J'ai fait 5 kills.
+J`ai fait 5 kills.
 ```
 
 <details>
@@ -525,7 +525,7 @@ $kills++;
 $kills++;
 $kills++;
 $kills++;
-echo "J'ai fait $kills kills.";
+echo "J`ai fait $kills kills.";
 ?>
 ```
 </details>
@@ -535,13 +535,13 @@ echo "J'ai fait $kills kills.";
 ## 📝 Exercice 2 : Comprendre la décrémentation
 **Énoncé :**  
 Tu as `$potions = 10` au début de ta quête.  
-Utilise l'opérateur `--` pour décrémenter cette variable **3 fois** (comme si tu utilisais 3 potions).  
+Utilise l`opérateur `--` pour décrémenter cette variable **3 fois** (comme si tu utilisais 3 potions).  
 Affiche combien de potions il te reste.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable initialisée à 10
 - Utilisation de `--` trois fois
-- L'affichage du nombre de potions restantes
+- L`affichage du nombre de potions restantes
 
 **Exemple de résultat attendu :**
 ```
@@ -567,16 +567,16 @@ echo "Il me reste $potions potions.";
 ## 📝 Exercice 3 : Utiliser +=
 **Énoncé :**  
 Tu as `$gold = 500` gold dans ton inventaire.  
-Tu lootes un coffre qui contient 350 gold. Utilise l'opérateur `+=` pour ajouter ce gold.  
+Tu lootes un coffre qui contient 350 gold. Utilise l`opérateur `+=` pour ajouter ce gold.  
 Affiche le nouveau total.
 
-**Ce qu'on attend :**  
-- Utilisation de l'opérateur `+=`
-- L'affichage du total après le loot
+**Ce qu`on attend :**  
+- Utilisation de l`opérateur `+=`
+- L`affichage du total après le loot
 
 **Exemple de résultat attendu :**
 ```
-J'ai maintenant 850 gold.
+J`ai maintenant 850 gold.
 ```
 
 <details>
@@ -586,7 +586,7 @@ J'ai maintenant 850 gold.
 <?php
 $gold = 500;
 $gold += 350;
-echo "J'ai maintenant $gold gold.";
+echo "J`ai maintenant $gold gold.";
 ?>
 ```
 </details>
@@ -596,12 +596,12 @@ echo "J'ai maintenant $gold gold.";
 ## 📝 Exercice 4 : Utiliser -=
 **Énoncé :**  
 Tu as `$hp = 100` points de vie.  
-Tu prends un coup critique de 45 dégâts. Utilise l'opérateur `-=` pour soustraire ces dégâts.  
+Tu prends un coup critique de 45 dégâts. Utilise l`opérateur `-=` pour soustraire ces dégâts.  
 Affiche tes HP restants.
 
-**Ce qu'on attend :**  
-- Utilisation de l'opérateur `-=`
-- L'affichage des HP après l'attaque
+**Ce qu`on attend :**  
+- Utilisation de l`opérateur `-=`
+- L`affichage des HP après l`attaque
 
 **Exemple de résultat attendu :**
 ```
@@ -626,9 +626,9 @@ echo "HP restants : $hp";
 **Énoncé :**  
 Crée une variable appelée `$pseudo` qui contient ton pseudo de gamer, puis affiche-la avec `echo`.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable `$pseudo` correctement créée
-- L'affichage de ton pseudo à l'écran
+- L`affichage de ton pseudo à l`écran
 
 **Exemple de résultat attendu :**
 ```
@@ -653,7 +653,7 @@ echo $pseudo;
 Crée deux variables : `$pseudo` avec ton pseudo et `$niveau` avec ton niveau.  
 Affiche ensuite une phrase complète : "Je suis [pseudo] niveau [niveau]."
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Deux variables correctement déclarées
 - Une phrase complète qui utilise ces deux variables
 
@@ -682,10 +682,10 @@ Tu veux calculer tes dégâts totaux avec ton arme.
 Crée deux variables : `$degats_arme = 50` et `$bonus_critique = 25`.  
 Calcule les dégâts totaux dans une nouvelle variable `$degats_total` et affiche le résultat.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Trois variables : `$degats_arme`, `$bonus_critique` et `$degats_total`
-- Le calcul correct de l'addition
-- L'affichage des dégâts
+- Le calcul correct de l`addition
+- L`affichage des dégâts
 
 **Exemple de résultat attendu :**
 ```
@@ -707,16 +707,16 @@ echo "Dégâts totaux : $degats_total";
 
 ---
 
-## 📝 Exercice 8 : Calculer le coût d'un achat
+## 📝 Exercice 8 : Calculer le coût d`un achat
 **Énoncé :**  
 Tu veux acheter 5 potions de soin. Chaque potion coûte 20 gold.  
 Crée une variable `$prix_potion = 20` et une variable `$quantite = 5`.  
 Calcule le prix total et affiche-le.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Deux variables pour le prix unitaire et la quantité
 - Une variable pour le total
-- L'affichage du montant total
+- L`affichage du montant total
 
 **Exemple de résultat attendu :**
 ```
@@ -741,10 +741,10 @@ echo "Le prix total est de $total gold.";
 ## 📝 Exercice 9 : Modifier une variable
 **Énoncé :**  
 Crée une variable `$arme = "Épée"`.  
-Affiche d'abord "Arme équipée : Épée".  
+Affiche d`abord "Arme équipée : Épée".  
 Ensuite, change la valeur de `$arme` en "Arc" et affiche "Arme équipée : Arc".
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable créée puis modifiée
 - Deux affichages différents montrant que la variable a changé
 
@@ -774,14 +774,14 @@ echo "Arme équipée : $arme";
 Dans ton jeu de survie, tu as `$bois = 25` et `$pierre = 18`.  
 Calcule le nombre total de ressources dans une variable `$total_ressources` et affiche le résultat.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Trois variables au total
 - Une addition correcte
 - Un message clair avec le résultat
 
 **Exemple de résultat attendu :**
 ```
-J'ai un total de 43 ressources.
+J`ai un total de 43 ressources.
 ```
 
 <details>
@@ -792,23 +792,23 @@ J'ai un total de 43 ressources.
 $bois = 25;
 $pierre = 18;
 $total_ressources = $bois + $pierre;
-echo "J'ai un total de $total_ressources ressources.";
+echo "J`ai un total de $total_ressources ressources.";
 ?>
 ```
 </details>
 
 ---
 
-## 📝 Exercice 11 : Calculer l'XP nécessaire pour level-up
+## 📝 Exercice 11 : Calculer l`XP nécessaire pour level-up
 **Énoncé :**  
-Tu veux savoir combien d'XP il te manque pour passer au niveau suivant.  
+Tu veux savoir combien d`XP il te manque pour passer au niveau suivant.  
 Crée les variables suivantes :
 - `$xp_actuel = 750`
 - `$xp_prochain_niveau = 1000`
 
-Calcule l'XP manquant et affiche le résultat.
+Calcule l`XP manquant et affiche le résultat.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Calcul de la différence (XP manquant = XP prochain niveau - XP actuel)
 - Affichage du résultat
 
@@ -841,7 +841,7 @@ Crée les variables suivantes :
 
 Calcule ton K/D ratio dans une variable `$kd_ratio` et affiche-le.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Division des kills par les deaths
 - Affichage du ratio
 
@@ -874,7 +874,7 @@ Crée trois variables :
 
 Affiche ensuite un message complet : "Guilde [nom] sur [serveur] - [membres] membres"
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Trois variables de type texte et nombre
 - Un message formaté qui utilise toutes les variables
 
@@ -898,20 +898,20 @@ echo "Guilde $nom_guilde sur $serveur - $membres membres";
 
 ---
 
-## 📝 Exercice 14 : Calculer le score d'une partie complète
+## 📝 Exercice 14 : Calculer le score d`une partie complète
 **Énoncé :**  
 Tu veux calculer ton score total dans une partie. Tu as besoin de :
 - `$kills = 12` (chaque kill vaut 100 points)
 - `$assists = 8` (chaque assist vaut 50 points)
 - `$objectifs = 3` (chaque objectif vaut 200 points)
 
-Calcule d'abord les points de kills (`$points_kills`), les points d'assists (`$points_assists`), et les points d'objectifs (`$points_objectifs`).  
+Calcule d`abord les points de kills (`$points_kills`), les points d`assists (`$points_assists`), et les points d`objectifs (`$points_objectifs`).  
 Ensuite, calcule le score total (`$score_total`) qui est la somme de tous ces points.  
 Affiche tous les détails.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Plusieurs calculs intermédiaires
-- L'utilisation de toutes les variables créées
+- L`utilisation de toutes les variables créées
 - Un affichage détaillé du score
 
 **Exemple de résultat attendu :**
@@ -949,11 +949,11 @@ echo "Score total : $score_total points";
 ## 📝 Exercice 15 : Gestion de munitions avec décrémentation
 **Énoncé :**  
 Tu commences une partie avec `$munitions = 30` dans ton chargeur.  
-Tu tires 7 balles pendant un combat. Utilise l'opérateur `-=` pour retirer ces munitions.  
+Tu tires 7 balles pendant un combat. Utilise l`opérateur `-=` pour retirer ces munitions.  
 Affiche combien de munitions il te reste.
 
-**Ce qu'on attend :**  
-- Utilisation de l'opérateur `-=`
+**Ce qu`on attend :**  
+- Utilisation de l`opérateur `-=`
 - Affichage des munitions restantes
 
 **Exemple de résultat attendu :**
@@ -978,12 +978,12 @@ echo "Munitions restantes : $munitions";
 ## 📝 Exercice 16 : Bonus XP multiplié
 **Énoncé :**  
 Tu gagnes `$xp = 150` XP en tuant un boss.  
-Tu as un buff "Double XP" actif. Utilise l'opérateur `*=` pour doubler ton XP.  
+Tu as un buff "Double XP" actif. Utilise l`opérateur `*=` pour doubler ton XP.  
 Affiche ton XP final.
 
-**Ce qu'on attend :**  
-- Utilisation de l'opérateur `*=`
-- Affichage de l'XP après le buff
+**Ce qu`on attend :**  
+- Utilisation de l`opérateur `*=`
+- Affichage de l`XP après le buff
 
 **Exemple de résultat attendu :**
 ```
@@ -1007,10 +1007,10 @@ echo "XP gagnés avec le buff : $xp";
 ## 📝 Exercice 17 : Partage de loot entre joueurs
 **Énoncé :**  
 Ton équipe a looté `$gold_total = 800` gold.  
-Il y a `$nb_joueurs = 4` joueurs dans l'équipe. Le loot doit être partagé équitablement.  
+Il y a `$nb_joueurs = 4` joueurs dans l`équipe. Le loot doit être partagé équitablement.  
 Calcule combien de gold chaque joueur reçoit dans une variable `$gold_par_joueur` et affiche le résultat.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Division du gold total par le nombre de joueurs
 - Affichage du gold par joueur
 
@@ -1038,11 +1038,11 @@ echo "Chaque joueur reçoit $gold_par_joueur gold.";
 **Énoncé :**  
 Tu as un système de combo dans ton jeu de combat.  
 Tu commences avec `$combo = 0`.  
-Tu réussis 3 attaques consécutives. Utilise l'opérateur `++` trois fois pour augmenter ton combo.  
+Tu réussis 3 attaques consécutives. Utilise l`opérateur `++` trois fois pour augmenter ton combo.  
 Ensuite, tu te fais toucher et ton combo se réinitialise à 0.  
 Affiche le combo maximum atteint, puis le combo après réinitialisation.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Incrémentation du combo 3 fois
 - Affichage du combo maximum
 - Réinitialisation du combo
@@ -1078,7 +1078,7 @@ Quand tu meurs, tu as un temps de respawn de `$respawn_base = 20` secondes.
 Tu as une rune qui réduit le temps de respawn de 30%. Calcule la réduction en secondes (`$reduction`), puis le temps de respawn final (`$respawn_final`).  
 Affiche les deux valeurs.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Calcul de la réduction (30% de 20 secondes)
 - Calcul du temps final (temps de base - réduction)
 - Affichage des deux valeurs
@@ -1105,7 +1105,7 @@ echo "Temps de respawn final : $respawn_final secondes";
 
 ---
 
-## 📝 Exercice 20 : Inventaire complet d'un joueur
+## 📝 Exercice 20 : Inventaire complet d`un joueur
 **Énoncé :**  
 Crée un inventaire complet pour ton personnage avec les variables suivantes :
 - `$pseudo = "DragonSlayer"`
@@ -1118,7 +1118,7 @@ Crée un inventaire complet pour ton personnage avec les variables suivantes :
 
 Affiche toutes ces informations dans un format lisible, ligne par ligne.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Toutes les variables correctement déclarées
 - Un affichage organisé de toutes les informations
 
@@ -1176,10 +1176,10 @@ Dedans, tu stockes tout ce dont tu as besoin pour ta quête :
 Mais pour ne pas te perdre, tu **mets un nom sur chaque slot** :  
 > "Épée", "Armure", "Potions", "Gold", "XP"...
 
-Ainsi, quand tu veux quelque chose, tu n'as pas besoin de chercher :  
+Ainsi, quand tu veux quelque chose, tu n`as pas besoin de chercher :  
 tu regardes le nom du slot et tu trouves **directement** ce que tu veux.
 
-💬 En PHP, c'est pareil :  
+💬 En PHP, c`est pareil :  
 - Chaque **nom de slot** correspond à un **nom de variable**.  
 - Chaque **objet dans le slot** correspond à une **valeur**.
 
@@ -1201,9 +1201,9 @@ Chaque fois que tu crées une variable, il place la valeur dans un slot et lui d
 
 ---
 
-## 💡 Pourquoi c'est utile
+## 💡 Pourquoi c`est utile
 
-Si tu veux calculer ton score total, tu n'as pas besoin de tout retenir.  
+Si tu veux calculer ton score total, tu n`as pas besoin de tout retenir.  
 Tu peux **réutiliser les slots** autant que tu veux :
 
 ```php
@@ -1220,14 +1220,14 @@ Ton score total est 23.
 ```
 
 💬 Tu viens de dire à ton ordinateur :
-> "Regarde les deux valeurs dans l'inventaire (kills et assists), additionne-les, et mets le résultat dans un nouveau slot appelé score."
+> "Regarde les deux valeurs dans l`inventaire (kills et assists), additionne-les, et mets le résultat dans un nouveau slot appelé score."
 
 ---
 
 ## 🎒 1️⃣ Créer une variable
 
 Chaque variable commence **toujours** par `$` en PHP.  
-C'est comme si tu créais un slot dans ton inventaire.
+C`est comme si tu créais un slot dans ton inventaire.
 
 ```php
 $pseudo = "DragonSlayer";
@@ -1246,7 +1246,7 @@ $hp = 100;
 
 ## 🎯 2️⃣ Utiliser une variable
 
-Tu veux voir ce qu'il y a dans un slot ?  
+Tu veux voir ce qu`il y a dans un slot ?  
 Tu appelles simplement son nom :
 ```php
 echo $pseudo;
@@ -1257,11 +1257,11 @@ Résultat :
 DragonSlayer
 ```
 
-💬 Ton ordinateur regarde dans son inventaire, trouve le slot "pseudo" et lit ce qu'il contient.
+💬 Ton ordinateur regarde dans son inventaire, trouve le slot "pseudo" et lit ce qu`il contient.
 
 ---
 
-## 🔄 3️⃣ Changer la valeur d'une variable
+## 🔄 3️⃣ Changer la valeur d`une variable
 
 Tu veux changer ton pseudo ?  
 Pas besoin de recréer le slot — tu **remplaces juste la valeur** :
@@ -1270,16 +1270,16 @@ Pas besoin de recréer le slot — tu **remplaces juste la valeur** :
 $pseudo = "ShadowHunter";
 ```
 
-💬 Le slot reste le même, mais ce qu'il contient change.
+💬 Le slot reste le même, mais ce qu`il contient change.
 
 ---
 
 ## 🎮 4️⃣ Pourquoi "variable" ?
 
 Parce que son **contenu peut varier**.  
-Tu peux **changer ce qu'il y a dedans** sans changer le nom.
+Tu peux **changer ce qu`il y a dedans** sans changer le nom.
 
-C'est comme si tu avais un slot "arme" dans ton inventaire :  
+C`est comme si tu avais un slot "arme" dans ton inventaire :  
 parfois tu y mets une épée, parfois un arc.  
 Mais le slot, lui, reste "arme".
 
@@ -1315,15 +1315,15 @@ et PHP fait le calcul pour toi.
 |----------------|-------------|--------|
 | Tu ranges un objet dans ton inventaire | Tu stockes une donnée | Tu crées une variable |
 | Tu nommes le slot | Tu donnes un nom | Tu écris `$nom = valeur;` |
-| Tu regardes ce qu'il y a dans le slot | Tu veux savoir ce que c'est | Tu fais `echo $nom;` |
-| Tu remplaces l'objet | Tu changes la valeur | Tu réassignes `$nom = ...` |
+| Tu regardes ce qu`il y a dans le slot | Tu veux savoir ce que c`est | Tu fais `echo $nom;` |
+| Tu remplaces l`objet | Tu changes la valeur | Tu réassignes `$nom = ...` |
 
 ---
 
 ## 💬 Phrase à retenir :
-> Une variable, c'est comme un **slot dans ton inventaire de jeu**.  
-> Tu peux y mettre n'importe quelle valeur, la changer quand tu veux,  
-> et ton ordinateur s'en souviendra jusqu'à la fin de la partie.
+> Une variable, c`est comme un **slot dans ton inventaire de jeu**.  
+> Tu peux y mettre n`importe quelle valeur, la changer quand tu veux,  
+> et ton ordinateur s`en souviendra jusqu`à la fin de la partie.
 
 ---
 
@@ -1349,7 +1349,7 @@ echo $total_kills; // Affiche 23
 ---
 
 ### ➖ Soustraction : `-`
-Pour **enlever** une valeur d'une autre.
+Pour **enlever** une valeur d`une autre.
 
 ```php
 $hp_max = 100;
@@ -1390,19 +1390,19 @@ echo $gold_par_joueur; // Affiche 250
 
 ---
 
-## 🎯 Les Opérateurs d'Incrémentation (++, --)
+## 🎯 Les Opérateurs d`Incrémentation (++, --)
 
 ### 📊 Imagine ta barre de level-up
 
 Tu es en train de grind et tu comptes tes **levels**.  
 Chaque level représente un **numéro** : 1, 2, 3, 4, 5...
 
-**L'opérateur `++`** = **Monter d'un level** 🔼  
-**L'opérateur `--`** = **Descendre d'un level** 🔽
+**L`opérateur `++`** = **Monter d`un level** 🔼  
+**L`opérateur `--`** = **Descendre d`un level** 🔽
 
 ---
 
-### 📈 L'opérateur `++` (Incrémenter = Ajouter 1)
+### 📈 L`opérateur `++` (Incrémenter = Ajouter 1)
 
 Imagine que tu comptes tes **kills** dans une partie.  
 Tu en as **5**, puis tu élimines **1 ennemi de plus**.
@@ -1422,13 +1422,13 @@ echo $kills; // Affiche 6
 ```
 
 💬 **En langage gamer :**  
-> "J'avais 5 kills, j'en fais 1 de plus → `$kills++` → j'ai maintenant 6 kills."
+> "J`avais 5 kills, j`en fais 1 de plus → `$kills++` → j`ai maintenant 6 kills."
 
 🧠 **À retenir :** `$kills++` veut dire "ajoute 1 à `$kills`".
 
 ---
 
-### 📉 L'opérateur `--` (Décrémenter = Enlever 1)
+### 📉 L`opérateur `--` (Décrémenter = Enlever 1)
 
 Maintenant, tu **utilises** une potion. Tu passes de **4 potions à 3 potions**.
 
@@ -1447,7 +1447,7 @@ echo $potions; // Affiche 3
 ```
 
 💬 **En langage gamer :**  
-> "J'avais 4 potions, j'en utilise 1 → `$potions--` → il m'en reste 3."
+> "J`avais 4 potions, j`en utilise 1 → `$potions--` → il m`en reste 3."
 
 🧠 **À retenir :** `$potions--` veut dire "enlève 1 à `$potions`".
 
@@ -1459,7 +1459,7 @@ Tu élimines des **ennemis** dans un FPS.
 Chaque fois que tu fais un kill, tu veux **compter** combien tu en as faits.
 
 ```php
-$kills = 0; // Au début, tu n'as fait aucun kill
+$kills = 0; // Au début, tu n`as fait aucun kill
 
 // Tu fais un kill
 $kills++;
@@ -1480,7 +1480,7 @@ echo "Kills : $kills<br>"; // Affiche 3
 - Après `$kills++` : `$kills = 2`
 - Après `$kills++` : `$kills = 3`
 
-🧠 **C'est comme si tu montais dans le leaderboard score par score !**
+🧠 **C`est comme si tu montais dans le leaderboard score par score !**
 
 ---
 
@@ -1511,7 +1511,7 @@ echo "Munitions restantes : $munitions<br>"; // Affiche 27
 - Après `$munitions--` : `$munitions = 28`
 - Après `$munitions--` : `$munitions = 27`
 
-🧠 **C'est comme si tu vidais ton chargeur balle par balle !**
+🧠 **C`est comme si tu vidais ton chargeur balle par balle !**
 
 ---
 
@@ -1526,7 +1526,7 @@ echo "Munitions restantes : $munitions<br>"; // Affiche 27
 
 ### ⚠️ Attention : Avant ou Après ?
 
-Il y a **deux façons** d'utiliser `++` et `--` :
+Il y a **deux façons** d`utiliser `++` et `--` :
 
 #### 🔵 Après la variable : `$x++` ou `$x--`
 Le changement se fait **après** avoir utilisé la variable.
@@ -1543,30 +1543,30 @@ echo $niveau;   // Affiche 11
 ---
 
 #### 🔴 Avant la variable : `++$x` ou `--$x`
-Le changement se fait **avant** d'utiliser la variable.
+Le changement se fait **avant** d`utiliser la variable.
 
 ```php
 $niveau = 10;
-echo ++$niveau; // Level-up d'abord, puis affiche 11
+echo ++$niveau; // Level-up d`abord, puis affiche 11
 echo $niveau;   // Affiche 11
 ```
 
 💬 **En langage gamer :**  
-> "Level-up **d'abord**, puis affiche mon nouveau niveau (11)."
+> "Level-up **d`abord**, puis affiche mon nouveau niveau (11)."
 
 ---
 
 ### 🧠 Astuce pour retenir
 
 🎮 **Imagine ton compteur de kills :**
-- `$kills++` → "J'affiche mon score actuel (10), **puis** j'ajoute le kill (11)"
-- `++$kills` → "J'ajoute le kill **d'abord** (11), puis j'affiche le nouveau score"
+- `$kills++` → "J`affiche mon score actuel (10), **puis** j`ajoute le kill (11)"
+- `++$kills` → "J`ajoute le kill **d`abord** (11), puis j`affiche le nouveau score"
 
 👉 **Dans 95% des cas, tu utiliseras `$kills++` ou `$potions--`** (après la variable).
 
 ---
 
-## 🔗 Les Opérateurs d'Affectation Combinés
+## 🔗 Les Opérateurs d`Affectation Combinés
 
 ### 🎒 Les raccourcis pour les calculs
 
@@ -1588,7 +1588,7 @@ $gold += 300; // Pareil que $gold = $gold + 300
 echo $gold; // Affiche 800
 ```
 
-💬 **En langage gamer :** "J'avais 500 gold, je loot 300 gold → `$gold += 300` → j'ai 800 gold maintenant."
+💬 **En langage gamer :** "J`avais 500 gold, je loot 300 gold → `$gold += 300` → j`ai 800 gold maintenant."
 
 ---
 
@@ -1600,7 +1600,7 @@ $hp -= 40; // Pareil que $hp = $hp - 40
 echo $hp; // Affiche 60
 ```
 
-💬 **En langage gamer :** "J'avais 100 HP, je prends 40 de dégâts → il me reste 60 HP."
+💬 **En langage gamer :** "J`avais 100 HP, je prends 40 de dégâts → il me reste 60 HP."
 
 ---
 
@@ -1612,7 +1612,7 @@ $xp *= 2; // Pareil que $xp = $xp * 2
 echo $xp; // Affiche 200
 ```
 
-💬 **En langage gamer :** "J'avais 100 XP, j'active un bonus x2 → j'ai 200 XP."
+💬 **En langage gamer :** "J`avais 100 XP, j`active un bonus x2 → j`ai 200 XP."
 
 ---
 
@@ -1624,7 +1624,7 @@ $cooldown /= 2; // Pareil que $cooldown = $cooldown / 2
 echo $cooldown; // Affiche 30
 ```
 
-💬 **En langage gamer :** "Mon cooldown était 60s, j'ai un buff -50% → il est maintenant à 30s."
+💬 **En langage gamer :** "Mon cooldown était 60s, j`ai un buff -50% → il est maintenant à 30s."
 
 ---
 
@@ -1656,26 +1656,26 @@ echo $cooldown; // Affiche 30
 
 🧠 **Phrase à retenir :**
 > `++` et `--` sont comme **gagner ou perdre 1 point à la fois**.  
-> C'est le moyen le plus rapide d'ajouter ou d'enlever 1 !
+> C`est le moyen le plus rapide d`ajouter ou d`enlever 1 !
 
 ---
 
 # 🧪 Exercices Pratiques
 
-## 📝 Exercice 1 : Comprendre l'incrémentation
+## 📝 Exercice 1 : Comprendre l`incrémentation
 **Énoncé :**  
 Tu commences ta partie avec `$kills = 0`.  
-Utilise l'opérateur `++` pour incrémenter cette variable **5 fois** (comme si tu faisais 5 kills).  
+Utilise l`opérateur `++` pour incrémenter cette variable **5 fois** (comme si tu faisais 5 kills).  
 Affiche le résultat final.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable initialisée à 0
 - Utilisation de `++` cinq fois
-- L'affichage du nombre final de kills
+- L`affichage du nombre final de kills
 
 **Exemple de résultat attendu :**
 ```
-J'ai fait 5 kills.
+J`ai fait 5 kills.
 ```
 
 <details>
@@ -1689,7 +1689,7 @@ $kills++;
 $kills++;
 $kills++;
 $kills++;
-echo "J'ai fait $kills kills.";
+echo "J`ai fait $kills kills.";
 ?>
 ```
 </details>
@@ -1699,13 +1699,13 @@ echo "J'ai fait $kills kills.";
 ## 📝 Exercice 2 : Comprendre la décrémentation
 **Énoncé :**  
 Tu as `$potions = 10` au début de ta quête.  
-Utilise l'opérateur `--` pour décrémenter cette variable **3 fois** (comme si tu utilisais 3 potions).  
+Utilise l`opérateur `--` pour décrémenter cette variable **3 fois** (comme si tu utilisais 3 potions).  
 Affiche combien de potions il te reste.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable initialisée à 10
 - Utilisation de `--` trois fois
-- L'affichage du nombre de potions restantes
+- L`affichage du nombre de potions restantes
 
 **Exemple de résultat attendu :**
 ```
@@ -1731,16 +1731,16 @@ echo "Il me reste $potions potions.";
 ## 📝 Exercice 3 : Utiliser +=
 **Énoncé :**  
 Tu as `$gold = 500` gold dans ton inventaire.  
-Tu lootes un coffre qui contient 350 gold. Utilise l'opérateur `+=` pour ajouter ce gold.  
+Tu lootes un coffre qui contient 350 gold. Utilise l`opérateur `+=` pour ajouter ce gold.  
 Affiche le nouveau total.
 
-**Ce qu'on attend :**  
-- Utilisation de l'opérateur `+=`
-- L'affichage du total après le loot
+**Ce qu`on attend :**  
+- Utilisation de l`opérateur `+=`
+- L`affichage du total après le loot
 
 **Exemple de résultat attendu :**
 ```
-J'ai maintenant 850 gold.
+J`ai maintenant 850 gold.
 ```
 
 <details>
@@ -1750,7 +1750,7 @@ J'ai maintenant 850 gold.
 <?php
 $gold = 500;
 $gold += 350;
-echo "J'ai maintenant $gold gold.";
+echo "J`ai maintenant $gold gold.";
 ?>
 ```
 </details>
@@ -1760,12 +1760,12 @@ echo "J'ai maintenant $gold gold.";
 ## 📝 Exercice 4 : Utiliser -=
 **Énoncé :**  
 Tu as `$hp = 100` points de vie.  
-Tu prends un coup critique de 45 dégâts. Utilise l'opérateur `-=` pour soustraire ces dégâts.  
+Tu prends un coup critique de 45 dégâts. Utilise l`opérateur `-=` pour soustraire ces dégâts.  
 Affiche tes HP restants.
 
-**Ce qu'on attend :**  
-- Utilisation de l'opérateur `-=`
-- L'affichage des HP après l'attaque
+**Ce qu`on attend :**  
+- Utilisation de l`opérateur `-=`
+- L`affichage des HP après l`attaque
 
 **Exemple de résultat attendu :**
 ```
@@ -1790,9 +1790,9 @@ echo "HP restants : $hp";
 **Énoncé :**  
 Crée une variable appelée `$pseudo` qui contient ton pseudo de gamer, puis affiche-la avec `echo`.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable `$pseudo` correctement créée
-- L'affichage de ton pseudo à l'écran
+- L`affichage de ton pseudo à l`écran
 
 **Exemple de résultat attendu :**
 ```
@@ -1817,7 +1817,7 @@ echo $pseudo;
 Crée deux variables : `$pseudo` avec ton pseudo et `$niveau` avec ton niveau.  
 Affiche ensuite une phrase complète : "Je suis [pseudo] niveau [niveau]."
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Deux variables correctement déclarées
 - Une phrase complète qui utilise ces deux variables
 
@@ -1846,10 +1846,10 @@ Tu veux calculer tes dégâts totaux avec ton arme.
 Crée deux variables : `$degats_arme = 50` et `$bonus_critique = 25`.  
 Calcule les dégâts totaux dans une nouvelle variable `$degats_total` et affiche le résultat.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Trois variables : `$degats_arme`, `$bonus_critique` et `$degats_total`
-- Le calcul correct de l'addition
-- L'affichage des dégâts
+- Le calcul correct de l`addition
+- L`affichage des dégâts
 
 **Exemple de résultat attendu :**
 ```
@@ -1871,16 +1871,16 @@ echo "Dégâts totaux : $degats_total";
 
 ---
 
-## 📝 Exercice 8 : Calculer le coût d'un achat
+## 📝 Exercice 8 : Calculer le coût d`un achat
 **Énoncé :**  
 Tu veux acheter 5 potions de soin. Chaque potion coûte 20 gold.  
 Crée une variable `$prix_potion = 20` et une variable `$quantite = 5`.  
 Calcule le prix total et affiche-le.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Deux variables pour le prix unitaire et la quantité
 - Une variable pour le total
-- L'affichage du montant total
+- L`affichage du montant total
 
 **Exemple de résultat attendu :**
 ```
@@ -1905,10 +1905,10 @@ echo "Le prix total est de $total gold.";
 ## 📝 Exercice 9 : Modifier une variable
 **Énoncé :**  
 Crée une variable `$arme = "Épée"`.  
-Affiche d'abord "Arme équipée : Épée".  
+Affiche d`abord "Arme équipée : Épée".  
 Ensuite, change la valeur de `$arme` en "Arc" et affiche "Arme équipée : Arc".
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable créée puis modifiée
 - Deux affichages différents montrant que la variable a changé
 
@@ -1938,14 +1938,14 @@ echo "Arme équipée : $arme";
 Dans ton jeu de survie, tu as `$bois = 25` et `$pierre = 18`.  
 Calcule le nombre total de ressources dans une variable `$total_ressources` et affiche le résultat.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Trois variables au total
 - Une addition correcte
 - Un message clair avec le résultat
 
 **Exemple de résultat attendu :**
 ```
-J'ai un total de 43 ressources.
+J`ai un total de 43 ressources.
 ```
 
 <details>
@@ -1956,23 +1956,23 @@ J'ai un total de 43 ressources.
 $bois = 25;
 $pierre = 18;
 $total_ressources = $bois + $pierre;
-echo "J'ai un total de $total_ressources ressources.";
+echo "J`ai un total de $total_ressources ressources.";
 ?>
 ```
 </details>
 
 ---
 
-## 📝 Exercice 11 : Calculer l'XP nécessaire pour level-up
+## 📝 Exercice 11 : Calculer l`XP nécessaire pour level-up
 **Énoncé :**  
-Tu veux savoir combien d'XP il te manque pour passer au niveau suivant.  
+Tu veux savoir combien d`XP il te manque pour passer au niveau suivant.  
 Crée les variables suivantes :
 - `$xp_actuel = 750`
 - `$xp_prochain_niveau = 1000`
 
-Calcule l'XP manquant et affiche le résultat.
+Calcule l`XP manquant et affiche le résultat.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Calcul de la différence (XP manquant = XP prochain niveau - XP actuel)
 - Affichage du résultat
 
@@ -2005,7 +2005,7 @@ Crée les variables suivantes :
 
 Calcule ton K/D ratio dans une variable `$kd_ratio` et affiche-le.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Division des kills par les deaths
 - Affichage du ratio
 
@@ -2021,10 +2021,10 @@ Ton K/D ratio est de 3
 <?php
 
 - ✅ Stocker différents types de valeurs (nombres, texte)
-- ✅ Afficher le contenu d'une variable
-- ✅ Modifier la valeur d'une variable
+- ✅ Afficher le contenu d`une variable
+- ✅ Modifier la valeur d`une variable
 - ✅ Faire des calculs avec plusieurs variables
-- ✅ Utiliser les opérateurs d'incrémentation (`++`, `--`)
+- ✅ Utiliser les opérateurs d`incrémentation (`++`, `--`)
 - ✅ Utiliser les opérateurs combinés (`+=`, `-=`, `*=`, `/=`)
 - ✅ Combiner des variables dans des messages
 
@@ -2037,12 +2037,12 @@ Ton K/D ratio est de 3
 **Crée un système de combat simplifié !**
 
 Utilise tout ce que tu as appris pour créer un petit système où :
-1. Ton personnage a des HP, des dégâts d'arme, et un bonus critique
+1. Ton personnage a des HP, des dégâts d`arme, et un bonus critique
 2. Un ennemi a aussi des HP
-3. Tu attaques l'ennemi et tu calcules ses HP restants
+3. Tu attaques l`ennemi et tu calcules ses HP restants
 4. Affiche le résultat du combat
 
-Exemple de code pour t'inspirer :
+Exemple de code pour t`inspirer :
 ```php
 <?php
 // Ton personnage
@@ -2051,7 +2051,7 @@ $hp_joueur = 100;
 $degats_arme = 30;
 $bonus_critique = 15;
 
-// L'ennemi
+// L`ennemi
 $nom_ennemi = "Goblin";
 $hp_ennemi = 80;
 
