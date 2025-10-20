@@ -186,7 +186,7 @@ class PHPHeroApp {
 
         theme.modules.forEach((module, moduleIndex) => {
             const moduleEl = document.createElement('div');
-            moduleEl.className = 'module';
+            moduleEl.className = `module module-${module.id}`;
             moduleEl.innerHTML = `
                 <div class="module-header" onclick="app.toggleModule(${moduleIndex})">
                     <div class="module-title">

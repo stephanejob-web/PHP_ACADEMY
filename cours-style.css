@@ -25,6 +25,18 @@
     --theme-cuisinier: #ef4444;
     --theme-gamer: #8b5cf6;
 
+    /* Module colors - Light theme */
+    --module-intro: #2563eb;
+    --module-intro-light: #dbeafe;
+    --module-bases: #0891b2;
+    --module-bases-light: #cffafe;
+    --module-poo: #7c3aed;
+    --module-poo-light: #ede9fe;
+    --module-database: #059669;
+    --module-database-light: #d1fae5;
+    --module-git: #dc2626;
+    --module-git-light: #fee2e2;
+
     /* Light theme (default) */
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
@@ -55,6 +67,18 @@
     --accent: #ffcb8b;            /* Orange doux */
     --success: #addb67;           /* Vert menthe */
     --danger: #ef5350;            /* Rouge doux */
+
+    /* Module colors - Dark theme */
+    --module-intro: #82aaff;
+    --module-intro-light: #1e3a50;
+    --module-bases: #7fdbca;
+    --module-bases-light: #1e3a50;
+    --module-poo: #c792ea;
+    --module-poo-light: #2a1e3a;
+    --module-database: #addb67;
+    --module-database-light: #1e3a28;
+    --module-git: #f78c6c;
+    --module-git-light: #3a2520;
 
     /* Couleurs pour le code */
     --code-bg: #0b2942;
@@ -334,6 +358,71 @@ var {
 
 .module {
     margin-bottom: 1.5rem;
+    border-left: 3px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+/* Couleurs pour chaque type de module */
+.module-intro {
+    border-left-color: var(--module-intro);
+}
+
+.module-intro .module-header {
+    background: var(--module-intro-light);
+}
+
+.module-intro .module-icon {
+    color: var(--module-intro);
+}
+
+.module-bases {
+    border-left-color: var(--module-bases);
+}
+
+.module-bases .module-header {
+    background: var(--module-bases-light);
+}
+
+.module-bases .module-icon {
+    color: var(--module-bases);
+}
+
+.module-poo {
+    border-left-color: var(--module-poo);
+}
+
+.module-poo .module-header {
+    background: var(--module-poo-light);
+}
+
+.module-poo .module-icon {
+    color: var(--module-poo);
+}
+
+.module-database {
+    border-left-color: var(--module-database);
+}
+
+.module-database .module-header {
+    background: var(--module-database-light);
+}
+
+.module-database .module-icon {
+    color: var(--module-database);
+}
+
+.module-git {
+    border-left-color: var(--module-git);
+}
+
+.module-git .module-header {
+    background: var(--module-git-light);
+}
+
+.module-git .module-icon {
+    color: var(--module-git);
 }
 
 .module-header {
@@ -348,7 +437,8 @@ var {
 }
 
 .module-header:hover {
-    background: var(--border-color);
+    opacity: 0.9;
+    transform: translateX(3px);
 }
 
 .module-title {
@@ -399,10 +489,57 @@ var {
     background: var(--bg-tertiary);
 }
 
+/* Hover coloré pour chaque type de module */
+.module-intro .lesson-item:hover {
+    background: var(--module-intro-light);
+}
+
+.module-bases .lesson-item:hover {
+    background: var(--module-bases-light);
+}
+
+.module-poo .lesson-item:hover {
+    background: var(--module-poo-light);
+}
+
+.module-database .lesson-item:hover {
+    background: var(--module-database-light);
+}
+
+.module-git .lesson-item:hover {
+    background: var(--module-git-light);
+}
+
 .lesson-item.active {
     background: var(--primary);
     color: var(--white);
     border-left-color: var(--primary-dark);
+}
+
+/* Couleurs actives pour chaque type de module */
+.module-intro .lesson-item.active {
+    background: var(--module-intro);
+    border-left-color: var(--module-intro);
+}
+
+.module-bases .lesson-item.active {
+    background: var(--module-bases);
+    border-left-color: var(--module-bases);
+}
+
+.module-poo .lesson-item.active {
+    background: var(--module-poo);
+    border-left-color: var(--module-poo);
+}
+
+.module-database .lesson-item.active {
+    background: var(--module-database);
+    border-left-color: var(--module-database);
+}
+
+.module-git .lesson-item.active {
+    background: var(--module-git);
+    border-left-color: var(--module-git);
 }
 
 .lesson-item.completed::before {
