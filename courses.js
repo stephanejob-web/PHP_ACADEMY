@@ -53,7 +53,13 @@ const coursesData = {
                 lessons: [
                     { id: 'bdd-intro', title: 'C\'est quoi une BDD?', file: '03_BASE_DE_DONNEES/01_apprendre_sql_debutant_c_est_quoi_une_base_de_donnees.md', duration: '20 min' },
                     { id: 'bdd-ajouter', title: 'Ajouter des données', file: '03_BASE_DE_DONNEES/02_apprendre_sql_debutant_ajouter_des_données.md', duration: '25 min' },
-                    { id: 'bdd-modifier', title: 'Modifier des données', file: '03_BASE_DE_DONNEES/03_apprendre_sql_debutant_Modifier_des_données.md', duration: '25 min' }
+                    { id: 'bdd-modifier', title: 'Modifier des données', file: '03_BASE_DE_DONNEES/03_apprendre_sql_debutant_Modifier_des_données.md', duration: '25 min' },
+                    { id: 'bdd-supprimer', title: 'Supprimer des données', file: '03_BASE_DE_DONNEES/04_apprendre_sql_debutant_Supprimer_des_données.md', duration: '25 min' },
+                    { id: 'bdd-lire', title: 'Lire avec précision', file: '03_BASE_DE_DONNEES/05_apprendre_sql_debutant_Lire_avec_precision.md', duration: '30 min' },
+                    { id: 'bdd-trier', title: 'Trier et limiter', file: '03_BASE_DE_DONNEES/06_apprendre_sql_debutant_Trier_et_limiter.md', duration: '25 min' },
+                    { id: 'bdd-relations', title: 'Relations entre tables', file: '03_BASE_DE_DONNEES/07_apprendre_sql_debutant_Relations_entre_tables.md', duration: '30 min' },
+                    { id: 'bdd-join', title: 'Connecter avec JOIN', file: '03_BASE_DE_DONNEES/08_apprendre_sql_debutant_Connecter_avec_JOIN.md', duration: '35 min' },
+                    { id: 'bdd-projet', title: 'Projet Gestion Chantier', file: '03_BASE_DE_DONNEES/09_apprendre_sql_debutant_Projet_Gestion_Chantier.md', duration: '90 min' }
                 ]
             },
             {
