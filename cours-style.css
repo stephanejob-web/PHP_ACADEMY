@@ -41,6 +41,14 @@
     --module-css: #2965f1;
     --module-css-light: #bfdbfe;
 
+    /* Scroll progress bar colors */
+    --scroll-html: #e97528;
+    --scroll-css: #2965f1;
+    --scroll-php: #ef4444;
+    --scroll-poo: #7c3aed;
+    --scroll-sql: #059669;
+    --scroll-git: #64748b;
+
     /* Light theme (default) */
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
@@ -114,6 +122,53 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   SCROLL PROGRESS BAR
+   ======================================== */
+
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 6px;
+    background: var(--scroll-php);
+    z-index: 10000;
+    transition: width 0.1s ease-out, background-color 0.4s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Couleurs selon la section */
+body.cours-html .scroll-progress-bar {
+    background: var(--scroll-html);
+}
+
+body.cours-css .scroll-progress-bar {
+    background: var(--scroll-css);
+}
+
+body.cours-php .scroll-progress-bar,
+body.cours-bases .scroll-progress-bar {
+    background: var(--scroll-php);
+}
+
+body.cours-poo .scroll-progress-bar {
+    background: var(--scroll-poo);
+}
+
+body.cours-sql .scroll-progress-bar,
+body.cours-database .scroll-progress-bar {
+    background: var(--scroll-sql);
+}
+
+body.cours-git .scroll-progress-bar {
+    background: var(--scroll-git);
+}
+
+body.cours-intro .scroll-progress-bar {
+    background: var(--module-intro);
 }
 
 /* Force Inter font on all text elements */
