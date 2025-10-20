@@ -317,6 +317,14 @@ class PHPHeroApp {
 
         // Mettre à jour le bouton "Marquer comme terminé"
         this.updateCompleteButton();
+
+        // Mettre à jour la couleur de la barre de progression
+        if (typeof window.updateScrollProgressColor === 'function') {
+            window.updateScrollProgressColor();
+        }
+
+        // Déclencher un événement personnalisé pour notifier le changement de leçon
+        window.dispatchEvent(new Event('lessonChanged'));
     }
 
     updateNavigationButtons() {
