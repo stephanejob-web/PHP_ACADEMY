@@ -76,7 +76,7 @@ C`est comme une **phrase magique en trois étapes** ✨
 
 ```php
 for (ÉTAPE 1 ; ÉTAPE 2 ; ÉTAPE 3) {
-    // Ce qu'on fait à chaque tour
+    // Ce qu`on fait à chaque tour
 }
 ```
 
@@ -318,7 +318,7 @@ Pas de panique, c`est juste la façon de PHP de dire :
 
 ## 🔙 SUPER IMPORTANT : Compter à l`envers (10, 9, 8, 7...)
 
-### 🚨 C`EST ICI QU'IL FAUT VRAIMENT ÊTRE ATTENTIF ! 🚨
+### 🚨 C`EST ICI QU`IL FAUT VRAIMENT ÊTRE ATTENTIF ! 🚨
 
 Pour compter **à l`envers**, il faut **changer LES TROIS PARTIES** de la boucle :
 
@@ -738,12 +738,12 @@ pour X allant de **1 à 6**.
 
 **Exemple de résultat attendu :**
 ```
-Je range l'outil numéro 1 dans la caisse.
-Je range l'outil numéro 2 dans la caisse.
-Je range l'outil numéro 3 dans la caisse.
-Je range l'outil numéro 4 dans la caisse.
-Je range l'outil numéro 5 dans la caisse.
-Je range l'outil numéro 6 dans la caisse.
+Je range l`outil numéro 1 dans la caisse.
+Je range l`outil numéro 2 dans la caisse.
+Je range l`outil numéro 3 dans la caisse.
+Je range l`outil numéro 4 dans la caisse.
+Je range l`outil numéro 5 dans la caisse.
+Je range l`outil numéro 6 dans la caisse.
 ```
 
 <details>
@@ -752,7 +752,7 @@ Je range l'outil numéro 6 dans la caisse.
 ```php
 <?php
 for ($i = 1; $i <= 6; $i++) {
-    echo "Je range l'outil numéro $i dans la caisse.<br>";
+    echo "Je range l`outil numéro $i dans la caisse.<br>";
 }
 ?>
 ```
@@ -1192,7 +1192,7 @@ Je pose la brique numéro 2
 Je pose la brique numéro 3
 Je pose la brique numéro 4
 Je pose la brique numéro 5
-J'ai posé 5 briques au total.
+J`ai posé 5 briques au total.
 ```
 
 <details>
@@ -1205,7 +1205,7 @@ for ($i = 1; $i <= 5; $i++) {
     echo "Je pose la brique numéro $i<br>";
     $total_briques++;
 }
-echo "J'ai posé $total_briques briques au total.<br>";
+echo "J`ai posé $total_briques briques au total.<br>";
 ?>
 ```
 </details>

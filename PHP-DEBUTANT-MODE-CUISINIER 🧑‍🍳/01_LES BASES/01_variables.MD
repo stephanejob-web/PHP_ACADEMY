@@ -47,12 +47,12 @@ $oeufs = 8;
 $beurre = 6;
 $total = $oeufs + $beurre;
 
-echo "Le total d'ingrédients est $total.";
+echo "Le total d`ingrédients est $total.";
 ```
 
 Résultat :
 ```
-Le total d'ingrédients est 14.
+Le total d`ingrédients est 14.
 ```
 
 💬 Tu viens de dire à ton ordinateur :
@@ -295,7 +295,7 @@ Tu casses des **œufs** pour faire une omelette.
 Chaque fois que tu casses un œuf, tu veux **compter** combien tu en as cassés.
 
 ```php
-$oeufs_casses = 0; // Au début, tu n'as cassé aucun œuf
+$oeufs_casses = 0; // Au début, tu n`as cassé aucun œuf
 
 // Tu casses un œuf
 $oeufs_casses++;
@@ -383,7 +383,7 @@ Le changement se fait **avant** d`utiliser la variable.
 
 ```php
 $bols = 5;
-echo ++$bols; // Ajoute 1 d'abord, puis affiche 6
+echo ++$bols; // Ajoute 1 d`abord, puis affiche 6
 echo $bols;   // Affiche 6
 ```
 
@@ -511,7 +511,7 @@ Affiche le résultat final.
 
 **Exemple de résultat attendu :**
 ```
-J'ai cassé 5 œufs.
+J`ai cassé 5 œufs.
 ```
 
 <details>
@@ -525,7 +525,7 @@ $oeufs_casses++;
 $oeufs_casses++;
 $oeufs_casses++;
 $oeufs_casses++;
-echo "J'ai cassé $oeufs_casses œufs.";
+echo "J`ai cassé $oeufs_casses œufs.";
 ?>
 ```
 </details>
@@ -576,7 +576,7 @@ Affiche le nouveau total.
 
 **Exemple de résultat attendu :**
 ```
-J'ai maintenant 80 œufs.
+J`ai maintenant 80 œufs.
 ```
 
 <details>
@@ -586,7 +586,7 @@ J'ai maintenant 80 œufs.
 <?php
 $oeufs = 50;
 $oeufs += 30;
-echo "J'ai maintenant $oeufs œufs.";
+echo "J`ai maintenant $oeufs œufs.";
 ?>
 ```
 </details>
@@ -659,7 +659,7 @@ Affiche ensuite une phrase complète : "Je m`appelle [prénom] et j`ai [âge] an
 
 **Exemple de résultat attendu :**
 ```
-Je m'appelle Laurent et j'ai 45 ans.
+Je m`appelle Laurent et j`ai 45 ans.
 ```
 
 <details>
@@ -669,7 +669,7 @@ Je m'appelle Laurent et j'ai 45 ans.
 <?php
 $prenom = "Laurent";
 $age = 45;
-echo "Je m'appelle $prenom et j'ai $age ans.";
+echo "Je m`appelle $prenom et j`ai $age ans.";
 ?>
 ```
 </details>
@@ -781,7 +781,7 @@ Calcule le nombre total de paquets dans une variable `$total_paquets` et affiche
 
 **Exemple de résultat attendu :**
 ```
-J'ai un total de 12 paquets en stock.
+J`ai un total de 12 paquets en stock.
 ```
 
 <details>
@@ -792,7 +792,7 @@ J'ai un total de 12 paquets en stock.
 $paquets_farine = 5;
 $paquets_sucre = 7;
 $total_paquets = $paquets_farine + $paquets_sucre;
-echo "J'ai un total de $total_paquets paquets en stock.";
+echo "J`ai un total de $total_paquets paquets en stock.";
 ?>
 ```
 </details>

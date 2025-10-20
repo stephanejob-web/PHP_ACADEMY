@@ -57,7 +57,7 @@ $assiettes_servies = 0;
 
 while ($assiettes_servies < 5) {
     $assiettes_servies++;
-    echo "Je sers l'assiette numéro $assiettes_servies<br>";
+    echo "Je sers l`assiette numéro $assiettes_servies<br>";
 }
 
 echo "Le service est terminé !";
@@ -65,11 +65,11 @@ echo "Le service est terminé !";
 
 **Résultat :**
 ```
-Je sers l'assiette numéro 1
-Je sers l'assiette numéro 2
-Je sers l'assiette numéro 3
-Je sers l'assiette numéro 4
-Je sers l'assiette numéro 5
+Je sers l`assiette numéro 1
+Je sers l`assiette numéro 2
+Je sers l`assiette numéro 3
+Je sers l`assiette numéro 4
+Je sers l`assiette numéro 5
 Le service est terminé !
 ```
 
@@ -83,7 +83,7 @@ $assiettes_servies = 0;
 
 while ($assiettes_servies < 5) {
     $assiettes_servies++;
-    echo "Je sers l'assiette numéro $assiettes_servies<br>";
+    echo "Je sers l`assiette numéro $assiettes_servies<br>";
 }
 ```
 
@@ -159,7 +159,7 @@ Tu utilises `for` quand tu **sais à l`avance** combien de tours tu vas faire.
 ```php
 // Je sais que je vais servir EXACTEMENT 10 assiettes
 for ($i = 1; $i <= 10; $i++) {
-    echo "Je sers l'assiette $i<br>";
+    echo "Je sers l`assiette $i<br>";
 }
 ```
 
@@ -172,7 +172,7 @@ for ($i = 1; $i <= 10; $i++) {
 Tu utilises `while` quand tu ne sais **pas à l`avance** combien de tours tu vas faire.
 
 ```php
-// Je ne sais pas combien de portions il faut, je sers TANT QU'il y a des clients
+// Je ne sais pas combien de portions il faut, je sers TANT QU`il y a des clients
 $portions_servies = 0;
 $clients_en_attente = 15;
 
@@ -210,9 +210,9 @@ $assiettes = 0;
 
 while ($assiettes < 5) {
     echo "Je sers une assiette<br>";
-    // ERREUR : On n'augmente JAMAIS $assiettes !
+    // ERREUR : On n`augmente JAMAIS $assiettes !
 }
-// Cette boucle va tourner à l'infini ! 💥
+// Cette boucle va tourner à l`infini ! 💥
 ```
 
 💬 **Ce qui se passe :**
@@ -231,7 +231,7 @@ $assiettes = 0;
 
 while ($assiettes < 5) {
     $assiettes++; // ✅ ON MODIFIE LA VARIABLE !
-    echo "Je sers l'assiette $assiettes<br>";
+    echo "Je sers l`assiette $assiettes<br>";
 }
 ```
 
@@ -291,7 +291,7 @@ $budget = 100; // euros
 $prix_ingredient = 15;
 $ingredients_achetes = 0;
 
-echo "J'ai $budget euros pour acheter des ingrédients :<br>";
+echo "J`ai $budget euros pour acheter des ingrédients :<br>";
 
 while ($budget >= $prix_ingredient) {
     $budget -= $prix_ingredient;
@@ -299,19 +299,19 @@ while ($budget >= $prix_ingredient) {
     echo "Ingrédient $ingredients_achetes acheté (reste $budget euros)<br>";
 }
 
-echo "Je ne peux plus acheter d'ingrédients ! Il me reste $budget euros.";
+echo "Je ne peux plus acheter d`ingrédients ! Il me reste $budget euros.";
 ```
 
 **Résultat :**
 ```
-J'ai 100 euros pour acheter des ingrédients :
+J`ai 100 euros pour acheter des ingrédients :
 Ingrédient 1 acheté (reste 85 euros)
 Ingrédient 2 acheté (reste 70 euros)
 Ingrédient 3 acheté (reste 55 euros)
 Ingrédient 4 acheté (reste 40 euros)
 Ingrédient 5 acheté (reste 25 euros)
 Ingrédient 6 acheté (reste 10 euros)
-Je ne peux plus acheter d'ingrédients ! Il me reste 10 euros.
+Je ne peux plus acheter d`ingrédients ! Il me reste 10 euros.
 ```
 
 ---
@@ -326,7 +326,7 @@ echo "Je cuis les gâteaux :<br>";
 
 while ($gateaux_cuits < $quantite_voulue) {
     $gateaux_cuits++;
-    echo "J'ai cuit $gateaux_cuits gâteau(x)<br>";
+    echo "J`ai cuit $gateaux_cuits gâteau(x)<br>";
 }
 
 echo "Tous les gâteaux sont cuits ! 🎂";
@@ -335,9 +335,9 @@ echo "Tous les gâteaux sont cuits ! 🎂";
 **Résultat :**
 ```
 Je cuis les gâteaux :
-J'ai cuit 1 gâteau(x)
-J'ai cuit 2 gâteaux
-J'ai cuit 3 gâteaux
+J`ai cuit 1 gâteau(x)
+J`ai cuit 2 gâteaux
+J`ai cuit 3 gâteaux
 Tous les gâteaux sont cuits ! 🎂
 ```
 
@@ -386,7 +386,7 @@ $plats = 0;
 $budget = 50;
 $cout_plat = 12;
 
-echo "Je prépare des plats tant que j'ai du budget ET moins de 10 plats :<br>";
+echo "Je prépare des plats tant que j`ai du budget ET moins de 10 plats :<br>";
 
 while ($plats < 10 && $budget >= $cout_plat) {
     $plats++;
@@ -395,20 +395,20 @@ while ($plats < 10 && $budget >= $cout_plat) {
 }
 
 if ($plats < 10) {
-    echo "Je m'arrête : plus de budget ! 💸";
+    echo "Je m`arrête : plus de budget ! 💸";
 } else {
-    echo "Je m'arrête : j'ai préparé 10 plats ! 🍽️";
+    echo "Je m`arrête : j`ai préparé 10 plats ! 🍽️";
 }
 ```
 
 **Résultat :**
 ```
-Je prépare des plats tant que j'ai du budget ET moins de 10 plats :
+Je prépare des plats tant que j`ai du budget ET moins de 10 plats :
 Plat 1 préparé (reste 38 euros)
 Plat 2 préparé (reste 26 euros)
 Plat 3 préparé (reste 14 euros)
 Plat 4 préparé (reste 2 euros)
-Je m'arrête : plus de budget ! 💸
+Je m`arrête : plus de budget ! 💸
 ```
 
 ---
@@ -501,13 +501,13 @@ Affiche : "Je sers l`assiette numéro X" pour chaque assiette.
 
 **Exemple de résultat attendu :**
 ```
-Je sers l'assiette numéro 1
-Je sers l'assiette numéro 2
-Je sers l'assiette numéro 3
-Je sers l'assiette numéro 4
-Je sers l'assiette numéro 5
-Je sers l'assiette numéro 6
-Je sers l'assiette numéro 7
+Je sers l`assiette numéro 1
+Je sers l`assiette numéro 2
+Je sers l`assiette numéro 3
+Je sers l`assiette numéro 4
+Je sers l`assiette numéro 5
+Je sers l`assiette numéro 6
+Je sers l`assiette numéro 7
 ```
 
 <details>
@@ -519,7 +519,7 @@ $assiettes = 0;
 
 while ($assiettes < 7) {
     $assiettes++;
-    echo "Je sers l'assiette numéro $assiettes<br>";
+    echo "Je sers l`assiette numéro $assiettes<br>";
 }
 ?>
 ```
@@ -659,10 +659,10 @@ Après la boucle : "Tous les gâteaux sont cuits !"
 
 **Exemple de résultat attendu :**
 ```
-J'ai cuit 1 gâteau(x)
-J'ai cuit 2 gâteaux
-J'ai cuit 3 gâteaux
-J'ai cuit 4 gâteaux
+J`ai cuit 1 gâteau(x)
+J`ai cuit 2 gâteaux
+J`ai cuit 3 gâteaux
+J`ai cuit 4 gâteaux
 Tous les gâteaux sont cuits !
 ```
 
@@ -676,7 +676,7 @@ $quantite_voulue = 4;
 
 while ($gateaux_cuits < $quantite_voulue) {
     $gateaux_cuits++;
-    echo "J'ai cuit $gateaux_cuits gâteau(x)<br>";
+    echo "J`ai cuit $gateaux_cuits gâteau(x)<br>";
 }
 
 echo "Tous les gâteaux sont cuits !<br>";
@@ -833,7 +833,7 @@ Plat 3 préparé (reste 55 euros)
 Plat 4 préparé (reste 40 euros)
 Plat 5 préparé (reste 25 euros)
 Plat 6 préparé (reste 10 euros)
-J'ai préparé 6 plats. Il me reste 10 euros.
+J`ai préparé 6 plats. Il me reste 10 euros.
 ```
 
 <details>
@@ -852,7 +852,7 @@ while ($plats < $max_plats && $budget >= $cout) {
     echo "Plat $plats préparé (reste $budget euros)<br>";
 }
 
-echo "J'ai préparé $plats plats. Il me reste $budget euros.<br>";
+echo "J`ai préparé $plats plats. Il me reste $budget euros.<br>";
 ?>
 ```
 </details>

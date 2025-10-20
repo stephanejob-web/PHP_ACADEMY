@@ -366,15 +366,15 @@ Si tu veux juste voir **ce qu`il y a dans les tiroirs** (sans les noms) :
 $ingredients = ["farine", "sucre", "sel"];
 
 foreach ($ingredients as $ingredient) {
-    echo "J'utilise $ingredient<br>";
+    echo "J`utilise $ingredient<br>";
 }
 ```
 
 **Résultat :**
 ```
-J'utilise farine
-J'utilise sucre
-J'utilise sel
+J`utilise farine
+J`utilise sucre
+J`utilise sel
 ```
 
 ---
@@ -408,15 +408,15 @@ $ingredients = [
 ];
 
 foreach ($ingredients as $categorie => $ingredient) {
-    echo "Dans la catégorie $categorie, j'utilise $ingredient.<br>";
+    echo "Dans la catégorie $categorie, j`utilise $ingredient.<br>";
 }
 ```
 
 **Résultat :**
 ```
-Dans la catégorie base, j'utilise farine.
-Dans la catégorie sucre, j'utilise cassonade.
-Dans la catégorie liquide, j'utilise lait.
+Dans la catégorie base, j`utilise farine.
+Dans la catégorie sucre, j`utilise cassonade.
+Dans la catégorie liquide, j`utilise lait.
 ```
 
 ---
@@ -553,12 +553,12 @@ $ingredients = [
     "liquide" => "lait"
 ];
 
-echo "J'ai " . count($ingredients) . " types d'ingrédients.";
+echo "J`ai " . count($ingredients) . " types d`ingrédients.";
 ```
 
 **Résultat :**
 ```
-J'ai 3 types d'ingrédients.
+J`ai 3 types d`ingrédients.
 ```
 
 ---
@@ -816,9 +816,9 @@ Affiche pour chaque ustensile :
 
 **Exemple de résultat attendu :**
 ```
-L'ustensile fouet sert pour mélange.
-L'ustensile spatule sert pour cuisson.
-L'ustensile couteau sert pour découpe.
+L`ustensile fouet sert pour mélange.
+L`ustensile spatule sert pour cuisson.
+L`ustensile couteau sert pour découpe.
 ```
 
 <details>
@@ -833,7 +833,7 @@ $ustensiles = [
 ];
 
 foreach ($ustensiles as $ustensile => $categorie) {
-    echo "L'ustensile $ustensile sert pour $categorie.<br>";
+    echo "L`ustensile $ustensile sert pour $categorie.<br>";
 }
 ?>
 ```
@@ -853,7 +853,7 @@ Compte combien d`ustensiles tu as et affiche :
 
 **Exemple de résultat attendu :**
 ```
-J'ai 3 ustensiles différents.
+J`ai 3 ustensiles différents.
 ```
 
 <details>
@@ -868,7 +868,7 @@ $ustensiles = [
 ];
 
 $nombre = count($ustensiles);
-echo "J'ai $nombre ustensiles différents.";
+echo "J`ai $nombre ustensiles différents.";
 ?>
 ```
 </details>
@@ -937,9 +937,9 @@ Affiche pour chaque élément :
 
 **Exemple de résultat attendu :**
 ```
-J'ai 24 œufs.
-J'ai 5 paquets de farine.
-J'ai 12 bols.
+J`ai 24 œufs.
+J`ai 5 paquets de farine.
+J`ai 12 bols.
 ```
 
 <details>
@@ -954,7 +954,7 @@ $stock = [
 ];
 
 foreach ($stock as $objet => $quantite) {
-    echo "J'ai $quantite $objet.<br>";
+    echo "J`ai $quantite $objet.<br>";
 }
 ?>
 ```

@@ -172,7 +172,7 @@ for ($i = 1; $i <= 10; $i++) {
 Tu utilises `while` quand tu ne sais **pas à l`avance** combien de tours tu vas faire.
 
 ```php
-// Je ne sais pas combien de potions il faut, j'achète TANT QUE j'ai du gold
+// Je ne sais pas combien de potions il faut, j`achète TANT QUE j`ai du gold
 $potions_achetees = 0;
 $gold = 150;
 $prix_potion = 20;
@@ -212,9 +212,9 @@ $mobs = 0;
 
 while ($mobs < 5) {
     echo "Je tue un mob<br>";
-    // ERREUR : On n'augmente JAMAIS $mobs !
+    // ERREUR : On n`augmente JAMAIS $mobs !
 }
-// Cette boucle va tourner à l'infini ! 💥
+// Cette boucle va tourner à l`infini ! 💥
 ```
 
 💬 **Ce qui se passe :**
@@ -293,7 +293,7 @@ $gold = 100; // gold disponible
 $prix_objet = 15;
 $objets_achetes = 0;
 
-echo "J'ai $gold gold pour acheter des objets :<br>";
+echo "J`ai $gold gold pour acheter des objets :<br>";
 
 while ($gold >= $prix_objet) {
     $gold -= $prix_objet;
@@ -301,19 +301,19 @@ while ($gold >= $prix_objet) {
     echo "Objet $objets_achetes acheté (reste $gold gold)<br>";
 }
 
-echo "Je ne peux plus acheter d'objets ! Il me reste $gold gold.";
+echo "Je ne peux plus acheter d`objets ! Il me reste $gold gold.";
 ```
 
 **Résultat :**
 ```
-J'ai 100 gold pour acheter des objets :
+J`ai 100 gold pour acheter des objets :
 Objet 1 acheté (reste 85 gold)
 Objet 2 acheté (reste 70 gold)
 Objet 3 acheté (reste 55 gold)
 Objet 4 acheté (reste 40 gold)
 Objet 5 acheté (reste 25 gold)
 Objet 6 acheté (reste 10 gold)
-Je ne peux plus acheter d'objets ! Il me reste 10 gold.
+Je ne peux plus acheter d`objets ! Il me reste 10 gold.
 ```
 
 ---
@@ -331,7 +331,7 @@ while ($level < $level_max) {
     echo "LEVEL UP ! Je suis maintenant level $level<br>";
 }
 
-echo "J'ai atteint le level max ! 🏆";
+echo "J`ai atteint le level max ! 🏆";
 ```
 
 **Résultat :**
@@ -341,7 +341,7 @@ LEVEL UP ! Je suis maintenant level 2
 LEVEL UP ! Je suis maintenant level 3
 LEVEL UP ! Je suis maintenant level 4
 LEVEL UP ! Je suis maintenant level 5
-J'ai atteint le level max ! 🏆
+J`ai atteint le level max ! 🏆
 ```
 
 ---
@@ -355,10 +355,10 @@ Tu peux aussi utiliser `while` pour compter à l`envers !
 ```php
 $potions_restantes = 5;
 
-echo "J'utilise mes potions :<br>";
+echo "J`utilise mes potions :<br>";
 
 while ($potions_restantes > 0) {
-    echo "J'utilise la potion numéro $potions_restantes<br>";
+    echo "J`utilise la potion numéro $potions_restantes<br>";
     $potions_restantes--; // On descend
 }
 
@@ -367,12 +367,12 @@ echo "Plus de potions !";
 
 **Résultat :**
 ```
-J'utilise mes potions :
-J'utilise la potion numéro 5
-J'utilise la potion numéro 4
-J'utilise la potion numéro 3
-J'utilise la potion numéro 2
-J'utilise la potion numéro 1
+J`utilise mes potions :
+J`utilise la potion numéro 5
+J`utilise la potion numéro 4
+J`utilise la potion numéro 3
+J`utilise la potion numéro 2
+J`utilise la potion numéro 1
 Plus de potions !
 ```
 
@@ -389,7 +389,7 @@ $mobs = 0;
 $mana = 50;
 $cout_spell = 12;
 
-echo "Je farm des mobs tant que j'ai de la mana ET moins de 10 kills :<br>";
+echo "Je farm des mobs tant que j`ai de la mana ET moins de 10 kills :<br>";
 
 while ($mobs < 10 && $mana >= $cout_spell) {
     $mobs++;
@@ -398,20 +398,20 @@ while ($mobs < 10 && $mana >= $cout_spell) {
 }
 
 if ($mobs < 10) {
-    echo "Je m'arrête : plus de mana ! 💙";
+    echo "Je m`arrête : plus de mana ! 💙";
 } else {
-    echo "Je m'arrête : j'ai tué 10 mobs ! 🎯";
+    echo "Je m`arrête : j`ai tué 10 mobs ! 🎯";
 }
 ```
 
 **Résultat :**
 ```
-Je farm des mobs tant que j'ai de la mana ET moins de 10 kills :
+Je farm des mobs tant que j`ai de la mana ET moins de 10 kills :
 Mob 1 tué (reste 38 mana)
 Mob 2 tué (reste 26 mana)
 Mob 3 tué (reste 14 mana)
 Mob 4 tué (reste 2 mana)
-Je m'arrête : plus de mana ! 💙
+Je m`arrête : plus de mana ! 💙
 ```
 
 ---
@@ -702,14 +702,14 @@ Après : "Plus de potions !"
 
 **Exemple de résultat attendu :**
 ```
-J'utilise la potion numéro 8
-J'utilise la potion numéro 7
-J'utilise la potion numéro 6
-J'utilise la potion numéro 5
-J'utilise la potion numéro 4
-J'utilise la potion numéro 3
-J'utilise la potion numéro 2
-J'utilise la potion numéro 1
+J`utilise la potion numéro 8
+J`utilise la potion numéro 7
+J`utilise la potion numéro 6
+J`utilise la potion numéro 5
+J`utilise la potion numéro 4
+J`utilise la potion numéro 3
+J`utilise la potion numéro 2
+J`utilise la potion numéro 1
 Plus de potions !
 ```
 
@@ -721,7 +721,7 @@ Plus de potions !
 $potions = 8;
 
 while ($potions > 0) {
-    echo "J'utilise la potion numéro $potions<br>";
+    echo "J`utilise la potion numéro $potions<br>";
     $potions--;
 }
 
@@ -836,7 +836,7 @@ Objet 3 acheté (reste 55 gold)
 Objet 4 acheté (reste 40 gold)
 Objet 5 acheté (reste 25 gold)
 Objet 6 acheté (reste 10 gold)
-J'ai acheté 6 objets. Il me reste 10 gold.
+J`ai acheté 6 objets. Il me reste 10 gold.
 ```
 
 <details>
@@ -855,7 +855,7 @@ while ($objets < $max_objets && $gold >= $prix) {
     echo "Objet $objets acheté (reste $gold gold)<br>";
 }
 
-echo "J'ai acheté $objets objets. Il me reste $gold gold.<br>";
+echo "J`ai acheté $objets objets. Il me reste $gold gold.<br>";
 ?>
 ```
 </details>

@@ -37,7 +37,7 @@ C`est **OUI ou NON**, point barre.
 | Tu n`as pas de munitions | `false` | Non, c`est faux ❌ |
 
 ```php
-$munitions = true;  // Oui, j'ai des munitions 🔫
+$munitions = true;  // Oui, j`ai des munitions 🔫
 $munitions = false; // Non, je suis à sec ❌
 ```
 
@@ -136,7 +136,7 @@ $munitions = true;
 $hp_suffisants = true;
 
 if ($munitions && $hp_suffisants) {
-    echo "J'attaque le boss ! 💪";
+    echo "J`attaque le boss ! 💪";
 } else {
     echo "Je ne suis pas prêt...";
 }
@@ -303,7 +303,7 @@ if ($hp < 20) {
 $munitions = true;
 $hp_suffisants = true;
 if ($munitions && $hp_suffisants) {
-    echo "J'attaque le boss !";
+    echo "J`attaque le boss !";
 } else {
     echo "Je ne suis pas prêt...";
 }
@@ -349,7 +349,7 @@ $armure = true;
 if ($epee && $armure) {
     echo "Tu peux entrer dans le donjon !";
 } else {
-    echo "Il te manque de l'équipement.";
+    echo "Il te manque de l`équipement.";
 }
 ```
 </details>
@@ -653,7 +653,7 @@ if ($boss_tue && $objet_recupere && $pnj_visite) {
 } else {
     echo "Quête en cours. Il te reste des objectifs à accomplir :<br>";
     if (!$boss_tue) echo "- Vaincre le boss<br>";
-    if (!$objet_recupere) echo "- Récupérer l'objet<br>";
+    if (!$objet_recupere) echo "- Récupérer l`objet<br>";
     if (!$pnj_visite) echo "- Retourner voir le PNJ<br>";
 }
 ```
