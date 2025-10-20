@@ -12,7 +12,7 @@ Comment vous faites pour pas tout casser ?
 Comment vous validez le travail de chacun ?
 Comment les pros bossent dans les studios de jeux ?
 
-Aujourd'hui, tu vas apprendre le workflow des **VRAIS développeurs** ! 🚀
+Aujourd`hui, tu vas apprendre le workflow des **VRAIS développeurs** ! 🚀
 
 ---
 
@@ -27,46 +27,46 @@ Tu développes un jeu avec Marc et Sophie.
 - 👨 **Toi** tu push ton code direct sur main → 💥 **TOUT CASSE !**
 
 **Pourquoi ?**
-Parce que personne n'a vérifié ton code avant !
+Parce que personne n`a vérifié ton code avant !
 
 **Analogie jeu :**
 
-Imagine un raid MMO où chaque joueur fait ce qu'il veut sans stratégie.
+Imagine un raid MMO où chaque joueur fait ce qu`il veut sans stratégie.
 
 - Marc attaque le boss
-- Sophie heal l'équipe
+- Sophie heal l`équipe
 - Toi tu aggro tous les adds... 💥
 
 **Résultat : Wipe total !** 😱
 
 **La solution des pros ?**
 Personne ne push directement sur main.
-Tout le monde crée des branches et demande l'autorisation avant d'intégrer.
+Tout le monde crée des branches et demande l`autorisation avant d`intégrer.
 
-**C'est ça, la Pull Request !** 🔥
+**C`est ça, la Pull Request !** 🔥
 
 ---
 
-## 🎯 C'est quoi une Pull Request (PR) ?
+## 🎯 C`est quoi une Pull Request (PR) ?
 
-Une Pull Request, c'est une **demande de fusion**.
+Une Pull Request, c`est une **demande de fusion**.
 
 **En français :**
-*"Hé chef, j'ai fini mon travail sur ma branche. Tu peux vérifier et l'intégrer à main si c'est OK ?"*
+*"Hé chef, j`ai fini mon travail sur ma branche. Tu peux vérifier et l`intégrer à main si c`est OK ?"*
 
 **Analogie jeu :**
 
 Tu as créé un nouveau niveau sur une save test.
-Avant de l'intégrer au jeu principal, tu appelles le lead designer :
+Avant de l`intégrer au jeu principal, tu appelles le lead designer :
 
-*"Chef ! J'ai fini le niveau 5. Viens le tester avant qu'on l'intègre !"*
+*"Chef ! J`ai fini le niveau 5. Viens le tester avant qu`on l`intègre !"*
 
 Le chef vient, teste, et dit :
 
-- ✅ "Nickel ! On l'intègre au jeu !"
-- ❌ "Non, refais le design du boss d'abord"
+- ✅ "Nickel ! On l`intègre au jeu !"
+- ❌ "Non, refais le design du boss d`abord"
 
-**Avec Git, c'est exactement pareil !**
+**Avec Git, c`est exactement pareil !**
 
 ---
 
@@ -104,7 +104,7 @@ git commit -m "Ajout du système de combat avec combos"
 git push origin ajout-systeme-combat
 ```
 
-**Traduction :** "J'envoie ma save test sur le cloud"
+**Traduction :** "J`envoie ma save test sur le cloud"
 
 **Résultat :**
 Ta branche est maintenant sur GitHub, mais PAS encore sur main.
@@ -121,7 +121,7 @@ Ta branche est maintenant sur GitHub, mais PAS encore sur main.
 4. Écris un message : "Ajout du système de combat avec combos"
 5. Clique sur **Create pull request**
 
-**Traduction :** *"Chef, j'ai fini ! Tu peux tester mon niveau ?"*
+**Traduction :** *"Chef, j`ai fini ! Tu peux tester mon niveau ?"*
 
 ---
 
@@ -131,11 +131,11 @@ Le chef (ou un coéquipier) va :
 
 - 👀 Tester ton code
 - 💬 Laisser des commentaires : "Change les dégâts", "Ajoute un cooldown"
-- ✅ Approuver si c'est bon
+- ✅ Approuver si c`est bon
 - ❌ Demander des modifications si besoin
 
 **Analogie jeu :**
-Le lead tester vérifie que le niveau est jouable avant de l'intégrer au jeu final.
+Le lead tester vérifie que le niveau est jouable avant de l`intégrer au jeu final.
 
 ---
 
@@ -223,13 +223,13 @@ Ajout d'un footer en bas de page avec :
 
 6. Clique sur **Create pull request**
 
-**C'est fait ! Ta PR est créée !** 🎉
+**C`est fait ! Ta PR est créée !** 🎉
 
 ---
 
 ### Étape 5 : Attendre la review
 
-Maintenant, tu attends que quelqu'un (ton chef, un coéquipier) :
+Maintenant, tu attends que quelqu`un (ton chef, un coéquipier) :
 
 - 👀 Regarde ton code
 - 💬 Laisse des commentaires
@@ -239,23 +239,23 @@ Dans un vrai projet, tu peux :
 
 - Répondre aux commentaires
 - Faire des modifications si demandé
-- Pousser de nouveaux commits sur ta branche (ils s'ajoutent automatiquement à la PR)
+- Pousser de nouveaux commits sur ta branche (ils s`ajoutent automatiquement à la PR)
 
 ---
 
 ### Étape 6 : Merger la PR
 
-Une fois approuvée, quelqu'un (souvent toi ou ton chef) clique sur **Merge pull request**.
+Une fois approuvée, quelqu`un (souvent toi ou ton chef) clique sur **Merge pull request**.
 
 **Choix possibles :**
 
-- **Merge commit** : Garde l'historique complet (recommandé pour débuter)
+- **Merge commit** : Garde l`historique complet (recommandé pour débuter)
 - **Squash and merge** : Combine tous les commits en un seul
-- **Rebase and merge** : Réécrit l'historique (avancé)
+- **Rebase and merge** : Réécrit l`historique (avancé)
 
 Choisis **"Merge commit"** pour commencer.
 
-**C'est bon ! Ton footer est maintenant dans main !** 🎉
+**C`est bon ! Ton footer est maintenant dans main !** 🎉
 
 ---
 
@@ -285,16 +285,16 @@ git branch -d ajout-footer
 Imagine : tu veux contribuer à un jeu open source (comme Godot, Unity Scripts, etc.).
 
 **Problème :**
-Tu n'as pas les droits d'écriture sur le projet.
+Tu n`as pas les droits d`écriture sur le projet.
 
 **Solution : Le FORK !** 🍴
 
-### C'est quoi un Fork ?
+### C`est quoi un Fork ?
 
-Un fork, c'est une **copie d'un projet** dans ton compte GitHub.
+Un fork, c`est une **copie d`un projet** dans ton compte GitHub.
 
 **Analogie jeu :**
-C'est comme si tu copiais un mod de jeu, tu le modifies, et tu proposes tes améliorations à l'auteur original.
+C`est comme si tu copiais un mod de jeu, tu le modifies, et tu proposes tes améliorations à l`auteur original.
 
 ### Comment ça marche ?
 
@@ -344,13 +344,13 @@ git push origin correction-bug-menu
 5. Clique sur **Create pull request**
 
 **Résultat :**
-Les mainteneurs du projet original vont voir ta PR et décider de l'accepter ou non ! 🎉
+Les mainteneurs du projet original vont voir ta PR et décider de l`accepter ou non ! 🎉
 
-**C'est comme ça qu'on contribue à Linux, WordPress, React, etc. !** 🌍
+**C`est comme ça qu`on contribue à Linux, WordPress, React, etc. !** 🌍
 
 ---
 
-## ✅ Les règles d'or du jeu en équipe
+## ✅ Les règles d`or du jeu en équipe
 
 ### Règle 1 : Jamais push direct sur main 🚫
 
@@ -382,8 +382,8 @@ Ne fais pas niveau + armes + ennemis en même temps !
 Une bonne description de PR contient :
 
 - 📋 Ce que tu as fait
-- 🎯 Pourquoi tu l'as fait
-- 🖼️ Des screenshots si c'est visuel
+- 🎯 Pourquoi tu l`as fait
+- 🖼️ Des screenshots si c`est visuel
 - ✅ Une checklist si besoin
 
 **Exemple :**
@@ -414,14 +414,14 @@ Les joueurs demandaient plus de profondeur dans le gameplay.
 
 ### Règle 4 : Review le code des autres 👀
 
-Quand quelqu'un crée une PR, prends le temps de :
+Quand quelqu`un crée une PR, prends le temps de :
 
 - 👀 Tester son code
 - 💬 Laisser des commentaires constructifs
-- ✅ Approuver si c'est bon
+- ✅ Approuver si c`est bon
 
 **Ne sois pas toxique !**
-Sois constructif : *"GG ! Peut-être qu'on pourrait améliorer cette fonction comme ça..."*
+Sois constructif : *"GG ! Peut-être qu`on pourrait améliorer cette fonction comme ça..."*
 
 ---
 
@@ -479,7 +479,7 @@ Sois constructif : *"GG ! Peut-être qu'on pourrait améliorer cette fonction co
    - `git pull`
    - `git branch -d ajout-projets`
 
-**🎉 Si t'as réussi, t'es un DEV PRO NIVEAU STUDIO !** 💪🔥
+**🎉 Si t`as réussi, t`es un DEV PRO NIVEAU STUDIO !** 💪🔥
 
 ---
 
@@ -491,7 +491,7 @@ Sois constructif : *"GG ! Peut-être qu'on pourrait améliorer cette fonction co
 | 2 | Code + `git commit` | PC | Travailler |
 | 3 | `git push origin ma-branche` | PC | Envoyer sur GitHub |
 | 4 | Create Pull Request | GitHub | Demander la fusion |
-| 5 | Review & Comments | GitHub | Vérification par l'équipe |
+| 5 | Review & Comments | GitHub | Vérification par l`équipe |
 | 6 | Merge PR | GitHub | Intégrer dans main |
 | 7 | `git pull` sur main | PC | Récupérer la version à jour |
 
@@ -534,11 +534,11 @@ Tu maîtrises maintenant :
 
 - Utilise GitHub comme ton portfolio
 - Les recruteurs regardent ton profil GitHub !
-- Plus tu as de projets, mieux c'est
+- Plus tu as de projets, mieux c`est
 
 ### 🔥 Concepts avancés (quand tu seras prêt)
 
-- `git rebase` : Réécrire l'historique
+- `git rebase` : Réécrire l`historique
 - `git cherry-pick` : Récupérer un commit précis
 - `git stash` : Mettre de côté du travail en cours
 - GitHub Actions : Automatiser les tests

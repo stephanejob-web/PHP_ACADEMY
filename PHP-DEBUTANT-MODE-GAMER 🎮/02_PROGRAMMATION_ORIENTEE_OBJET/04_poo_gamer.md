@@ -2,7 +2,7 @@
 
 ## 🕹️ Salut le gamer !
 
-Jusqu'à maintenant, pour spawner un personnage, tu faisais comment ?
+Jusqu`à maintenant, pour spawner un personnage, tu faisais comment ?
 
 ```php
 $guerrier = new Personnage();
@@ -18,21 +18,21 @@ $guerrier->niveau = 5;
 
 Et si tu dois spawner 10 personnages ? **70 lignes !**
 
-C'est **LOURD**, non ?
+C`est **LOURD**, non ?
 
-Aujourd'hui, on va voir comment faire **TOUT ÇA en UNE SEULE LIGNE** ! 🔥
+Aujourd`hui, on va voir comment faire **TOUT ÇA en UNE SEULE LIGNE** ! 🔥
 
 ---
 
-## 🤔 Le constructeur, c'est quoi ?
+## 🤔 Le constructeur, c`est quoi ?
 
-Le **constructeur**, c'est une méthode **spéciale** qui s'exécute **AUTOMATIQUEMENT** quand tu spawnes un personnage.
+Le **constructeur**, c`est une méthode **spéciale** qui s`exécute **AUTOMATIQUEMENT** quand tu spawnes un personnage.
 
 **Imagine :**
 
 ❌ **Avant (méthode longue)** :
 - "OK, je spawn un guerrier."
-- "Comment il s'appelle ?"
+- "Comment il s`appelle ?"
 - "Thorin."
 - "Combien de PV ?"
 - "120."
@@ -129,13 +129,13 @@ echo "Personnage : " . $guerrier->nom;
 public function __construct($n, $pv, $f, $arme) {
 ```
 
-**`public`** → Visible par tout le monde (comme d'habitude)
+**`public`** → Visible par tout le monde (comme d`habitude)
 
-**`function`** → C'est une méthode (tu connais)
+**`function`** → C`est une méthode (tu connais)
 
 **`__construct`** → **LE NOM MAGIQUE !**  
 ⚠️ **ATTENTION** : Ce nom est **OBLIGATOIRE** et ne change JAMAIS !  
-C'est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
+C`est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
 
 **`($n, $pv, $f, $arme)`** → Les **paramètres** que tu vas donner lors du spawn
 - `$n` = nom
@@ -143,13 +143,13 @@ C'est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
 - `$f` = force
 - `$arme` = arme
 
-*Tu peux les nommer comme tu veux : `$nom`, `$points_vie`, `$force`... Mais des noms courts, c'est plus rapide à écrire !*
+*Tu peux les nommer comme tu veux : `$nom`, `$points_vie`, `$force`... Mais des noms courts, c`est plus rapide à écrire !*
 
 **`{`** → Le début du constructeur
 
 ---
 
-### Le code à l'intérieur :
+### Le code à l`intérieur :
 
 ```php
     $this->nom = $n;
@@ -189,7 +189,7 @@ C'est **TOUJOURS** `__construct` (avec **2 underscores** au début !)
 $guerrier = new Personnage("Thorin", 120, 30, "Épée légendaire");
 ```
 
-**Voici ce qui se passe dans l'ordre :**
+**Voici ce qui se passe dans l`ordre :**
 
 1. PHP crée un nouveau personnage `Personnage`
 2. PHP voit que tu as donné 4 valeurs : `"Thorin"`, `120`, `30`, `"Épée légendaire"`
@@ -249,13 +249,13 @@ $perso3 = new Personnage("Legolas", 100, 20, "Arc");
 
 **3 lignes** pour spawner 3 personnages ! 🎉
 
-**C'est 5 fois plus court !**
+**C`est 5 fois plus court !**
 
 ---
 
 ## 💡 Exemple complet avec méthodes
 
-On peut combiner le constructeur avec les méthodes qu'on a vues au cours 03 !
+On peut combiner le constructeur avec les méthodes qu`on a vues au cours 03 !
 
 ```php
 <?php
@@ -345,7 +345,7 @@ Gandalf attaque avec Bâton magique ! ⚔️ (10 dégâts)
 Legolas attaque avec Arc elfique ! ⚔️ (20 dégâts)
 ```
 
-**Regarde comme c'est propre et rapide !** 😎
+**Regarde comme c`est propre et rapide !** 😎
 
 ---
 
@@ -437,7 +437,7 @@ $guerrier = new Personnage("Thorin", 120, 30, "Épée");
 
 ---
 
-### Erreur 3 : Se tromper dans l'ordre
+### Erreur 3 : Se tromper dans l`ordre
 
 Les paramètres sont dans un **ordre précis** !
 
@@ -546,9 +546,9 @@ $dragon->attaquer();
 
 ## 🧠 Ce que tu DOIS retenir de ce cours
 
-✅ **Le constructeur s'appelle TOUJOURS `__construct`** (avec 2 underscores !)
+✅ **Le constructeur s`appelle TOUJOURS `__construct`** (avec 2 underscores !)
 
-✅ **Il s'exécute AUTOMATIQUEMENT** quand tu spawnes un personnage
+✅ **Il s`exécute AUTOMATIQUEMENT** quand tu spawnes un personnage
 
 ✅ **Il permet de spawner un personnage en 1 ligne** au lieu de 7
 
@@ -556,7 +556,7 @@ $dragon->attaquer();
 
 ✅ **Tu peux mettre des valeurs par défaut** : `__construct($n, $pv, $f, $arme, $niv = 1)`
 
-✅ **L'ordre des paramètres est important !**
+✅ **L`ordre des paramètres est important !**
 
 ---
 
@@ -575,29 +575,29 @@ $dragon->attaquer();
 
 ## ⏭️ Dans le prochain cours...
 
-Tu vas apprendre **L'HÉRITAGE** !
+Tu vas apprendre **L`HÉRITAGE** !
 
-**C'est quoi ?**
+**C`est quoi ?**
 
-Créer des classes qui **héritent** d'autres classes !
+Créer des classes qui **héritent** d`autres classes !
 
 **Exemple :**
 - Tu as une classe `Personnage`
 - Tu crées une classe `Guerrier` qui hérite de `Personnage`
 - `Guerrier` a **TOUT** ce que `Personnage` a, **PLUS** des trucs en plus (rage, armure lourde...) !
 
-C'est comme un système de classes dans un RPG : Personnage → Guerrier / Mage / Archer ! 🎮
+C`est comme un système de classes dans un RPG : Personnage → Guerrier / Mage / Archer ! 🎮
 
 **Tu vas adorer !** 🚀
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE** !
+Mais pour l`instant, **FAIS L`EXERCICE** !
 
-Le constructeur est **SUPER IMPORTANT**. Tu vas l'utiliser **TOUT LE TEMPS** en POO.
+Le constructeur est **SUPER IMPORTANT**. Tu vas l`utiliser **TOUT LE TEMPS** en POO.
 
 ---
 
 **🎮 Bravo, tu progresses vraiment bien !**
 
-*PS : Si tu as réussi l'exercice, GG ! Tu mérites une pause gaming ! 🎯*
+*PS : Si tu as réussi l`exercice, GG ! Tu mérites une pause gaming ! 🎯*

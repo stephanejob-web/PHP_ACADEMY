@@ -12,10 +12,10 @@ Dessus, tu poses tout ce dont tu as besoin pour ta recette :
 Mais pour ne pas te perdre, tu **mets une étiquette devant chaque chose** :
 > "Œufs", "Beurre", "Recette", "Coût par portion"…
 
-Ainsi, quand tu veux quelque chose, tu n'as pas besoin de réfléchir :
-tu regardes l'étiquette et tu trouves **directement** ce que tu veux.
+Ainsi, quand tu veux quelque chose, tu n`as pas besoin de réfléchir :
+tu regardes l`étiquette et tu trouves **directement** ce que tu veux.
 
-💬 En PHP, c'est pareil :
+💬 En PHP, c`est pareil :
 - Chaque **étiquette** correspond à un **nom de variable**.
 - Chaque **ingrédient sur le plan de travail** correspond à une **valeur**.
 
@@ -37,9 +37,9 @@ Chaque fois que tu crées une variable, il pose la valeur sur sa table et colle 
 
 ---
 
-## 💡 Pourquoi c'est utile
+## 💡 Pourquoi c`est utile
 
-Si tu veux calculer le coût d'une recette, tu n'as pas besoin de tout retenir dans ta tête.
+Si tu veux calculer le coût d`une recette, tu n`as pas besoin de tout retenir dans ta tête.
 Tu peux **réutiliser les étiquettes** autant que tu veux :
 
 ```php
@@ -63,7 +63,7 @@ Le total d'ingrédients est 14.
 ## 🧰 1️⃣ Créer une variable
 
 Chaque variable commence **toujours** par `$` en PHP.
-C'est comme si tu mettais une étiquette sur ton plan de travail.
+C`est comme si tu mettais une étiquette sur ton plan de travail.
 
 ```php
 $client = "Dubois";
@@ -82,7 +82,7 @@ $cout_portion = 4;
 
 ## 🧮 2️⃣ Utiliser une variable
 
-Tu veux lire ce qu'il y a sur une étiquette ?
+Tu veux lire ce qu`il y a sur une étiquette ?
 Tu appelles simplement son nom :
 ```php
 echo $client;
@@ -93,11 +93,11 @@ Résultat :
 Dubois
 ```
 
-💬 Ton ordinateur regarde sur sa table, trouve l'étiquette "client" et lit ce qu'il y a devant.
+💬 Ton ordinateur regarde sur sa table, trouve l`étiquette "client" et lit ce qu`il y a devant.
 
 ---
 
-## 🔁 3️⃣ Changer la valeur d'une variable
+## 🔁 3️⃣ Changer la valeur d`une variable
 
 Tu veux remplacer le nom du client ?
 Pas besoin de refaire la table — tu **remplaces juste la valeur** :
@@ -106,24 +106,24 @@ Pas besoin de refaire la table — tu **remplaces juste la valeur** :
 $client = "Martin";
 ```
 
-💬 L'étiquette reste la même, mais ce qu'il y a devant change.
+💬 L`étiquette reste la même, mais ce qu`il y a devant change.
 
 ---
 
 ## 🍳 4️⃣ Pourquoi "variable" ?
 
 Parce que son **contenu peut varier**.
-Tu peux **changer ce qu'il y a dessus** sans changer le nom.
+Tu peux **changer ce qu`il y a dessus** sans changer le nom.
 
-C'est comme si tu avais une étiquette "bol" sur ton plan de travail :
+C`est comme si tu avais une étiquette "bol" sur ton plan de travail :
 parfois tu y mets de la farine, parfois du sucre.
-Mais l'étiquette, elle, reste "bol".
+Mais l`étiquette, elle, reste "bol".
 
 ---
 
 ## ⚙️ 5️⃣ Exemple concret
 
-Tu veux calculer le coût d'un plat pour un événement :
+Tu veux calculer le coût d`un plat pour un événement :
 ```php
 $portions = 5;
 $personnes_par_table = 2;
@@ -151,15 +151,15 @@ et PHP fait le calcul pour toi.
 |----------------|-------------------|--------|
 | Tu poses un ingrédient sur ton plan de travail | Tu ranges une donnée | Tu crées une variable |
 | Tu mets une étiquette dessus | Tu donnes un nom | Tu écris `$nom = valeur;` |
-| Tu lis l'étiquette | Tu veux savoir ce que c'est | Tu fais `echo $nom;` |
+| Tu lis l`étiquette | Tu veux savoir ce que c`est | Tu fais `echo $nom;` |
 | Tu remplaces le contenu | Tu changes la valeur | Tu réassignes `$nom = ...` |
 
 ---
 
 ## 💬 Phrase à retenir :
-> Une variable, c'est comme une **étiquette sur ton plan de travail**.
-> Tu peux y poser n'importe quelle valeur, la changer quand tu veux,
-> et ton ordinateur s'en souviendra jusqu'à la fin du service.
+> Une variable, c`est comme une **étiquette sur ton plan de travail**.
+> Tu peux y poser n`importe quelle valeur, la changer quand tu veux,
+> et ton ordinateur s`en souviendra jusqu`à la fin du service.
 
 ---
 
@@ -180,12 +180,12 @@ $total = $bols_matin + $bols_aprem;
 echo $total; // Affiche 8
 ```
 
-💬 **Dans la vraie vie :** Tu avais 5 bols le matin, tu en sors 3 l'après-midi → tu as 8 bols au total.
+💬 **Dans la vraie vie :** Tu avais 5 bols le matin, tu en sors 3 l`après-midi → tu as 8 bols au total.
 
 ---
 
 ### ➖ Soustraction : `-`
-Pour **enlever** une valeur d'une autre.
+Pour **enlever** une valeur d`une autre.
 
 ```php
 $bols_debut = 10;
@@ -194,7 +194,7 @@ $bols_restants = $bols_debut - $bols_utilises;
 echo $bols_restants; // Affiche 6
 ```
 
-💬 **Dans la vraie vie :** Tu avais 10 bols, tu en utilises 4 → il t'en reste 6.
+💬 **Dans la vraie vie :** Tu avais 10 bols, tu en utilises 4 → il t`en reste 6.
 
 ---
 
@@ -226,22 +226,22 @@ echo $budget_par_jour; // Affiche 200
 
 ---
 
-## 🎯 Les Opérateurs d'Incrémentation (++, --)
+## 🎯 Les Opérateurs d`Incrémentation (++, --)
 
 ### 🧂 Imagine une étagère à épices dans ta cuisine
 
 Tu es devant une **étagère à épices** avec des niveaux numérotés.
 Chaque niveau représente un **numéro** : 1, 2, 3, 4, 5...
 
-**L'opérateur `++`** = **Monter d'un niveau** 🔼
-**L'opérateur `--`** = **Descendre d'un niveau** 🔽
+**L`opérateur `++`** = **Monter d`un niveau** 🔼
+**L`opérateur `--`** = **Descendre d`un niveau** 🔽
 
 ---
 
-### 📈 L'opérateur `++` (Incrémenter = Ajouter 1)
+### 📈 L`opérateur `++` (Incrémenter = Ajouter 1)
 
 Imagine que tu comptes tes **bols** en cuisine.
-Tu en as **3**, puis ton commis t'en apporte **1 de plus**.
+Tu en as **3**, puis ton commis t`en apporte **1 de plus**.
 
 **Méthode longue :**
 ```php
@@ -258,13 +258,13 @@ echo $bols; // Affiche 4
 ```
 
 💬 **En langage cuisinier :**
-> "J'avais 3 bols, j'en reçois 1 → `$bols++` → j'ai maintenant 4 bols."
+> "J`avais 3 bols, j`en reçois 1 → `$bols++` → j`ai maintenant 4 bols."
 
 🧠 **À retenir :** `$bols++` veut dire "ajoute 1 à `$bols`".
 
 ---
 
-### 📉 L'opérateur `--` (Décrémenter = Enlever 1)
+### 📉 L`opérateur `--` (Décrémenter = Enlever 1)
 
 Maintenant, tu **utilises** un bol. Tu passes de **4 bols à 3 bols**.
 
@@ -283,7 +283,7 @@ echo $bols; // Affiche 3
 ```
 
 💬 **En langage cuisinier :**
-> "J'avais 4 bols, j'en utilise 1 → `$bols--` → il m'en reste 3."
+> "J`avais 4 bols, j`en utilise 1 → `$bols--` → il m`en reste 3."
 
 🧠 **À retenir :** `$bols--` veut dire "enlève 1 à `$bols`".
 
@@ -316,7 +316,7 @@ echo "Œufs cassés : $oeufs_casses<br>"; // Affiche 3
 - Après `$oeufs_casses++` : `$oeufs_casses = 2`
 - Après `$oeufs_casses++` : `$oeufs_casses = 3`
 
-🧠 **C'est comme si tu montais l'étagère niveau par niveau !**
+🧠 **C`est comme si tu montais l`étagère niveau par niveau !**
 
 ---
 
@@ -347,7 +347,7 @@ echo "Portions restantes : $portions_restantes<br>"; // Affiche 7
 - Après `$portions_restantes--` : `$portions_restantes = 8`
 - Après `$portions_restantes--` : `$portions_restantes = 7`
 
-🧠 **C'est comme si tu descendais l'étagère niveau par niveau !**
+🧠 **C`est comme si tu descendais l`étagère niveau par niveau !**
 
 ---
 
@@ -355,14 +355,14 @@ echo "Portions restantes : $portions_restantes<br>"; // Affiche 7
 
 | Opérateur | Signification | Exemple | Résultat |
 |-----------|---------------|---------|----------|
-| `++` | Ajoute 1 (monte d'un niveau) | `$x = 5; $x++;` | `$x` vaut maintenant **6** |
-| `--` | Enlève 1 (descend d'un niveau) | `$x = 5; $x--;` | `$x` vaut maintenant **4** |
+| `++` | Ajoute 1 (monte d`un niveau) | `$x = 5; $x++;` | `$x` vaut maintenant **6** |
+| `--` | Enlève 1 (descend d`un niveau) | `$x = 5; $x--;` | `$x` vaut maintenant **4** |
 
 ---
 
 ### ⚠️ Attention : Avant ou Après ?
 
-Il y a **deux façons** d'utiliser `++` et `--` :
+Il y a **deux façons** d`utiliser `++` et `--` :
 
 #### 🔵 Après la variable : `$x++` ou `$x--`
 Le changement se fait **après** avoir utilisé la variable.
@@ -374,12 +374,12 @@ echo $bols;   // Affiche 6
 ```
 
 💬 **En langage cuisinier :**
-> "Regarde combien j'ai de bols (5), **puis** ajoute-en 1."
+> "Regarde combien j`ai de bols (5), **puis** ajoute-en 1."
 
 ---
 
 #### 🔴 Avant la variable : `++$x` ou `--$x`
-Le changement se fait **avant** d'utiliser la variable.
+Le changement se fait **avant** d`utiliser la variable.
 
 ```php
 $bols = 5;
@@ -388,21 +388,21 @@ echo $bols;   // Affiche 6
 ```
 
 💬 **En langage cuisinier :**
-> "Ajoute-en 1 **d'abord**, puis regarde combien j'en ai (6)."
+> "Ajoute-en 1 **d`abord**, puis regarde combien j`en ai (6)."
 
 ---
 
 ### 🧠 Astuce pour retenir
 
 🧂 **Imagine ton étagère à épices :**
-- `$bols++` → "Je compte d'abord où je suis (5), **puis** je monte d'un niveau (6)"
-- `++$bols` → "Je monte d'un niveau **d'abord** (6), puis je regarde où je suis"
+- `$bols++` → "Je compte d`abord où je suis (5), **puis** je monte d`un niveau (6)"
+- `++$bols` → "Je monte d`un niveau **d`abord** (6), puis je regarde où je suis"
 
 👉 **Dans 95% des cas, tu utiliseras `$bols++` ou `$bols--`** (après la variable).
 
 ---
 
-## 🔗 Les Opérateurs d'Affectation Combinés
+## 🔗 Les Opérateurs d`Affectation Combinés
 
 ### 🧰 Les raccourcis pour les calculs
 
@@ -424,7 +424,7 @@ $bols += 3; // Pareil que $bols = $bols + 3
 echo $bols; // Affiche 8
 ```
 
-💬 **En langage cuisinier :** "J'avais 5 bols, on m'en livre 3 → `$bols += 3` → j'en ai 8 maintenant."
+💬 **En langage cuisinier :** "J`avais 5 bols, on m`en livre 3 → `$bols += 3` → j`en ai 8 maintenant."
 
 ---
 
@@ -436,7 +436,7 @@ $oeufs -= 20; // Pareil que $oeufs = $oeufs - 20
 echo $oeufs; // Affiche 80
 ```
 
-💬 **En langage cuisinier :** "J'avais 100 œufs, j'en utilise 20 → il m'en reste 80."
+💬 **En langage cuisinier :** "J`avais 100 œufs, j`en utilise 20 → il m`en reste 80."
 
 ---
 
@@ -460,7 +460,7 @@ $budget /= 2; // Pareil que $budget = $budget / 2
 echo $budget; // Affiche 500
 ```
 
-💬 **En langage cuisinier :** "J'avais 1000€, je le partage en 2 → j'ai 500€ de chaque côté."
+💬 **En langage cuisinier :** "J`avais 1000€, je le partage en 2 → j`ai 500€ de chaque côté."
 
 ---
 
@@ -485,29 +485,29 @@ echo $budget; // Affiche 500
 
 | Action | Opérateur | Ce que ça fait |
 |--------|-----------|----------------|
-| Monter d'un niveau (ajouter 1) | `$bols++` | Tu passes de 5 à 6 bols |
-| Descendre d'un niveau (enlever 1) | `$bols--` | Tu passes de 5 à 4 bols |
+| Monter d`un niveau (ajouter 1) | `$bols++` | Tu passes de 5 à 6 bols |
+| Descendre d`un niveau (enlever 1) | `$bols--` | Tu passes de 5 à 4 bols |
 | Ajouter plusieurs niveaux | `$bols += 3` | Tu passes de 5 à 8 bols |
 | Enlever plusieurs niveaux | `$bols -= 2` | Tu passes de 5 à 3 bols |
 
 🧠 **Phrase à retenir :**
 > `++` et `--` sont comme **monter ou descendre une étagère, un niveau à la fois**.
-> C'est le moyen le plus rapide d'ajouter ou d'enlever 1 !
+> C`est le moyen le plus rapide d`ajouter ou d`enlever 1 !
 
 ---
 
 # 🧪 Exercices Pratiques
 
-## 📝 Exercice 1 : Comprendre l'incrémentation
+## 📝 Exercice 1 : Comprendre l`incrémentation
 **Énoncé :**
 Tu commences ta journée avec `$oeufs_casses = 0`.
-Utilise l'opérateur `++` pour incrémenter cette variable **5 fois** (comme si tu cassais 5 œufs).
+Utilise l`opérateur `++` pour incrémenter cette variable **5 fois** (comme si tu cassais 5 œufs).
 Affiche le résultat final.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable initialisée à 0
 - Utilisation de `++` cinq fois
-- L'affichage du nombre final d'œufs cassés
+- L`affichage du nombre final d`œufs cassés
 
 **Exemple de résultat attendu :**
 ```
@@ -535,13 +535,13 @@ echo "J'ai cassé $oeufs_casses œufs.";
 ## 📝 Exercice 2 : Comprendre la décrémentation
 **Énoncé :**
 Tu as `$portions_restantes = 10` au début du service.
-Utilise l'opérateur `--` pour décrémenter cette variable **3 fois** (comme si tu servais 3 portions).
+Utilise l`opérateur `--` pour décrémenter cette variable **3 fois** (comme si tu servais 3 portions).
 Affiche combien de portions il te reste.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable initialisée à 10
 - Utilisation de `--` trois fois
-- L'affichage du nombre de portions restantes
+- L`affichage du nombre de portions restantes
 
 **Exemple de résultat attendu :**
 ```
@@ -567,12 +567,12 @@ echo "Il me reste $portions_restantes portions.";
 ## 📝 Exercice 3 : Utiliser +=
 **Énoncé :**
 Tu as `$oeufs = 50` œufs dans ta cuisine.
-Un fournisseur t'en livre 30 de plus. Utilise l'opérateur `+=` pour ajouter ces œufs.
+Un fournisseur t`en livre 30 de plus. Utilise l`opérateur `+=` pour ajouter ces œufs.
 Affiche le nouveau total.
 
-**Ce qu'on attend :**
-- Utilisation de l'opérateur `+=`
-- L'affichage du total après livraison
+**Ce qu`on attend :**
+- Utilisation de l`opérateur `+=`
+- L`affichage du total après livraison
 
 **Exemple de résultat attendu :**
 ```
@@ -596,12 +596,12 @@ echo "J'ai maintenant $oeufs œufs.";
 ## 📝 Exercice 4 : Utiliser -=
 **Énoncé :**
 Tu as `$budget = 500` euros.
-Tu achètes des ingrédients pour 150 euros. Utilise l'opérateur `-=` pour soustraire cette dépense.
+Tu achètes des ingrédients pour 150 euros. Utilise l`opérateur `-=` pour soustraire cette dépense.
 Affiche le budget restant.
 
-**Ce qu'on attend :**
-- Utilisation de l'opérateur `-=`
-- L'affichage du budget après achat
+**Ce qu`on attend :**
+- Utilisation de l`opérateur `-=`
+- L`affichage du budget après achat
 
 **Exemple de résultat attendu :**
 ```
@@ -626,9 +626,9 @@ echo "Budget restant : $budget euros.";
 **Énoncé :**
 Crée une variable appelée `$prenom` qui contient ton prénom, puis affiche-la avec `echo`.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable `$prenom` correctement créée
-- L'affichage de ton prénom à l'écran
+- L`affichage de ton prénom à l`écran
 
 **Exemple de résultat attendu :**
 ```
@@ -651,9 +651,9 @@ echo $prenom;
 ## 📝 Exercice 6 : Présentation complète
 **Énoncé :**
 Crée deux variables : `$prenom` avec ton prénom et `$age` avec ton âge.
-Affiche ensuite une phrase complète : "Je m'appelle [prénom] et j'ai [âge] ans."
+Affiche ensuite une phrase complète : "Je m`appelle [prénom] et j`ai [âge] ans."
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Deux variables correctement déclarées
 - Une phrase complète qui utilise ces deux variables
 
@@ -682,10 +682,10 @@ Tu dois calculer la quantité totale de plats à préparer.
 Crée deux variables : `$portions = 5` et `$tables = 3`.
 Calcule le total dans une nouvelle variable `$total_plats` et affiche le résultat.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Trois variables : `$portions`, `$tables` et `$total_plats`
 - Le calcul correct de la multiplication
-- L'affichage du total
+- L`affichage du total
 
 **Exemple de résultat attendu :**
 ```
@@ -713,10 +713,10 @@ Tu achètes 8 paquets de farine. Chaque paquet coûte 12 euros.
 Crée une variable `$prix_paquet = 12` et une variable `$quantite = 8`.
 Calcule le prix total et affiche-le.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Deux variables pour le prix unitaire et la quantité
 - Une variable pour le total
-- L'affichage du montant total
+- L`affichage du montant total
 
 **Exemple de résultat attendu :**
 ```
@@ -741,10 +741,10 @@ echo "Le prix total est de $total euros.";
 ## 📝 Exercice 9 : Modifier une variable
 **Énoncé :**
 Crée une variable `$client = "Dubois"`.
-Affiche d'abord "Bonjour Dubois".
+Affiche d`abord "Bonjour Dubois".
 Ensuite, change la valeur de `$client` en "Martin" et affiche "Bonjour Martin".
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable créée puis modifiée
 - Deux affichages différents montrant que la variable a changé
 
@@ -774,7 +774,7 @@ echo "Bonjour $client";
 Dans ta cuisine, tu as `$paquets_farine = 5` et `$paquets_sucre = 7`.
 Calcule le nombre total de paquets dans une variable `$total_paquets` et affiche le résultat.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Trois variables au total
 - Une addition correcte
 - Un message clair avec le résultat
@@ -799,17 +799,17 @@ echo "J'ai un total de $total_paquets paquets en stock.";
 
 ---
 
-## 📝 Exercice 11 : Calculer le coût d'un menu complet
+## 📝 Exercice 11 : Calculer le coût d`un menu complet
 **Énoncé :**
-Tu dois calculer le coût d'un menu pour un événement.
+Tu dois calculer le coût d`un menu pour un événement.
 Crée les variables suivantes :
 - `$nb_entrees = 4`
 - `$nb_plats = 5`
 - `$cout_portion = 35`
 
-Calcule d'abord le nombre total de portions, puis le prix total du menu, et affiche les deux résultats.
+Calcule d`abord le nombre total de portions, puis le prix total du menu, et affiche les deux résultats.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Calcul du nombre total de portions (entrées + plats)
 - Calcul du prix total (portions × coût par portion)
 - Affichage des deux informations
@@ -843,12 +843,12 @@ echo "Prix total du menu : $prix_total euros";
 ## 📝 Exercice 12 : Incrémenter une variable
 **Énoncé :**
 Tu commences le service avec `$bols = 3` dans ta cuisine.
-Un collègue t'en apporte 4 de plus. Modifie la variable `$bols` en lui ajoutant 4, puis affiche le nouveau nombre de bols.
+Un collègue t`en apporte 4 de plus. Modifie la variable `$bols` en lui ajoutant 4, puis affiche le nouveau nombre de bols.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable initialisée à 3
 - Une modification qui ajoute 4 à cette variable
-- L'affichage du résultat final
+- L`affichage du résultat final
 
 **Exemple de résultat attendu :**
 ```
@@ -878,7 +878,7 @@ Crée trois variables :
 
 Affiche ensuite un message complet : "Le restaurant [restaurant] situé à [ville] - Tél : [telephone]"
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Trois variables de type texte (string)
 - Un message formaté qui utilise toutes les variables
 
@@ -904,16 +904,16 @@ echo "Le restaurant $restaurant situé à $ville - Tél : $telephone";
 
 ## 📝 Exercice 14 : Calcul complexe avec plusieurs variables
 **Énoncé :**
-Tu dois calculer le coût total d'un service. Tu as besoin de :
-- `$heures_travail = 16` (nombre d'heures travaillées)
+Tu dois calculer le coût total d`un service. Tu as besoin de :
+- `$heures_travail = 16` (nombre d`heures travaillées)
 - `$taux_horaire = 25` (euros par heure)
 - `$ingredients = 150` (coût des ingrédients en euros)
 
-Calcule d'abord le coût de la main d'œuvre (`$cout_main_oeuvre`), puis le coût total du service (`$cout_total`) qui est la somme de la main d'œuvre et des ingrédients. Affiche tous les détails.
+Calcule d`abord le coût de la main d`œuvre (`$cout_main_oeuvre`), puis le coût total du service (`$cout_total`) qui est la somme de la main d`œuvre et des ingrédients. Affiche tous les détails.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Plusieurs calculs intermédiaires
-- L'utilisation de toutes les variables créées
+- L`utilisation de toutes les variables créées
 - Un affichage détaillé du coût
 
 **Exemple de résultat attendu :**
@@ -951,8 +951,8 @@ Si tu as réussi tous ces exercices, tu maîtrises maintenant les bases des vari
 Tu sais maintenant :
 - ✅ Créer une variable avec le symbole `$`
 - ✅ Stocker différents types de valeurs (nombres, texte)
-- ✅ Afficher le contenu d'une variable
-- ✅ Modifier la valeur d'une variable
+- ✅ Afficher le contenu d`une variable
+- ✅ Modifier la valeur d`une variable
 - ✅ Faire des calculs avec plusieurs variables
 - ✅ Combiner des variables dans des messages
 

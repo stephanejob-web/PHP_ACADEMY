@@ -2,8 +2,8 @@
 
 ---
 💬 "Quelle différence entre `for` et `while` ?"
-`for` c'est quand tu sais combien de briques tu dois poser.  
-`while` c'est quand tu poses des briques "tant que le mur n'est pas fini" ! 😅
+`for` c`est quand tu sais combien de briques tu dois poser.  
+`while` c`est quand tu poses des briques "tant que le mur n`est pas fini" ! 😅
 
 ---
 
@@ -16,29 +16,29 @@ for ($i = 1; $i <= 10; $i++) {
 }
 ```
 
-Mais parfois sur un chantier, tu ne sais **pas à l'avance** combien de temps tu vas travailler !
+Mais parfois sur un chantier, tu ne sais **pas à l`avance** combien de temps tu vas travailler !
 
 Par exemple :
-- 🪣 "Remplis des seaux **tant qu'il reste du ciment**"
-- 🧱 "Pose des briques **tant que le mur n'est pas à 2 mètres**"
-- 💶 "Achète du matériel **tant que ton budget n'est pas épuisé**"
+- 🪣 "Remplis des seaux **tant qu`il reste du ciment**"
+- 🧱 "Pose des briques **tant que le mur n`est pas à 2 mètres**"
+- 💶 "Achète du matériel **tant que ton budget n`est pas épuisé**"
 
 👉 Dans ces cas, tu utilises la boucle **`while`** !
 
 ---
 
-## 💡 C'est quoi une boucle while ?
+## 💡 C`est quoi une boucle while ?
 
 Une boucle **`while`** veut dire **"tant que"** en anglais.
 
 Tu dis à ton apprenti :
-> "Continue à poser des briques **TANT QUE** le mur n'est pas fini !"
+> "Continue à poser des briques **TANT QUE** le mur n`est pas fini !"
 
 Et lui, il vérifie **avant chaque brique** :
 - ❓ "Le mur est fini ?"
 - ❌ "Non ? Alors je pose une brique !"
 - ❓ "Le mur est fini maintenant ?"
-- ✅ "Oui ! J'arrête !"
+- ✅ "Oui ! J`arrête !"
 
 ---
 
@@ -124,7 +124,7 @@ On crée la variable : `$briques_posees = 0`
 
 #### 🟢 **TOURS 3, 4, 5...**
 
-Le même processus continue jusqu'à ce que `$briques_posees` atteigne **5**.
+Le même processus continue jusqu`à ce que `$briques_posees` atteigne **5**.
 
 ---
 
@@ -134,7 +134,7 @@ Le même processus continue jusqu'à ce que `$briques_posees` atteigne **5**.
    → `$briques_posees` vaut **5**, et 5 < 5 → **NON** ❌  
    → Donc on **SORT de la boucle**
 
-2. **C'est fini !** Le code continue après le while.
+2. **C`est fini !** Le code continue après le while.
 
 ---
 
@@ -154,7 +154,7 @@ Le même processus continue jusqu'à ce que `$briques_posees` atteigne **5**.
 ## 🔍 Différence entre for et while
 
 ### 🔹 Boucle FOR
-Tu utilises `for` quand tu **sais à l'avance** combien de tours tu vas faire.
+Tu utilises `for` quand tu **sais à l`avance** combien de tours tu vas faire.
 
 ```php
 // Je sais que je vais poser EXACTEMENT 10 briques
@@ -169,7 +169,7 @@ for ($i = 1; $i <= 10; $i++) {
 ---
 
 ### 🔹 Boucle WHILE
-Tu utilises `while` quand tu ne sais **pas à l'avance** combien de tours tu vas faire.
+Tu utilises `while` quand tu ne sais **pas à l`avance** combien de tours tu vas faire.
 
 ```php
 // Je ne sais pas combien de seaux il faut, je remplis TANT QUE le camion n'est pas plein
@@ -183,7 +183,7 @@ while ($seaux_remplis < $capacite_camion) {
 ```
 
 💬 **En langage maçon :**
-> "Remplis des seaux **tant que** le camion n'est pas plein."
+> "Remplis des seaux **tant que** le camion n`est pas plein."
 
 ---
 
@@ -191,8 +191,8 @@ while ($seaux_remplis < $capacite_camion) {
 
 | Critère | `for` | `while` |
 |---------|-------|---------|
-| **Quand l'utiliser** | Nombre de tours connu | Nombre de tours inconnu |
-| **Exemple** | "Pose 10 briques" | "Pose des briques tant que le mur n'est pas fini" |
+| **Quand l`utiliser** | Nombre de tours connu | Nombre de tours inconnu |
+| **Exemple** | "Pose 10 briques" | "Pose des briques tant que le mur n`est pas fini" |
 | **Structure** | `for ($i=1; $i<=10; $i++)` | `while ($condition)` |
 | **Compteur** | Géré automatiquement | Tu dois le gérer toi-même |
 
@@ -202,7 +202,7 @@ while ($seaux_remplis < $capacite_camion) {
 
 ### 🚨 Le danger mortel du while
 
-Si tu oublies de **modifier la condition** dans la boucle, elle ne s'arrêtera **JAMAIS** !
+Si tu oublies de **modifier la condition** dans la boucle, elle ne s`arrêtera **JAMAIS** !
 
 #### ❌ **MAUVAIS EXEMPLE (boucle infinie) :**
 ```php
@@ -219,7 +219,7 @@ while ($briques < 5) {
 - Tour 1 : `$briques` vaut 0, condition vraie → on entre
 - Tour 2 : `$briques` vaut TOUJOURS 0, condition vraie → on entre
 - Tour 3 : `$briques` vaut TOUJOURS 0, condition vraie → on entre
-- ... **À L'INFINI** 😱
+- ... **À L`INFINI** 😱
 
 Ton ordinateur va **planter** !
 
@@ -239,14 +239,14 @@ while ($briques < 5) {
 - `$briques` augmente à chaque tour
 - Un moment, `$briques` vaut 5
 - La condition devient fausse
-- La boucle **s'arrête** ✅
+- La boucle **s`arrête** ✅
 
 ---
 
-### 🧠 Règle d'or du while
+### 🧠 Règle d`or du while
 
-> **À l'intérieur du while, tu DOIS modifier la variable de la condition !**  
-> Sinon, c'est la boucle infinie assurée ! 💥
+> **À l`intérieur du while, tu DOIS modifier la variable de la condition !**  
+> Sinon, c`est la boucle infinie assurée ! 💥
 
 ---
 
@@ -316,7 +316,7 @@ Je ne peux plus acheter de briques ! Il me reste 10 euros.
 
 ---
 
-### Exemple 3 : Construire un mur jusqu'à une hauteur
+### Exemple 3 : Construire un mur jusqu`à une hauteur
 
 ```php
 $hauteur = 0; // mètres
@@ -343,9 +343,9 @@ Le mur est à la bonne hauteur ! 🧱
 
 ---
 
-## 🔄 While avec décrémentation (compter à l'envers)
+## 🔄 While avec décrémentation (compter à l`envers)
 
-Tu peux aussi utiliser `while` pour compter à l'envers !
+Tu peux aussi utiliser `while` pour compter à l`envers !
 
 ### Exemple : Vider des sacs de ciment
 
@@ -439,14 +439,14 @@ while ($compteur < 5) {
 
 ## 💬 Phrases à retenir
 
-> La boucle `while` c'est comme dire à ton apprenti :  
-> **"Continue ton boulot TANT QUE je ne te dis pas d'arrêter !"** 🧱🤖
+> La boucle `while` c`est comme dire à ton apprenti :  
+> **"Continue ton boulot TANT QUE je ne te dis pas d`arrêter !"** 🧱🤖
 
-> **Règle d'or :** Dans un `while`, tu DOIS modifier la variable de la condition,  
-> sinon c'est la boucle infinie ! 💥
+> **Règle d`or :** Dans un `while`, tu DOIS modifier la variable de la condition,  
+> sinon c`est la boucle infinie ! 💥
 
 > `for` = "Fais-le 10 fois"  
-> `while` = "Fais-le tant que ce n'est pas fini"
+> `while` = "Fais-le tant que ce n`est pas fini"
 
 ---
 
@@ -457,7 +457,7 @@ while ($compteur < 5) {
 Crée une variable `$nombre = 1`.  
 Utilise une boucle `while` pour afficher les nombres de **1 à 5**.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable initialisée à 1
 - Une boucle while avec condition < ou <= 5
 - Incrémentation de la variable dans la boucle
@@ -494,7 +494,7 @@ Crée une variable `$briques = 0`.
 Utilise une boucle `while` pour poser **7 briques**.  
 Affiche : "Je pose la brique numéro X" pour chaque brique.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable compteur qui commence à 0
 - Une boucle qui tourne 7 fois
 - Un message pour chaque brique posée
@@ -527,12 +527,12 @@ while ($briques < 7) {
 
 ---
 
-## 📝 Exercice 3 : Compter à l'envers
+## 📝 Exercice 3 : Compter à l`envers
 **Énoncé :**  
 Crée une variable `$compte = 5`.  
 Utilise une boucle `while` pour afficher un décompte de **5 à 1**.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable qui commence à 5
 - Une boucle avec condition > 0
 - Décrémentation dans la boucle
@@ -570,9 +570,9 @@ Utilise une boucle `while` pour remplir le camion.
 Affiche : "Seau X chargé" pour chaque seau.  
 Après la boucle, affiche : "Le camion est plein !"
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Deux variables (compteur et limite)
-- Une boucle qui s'arrête à la capacité
+- Une boucle qui s`arrête à la capacité
 - Un message final
 
 **Exemple de résultat attendu :**
@@ -609,10 +609,10 @@ echo "Le camion est plein !<br>";
 ## 📝 Exercice 5 : Dépenser un budget
 **Énoncé :**  
 Tu as `$budget = 80` euros. Chaque sac de ciment coûte `$prix = 20` euros.  
-Utilise une boucle `while` pour acheter des sacs **tant que tu as assez d'argent**.  
+Utilise une boucle `while` pour acheter des sacs **tant que tu as assez d`argent**.  
 Affiche : "Sac X acheté (reste Y euros)" pour chaque achat.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une boucle qui vérifie le budget restant
 - Soustraction du prix à chaque tour
 - Affichage du budget restant
@@ -652,8 +652,8 @@ Utilise une boucle `while` pour construire le mur mètre par mètre.
 Affiche : "Le mur fait maintenant X mètre(s)".  
 Après la boucle : "Le mur est terminé !"
 
-**Ce qu'on attend :**  
-- Une boucle qui s'arrête à la hauteur voulue
+**Ce qu`on attend :**  
+- Une boucle qui s`arrête à la hauteur voulue
 - Un message à chaque mètre ajouté
 - Un message final
 
@@ -689,11 +689,11 @@ echo "Le mur est terminé !<br>";
 ## 📝 Exercice 7 : Vider des sacs
 **Énoncé :**  
 Tu as `$sacs = 8` sacs pleins.  
-Utilise une boucle `while` pour les vider un par un (en comptant à l'envers).  
+Utilise une boucle `while` pour les vider un par un (en comptant à l`envers).  
 Affiche : "Je vide le sac numéro X".  
 Après : "Tous les sacs sont vides !"
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une boucle qui décrémente
 - Affichage du numéro de sac
 - Message final
@@ -736,7 +736,7 @@ Crée `$nombre = 1` et `$somme = 0`.
 Utilise une boucle `while` pour additionner tous les nombres de **1 à 10**.  
 Affiche la somme totale à la fin.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une boucle de 1 à 10
 - Addition de chaque nombre à la somme
 - Affichage du résultat final (devrait être 55)
@@ -772,8 +772,8 @@ Crée `$nombre = 0`.
 Utilise une boucle `while` pour afficher tous les nombres **pairs** de 0 à 20.  
 (Astuce : augmente de 2 à chaque tour)
 
-**Ce qu'on attend :**  
-- Une boucle qui s'arrête à 20
+**Ce qu`on attend :**  
+- Une boucle qui s`arrête à 20
 - Incrémentation de 2 en 2
 - Affichage des nombres pairs
 
@@ -813,14 +813,14 @@ while ($nombre <= 20) {
 **Énoncé :**  
 Tu as `$budget = 100` euros et tu veux acheter **maximum 10 briques**.  
 Chaque brique coûte `$prix = 15` euros.  
-Utilise une boucle `while` qui s'arrête quand :
-- Tu n'as plus assez d'argent OU
+Utilise une boucle `while` qui s`arrête quand :
+- Tu n`as plus assez d`argent OU
 - Tu as acheté 10 briques
 
 Affiche : "Brique X achetée (reste Y euros)".  
-À la fin, affiche combien de briques tu as acheté et combien d'argent il reste.
+À la fin, affiche combien de briques tu as acheté et combien d`argent il reste.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une boucle avec deux conditions (&&)
 - Gestion du budget et du compteur
 - Message final récapitulatif
@@ -866,7 +866,7 @@ Si tu as réussi tous ces exercices, tu maîtrises maintenant la boucle `while` 
 Tu sais maintenant :
 - ✅ Créer une boucle `while` avec une condition
 - ✅ Faire une boucle qui compte en montant
-- ✅ Faire une boucle qui compte à l'envers
+- ✅ Faire une boucle qui compte à l`envers
 - ✅ Éviter les boucles infinies (en modifiant la variable)
 - ✅ Utiliser des conditions complexes
 - ✅ Gérer un budget ou une limite dans une boucle

@@ -2,7 +2,7 @@
 
 ---
 💬 "Pourquoi les débutants ont peur de la boucle for ?"
-Parce qu'elle tourne en rond, et eux aussi dans le donjon ! 😂
+Parce qu`elle tourne en rond, et eux aussi dans le donjon ! 😂
 
 ## 🎯 Pourquoi une boucle ?
 
@@ -23,19 +23,19 @@ echo "Je tue le mob numéro 10<br>";
 ```
 
 Mais là, soyons honnêtes...
-👉 Au bout de 10 lignes, t'en as marre.
-👉 Au bout de 100, t'as envie de ragequit et balancer ton clavier 💻🎮
+👉 Au bout de 10 lignes, t`en as marre.
+👉 Au bout de 100, t`as envie de ragequit et balancer ton clavier 💻🎮
 
 Heureusement, PHP a une solution magique pour **répéter une action sans se fatiguer** :
-c'est la **boucle** !
+c`est la **boucle** !
 
 ---
 
-## 💡 C'est quoi une boucle ?
+## 💡 C`est quoi une boucle ?
 
-Une **boucle**, c'est comme ton **perso en mode auto-farm** 😄
+Une **boucle**, c`est comme ton **perso en mode auto-farm** 😄
 Tu lui dis :
-> "Tue un mob, gagne de l'XP, avance d'un cran, et recommence... jusqu'à être level 10 !"
+> "Tue un mob, gagne de l`XP, avance d`un cran, et recommence... jusqu`à être level 10 !"
 
 Et lui, il obéit sans broncher 🤖
 
@@ -70,7 +70,7 @@ Regarde bien cette ligne :
 for ($i = 1; $i <= 10; $i++)
 ```
 
-C'est comme une **phrase magique en trois étapes** ✨
+C`est comme une **phrase magique en trois étapes** ✨
 
 ### 📦 La structure complète
 
@@ -94,7 +94,7 @@ for ($i = 1 ; $i <= 10 ; $i++) {
 
 ### 🔵 ÉTAPE 1 : `$i = 1` — Le début de la partie 🎬
 
-C'est ici que **ton compteur démarre**.
+C`est ici que **ton compteur démarre**.
 
 ```php
 $i = 1
@@ -104,15 +104,15 @@ $i = 1
 > "Je commence au **niveau 1** (ou au mob numéro 1, ou à la quête 1...)"
 
 🧠 **À retenir :**
-- `$i` est juste une **variable** (on l'a vu au Cours 01 !)
-- C'est ton **compteur de tour**
-- Elle peut s'appeler `$i`, `$mob`, `$level`... peu importe !
+- `$i` est juste une **variable** (on l`a vu au Cours 01 !)
+- C`est ton **compteur de tour**
+- Elle peut s`appeler `$i`, `$mob`, `$level`... peu importe !
 
 ---
 
 ### 🟢 ÉTAPE 2 : `$i <= 10` — La condition pour continuer 🎯
 
-C'est ta **mission** !
+C`est ta **mission** !
 Tant que cette condition est **vraie**, la boucle **continue**.
 
 ```php
@@ -120,21 +120,21 @@ $i <= 10
 ```
 
 💬 **Ça veut dire :**
-> "**Tant que** je n'ai pas tué les 10 mobs, continue !"
+> "**Tant que** je n`ai pas tué les 10 mobs, continue !"
 
 Quand `$i` devient **11**, la condition devient **fausse**, et PHP dit :
 > "Mission accomplie ! On arrête ! 🏆"
 
 🧠 **À retenir :**
 - `<=` veut dire "**inférieur ou égal à**" (on a vu ça au Cours 02 !)
-- Tu peux aussi écrire `$i < 11` (c'est pareil)
+- Tu peux aussi écrire `$i < 11` (c`est pareil)
 
 ---
 
 ### 🔴 ÉTAPE 3 : `$i++` — Le passage au tour suivant ⏭️
 
-C'est ton **gain d'XP automatique** !
-À chaque tour de boucle, PHP fait `$i++`, c'est-à-dire **ajoute 1** à ton compteur.
+C`est ton **gain d`XP automatique** !
+À chaque tour de boucle, PHP fait `$i++`, c`est-à-dire **ajoute 1** à ton compteur.
 
 ```php
 $i++
@@ -145,7 +145,7 @@ $i++
 
 🧠 **À retenir :**
 - `$i++` est un **raccourci** pour `$i = $i + 1` (vu au Cours 01 !)
-- C'est comme monter d'un level automatiquement 🆙
+- C`est comme monter d`un level automatiquement 🆙
 
 ---
 
@@ -162,43 +162,43 @@ for ($i = 1; $i <= 10; $i++) {
 
 #### 🔵 **AVANT de commencer**
 
-PHP exécute l'**ÉTAPE 1** : `$i = 1`
+PHP exécute l`**ÉTAPE 1** : `$i = 1`
 > "Je commence au mob numéro 1."
 
 ---
 
 #### 🟢 **TOUR 1**
 
-1. **PHP vérifie l'ÉTAPE 2** : `$i <= 10` ?
+1. **PHP vérifie l`ÉTAPE 2** : `$i <= 10` ?
    → `$i` vaut **1**, et 1 <= 10 → **OUI** ✅
    → Donc on **entre dans la boucle**
 
 2. **PHP exécute le code** :
    - `echo "Je tue le mob numéro 1"`
 
-3. **PHP exécute l'ÉTAPE 3** : `$i++`
+3. **PHP exécute l`ÉTAPE 3** : `$i++`
    → `$i` passe de 1 à **2**
 
-4. **PHP retourne vérifier l'ÉTAPE 2** (il remonte en haut du for)
+4. **PHP retourne vérifier l`ÉTAPE 2** (il remonte en haut du for)
 
 ---
 
 #### 🟢 **TOUR 2**
 
-1. **PHP vérifie l'ÉTAPE 2** : `$i <= 10` ?
+1. **PHP vérifie l`ÉTAPE 2** : `$i <= 10` ?
    → `$i` vaut **2**, et 2 <= 10 → **OUI** ✅
 
 2. **PHP exécute le code** :
    - `echo "Je tue le mob numéro 2"`
 
-3. **PHP exécute l'ÉTAPE 3** : `$i++`
+3. **PHP exécute l`ÉTAPE 3** : `$i++`
    → `$i` passe de 2 à **3**
 
-4. **PHP retourne vérifier l'ÉTAPE 2**
+4. **PHP retourne vérifier l`ÉTAPE 2**
 
 ---
 
-#### 🟢 **TOURS 3, 4, 5... jusqu'à 10**
+#### 🟢 **TOURS 3, 4, 5... jusqu`à 10**
 
 Le même processus continue...
 
@@ -209,10 +209,10 @@ Le même processus continue...
 1. **Après le tour 10**, PHP exécute `$i++`
    → `$i` devient **11**
 
-2. **PHP vérifie l'ÉTAPE 2** : `$i <= 10` ?
+2. **PHP vérifie l`ÉTAPE 2** : `$i <= 10` ?
    → `$i` vaut **11**, et 11 <= 10 → **NON** ❌
 
-3. **C'est fini !** PHP **sort de la boucle**.
+3. **C`est fini !** PHP **sort de la boucle**.
 
 ---
 
@@ -271,7 +271,7 @@ Je ramasse la potion numéro 7
 
 ---
 
-### Exemple 3 : Gagner de l'XP
+### Exemple 3 : Gagner de l`XP
 
 ```php
 $xp_total = 0;
@@ -367,19 +367,19 @@ for ($i = 1; $i <= 10; $i++) {
 
 ---
 
-## 🎯 Pourquoi la variable s'appelle `$i` ?
+## 🎯 Pourquoi la variable s`appelle `$i` ?
 
-C'est une **convention** (une habitude) des programmeurs.
+C`est une **convention** (une habitude) des programmeurs.
 
 `$i` vient de "**index**" ou "**iteration**" en anglais.
 
-Mais tu peux l'appeler comme tu veux :
+Mais tu peux l`appeler comme tu veux :
 - `$level`
 - `$mob`
 - `$compteur`
 - `$tour`
 
-👉 **PHP s'en fiche !** Tant que c'est clair pour toi. 😊
+👉 **PHP s`en fiche !** Tant que c`est clair pour toi. 😊
 
 ---
 
@@ -388,14 +388,14 @@ Mais tu peux l'appeler comme tu veux :
 | Ce que tu fais | Dans un jeu | En PHP |
 |----------------|-------------|--------|
 | Tu commences la mission | Tu es au mob 1 | `$i = 1` |
-| Tu continues tant que c'est pas fini | Tu dois tuer 10 mobs | `$i <= 10` |
+| Tu continues tant que c`est pas fini | Tu dois tuer 10 mobs | `$i <= 10` |
 | Tu passes au mob suivant | +1 mob tué | `$i++` |
-| Tu répètes l'action | Tu farm sans t'arrêter | `for` |
+| Tu répètes l`action | Tu farm sans t`arrêter | `for` |
 
 ---
 
 ## 💬 Phrase à retenir :
-> Une boucle `for`, c'est comme ton **mode auto-grind** :
+> Une boucle `for`, c`est comme ton **mode auto-grind** :
 > tu définis le **début**, la **fin**, et ton perso farm **sans se plaindre** ! 🎮🤖
 
 ---
@@ -405,9 +405,9 @@ Mais tu peux l'appeler comme tu veux :
 ## 📝 Exercice 1 : Afficher les levels de 1 à 5
 **Énoncé :**
 Utilise une boucle `for` pour afficher :
-"Level 1", "Level 2", ... jusqu'à "Level 5".
+"Level 1", "Level 2", ... jusqu`à "Level 5".
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle qui va de 1 à 5
 - Un message qui affiche chaque level
 
@@ -439,7 +439,7 @@ for ($i = 1; $i <= 5; $i++) {
 Crée une boucle qui affiche :
 "Je tue le mob numéro X" pour X allant de 1 à 7.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 7
 - Un message pour chaque mob tué
 
@@ -469,7 +469,7 @@ for ($i = 1; $i <= 7; $i++) {
 **Énoncé :**
 Affiche "Je ramasse la potion numéro X" pour X allant de 1 à 10.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 10
 - Un message pour chaque potion
 
@@ -501,7 +501,7 @@ Affiche tous les nombres **pairs** de 0 à 20.
 
 💡 Indice : utilise `$i += 2` au lieu de `$i++`
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle qui saute de 2 en 2
 - Affichage des nombres pairs uniquement
 
@@ -540,7 +540,7 @@ Affiche un compte à rebours de 10 à 1, puis affiche "BOOM !".
 
 💡 Indice : utilise `$i--` pour décrémenter.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle qui descend de 10 à 1
 - Un message final après la boucle
 
@@ -575,7 +575,7 @@ echo "BOOM !<br>";
 Affiche la **table de multiplication de 3** de 1 à 10.
 Exemple : "3 x 1 = 3", "3 x 2 = 6", etc.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 10
 - Un calcul de multiplication dans la boucle
 - Un message formaté pour chaque ligne
@@ -604,14 +604,14 @@ for ($i = 1; $i <= 10; $i++) {
 
 ---
 
-## 📝 Exercice 7 : Gagner de l'XP
+## 📝 Exercice 7 : Gagner de l`XP
 **Énoncé :**
 Tu tues 5 mobs. Chaque mob donne 100 XP.
 Affiche ton XP total après chaque kill.
 
 💡 Crée une variable `$xp_total = 0` avant la boucle.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable XP initialisée à 0
 - Une boucle de 1 à 5
 - Addition de 100 XP à chaque tour
@@ -647,7 +647,7 @@ for ($mob = 1; $mob <= 5; $mob++) {
 **Énoncé :**
 Affiche ton pseudo de gamer 10 fois avec une boucle.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 10
 - Affichage de ton pseudo à chaque tour
 
@@ -676,9 +676,9 @@ for ($i = 1; $i <= 10; $i++) {
 
 ## 📝 Exercice 9 : Combattre un boss
 **Énoncé :**
-Affiche "J'attaque le boss !" 5 fois, puis affiche "Boss vaincu !".
+Affiche "J`attaque le boss !" 5 fois, puis affiche "Boss vaincu !".
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 5
 - Un message après la boucle
 
@@ -711,7 +711,7 @@ echo "Boss vaincu !<br>";
 **Énoncé :**
 Affiche "Sauvegarde du checkpoint X" pour X allant de 1 à 8.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 8
 - Un message avec le numéro du checkpoint
 
@@ -746,6 +746,6 @@ Tu sais maintenant :
 - ✅ Comprendre les 3 étapes : début, condition, incrémentation
 - ✅ Faire des calculs dans une boucle
 - ✅ Compter en avant (`$i++`), en arrière (`$i--`), de 2 en 2 (`$i += 2`)
-- ✅ Utiliser une boucle pour farmer de l'XP, des mobs, des potions...
+- ✅ Utiliser une boucle pour farmer de l`XP, des mobs, des potions...
 
 **Prochaine étape :** La boucle `while` (quand tu ne sais pas combien de tours tu vas faire) ! 🚀

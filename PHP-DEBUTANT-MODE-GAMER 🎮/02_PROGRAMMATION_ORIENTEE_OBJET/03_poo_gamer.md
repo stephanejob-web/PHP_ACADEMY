@@ -7,15 +7,15 @@ Dans les cours précédents, tu as appris à :
 - Spawner des **personnages** (objets)
 - Leur donner des **stats** (propriétés)
 
-Mais jusqu'ici, ton personnage, il fait quoi ? **Il reste planté là comme un PNJ sans IA !** 😄
+Mais jusqu`ici, ton personnage, il fait quoi ? **Il reste planté là comme un PNJ sans IA !** 😄
 
-Aujourd'hui, on va lui apprendre à **FAIRE DES ACTIONS** !
+Aujourd`hui, on va lui apprendre à **FAIRE DES ACTIONS** !
 
 ---
 
-## 🤔 Les méthodes, c'est quoi exactement ?
+## 🤔 Les méthodes, c`est quoi exactement ?
 
-Jusqu'à maintenant, tu as appris les **PROPRIÉTÉS**.
+Jusqu`à maintenant, tu as appris les **PROPRIÉTÉS**.
 
 **Les PROPRIÉTÉS** = Ce que le personnage **EST**
 
@@ -35,12 +35,12 @@ Exemple : un personnage **ATTAQUE**, **SE SOIGNE**, **LEVEL UP**...
 
 **Dans un jeu :**
 
-- **Propriété :** "Ce personnage a 120 PV" → **C'EST une stat**
-- **Méthode :** "Attaque l'ennemi" → **C'EST une action**
+- **Propriété :** "Ce personnage a 120 PV" → **C`EST une stat**
+- **Méthode :** "Attaque l`ennemi" → **C`EST une action**
 
 ---
 
-**Un personnage avec des méthodes, c'est un personnage qui peut AGIR TOUT SEUL !**
+**Un personnage avec des méthodes, c`est un personnage qui peut AGIR TOUT SEUL !**
 
 Plus besoin de calculer les dégâts toi-même : le personnage attaque !  
 Plus besoin de gérer la vie à la main : le personnage se soigne tout seul !
@@ -108,18 +108,18 @@ public function attaquer() {
 
 **`function`** → Le mot magique pour dire **"je crée une action"**
 
-**`attaquer`** → Le **nom** de l'action  
-*Tu peux l'appeler comme tu veux : `attaquer()`, `attack()`, `frapper()`...*  
+**`attaquer`** → Le **nom** de l`action  
+*Tu peux l`appeler comme tu veux : `attaquer()`, `attack()`, `frapper()`...*  
 *Mais choisis un nom qui décrit bien ce que fait la méthode !*
 
 **`()`** → Les **parenthèses** sont obligatoires après le nom  
-*Pour l'instant, on met rien dedans. On verra pourquoi plus tard.*
+*Pour l`instant, on met rien dedans. On verra pourquoi plus tard.*
 
-**`{`** → L'accolade ouvrante : le **début** de la méthode
+**`{`** → L`accolade ouvrante : le **début** de la méthode
 
 ---
 
-### Le code à l'intérieur :
+### Le code à l`intérieur :
 
 ```php
     $degats = $this->force;
@@ -130,15 +130,15 @@ public function attaquer() {
 **`$degats = $this->force;`** → Je calcule les dégâts basés sur MA force
 
 **`$this`** → **MOT SUPER IMPORTANT !**  
-Ça veut dire **"MOI-MÊME"** (le personnage qui exécute l'action)
+Ça veut dire **"MOI-MÊME"** (le personnage qui exécute l`action)
 
-**`$this->force`** → **MA** force (celle de ce personnage-ci, pas d'un autre personnage)
+**`$this->force`** → **MA** force (celle de ce personnage-ci, pas d`un autre personnage)
 
 **`$this->nom`** → **MON** nom
 
 **`$this->arme`** → **MON** arme
 
-**`echo ...`** → J'affiche un message d'attaque
+**`echo ...`** → J`affiche un message d`attaque
 
 **`return $degats;`** → Je **RENVOIE** les dégâts infligés
 
@@ -150,7 +150,7 @@ public function attaquer() {
 }
 ```
 
-**`}`** → L'accolade fermante : la **fin** de la méthode
+**`}`** → L`accolade fermante : la **fin** de la méthode
 
 ---
 
@@ -158,7 +158,7 @@ public function attaquer() {
 
 **`$this`** = **"MOI-MÊME"**
 
-C'est le mot que le personnage utilise pour parler de lui-même.
+C`est le mot que le personnage utilise pour parler de lui-même.
 
 ---
 
@@ -168,9 +168,9 @@ Imagine que tu as **3 personnages** dans ta partie :
 
 1. Thorin le guerrier (30 de force)
 2. Gandalf le mage (10 de force)
-3. Legolas l'archer (20 de force)
+3. Legolas l`archer (20 de force)
 
-Quand tu demandes à **Thorin** d'attaquer :
+Quand tu demandes à **Thorin** d`attaquer :
 - Il va utiliser **SA** force (30)
 - Pas la force de Gandalf (10) !
 
@@ -180,17 +180,17 @@ Quand tu demandes à **Thorin** d'attaquer :
 
 ### Analogie :
 
-C'est comme si tu disais :
+C`est comme si tu disais :
 - **"Mon personnage"** → le personnage que **TU** contrôles
-- **"Ton personnage"** → le personnage d'un autre joueur
+- **"Ton personnage"** → le personnage d`un autre joueur
 
-**`$this`** c'est comme dire **"MON"** ou **"MA"**.
+**`$this`** c`est comme dire **"MON"** ou **"MA"**.
 
 ---
 
 ## 🎯 Appeler une méthode
 
-Pour **utiliser** une méthode, c'est simple :
+Pour **utiliser** une méthode, c`est simple :
 
 ```php
 $guerrier->attaquer();
@@ -208,7 +208,7 @@ $guerrier->attaquer();
 
 *"Hé Thorin, attaque !"*
 
-Le personnage exécute l'action et **renvoie** le résultat.
+Le personnage exécute l`action et **renvoie** le résultat.
 
 ---
 
@@ -269,7 +269,7 @@ Thorin se soigne de 30 PV ! ❤️ (PV: 110/120)
 Nouveaux PV : 110/120
 ```
 
-**Le personnage s'est soigné tout seul !** 🩹
+**Le personnage s`est soigné tout seul !** 🩹
 
 ---
 
@@ -283,13 +283,13 @@ public function seSoigner($montant) {
 
 **Tu vois le `$montant` entre les parenthèses ?**
 
-Ça s'appelle un **PARAMÈTRE**.
+Ça s`appelle un **PARAMÈTRE**.
 
 ---
 
-### C'est quoi un paramètre ?
+### C`est quoi un paramètre ?
 
-Un paramètre, c'est une **information que tu DOIS donner** à la méthode pour qu'elle fonctionne.
+Un paramètre, c`est une **information que tu DOIS donner** à la méthode pour qu`elle fonctionne.
 
 **Exemple :**
 
@@ -311,9 +311,9 @@ public function seSoigner($montant) {
 }
 ```
 
-**`$montant`** → C'est une variable qui **reçoit** l'info que tu donnes
+**`$montant`** → C`est une variable qui **reçoit** l`info que tu donnes
 
-**`$this->pv += $montant;`** → J'ajoute le montant à MES PV
+**`$this->pv += $montant;`** → J`ajoute le montant à MES PV
 
 **`if ($this->pv > $this->pv_max)`** → Je vérifie que je ne dépasse pas le max
 
@@ -325,15 +325,15 @@ public function seSoigner($montant) {
 $guerrier->seSoigner(30);
 ```
 
-**`30`** → C'est la valeur que tu **passes** au paramètre `$montant`
+**`30`** → C`est la valeur que tu **passes** au paramètre `$montant`
 
-La méthode reçoit `30` et l'utilise pour soigner le personnage.
+La méthode reçoit `30` et l`utilise pour soigner le personnage.
 
 ---
 
 ## 📊 Exemple 3 : Afficher la fiche complète
 
-On peut aussi créer une méthode qui **affiche toutes les infos** du personnage d'un coup !
+On peut aussi créer une méthode qui **affiche toutes les infos** du personnage d`un coup !
 
 ```php
 <?php
@@ -416,7 +416,7 @@ echo "║ PV     : " . $this->pv . "/" . $this->pv_max . "<br>";
 
 Ici, `afficherFiche()` utilise `nom`, `niveau`, `pv`, `pv_max`, `force`, `arme`.
 
-**C'est puissant !** Les méthodes peuvent accéder à toutes les stats ! 💪
+**C`est puissant !** Les méthodes peuvent accéder à toutes les stats ! 💪
 
 ---
 
@@ -577,11 +577,11 @@ $guerrier->recevoirDegats(80);
 
 Tu vas apprendre le **CONSTRUCTEUR** !
 
-**C'est quoi ?**
+**C`est quoi ?**
 
 Un personnage qui se crée **directement avec toutes ses stats** !
 
-Plus besoin d'écrire 10 lignes pour créer un personnage... tout se fait **en une seule ligne** ! 🚀
+Plus besoin d`écrire 10 lignes pour créer un personnage... tout se fait **en une seule ligne** ! 🚀
 
 **Exemple de ce que tu pourras faire :**
 
@@ -603,12 +603,12 @@ $guerrier->arme = "Épée";
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE !**
+Mais pour l`instant, **FAIS L`EXERCICE !**
 
-C'est en **pratiquant** qu'on devient bon. Pas en lisant. 💪
+C`est en **pratiquant** qu`on devient bon. Pas en lisant. 💪
 
 ---
 
 **🎮 Continue comme ça, tu deviens un vrai dev de jeu !**
 
-*PS : Si tu galères sur l'exercice, relis le cours. La réponse est dedans ! 😊*
+*PS : Si tu galères sur l`exercice, relis le cours. La réponse est dedans ! 😊*

@@ -1,34 +1,34 @@
-# 👨‍🍳 POO pour Cuisiniers - Cours 05 : L'héritage (l'apprenti hérite du chef !)
+# 👨‍🍳 POO pour Cuisiniers - Cours 05 : L`héritage (l`apprenti hérite du chef !)
 
 ## 🍳 Salut le chef !
 
-Aujourd'hui, on attaque un concept **SUPER PUISSANT** : **l'héritage** !
+Aujourd`hui, on attaque un concept **SUPER PUISSANT** : **l`héritage** !
 
-C'est un peu comme dans une vraie cuisine :
+C`est un peu comme dans une vraie cuisine :
 - Un **apprenti** hérite des compétences de son **chef**
 - Mais il peut aussi apprendre **ses propres spécialités** en plus !
 
-En POO, c'est pareil ! 💪
+En POO, c`est pareil ! 💪
 
 ---
 
-## 🤔 L'héritage, c'est quoi ?
+## 🤔 L`héritage, c`est quoi ?
 
 Imagine que tu as créé une classe `Recette` qui marche super bien.
 
 Maintenant, tu veux créer une classe `Dessert` (une recette spécialisée pour les desserts).
 
-Un dessert, c'est quoi ? **C'est une recette... MAIS EN MIEUX !**
+Un dessert, c`est quoi ? **C`est une recette... MAIS EN MIEUX !**
 
 Il a :
-- ✅ Tout ce qu'une recette normale a (nom, temps, température, portions...)
+- ✅ Tout ce qu`une recette normale a (nom, temps, température, portions...)
 - ✅ **PLUS** des trucs en plus (quantité de sucre, type de garniture...)
 
 **Plutôt que de TOUT réécrire**, tu peux dire :
 
 > *"Dessert, tu hérites de Recette, et tu ajoutes juste ce qui te manque !"*
 
-**C'est ça l'héritage !** ✨
+**C`est ça l`héritage !** ✨
 
 ---
 
@@ -63,7 +63,7 @@ class Recette {
 ?>
 ```
 
-Bon, ça tu connais déjà ! C'est une recette classique.
+Bon, ça tu connais déjà ! C`est une recette classique.
 
 ---
 
@@ -121,9 +121,9 @@ Garniture : ganache chocolat
 =====================
 ```
 
-**Regarde !** Le `Dessert` peut utiliser `calculerTempsTotal()` alors qu'on ne l'a **PAS** réécrit !
+**Regarde !** Le `Dessert` peut utiliser `calculerTempsTotal()` alors qu`on ne l`a **PAS** réécrit !
 
-**Il l'a hérité de son parent `Recette` !** 🎉
+**Il l`a hérité de son parent `Recette` !** 🎉
 
 ---
 
@@ -135,7 +135,7 @@ Garniture : ganache chocolat
 class Dessert extends Recette {
 ```
 
-**`class Dessert`** → Je crée une nouvelle classe qui s'appelle `Dessert`
+**`class Dessert`** → Je crée une nouvelle classe qui s`appelle `Dessert`
 
 **`extends`** → **LE MOT MAGIQUE !** Ça veut dire **"hérite de"**
 
@@ -164,7 +164,7 @@ Ce sont des propriétés **EN PLUS** de celles héritées.
 
 ---
 
-### Le constructeur de l'enfant :
+### Le constructeur de l`enfant :
 
 ```php
     public function __construct($n, $t, $temp, $p, $sucre, $garn) {
@@ -185,7 +185,7 @@ Ensuite, on remplit nos **propres** propriétés (sucre, garniture).
 
 ---
 
-## 🧠 Schéma de l'héritage
+## 🧠 Schéma de l`héritage
 
 ```
         Recette (classe PARENT)
@@ -202,7 +202,7 @@ Ensuite, on remplit nos **propres** propriétés (sucre, garniture).
 
 ---
 
-## 💪 Ce que l'enfant peut faire
+## 💪 Ce que l`enfant peut faire
 
 ### 1️⃣ Utiliser les méthodes du parent
 
@@ -213,9 +213,9 @@ $mon_dessert = new Dessert("Tarte aux pommes", 40, 190, 6, 150, "crème chantill
 echo $mon_dessert->calculerTempsTotal(); // 40
 ```
 
-**Même si on n'a PAS écrit `calculerTempsTotal()` dans `Dessert`, ça marche !**
+**Même si on n`a PAS écrit `calculerTempsTotal()` dans `Dessert`, ça marche !**
 
-Parce qu'il l'a **hérité** ! ✨
+Parce qu`il l`a **hérité** ! ✨
 
 ---
 
@@ -243,7 +243,7 @@ $dessert->estSucre(); // ⚠️ Attention : Dessert très sucré !
 
 ### 3️⃣ Modifier (surcharger) une méthode du parent
 
-Tu peux **RÉÉCRIRE** une méthode du parent pour l'adapter.
+Tu peux **RÉÉCRIRE** une méthode du parent pour l`adapter.
 
 ```php
 <?php
@@ -301,7 +301,7 @@ DESSERT : Tarte citron avec meringue (120g de sucre)
 
 **Même nom de méthode, mais comportement différent !**
 
-C'est ce qu'on appelle la **surcharge** (ou **override** en anglais).
+C`est ce qu`on appelle la **surcharge** (ou **override** en anglais).
 
 ---
 
@@ -374,13 +374,13 @@ Plat : Poulet rôti - Viande : poulet, Accompagnement : légumes grillés
 
 **Deux classes différentes héritent de `Recette` !**
 
-C'est comme une famille : le chef → le pâtissier ET le rôtisseur ! 👨‍🍳👨‍🍳
+C`est comme une famille : le chef → le pâtissier ET le rôtisseur ! 👨‍🍳👨‍🍳
 
 ---
 
-## ⚠️ Ce qu'il faut retenir sur `parent::`
+## ⚠️ Ce qu`il faut retenir sur `parent::`
 
-**`parent::`** permet d'appeler une méthode du parent.
+**`parent::`** permet d`appeler une méthode du parent.
 
 ### Utilisation la plus fréquente : dans le constructeur
 
@@ -392,7 +392,7 @@ public function __construct($n, $t, $temp, $p, $sucre, $garn) {
 }
 ```
 
-**Pourquoi c'est important ?**
+**Pourquoi c`est important ?**
 
 Le parent a déjà du code pour initialiser `nom`, `temps_cuisson`, `temperature`, `portions`.  
 **Plutôt que de TOUT réécrire**, tu appelles le parent et tu complètes !
@@ -493,7 +493,7 @@ $cappuccino->afficherInfoComplete();
 
 ## 🧠 Ce que tu DOIS retenir de ce cours
 
-✅ **`extends`** → Mot magique pour hériter d'une classe
+✅ **`extends`** → Mot magique pour hériter d`une classe
 
 ✅ **La classe enfant a TOUT ce que le parent a + ses propres trucs**
 
@@ -503,7 +503,7 @@ $cappuccino->afficherInfoComplete();
 
 ✅ **Tu peux réécrire (surcharger) une méthode du parent**
 
-✅ **L'héritage évite de dupliquer du code**
+✅ **L`héritage évite de dupliquer du code**
 
 ---
 
@@ -538,7 +538,7 @@ Dessert (extends Recette)
 
 Tu vas apprendre **PUBLIC, PRIVATE, PROTECTED** !
 
-**C'est quoi ?**
+**C`est quoi ?**
 
 Comment **PROTÉGER** les propriétés de tes classes !
 
@@ -546,18 +546,18 @@ Parfois, tu ne veux PAS que tout le monde puisse modifier directement une propri
 
 Par exemple :
 - Une recette ne peut PAS avoir un temps de cuisson négatif !
-- On doit **contrôler** ce qu'on met dedans !
+- On doit **contrôler** ce qu`on met dedans !
 
-Tu vas apprendre les **GETTERS** et **SETTERS** pour contrôler l'accès aux propriétés ! 🔒
+Tu vas apprendre les **GETTERS** et **SETTERS** pour contrôler l`accès aux propriétés ! 🔒
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE** !
+Mais pour l`instant, **FAIS L`EXERCICE** !
 
-L'héritage est un concept **fondamental** en POO. Tu vas l'utiliser **tout le temps** !
+L`héritage est un concept **fondamental** en POO. Tu vas l`utiliser **tout le temps** !
 
 ---
 
 **👨‍🍳 Bravo, tu maîtrises de mieux en mieux la POO !**
 
-*PS : L'héritage, c'est comme les recettes de famille : on garde le meilleur des anciens et on ajoute sa touche personnelle ! 🍽️*
+*PS : L`héritage, c`est comme les recettes de famille : on garde le meilleur des anciens et on ajoute sa touche personnelle ! 🍽️*

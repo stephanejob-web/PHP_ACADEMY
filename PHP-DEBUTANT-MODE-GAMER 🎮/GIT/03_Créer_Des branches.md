@@ -3,7 +3,7 @@
 🌿 Leçon 03 : Les parties parallèles (branches)
 Salut champion ! 🧙‍♂️🎮
 
-Dans la leçon 02, t'as appris à vérifier tes stats avec Git.
+Dans la leçon 02, t`as appris à vérifier tes stats avec Git.
 Maintenant, on va apprendre un truc DE MALADE...
 
 Imagine :
@@ -26,22 +26,22 @@ Tu crées deux sauvegardes parallèles :
 - **Save A :** Tu testes le build attaque
 - **Save B :** Tu testes le build magie
 
-Tu compares. Tu choisis le meilleur. Et tu supprimes l'autre !
+Tu compares. Tu choisis le meilleur. Et tu supprimes l`autre !
 
-**Avec Git, c'est exactement ça : les BRANCHES !** 🌿
+**Avec Git, c`est exactement ça : les BRANCHES !** 🌿
 
 ---
 
-## 🤔 C'est quoi une branche ?
+## 🤔 C`est quoi une branche ?
 
-Une branche, c'est une **partie parallèle** où tu peux expérimenter sans risque.
+Une branche, c`est une **partie parallèle** où tu peux expérimenter sans risque.
 
 **Analogie jeu :**
 
 Tu as ta partie principale (ton perso qui fonctionne).
 Tu veux tester une nouvelle stratégie ? Tu crées une save parallèle.
 
-- ✅ **Si ton idée marche** → Tu l'intègres à ta partie principale
+- ✅ **Si ton idée marche** → Tu l`intègres à ta partie principale
 - ❌ **Si ton idée marche pas** → Tu supprimes la save parallèle et tu oublies tout
 
 **Résultat ?**
@@ -49,7 +49,7 @@ Ta partie principale reste toujours intacte ! 💪
 
 ---
 
-## 🎯 Pourquoi les branches, c'est GÉNIAL ?
+## 🎯 Pourquoi les branches, c`est GÉNIAL ?
 
 ### 1️⃣ Tu peux expérimenter sans risque 🧪
 
@@ -62,7 +62,7 @@ Ton code principal reste intact !
 Imagine un raid MMO avec 5 joueurs qui codent le même jeu :
 
 - **Marc** travaille sur le système de combat → Branche "combat"
-- **Sophie** travaille sur l'inventaire → Branche "inventaire"
+- **Sophie** travaille sur l`inventaire → Branche "inventaire"
 - **Alex** travaille sur la map → Branche "map"
 
 Chacun joue sur sa save parallèle.
@@ -70,7 +70,7 @@ Personne ne gêne personne !
 
 À la fin, on fusionne tout. 🎉
 
-### 3️⃣ C'est comme ça que bossent TOUS les pros 💼
+### 3️⃣ C`est comme ça que bossent TOUS les pros 💼
 
 Dans les studios de jeux, PERSONNE ne code directement sur la version principale.
 Tout le monde crée des branches :
@@ -79,7 +79,7 @@ Tout le monde crée des branches :
 - Branche "correction-bug"
 - Branche "test-level-design"
 
-C'est LA manière professionnelle de travailler !
+C`est LA manière professionnelle de travailler !
 
 ---
 
@@ -120,7 +120,7 @@ La partie principale continue normalement.
 La partie test est totalement indépendante !
 
 Si le système de magie te plaît, tu le ramènes dans la partie principale.
-Si c'est nul, tu supprimes la save test. Simple !
+Si c`est nul, tu supprimes la save test. Simple !
 
 ---
 
@@ -141,9 +141,9 @@ git branch
   test-nouveau-systeme
 ```
 
-L'étoile `*` indique sur quelle partie tu joues actuellement.
+L`étoile `*` indique sur quelle partie tu joues actuellement.
 
-**Analogie jeu :** C'est comme avoir une liste de tous tes slots de sauvegarde.
+**Analogie jeu :** C`est comme avoir une liste de tous tes slots de sauvegarde.
 
 ---
 
@@ -159,7 +159,7 @@ git branch nom-de-la-branche
 git branch test-magie
 ```
 
-**En français :** "Crée une nouvelle save parallèle qui s'appelle test-magie"
+**En français :** "Crée une nouvelle save parallèle qui s`appelle test-magie"
 
 **Analogie jeu :** Tu crées un nouveau slot de sauvegarde pour expérimenter.
 
@@ -211,7 +211,7 @@ git switch -c test-magie
 
 **Analogie jeu :** Tu crées un nouveau slot de save et tu commences à jouer dessus immédiatement.
 
-**C'est la commande que tu vas utiliser 90% du temps !** 🔥
+**C`est la commande que tu vas utiliser 90% du temps !** 🔥
 
 ---
 
@@ -243,7 +243,7 @@ Tu es sur la partie principale. 🎮
 git switch -c ajout-formulaire
 ```
 
-**Traduction :** "Crée une save parallèle pour tester l'ajout d'un formulaire"
+**Traduction :** "Crée une save parallèle pour tester l`ajout d`un formulaire"
 
 **Résultat :**
 
@@ -282,7 +282,7 @@ git commit -m "Ajout du formulaire de contact"
 
 **Ce qui se passe :**
 Tu viens de sauvegarder sur la partie parallèle `ajout-formulaire`.
-Ta partie principale (`main`) n'a PAS bougé !
+Ta partie principale (`main`) n`a PAS bougé !
 
 ---
 
@@ -295,7 +295,7 @@ git switch main
 **Maintenant, ouvre ton fichier index.html...**
 
 💥 **MAGIE !**
-Le formulaire a disparu ! Tu es revenu sur la partie principale où il n'y a pas de formulaire !
+Le formulaire a disparu ! Tu es revenu sur la partie principale où il n`y a pas de formulaire !
 
 ---
 
@@ -310,11 +310,11 @@ git switch ajout-formulaire
 🎉 **Le formulaire est de retour !**
 
 **Tu vois le pouvoir des branches ?**
-Tu peux passer d'une partie à l'autre instantanément ! ⚡
+Tu peux passer d`une partie à l`autre instantanément ! ⚡
 
 ---
 
-## 🎯 Les règles d'or des branches
+## 🎯 Les règles d`or des branches
 
 ### ✅ Règle 1 : Une branche = Une fonctionnalité
 
@@ -359,7 +359,7 @@ test-nouveau-personnage
 
 ⚠️ **ATTENTION !**
 
-Avant de faire `git switch`, assure-toi d'avoir fait un `git commit` !
+Avant de faire `git switch`, assure-toi d`avoir fait un `git commit` !
 
 **Pourquoi ?**
 
@@ -381,7 +381,7 @@ git switch autre-branche
 
 ## 🔑 Antisèche : Les commandes des parties parallèles
 
-| Commande | Ce qu'elle fait | Analogie jeu |
+| Commande | Ce qu`elle fait | Analogie jeu |
 |----------|----------------|--------------|
 | `git branch` | Voir toutes les parties | Liste de tous tes slots de save |
 | `git branch nom` | Créer une nouvelle partie | Créer un nouveau slot de save |
@@ -399,7 +399,7 @@ git switch autre-branche
 
 **1️⃣ Va dans ton projet `mon-portfolio`**
    - Ouvre le dossier
-   - Clique dans la barre d'adresse → tape `cmd` → Entrée
+   - Clique dans la barre d`adresse → tape `cmd` → Entrée
 
 **2️⃣ Vérifie sur quelle branche tu es**
    - Tape : `git branch`
@@ -407,12 +407,12 @@ git switch autre-branche
 
 **3️⃣ Crée une nouvelle branche**
    - Tape : `git switch -c ajout-description`
-   - Message : "Switched to a new branch 'ajout-description'"
+   - Message : "Switched to a new branch 'ajout-description`"
 
 **4️⃣ Modifie index.html**
    - Ouvre `index.html` avec le Bloc-notes
    - Ajoute 2-3 lignes de description sur toi
-   - Exemple : `<p>Je suis développeur junior et j'apprends Git comme un gamer !</p>`
+   - Exemple : `<p>Je suis développeur junior et j`apprends Git comme un gamer !</p>`
    - Sauvegarde (Ctrl+S)
 
 **5️⃣ Sauvegarde dans Git**
@@ -427,7 +427,7 @@ git switch autre-branche
    - Tape : `git switch ajout-description`
    - Ouvre `index.html` → **Ta description est revenue !** 🎉
 
-**🎉 Si t'as réussi, t'es un MAÎTRE DES SAUVEGARDES PARALLÈLES !** 💪
+**🎉 Si t`as réussi, t`es un MAÎTRE DES SAUVEGARDES PARALLÈLES !** 💪
 
 ---
 
@@ -442,11 +442,11 @@ git switch autre-branche
 ### Avec les branches :
 
 - 😎 Tu crées une save parallèle pour tester
-- 😎 Si ça marche pas, tu supprimes et c'est fini
+- 😎 Si ça marche pas, tu supprimes et c`est fini
 - 😎 Ta version principale reste toujours fonctionnelle
 - 😎 Tu peux bosser en équipe sans conflit
 
-**Les branches, c'est la liberté totale !** 🚀
+**Les branches, c`est la liberté totale !** 🚀
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Salut chef connecté ! 🧙‍♂️☁️
 
-Jusqu'ici, tu as travaillé sur ton **livre de recettes local** (ton ordinateur).  
+Jusqu`ici, tu as travaillé sur ton **livre de recettes local** (ton ordinateur).  
 Mais imagine...
 
 😱 **Ton PC plante. Toutes tes recettes sont perdues.**  
@@ -15,17 +15,17 @@ Mettre ton livre de recettes **sur Internet** avec **GitHub** ! 🚀
 
 Comme ça :
 - ✅ Tes recettes sont sauvegardées dans le cloud (si ton PC explose, tout est safe)
-- ✅ Tu peux cuisiner depuis n'importe quel ordinateur
+- ✅ Tu peux cuisiner depuis n`importe quel ordinateur
 - ✅ Tu peux partager tes recettes avec le monde entier
 - ✅ Les recruteurs peuvent voir ton talent (ton portfolio de chef !)
 
-**Aujourd'hui, tu vas apprendre à connecter ton livre local avec GitHub !**
+**Aujourd`hui, tu vas apprendre à connecter ton livre local avec GitHub !**
 
 ---
 
-## 🤔 C'est quoi GitHub ?
+## 🤔 C`est quoi GitHub ?
 
-**GitHub, c'est comme un stockage cloud pour tes recettes.**
+**GitHub, c`est comme un stockage cloud pour tes recettes.**
 
 **Analogie cuisine :**
 
@@ -38,7 +38,7 @@ Imagine que tu développes des recettes. 📖
 Tu synchronises ton livre avec GitHub.
 
 **Résultat ?**  
-N'importe qui peut voir tes recettes depuis n'importe où dans le monde ! 🌍
+N`importe qui peut voir tes recettes depuis n`importe où dans le monde ! 🌍
 
 ---
 
@@ -54,7 +54,7 @@ Beaucoup de débutants confondent. Voici la différence :
 | 🆓 Gratuit et open source | 🆓 Gratuit (avec options payantes) |
 
 **En résumé :**  
-- **Git** = L'outil pour gérer tes recettes localement
+- **Git** = L`outil pour gérer tes recettes localement
 - **GitHub** = Le site pour stocker tes recettes en ligne
 
 **Autres alternatives à GitHub :**  
@@ -68,9 +68,9 @@ Pour travailler avec GitHub, tu dois comprendre **4 concepts** :
 
 ### 1️⃣ Le repository (repo)
 
-**C'est quoi ?** Un livre de recettes sur GitHub.
+**C`est quoi ?** Un livre de recettes sur GitHub.
 
-**Analogie cuisine :** C'est ton livre de recettes en ligne avec toutes les versions.
+**Analogie cuisine :** C`est ton livre de recettes en ligne avec toutes les versions.
 
 **Exemple :** `https://github.com/ton-nom/mes-recettes`
 
@@ -78,22 +78,22 @@ Pour travailler avec GitHub, tu dois comprendre **4 concepts** :
 
 ### 2️⃣ Remote (distant)
 
-**C'est quoi ?** Le lien entre ton livre local et ton livre GitHub.
+**C`est quoi ?** Le lien entre ton livre local et ton livre GitHub.
 
-**Analogie cuisine :** C'est l'adresse de ton livre en ligne.
+**Analogie cuisine :** C`est l`adresse de ton livre en ligne.
 
 **Commande :**
 ```bash
 git remote add origin https://github.com/ton-nom/mes-recettes.git
 ```
 
-**Traduction :** *"Git, voici l'adresse de mon livre en ligne. Appelle-le 'origin'."*
+**Traduction :** *"Git, voici l`adresse de mon livre en ligne. Appelle-le 'origin`."*
 
 ---
 
 ### 3️⃣ Push (pousser)
 
-**C'est quoi ?** Envoyer tes nouvelles versions vers GitHub.
+**C`est quoi ?** Envoyer tes nouvelles versions vers GitHub.
 
 **Analogie cuisine :** Synchroniser tes nouvelles recettes vers le cloud.
 
@@ -108,7 +108,7 @@ git push
 
 ### 4️⃣ Pull (tirer)
 
-**C'est quoi ?** Récupérer les versions de GitHub vers ton PC.
+**C`est quoi ?** Récupérer les versions de GitHub vers ton PC.
 
 **Analogie cuisine :** Télécharger les nouvelles recettes du cloud vers ton livre local.
 
@@ -123,20 +123,20 @@ git pull
 
 ## 🚀 Créer ton compte GitHub
 
-Avant de commencer, tu dois créer un compte GitHub (c'est gratuit !).
+Avant de commencer, tu dois créer un compte GitHub (c`est gratuit !).
 
 **Étapes :**
 
 1. Va sur **https://github.com**
-2. Clique sur **Sign up** (S'inscrire)
-3. Choisis un nom d'utilisateur (ton pseudo de chef !)
+2. Clique sur **Sign up** (S`inscrire)
+3. Choisis un nom d`utilisateur (ton pseudo de chef !)
 4. Entre ton email
 5. Crée un mot de passe
 6. Valide ton compte
 
 **Conseil pro :** Choisis un nom pro (ex: `kevin-dev`, `sophie-coder`), pas `dark-killer-666` 😅
 
-**C'est bon ? Tu as ton compte ? On continue !**
+**C`est bon ? Tu as ton compte ? On continue !**
 
 ---
 
@@ -153,15 +153,15 @@ Maintenant, tu vas créer ton livre en ligne sur GitHub.
 5. Laisse tout par défaut
 6. Clique sur **Create repository**
 
-**C'est fait ! Tu as créé ton livre de recettes en ligne ! 🎉**
+**C`est fait ! Tu as créé ton livre de recettes en ligne ! 🎉**
 
 ---
 
 ### Étape 2 : Connecter ton livre local à GitHub
 
-GitHub va t'afficher des instructions. Tu vas utiliser celles-ci :
+GitHub va t`afficher des instructions. Tu vas utiliser celles-ci :
 
-**Si tu as DÉJÀ un projet local** (c'est ton cas) :
+**Si tu as DÉJÀ un projet local** (c`est ton cas) :
 
 ```bash
 git remote add origin https://github.com/ton-nom/mon-site.git
@@ -171,14 +171,14 @@ git push -u origin main
 
 **Décryptage :**
 
-| Commande | Ce qu'elle fait |
+| Commande | Ce qu`elle fait |
 |----------|-----------------|
 | `git remote add origin URL` | Connecte ton livre local à GitHub |
 | `git branch -M main` | Renomme ta version principale en "main" (standard actuel) |
 | `git push -u origin main` | Envoie toutes tes versions vers GitHub pour la première fois |
 
 **Analogie cuisine :**  
-Tu donnes l'adresse de ton livre en ligne à Git et tu synchronises toutes tes recettes !
+Tu donnes l`adresse de ton livre en ligne à Git et tu synchronises toutes tes recettes !
 
 ---
 
@@ -208,13 +208,13 @@ Va dans ton projet :
 cd mon-site
 ```
 
-Connecte-le à GitHub (remplace `ton-nom` par TON nom d'utilisateur GitHub) :
+Connecte-le à GitHub (remplace `ton-nom` par TON nom d`utilisateur GitHub) :
 
 ```bash
 git remote add origin https://github.com/ton-nom/mon-site.git
 ```
 
-**Traduction :** *"Git, voici l'adresse de mon livre en ligne !"*
+**Traduction :** *"Git, voici l`adresse de mon livre en ligne !"*
 
 ---
 
@@ -252,7 +252,7 @@ To https://github.com/ton-nom/mon-site.git
  * [new branch]      main -> main
 ```
 
-**Traduction :** *"J'ai envoyé 6 versions sur GitHub ! Tout est en ligne !"*
+**Traduction :** *"J`ai envoyé 6 versions sur GitHub ! Tout est en ligne !"*
 
 ---
 
@@ -265,7 +265,7 @@ Va sur **https://github.com/ton-nom/mon-site**
 Tu peux voir :
 - Tous tes fichiers
 - Toutes tes versions
-- L'historique complet
+- L`historique complet
 
 **Bravo ! Ton livre de recettes est maintenant sur Internet ! 🌍**
 
@@ -311,7 +311,7 @@ git clone https://github.com/ton-nom/mon-site.git
 Tu récupères toutes tes recettes du cloud et tu reconstruis ton livre sur ton nouveau PC.
 
 **Résultat :**  
-Tu as un dossier `mon-site` avec TOUT ton code et TOUT l'historique ! 🎉
+Tu as un dossier `mon-site` avec TOUT ton code et TOUT l`historique ! 🎉
 
 ---
 
@@ -337,16 +337,16 @@ Un collègue a ajouté une recette de dessert dans le livre en ligne. Tu téléc
 
 ## 🎯 Les commandes essentielles avec GitHub
 
-| Commande | Ce qu'elle fait | Analogie cuisine | Quand l'utiliser |
+| Commande | Ce qu`elle fait | Analogie cuisine | Quand l`utiliser |
 |----------|-----------------|------------------|------------------|
-| `git remote add origin URL` | Connecte ton projet à GitHub | Donner l'adresse du livre en ligne | **1 fois** au début |
+| `git remote add origin URL` | Connecte ton projet à GitHub | Donner l`adresse du livre en ligne | **1 fois** au début |
 | `git push` | Envoie tes commits vers GitHub | Synchroniser les recettes dans le cloud | **Tout le temps** après un commit |
 | `git pull` | Récupère les commits depuis GitHub | Télécharger les nouvelles recettes | Avant de commencer à cuisiner |
 | `git clone URL` | Télécharge un projet depuis GitHub | Récupérer tout un livre de recettes | Pour récupérer un projet |
 
 ---
 
-## ✅ Les règles d'or avec GitHub
+## ✅ Les règles d`or avec GitHub
 
 ### Règle 1 : Push régulièrement 📤
 
@@ -375,7 +375,7 @@ Télécharge les dernières recettes avant de commencer à cuisiner.
 
 ### Règle 3 : Commit AVANT de push 💾
 
-Tu ne peux pas push si tu n'as pas fait de commit avant.
+Tu ne peux pas push si tu n`as pas fait de commit avant.
 
 **Cycle correct :**
 ```bash
@@ -396,7 +396,7 @@ Tu notes une version AVANT de la synchroniser dans le cloud (logique !).
 1. Crée un compte sur **https://github.com** (si pas encore fait)
 2. Crée un nouveau repository appelé `mon-portfolio`
 3. Va dans ton projet local `mon-portfolio` sur ton PC
-4. Connecte-le à GitHub avec `git remote add origin URL` (remplace URL par l'adresse de ton repo)
+4. Connecte-le à GitHub avec `git remote add origin URL` (remplace URL par l`adresse de ton repo)
 5. Vérifie la connexion avec `git remote -v`
 6. Envoie tout sur GitHub avec `git push -u origin main`
 7. Va sur GitHub et admire tes recettes en ligne ! 🎉
@@ -405,11 +405,11 @@ Tu notes une version AVANT de la synchroniser dans le cloud (logique !).
 10. Envoie sur GitHub avec `git push`
 11. Rafraîchis la page GitHub → Ta nouvelle version est là ! 🚀
 
-**Si t'as réussi, t'es un CHEF CONNECTÉ AU CLOUD ! 💪**
+**Si t`as réussi, t`es un CHEF CONNECTÉ AU CLOUD ! 💪**
 
 ---
 
-## 🔑 Antisèche : GitHub en un coup d'œil
+## 🔑 Antisèche : GitHub en un coup d`œil
 
 | Action | Commande | Explication rapide |
 |--------|----------|-------------------|
@@ -417,7 +417,7 @@ Tu notes une version AVANT de la synchroniser dans le cloud (logique !).
 | **Envoyer** | `git push` | Envoie tes versions vers GitHub |
 | **Récupérer** | `git pull` | Télécharge les nouvelles versions depuis GitHub |
 | **Cloner** | `git clone URL` | Télécharge un livre complet |
-| **Vérifier** | `git remote -v` | Voir l'URL de ton GitHub |
+| **Vérifier** | `git remote -v` | Voir l`URL de ton GitHub |
 
 ---
 

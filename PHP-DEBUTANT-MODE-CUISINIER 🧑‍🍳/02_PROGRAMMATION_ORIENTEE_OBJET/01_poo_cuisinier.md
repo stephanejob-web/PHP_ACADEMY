@@ -1,22 +1,22 @@
-# 👨‍🍳 POO pour Cuisiniers - Cours 01 : C'est quoi cette histoire de POO ?
+# 👨‍🍳 POO pour Cuisiniers - Cours 01 : C`est quoi cette histoire de POO ?
 
 ## 🍳 Salut toi, futur chef du code !
 
-Alors voilà, t'as appris à coder en PHP. Tu faisais des variables, des boucles, des conditions... **tu te débrouilles pas mal !**
+Alors voilà, t`as appris à coder en PHP. Tu faisais des variables, des boucles, des conditions... **tu te débrouilles pas mal !**
 
 Mais imagine que tu dois gérer **50 recettes** dans ton restaurant. Si tu crées une variable pour chaque ingrédient de chaque recette, **tu vas devenir fou** ! 🤯
 
-Aujourd'hui, on va voir comment **organiser ton code proprement**, comme un vrai chef qui range sa cuisine.
+Aujourd`hui, on va voir comment **organiser ton code proprement**, comme un vrai chef qui range sa cuisine.
 
 ---
 
-## 🤔 La POO, c'est quoi exactement ?
+## 🤔 La POO, c`est quoi exactement ?
 
 **POO** = **Programmation Orientée Objet**
 
-Ouais, je sais, ça fait peur ce nom. Mais en vrai, c'est **SUPER SIMPLE** !
+Ouais, je sais, ça fait peur ce nom. Mais en vrai, c`est **SUPER SIMPLE** !
 
-La POO, c'est juste une façon de **RANGER ton code** pour pas que ça parte en cacahuète.
+La POO, c`est juste une façon de **RANGER ton code** pour pas que ça parte en cacahuète.
 
 **Imagine :**
 
@@ -70,7 +70,7 @@ $portions_mousse = 6;
 
 - 4 recettes = **16 variables**
 - Si tu as 50 recettes = **200 variables** !
-- Et si tu te trompes dans un nom de variable ? **Bon courage pour trouver l'erreur !**
+- Et si tu te trompes dans un nom de variable ? **Bon courage pour trouver l`erreur !**
 
 ---
 
@@ -113,7 +113,7 @@ $tarte_pommes->portions = 8;
 
 ✅ **UNE SEULE RECETTE** (la classe `Recette`)  
 ✅ Tu prépares **autant de plats que tu veux**  
-✅ **C'est organisé**, tu t'y retrouves !
+✅ **C`est organisé**, tu t`y retrouves !
 
 ---
 
@@ -121,9 +121,9 @@ $tarte_pommes->portions = 8;
 
 ### 1️⃣ **CLASSE** = La fiche recette vierge 📋
 
-Une **classe**, c'est comme **une fiche recette vierge**.
+Une **classe**, c`est comme **une fiche recette vierge**.
 
-C'est le **modèle** que tu vas utiliser pour préparer plein de plats.
+C`est le **modèle** que tu vas utiliser pour préparer plein de plats.
 
 ```php
 class Recette {
@@ -139,13 +139,13 @@ class Recette {
 Ton chef pâtissier te donne une fiche vierge et te dit :  
 *"Toutes les recettes doivent avoir : un nom, un temps de cuisson, une température, et un nombre de portions."*
 
-**La fiche recette, ce n'est PAS le gâteau en vrai !** C'est juste la feuille de papier.
+**La fiche recette, ce n`est PAS le gâteau en vrai !** C`est juste la feuille de papier.
 
 ---
 
 ### 2️⃣ **OBJET** = Le vrai plat préparé 🍰
 
-Un **objet**, c'est un plat **RÉEL** que tu prépares d'après la recette.
+Un **objet**, c`est un plat **RÉEL** que tu prépares d`après la recette.
 
 ```php
 $gateau_chocolat = new Recette();
@@ -153,7 +153,7 @@ $gateau_chocolat = new Recette();
 
 **En cuisine, ça ressemble à quoi ?**
 
-C'est le **vrai gâteau au chocolat** que tu sors du four.
+C`est le **vrai gâteau au chocolat** que tu sors du four.
 
 **Tu peux avoir UNE SEULE fiche recette, mais préparer 50 PLATS différents !**
 
@@ -195,15 +195,15 @@ Tu crées **3 fiches recettes** :
 
 Ensuite, tu prépares **proprement** tes 18 plats.
 
-**C'est RANGÉ, CLAIR, et FACILE à gérer !**
+**C`est RANGÉ, CLAIR, et FACILE à gérer !**
 
 ---
 
-## 🔥 Pourquoi la POO c'est GÉNIAL
+## 🔥 Pourquoi la POO c`est GÉNIAL
 
 ### ✅ Avantage 1 : Tu te répètes PAS
 
-Tu écris la fiche recette **UNE SEULE FOIS**, et tu l'utilises **1000 fois**.
+Tu écris la fiche recette **UNE SEULE FOIS**, et tu l`utilises **1000 fois**.
 
 Plus besoin de recopier les mêmes lignes encore et encore.
 
@@ -238,7 +238,7 @@ Le chef pâtissier a **UNE RECETTE** pour faire une mousse au chocolat :
 - 50g de sucre
 - 2h au frigo
 
-Cette recette, c'est comme **une CLASSE**.
+Cette recette, c`est comme **une CLASSE**.
 
 ---
 
@@ -247,13 +247,13 @@ Maintenant, 3 clients commandent une mousse au chocolat :
 - La mousse de la table 12
 - La mousse de la table 8
 
-Chaque mousse, c'est un **OBJET**.
+Chaque mousse, c`est un **OBJET**.
 
 **MÊME RECETTE, mais 3 MOUSSES DIFFÉRENTES.**
 
 Le chef ne réécrit pas la recette à chaque fois, il **applique la même** pour chaque client.
 
-**C'est EXACTEMENT ça la POO !**
+**C`est EXACTEMENT ça la POO !**
 
 ---
 
@@ -265,7 +265,7 @@ Le chef ne réécrit pas la recette à chaque fois, il **applique la même** pou
 
 > **"Une recette, mille plats."**
 
-Si t'as compris ça, **t'as déjà compris 80% de la POO !**
+Si t`as compris ça, **t`as déjà compris 80% de la POO !**
 
 ---
 
@@ -298,9 +298,9 @@ $gateau2 = new Recette();
 
 On va **VRAIMENT créer ta première recette** et **préparer ton premier plat** !
 
-Tu vas taper du VRAI code PHP, et tu vas voir que c'est **plus simple que tu penses**.
+Tu vas taper du VRAI code PHP, et tu vas voir que c`est **plus simple que tu penses**.
 
-Mais pour l'instant, **relis bien ce cours** jusqu'à ce que tu comprennes la différence entre :
+Mais pour l`instant, **relis bien ce cours** jusqu`à ce que tu comprennes la différence entre :
 
 📋 **CLASSE** (la fiche recette)  
 🍰 **OBJET** (le plat préparé)
@@ -310,11 +310,11 @@ Mais pour l'instant, **relis bien ce cours** jusqu'à ce que tu comprennes la di
 ## 💬 Dernier truc avant de partir...
 
 Si après ce cours tu te dis :  
-*"OK, c'est juste du bon sens en fait..."*
+*"OK, c`est juste du bon sens en fait..."*
 
 **BRAVO !** 🎉
 
-C'est exactement ça. La POO, c'est juste **du bon sens de chef cuisinier appliqué au code**.
+C`est exactement ça. La POO, c`est juste **du bon sens de chef cuisinier appliqué au code**.
 
 Allez, prends une pause, bois un coup, et on se retrouve au prochain cours ! ☕
 

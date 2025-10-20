@@ -7,17 +7,17 @@ Dans les cours précédents, tu as appris à :
 - Construire des **murs** (objets)
 - Leur donner des **caractéristiques** (propriétés)
 
-Mais jusqu'ici, ton mur, il fait quoi ? **Il reste planté là comme un piquet !** 😄
+Mais jusqu`ici, ton mur, il fait quoi ? **Il reste planté là comme un piquet !** 😄
 
-Aujourd'hui, on va lui apprendre à **FAIRE DES CHOSES** !
+Aujourd`hui, on va lui apprendre à **FAIRE DES CHOSES** !
 
 ---
 
-## 🤔 Les méthodes, c'est quoi exactement ?
+## 🤔 Les méthodes, c`est quoi exactement ?
 
-Jusqu'à maintenant, tu as appris les **PROPRIÉTÉS**.
+Jusqu`à maintenant, tu as appris les **PROPRIÉTÉS**.
 
-**Les PROPRIÉTÉS** = Ce que l'objet **EST**
+**Les PROPRIÉTÉS** = Ce que l`objet **EST**
 
 Exemple : un mur **EST** haut de 2.5m, **EST** large de 4m, **EST** en brique...
 
@@ -25,7 +25,7 @@ Exemple : un mur **EST** haut de 2.5m, **EST** large de 4m, **EST** en brique...
 
 Maintenant, on va voir les **MÉTHODES**.
 
-**Les MÉTHODES** = Ce que l'objet **FAIT**
+**Les MÉTHODES** = Ce que l`objet **FAIT**
 
 Exemple : un mur **CALCULE** sa surface, **SE REPEINT**, **AFFICHE** sa fiche...
 
@@ -35,12 +35,12 @@ Exemple : un mur **CALCULE** sa surface, **SE REPEINT**, **AFFICHE** sa fiche...
 
 **Sur un chantier :**
 
-- **Propriété :** "Ce mur fait 4m de large" → **C'EST une caractéristique**
-- **Méthode :** "Calcule la surface de ce mur" → **C'EST une action**
+- **Propriété :** "Ce mur fait 4m de large" → **C`EST une caractéristique**
+- **Méthode :** "Calcule la surface de ce mur" → **C`EST une action**
 
 ---
 
-**Un mur avec des méthodes, c'est un mur qui peut TRAVAILLER TOUT SEUL !**
+**Un mur avec des méthodes, c`est un mur qui peut TRAVAILLER TOUT SEUL !**
 
 Plus besoin de calculer la surface toi-même : le mur le fait !  
 Plus besoin de le repeindre à la main : le mur se repeint tout seul !
@@ -51,7 +51,7 @@ Plus besoin de le repeindre à la main : le mur se repeint tout seul !
 
 ## 🔨 Exemple 1 : Le mur calcule sa surface
 
-Sur un chantier, pour calculer la surface d'un mur, tu fais comment ?
+Sur un chantier, pour calculer la surface d`un mur, tu fais comment ?
 
 **hauteur × largeur = surface**
 
@@ -108,18 +108,18 @@ public function calculerSurface() {
 
 **`function`** → Le mot magique pour dire **"je crée une action"**
 
-**`calculerSurface`** → Le **nom** de l'action  
-*Tu peux l'appeler comme tu veux : `calculer()`, `getSurface()`, `surface()`...*  
+**`calculerSurface`** → Le **nom** de l`action  
+*Tu peux l`appeler comme tu veux : `calculer()`, `getSurface()`, `surface()`...*  
 *Mais choisis un nom qui décrit bien ce que fait la méthode !*
 
 **`()`** → Les **parenthèses** sont obligatoires après le nom  
-*Pour l'instant, on met rien dedans. On verra pourquoi plus tard.*
+*Pour l`instant, on met rien dedans. On verra pourquoi plus tard.*
 
-**`{`** → L'accolade ouvrante : le **début** de la méthode
+**`{`** → L`accolade ouvrante : le **début** de la méthode
 
 ---
 
-### Le code à l'intérieur :
+### Le code à l`intérieur :
 
 ```php
     return $this->hauteur * $this->largeur;
@@ -128,13 +128,13 @@ public function calculerSurface() {
 **`return`** → Je **RENVOIE** le résultat du calcul
 
 **`$this`** → **MOT SUPER IMPORTANT !**  
-Ça veut dire **"MOI-MÊME"** (l'objet qui exécute la méthode)
+Ça veut dire **"MOI-MÊME"** (l`objet qui exécute la méthode)
 
-**`$this->hauteur`** → **MA** hauteur (celle de ce mur-ci, pas d'un autre mur)
+**`$this->hauteur`** → **MA** hauteur (celle de ce mur-ci, pas d`un autre mur)
 
 **`$this->largeur`** → **MA** largeur (celle de ce mur-ci)
 
-**`*`** → L'opérateur de multiplication (tu connais déjà)
+**`*`** → L`opérateur de multiplication (tu connais déjà)
 
 ---
 
@@ -144,7 +144,7 @@ public function calculerSurface() {
 }
 ```
 
-**`}`** → L'accolade fermante : la **fin** de la méthode
+**`}`** → L`accolade fermante : la **fin** de la méthode
 
 ---
 
@@ -152,7 +152,7 @@ public function calculerSurface() {
 
 **`$this`** = **"MOI-MÊME"**
 
-C'est le mot que l'objet utilise pour parler de lui-même.
+C`est le mot que l`objet utilise pour parler de lui-même.
 
 ---
 
@@ -174,23 +174,23 @@ Quand tu demandes au **mur du salon** de calculer SA surface :
 
 ### Analogie :
 
-C'est comme si tu disais :
+C`est comme si tu disais :
 - **"Ma truelle"** → la truelle que **TU** utilises
-- **"Ta truelle"** → la truelle d'un autre
+- **"Ta truelle"** → la truelle d`un autre
 
-**`$this`** c'est comme dire **"MA"** ou **"MON"**.
+**`$this`** c`est comme dire **"MA"** ou **"MON"**.
 
 ---
 
 ## 🎯 Appeler une méthode
 
-Pour **utiliser** une méthode, c'est simple :
+Pour **utiliser** une méthode, c`est simple :
 
 ```php
 $surface = $mur_salon->calculerSurface();
 ```
 
-**`$mur_salon`** → L'objet sur lequel tu veux agir
+**`$mur_salon`** → L`objet sur lequel tu veux agir
 
 **`->`** → La flèche (tu connais déjà !)
 
@@ -256,7 +256,7 @@ Le mur a été repeint en bleu ciel !
 Nouvelle couleur : bleu ciel
 ```
 
-**Le mur s'est repeint tout seul !** 🎨
+**Le mur s`est repeint tout seul !** 🎨
 
 ---
 
@@ -270,13 +270,13 @@ public function repeindre($nouvelle_couleur) {
 
 **Tu vois le `$nouvelle_couleur` entre les parenthèses ?**
 
-Ça s'appelle un **PARAMÈTRE**.
+Ça s`appelle un **PARAMÈTRE**.
 
 ---
 
-### C'est quoi un paramètre ?
+### C`est quoi un paramètre ?
 
-Un paramètre, c'est une **information que tu DOIS donner** à la méthode pour qu'elle fonctionne.
+Un paramètre, c`est une **information que tu DOIS donner** à la méthode pour qu`elle fonctionne.
 
 **Exemple :**
 
@@ -295,7 +295,7 @@ public function repeindre($nouvelle_couleur) {
 }
 ```
 
-**`$nouvelle_couleur`** → C'est une variable qui **reçoit** l'info que tu donnes
+**`$nouvelle_couleur`** → C`est une variable qui **reçoit** l`info que tu donnes
 
 **`$this->couleur = $nouvelle_couleur;`** → Je change **MA** couleur avec la nouvelle couleur reçue
 
@@ -307,15 +307,15 @@ public function repeindre($nouvelle_couleur) {
 $mur_salon->repeindre("bleu ciel");
 ```
 
-**`"bleu ciel"`** → C'est la valeur que tu **passes** au paramètre `$nouvelle_couleur`
+**`"bleu ciel"`** → C`est la valeur que tu **passes** au paramètre `$nouvelle_couleur`
 
-La méthode reçoit `"bleu ciel"` et l'utilise pour changer la couleur du mur.
+La méthode reçoit `"bleu ciel"` et l`utilise pour changer la couleur du mur.
 
 ---
 
 ## 📋 Exemple 3 : Afficher la fiche technique
 
-On peut aussi créer une méthode qui **affiche toutes les infos** du mur d'un coup !
+On peut aussi créer une méthode qui **affiche toutes les infos** du mur d`un coup !
 
 ```php
 <?php
@@ -385,7 +385,7 @@ echo "Surface : " . $this->calculerSurface() . " m²<br>";
 
 Ici, `afficherFiche()` appelle `calculerSurface()` pour récupérer la surface.
 
-**C'est puissant !** Les méthodes peuvent travailler ensemble ! 💪
+**C`est puissant !** Les méthodes peuvent travailler ensemble ! 💪
 
 ---
 
@@ -464,11 +464,11 @@ public function calculerPrix() {
 
 ## 🧠 Ce que tu DOIS retenir de ce cours
 
-✅ **Propriété** = Ce que l'objet **EST** (hauteur, largeur, couleur...)
+✅ **Propriété** = Ce que l`objet **EST** (hauteur, largeur, couleur...)
 
-✅ **Méthode** = Ce que l'objet **FAIT** (calculer, repeindre, afficher...)
+✅ **Méthode** = Ce que l`objet **FAIT** (calculer, repeindre, afficher...)
 
-✅ **`$this`** = **"MOI-MÊME"** (l'objet qui parle de lui)
+✅ **`$this`** = **"MOI-MÊME"** (l`objet qui parle de lui)
 
 ✅ **Méthode sans paramètre** : `calculerSurface()`
 
@@ -496,11 +496,11 @@ public function calculerPrix() {
 
 Tu vas apprendre le **CONSTRUCTEUR** !
 
-**C'est quoi ?**
+**C`est quoi ?**
 
 Un mur qui se construit **directement avec toutes ses infos** !
 
-Plus besoin d'écrire 10 lignes pour créer un mur... tout se fait **en une seule ligne** ! 🚀
+Plus besoin d`écrire 10 lignes pour créer un mur... tout se fait **en une seule ligne** ! 🚀
 
 **Exemple de ce que tu pourras faire :**
 
@@ -521,12 +521,12 @@ $mur->materiaux = "brique";
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE !**
+Mais pour l`instant, **FAIS L`EXERCICE !**
 
-C'est en **pratiquant** qu'on devient bon. Pas en lisant. 💪
+C`est en **pratiquant** qu`on devient bon. Pas en lisant. 💪
 
 ---
 
 **👷 Continue comme ça, tu deviens un vrai pro !**
 
-*PS : Si tu galères sur l'exercice, relis le cours. La réponse est dedans ! 😊*
+*PS : Si tu galères sur l`exercice, relis le cours. La réponse est dedans ! 😊*

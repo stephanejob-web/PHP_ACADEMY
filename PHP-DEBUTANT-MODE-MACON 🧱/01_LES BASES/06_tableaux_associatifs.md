@@ -5,10 +5,10 @@
 ## 🚨 Pourquoi les tableaux sont très importants
 
 Avant tout, arrêtons-nous un instant 👋  
-Ce que tu vas apprendre ici, c'est l'un des concepts les plus importants de tout le PHP (et même de la programmation en général).
+Ce que tu vas apprendre ici, c`est l`un des concepts les plus importants de tout le PHP (et même de la programmation en général).
 
-Les **tableaux**, c'est le **cœur du code** :  
-➡️ c'est la façon de **ranger, organiser et retrouver les informations**.
+Les **tableaux**, c`est le **cœur du code** :  
+➡️ c`est la façon de **ranger, organiser et retrouver les informations**.
 
 ---
 
@@ -20,8 +20,8 @@ Sur un chantier, tu ranges ton matériel dans des boîtes :
 - une autre pour les outils de mesure,  
 - une autre pour les produits (ciment, sable…).
 
-En PHP, c'est pareil :  
-> Un **tableau**, c'est comme une **caisse de rangement** pour tes données.
+En PHP, c`est pareil :  
+> Un **tableau**, c`est comme une **caisse de rangement** pour tes données.
 
 Sans tableaux, tu devrais créer une variable pour chaque chose 😩  
 ```php
@@ -36,7 +36,7 @@ $outils = ["truelle", "niveau", "mètre"];
 ```
 
 💬 En résumé :
-> Savoir utiliser les tableaux, c'est comme bien ranger ton chantier.  
+> Savoir utiliser les tableaux, c`est comme bien ranger ton chantier.  
 > Si tes caisses sont en ordre, ton travail devient plus simple et plus rapide !
 
 ---
@@ -64,7 +64,7 @@ echo $outils[1]; // niveau
 Tu dois **te souvenir du numéro (1)**.  
 Pas pratique quand on a la tête pleine de ciment 😅  
 
-Si tu as 50 outils, comment tu te rappelles que la truelle c'est le numéro 0, le marteau le numéro 12, etc. ?
+Si tu as 50 outils, comment tu te rappelles que la truelle c`est le numéro 0, le marteau le numéro 12, etc. ?
 
 ---
 
@@ -73,7 +73,7 @@ Si tu as 50 outils, comment tu te rappelles que la truelle c'est le numéro 0, l
 ### 🤔 Le problème des numéros
 
 Sur un vrai chantier, tu ne dis JAMAIS :
-> "Apporte-moi l'outil numéro 2 !"
+> "Apporte-moi l`outil numéro 2 !"
 
 Tu dis :
 > "Apporte-moi **la truelle de maçon** !"  
@@ -81,9 +81,9 @@ Tu dis :
 
 Tu utilises un **NOM**, pas un **NUMÉRO** !
 
-### ✨ C'est ça, un tableau associatif !
+### ✨ C`est ça, un tableau associatif !
 
-> Chaque case a un **nom (clé)** au lieu d'un **numéro**.
+> Chaque case a un **nom (clé)** au lieu d`un **numéro**.
 
 Au lieu de dire "donne-moi la case 0", tu dis "donne-moi la case **maçonnerie**" !
 
@@ -130,7 +130,7 @@ $outils = [
 └─────────────┴────────────────────┘
 ```
 
-C'est comme un **annuaire** :  
+C`est comme un **annuaire** :  
 - Le **nom** (clé) te permet de trouver  
 - Le **contenu** (valeur)
 
@@ -140,8 +140,8 @@ C'est comme un **annuaire** :
 
 ### 🔹 La CLÉ (Key en anglais)
 
-C'est le **nom** que tu donnes à une case.  
-C'est **TOI** qui choisis ce nom.
+C`est le **nom** que tu donnes à une case.  
+C`est **TOI** qui choisis ce nom.
 
 Exemples de clés :
 - `"maçonnerie"`
@@ -150,14 +150,14 @@ Exemples de clés :
 - `"nom"`
 
 🧠 **Retiens :**
-> La clé, c'est l'**étiquette** sur la boîte.
+> La clé, c`est l`**étiquette** sur la boîte.
 
 ---
 
 ### 🔹 La VALEUR (Value en anglais)
 
-C'est le **contenu** de la case.  
-C'est ce que tu ranges dedans.
+C`est le **contenu** de la case.  
+C`est ce que tu ranges dedans.
 
 Exemples de valeurs :
 - `"truelle"` (du texte)
@@ -165,13 +165,13 @@ Exemples de valeurs :
 - `"Dupont"` (un nom)
 
 🧠 **Retiens :**
-> La valeur, c'est ce qu'il y a **dans** la boîte.
+> La valeur, c`est ce qu`il y a **dans** la boîte.
 
 ---
 
 ### 📋 Tableau récapitulatif :
 
-| Terme | C'est quoi ? | Exemple |
+| Terme | C`est quoi ? | Exemple |
 |-------|--------------|---------|
 | **CLÉ** | Le nom de la case | `"maçonnerie"` |
 | **VALEUR** | Le contenu de la case | `"truelle"` |
@@ -218,7 +218,7 @@ niveau à bulle
 ```
 
 💬 PHP comprend :
-> "Va dans la boîte appelée **mesure**, et dis-moi ce qu'il y a dedans."
+> "Va dans la boîte appelée **mesure**, et dis-moi ce qu`il y a dedans."
 
 ---
 
@@ -262,7 +262,7 @@ $outils["traçage"] = "fil à plomb";
 $outils["peinture"] = "rouleau";
 ```
 
-💬 Tu viens d'ajouter une **nouvelle boîte** appelée "peinture" avec un "rouleau" dedans !
+💬 Tu viens d`ajouter une **nouvelle boîte** appelée "peinture" avec un "rouleau" dedans !
 
 ---
 
@@ -297,7 +297,7 @@ Après : Array ( [maçonnerie] => truelle [mesure] => mètre laser [démolition]
 
 ## 🧾 7️⃣ Voir tout le tableau avec print_r()
 
-Pour voir **TOUT** ce qu'il y a dans ton tableau :
+Pour voir **TOUT** ce qu`il y a dans ton tableau :
 
 ```php
 $outils = [
@@ -320,7 +320,7 @@ Array
 ```
 
 💬 `print_r()` veut dire **"print readable"** (affiche de façon lisible).  
-C'est super utile pour **vérifier** ce qu'il y a dans ton tableau !
+C`est super utile pour **vérifier** ce qu`il y a dans ton tableau !
 
 ---
 
@@ -338,13 +338,13 @@ C'est super utile pour **vérifier** ce qu'il y a dans ton tableau !
 
 ### 🤯 *Petite pause humour :*
 
-> "C'est quoi ce bazar ?! J'ai la tête qui chauffe, j'comprends plus rien à ces crochets et ces flèches !" 😵‍💫
+> "C`est quoi ce bazar ?! J`ai la tête qui chauffe, j`comprends plus rien à ces crochets et ces flèches !" 😵‍💫
 
-C'est **NORMAL** de penser ça la première fois.  
+C`est **NORMAL** de penser ça la première fois.  
 **TOUT LE MONDE** passe par là.  
 
 Mais rassure-toi 👷‍♂️ :  
-➡️ À force d'en faire, ton cerveau va s'y habituer.  
+➡️ À force d`en faire, ton cerveau va s`y habituer.  
 ➡️ Et un jour, tu feras des tableaux sans même y penser — comme un pro qui monte un mur bien droit 🧱.
 
 💪 **Continue, tu es sur la bonne voie !**
@@ -354,13 +354,13 @@ Mais rassure-toi 👷‍♂️ :
 # 🔁 9️⃣ La boucle `foreach` – Parcourir tout le tableau
 
 Maintenant que tu sais **ouvrir une boîte avec les crochets**,  
-on va apprendre à **ouvrir TOUTES les boîtes d'un coup** avec une boucle.
+on va apprendre à **ouvrir TOUTES les boîtes d`un coup** avec une boucle.
 
 ---
 
 ## 🧰 A) Version simple : parcourir seulement les VALEURS
 
-Si tu veux juste voir **ce qu'il y a dans les boîtes** (sans les noms) :
+Si tu veux juste voir **ce qu`il y a dans les boîtes** (sans les noms) :
 
 ```php
 $outils = ["truelle", "niveau", "mètre"];
@@ -386,17 +386,17 @@ J'utilise un mètre
 
 | Tour | `$outil` contient | Affichage |
 |------|-------------------|-----------|
-| 1 | truelle | J'utilise un truelle |
-| 2 | niveau | J'utilise un niveau |
-| 3 | mètre | J'utilise un mètre |
+| 1 | truelle | J`utilise un truelle |
+| 2 | niveau | J`utilise un niveau |
+| 3 | mètre | J`utilise un mètre |
 
-C'est comme si PHP sortait **un outil à la fois** de ta caisse, te le montrait, puis passait au suivant !
+C`est comme si PHP sortait **un outil à la fois** de ta caisse, te le montrait, puis passait au suivant !
 
 ---
 
 ## 🧱 B) Version complète : les CLÉS + les VALEURS
 
-### 🚨 C'EST LA PARTIE LA PLUS IMPORTANTE !
+### 🚨 C`EST LA PARTIE LA PLUS IMPORTANTE !
 
 Quand ton tableau a des **noms de boîtes** (clés), tu veux souvent voir **le nom ET le contenu** !
 
@@ -425,8 +425,8 @@ Dans la catégorie traçage, j'utilise un cordeau.
 
 ### 🚨 LA LIGNE QUI REND FOU ! 😵‍💫
 
-Bon, là c'est **LA** fameuse ligne qui fait peur à tout le monde la première fois.  
-Mais t'inquiète, on va la **décortiquer tranquillement** 👇
+Bon, là c`est **LA** fameuse ligne qui fait peur à tout le monde la première fois.  
+Mais t`inquiète, on va la **décortiquer tranquillement** 👇
 
 ```php
 foreach ($outils as $categorie => $outil)
@@ -436,7 +436,7 @@ foreach ($outils as $categorie => $outil)
 
 > "Pour **chaque paire** dans `$outils`,  
 > mets le **nom de la boîte** dans `$categorie`,  
-> et ce qu'il y a **dedans** dans `$outil`."
+> et ce qu`il y a **dedans** dans `$outil`."
 
 ---
 
@@ -482,22 +482,22 @@ foreach ($outils as $toto => $truc) {
 ```
 
 PHP le comprendrait **très bien**.  
-Mais… c'est **moche** et **incompréhensible** 😅
+Mais… c`est **moche** et **incompréhensible** 😅
 
-Le code, c'est comme un chantier :  
-**Si tu ne mets pas d'étiquettes claires, plus personne ne s'y retrouve.**
+Le code, c`est comme un chantier :  
+**Si tu ne mets pas d`étiquettes claires, plus personne ne s`y retrouve.**
 
-👉 C'est pour ça qu'on donne des noms **logiques** :
+👉 C`est pour ça qu`on donne des noms **logiques** :
 - `$outils` → le tableau complet (ta caisse)
 - `$categorie` → le nom de la boîte (la CLÉ)
-- `$outil` → ce qu'il y a dedans (la VALEUR)
+- `$outil` → ce qu`il y a dedans (la VALEUR)
 
 🧠 **Retiens :**
 > Plus tu choisis des noms clairs, plus ton code est facile à lire !
 
 ---
 
-### 🎯 Exemple avec d'autres noms :
+### 🎯 Exemple avec d`autres noms :
 
 ```php
 $clients = [
@@ -520,13 +520,13 @@ Client Durand : terminé
 
 Ici :
 - `$nom` = la CLÉ (le nom du client)
-- `$statut` = la VALEUR (l'état du chantier)
+- `$statut` = la VALEUR (l`état du chantier)
 
 ---
 
 ### 🤯 "Pfff… ça me rend fou tout ça !"
 
-C'est **NORMAL** 😅  
+C`est **NORMAL** 😅  
 **Tous les débutants** passent par là.
 
 Voici la vérité :
@@ -604,10 +604,10 @@ echo count($outils);
 
 ## 🧱 Phrase à retenir
 
-> Un **tableau associatif**, c'est comme une **caisse de chantier** :  
+> Un **tableau associatif**, c`est comme une **caisse de chantier** :  
 > chaque **boîte a un nom (CLÉ)** et un **contenu (VALEUR)**.  
 > La **flèche `=>`** relie les deux.  
-> Et grâce à **`foreach`**, tu peux **ouvrir toutes les boîtes** sans t'y perdre ! 🪣
+> Et grâce à **`foreach`**, tu peux **ouvrir toutes les boîtes** sans t`y perdre ! 🪣
 
 ---
 
@@ -622,9 +622,9 @@ Crée un tableau `$materiaux` avec :
 
 Affiche le prix du ciment en utilisant les crochets.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Un tableau associatif avec 3 paires
-- Affichage d'une valeur avec sa clé
+- Affichage d`une valeur avec sa clé
 
 **Exemple de résultat attendu :**
 ```
@@ -651,12 +651,12 @@ echo $materiaux["ciment"];
 
 ## 📝 Exercice 2 : Ajouter un élément
 **Énoncé :**  
-Reprends le tableau `$materiaux` de l'exercice 1.  
+Reprends le tableau `$materiaux` de l`exercice 1.  
 Ajoute une nouvelle paire : `"brique" => 12`.  
 Affiche tout le tableau avec `print_r()`.
 
-**Ce qu'on attend :**  
-- Ajout d'une nouvelle clé-valeur
+**Ce qu`on attend :**  
+- Ajout d`une nouvelle clé-valeur
 - Affichage du tableau complet
 
 **Exemple de résultat attendu :**
@@ -690,8 +690,8 @@ Reprends le tableau `$materiaux`.
 Change le prix du sable de 6 à 7.  
 Affiche le nouveau prix du sable.
 
-**Ce qu'on attend :**  
-- Modification d'une valeur existante
+**Ce qu`on attend :**  
+- Modification d`une valeur existante
 - Affichage de la nouvelle valeur
 
 **Exemple de résultat attendu :**
@@ -729,7 +729,7 @@ Crée un tableau `$clients` avec :
 Utilise foreach pour afficher :  
 "Client [nom] : [statut]" pour chaque client.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Un tableau associatif de 3 clients
 - Boucle foreach qui affiche clé et valeur
 
@@ -762,12 +762,12 @@ foreach ($clients as $nom => $statut) {
 
 ## 📝 Exercice 5 : Ajouter un client
 **Énoncé :**  
-Reprends le tableau `$clients` de l'exercice 4.  
+Reprends le tableau `$clients` de l`exercice 4.  
 Ajoute un nouveau client : `"Bernard"` => `"nouveau"`.  
 Affiche tous les clients avec foreach.
 
-**Ce qu'on attend :**  
-- Ajout d'une paire clé-valeur
+**Ce qu`on attend :**  
+- Ajout d`une paire clé-valeur
 - Affichage de tous les clients
 
 **Exemple de résultat attendu :**
@@ -808,9 +808,9 @@ Crée un tableau `$outils` avec :
 - `"cordeau"` => `"traçage"`
 
 Affiche pour chaque outil :  
-"L'outil [nom] sert pour [catégorie]."
+"L`outil [nom] sert pour [catégorie]."
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Tableau associatif de 3 outils
 - Phrase personnalisée avec foreach
 
@@ -843,11 +843,11 @@ foreach ($outils as $outil => $categorie) {
 
 ## 📝 Exercice 7 : Compter les éléments
 **Énoncé :**  
-Reprends le tableau `$outils` de l'exercice 6.  
-Compte combien d'outils tu as et affiche :  
-"J'ai X outils différents."
+Reprends le tableau `$outils` de l`exercice 6.  
+Compte combien d`outils tu as et affiche :  
+"J`ai X outils différents."
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Utilisation de count()
 - Message avec le résultat
 
@@ -887,7 +887,7 @@ Affiche : "Total : X euros"
 
 💡 Astuce : Crée une variable `$total = 0` avant la boucle, et ajoute chaque prix dedans.
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Une variable pour stocker le total
 - Une boucle qui additionne les valeurs
 - Affichage du résultat final
@@ -929,9 +929,9 @@ Crée un tableau `$stock` avec :
 - `"seaux"` => `8`
 
 Affiche pour chaque élément :  
-"J'ai [quantité] [objet]."
+"J`ai [quantité] [objet]."
 
-**Ce qu'on attend :**  
+**Ce qu`on attend :**  
 - Tableau avec quantités
 - Boucle foreach qui affiche clé et valeur
 

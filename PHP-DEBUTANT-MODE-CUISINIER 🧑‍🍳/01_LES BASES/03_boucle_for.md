@@ -2,7 +2,7 @@
 
 ---
 💬 "Pourquoi les débutants ont peur de la boucle for ?"
-Parce qu'elle tourne en rond, et eux aussi ! 😂
+Parce qu`elle tourne en rond, et eux aussi ! 😂
 
 ## 🍳 Pourquoi une boucle ?
 
@@ -23,19 +23,19 @@ echo "Je sers l'assiette numéro 10<br>";
 ```
 
 Mais là, soyons honnêtes…
-👉 Au bout de 10 lignes, t'en as marre.
-👉 Au bout de 100, t'as envie de jeter ton ordinateur dans la marmite 💻🍲
+👉 Au bout de 10 lignes, t`en as marre.
+👉 Au bout de 100, t`as envie de jeter ton ordinateur dans la marmite 💻🍲
 
 Heureusement, PHP a une solution magique pour **répéter une action sans se fatiguer** :
-c'est la **boucle** !
+c`est la **boucle** !
 
 ---
 
-## 💡 C'est quoi une boucle ?
+## 💡 C`est quoi une boucle ?
 
-Une **boucle**, c'est comme un **commis bien dressé** 😄
+Une **boucle**, c`est comme un **commis bien dressé** 😄
 Tu lui dis :
-> "Sers une assiette, avance d'un pas, et recommence… jusqu'à ce que tout le monde soit servi !"
+> "Sers une assiette, avance d`un pas, et recommence… jusqu`à ce que tout le monde soit servi !"
 
 Et lui, il obéit sans broncher 👨‍🍳
 
@@ -70,7 +70,7 @@ Regarde bien cette ligne :
 for ($i = 1; $i <= 10; $i++)
 ```
 
-C'est comme une **phrase magique en trois étapes** ✨
+C`est comme une **phrase magique en trois étapes** ✨
 
 ### 📦 La structure complète
 
@@ -94,9 +94,9 @@ for ($i = 1 ; $i <= 10 ; $i++) {
 
 | Partie | Nom technique | Explication simple |
 |--------|---------------|-------------------|
-| **`$i = 1`** | **Initialisation** | Je **commence** à l'assiette numéro **1** 🍽️ |
-| **`$i <= 10`** | **Condition** | Je **continue** tant que je n'ai **pas dépassé 10 assiettes** 🔟 |
-| **`$i++`** | **Incrémentation** | J'**avance d'une assiette** à chaque fois 👣 |
+| **`$i = 1`** | **Initialisation** | Je **commence** à l`assiette numéro **1** 🍽️ |
+| **`$i <= 10`** | **Condition** | Je **continue** tant que je n`ai **pas dépassé 10 assiettes** 🔟 |
+| **`$i++`** | **Incrémentation** | J`**avance d`une assiette** à chaque fois 👣 |
 
 ---
 
@@ -129,7 +129,7 @@ PHP lit : `$i = 1`
    ```
    → Affiche : `Assiette 1`
 
-3. **PHP fait l'incrémentation** : `$i++`
+3. **PHP fait l`incrémentation** : `$i++`
    → `$i` passe de **1** à **2**
 
 ---
@@ -146,7 +146,7 @@ PHP lit : `$i = 1`
    ```
    → Affiche : `Assiette 2`
 
-3. **PHP fait l'incrémentation** : `$i++`
+3. **PHP fait l`incrémentation** : `$i++`
    → `$i` passe de **2** à **3**
 
 ---
@@ -163,18 +163,18 @@ PHP lit : `$i = 1`
    ```
    → Affiche : `Assiette 3`
 
-3. **PHP fait l'incrémentation** : `$i++`
+3. **PHP fait l`incrémentation** : `$i++`
    → `$i` passe de **3** à **4**
 
 ---
 
-#### 🔴 **TOUR 4 (qui n'existe pas)**
+#### 🔴 **TOUR 4 (qui n`existe pas)**
 
 1. **PHP vérifie la condition** : `$i <= 3` ?
    → `$i` vaut **4**, et 4 ≤ 3 → **NON** ❌
    → Donc on **SORT de la boucle**
 
-2. **C'est fini !** 🎉
+2. **C`est fini !** 🎉
 
 ---
 
@@ -191,11 +191,11 @@ PHP lit : `$i = 1`
 
 ## 🔎 Zoom sur `$i` — le compteur de service 🧰
 
-> 💬 `$i` n'est **pas un mot magique** de PHP.
-> C'est simplement **une variable** qu'on utilise pour **compter** les tours de boucle.
+> 💬 `$i` n`est **pas un mot magique** de PHP.
+> C`est simplement **une variable** qu`on utilise pour **compter** les tours de boucle.
 
 Les programmeurs utilisent souvent `$i` car ça vient du mot anglais *"iteration"* (tour de boucle).
-Mais tu peux l'appeler comme tu veux ! 😄
+Mais tu peux l`appeler comme tu veux ! 😄
 
 Par exemple :
 
@@ -213,10 +213,10 @@ for ($service = 1; $service <= 10; $service++) {
 }
 ```
 
-👉 PHP s'en fiche du nom, tant que c'est **le même dans les trois parties** du `for`.
+👉 PHP s`en fiche du nom, tant que c`est **le même dans les trois parties** du `for`.
 
 🧠 Retiens ceci :
-> `$i`, `$assiette`, ou `$service`, c'est juste une **étiquette** qui sert à se souvenir où on en est dans la boucle.
+> `$i`, `$assiette`, ou `$service`, c`est juste une **étiquette** qui sert à se souvenir où on en est dans la boucle.
 
 ---
 
@@ -252,15 +252,15 @@ Plat 8
 
 ---
 
-### 🔹 2️⃣ `$i <= 10` — La condition (Quand s'arrêter)
+### 🔹 2️⃣ `$i <= 10` — La condition (Quand s`arrêter)
 
 Tu lui dis :
-> "Continue **tant que** tu n'as **pas fini les 10 assiettes**."
+> "Continue **tant que** tu n`as **pas fini les 10 assiettes**."
 
 Quand `$i` devient 11 :
-> "Chef ! J'ai fini le service !" 😅
+> "Chef ! J`ai fini le service !" 😅
 
-Alors la boucle s'arrête **toute seule**.
+Alors la boucle s`arrête **toute seule**.
 
 **Les conditions possibles :**
 
@@ -290,18 +290,18 @@ Assiette 2
 
 ### 🔹 3️⃣ `$i++` — Le pas en avant (Incrémentation)
 
-C'est ton petit **pas de chef** 👣
+C`est ton petit **pas de chef** 👣
 
-Chaque fois que tu sers une assiette, tu avances d'une place.
+Chaque fois que tu sers une assiette, tu avances d`une place.
 
 🧠 Astuce :
 Le `++` veut dire **"ajoute 1"** à ta variable.
 Ton compteur `$i` passe donc de 1 à 2, puis 3, puis 4… automatiquement.
 
 Et si tu te demandes :
-> "Mais c'est quoi ce bordel de deux + à la suite ?! 🤨"
+> "Mais c`est quoi ce bordel de deux + à la suite ?! 🤨"
 
-Pas de panique, c'est juste la façon de PHP de dire :
+Pas de panique, c`est juste la façon de PHP de dire :
 > "Eh ! Ajoute 1 et continue ton service, chef !" 😆
 
 **Autres façons de faire avancer le compteur :**
@@ -309,18 +309,18 @@ Pas de panique, c'est juste la façon de PHP de dire :
 | Écriture | Signification |
 |----------|---------------|
 | `$i++` | Ajoute 1 à chaque tour |
-| `$i--` | Enlève 1 à chaque tour (compte à l'envers) |
+| `$i--` | Enlève 1 à chaque tour (compte à l`envers) |
 | `$i += 2` | Ajoute 2 à chaque tour |
 | `$i += 5` | Ajoute 5 à chaque tour |
 | `$i -= 1` | Enlève 1 à chaque tour (pareil que `$i--`) |
 
 ---
 
-## 🔙 SUPER IMPORTANT : Compter à l'envers (10, 9, 8, 7...)
+## 🔙 SUPER IMPORTANT : Compter à l`envers (10, 9, 8, 7...)
 
-### 🚨 C'EST ICI QU'IL FAUT VRAIMENT ÊTRE ATTENTIF ! 🚨
+### 🚨 C`EST ICI QU'IL FAUT VRAIMENT ÊTRE ATTENTIF ! 🚨
 
-Pour compter **à l'envers**, il faut **changer LES TROIS PARTIES** de la boucle :
+Pour compter **à l`envers**, il faut **changer LES TROIS PARTIES** de la boucle :
 
 ```php
 for ($i = 10; $i >= 1; $i--) {
@@ -336,18 +336,18 @@ $i = 10
 ```
 💬 "Je commence avec la dixième portion, en haut de la pile"
 
-#### 2️⃣ **On continue tant qu'on n'est pas en dessous de 1**
+#### 2️⃣ **On continue tant qu`on n`est pas en dessous de 1**
 ```php
 $i >= 1
 ```
 💬 "Je continue de descendre tant que je suis à la portion 1 ou plus"
 ⚠️ **ATTENTION** : On utilise `>=` (supérieur ou égal) et non `<=`
 
-#### 3️⃣ **On descend d'une portion à chaque tour**
+#### 3️⃣ **On descend d`une portion à chaque tour**
 ```php
 $i--
 ```
-💬 "À chaque tour, je descends d'une portion" (j'enlève 1)
+💬 "À chaque tour, je descends d`une portion" (j`enlève 1)
 
 ---
 
@@ -399,9 +399,9 @@ for ($i = 10; $i <= 1; $i--) {
     echo "$i<br>";
 }
 ```
-💬 **Pourquoi c'est mauvais ?**
-La condition `$i <= 1` est DÉJÀ fausse dès le départ (10 n'est pas <= 1).
-La boucle ne s'exécutera **jamais** !
+💬 **Pourquoi c`est mauvais ?**
+La condition `$i <= 1` est DÉJÀ fausse dès le départ (10 n`est pas <= 1).
+La boucle ne s`exécutera **jamais** !
 
 ---
 
@@ -412,7 +412,7 @@ for ($i = 10; $i >= 1; $i++) {
     echo "$i<br>";
 }
 ```
-💬 **Pourquoi c'est mauvais ?**
+💬 **Pourquoi c`est mauvais ?**
 Ici, `$i` va AUGMENTER au lieu de diminuer !
 10 devient 11, puis 12, puis 13...
 La condition `$i >= 1` sera TOUJOURS vraie → **BOUCLE INFINIE** 💥
@@ -426,13 +426,13 @@ for ($i = 1; $i >= 1; $i--) {
     echo "$i<br>";
 }
 ```
-💬 **Pourquoi c'est limité ?**
-Ça va afficher juste `1` puis `0` et s'arrêter.
-Ce n'est pas un vrai décompte de 10 à 1.
+💬 **Pourquoi c`est limité ?**
+Ça va afficher juste `1` puis `0` et s`arrêter.
+Ce n`est pas un vrai décompte de 10 à 1.
 
 ---
 
-### ✅ LA BONNE FORMULE pour compter à l'envers
+### ✅ LA BONNE FORMULE pour compter à l`envers
 
 ```php
 for ($i = 10; $i >= 1; $i--) {
@@ -441,7 +441,7 @@ for ($i = 10; $i >= 1; $i--) {
 ```
 
 🧠 **Retiens cette phrase :**
-> Pour compter à l'envers :
+> Pour compter à l`envers :
 > - Je **commence GRAND** (ex: 10)
 > - Je **continue tant que je suis AU DESSUS de la limite** (>= 1)
 > - Je **descends** à chaque tour (--)
@@ -557,7 +557,7 @@ for ($i = 1; $i <= 10; $i++) {
 }
 ```
 
-### 📋 Structure pour compter à l'envers
+### 📋 Structure pour compter à l`envers
 ```php
 for ($i = 10; $i >= 1; $i--) {
     // Code à répéter
@@ -567,23 +567,23 @@ for ($i = 10; $i >= 1; $i--) {
 | Élément | Rôle en cuisine |
 |----------|----------------------|
 | `$i = 1` | Tu **commences** à la première assiette 🍽️ |
-| `$i <= 10` | Tu **sers** jusqu'à la 10e assiette 🔟 |
-| `$i++` | Tu **avances d'un pas** 👣 |
-| `$i = 10` | Tu **commences** à l'assiette 10 (en haut) 🍽️ |
-| `$i >= 1` | Tu **continues** jusqu'à l'assiette 1 🔟 |
-| `$i--` | Tu **recules d'un pas** (tu descends) 👣 |
+| `$i <= 10` | Tu **sers** jusqu`à la 10e assiette 🔟 |
+| `$i++` | Tu **avances d`un pas** 👣 |
+| `$i = 10` | Tu **commences** à l`assiette 10 (en haut) 🍽️ |
+| `$i >= 1` | Tu **continues** jusqu`à l`assiette 1 🔟 |
+| `$i--` | Tu **recules d`un pas** (tu descends) 👣 |
 | `for` | Tu **répètes le travail** sans râler 😅 |
-| `$i` | C'est ton **compteur de service** 🧰 |
+| `$i` | C`est ton **compteur de service** 🧰 |
 
 ---
 
 ## 💬 Phrases à retenir
 
-> La boucle `for`, c'est comme ton **commis préféré** :
-> tu lui dis **quand commencer**, **quand s'arrêter**, et il bosse tout seul ! 🍽️🤖
+> La boucle `for`, c`est comme ton **commis préféré** :
+> tu lui dis **quand commencer**, **quand s`arrêter**, et il bosse tout seul ! 🍽️🤖
 
-> Pour compter à l'envers, il faut **TOUT inverser** :
-> Commence GRAND, vérifie qu'on est AU DESSUS, et DESCENDS ! 🔽
+> Pour compter à l`envers, il faut **TOUT inverser** :
+> Commence GRAND, vérifie qu`on est AU DESSUS, et DESCENDS ! 🔽
 
 ---
 
@@ -593,9 +593,9 @@ for ($i = 10; $i >= 1; $i--) {
 **Énoncé :**
 Crée une boucle `for` qui affiche les nombres de **1 à 10**.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle for qui commence à 1
-- Qui s'arrête à 10
+- Qui s`arrête à 10
 - Qui affiche chaque nombre
 
 **Exemple de résultat attendu :**
@@ -629,11 +629,11 @@ for ($i = 1; $i <= 10; $i++) {
 ## 📝 Exercice 2 : Servir 5 assiettes
 **Énoncé :**
 Crée une boucle qui affiche :
-> "Je sers l'assiette numéro X"
+> "Je sers l`assiette numéro X"
 
 pour X allant de **1 à 5**.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle for de 1 à 5
 - Un message pour chaque assiette
 
@@ -663,11 +663,11 @@ for ($i = 1; $i <= 5; $i++) {
 ## 📝 Exercice 3 : Casser les œufs
 **Énoncé :**
 Crée une boucle qui affiche :
-> "Je casse l'œuf numéro X"
+> "Je casse l`œuf numéro X"
 
 pour X allant de **1 à 3**.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle for de 1 à 3
 - Un message pour chaque œuf
 
@@ -699,7 +699,7 @@ Crée une boucle qui affiche :
 
 pour X allant de **1 à 4**.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle for de 1 à 4
 - Un message de dégustation pour chaque sauce
 
@@ -728,11 +728,11 @@ for ($i = 1; $i <= 4; $i++) {
 ## 📝 Exercice 5 : Dresser les desserts
 **Énoncé :**
 Crée une boucle qui affiche :
-> "Je dresse le dessert numéro X dans l'assiette."
+> "Je dresse le dessert numéro X dans l`assiette."
 
 pour X allant de **1 à 6**.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle for de 1 à 6
 - Un message pour chaque dessert dressé
 
@@ -760,13 +760,13 @@ for ($i = 1; $i <= 6; $i++) {
 
 ---
 
-## 📝 Exercice 6 : Compter à l'envers de 10 à 1
+## 📝 Exercice 6 : Compter à l`envers de 10 à 1
 **Énoncé :**
-Crée une boucle qui affiche les nombres de **10 à 1** en comptant à l'envers (comme un décompte de minuteur).
+Crée une boucle qui affiche les nombres de **10 à 1** en comptant à l`envers (comme un décompte de minuteur).
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle for qui commence à 10
-- Qui descend jusqu'à 1
+- Qui descend jusqu`à 1
 - Qui utilise `$i--`
 
 **Exemple de résultat attendu :**
@@ -801,10 +801,10 @@ for ($i = 10; $i >= 1; $i--) {
 **Énoncé :**
 Crée un décompte de minuteur qui affiche :
 - Les nombres de 10 à 1
-- Puis affiche "⏰ C'EST PRÊT !"
+- Puis affiche "⏰ C`EST PRÊT !"
 
-**Ce qu'on attend :**
-- Une boucle à l'envers de 10 à 1
+**Ce qu`on attend :**
+- Une boucle à l`envers de 10 à 1
 - Un message final après la boucle
 
 **Exemple de résultat attendu :**
@@ -841,7 +841,7 @@ echo "⏰ C'EST PRÊT !<br>";
 **Énoncé :**
 Crée une boucle qui affiche tous les nombres **pairs** entre **2 et 10**.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle qui avance de 2 en 2
 - Affichage de : 2, 4, 6, 8, 10
 
@@ -873,7 +873,7 @@ for ($i = 2; $i <= 10; $i += 2) {
 Crée une boucle qui affiche la table de multiplication de **5**, de 1 à 10.
 Format : "5 x 1 = 5", "5 x 2 = 10", etc.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 10
 - Un calcul : 5 × i
 - Un affichage formaté
@@ -916,7 +916,7 @@ pour X allant de **1 à 3**.
 Puis, après la boucle, affiche :
 > "Tous les plats sont servis !"
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 3
 - Un message pour chaque plat
 - Un message final après la boucle
@@ -948,7 +948,7 @@ echo "Tous les plats sont servis !<br>";
 **Énoncé :**
 Crée une boucle qui affiche ton nom de chef **5 fois**.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 5
 - Ton nom affiché à chaque tour
 
@@ -977,15 +977,15 @@ for ($i = 1; $i <= 5; $i++) {
 
 ## 📝 Exercice 12 : Descendre les portions
 **Énoncé :**
-Tu as **5 portions** sur l'étagère et tu les descends jusqu'à 0.
+Tu as **5 portions** sur l`étagère et tu les descends jusqu`à 0.
 Affiche :
 > "Portion X"
 
-pour X allant de **5 à 0** (en comptant à l'envers).
+pour X allant de **5 à 0** (en comptant à l`envers).
 Puis affiche : "Toutes les portions sont servies !"
 
-**Ce qu'on attend :**
-- Une boucle à l'envers de 5 à 0
+**Ce qu`on attend :**
+- Une boucle à l`envers de 5 à 0
 - Un message pour chaque portion
 - Un message final
 
@@ -1021,12 +1021,12 @@ Tu as **8 œufs** au début.
 Crée une boucle qui affiche :
 > "Il reste X œufs"
 
-pour X allant de **8 à 1** (en comptant à l'envers).
-Puis affiche : "Plus d'œufs !"
+pour X allant de **8 à 1** (en comptant à l`envers).
+Puis affiche : "Plus d`œufs !"
 
-**Ce qu'on attend :**
-- Une boucle à l'envers de 8 à 1
-- Un message pour chaque nombre d'œufs
+**Ce qu`on attend :**
+- Une boucle à l`envers de 8 à 1
+- Un message pour chaque nombre d`œufs
 - Un message final
 
 **Exemple de résultat attendu :**
@@ -1062,7 +1062,7 @@ echo "Plus d'œufs !<br>";
 Crée une boucle qui affiche tous les **multiples de 3** entre **3 et 30**.
 (3, 6, 9, 12, 15, 18, 21, 24, 27, 30)
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle qui avance de 3 en 3
 - Commence à 3, termine à 30
 
@@ -1099,10 +1099,10 @@ for ($i = 3; $i <= 30; $i += 3) {
 Crée une boucle qui affiche les nombres de **0 à 50** en comptant de **5 en 5**.
 (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle qui commence à 0
 - Qui avance de 5 en 5
-- Qui s'arrête à 50
+- Qui s`arrête à 50
 
 **Exemple de résultat attendu :**
 ```
@@ -1138,7 +1138,7 @@ for ($i = 0; $i <= 50; $i += 5) {
 Crée une boucle qui affiche la table de multiplication de **7**, de 1 à 10.
 Format : "7 x 1 = 7", "7 x 2 = 14", etc.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 10
 - Un calcul : 7 × i
 - Un affichage formaté
@@ -1176,13 +1176,13 @@ for ($i = 1; $i <= 10; $i++) {
 **Énoncé :**
 Crée une variable `$total_assiettes = 0`.
 Fais une boucle de **1 à 5** qui :
-1. Affiche "Je sers l'assiette numéro X"
+1. Affiche "Je sers l`assiette numéro X"
 2. Ajoute 1 à `$total_assiettes` à chaque tour (utilise `$total_assiettes++`)
-3. Après la boucle, affiche "J'ai servi X assiettes au total."
+3. Après la boucle, affiche "J`ai servi X assiettes au total."
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable qui compte le total
-- Une boucle qui l'incrémente
+- Une boucle qui l`incrémente
 - Un message final avec le total
 
 **Exemple de résultat attendu :**
@@ -1218,7 +1218,7 @@ Crée une variable `$somme = 0`.
 Fais une boucle de **1 à 10** qui ajoute chaque nombre à `$somme`.
 Après la boucle, affiche : "La somme de 1 à 10 est : X"
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable pour stocker la somme
 - Une boucle qui additionne tous les nombres
 - Le résultat final (devrait être 55)
@@ -1252,10 +1252,10 @@ Crée une boucle de 1 à 10 qui :
 2. Affiche "Portion X : 3 euros"
 3. Après la boucle, affiche le prix total
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une variable pour le prix total
 - Une boucle qui calcule et additionne
-- L'affichage du total (devrait être 30 euros)
+- L`affichage du total (devrait être 30 euros)
 
 **Exemple de résultat attendu :**
 ```
@@ -1299,7 +1299,7 @@ Crée une boucle de **1 à 5** qui affiche :
 
 Format : "1 au carré = 1", "2 au carré = 4", etc.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Une boucle de 1 à 5
 - Un calcul du carré pour chaque nombre
 - Un affichage formaté
@@ -1334,8 +1334,8 @@ Si tu as réussi tous ces exercices, tu maîtrises maintenant la boucle `for` en
 
 Tu sais maintenant :
 - ✅ Créer une boucle `for` qui compte en montant
-- ✅ Créer une boucle `for` qui compte à l'envers
-- ✅ Modifier le pas d'incrémentation (de 2 en 2, de 5 en 5, etc.)
+- ✅ Créer une boucle `for` qui compte à l`envers
+- ✅ Modifier le pas d`incrémentation (de 2 en 2, de 5 en 5, etc.)
 - ✅ Utiliser la boucle pour faire des calculs
 - ✅ Combiner la boucle avec des variables
 - ✅ Comprendre les trois parties du `for` : initialisation, condition, incrémentation

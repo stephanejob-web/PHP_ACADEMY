@@ -61,7 +61,7 @@ echo 'Livre : "' . $livre2->titre . '" par ' . $livre2->auteur . ' - ' . $livre2
 ```
 
 **Concepts du cours 01 & 02 :**
-- ✅ Création d'une classe avec `class`
+- ✅ Création d`une classe avec `class`
 - ✅ Définition des propriétés avec `public`
 - ✅ Instanciation avec `new`
 - ✅ Accès aux propriétés avec `->`
@@ -75,7 +75,7 @@ echo 'Livre : "' . $livre2->titre . '" par ' . $livre2->auteur . ' - ' . $livre2
 **Concepts utilisés :** Cours 03 - Méthodes, $this
 
 ### Consigne :
-1. Reprends la classe `Livre` de l'exercice 1
+1. Reprends la classe `Livre` de l`exercice 1
 2. Ajoute une méthode `vendre($quantite)` qui retire du stock et affiche un message
 3. Ajoute une méthode `reapprovisionner($quantite)` qui ajoute au stock
 4. Ajoute une méthode `afficherInfo()` qui affiche toutes les infos
@@ -192,7 +192,7 @@ $produit2->afficherPrix();
 - ✅ Constructeur avec `__construct` (2 underscores)
 - ✅ Initialisation automatique des propriétés
 - ✅ Calculs dans le constructeur
-- ✅ Création d'objets en une seule ligne
+- ✅ Création d`objets en une seule ligne
 
 </details>
 
@@ -260,7 +260,7 @@ $chien->aboyer();
 - ✅ Héritage avec `extends`
 - ✅ Appel du constructeur parent avec `parent::__construct()`
 - ✅ La classe enfant hérite des méthodes du parent
-- ✅ Ajout de propriétés et méthodes dans l'enfant
+- ✅ Ajout de propriétés et méthodes dans l`enfant
 
 </details>
 
@@ -435,7 +435,7 @@ $guerrier->sesoigner(20);
 **Concepts utilisés :**
 - ✅ Constructeur pour initialisation
 - ✅ Méthodes qui interagissent
-- ✅ Gestion d'état (PV)
+- ✅ Gestion d`état (PV)
 - ✅ Retour de valeurs
 
 </details>
@@ -1015,10 +1015,10 @@ Tu maîtrises maintenant les **bases solides de la POO** !
 
 ## 💪 Conseil final
 
-**La POO, c'est comme un sport :**
-- Au début, c'est difficile
+**La POO, c`est comme un sport :**
+- Au début, c`est difficile
 - Avec la pratique, ça devient naturel
-- Avec l'expérience, tu te demandes comment tu faisais avant !
+- Avec l`expérience, tu te demandes comment tu faisais avant !
 
 **Continue à coder, crée des projets, fais des erreurs, apprends !** 🔥
 

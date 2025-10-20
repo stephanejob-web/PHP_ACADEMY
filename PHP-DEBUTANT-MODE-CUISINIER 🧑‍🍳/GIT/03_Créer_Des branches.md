@@ -2,7 +2,7 @@
 
 ## Salut chef créatif ! 🧙‍♂️🏗️
 
-Dans la leçon 02, t'as appris à **inspecter tes versions** avec Git.  
+Dans la leçon 02, t`as appris à **inspecter tes versions** avec Git.  
 Maintenant, on va apprendre un truc DE MALADE...
 
 **Imagine :**
@@ -10,35 +10,35 @@ Maintenant, on va apprendre un truc DE MALADE...
 Tu as ta recette de sauce tomate qui fonctionne bien. 🍅  
 Mais tu veux tester **deux variantes différentes** :
 - Variante 1 : Avec du basilic frais
-- Variante 2 : Avec de l'origan
+- Variante 2 : Avec de l`origan
 
 **Le problème ?**
 
-Si tu modifies ta recette de base avec le basilic... et que tu veux tester l'origan après... 😱  
-Tu dois DÉFAIRE le basilic, tester l'origan, tout re-modifier... C'est la galère !
+Si tu modifies ta recette de base avec le basilic... et que tu veux tester l`origan après... 😱  
+Tu dois DÉFAIRE le basilic, tester l`origan, tout re-modifier... C`est la galère !
 
 **La solution ?**
 
 Tu crées **deux versions parallèles** :
 - Version A : Tu testes le basilic
-- Version B : Tu testes l'origan
+- Version B : Tu testes l`origan
 
-Tu goûtes les deux. Tu choisis la meilleure. **Et tu jettes l'autre !**
+Tu goûtes les deux. Tu choisis la meilleure. **Et tu jettes l`autre !**
 
-**Avec Git, c'est exactement ça : les BRANCHES ! 🌿**
+**Avec Git, c`est exactement ça : les BRANCHES ! 🌿**
 
 ---
 
-## 🤔 C'est quoi une branche ?
+## 🤔 C`est quoi une branche ?
 
-Une branche, c'est une **version parallèle de ta recette** où tu peux expérimenter sans risque.
+Une branche, c`est une **version parallèle de ta recette** où tu peux expérimenter sans risque.
 
 **Analogie cuisine :**
 
 Tu as ta **recette principale** (celle qui fonctionne).  
 Tu veux tester une nouvelle idée ? Tu crées une **version parallèle**.
 
-- ✅ Si ta variante marche → Tu l'adoptes comme nouvelle recette principale
+- ✅ Si ta variante marche → Tu l`adoptes comme nouvelle recette principale
 - ❌ Si ta variante marche pas → Tu supprimes cette version et tu oublies
 
 **Résultat ?**  
@@ -46,25 +46,25 @@ Ta recette principale reste **toujours intacte** pendant tes tests ! 💪
 
 ---
 
-## 🎯 Pourquoi les branches, c'est GÉNIAL ?
+## 🎯 Pourquoi les branches, c`est GÉNIAL ?
 
 ### 1️⃣ Tu peux expérimenter sans risque 🧪
 
 Tu veux tester une nouvelle épice ?  
-Tu crées une branche. Tu testes. Si c'est immangeable, tu supprimes la branche.  
+Tu crées une branche. Tu testes. Si c`est immangeable, tu supprimes la branche.  
 **Ta recette principale reste parfaite !**
 
 ### 2️⃣ Tu peux tester plusieurs variantes en même temps 👥
 
 Imagine que tu veux tester 3 épices différentes :
 - **Branche "basilic"** → Tu testes avec du basilic
-- **Branche "origan"** → Tu testes avec de l'origan
+- **Branche "origan"** → Tu testes avec de l`origan
 - **Branche "thym"** → Tu testes avec du thym
 
-Tu peux passer d'une version à l'autre instantanément.  
+Tu peux passer d`une version à l`autre instantanément.  
 Tu goûtes tout. Tu choisis la meilleure !
 
-### 3️⃣ C'est comme ça que bossent TOUS les pros 💼
+### 3️⃣ C`est comme ça que bossent TOUS les pros 💼
 
 Dans les restaurants étoilés, PERSONNE ne modifie la recette principale directement.  
 Tout le monde crée des branches pour tester :
@@ -72,7 +72,7 @@ Tout le monde crée des branches pour tester :
 - Branche "amelioration-cuisson"
 - Branche "nouvelle-presentation"
 
-**C'est LA manière professionnelle de travailler !**
+**C`est LA manière professionnelle de travailler !**
 
 ---
 
@@ -112,7 +112,7 @@ Maintenant, tu veux tester le basilic :
 La recette principale continue normalement.  
 Le test basilic est totalement indépendant !
 
-Si le basilic te plaît, tu l'intègres dans la recette principale.  
+Si le basilic te plaît, tu l`intègres dans la recette principale.  
 Si le basilic est raté, tu supprimes cette branche. **Simple !**
 
 ---
@@ -134,9 +134,9 @@ git branch
   test-basilic
 ```
 
-L'étoile `*` indique sur quelle version tu travailles actuellement.
+L`étoile `*` indique sur quelle version tu travailles actuellement.
 
-**Analogie cuisine :** C'est comme avoir une liste de toutes tes variantes en cours.
+**Analogie cuisine :** C`est comme avoir une liste de toutes tes variantes en cours.
 
 ---
 
@@ -152,7 +152,7 @@ git branch nom-de-la-branche
 git branch test-basilic
 ```
 
-**En français :** "Crée une nouvelle version parallèle qui s'appelle `test-basilic`"
+**En français :** "Crée une nouvelle version parallèle qui s`appelle `test-basilic`"
 
 **Analogie cuisine :** Tu dupliques ta recette actuelle pour tester une variante.
 
@@ -204,7 +204,7 @@ git switch -c test-basilic
 
 **Analogie cuisine :** Tu dupliques ta recette et tu commences tout de suite à tester.
 
-**C'est la commande que tu vas utiliser 90% du temps !** 🔥
+**C`est la commande que tu vas utiliser 90% du temps !** 🔥
 
 ---
 
@@ -234,7 +234,7 @@ Tu es sur la recette principale. 🍅
 git switch -c test-formulaire
 ```
 
-**Traduction :** "Crée une version parallèle pour tester l'ajout d'un formulaire"
+**Traduction :** "Crée une version parallèle pour tester l`ajout d`un formulaire"
 
 **Résultat :**
 
@@ -267,7 +267,7 @@ git commit -m "Version test - ajout formulaire de contact"
 
 **Ce qui se passe :**  
 Tu viens de noter une version dans la variante `test-formulaire`.  
-**Ta recette principale (`main`) n'a PAS bougé !**
+**Ta recette principale (`main`) n`a PAS bougé !**
 
 ---
 
@@ -280,7 +280,7 @@ git switch main
 **Maintenant, ouvre ton fichier `index.html`...**
 
 💥 **MAGIE !**  
-Le formulaire a disparu ! Tu es revenu sur la recette principale où il n'y a pas de formulaire !
+Le formulaire a disparu ! Tu es revenu sur la recette principale où il n`y a pas de formulaire !
 
 ---
 
@@ -295,11 +295,11 @@ git switch test-formulaire
 🎉 **Le formulaire est de retour !**
 
 **Tu vois le pouvoir des branches ?**  
-Tu peux passer d'une version à l'autre **instantanément** ! ⚡
+Tu peux passer d`une version à l`autre **instantanément** ! ⚡
 
 ---
 
-## 🎯 Les règles d'or des branches
+## 🎯 Les règles d`or des branches
 
 ### ✅ Règle 1 : Une branche = Un test
 
@@ -340,7 +340,7 @@ reduction-cuisson
 
 **ATTENTION !**
 
-Avant de faire `git switch`, assure-toi d'avoir fait un `git commit` !
+Avant de faire `git switch`, assure-toi d`avoir fait un `git commit` !
 
 **Pourquoi ?**
 
@@ -362,7 +362,7 @@ Toujours noter avant de changer de version ! 📖
 
 ## 🔑 Antisèche : Les commandes des versions parallèles
 
-| Commande | Ce qu'elle fait | Analogie cuisine |
+| Commande | Ce qu`elle fait | Analogie cuisine |
 |----------|-----------------|------------------|
 | `git branch` | Voir toutes les versions | Liste de toutes tes variantes |
 | `git branch nom` | Créer une nouvelle version | Dupliquer ta recette pour tester |
@@ -386,7 +386,7 @@ Toujours noter avant de changer de version ! 📖
 8. Retourne sur ta version test avec `git switch test-description`
 9. Ouvre `index.html` → Ta description est revenue ! 🎉
 
-**Si t'as réussi, t'es un CHEF MULTI-VERSIONS ! 💪**
+**Si t`as réussi, t`es un CHEF MULTI-VERSIONS ! 💪**
 
 ---
 
@@ -399,11 +399,11 @@ Toujours noter avant de changer de version ! 📖
 
 **Avec les branches :**
 - 😎 Tu crées une version parallèle pour tester
-- 😎 Si ça marche pas, tu supprimes et c'est fini
+- 😎 Si ça marche pas, tu supprimes et c`est fini
 - 😎 Ta recette principale reste toujours parfaite
 - 😎 Tu peux tester plusieurs ingrédients en parallèle
 
-**Les branches, c'est la liberté totale ! 🚀**
+**Les branches, c`est la liberté totale ! 🚀**
 
 ---
 

@@ -6,7 +6,7 @@ Dans le cours 01, tu as compris que :
 - **CLASSE** = la fiche recette vierge
 - **OBJET** = le plat préparé
 
-C'était de la théorie. **Maintenant, on passe à la pratique !**
+C`était de la théorie. **Maintenant, on passe à la pratique !**
 
 On va **VRAIMENT** créer ta première recette en PHP, avec du vrai code que tu vas taper toi-même ! 💻
 
@@ -23,7 +23,7 @@ Quand tu écris une fiche recette, tu notes quelles infos ?
 - **La température** du four (180°C, 200°C...)
 - **Le nombre de portions** (4, 6, 8 personnes...)
 
-**En PHP, c'est exactement pareil !**
+**En PHP, c`est exactement pareil !**
 
 Voici comment on crée une fiche recette :
 
@@ -46,19 +46,19 @@ class Recette {
 
 ### Ligne 1 : `<?php`
 
-Ça, tu connais déjà. C'est le début du code PHP.
+Ça, tu connais déjà. C`est le début du code PHP.
 
 ---
 
 ### Ligne 2 : `class Recette {`
 
-**`class`** → C'est le mot magique pour dire "je crée une fiche recette"
+**`class`** → C`est le mot magique pour dire "je crée une fiche recette"
 
-**`Recette`** → C'est le nom de ta fiche recette  
-*Tu peux l'appeler comme tu veux : `Recette`, `Plat`, `Dessert`...  
+**`Recette`** → C`est le nom de ta fiche recette  
+*Tu peux l`appeler comme tu veux : `Recette`, `Plat`, `Dessert`...  
 Mais utilise un nom qui a du sens ! Pas `Truc` ou `Machin`* 😄
 
-**`{`** → C'est l'accolade ouvrante. Elle marque le **début** de la fiche recette.
+**`{`** → C`est l`accolade ouvrante. Elle marque le **début** de la fiche recette.
 
 **Important :** En PHP, les noms de classes commencent par une **MAJUSCULE** : `Recette`, pas `recette`.
 
@@ -74,7 +74,7 @@ Mais utilise un nom qui a du sens ! Pas `Truc` ou `Machin`* 😄
 ```
 
 **`public`** → Ça veut dire "visible par tout le monde"  
-C'est comme une fiche recette affichée dans la cuisine : tout le monde peut la voir et la modifier.
+C`est comme une fiche recette affichée dans la cuisine : tout le monde peut la voir et la modifier.
 
 **`$nom`** → Une info que chaque recette doit avoir : son nom
 
@@ -86,13 +86,13 @@ C'est comme une fiche recette affichée dans la cuisine : tout le monde peut la 
 
 **Le point-virgule `;`** → OBLIGATOIRE à la fin de chaque ligne ! Sinon PHP va râler. 😤
 
-**Ces infos s'appellent des PROPRIÉTÉS.**
+**Ces infos s`appellent des PROPRIÉTÉS.**
 
 ---
 
 ### Ligne 7 : `}`
 
-**`}`** → L'accolade fermante. Elle marque la **fin** de la fiche recette.
+**`}`** → L`accolade fermante. Elle marque la **fin** de la fiche recette.
 
 **SUPER IMPORTANT :** Chaque `{` doit avoir son `}` !
 
@@ -100,23 +100,23 @@ C'est comme une fiche recette affichée dans la cuisine : tout le monde peut la 
 
 ### Ligne 8 : `?>`
 
-La fin du code PHP. (Tu peux même l'oublier en fin de fichier, PHP s'en fiche.)
+La fin du code PHP. (Tu peux même l`oublier en fin de fichier, PHP s`en fiche.)
 
 ---
 
 **ATTENTION !** ⚠️
 
-À ce stade, **tu n'as préparé AUCUN plat !**
+À ce stade, **tu n`as préparé AUCUN plat !**
 
 Tu as juste **créé la fiche recette vierge**.
 
-C'est comme si tu avais le formulaire d'une recette, mais que tu n'as encore rien cuisiné.
+C`est comme si tu avais le formulaire d`une recette, mais que tu n`as encore rien cuisiné.
 
 ---
 
 ## 🥘 Étape 2 : Préparer un vrai plat (créer un objet)
 
-Maintenant qu'on a la fiche recette, **préparons un vrai plat !**
+Maintenant qu`on a la fiche recette, **préparons un vrai plat !**
 
 ```php
 <?php
@@ -147,10 +147,10 @@ Décortiquons cette ligne **super importante** :
 
 ---
 
-**`$gateau_chocolat`** → C'est le **nom** de ton plat  
+**`$gateau_chocolat`** → C`est le **nom** de ton plat  
 *Comme quand tu dis "le gâteau au chocolat" ou "la tarte aux pommes"*
 
-Tu peux l'appeler comme tu veux :
+Tu peux l`appeler comme tu veux :
 - `$tarte_pommes`
 - `$mousse_chocolat`
 - `$premier_dessert`
@@ -163,17 +163,17 @@ Tu peux l'appeler comme tu veux :
 
 **`new`** → **LE MOT LE PLUS IMPORTANT !**
 
-C'est le mot magique qui dit à PHP :  
+C`est le mot magique qui dit à PHP :  
 *"Prépare-moi ce plat MAINTENANT !"*
 
-C'est comme si tu disais à ton commis :  
+C`est comme si tu disais à ton commis :  
 *"Allez, on cuisine ce gâteau !"*
 
 ---
 
-**`Recette()`** → Tu prépares d'après la fiche recette qui s'appelle `Recette`
+**`Recette()`** → Tu prépares d`après la fiche recette qui s`appelle `Recette`
 
-Les **parenthèses `()`** sont **obligatoires**. Pour l'instant, on met rien dedans.  
+Les **parenthèses `()`** sont **obligatoires**. Pour l`instant, on met rien dedans.  
 *(On verra pourquoi plus tard dans le cours sur le constructeur)*
 
 ---
@@ -188,13 +188,13 @@ Les **parenthèses `()`** sont **obligatoires**. Pour l'instant, on met rien ded
 
 ---
 
-## 🤔 Mais... mon plat n'a pas d'infos !
+## 🤔 Mais... mon plat n`a pas d`infos !
 
-Oui, t'as raison ! 👍
+Oui, t`as raison ! 👍
 
-Ton plat **existe**, mais il n'a **pas encore d'informations**.
+Ton plat **existe**, mais il n`a **pas encore d`informations**.
 
-C'est comme si tu avais sorti tous les ingrédients, mais que tu ne leur as pas encore donné les quantités et le temps de cuisson.
+C`est comme si tu avais sorti tous les ingrédients, mais que tu ne leur as pas encore donné les quantités et le temps de cuisson.
 
 **Il faut maintenant lui donner ses informations !**
 
@@ -202,7 +202,7 @@ C'est comme si tu avais sorti tous les ingrédients, mais que tu ne leur as pas 
 
 ## 📋 Étape 3 : Remplir la fiche recette
 
-Maintenant qu'on a préparé le plat, on va lui dire :
+Maintenant qu`on a préparé le plat, on va lui dire :
 - Quel **nom** il a
 - Quel **temps de cuisson** il nécessite
 - Quelle **température** utiliser
@@ -238,25 +238,25 @@ $gateau_chocolat->portions = 8;
 $gateau_chocolat->nom = "Gâteau au chocolat";
 ```
 
-**La flèche `->` c'est ta LOUCHE de chef !** 🥄
+**La flèche `->` c`est ta LOUCHE de chef !** 🥄
 
-Elle sert à **accéder aux informations** d'un plat.
+Elle sert à **accéder aux informations** d`un plat.
 
 ---
 
 ### Traduction en français :
 
 **`$gateau_chocolat->nom = "Gâteau au chocolat";`**  
-→ *"Le gâteau au chocolat, son nom, c'est 'Gâteau au chocolat'."*
+→ *"Le gâteau au chocolat, son nom, c`est 'Gâteau au chocolat`."*
 
 **`$gateau_chocolat->temps_cuisson = 35;`**  
-→ *"Le gâteau au chocolat, son temps de cuisson, c'est 35 minutes."*
+→ *"Le gâteau au chocolat, son temps de cuisson, c`est 35 minutes."*
 
 **`$gateau_chocolat->temperature = 180;`**  
-→ *"Le gâteau au chocolat, sa température de cuisson, c'est 180 degrés."*
+→ *"Le gâteau au chocolat, sa température de cuisson, c`est 180 degrés."*
 
 **`$gateau_chocolat->portions = 8;`**  
-→ *"Le gâteau au chocolat, c'est pour 8 personnes."*
+→ *"Le gâteau au chocolat, c`est pour 8 personnes."*
 
 ---
 
@@ -274,17 +274,17 @@ Tu peux la lire comme **"de"** ou **"du"**.
 
 **Ne confonds pas le point `.` et la flèche `->` !**
 
-❌ **FAUX :** `$gateau_chocolat.nom = "Gâteau";` (ça marche dans d'autres langages, mais PAS en PHP !)
+❌ **FAUX :** `$gateau_chocolat.nom = "Gâteau";` (ça marche dans d`autres langages, mais PAS en PHP !)
 
 ✅ **JUSTE :** `$gateau_chocolat->nom = "Gâteau au chocolat";`
 
-En PHP, c'est **TOUJOURS** la flèche `->` pour accéder aux propriétés d'un objet.
+En PHP, c`est **TOUJOURS** la flèche `->` pour accéder aux propriétés d`un objet.
 
 ---
 
 ## 🎉 Étape 4 : Afficher la fiche recette
 
-Maintenant qu'on a préparé le plat et qu'on lui a donné toutes ses infos...
+Maintenant qu`on a préparé le plat et qu`on lui a donné toutes ses infos...
 
 **On veut voir le résultat !**
 
@@ -330,7 +330,7 @@ Tu viens de créer, préparer et afficher ta **première recette en POO** !
 
 ## 🔥 La VRAIE puissance : créer plusieurs plats avec la même fiche !
 
-Maintenant, tu vas comprendre **POURQUOI** la POO c'est génial.
+Maintenant, tu vas comprendre **POURQUOI** la POO c`est génial.
 
 **UNE SEULE FICHE RECETTE, AUTANT DE PLATS QUE TU VEUX !**
 
@@ -390,7 +390,7 @@ Cookies au chocolat : 12 min à 175°C
 - Chaque plat a **ses propres infos**
 - Mais ils utilisent tous **le même modèle** !
 
-C'est comme dans un restaurant : **une fiche recette, cent plats préparés** !
+C`est comme dans un restaurant : **une fiche recette, cent plats préparés** !
 
 ---
 
@@ -433,13 +433,13 @@ Si ça marche, **BRAVO, TU ES UN CHAMPION !** 🏆
 
 ✅ **`class Recette { }`** → Je crée la fiche recette
 
-✅ **`$plat = new Recette();`** → Je prépare un plat réel d'après la fiche
+✅ **`$plat = new Recette();`** → Je prépare un plat réel d`après la fiche
 
 ✅ **`$plat->nom = "Gâteau";`** → Je donne une valeur à une propriété
 
-✅ **`$plat->nom`** → Je lis la valeur d'une propriété
+✅ **`$plat->nom`** → Je lis la valeur d`une propriété
 
-✅ **La flèche `->` permet d'accéder aux propriétés d'un objet**
+✅ **La flèche `->` permet d`accéder aux propriétés d`un objet**
 
 ✅ **Une fiche recette, autant de plats que tu veux !**
 
@@ -449,7 +449,7 @@ Si ça marche, **BRAVO, TU ES UN CHAMPION !** 🏆
 
 Tu vas apprendre à créer des **MÉTHODES**.
 
-**C'est quoi une méthode ?**  
+**C`est quoi une méthode ?**  
 Les **ACTIONS** que peut faire ta recette !
 
 Par exemple :
@@ -461,9 +461,9 @@ Ta recette va devenir **INTELLIGENTE** ! 🧠
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE !**
+Mais pour l`instant, **FAIS L`EXERCICE !**
 
-Sérieux, prends 10 minutes et fais-le. C'est en **PRATIQUANT** qu'on apprend, pas en lisant.
+Sérieux, prends 10 minutes et fais-le. C`est en **PRATIQUANT** qu`on apprend, pas en lisant.
 
 Si tu sautes cet exercice, tu vas galérer au prochain cours. Je te préviens ! 😊
 
@@ -471,4 +471,4 @@ Si tu sautes cet exercice, tu vas galérer au prochain cours. Je te préviens ! 
 
 **👨‍🍳 Allez, au fourneau ! Tu es sur la bonne voie !**
 
-*PS : Si tu as réussi l'exercice du premier coup, tu peux te féliciter. Tu es en train de devenir un vrai développeur ! 🎉*
+*PS : Si tu as réussi l`exercice du premier coup, tu peux te féliciter. Tu es en train de devenir un vrai développeur ! 🎉*

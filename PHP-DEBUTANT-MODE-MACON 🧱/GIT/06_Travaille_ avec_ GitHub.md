@@ -2,7 +2,7 @@
 
 ## Salut architecte du cloud ! 🧙‍♂️☁️
 
-Jusqu'ici, tu as travaillé sur ton **chantier local** (ton ordinateur).  
+Jusqu`ici, tu as travaillé sur ton **chantier local** (ton ordinateur).  
 Mais imagine...
 
 😱 **Ton PC plante. Tout est perdu.**  
@@ -15,17 +15,17 @@ Mettre ton chantier **sur Internet** avec **GitHub** ! 🚀
 
 Comme ça :
 - ✅ Ton code est sauvegardé dans le cloud (si ton PC explose, tout est safe)
-- ✅ Tu peux bosser depuis n'importe quel ordinateur
+- ✅ Tu peux bosser depuis n`importe quel ordinateur
 - ✅ Tu peux partager ton travail avec le monde entier
 - ✅ Les recruteurs peuvent voir ton code (ton portfolio de dev !)
 
-**Aujourd'hui, tu vas apprendre à connecter ton chantier local avec GitHub !**
+**Aujourd`hui, tu vas apprendre à connecter ton chantier local avec GitHub !**
 
 ---
 
-## 🤔 C'est quoi GitHub ?
+## 🤔 C`est quoi GitHub ?
 
-**GitHub, c'est comme un stockage cloud pour ton code.**
+**GitHub, c`est comme un stockage cloud pour ton code.**
 
 **Analogie chantier :**
 
@@ -38,7 +38,7 @@ Imagine que tu construis une maison. 🏠
 Tu prends des photos et tu les envoies sur GitHub.
 
 **Résultat ?**  
-N'importe qui peut voir l'avancement de ta maison depuis n'importe où dans le monde ! 🌍
+N`importe qui peut voir l`avancement de ta maison depuis n`importe où dans le monde ! 🌍
 
 ---
 
@@ -54,7 +54,7 @@ Beaucoup de débutants confondent. Voici la différence :
 | 🆓 Gratuit et open source | 🆓 Gratuit (avec options payantes) |
 
 **En résumé :**  
-- **Git** = L'outil pour gérer ton code localement
+- **Git** = L`outil pour gérer ton code localement
 - **GitHub** = Le site pour stocker ton code en ligne
 
 **Autres alternatives à GitHub :**  
@@ -68,9 +68,9 @@ Pour travailler avec GitHub, tu dois comprendre **4 concepts** :
 
 ### 1️⃣ Le repository (repo)
 
-**C'est quoi ?** Un projet sur GitHub.
+**C`est quoi ?** Un projet sur GitHub.
 
-**Analogie chantier :** C'est ton dossier de chantier en ligne avec toutes les photos.
+**Analogie chantier :** C`est ton dossier de chantier en ligne avec toutes les photos.
 
 **Exemple :** `https://github.com/ton-nom/mon-site`
 
@@ -78,22 +78,22 @@ Pour travailler avec GitHub, tu dois comprendre **4 concepts** :
 
 ### 2️⃣ Remote (distant)
 
-**C'est quoi ?** Le lien entre ton chantier local et ton chantier GitHub.
+**C`est quoi ?** Le lien entre ton chantier local et ton chantier GitHub.
 
-**Analogie chantier :** C'est l'adresse GPS de ton chantier en ligne.
+**Analogie chantier :** C`est l`adresse GPS de ton chantier en ligne.
 
 **Commande :**
 ```bash
 git remote add origin https://github.com/ton-nom/mon-site.git
 ```
 
-**Traduction :** *"Git, voici l'adresse de mon chantier en ligne. Appelle-le 'origin'."*
+**Traduction :** *"Git, voici l`adresse de mon chantier en ligne. Appelle-le 'origin`."*
 
 ---
 
 ### 3️⃣ Push (pousser)
 
-**C'est quoi ?** Envoyer tes commits locaux vers GitHub.
+**C`est quoi ?** Envoyer tes commits locaux vers GitHub.
 
 **Analogie chantier :** Envoyer tes nouvelles photos du chantier vers le cloud.
 
@@ -108,7 +108,7 @@ git push
 
 ### 4️⃣ Pull (tirer)
 
-**C'est quoi ?** Récupérer les commits de GitHub vers ton PC.
+**C`est quoi ?** Récupérer les commits de GitHub vers ton PC.
 
 **Analogie chantier :** Télécharger les nouvelles photos du cloud vers ton PC.
 
@@ -123,20 +123,20 @@ git pull
 
 ## 🚀 Créer ton compte GitHub
 
-Avant de commencer, tu dois créer un compte GitHub (c'est gratuit !).
+Avant de commencer, tu dois créer un compte GitHub (c`est gratuit !).
 
 **Étapes :**
 
 1. Va sur **https://github.com**
-2. Clique sur **Sign up** (S'inscrire)
-3. Choisis un nom d'utilisateur (ton pseudo de dev !)
+2. Clique sur **Sign up** (S`inscrire)
+3. Choisis un nom d`utilisateur (ton pseudo de dev !)
 4. Entre ton email
 5. Crée un mot de passe
 6. Valide ton compte
 
 **Conseil pro :** Choisis un nom pro (ex: `kevin-dev`, `sophie-coder`), pas `dark-killer-666` 😅
 
-**C'est bon ? Tu as ton compte ? On continue !**
+**C`est bon ? Tu as ton compte ? On continue !**
 
 ---
 
@@ -153,15 +153,15 @@ Maintenant, tu vas créer ton projet sur GitHub.
 5. Laisse tout par défaut
 6. Clique sur **Create repository**
 
-**C'est fait ! Tu as créé ton chantier en ligne ! 🎉**
+**C`est fait ! Tu as créé ton chantier en ligne ! 🎉**
 
 ---
 
 ### Étape 2 : Connecter ton chantier local à GitHub
 
-GitHub va t'afficher des instructions. Tu vas utiliser celles-ci :
+GitHub va t`afficher des instructions. Tu vas utiliser celles-ci :
 
-**Si tu as DÉJÀ un projet local** (c'est ton cas) :
+**Si tu as DÉJÀ un projet local** (c`est ton cas) :
 
 ```bash
 git remote add origin https://github.com/ton-nom/mon-site.git
@@ -171,14 +171,14 @@ git push -u origin main
 
 **Décryptage :**
 
-| Commande | Ce qu'elle fait |
+| Commande | Ce qu`elle fait |
 |----------|-----------------|
 | `git remote add origin URL` | Connecte ton chantier local à GitHub |
 | `git branch -M main` | Renomme ta branche principale en "main" (standard actuel) |
 | `git push -u origin main` | Envoie tout vers GitHub pour la première fois |
 
 **Analogie chantier :**  
-Tu donnes l'adresse de ton chantier en ligne à Git et tu envoies toutes tes photos !
+Tu donnes l`adresse de ton chantier en ligne à Git et tu envoies toutes tes photos !
 
 ---
 
@@ -208,13 +208,13 @@ Va dans ton projet :
 cd mon-site
 ```
 
-Connecte-le à GitHub (remplace `ton-nom` par TON nom d'utilisateur GitHub) :
+Connecte-le à GitHub (remplace `ton-nom` par TON nom d`utilisateur GitHub) :
 
 ```bash
 git remote add origin https://github.com/ton-nom/mon-site.git
 ```
 
-**Traduction :** *"Git, voici l'adresse de mon chantier en ligne !"*
+**Traduction :** *"Git, voici l`adresse de mon chantier en ligne !"*
 
 ---
 
@@ -252,7 +252,7 @@ To https://github.com/ton-nom/mon-site.git
  * [new branch]      main -> main
 ```
 
-**Traduction :** *"J'ai envoyé 6 photos sur GitHub ! Tout est en ligne !"*
+**Traduction :** *"J`ai envoyé 6 photos sur GitHub ! Tout est en ligne !"*
 
 ---
 
@@ -265,7 +265,7 @@ Va sur **https://github.com/ton-nom/mon-site**
 Tu peux voir :
 - Tous tes fichiers
 - Tous tes commits
-- L'historique complet
+- L`historique complet
 
 **Bravo ! Ton chantier est maintenant sur Internet ! 🌍**
 
@@ -288,7 +288,7 @@ Maintenant que ton projet est sur GitHub, voici le **cycle quotidien** :
 ```
 
 **Analogie chantier :**  
-Tu travailles → Tu prends une photo → Tu l'envoies dans le cloud → Tu continues !
+Tu travailles → Tu prends une photo → Tu l`envoies dans le cloud → Tu continues !
 
 ---
 
@@ -311,7 +311,7 @@ git clone https://github.com/ton-nom/mon-site.git
 Tu récupères toutes les photos du cloud et tu reconstruis le chantier sur ton nouveau PC.
 
 **Résultat :**  
-Tu as un dossier `mon-site` avec TOUT ton code et TOUT l'historique ! 🎉
+Tu as un dossier `mon-site` avec TOUT ton code et TOUT l`historique ! 🎉
 
 ---
 
@@ -337,16 +337,16 @@ Un collègue a ajouté un garage sur le chantier en ligne. Tu télécharges les 
 
 ## 🎯 Les commandes essentielles avec GitHub
 
-| Commande | Ce qu'elle fait | Analogie chantier | Quand l'utiliser |
+| Commande | Ce qu`elle fait | Analogie chantier | Quand l`utiliser |
 |----------|-----------------|-------------------|------------------|
-| `git remote add origin URL` | Connecte ton projet à GitHub | Donner l'adresse du chantier en ligne | **1 fois** au début |
+| `git remote add origin URL` | Connecte ton projet à GitHub | Donner l`adresse du chantier en ligne | **1 fois** au début |
 | `git push` | Envoie tes commits vers GitHub | Envoyer les photos dans le cloud | **Tout le temps** après un commit |
 | `git pull` | Récupère les commits depuis GitHub | Télécharger les nouvelles photos | Avant de commencer à travailler |
 | `git clone URL` | Télécharge un projet depuis GitHub | Reconstruire le chantier sur un nouveau PC | Pour récupérer un projet |
 
 ---
 
-## ✅ Les règles d'or avec GitHub
+## ✅ Les règles d`or avec GitHub
 
 ### Règle 1 : Push régulièrement 📤
 
@@ -375,7 +375,7 @@ Télécharge les dernières photos avant de commencer à travailler.
 
 ### Règle 3 : Commit AVANT de push 💾
 
-Tu ne peux pas push si tu n'as pas fait de commit avant.
+Tu ne peux pas push si tu n`as pas fait de commit avant.
 
 **Cycle correct :**
 ```bash
@@ -385,7 +385,7 @@ git push
 ```
 
 **Analogie chantier :**  
-Tu prends une photo AVANT de l'envoyer dans le cloud (logique !).
+Tu prends une photo AVANT de l`envoyer dans le cloud (logique !).
 
 ---
 
@@ -396,7 +396,7 @@ Tu prends une photo AVANT de l'envoyer dans le cloud (logique !).
 1. Crée un compte sur **https://github.com** (si pas encore fait)
 2. Crée un nouveau repository appelé `mon-portfolio`
 3. Va dans ton projet local `mon-portfolio` sur ton PC
-4. Connecte-le à GitHub avec `git remote add origin URL` (remplace URL par l'adresse de ton repo)
+4. Connecte-le à GitHub avec `git remote add origin URL` (remplace URL par l`adresse de ton repo)
 5. Vérifie la connexion avec `git remote -v`
 6. Envoie tout sur GitHub avec `git push -u origin main`
 7. Va sur GitHub et admire ton code en ligne ! 🎉
@@ -405,11 +405,11 @@ Tu prends une photo AVANT de l'envoyer dans le cloud (logique !).
 10. Envoie sur GitHub avec `git push`
 11. Rafraîchis la page GitHub → Ta nouvelle modif est là ! 🚀
 
-**Si t'as réussi, t'es un DEV CONNECTÉ AU CLOUD ! 💪**
+**Si t`as réussi, t`es un DEV CONNECTÉ AU CLOUD ! 💪**
 
 ---
 
-## 🔑 Antisèche : GitHub en un coup d'œil
+## 🔑 Antisèche : GitHub en un coup d`œil
 
 | Action | Commande | Explication rapide |
 |--------|----------|-------------------|
@@ -417,7 +417,7 @@ Tu prends une photo AVANT de l'envoyer dans le cloud (logique !).
 | **Envoyer** | `git push` | Envoie tes commits vers GitHub |
 | **Récupérer** | `git pull` | Télécharge les nouveaux commits depuis GitHub |
 | **Cloner** | `git clone URL` | Télécharge un projet complet |
-| **Vérifier** | `git remote -v` | Voir l'URL de ton GitHub |
+| **Vérifier** | `git remote -v` | Voir l`URL de ton GitHub |
 
 ---
 

@@ -3,13 +3,13 @@ Salut à toi, futur maître du jeu ! 🧙‍♂️🎮
 
 Bon, soyons honnêtes...
 
-T'as déjà perdu ta sauvegarde dans un jeu ?
-Genre... tu joues 3 heures d'affilée, tu fais une mauvaise manip, et POUF 💥
+T`as déjà perdu ta sauvegarde dans un jeu ?
+Genre... tu joues 3 heures d`affilée, tu fais une mauvaise manip, et POUF 💥
 Game Over. Tout est perdu.
 
 Ou pire encore...
 
-T'as déjà eu 50 versions d'un même fichier ?
+T`as déjà eu 50 versions d`un même fichier ?
 
 ```
 mon-site.html
@@ -21,7 +21,7 @@ mon-site-v2-final-VRAIMENT-FINAL-cette-fois-cest-la-bonne.html
 
 😭 Ça suffit !
 
-Aujourd'hui, je vais t'apprendre à utiliser Git.
+Aujourd`hui, je vais t`apprendre à utiliser Git.
 Et crois-moi, après ça, tu ne perdras plus JAMAIS ton travail.
 
 ---
@@ -30,25 +30,25 @@ Et crois-moi, après ça, tu ne perdras plus JAMAIS ton travail.
 
 Quand tu fais un commit, Git enregistre automatiquement :
 
-| Info | Exemple | Pourquoi c'est utile |
+| Info | Exemple | Pourquoi c`est utile |
 |------|---------|---------------------|
 | 👤 Ton pseudo | xXKevinXx | Pour savoir qui a joué |
 | 📧 Ton email | kevin@mail.com | Pour pouvoir te contacter si besoin |
-| 📅 La date et l'heure | 12 oct 2025, 10h30 | Pour savoir quand la partie a été sauvegardée |
+| 📅 La date et l`heure | 12 oct 2025, 10h30 | Pour savoir quand la partie a été sauvegardée |
 | 💬 Ton message | "Niveau 1 terminé" | Pour savoir ce qui a été fait |
 
 **Exemple concret :**
 
 Sur un vrai MMO, si le chef de guilde demande :
-*"Qui a vaincu le boss final ? C'était quand ?"*
+*"Qui a vaincu le boss final ? C`était quand ?"*
 
 On ouvre le journal de guilde et on lit :
 *"Boss vaincu par Marc le 5 octobre à 14h00"*
 
-**Avec Git, c'est pareil !**
+**Avec Git, c`est pareil !**
 
 Si ton coéquipier demande :
-*"Qui a ajouté le système de combat ? C'était quand ?"*
+*"Qui a ajouté le système de combat ? C`était quand ?"*
 
 On tape `git log` et on voit :
 *"Ajout du système de combat - par Sophie le 10 octobre à 9h15"*
@@ -56,15 +56,15 @@ On tape `git log` et on voit :
 **Résultat ?**
 ✅ Tout le monde sait qui a fait quoi
 ✅ On peut demander des explications si besoin
-✅ On peut suivre l'évolution du projet
-✅ Si y'a un bug, on sait d'où ça vient
+✅ On peut suivre l`évolution du projet
+✅ Si y'a un bug, on sait d`où ça vient
 
 ---
 
-## 🤔 Mais attends... c'est quoi Git exactement ?
+## 🤔 Mais attends... c`est quoi Git exactement ?
 
 **Réponse rapide :**
-Git, c'est comme un système de **sauvegarde automatique** dans un RPG ⚔️
+Git, c`est comme un système de **sauvegarde automatique** dans un RPG ⚔️
 
 Tu sais quand tu joues à un RPG et que tu sauvegardes à chaque étape importante ?
 
@@ -80,7 +80,7 @@ Parce que si tu meurs contre le boss final, tu peux :
 2. Voir ce que tu avais dans ton inventaire
 3. Revenir en arrière et choisir une autre stratégie
 
-Eh bien avec Git, c'est **EXACTEMENT pareil** avec ton code ! 🚀
+Eh bien avec Git, c`est **EXACTEMENT pareil** avec ton code ! 🚀
 
 ---
 
@@ -89,16 +89,16 @@ Eh bien avec Git, c'est **EXACTEMENT pareil** avec ton code ! 🚀
 Attention, écoute bien ça :
 
 Beaucoup de débutants pensent :
-❌ "Bah Git c'est juste pour sauvegarder mon code, je peux faire Ctrl+S non ?"
+❌ "Bah Git c`est juste pour sauvegarder mon code, je peux faire Ctrl+S non ?"
 ❌ "Ou copier mon dossier sur une clé USB ?"
 
-🔥 **NON ! Git c'est BEAUCOUP plus puissant que ça !**
+🔥 **NON ! Git c`est BEAUCOUP plus puissant que ça !**
 
-Laisse-moi t'expliquer avec une histoire vraie...
+Laisse-moi t`expliquer avec une histoire vraie...
 
 ---
 
-## 📖 L'histoire du gamer Kevin qui a tout perdu (et qui s'en est sorti grâce à Git)
+## 📖 L`histoire du gamer Kevin qui a tout perdu (et qui s`en est sorti grâce à Git)
 
 **Lundi matin - 9h00**
 Kevin code son jeu vidéo. Tout marche nickel.
@@ -122,7 +122,7 @@ Le jeu crash au démarrage. GAME OVER.
 
 Il devrait :
 
-1. Se rappeler de TOUT ce qu'il a modifié (impossible)
+1. Se rappeler de TOUT ce qu`il a modifié (impossible)
 2. Tout recoder à la main (des heures de travail)
 3. Pleurer devant son écran 😭
 
@@ -152,13 +152,13 @@ Il est de retour à lundi matin, quand tout marchait nickel !
 
 ---
 
-## 🎯 Donc Git, c'est quoi VRAIMENT ?
+## 🎯 Donc Git, c`est quoi VRAIMENT ?
 
-**Git c'est :**
+**Git c`est :**
 
 ### 1️⃣ Un système de sauvegarde multiples 💾
 
-Tu peux revenir à n'importe quelle sauvegarde de ta partie.
+Tu peux revenir à n`importe quelle sauvegarde de ta partie.
 
 ### 2️⃣ Un journal de bord complet 📜
 
@@ -176,20 +176,20 @@ Imagine un raid en MMO avec plusieurs joueurs :
 
 - **Marc** fait le tank → Il sauvegarde : "Marc - Défense du groupe améliorée"
 - **Sophie** joue healer → Elle sauvegarde : "Sophie - Sorts de soin ajoutés"
-- **Alex** est DPS → Il sauvegarde : "Alex - Système d'attaque critique ajouté"
+- **Alex** est DPS → Il sauvegarde : "Alex - Système d`attaque critique ajouté"
 
 **Résultat ?**
 Le chef de raid peut consulter le journal et voir qui a fait quoi et quand !
 
-Si y'a un problème avec les soins, il sait direct que c'est Sophie qu'il faut appeler.
-Si les attaques bug, c'est Alex.
+Si y'a un problème avec les soins, il sait direct que c`est Sophie qu`il faut appeler.
+Si les attaques bug, c`est Alex.
 
-**Avec Git, c'est EXACTEMENT pareil !**
+**Avec Git, c`est EXACTEMENT pareil !**
 Chaque développeur signe son travail. Si y'a un bug, on sait qui a ajouté quoi !
 
 ---
 
-## 🎮 L'analogie du jeu vidéo (pour bien comprendre)
+## 🎮 L`analogie du jeu vidéo (pour bien comprendre)
 
 Imagine que tu développes un jeu :
 
@@ -201,13 +201,13 @@ Imagine que tu développes un jeu :
 | 🎲 Créer une partie parallèle (pour tester) | `git branch` |
 | 🔀 Fusionner deux parties | `git merge` |
 
-Tu vois ? C'est exactement comme dans un RPG ! ⚔️
+Tu vois ? C`est exactement comme dans un RPG ! ⚔️
 
 ---
 
 ## 🚀 OK, passons à la pratique !
 
-Maintenant que tu as compris POURQUOI Git est génial, on va apprendre à l'utiliser.
+Maintenant que tu as compris POURQUOI Git est génial, on va apprendre à l`utiliser.
 
 ## 🎯 Les 3 commandes de base du gamer
 
@@ -221,7 +221,7 @@ git init
 
 **En français :** "Je commence une nouvelle partie, je crée mon fichier de sauvegarde"
 
-**Analogie jeu :** C'est comme créer un nouveau profil de joueur dans un RPG.
+**Analogie jeu :** C`est comme créer un nouveau profil de joueur dans un RPG.
 
 Tu fais ça **UNE SEULE FOIS** au début de ton projet.
 
@@ -231,7 +231,7 @@ Tu fais ça **UNE SEULE FOIS** au début de ton projet.
 git add index.html
 ```
 
-Ou pour tout sauvegarder d'un coup :
+Ou pour tout sauvegarder d`un coup :
 
 ```bash
 git add .
@@ -247,15 +247,15 @@ git add .
 git commit -m "Niveau 1 terminé"
 ```
 
-**En français :** "Je sauvegarde ma partie et je l'appelle : 'Niveau 1 terminé'"
+**En français :** "Je sauvegarde ma partie et je l`appelle : 'Niveau 1 terminé'"
 
 **Analogie jeu :** Tu enregistres ta sauvegarde avec :
 - 📝 Un nom : "Niveau 1 terminé"
 - ✍️ Ton pseudo : "xXKevinXx"
-- 📅 La date et l'heure : "12/10/2025 - 10h30"
+- 📅 La date et l`heure : "12/10/2025 - 10h30"
 
 Le `-m` veut dire "message".
-C'est le nom de ta sauvegarde pour te souvenir de ce que tu as fait.
+C`est le nom de ta sauvegarde pour te souvenir de ce que tu as fait.
 
 ---
 
@@ -269,8 +269,8 @@ On y va étape par étape, comme dans un tutoriel de jeu :
 
 **🖱️ MÉTHODE FACILE (avec la souris) :**
 
-1. **Ouvre ton explorateur de fichiers** (comme d'habitude sur Windows)
-   - 💡 C'est l'icône de dossier jaune en bas de ton écran
+1. **Ouvre ton explorateur de fichiers** (comme d`habitude sur Windows)
+   - 💡 C`est l`icône de dossier jaune en bas de ton écran
    
 2. **Va où tu veux créer ton projet**
    - Par exemple : `Documents` ou `Bureau`
@@ -282,10 +282,10 @@ On y va étape par étape, comme dans un tutoriel de jeu :
 5. **Entre dans ce dossier** (double-clic dessus)
 
 6. **Ouvre le terminal ICI** :
-   - Clique dans la barre d'adresse en haut
+   - Clique dans la barre d`adresse en haut
    - Tape : `cmd` puis appuie sur **Entrée**
    
-**TA-DA !** 🎉 Une fenêtre noire s'ouvre, c'est le terminal !
+**TA-DA !** 🎉 Une fenêtre noire s`ouvre, c`est le terminal !
 Tu es déjà DANS ton dossier `mon-site` !
 
 ---
@@ -297,7 +297,7 @@ Si tu veux quand même utiliser le terminal comme un hacker 😎 :
 ```bash
 mkdir mon-site
 ```
-**Traduction :** "Crée-moi un dossier vide qui s'appelle mon-site"
+**Traduction :** "Crée-moi un dossier vide qui s`appelle mon-site"
 
 ```bash
 cd mon-site
@@ -308,7 +308,7 @@ cd mon-site
 
 ---
 
-**🎯 CONSEIL :** Commence par la méthode facile avec la souris ! Une fois que tu es à l'aise, tu pourras essayer les commandes comme un pro ⚔️
+**🎯 CONSEIL :** Commence par la méthode facile avec la souris ! Une fois que tu es à l`aise, tu pourras essayer les commandes comme un pro ⚔️
 
 ### 🎮 Étape 2 : Créer ton fichier de sauvegarde
 
@@ -321,23 +321,23 @@ git init
 💬 **Ce qui se passe dans les coulisses :**
 
 Git crée un dossier caché `.git` (tu ne le vois pas, mais il est là).
-C'est ton fichier de sauvegarde invisible qui va tout enregistrer.
+C`est ton fichier de sauvegarde invisible qui va tout enregistrer.
 
-**Analogie jeu :** C'est ton profil de joueur où toutes tes sauvegardes seront stockées.
+**Analogie jeu :** C`est ton profil de joueur où toutes tes sauvegardes seront stockées.
 
 🎉 **Félicitations ! Ton dossier est maintenant un projet Git !**
 
 ### ⚔️ Étape 3 : Commencer ta première quête
 
-On va créer une page HTML toute simple (c'est ton premier niveau).
+On va créer une page HTML toute simple (c`est ton premier niveau).
 
 **🖱️ MÉTHODE FACILE (avec la souris) :**
 
 1. **Clique droit dans ton dossier** `mon-site`
 2. **Nouveau** → **Document texte**
 3. **Renomme-le en :** `index.html`
-   - ⚠️ **IMPORTANT :** Assure-toi que l'extension est bien `.html` et pas `.txt` !
-   - Si tu ne vois pas les extensions, demande à ton prof de t'aider
+   - ⚠️ **IMPORTANT :** Assure-toi que l`extension est bien `.html` et pas `.txt` !
+   - Si tu ne vois pas les extensions, demande à ton prof de t`aider
 4. **Ouvre le fichier** avec un éditeur de texte (Bloc-notes ou mieux : VS Code)
 5. **Écris dedans :**
    ```html
@@ -361,7 +361,7 @@ echo "<h1>Bienvenue dans mon jeu !</h1>" > index.html
 
 ---
 
-**🎯 CONSEIL :** Commence par la méthode avec la souris ! C'est plus rassurant quand on débute 😊
+**🎯 CONSEIL :** Commence par la méthode avec la souris ! C`est plus rassurant quand on débute 😊
 
 ### 💾 Étape 4 : Sélectionner ce que tu veux sauvegarder
 
@@ -390,26 +390,26 @@ git commit -m "Niveau 1 créé - page d'accueil"
 💬 **Ce qui se passe :**
 
 Git crée une sauvegarde de ton fichier et écrit dans le journal :
-- "Niveau 1 créé - page d'accueil"
+- "Niveau 1 créé - page d`accueil"
 - "Par : xXKevinXx"
 - "Le : 12 octobre 2025 à 10h30"
 
 **Analogie jeu :** Tu sauvegardes ta partie avec :
 - 📝 Le nom : "Niveau 1 créé"
 - ✍️ Ton pseudo : "xXKevinXx"
-- 📅 La date et l'heure : "12/10/2025 - 10h30"
+- 📅 La date et l`heure : "12/10/2025 - 10h30"
 
-**Pourquoi c'est important ?**
+**Pourquoi c`est important ?**
 
-Imagine qu'il y a 5 joueurs dans ton équipe.
-Si le jeu bug, le chef peut regarder le journal et voir : "Ah ! C'est Marc qui a codé ce système le 10 octobre"
+Imagine qu`il y a 5 joueurs dans ton équipe.
+Si le jeu bug, le chef peut regarder le journal et voir : "Ah ! C`est Marc qui a codé ce système le 10 octobre"
 Il sait qui appeler pour réparer !
 
-Avec Git, c'est pareil :
+Avec Git, c`est pareil :
 Si y'a un bug dans le code, on peut voir qui a écrit cette ligne et quand.
-Pas pour punir ! Mais pour demander : "Hé Marc, tu peux m'expliquer pourquoi t'as fait ça ?"
+Pas pour punir ! Mais pour demander : "Hé Marc, tu peux m`expliquer pourquoi t`as fait ça ?"
 
-**C'est bon ! Ta première sauvegarde est dans le journal !** 🎉
+**C`est bon ! Ta première sauvegarde est dans le journal !** 🎉
 
 ---
 
@@ -427,7 +427,7 @@ Voilà le processus magique que tu vas faire encore et encore :
 4. Recommence ! 🔁
 ```
 
-C'est exactement comme dans un RPG :
+C`est exactement comme dans un RPG :
 Tu joues → Tu sauvegardes → Tu continues → Tu sauvegardes → etc.
 
 ---
@@ -437,7 +437,7 @@ Tu joues → Tu sauvegardes → Tu continues → Tu sauvegardes → etc.
 Quand tu fais un `git commit`, ton message doit être :
 
 ✅ **Court** : pas de roman
-✅ **Clair** : on comprend direct ce que t'as fait
+✅ **Clair** : on comprend direct ce que t`as fait
 ✅ **Professionnel** : comme dans un journal de bord
 
 ### ✅ Exemples de BONS messages :
@@ -458,7 +458,7 @@ git commit -m "update"  ← Merci captain obvious 🙄
 git commit -m "test"  ← Test de quoi ?!
 ```
 
-**Règle d'or :** Imagine qu'un autre joueur regarde ton journal dans 6 mois. Est-ce qu'il va comprendre ce que t'as fait ?
+**Règle d`or :** Imagine qu`un autre joueur regarde ton journal dans 6 mois. Est-ce qu`il va comprendre ce que t`as fait ?
 
 Pense à un vrai journal de jeu :
 ❌ "Save 1", "Save 2" → On sait rien
@@ -480,9 +480,9 @@ Pense à un vrai journal de jeu :
    - Double-clic pour entrer dedans
 
 **2️⃣ Ouvre le terminal dans ce dossier**
-   - Clique dans la barre d'adresse en haut
+   - Clique dans la barre d`adresse en haut
    - Tape : `cmd` puis Entrée
-   - Une fenêtre noire s'ouvre (c'est le terminal !)
+   - Une fenêtre noire s`ouvre (c`est le terminal !)
 
 **3️⃣ Initialise Git**
    - Dans le terminal noir, tape : `git init`
@@ -493,7 +493,7 @@ Pense à un vrai journal de jeu :
    - Dans ton dossier `mon-portfolio`, crée un fichier texte
    - Renomme-le en : `index.html`
    - Ouvre-le avec le Bloc-notes
-   - Écris dedans : `<h1>Je m'appelle [ton prénom]</h1>`
+   - Écris dedans : `<h1>Je m`appelle [ton prénom]</h1>`
    - Sauvegarde (Ctrl+S)
 
 **5️⃣ Prépare la sauvegarde Git**
@@ -502,7 +502,7 @@ Pense à un vrai journal de jeu :
    - Appuie sur Entrée
 
 **6️⃣ Sauvegarde ta partie**
-   - Tape : `git commit -m "Niveau 1 créé - page d'accueil avec mon prénom"`
+   - Tape : `git commit -m "Niveau 1 créé - page d`accueil avec mon prénom"`
    - Appuie sur Entrée
 
 **🎉 BRAVO ! Tu viens de faire ta première sauvegarde Git !**
@@ -529,7 +529,7 @@ git commit -m "Niveau 1 créé - page d'accueil avec mon prénom"
 
 ---
 
-**Si t'as réussi, t'es un CHAMPION !** 💪
+**Si t`as réussi, t`es un CHAMPION !** 💪
 
 Tu viens de faire ta première sauvegarde Git, comme un vrai pro ! 🚀
 
@@ -537,11 +537,11 @@ Tu viens de faire ta première sauvegarde Git, comme un vrai pro ! 🚀
 
 ## 🔑 Antisèche : les commandes du gamer
 
-| Commande | Ce qu'elle fait | Analogie jeu |
+| Commande | Ce qu`elle fait | Analogie jeu |
 |----------|----------------|--------------|
 | `git init` | Crée ton fichier de sauvegarde | Créer un nouveau profil |
 | `git add nom-fichier` | Sélectionne UN élément | Cocher un élément dans le menu |
-| `git add .` | Sélectionne TOUT | Tout cocher d'un coup |
+| `git add .` | Sélectionne TOUT | Tout cocher d`un coup |
 | `git commit -m "..."` | Sauvegarder avec un nom | Enregistrer ta partie avec un nom |
 
 ---
@@ -561,16 +561,16 @@ Dans la **leçon 02**, tu vas apprendre à :
 
 - 🕰️ Consulter toutes tes sauvegardes
 - 🔍 Vérifier ce qui a changé depuis la dernière sauvegarde
-- ⏪ Charger une ancienne sauvegarde si t'as tout cassé
+- ⏪ Charger une ancienne sauvegarde si t`as tout cassé
 
 Prépare-toi, ça va être épique ! 😎
 
 ---
 
-## 📌 Note importante pour l'installation
+## 📌 Note importante pour l`installation
 
-👉 **Git n'est pas encore installé sur ton PC ?**
-Pas de panique ! Demande à ton prof de t'aider à l'installer.
-Une fois que c'est fait, reviens ici et éclate-toi ! 🎯
+👉 **Git n`est pas encore installé sur ton PC ?**
+Pas de panique ! Demande à ton prof de t`aider à l`installer.
+Une fois que c`est fait, reviens ici et éclate-toi ! 🎯
 
 **Maintenant, va coder !** 🚀

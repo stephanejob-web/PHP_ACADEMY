@@ -20,20 +20,20 @@ $ingredient6 = "levure";
 Mais si tu as 10 ingrédients, ou 100 ?
 Ce serait **trop long et fatigant** !
 
-👉 C'est pour ça qu'en PHP, on utilise les **tableaux** (appelés *arrays* en anglais).
+👉 C`est pour ça qu`en PHP, on utilise les **tableaux** (appelés *arrays* en anglais).
 
-## 🧺 C'est quoi un tableau ?
+## 🧺 C`est quoi un tableau ?
 
-Un **tableau**, c'est comme un **grand plateau d'ingrédients** où tu ranges **plusieurs choses à la fois**.
+Un **tableau**, c`est comme un **grand plateau d`ingrédients** où tu ranges **plusieurs choses à la fois**.
 
-Au lieu d'avoir 10 variables différentes, tu as **UN SEUL plateau** qui contient tout !
+Au lieu d`avoir 10 variables différentes, tu as **UN SEUL plateau** qui contient tout !
 
 ```php
 $ingredients = ["œufs", "sucre", "farine", "beurre", "sel"];
 ```
 
 💬 Tu peux lire ça comme :
-> "J'ai un plateau qui s'appelle `$ingredients` avec 5 ingrédients dedans."
+> "J`ai un plateau qui s`appelle `$ingredients` avec 5 ingrédients dedans."
 
 ---
 
@@ -46,7 +46,7 @@ $ingredients = ["œufs", "sucre", "farine"];
 ```
 
 🧠 **À retenir :**
-- Les crochets `[ ]` = "C'est un plateau"
+- Les crochets `[ ]` = "C`est un plateau"
 - Les virgules `,` = "Séparent les ingrédients sur le plateau"
 - Les guillemets `" "` = "Pour du texte"
 
@@ -56,15 +56,15 @@ $ingredients = ["œufs", "sucre", "farine"];
 $portions = [15, 25, 30, 12];
 ```
 
-💬 "J'ai un plateau de portions qui contient 4 quantités."
+💬 "J`ai un plateau de portions qui contient 4 quantités."
 
 ---
 
 ## 🔢 2️⃣ Comprendre les crochets [ ] et les numéros (INDEX)
 
-### 🚨 C'EST LA PARTIE LA PLUS IMPORTANTE !
+### 🚨 C`EST LA PARTIE LA PLUS IMPORTANTE !
 
-C'est souvent la partie la plus difficile au début, alors on va prendre notre temps.
+C`est souvent la partie la plus difficile au début, alors on va prendre notre temps.
 
 Quand tu crées un tableau, PHP range automatiquement les éléments dans des **cases numérotées**.
 
@@ -93,12 +93,12 @@ Imagine un **plan de travail avec des bols** :
 ### 🚨 QUESTION QUE TOUT LE MONDE SE POSE !
 
 Tu te demandes sûrement :
-> "Pourquoi le premier bol, c'est **0** et pas **1** ?"
+> "Pourquoi le premier bol, c`est **0** et pas **1** ?"
 
-C'est parce que **les ordinateurs comptent à partir de zéro**.
-C'est une vieille habitude des langages de programmation.
+C`est parce que **les ordinateurs comptent à partir de zéro**.
+C`est une vieille habitude des langages de programmation.
 
-### 🥞 Imagine une pile d'assiettes :
+### 🥞 Imagine une pile d`assiettes :
 
 **Dans la vraie vie :**
 - 1ère assiette
@@ -110,7 +110,7 @@ C'est une vieille habitude des langages de programmation.
 - 1 = deuxième assiette
 - 2 = troisième assiette
 
-C'est juste une **autre façon de compter**, mais on s'y habitue vite !
+C`est juste une **autre façon de compter**, mais on s`y habitue vite !
 
 ### 📊 Tableau comparatif :
 
@@ -121,13 +121,13 @@ C'est juste une **autre façon de compter**, mais on s'y habitue vite !
 | 3ème élément | 2 | farine |
 
 🧠 **Phrase à retenir :**
-> "Le premier, c'est ZÉRO. Le deuxième, c'est UN. Le troisième, c'est DEUX."
+> "Le premier, c`est ZÉRO. Le deuxième, c`est UN. Le troisième, c`est DEUX."
 
 ---
 
 ## 👀 4️⃣ Accéder à un seul élément (lire un bol)
 
-Tu veux voir ce qu'il y a dans un bol précis sur ton plan de travail.
+Tu veux voir ce qu`il y a dans un bol précis sur ton plan de travail.
 
 Pour ça, tu utilises les **crochets avec un numéro** :
 
@@ -138,7 +138,7 @@ echo $ingredients[0]; // Affiche "œufs"
 ```
 
 💬 Les crochets `[0]` veulent dire :
-> "Va chercher ce qu'il y a **dans le bol numéro 0**."
+> "Va chercher ce qu`il y a **dans le bol numéro 0**."
 
 ### Autres exemples :
 
@@ -175,15 +175,15 @@ $ingredients = ["œufs", "sucre", "farine"];
 echo $ingredients[3]; // ERREUR ! Il n'y a que 3 éléments (0, 1, 2)
 ```
 
-💬 **Pourquoi c'est une erreur ?**
+💬 **Pourquoi c`est une erreur ?**
 Ton tableau a 3 éléments :
 - Bol 0 = œufs
 - Bol 1 = sucre
 - Bol 2 = farine
 
-Il n'y a **pas de bol 3** ! PHP va afficher un message d'erreur.
+Il n`y a **pas de bol 3** ! PHP va afficher un message d`erreur.
 
-🧠 **Règle d'or :**
+🧠 **Règle d`or :**
 > Si tu as **N éléments**, les index vont de **0 à N-1**.
 > 3 éléments → index de 0 à 2
 > 10 éléments → index de 0 à 9
@@ -213,7 +213,7 @@ foreach ($ingredients as $ingredient)
 | Partie | Signification |
 |--------|---------------|
 | `foreach` | "Pour chaque" |
-| `$ingredients` | "Dans mon plateau d'ingrédients" |
+| `$ingredients` | "Dans mon plateau d`ingrédients" |
 | `as` | "En tant que" |
 | `$ingredient` | "Appelle chaque élément : un ingrédient" |
 
@@ -229,11 +229,11 @@ J'ajoute farine à ma recette
 
 ### 🎯 Ce qui se passe en coulisses :
 
-**Tour 1 :** `$ingredient` = "œufs" → affiche "J'ajoute œufs à ma recette"
-**Tour 2 :** `$ingredient` = "sucre" → affiche "J'ajoute sucre à ma recette"
-**Tour 3 :** `$ingredient` = "farine" → affiche "J'ajoute farine à ma recette"
+**Tour 1 :** `$ingredient` = "œufs" → affiche "J`ajoute œufs à ma recette"
+**Tour 2 :** `$ingredient` = "sucre" → affiche "J`ajoute sucre à ma recette"
+**Tour 3 :** `$ingredient` = "farine" → affiche "J`ajoute farine à ma recette"
 
-C'est **automatique** ! 🎉
+C`est **automatique** ! 🎉
 
 ---
 
@@ -293,7 +293,7 @@ $ingredients[2] = "farine complète";
 ```
 
 💬 Les crochets `[2]` indiquent :
-> "Va dans le **bol numéro 2** et remplace ce qu'il y a dedans."
+> "Va dans le **bol numéro 2** et remplace ce qu`il y a dedans."
 
 Maintenant ton tableau contient :
 ```
@@ -324,7 +324,7 @@ Après : farine complète
 
 ## 🧮 8️⃣ Compter les éléments avec `count()`
 
-Tu veux savoir **combien d'ingrédients** tu as sur ton plateau :
+Tu veux savoir **combien d`ingrédients** tu as sur ton plateau :
 
 ```php
 $ingredients = ["œufs", "sucre", "farine"];
@@ -337,7 +337,7 @@ echo count($ingredients);
 ```
 
 💬 `count()` veut dire :
-> "Compte combien d'éléments il y a dans le tableau."
+> "Compte combien d`éléments il y a dans le tableau."
 
 ### Exemple pratique :
 
@@ -459,15 +459,15 @@ J'ai maintenant 5 ingrédients
 
 ## 💬 Phrases à retenir
 
-> Un tableau, c'est comme un **plateau d'ingrédients** :
+> Un tableau, c`est comme un **plateau d`ingrédients** :
 > Tu ranges tout dedans, et chaque ingrédient a un **numéro de bol** ! 🧺
 
 > Les crochets `[ ]` = "regarde dans un bol"
-> Le nombre à l'intérieur = "le numéro du bol"
+> Le nombre à l`intérieur = "le numéro du bol"
 > Et **on commence toujours à zéro** !
 
 > `foreach` = "pour chaque élément, fais quelque chose"
-> C'est la boucle magique des tableaux ! 🔄
+> C`est la boucle magique des tableaux ! 🔄
 
 ---
 
@@ -480,7 +480,7 @@ Crée un tableau `$ingredients` qui contient :
 
 Affiche ensuite chaque ingrédient avec `echo` en utilisant les index [0], [1], [2].
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Un tableau avec 3 éléments
 - 3 affichages séparés utilisant les crochets
 
@@ -512,9 +512,9 @@ echo $ingredients[2] . "<br>";
 Crée un tableau `$ingredients = ["œufs", "sucre", "farine"]`.
 Affiche **seulement le deuxième ingrédient** (sucre).
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Un tableau créé
-- Affichage de l'index [1] uniquement
+- Affichage de l`index [1] uniquement
 
 **Exemple de résultat attendu :**
 ```
@@ -540,9 +540,9 @@ Crée un tableau `$ingredients = ["œufs", "sucre", "farine"]`.
 Ajoute "beurre" à la fin du tableau.
 Affiche tous les ingrédients avec une boucle `foreach`.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Un tableau de 3 éléments
-- Ajout d'un 4ème élément
+- Ajout d`un 4ème élément
 - Boucle foreach pour afficher tout
 
 **Exemple de résultat attendu :**
@@ -576,8 +576,8 @@ Crée un tableau `$ingredients = ["œufs", "sucre", "farine"]`.
 Remplace "farine" par "farine complète".
 Affiche le tableau avec foreach.
 
-**Ce qu'on attend :**
-- Modification de l'index [2]
+**Ce qu`on attend :**
+- Modification de l`index [2]
 - Affichage du tableau modifié
 
 **Exemple de résultat attendu :**
@@ -607,9 +607,9 @@ foreach ($ingredients as $ingredient) {
 ## 📝 Exercice 5 : Compter les éléments
 **Énoncé :**
 Crée un tableau `$ingredients = ["œufs", "sucre", "farine"]`.
-Affiche combien d'ingrédients tu as sur ton plateau en utilisant `count()`.
+Affiche combien d`ingrédients tu as sur ton plateau en utilisant `count()`.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Utilisation de count()
 - Message clair avec le résultat
 
@@ -638,7 +638,7 @@ Crée un tableau `$chefs = ["Laurent", "Julie", "Marc"]`.
 Utilise foreach pour afficher :
 "Le chef [nom] entre en cuisine." pour chaque chef.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Un tableau de 3 noms
 - Boucle foreach avec message personnalisé
 
@@ -665,13 +665,13 @@ foreach ($chefs as $chef) {
 
 ---
 
-## 📝 Exercice 7 : Tableau d'ustensiles
+## 📝 Exercice 7 : Tableau d`ustensiles
 **Énoncé :**
 Crée un tableau `$ustensiles = ["Couteau", "Fouet", "Spatule"]`.
 Affiche chaque ustensile avec foreach en utilisant ce format :
 "Ustensile : [nom]"
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Un tableau de 3 ustensiles
 - Affichage formaté avec foreach
 
@@ -705,9 +705,9 @@ Crée un tableau `$ustensiles = ["Couteau", "Fouet", "Spatule"]`.
 2. Ajoute "Cuillère en bois" à la fin
 3. Affiche tout avec foreach
 
-**Ce qu'on attend :**
-- Modification d'un élément existant
-- Ajout d'un nouvel élément
+**Ce qu`on attend :**
+- Modification d`un élément existant
+- Ajout d`un nouvel élément
 - Affichage du résultat
 
 **Exemple de résultat attendu :**
@@ -739,12 +739,12 @@ foreach ($ustensiles as $u) {
 ## 📝 Exercice 9 : Calculer un total
 **Énoncé :**
 Crée un tableau `$oeufs = [10, 5, 8]`.
-Chaque nombre représente un stock d'œufs.
-Calcule et affiche le total d'œufs.
+Chaque nombre représente un stock d`œufs.
+Calcule et affiche le total d`œufs.
 
 💡 Indice : additionne `$oeufs[0] + $oeufs[1] + $oeufs[2]`.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Un tableau de nombres
 - Addition des 3 valeurs
 - Affichage du total
@@ -780,7 +780,7 @@ Affiche chaque étape avec son numéro :
 
 💡 Astuce : avant la boucle, crée `$numero = 1;` et fais `$numero++` à chaque tour.
 
-**Ce qu'on attend :**
+**Ce qu`on attend :**
 - Un tableau de 3 étapes
 - Un compteur qui commence à 1
 - Affichage numéroté

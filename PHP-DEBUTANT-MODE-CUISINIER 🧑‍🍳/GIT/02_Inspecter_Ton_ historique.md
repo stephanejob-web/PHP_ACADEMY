@@ -2,49 +2,49 @@
 
 ## Salut chef inspecteur ! 🧙‍♂️🔍
 
-Dans la leçon 01, t'as appris à **noter des versions de tes recettes** avec Git.  
+Dans la leçon 01, t`as appris à **noter des versions de tes recettes** avec Git.  
 Cool ! Mais maintenant tu te demandes sûrement :
 
-🤔 "Euh... j'ai noté une version de QUOI exactement ?"  
+🤔 "Euh... j`ai noté une version de QUOI exactement ?"  
 🤔 "Comment je vois toutes les versions de mon livre ?"  
-🤔 "Comment je sais ce que j'ai changé entre deux versions ?"
+🤔 "Comment je sais ce que j`ai changé entre deux versions ?"
 
-**Aujourd'hui, tu vas apprendre à :**
+**Aujourd`hui, tu vas apprendre à :**
 - Vérifier où tu en es dans tes tests
 - Consulter toutes les versions de ton livre
 - Comparer exactement ce qui a changé entre deux versions
 
-C'est parti ! 🚀
+C`est parti ! 🚀
 
 ---
 
 ## 🍳 Retour dans la cuisine
 
-Imagine : t'es chef de cuisine.
+Imagine : t`es chef de cuisine.
 
 **Tu arrives le matin et tu veux savoir :**
 
-1. **Où on en est ?** → Qu'est-ce qui a changé depuis la dernière version ? → `git status`
+1. **Où on en est ?** → Qu`est-ce qui a changé depuis la dernière version ? → `git status`
 2. **Voir toutes les versions** → Feuilleter le livre avec tous les tests → `git log`
 3. **Comparer avant/après** → Voir exactement quels ingrédients ont changé → `git diff`
 
-Voilà les 3 commandes d'inspection qu'on va apprendre ! 💪
+Voilà les 3 commandes d`inspection qu`on va apprendre ! 💪
 
 ---
 
-## 🔍 Commande 1 : `git status` (L'état de ta cuisine)
+## 🔍 Commande 1 : `git status` (L`état de ta cuisine)
 
-C'est LA commande que tu vas utiliser **1000 fois par jour**.
+C`est LA commande que tu vas utiliser **1000 fois par jour**.
 
 ```bash
 git status
 ```
 
-**En français :** "Git, dis-moi où j'en suis dans mes tests de recette !"
+**En français :** "Git, dis-moi où j`en suis dans mes tests de recette !"
 
-**Analogie cuisine :** C'est comme arriver le matin et vérifier ta cuisine :
-- "Ah tiens, j'ai testé le basilic frais hier"
-- "Oh, j'ai modifié l'assaisonnement"
+**Analogie cuisine :** C`est comme arriver le matin et vérifier ta cuisine :
+- "Ah tiens, j`ai testé le basilic frais hier"
+- "Oh, j`ai modifié l`assaisonnement"
 - "Y'a de nouveaux ingrédients sur le plan de travail"
 
 ---
@@ -86,7 +86,7 @@ Changes not staged for commit:
 ```
 
 **Traduction en langage cuisine :**  
-"Hé chef ! Le fichier `index.html` a été modifié, mais t'as pas encore noté cette nouvelle version dans le livre."
+"Hé chef ! Le fichier `index.html` a été modifié, mais t`as pas encore noté cette nouvelle version dans le livre."
 
 ---
 
@@ -98,7 +98,7 @@ Quand tu fais `git status`, tes fichiers peuvent être dans **3 états** :
 |------|---------------------|------------------|---------|
 | 🔴 **Modifié** (pas ajouté) | Tu as testé des trucs mais pas encore préparé la note | Ingrédients testés, pas encore notés | Rouge |
 | 🟢 **Prêt à être noté** | Tu as fait `git add`, il attend le `git commit` | Recette prête, livre ouvert | Vert |
-| ⚪ **Non suivi** | C'est un nouveau fichier que Git ne connaît pas | Nouveaux ingrédients, pas encore dans ton inventaire | Rouge |
+| ⚪ **Non suivi** | C`est un nouveau fichier que Git ne connaît pas | Nouveaux ingrédients, pas encore dans ton inventaire | Rouge |
 
 **Astuce pro de chef cuisinier :**  
 Tape `git status` AVANT chaque `git commit` pour être sûr de ce que tu vas noter !
@@ -113,9 +113,9 @@ Maintenant, tu veux consulter **toutes** les versions de ton livre.
 git log
 ```
 
-**En français :** "Montre-moi toutes les versions qu'on a notées dans ce livre"
+**En français :** "Montre-moi toutes les versions qu`on a notées dans ce livre"
 
-**Analogie cuisine :** C'est comme feuilleter ton livre de recettes du début à aujourd'hui pour voir l'évolution.
+**Analogie cuisine :** C`est comme feuilleter ton livre de recettes du début à aujourd`hui pour voir l`évolution.
 
 ---
 
@@ -152,24 +152,24 @@ Chaque bloc = **1 version dans le livre** (1 commit)
 - **Qui a testé ?** Chef Kevin
 - **Son contact :** kevin@cuisine.com
 - **Quand ?** Le 12 octobre 2025 à 10h30
-- **Qu'est-ce qui a été testé ?** "Version 2 - test avec basilic frais"
+- **Qu`est-ce qui a été testé ?** "Version 2 - test avec basilic frais"
 
 📖 **Version 1 :**
 - **Qui ?** Chef Sophie
 - **Quand ?** Le 12 octobre 2025 à 9h15
 - **Quoi ?** "Version 1 - sauce tomate de base"
 
-**Pourquoi c'est génial ?**
+**Pourquoi c`est génial ?**
 
-Imagine qu'il y a un problème avec la version actuelle.  
-Tu regardes le livre et tu vois : *"C'est Kevin qui a testé le basilic frais le 12 octobre à 10h30"*  
-Tu peux l'appeler et lui demander : *"Hé Kevin, tu peux m'expliquer pourquoi t'as changé le basilic ?"*
+Imagine qu`il y a un problème avec la version actuelle.  
+Tu regardes le livre et tu vois : *"C`est Kevin qui a testé le basilic frais le 12 octobre à 10h30"*  
+Tu peux l`appeler et lui demander : *"Hé Kevin, tu peux m`expliquer pourquoi t`as changé le basilic ?"*
 
 ---
 
 ### 🎨 Rendre `git log` plus lisible
 
-Le `git log` de base, c'est comme un livre mal organisé. Voici une version plus claire :
+Le `git log` de base, c`est comme un livre mal organisé. Voici une version plus claire :
 
 ```bash
 git log --oneline
@@ -184,7 +184,7 @@ z9y8x7w Sophie - Version 1 - sauce tomate de base
 
 **Beaucoup plus facile à lire, non ?** 😎
 
-C'est comme si tu ne gardais que l'essentiel dans ton livre :
+C`est comme si tu ne gardais que l`essentiel dans ton livre :
 - La référence de la version
 - Le nom du chef
 - Ce qui a été testé
@@ -203,7 +203,7 @@ git log --oneline --graph
 git log --oneline -5
 ```
 
-**Ça affiche seulement les 5 dernières versions** (pratique si t'en as 500 dans le livre).
+**Ça affiche seulement les 5 dernières versions** (pratique si t`en as 500 dans le livre).
 
 ```bash
 git log --author="Kevin"
@@ -223,16 +223,16 @@ git diff
 
 **En français :** "Montre-moi ce qui a changé depuis la dernière version notée"
 
-**Analogie cuisine :** C'est comme comparer deux versions d'une recette :
-- Version 1 : Sauce avec 2 gousses d'ail
-- Version 2 : Sauce avec 3 gousses d'ail
-- **Différence** : On a ajouté 1 gousse d'ail ! 🧄
+**Analogie cuisine :** C`est comme comparer deux versions d`une recette :
+- Version 1 : Sauce avec 2 gousses d`ail
+- Version 2 : Sauce avec 3 gousses d`ail
+- **Différence** : On a ajouté 1 gousse d`ail ! 🧄
 
 ---
 
 ### 🧪 Exemple pratique
 
-Tu as modifié `index.html` tout à l'heure. Tape :
+Tu as modifié `index.html` tout à l`heure. Tape :
 
 ```bash
 git diff
@@ -255,9 +255,9 @@ index a1b2c3d..z9y8x7w 100644
 - Les lignes avec un **`-`** (en rouge) = Ce que tu as **retiré** de la recette
 - Les lignes avec un **`+`** (en vert) = Ce que tu as **ajouté** à la recette
 
-Ici, tu as **ajouté** la ligne `<p>Je m'appelle Kévin...</p>`
+Ici, tu as **ajouté** la ligne `<p>Je m`appelle Kévin...</p>`
 
-C'est comme si tu comparais :
+C`est comme si tu comparais :
 - 📖 **Version 1** : Sauce avec basilic séché
 - 📖 **Version 2** : Sauce avec basilic séché + basilic frais
 - **Différence** : +basilic frais ajouté ! 🌿
@@ -286,7 +286,7 @@ git diff HEAD
 
 ## 🎮 Exercice : À toi de jouer !
 
-**Mission : Utilise les 3 commandes d'inspection qu'on vient de voir**
+**Mission : Utilise les 3 commandes d`inspection qu`on vient de voir**
 
 1. Reprends ton projet `mon-portfolio` de la leçon 01
 2. Modifie le fichier `index.html` (ajoute ton âge, par exemple)
@@ -297,18 +297,18 @@ git diff HEAD
 7. Sauvegarde avec `git commit -m "Version 2 - ajout de mon âge"`
 8. Tape `git log --oneline` pour voir ton historique de versions avec ton nom !
 
-**Si t'as réussi, t'es un CHEF INSPECTEUR PRO ! 💪**
+**Si t`as réussi, t`es un CHEF INSPECTEUR PRO ! 💪**
 
 ---
 
-## 🔑 Antisèche : Les outils d'inspection du chef cuisinier
+## 🔑 Antisèche : Les outils d`inspection du chef cuisinier
 
-| Commande | Ce qu'elle fait | Analogie cuisine | Quand tu l'utilises |
+| Commande | Ce qu`elle fait | Analogie cuisine | Quand tu l`utilises |
 |----------|-----------------|------------------|---------------------|
-| `git status` | Voir l'état actuel de ta cuisine | Vérifier ce qui a changé ce matin | **Tout le temps** (avant chaque commit) |
-| `git log` | Voir toutes les versions du livre | Feuilleter le livre de A à Z | Quand tu veux voir l'historique |
+| `git status` | Voir l`état actuel de ta cuisine | Vérifier ce qui a changé ce matin | **Tout le temps** (avant chaque commit) |
+| `git log` | Voir toutes les versions du livre | Feuilleter le livre de A à Z | Quand tu veux voir l`historique |
 | `git log --oneline` | Version compacte du livre | Index rapide du livre | Pareil, mais plus lisible |
-| `git log --author="Kevin"` | Voir le travail d'un chef | Filtrer par chef | Pour voir ce qu'une personne a testé |
+| `git log --author="Kevin"` | Voir le travail d`un chef | Filtrer par chef | Pour voir ce qu`une personne a testé |
 | `git diff` | Voir ce qui a changé | Comparer version 1 vs version 2 | Avant de faire `git add` |
 | `git diff --staged` | Voir ce qui est prêt | Voir ce qui est prêt à noter | Après `git add`, avant `git commit` |
 
@@ -336,12 +336,12 @@ Voici le **cycle complet** que tu vas faire maintenant :
 8. Recommence ! 🔁
 ```
 
-**T'as compris le truc ?**  
+**T`as compris le truc ?**  
 Un bon chef cuisinier inspecte tout le temps ses versions ! 🔍
 
 ---
 
-## 👨‍🍳 Pourquoi c'est important de tout tracer ?
+## 👨‍🍳 Pourquoi c`est important de tout tracer ?
 
 **Histoire vraie :**
 
@@ -349,7 +349,7 @@ Dans une cuisine, un client est empoisonné. 💥
 Il veut savoir quelle version de la recette a été servie.
 
 **Sans livre de versions :**  
-😱 Personne se souvient. C'était quelle version ? Avec quels ingrédients ?  
+😱 Personne se souvient. C`était quelle version ? Avec quels ingrédients ?  
 Impossible de savoir. Le restaurant paye les pots cassés.
 
 **Avec un livre de versions (Git) :**  
@@ -357,17 +357,17 @@ Impossible de savoir. Le restaurant paye les pots cassés.
 *"Version 3 - sauce préparée par Marc le 5 octobre à 14h - champignons frais ajoutés"*
 
 Il appelle Marc :  
-*"Hé Marc, tu peux me confirmer que t'as utilisé des champignons frais ?"*  
+*"Hé Marc, tu peux me confirmer que t`as utilisé des champignons frais ?"*  
 Marc répond :  
-*"Oui, c'est ce qu'il y avait en stock ce jour-là"*
+*"Oui, c`est ce qu`il y avait en stock ce jour-là"*
 
 **Résultat :**  
 ✅ On sait exactement quelle version a été servie  
 ✅ On peut identifier le problème  
 ✅ On évite de refaire la même erreur
 
-**Avec Git, c'est pareil !**  
-Si y'a un bug, tu peux remonter jusqu'à la version qui a introduit le problème et comprendre pourquoi. 🔍
+**Avec Git, c`est pareil !**  
+Si y'a un bug, tu peux remonter jusqu`à la version qui a introduit le problème et comprendre pourquoi. 🔍
 
 ---
 

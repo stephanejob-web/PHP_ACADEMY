@@ -1,6 +1,6 @@
 # 🤝 Leçon 07 : Collaborer en équipe (Pull Request & Workflow pro)
 
-## Salut chef d'équipe ! 🧙‍♂️👥
+## Salut chef d`équipe ! 🧙‍♂️👥
 
 Félicitations ! Tu as fait **6 leçons** et tu maîtrises Git !  
 Mais maintenant... le niveau ultime...
@@ -12,7 +12,7 @@ Comment vous faites pour pas tout casser ?
 Comment vous validez le travail de chacun ?  
 Comment les pros bossent dans les entreprises ?
 
-**Aujourd'hui, tu vas apprendre le workflow des VRAIS développeurs ! 🚀**
+**Aujourd`hui, tu vas apprendre le workflow des VRAIS développeurs ! 🚀**
 
 ---
 
@@ -27,44 +27,44 @@ Tu travailles sur un projet avec Marc et Sophie.
 - 👨 **Toi** tu pousses ton code direct sur `main` → 💥 **TOUT CASSE !**
 
 **Pourquoi ?**  
-Parce que personne n'a vérifié ton code avant !
+Parce que personne n`a vérifié ton code avant !
 
 **Analogie chantier :**
 
-Imagine un chantier où chaque ouvrier fait ce qu'il veut sans demander l'avis du chef.  
-- Marc installe l'électricité
+Imagine un chantier où chaque ouvrier fait ce qu`il veut sans demander l`avis du chef.  
+- Marc installe l`électricité
 - Sophie peint les murs
 - Toi tu détruis un mur porteur... 💥
 
-**Résultat : La maison s'écroule ! 😱**
+**Résultat : La maison s`écroule ! 😱**
 
 **La solution des pros ?**  
 Personne ne pousse directement sur `main`.  
-Tout le monde crée des branches et demande l'autorisation avant d'intégrer.  
+Tout le monde crée des branches et demande l`autorisation avant d`intégrer.  
 
-**C'est ça, la Pull Request ! 🔥**
+**C`est ça, la Pull Request ! 🔥**
 
 ---
 
-## 🎯 C'est quoi une Pull Request (PR) ?
+## 🎯 C`est quoi une Pull Request (PR) ?
 
-Une Pull Request, c'est une **demande de fusion**.
+Une Pull Request, c`est une **demande de fusion**.
 
 **En français :**  
-*"Hé chef, j'ai fini mon travail sur ma branche. Tu peux vérifier et l'intégrer à `main` si c'est OK ?"*
+*"Hé chef, j`ai fini mon travail sur ma branche. Tu peux vérifier et l`intégrer à `main` si c`est OK ?"*
 
 **Analogie chantier :**
 
 Tu as construit un garage sur un terrain à part.  
-Avant de l'intégrer à la maison principale, tu appelles le chef :
+Avant de l`intégrer à la maison principale, tu appelles le chef :
 
-*"Chef ! J'ai fini le garage. Viens voir si c'est bon avant qu'on l'intègre !"*
+*"Chef ! J`ai fini le garage. Viens voir si c`est bon avant qu`on l`intègre !"*
 
 Le chef vient, inspecte, et dit :
 - ✅ *"Nickel ! On intègre !"*
-- ❌ *"Non, refais la peinture d'abord"*
+- ❌ *"Non, refais la peinture d`abord"*
 
-**Avec Git, c'est exactement pareil !**
+**Avec Git, c`est exactement pareil !**
 
 ---
 
@@ -80,7 +80,7 @@ Personne ne travaille directement sur `main`.
 git switch -c ajout-formulaire-contact
 ```
 
-**Traduction :** *"J'ouvre un chantier parallèle pour le formulaire"*
+**Traduction :** *"J`ouvre un chantier parallèle pour le formulaire"*
 
 ---
 
@@ -102,7 +102,7 @@ git commit -m "Ajout du formulaire de contact"
 git push origin ajout-formulaire-contact
 ```
 
-**Traduction :** *"J'envoie mon chantier parallèle sur GitHub"*
+**Traduction :** *"J`envoie mon chantier parallèle sur GitHub"*
 
 **Résultat :**  
 Ta branche est maintenant sur GitHub, mais PAS encore sur `main`.
@@ -117,7 +117,7 @@ Ta branche est maintenant sur GitHub, mais PAS encore sur `main`.
 4. Écris un message : *"Ajout du formulaire de contact avec validation"*
 5. Clique sur **Create pull request**
 
-**Traduction :** *"Chef, j'ai fini ! Tu peux vérifier mon travail ?"*
+**Traduction :** *"Chef, j`ai fini ! Tu peux vérifier mon travail ?"*
 
 ---
 
@@ -125,12 +125,12 @@ Ta branche est maintenant sur GitHub, mais PAS encore sur `main`.
 
 Le chef (ou un collègue) va :
 - 👀 Regarder ton code
-- 💬 Laisser des commentaires : *"Change cette couleur"*, *"Ajoute un message d'erreur"*
-- ✅ Approuver si c'est bon
+- 💬 Laisser des commentaires : *"Change cette couleur"*, *"Ajoute un message d`erreur"*
+- ✅ Approuver si c`est bon
 - ❌ Demander des modifications si besoin
 
 **Analogie chantier :**  
-L'inspecteur vérifie que tout est aux normes avant d'intégrer le garage.
+L`inspecteur vérifie que tout est aux normes avant d`intégrer le garage.
 
 ---
 
@@ -160,7 +160,7 @@ Tu travailles sur le projet `mon-site` avec ton équipe.
 git switch -c ajout-footer
 ```
 
-**Traduction :** *"J'ouvre un chantier pour ajouter un footer"*
+**Traduction :** *"J`ouvre un chantier pour ajouter un footer"*
 
 ---
 
@@ -212,13 +212,13 @@ Ta branche `ajout-footer` est maintenant sur GitHub ! 🚀
    ```
 6. Clique sur **Create pull request**
 
-**C'est fait ! Ta PR est créée ! 🎉**
+**C`est fait ! Ta PR est créée ! 🎉**
 
 ---
 
 ### Étape 5 : Attendre la review
 
-Maintenant, tu attends que quelqu'un (ton chef, un collègue) :
+Maintenant, tu attends que quelqu`un (ton chef, un collègue) :
 - 👀 Regarde ton code
 - 💬 Laisse des commentaires
 - ✅ Approuve
@@ -226,22 +226,22 @@ Maintenant, tu attends que quelqu'un (ton chef, un collègue) :
 **Dans un vrai projet, tu peux :**
 - Répondre aux commentaires
 - Faire des modifications si demandé
-- Pousser de nouveaux commits sur ta branche (ils s'ajoutent automatiquement à la PR)
+- Pousser de nouveaux commits sur ta branche (ils s`ajoutent automatiquement à la PR)
 
 ---
 
 ### Étape 6 : Merger la PR
 
-Une fois approuvée, quelqu'un (souvent toi ou ton chef) clique sur **Merge pull request**.
+Une fois approuvée, quelqu`un (souvent toi ou ton chef) clique sur **Merge pull request**.
 
 **Choix possibles :**
-- **Merge commit** : Garde l'historique complet (recommandé pour débuter)
+- **Merge commit** : Garde l`historique complet (recommandé pour débuter)
 - **Squash and merge** : Combine tous les commits en un seul
-- **Rebase and merge** : Réécrit l'historique (avancé)
+- **Rebase and merge** : Réécrit l`historique (avancé)
 
 **Choisis "Merge commit"** pour commencer.
 
-**C'est bon ! Ton footer est maintenant dans `main` ! 🎉**
+**C`est bon ! Ton footer est maintenant dans `main` ! 🎉**
 
 ---
 
@@ -270,16 +270,16 @@ git branch -d ajout-footer
 Imagine : tu veux contribuer à un projet open source (comme React, WordPress, etc.).
 
 **Problème :**  
-Tu n'as pas les droits d'écriture sur le projet.
+Tu n`as pas les droits d`écriture sur le projet.
 
 **Solution : Le FORK ! 🍴**
 
-### C'est quoi un Fork ?
+### C`est quoi un Fork ?
 
-Un fork, c'est une **copie** d'un projet dans ton compte GitHub.
+Un fork, c`est une **copie** d`un projet dans ton compte GitHub.
 
 **Analogie chantier :**  
-C'est comme si tu copiais les plans d'une maison, tu les modifies, et tu proposes tes modifications à l'architecte original.
+C`est comme si tu copiais les plans d`une maison, tu les modifies, et tu proposes tes modifications à l`architecte original.
 
 ---
 
@@ -331,13 +331,13 @@ git push origin correction-bug-menu
 5. Clique sur **Create pull request**
 
 **Résultat :**  
-Les mainteneurs du projet original vont voir ta PR et décider de l'accepter ou non ! 🎉
+Les mainteneurs du projet original vont voir ta PR et décider de l`accepter ou non ! 🎉
 
-**C'est comme ça qu'on contribue à Linux, WordPress, React, etc. ! 🌍**
+**C`est comme ça qu`on contribue à Linux, WordPress, React, etc. ! 🌍**
 
 ---
 
-## ✅ Les règles d'or du travail en équipe
+## ✅ Les règles d`or du travail en équipe
 
 ### Règle 1 : Jamais push direct sur `main` 🚫
 
@@ -368,8 +368,8 @@ Ne construis pas garage + piscine + extension en même temps !
 
 Une bonne description de PR contient :
 - 📋 Ce que tu as fait
-- 🎯 Pourquoi tu l'as fait
-- 🖼️ Des screenshots si c'est visuel
+- 🎯 Pourquoi tu l`as fait
+- 🖼️ Des screenshots si c`est visuel
 - ✅ Une checklist si besoin
 
 **Exemple :**
@@ -399,13 +399,13 @@ Les utilisateurs demandaient un moyen de nous contacter.
 
 ### Règle 4 : Review le code des autres 👀
 
-Quand quelqu'un crée une PR, prends le temps de :
+Quand quelqu`un crée une PR, prends le temps de :
 - 👀 Lire son code
 - 💬 Laisser des commentaires constructifs
-- ✅ Approuver si c'est bon
+- ✅ Approuver si c`est bon
 
 **Ne sois pas méchant !**  
-Sois constructif : *"Peut-être qu'on pourrait améliorer cette fonction comme ça..."*
+Sois constructif : *"Peut-être qu`on pourrait améliorer cette fonction comme ça..."*
 
 ---
 
@@ -422,11 +422,11 @@ Sois constructif : *"Peut-être qu'on pourrait améliorer cette fonction comme �
 7. Pousse avec `git push origin ajout-projets`
 8. Va sur GitHub et crée une Pull Request
 9. Écris une belle description
-10. Merge ta PR (simule que c'est ton chef qui valide)
+10. Merge ta PR (simule que c`est ton chef qui valide)
 11. Supprime la branche sur GitHub
 12. Sur ton PC : `git switch main` puis `git pull` puis `git branch -d ajout-projets`
 
-**Si t'as réussi, t'es un DEV PRO NIVEAU ENTREPRISE ! 💪🔥**
+**Si t`as réussi, t`es un DEV PRO NIVEAU ENTREPRISE ! 💪🔥**
 
 ---
 
@@ -438,7 +438,7 @@ Sois constructif : *"Peut-être qu'on pourrait améliorer cette fonction comme �
 | 2 | Code + `git commit` | PC | Travailler |
 | 3 | `git push origin ma-branche` | PC | Envoyer sur GitHub |
 | 4 | Create Pull Request | GitHub | Demander la fusion |
-| 5 | Review & Comments | GitHub | Vérification par l'équipe |
+| 5 | Review & Comments | GitHub | Vérification par l`équipe |
 | 6 | Merge PR | GitHub | Intégrer dans `main` |
 | 7 | `git pull` sur `main` | PC | Récupérer la version à jour |
 
@@ -481,11 +481,11 @@ Tu maîtrises maintenant :
 
 - Utilise GitHub comme ton **portfolio**
 - Les recruteurs regardent ton profil GitHub !
-- Plus tu as de projets, mieux c'est
+- Plus tu as de projets, mieux c`est
 
 ### 🔥 Concepts avancés (quand tu seras prêt)
 
-- `git rebase` : Réécrire l'historique
+- `git rebase` : Réécrire l`historique
 - `git cherry-pick` : Récupérer un commit précis
 - `git stash` : Mettre de côté du travail en cours
 - GitHub Acti

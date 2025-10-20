@@ -2,7 +2,7 @@
 🔀 Leçon 04 : Fusionner les parties (merge)
 Salut maître stratège ! 🧙‍♂️🎮
 
-Dans la leçon 03, t'as appris à créer des parties parallèles (les branches).
+Dans la leçon 03, t`as appris à créer des parties parallèles (les branches).
 Maintenant, on va apprendre le truc le plus important...
 
 **Le problème :**
@@ -12,13 +12,13 @@ Le système est génial ! Tu veux le garder !
 
 Mais comment tu fais pour ramener ton système de magie sur ta partie principale ?
 
-C'est ça qu'on va voir aujourd'hui : le **MERGE (la fusion)** ! 🔥
+C`est ça qu`on va voir aujourd`hui : le **MERGE (la fusion)** ! 🔥
 
 ---
 
-## 🤔 C'est quoi le merge ?
+## 🤔 C`est quoi le merge ?
 
-Le merge, c'est **fusionner deux parties** en une seule.
+Le merge, c`est **fusionner deux parties** en une seule.
 
 **Analogie jeu :**
 
@@ -27,7 +27,7 @@ Tu as deux saves :
 - 🎮 **Save principale :** Ton perso niveau 50 qui fonctionne
 - ✨ **Save test :** Tu as testé un nouveau système de magie
 
-Le système de magie est parfait ! Tu veux l'intégrer à ta partie principale.
+Le système de magie est parfait ! Tu veux l`intégrer à ta partie principale.
 
 **Comment tu fais ?**
 
@@ -38,7 +38,7 @@ Tu prends les compétences de la save test, tu les ramènes sur la save principa
 Ta partie principale a maintenant le système de magie ! 🎉
 Et tu peux supprimer la save test.
 
-**Avec Git, c'est exactement pareil !** Le merge ramène le travail d'une branche vers une autre.
+**Avec Git, c`est exactement pareil !** Le merge ramène le travail d`une branche vers une autre.
 
 ---
 
@@ -56,7 +56,7 @@ git switch main
 
 **Analogie jeu :** Tu charges ta save principale.
 
-### Étape 2 : Ramène le travail de l'autre partie
+### Étape 2 : Ramène le travail de l`autre partie
 
 ```bash
 git merge nom-de-la-branche
@@ -72,7 +72,7 @@ git merge ajout-magie
 
 **Analogie jeu :** Les compétences de la save test sont copiées dans ta save principale.
 
-**C'est tout !** 🎉
+**C`est tout !** 🎉
 
 ---
 
@@ -100,7 +100,7 @@ git branch
 
 Tu es sur `ajout-formulaire`. Parfait ! ✅
 
-### Étape 2 : Assure-toi d'avoir tout sauvegardé
+### Étape 2 : Assure-toi d`avoir tout sauvegardé
 
 ```bash
 git status
@@ -140,7 +140,7 @@ Fast-forward
 ```
 
 **Traduction :**
-Git a pris tout le travail de la branche `ajout-formulaire` et l'a intégré dans `main` !
+Git a pris tout le travail de la branche `ajout-formulaire` et l`a intégré dans `main` !
 
 ### Étape 5 : Vérifie que tout est là
 
@@ -158,7 +158,7 @@ Git a pris tout le travail de la branche `ajout-formulaire` et l'a intégré dan
 
 Maintenant que tu as fusionné, la branche `ajout-formulaire` ne sert plus à rien.
 
-C'est comme une save test : Une fois que t'as intégré le système de magie dans ta partie principale, tu peux supprimer la save test.
+C`est comme une save test : Une fois que t`as intégré le système de magie dans ta partie principale, tu peux supprimer la save test.
 
 ### Supprimer une branche
 
@@ -166,7 +166,7 @@ C'est comme une save test : Une fois que t'as intégré le système de magie dan
 git branch -d ajout-formulaire
 ```
 
-**En français :** "Supprime la partie ajout-formulaire, j'en ai plus besoin"
+**En français :** "Supprime la partie ajout-formulaire, j`en ai plus besoin"
 
 **Résultat :**
 
@@ -174,9 +174,9 @@ git branch -d ajout-formulaire
 Deleted branch ajout-formulaire (was z9y8x7w).
 ```
 
-**Analogie jeu :** Tu supprimes le slot de save test et tu libères de l'espace. 💾
+**Analogie jeu :** Tu supprimes le slot de save test et tu libères de l`espace. 💾
 
-**Note :** Git refuse de supprimer une branche si elle contient du travail non fusionné. C'est une sécurité ! 🛡️
+**Note :** Git refuse de supprimer une branche si elle contient du travail non fusionné. C`est une sécurité ! 🛡️
 
 ---
 
@@ -187,7 +187,7 @@ Il existe deux types de merge. Comprends bien la différence !
 ### 1️⃣ Le Fast-Forward (fusion rapide) ⚡
 
 **Situation :**
-Tu as créé une branche, tu as travaillé dessus, mais PERSONNE n'a touché à la partie principale pendant ce temps.
+Tu as créé une branche, tu as travaillé dessus, mais PERSONNE n`a touché à la partie principale pendant ce temps.
 
 ```
 main: A --- B --- C
@@ -203,16 +203,16 @@ main: A --- B --- C --- D --- E
 ```
 
 **Analogie jeu :**
-Ta save principale n'a pas bougé. Tu copies juste tes nouveaux sorts et tu les intègres. Simple !
+Ta save principale n`a pas bougé. Tu copies juste tes nouveaux sorts et tu les intègres. Simple !
 
-C'est le cas le plus simple. Git fait ça automatiquement.
+C`est le cas le plus simple. Git fait ça automatiquement.
 
 ---
 
 ### 2️⃣ Le Three-Way Merge (fusion à trois points) 🔀
 
 **Situation :**
-Tu as créé une branche ET travaillé dessus, mais quelqu'un a AUSSI travaillé sur la partie principale pendant ce temps.
+Tu as créé une branche ET travaillé dessus, mais quelqu`un a AUSSI travaillé sur la partie principale pendant ce temps.
 
 ```
 main: A --- B --- C --- F
@@ -232,7 +232,7 @@ main: A --- B --- C --- F --- G (commit de fusion)
 **Analogie jeu :**
 Ta save principale a évolué aussi (F). Git doit combiner intelligemment les nouvelles quêtes (F) avec ton système de magie (D-E).
 
-Git crée un commit automatique qui s'appelle *"Merge branch 'ajout-magie' into main"*
+Git crée un commit automatique qui s`appelle *"Merge branch 'ajout-magie' into main"*
 
 ---
 
@@ -258,13 +258,13 @@ Voici comment les pros travaillent **TOUS LES JOURS** :
 8. Recommence pour la prochaine fonctionnalité ! 🔁
 ```
 
-C'est comme ça que bossent **Google, Facebook, Netflix... TOUT LE MONDE !** 🌍
+C`est comme ça que bossent **Google, Facebook, Netflix... TOUT LE MONDE !** 🌍
 
 ---
 
-## ✅ Les règles d'or du merge
+## ✅ Les règles d`or du merge
 
-### Règle 1 : Toujours merger VERS main (pas l'inverse)
+### Règle 1 : Toujours merger VERS main (pas l`inverse)
 
 ❌ **MAUVAIS :**
 
@@ -281,10 +281,10 @@ git merge ajout-magie
 ```
 
 **Pourquoi ?**
-`main` est ta partie principale. C'est elle qui reçoit le travail, pas l'inverse !
+`main` est ta partie principale. C`est elle qui reçoit le travail, pas l`inverse !
 
 **Analogie jeu :**
-Tu intègres les sorts dans ta save principale, pas l'inverse !
+Tu intègres les sorts dans ta save principale, pas l`inverse !
 
 ---
 
@@ -296,7 +296,7 @@ Avant de faire `git merge`, assure-toi que tout est commit :
 git status
 ```
 
-Si tu vois des fichiers modifiés, sauvegarde d'abord :
+Si tu vois des fichiers modifiés, sauvegarde d`abord :
 
 ```bash
 git add .
@@ -329,9 +329,9 @@ Une fois le système intégré, supprime la save test. Garde pas 50 slots de sav
 
 **1️⃣ Va dans ton projet `mon-portfolio`**
    - Ouvre le dossier
-   - Clique dans la barre d'adresse → tape `cmd` → Entrée
+   - Clique dans la barre d`adresse → tape `cmd` → Entrée
 
-**2️⃣ Assure-toi d'être sur main**
+**2️⃣ Assure-toi d`être sur main**
    - Tape : `git branch`
    - Tu dois voir `* main`
 
@@ -371,18 +371,18 @@ Une fois le système intégré, supprime la save test. Garde pas 50 slots de sav
    - Tape : `git branch`
    - La branche `ajout-competences` a disparu ✅
 
-**🎉 Si t'as réussi, t'es un MAÎTRE DE LA FUSION !** 💪
+**🎉 Si t`as réussi, t`es un MAÎTRE DE LA FUSION !** 💪
 
 ---
 
 ## 🔑 Antisèche : Les commandes de fusion
 
-| Commande | Ce qu'elle fait | Analogie jeu |
+| Commande | Ce qu`elle fait | Analogie jeu |
 |----------|----------------|--------------|
 | `git switch main` | Charger la partie principale | Charger ta save principale |
 | `git merge nom-branche` | Fusionner une branche | Intégrer les compétences de la save test |
 | `git branch -d nom-branche` | Supprimer une branche | Supprimer un slot de save |
-| `git branch -D nom-branche` | Forcer la suppression | Détruire un slot même s'il reste du travail |
+| `git branch -D nom-branche` | Forcer la suppression | Détruire un slot même s`il reste du travail |
 
 ---
 
@@ -406,7 +406,7 @@ Maintenant tu connais le cycle complet du développeur pro :
 7. Recommence ! 🔁
 ```
 
-C'est exactement comme ça que travaillent les développeurs **dans le monde entier !** 🌍
+C`est exactement comme ça que travaillent les développeurs **dans le monde entier !** 🌍
 
 ---
 
@@ -427,6 +427,6 @@ Dans la **leçon 05**, tu vas apprendre à gérer les **CONFLITS** :
 - 🤔 Comment Git gère ces situations ?
 - 🛠️ Comment résoudre un conflit comme un pro ?
 
-Prépare-toi, c'est là que ça devient sérieux ! 🔥
+Prépare-toi, c`est là que ça devient sérieux ! 🔥
 
 **Maintenant, va fusionner !** 🚀

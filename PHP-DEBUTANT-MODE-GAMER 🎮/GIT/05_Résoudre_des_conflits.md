@@ -2,7 +2,7 @@
 ⚠️ Leçon 05 : Gérer les conflits (quand deux joueurs se marchent dessus)
 Salut arbitre ! 🧙‍♂️⚖️
 
-Dans la leçon 04, t'as appris à fusionner des parties avec Git. Mais parfois... ça se passe pas comme prévu...
+Dans la leçon 04, t`as appris à fusionner des parties avec Git. Mais parfois... ça se passe pas comme prévu...
 
 **Le problème :**
 
@@ -15,13 +15,13 @@ Quand tu veux fusionner les deux saves...
 
 Git te dit : *"Hé chef ! Marc veut du bleu, Sophie veut du rouge... Tu veux quoi TOI ?"*
 
-Aujourd'hui, tu vas apprendre à résoudre ces conflits comme un **PRO !** 🔥
+Aujourd`hui, tu vas apprendre à résoudre ces conflits comme un **PRO !** 🔥
 
 ---
 
-## 🤔 C'est quoi un conflit ?
+## 🤔 C`est quoi un conflit ?
 
-Un conflit, c'est quand **deux joueurs modifient la même chose** en même temps.
+Un conflit, c`est quand **deux joueurs modifient la même chose** en même temps.
 
 **Analogie jeu :**
 
@@ -32,9 +32,9 @@ Tu as deux joueurs :
 
 Quand tu veux fusionner les deux saves...
 
-Git te dit : *"Attends chef ! Y'a un problème ! Marc veut du bleu, Sophie veut du rouge... C'est QUOI la bonne couleur ?!"*
+Git te dit : *"Attends chef ! Y'a un problème ! Marc veut du bleu, Sophie veut du rouge... C`est QUOI la bonne couleur ?!"*
 
-Git ne peut pas décider tout seul. C'est **TOI** qui dois trancher ! ⚖️
+Git ne peut pas décider tout seul. C`est **TOI** qui dois trancher ! ⚖️
 
 ---
 
@@ -66,7 +66,7 @@ On va volontairement créer un conflit pour apprendre à le résoudre.
 
 ### Étape 1 : Prépare ton projet
 
-Va dans ton projet `mon-site` et assure-toi d'être sur `main` :
+Va dans ton projet `mon-site` et assure-toi d`être sur `main` :
 
 ```bash
 git switch main
@@ -157,7 +157,7 @@ CONFLICT (content): Merge conflict in message.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-**Traduction :** *"Hé chef ! J'ai un problème avec `message.txt`. Marc et toi avez modifié la même chose. Dis-moi quoi garder !"*
+**Traduction :** *"Hé chef ! J`ai un problème avec `message.txt`. Marc et toi avez modifié la même chose. Dis-moi quoi garder !"*
 
 **Bravo ! Tu viens de créer ton premier conflit !** 🎉
 
@@ -193,11 +193,11 @@ Bonjour sur mon site !
 >>>>>>> version-marc
 ```
 
-Git te dit : *"Voilà les deux versions. C'est à TOI de décider laquelle garder !"*
+Git te dit : *"Voilà les deux versions. C`est à TOI de décider laquelle garder !"*
 
 **Analogie jeu :**
 
-C'est comme si tu avais un casque avec deux skins :
+C`est comme si tu avais un casque avec deux skins :
 - **Haut du casque :** Skin rouge (ta version)
 - **Bas du casque :** Skin bleu (version de Marc)
 
@@ -217,7 +217,7 @@ Tu supprimes tout et tu gardes seulement ta version :
 Hello sur mon site !
 ```
 
-**Traduction :** "Désolé Marc, c'est MA version qui gagne."
+**Traduction :** "Désolé Marc, c`est MA version qui gagne."
 
 ---
 
@@ -290,7 +290,7 @@ Hello sur mon site !
 
 Sauvegarde ton fichier dans le Bloc-notes (Ctrl+S).
 
-### Étape 5 : Dis à Git que t'as résolu le conflit
+### Étape 5 : Dis à Git que t`as résolu le conflit
 
 **Dans le terminal :**
 
@@ -298,7 +298,7 @@ Sauvegarde ton fichier dans le Bloc-notes (Ctrl+S).
 git add message.txt
 ```
 
-**Traduction :** "Git, j'ai résolu le conflit, voilà la version finale !"
+**Traduction :** "Git, j`ai résolu le conflit, voilà la version finale !"
 
 ### Étape 6 : Termine le merge
 
@@ -315,9 +315,9 @@ Merge branch 'version-marc'
 #   message.txt
 ```
 
-Sauvegarde et ferme l'éditeur.
+Sauvegarde et ferme l`éditeur.
 
-**C'est bon ! Le conflit est résolu !** 🎉
+**C`est bon ! Le conflit est résolu !** 🎉
 
 ---
 
@@ -342,7 +342,7 @@ git log --oneline --graph
 
 ---
 
-## 🔑 Les outils pour t'aider
+## 🔑 Les outils pour t`aider
 
 ### 1️⃣ Voir quels fichiers sont en conflit
 
@@ -361,9 +361,9 @@ Unmerged paths:
 
 ---
 
-### 2️⃣ Annuler le merge si t'es perdu
+### 2️⃣ Annuler le merge si t`es perdu
 
-Si t'as peur, tu peux annuler le merge :
+Si t`as peur, tu peux annuler le merge :
 
 ```bash
 git merge --abort
@@ -371,11 +371,11 @@ git merge --abort
 
 **Traduction :** "Annule tout ! Je veux revenir en arrière !"
 
-**Analogie jeu :** C'est comme dire : "Ragequit ! On recommence demain."
+**Analogie jeu :** C`est comme dire : "Ragequit ! On recommence demain."
 
 ---
 
-## ✅ Les règles d'or pour éviter les conflits
+## ✅ Les règles d`or pour éviter les conflits
 
 ### Règle 1 : Communique avec ton équipe 💬
 
@@ -398,7 +398,7 @@ Ne garde pas une branche ouverte pendant 3 semaines. Fais des petites fonctionna
 
 Plus tu attends, plus y'aura de conflits. Merge régulièrement pour éviter les gros problèmes.
 
-**Analogie jeu :** Sauvegarde ta progression régulièrement, attends pas d'avoir 50h de jeu non sauvegardées !
+**Analogie jeu :** Sauvegarde ta progression régulièrement, attends pas d`avoir 50h de jeu non sauvegardées !
 
 ---
 
@@ -410,9 +410,9 @@ Plus tu attends, plus y'aura de conflits. Merge régulièrement pour éviter les
 
 **1️⃣ Va dans ton projet `mon-portfolio`**
    - Ouvre le dossier
-   - Clique dans la barre d'adresse → tape `cmd` → Entrée
+   - Clique dans la barre d`adresse → tape `cmd` → Entrée
 
-**2️⃣ Assure-toi d'être sur `main`**
+**2️⃣ Assure-toi d`être sur `main`**
    - Tape : `git branch`
 
 **3️⃣ Crée un fichier `titre.txt`**
@@ -463,19 +463,19 @@ Plus tu attends, plus y'aura de conflits. Merge régulièrement pour éviter les
 
 **1️⃣4️⃣ Sauvegarde le fichier** (Ctrl+S)
 
-**1️⃣5️⃣ Dis à Git que c'est résolu**
+**1️⃣5️⃣ Dis à Git que c`est résolu**
    - Tape : `git add titre.txt`
 
 **1️⃣6️⃣ Termine le merge**
    - Tape : `git commit`
 
-**🎉 Si t'as réussi, t'es un MAÎTRE DE LA RÉSOLUTION DE CONFLITS !** 💪
+**🎉 Si t`as réussi, t`es un MAÎTRE DE LA RÉSOLUTION DE CONFLITS !** 💪
 
 ---
 
 ## 🔑 Antisèche : Gérer les conflits
 
-| Commande | Ce qu'elle fait | Quand l'utiliser |
+| Commande | Ce qu`elle fait | Quand l`utiliser |
 |----------|----------------|------------------|
 | `git status` | Voir les fichiers en conflit | Pendant un conflit |
 | `git add fichier` | Marquer un conflit comme résolu | Après avoir édité le fichier |
@@ -502,7 +502,7 @@ Plus tu attends, plus y'aura de conflits. Merge régulièrement pour éviter les
 7. C'est fini ! 🎉
 ```
 
-**C'est aussi simple que ça !**
+**C`est aussi simple que ça !**
 
 ---
 

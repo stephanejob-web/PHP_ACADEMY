@@ -1,35 +1,35 @@
-# 🎮 POO pour Gamers - Cours 05 : L'héritage (le système de CLASSES !)
+# 🎮 POO pour Gamers - Cours 05 : L`héritage (le système de CLASSES !)
 
 ## 🕹️ Salut le gamer !
 
-Aujourd'hui, on attaque un concept **SUPER PUISSANT** : **l'héritage** !
+Aujourd`hui, on attaque un concept **SUPER PUISSANT** : **l`héritage** !
 
-C'est exactement comme les **systèmes de classes** dans les RPG :
+C`est exactement comme les **systèmes de classes** dans les RPG :
 - Tu as une **classe de base** (Personnage)
 - Tu as des **classes spécialisées** (Guerrier, Mage, Archer...)
 - Chaque classe spécialisée **hérite** des stats de base + ajoute ses propres trucs !
 
-En POO, c'est pareil ! 💪
+En POO, c`est pareil ! 💪
 
 ---
 
-## 🤔 L'héritage, c'est quoi ?
+## 🤔 L`héritage, c`est quoi ?
 
 Imagine que tu as créé une classe `Personnage` qui marche super bien.
 
 Maintenant, tu veux créer une classe `Guerrier` (un personnage spécialisé dans le combat rapproché).
 
-Un guerrier, c'est quoi ? **C'est un personnage... MAIS EN MIEUX !**
+Un guerrier, c`est quoi ? **C`est un personnage... MAIS EN MIEUX !**
 
 Il a :
-- ✅ Tout ce qu'un personnage normal a (nom, PV, force, arme...)
+- ✅ Tout ce qu`un personnage normal a (nom, PV, force, arme...)
 - ✅ **PLUS** des trucs en plus (rage, armure lourde, esquive...)
 
 **Plutôt que de TOUT réécrire**, tu peux dire :
 
 > *"Guerrier, tu hérites de Personnage, et tu ajoutes juste ce qui te manque !"*
 
-**C'est ça l'héritage !** ✨
+**C`est ça l`héritage !** ✨
 
 ---
 
@@ -67,7 +67,7 @@ class Personnage {
 ?>
 ```
 
-Bon, ça tu connais déjà ! C'est un personnage classique.
+Bon, ça tu connais déjà ! C`est un personnage classique.
 
 ---
 
@@ -146,9 +146,9 @@ Thorin attaque ! ⚔️ (30 dégâts)
 💥 Thorin utilise COUP PUISSANT ! (80 dégâts)
 ```
 
-**Regarde !** Le `Guerrier` peut utiliser `attaquer()` alors qu'on ne l'a **PAS** réécrit !
+**Regarde !** Le `Guerrier` peut utiliser `attaquer()` alors qu`on ne l`a **PAS** réécrit !
 
-**Il l'a hérité de son parent `Personnage` !** 🎉
+**Il l`a hérité de son parent `Personnage` !** 🎉
 
 ---
 
@@ -160,7 +160,7 @@ Thorin attaque ! ⚔️ (30 dégâts)
 class Guerrier extends Personnage {
 ```
 
-**`class Guerrier`** → Je crée une nouvelle classe qui s'appelle `Guerrier`
+**`class Guerrier`** → Je crée une nouvelle classe qui s`appelle `Guerrier`
 
 **`extends`** → **LE MOT MAGIQUE !** Ça veut dire **"hérite de"**
 
@@ -190,7 +190,7 @@ Ce sont des stats **EN PLUS** de celles héritées.
 
 ---
 
-### Le constructeur de l'enfant :
+### Le constructeur de l`enfant :
 
 ```php
     public function __construct($n, $pv, $f, $arme, $rage, $armure) {
@@ -211,7 +211,7 @@ Ensuite, on remplit nos **propres** stats (rage, armure).
 
 ---
 
-## 🧠 Schéma de l'héritage
+## 🧠 Schéma de l`héritage
 
 ```
         Personnage (classe PARENT)
@@ -228,7 +228,7 @@ Ensuite, on remplit nos **propres** stats (rage, armure).
 
 ---
 
-## 💪 Ce que l'enfant peut faire
+## 💪 Ce que l`enfant peut faire
 
 ### 1️⃣ Utiliser les méthodes du parent
 
@@ -239,9 +239,9 @@ $guerrier = new Guerrier("Thorin", 150, 30, "Hache", 20, 50);
 $guerrier->attaquer(); // ✅ Marche parfaitement
 ```
 
-**Même si on n'a PAS écrit `attaquer()` dans `Guerrier`, ça marche !**
+**Même si on n`a PAS écrit `attaquer()` dans `Guerrier`, ça marche !**
 
-Parce qu'il l'a **hérité** ! ✨
+Parce qu`il l`a **hérité** ! ✨
 
 ---
 
@@ -267,7 +267,7 @@ $guerrier->coupPuissant(); // 💥 Coup puissant !
 
 ### 3️⃣ Modifier (surcharger) une méthode du parent
 
-Tu peux **RÉÉCRIRE** une méthode du parent pour l'adapter.
+Tu peux **RÉÉCRIRE** une méthode du parent pour l`adapter.
 
 ```php
 <?php
@@ -323,7 +323,7 @@ Débutant attaque ! ⚔️
 
 **Même nom de méthode, mais comportement différent !**
 
-C'est ce qu'on appelle la **surcharge** (ou **override** en anglais).
+C`est ce qu`on appelle la **surcharge** (ou **override** en anglais).
 
 ---
 
@@ -443,13 +443,13 @@ Legolas attaque ! ⚔️
 
 **Trois classes différentes héritent de `Personnage` !**
 
-C'est comme un vrai système de classes RPG ! 🎮
+C`est comme un vrai système de classes RPG ! 🎮
 
 ---
 
-## ⚠️ Ce qu'il faut retenir sur `parent::`
+## ⚠️ Ce qu`il faut retenir sur `parent::`
 
-**`parent::`** permet d'appeler une méthode du parent.
+**`parent::`** permet d`appeler une méthode du parent.
 
 ### Utilisation la plus fréquente : dans le constructeur
 
@@ -461,7 +461,7 @@ public function __construct($n, $pv, $f, $rage, $armure) {
 }
 ```
 
-**Pourquoi c'est important ?**
+**Pourquoi c`est important ?**
 
 Le parent a déjà du code pour initialiser `nom`, `pv`, `force`.  
 **Plutôt que de TOUT réécrire**, tu appelles le parent et tu complètes !
@@ -564,7 +564,7 @@ $excalibur->utiliserPouvoir();
 
 ## 🧠 Ce que tu DOIS retenir de ce cours
 
-✅ **`extends`** → Mot magique pour hériter d'une classe
+✅ **`extends`** → Mot magique pour hériter d`une classe
 
 ✅ **La classe enfant a TOUT ce que le parent a + ses propres trucs**
 
@@ -574,7 +574,7 @@ $excalibur->utiliserPouvoir();
 
 ✅ **Tu peux réécrire (surcharger) une méthode du parent**
 
-✅ **L'héritage évite de dupliquer du code**
+✅ **L`héritage évite de dupliquer du code**
 
 ---
 
@@ -608,26 +608,26 @@ Guerrier (extends Personnage)
 
 Tu vas apprendre **PUBLIC, PRIVATE, PROTECTED** !
 
-**C'est quoi ?**
+**C`est quoi ?**
 
 Comment **PROTÉGER** les stats de tes personnages !
 
-Parfois, tu ne veux PAS que n'importe qui puisse modifier directement une stat.
+Parfois, tu ne veux PAS que n`importe qui puisse modifier directement une stat.
 
 Par exemple :
 - Un personnage ne peut PAS avoir des PV négatifs !
-- On doit **contrôler** ce qu'on met dedans !
+- On doit **contrôler** ce qu`on met dedans !
 
-Tu vas apprendre les **GETTERS** et **SETTERS** pour contrôler l'accès aux stats ! 🔒
+Tu vas apprendre les **GETTERS** et **SETTERS** pour contrôler l`accès aux stats ! 🔒
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE** !
+Mais pour l`instant, **FAIS L`EXERCICE** !
 
-L'héritage est un concept **fondamental** en POO. Tu vas l'utiliser **tout le temps** !
+L`héritage est un concept **fondamental** en POO. Tu vas l`utiliser **tout le temps** !
 
 ---
 
 **🎮 Bravo, tu maîtrises de mieux en mieux la POO !**
 
-*PS : L'héritage, c'est comme un arbre de compétences : tu débloques des compétences de base, puis des compétences avancées ! 🌳*
+*PS : L`héritage, c`est comme un arbre de compétences : tu débloques des compétences de base, puis des compétences avancées ! 🌳*

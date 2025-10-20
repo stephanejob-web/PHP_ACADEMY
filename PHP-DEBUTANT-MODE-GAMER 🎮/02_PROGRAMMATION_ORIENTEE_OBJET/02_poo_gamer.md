@@ -6,7 +6,7 @@ Dans le cours 01, tu as compris que :
 - **CLASSE** = le template de création de personnage
 - **OBJET** = le personnage spawné dans le jeu
 
-C'était de la théorie. **Maintenant, on passe à la pratique !**
+C`était de la théorie. **Maintenant, on passe à la pratique !**
 
 On va **VRAIMENT** créer ton premier personnage en PHP, avec du vrai code que tu vas taper toi-même ! 💻
 
@@ -21,9 +21,9 @@ Quand tu crées un template de personnage, tu notes quelles infos ?
 - **Le nom** du personnage (Thorin, Gandalf, Legolas...)
 - **Les points de vie** (100 PV, 150 PV...)
 - **La force** (20, 30, 15...)
-- **L'arme** équipée (Épée, Arc, Bâton...)
+- **L`arme** équipée (Épée, Arc, Bâton...)
 
-**En PHP, c'est exactement pareil !**
+**En PHP, c`est exactement pareil !**
 
 Voici comment on crée un template de personnage :
 
@@ -46,19 +46,19 @@ class Personnage {
 
 ### Ligne 1 : `<?php`
 
-Ça, tu connais déjà. C'est le début du code PHP.
+Ça, tu connais déjà. C`est le début du code PHP.
 
 ---
 
 ### Ligne 2 : `class Personnage {`
 
-**`class`** → C'est le mot magique pour dire "je crée un template"
+**`class`** → C`est le mot magique pour dire "je crée un template"
 
-**`Personnage`** → C'est le nom de ton template  
-*Tu peux l'appeler comme tu veux : `Personnage`, `Character`, `Hero`...  
+**`Personnage`** → C`est le nom de ton template  
+*Tu peux l`appeler comme tu veux : `Personnage`, `Character`, `Hero`...  
 Mais utilise un nom qui a du sens ! Pas `Truc` ou `Machin`* 😄
 
-**`{`** → C'est l'accolade ouvrante. Elle marque le **début** du template.
+**`{`** → C`est l`accolade ouvrante. Elle marque le **début** du template.
 
 **Important :** En PHP, les noms de classes commencent par une **MAJUSCULE** : `Personnage`, pas `personnage`.
 
@@ -74,7 +74,7 @@ Mais utilise un nom qui a du sens ! Pas `Truc` ou `Machin`* 😄
 ```
 
 **`public`** → Ça veut dire "visible par tout le monde"  
-C'est comme un personnage visible dans le jeu : tout le monde peut le voir et interagir avec lui.
+C`est comme un personnage visible dans le jeu : tout le monde peut le voir et interagir avec lui.
 
 **`$nom`** → Une stat que chaque personnage doit avoir : son nom
 
@@ -86,13 +86,13 @@ C'est comme un personnage visible dans le jeu : tout le monde peut le voir et in
 
 **Le point-virgule `;`** → OBLIGATOIRE à la fin de chaque ligne ! Sinon PHP va râler. 😤
 
-**Ces infos s'appellent des PROPRIÉTÉS** (ou stats dans le langage gaming).
+**Ces infos s`appellent des PROPRIÉTÉS** (ou stats dans le langage gaming).
 
 ---
 
 ### Ligne 7 : `}`
 
-**`}`** → L'accolade fermante. Elle marque la **fin** du template.
+**`}`** → L`accolade fermante. Elle marque la **fin** du template.
 
 **SUPER IMPORTANT :** Chaque `{` doit avoir son `}` !
 
@@ -100,23 +100,23 @@ C'est comme un personnage visible dans le jeu : tout le monde peut le voir et in
 
 ### Ligne 8 : `?>`
 
-La fin du code PHP. (Tu peux même l'oublier en fin de fichier, PHP s'en fiche.)
+La fin du code PHP. (Tu peux même l`oublier en fin de fichier, PHP s`en fiche.)
 
 ---
 
 **ATTENTION !** ⚠️
 
-À ce stade, **tu n'as spawné AUCUN personnage !**
+À ce stade, **tu n`as spawné AUCUN personnage !**
 
 Tu as juste **créé le template de personnage**.
 
-C'est comme si tu avais l'écran de création de perso, mais que tu n'as encore cliqué sur aucun bouton.
+C`est comme si tu avais l`écran de création de perso, mais que tu n`as encore cliqué sur aucun bouton.
 
 ---
 
 ## 🎮 Étape 2 : Spawner un vrai personnage (créer un objet)
 
-Maintenant qu'on a le template, **spawnons un vrai personnage !**
+Maintenant qu`on a le template, **spawnons un vrai personnage !**
 
 ```php
 <?php
@@ -147,10 +147,10 @@ Décortiquons cette ligne **super importante** :
 
 ---
 
-**`$guerrier`** → C'est le **nom** de ton personnage  
+**`$guerrier`** → C`est le **nom** de ton personnage  
 *Comme quand tu dis "mon guerrier" ou "mon mage"*
 
-Tu peux l'appeler comme tu veux :
+Tu peux l`appeler comme tu veux :
 - `$mage`
 - `$archer`
 - `$boss_final`
@@ -163,16 +163,16 @@ Tu peux l'appeler comme tu veux :
 
 **`new`** → **LE MOT LE PLUS IMPORTANT !**
 
-C'est le mot magique qui dit à PHP :  
+C`est le mot magique qui dit à PHP :  
 *"Spawn-moi ce personnage MAINTENANT !"*
 
-C'est comme si tu cliquais sur **"Créer le personnage"** dans un jeu.
+C`est comme si tu cliquais sur **"Créer le personnage"** dans un jeu.
 
 ---
 
-**`Personnage()`** → Tu spawn d'après le template qui s'appelle `Personnage`
+**`Personnage()`** → Tu spawn d`après le template qui s`appelle `Personnage`
 
-Les **parenthèses `()`** sont **obligatoires**. Pour l'instant, on met rien dedans.  
+Les **parenthèses `()`** sont **obligatoires**. Pour l`instant, on met rien dedans.  
 *(On verra pourquoi plus tard dans le cours sur le constructeur)*
 
 ---
@@ -187,13 +187,13 @@ Les **parenthèses `()`** sont **obligatoires**. Pour l'instant, on met rien ded
 
 ---
 
-## 🤔 Mais... mon personnage n'a pas de stats !
+## 🤔 Mais... mon personnage n`a pas de stats !
 
-Oui, t'as raison ! 👍
+Oui, t`as raison ! 👍
 
-Ton personnage **existe**, mais il n'a **pas encore de stats**.
+Ton personnage **existe**, mais il n`a **pas encore de stats**.
 
-C'est comme si tu avais spawné un personnage, mais que tu ne lui as pas encore donné son nom, ses PV, etc.
+C`est comme si tu avais spawné un personnage, mais que tu ne lui as pas encore donné son nom, ses PV, etc.
 
 **Il faut maintenant lui donner ses stats !**
 
@@ -201,7 +201,7 @@ C'est comme si tu avais spawné un personnage, mais que tu ne lui as pas encore 
 
 ## 📊 Étape 3 : Donner les stats au personnage
 
-Maintenant qu'on a spawné le personnage, on va lui dire :
+Maintenant qu`on a spawné le personnage, on va lui dire :
 - Quel **nom** il a
 - Combien de **PV** il a
 - Combien de **force** il a
@@ -237,25 +237,25 @@ $guerrier->arme = "Épée légendaire";
 $guerrier->nom = "Thorin";
 ```
 
-**La flèche `->` c'est ton CURSEUR de sélection !** 🖱️
+**La flèche `->` c`est ton CURSEUR de sélection !** 🖱️
 
-Elle sert à **accéder aux stats** d'un personnage.
+Elle sert à **accéder aux stats** d`un personnage.
 
 ---
 
 ### Traduction en français :
 
 **`$guerrier->nom = "Thorin";`**  
-→ *"Le guerrier, son nom, c'est Thorin."*
+→ *"Le guerrier, son nom, c`est Thorin."*
 
 **`$guerrier->pv = 120;`**  
-→ *"Le guerrier, ses points de vie, c'est 120."*
+→ *"Le guerrier, ses points de vie, c`est 120."*
 
 **`$guerrier->force = 30;`**  
-→ *"Le guerrier, sa force, c'est 30."*
+→ *"Le guerrier, sa force, c`est 30."*
 
 **`$guerrier->arme = "Épée légendaire";`**  
-→ *"Le guerrier, son arme équipée, c'est l'Épée légendaire."*
+→ *"Le guerrier, son arme équipée, c`est l`Épée légendaire."*
 
 ---
 
@@ -273,17 +273,17 @@ Tu peux la lire comme **"de"** ou **"du"**.
 
 **Ne confonds pas le point `.` et la flèche `->` !**
 
-❌ **FAUX :** `$guerrier.nom = "Thorin";` (ça marche dans d'autres langages, mais PAS en PHP !)
+❌ **FAUX :** `$guerrier.nom = "Thorin";` (ça marche dans d`autres langages, mais PAS en PHP !)
 
 ✅ **JUSTE :** `$guerrier->nom = "Thorin";`
 
-En PHP, c'est **TOUJOURS** la flèche `->` pour accéder aux propriétés d'un objet.
+En PHP, c`est **TOUJOURS** la flèche `->` pour accéder aux propriétés d`un objet.
 
 ---
 
 ## 🎉 Étape 4 : Afficher les stats du personnage
 
-Maintenant qu'on a spawné le personnage et qu'on lui a donné ses stats...
+Maintenant qu`on a spawné le personnage et qu`on lui a donné ses stats...
 
 **On veut voir le résultat !**
 
@@ -333,7 +333,7 @@ Tu viens de créer, spawner et afficher ton **premier personnage en POO** !
 
 ## 🔥 La VRAIE puissance : créer plusieurs personnages avec le même template !
 
-Maintenant, tu vas comprendre **POURQUOI** la POO c'est génial.
+Maintenant, tu vas comprendre **POURQUOI** la POO c`est génial.
 
 **UN SEUL TEMPLATE, AUTANT DE PERSONNAGES QUE TU VEUX !**
 
@@ -393,7 +393,7 @@ Legolas (PV: 100, Force: 20)
 - Chaque personnage a **ses propres stats**
 - Mais ils utilisent tous **le même modèle** !
 
-C'est comme dans un MMORPG : **un template de classe, des milliers de personnages** !
+C`est comme dans un MMORPG : **un template de classe, des milliers de personnages** !
 
 ---
 
@@ -438,13 +438,13 @@ Si ça marche, **BRAVO, TU ES UN CHAMPION !** 🏆
 
 ✅ **`class Personnage { }`** → Je crée le template
 
-✅ **`$perso = new Personnage();`** → Je spawn un personnage réel d'après le template
+✅ **`$perso = new Personnage();`** → Je spawn un personnage réel d`après le template
 
 ✅ **`$perso->nom = "Thorin";`** → Je donne une valeur à une propriété
 
-✅ **`$perso->nom`** → Je lis la valeur d'une propriété
+✅ **`$perso->nom`** → Je lis la valeur d`une propriété
 
-✅ **La flèche `->` permet d'accéder aux propriétés d'un objet**
+✅ **La flèche `->` permet d`accéder aux propriétés d`un objet**
 
 ✅ **Un template, autant de personnages que tu veux !**
 
@@ -454,7 +454,7 @@ Si ça marche, **BRAVO, TU ES UN CHAMPION !** 🏆
 
 Tu vas apprendre à créer des **MÉTHODES**.
 
-**C'est quoi une méthode ?**  
+**C`est quoi une méthode ?**  
 Les **ACTIONS** que peut faire ton personnage !
 
 Par exemple :
@@ -466,9 +466,9 @@ Ton personnage va devenir **INTELLIGENT** ! 🧠
 
 ---
 
-Mais pour l'instant, **FAIS L'EXERCICE !**
+Mais pour l`instant, **FAIS L`EXERCICE !**
 
-Sérieux, prends 10 minutes et fais-le. C'est en **PRATIQUANT** qu'on apprend, pas en lisant.
+Sérieux, prends 10 minutes et fais-le. C`est en **PRATIQUANT** qu`on apprend, pas en lisant.
 
 Si tu sautes cet exercice, tu vas galérer au prochain cours. Je te préviens ! 😊
 
@@ -476,4 +476,4 @@ Si tu sautes cet exercice, tu vas galérer au prochain cours. Je te préviens ! 
 
 **🎮 Allez, au clavier ! Tu es sur la bonne voie !**
 
-*PS : Si tu as réussi l'exercice du premier coup, tu peux te féliciter. Tu es en train de devenir un vrai développeur ! 🎉*
+*PS : Si tu as réussi l`exercice du premier coup, tu peux te féliciter. Tu es en train de devenir un vrai développeur ! 🎉*
