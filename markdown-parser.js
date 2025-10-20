@@ -37,6 +37,14 @@ class MarkdownParser {
 
         let html = markdown;
 
+        // Extraire et transformer les exercices avec solutions (balises <details>)
+        const exercises = [];
+        html = html.replace(/<details>\s*<summary>(.*?)<\/summary>([\s\S]*?)<\/details>/gi, (match, summaryText, content) => {
+            const placeholder = `__EXERCISE_${exercises.length}__`;
+            exercises.push({ summaryText, content });
+            return placeholder;
+        });
+
         // Extraire et sauvegarder les blocs de code
         const codeBlocks = [];
         html = html.replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
@@ -78,7 +86,77 @@ class MarkdownParser {
             html = html.replace(new RegExp(placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), codeHtml);
         });
 
+        // Restaurer les exercices avec le nouveau design
+        exercises.forEach((exercise, index) => {
+            const exerciseHtml = this.createExerciseHtml(exercise);
+            const placeholder = `__EXERCISE_${index}__`;
+            html = html.replace(new RegExp(placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), exerciseHtml);
+        });
+
         return html;
+    }
+
+    createExerciseHtml(exercise) {
+        // Parser le contenu de la solution (qui peut contenir du markdown)
+        const contentHtml = this.parseExerciseContent(exercise.content);
+
+        return `
+<div class="exercise-container" data-exercise-id="${Math.random().toString(36).substr(2, 9)}">
+    <div class="exercise-challenge">
+        <div class="challenge-badge">💪 DÉFI</div>
+        <h4>Essaye par toi-même !</h4>
+        <p>Prends quelques minutes pour résoudre cet exercice avant de regarder la solution.</p>
+
+        <div class="action-buttons">
+            <button class="btn-try" onclick="scrollToExercise(this)">
+                <span class="icon">✍️</span>
+                <span class="text">Je tente !</span>
+            </button>
+
+            <button class="btn-solution-big" onclick="showSolution(this)">
+                <span class="icon">💡</span>
+                <span class="text">Voir la Solution</span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="solution-panel" style="display: none;">
+        <div class="solution-header">
+            <span class="solution-badge">✅ Solution</span>
+            <button class="close-solution" onclick="hideSolution(this)" title="Masquer la solution">✕</button>
+        </div>
+        <div class="solution-content">
+            ${contentHtml}
+        </div>
+    </div>
+</div>`;
+    }
+
+    parseExerciseContent(content) {
+        // Parser le contenu qui peut contenir des blocs de code
+        let parsed = content.trim();
+
+        // Extraire les blocs de code
+        const codeBlocks = [];
+        parsed = parsed.replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
+            const placeholder = `__SOLUTION_CODE_${codeBlocks.length}__`;
+            codeBlocks.push({ lang: lang || 'php', code: code.trim() });
+            return placeholder;
+        });
+
+        // Parser le texte restant
+        parsed = this.parseInlineMarkdown(parsed);
+        parsed = parsed.replace(/\n/g, '<br>');
+
+        // Restaurer les blocs de code
+        codeBlocks.forEach((block, index) => {
+            const highlighted = this.highlightCode(block.code, block.lang);
+            const codeHtml = `<div class="code-block"><div class="code-header"><span class="code-lang">${block.lang}</span><button class="copy-btn" onclick="copyCode(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copier</button></div><pre><code class="language-${block.lang}">${highlighted}</code></pre></div>`;
+            parsed = parsed.replace(`__SOLUTION_CODE_${index}__`, codeHtml);
+        });
+
+        return parsed;
     }
 
     highlightCode(code, lang) {
@@ -268,6 +346,62 @@ function copyCode(button) {
             button.classList.remove('copied');
         }, 2000);
     });
+}
+
+// Fonction pour afficher la solution d'un exercice
+function showSolution(button) {
+    const container = button.closest('.exercise-container');
+    const panel = container.querySelector('.solution-panel');
+    const challengeDiv = container.querySelector('.exercise-challenge');
+
+    // Afficher le panneau solution
+    panel.style.display = 'block';
+
+    // Optionnel : masquer le challenge pour gagner de la place
+    // challengeDiv.style.display = 'none';
+
+    // Scroll smooth vers la solution
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    // Animation d'apparition
+    panel.style.animation = 'slideDown 0.3s ease';
+}
+
+// Fonction pour masquer la solution
+function hideSolution(button) {
+    const container = button.closest('.exercise-container');
+    const panel = container.querySelector('.solution-panel');
+    const challengeDiv = container.querySelector('.exercise-challenge');
+
+    // Masquer le panneau
+    panel.style.display = 'none';
+
+    // Réafficher le challenge si masqué
+    challengeDiv.style.display = 'block';
+
+    // Scroll vers le début de l'exercice
+    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Fonction pour scroller vers l'exercice (bouton "Je tente")
+function scrollToExercise(button) {
+    const container = button.closest('.exercise-container');
+
+    // Trouver le prochain élément après l'exercice (généralement le code ou énoncé)
+    const nextElement = container.nextElementSibling;
+
+    if (nextElement) {
+        nextElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        // Si pas d'élément suivant, on scroll juste après le container
+        container.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
+
+    // Feedback visuel
+    button.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+        button.style.transform = '';
+    }, 100);
 }
 
 // Export
