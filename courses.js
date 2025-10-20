@@ -17,8 +17,22 @@ const coursesData = {
                 ]
             },
             {
+                id: 'html',
+                title: 'HTML',
+                icon: '🌐',
+                comingSoon: true,
+                lessons: []
+            },
+            {
+                id: 'css',
+                title: 'CSS',
+                icon: '🎨',
+                comingSoon: true,
+                lessons: []
+            },
+            {
                 id: 'bases',
-                title: 'Les Bases',
+                title: 'Les Bases PHP',
                 icon: '🧱',
                 lessons: [
                     { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES BASES/001_introduction-programmation.md', duration: '15 min' },
@@ -95,8 +109,22 @@ const coursesData = {
                 ]
             },
             {
+                id: 'html',
+                title: 'HTML',
+                icon: '🌐',
+                comingSoon: true,
+                lessons: []
+            },
+            {
+                id: 'css',
+                title: 'CSS',
+                icon: '🎨',
+                comingSoon: true,
+                lessons: []
+            },
+            {
                 id: 'bases',
-                title: 'Les Bases',
+                title: 'Les Bases PHP',
                 icon: '🥘',
                 lessons: [
                     { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES BASES/001_introduction-programmation.md', duration: '15 min' },
@@ -157,8 +185,22 @@ const coursesData = {
                 ]
             },
             {
+                id: 'html',
+                title: 'HTML',
+                icon: '🌐',
+                comingSoon: true,
+                lessons: []
+            },
+            {
+                id: 'css',
+                title: 'CSS',
+                icon: '🎨',
+                comingSoon: true,
+                lessons: []
+            },
+            {
                 id: 'bases',
-                title: 'Les Bases',
+                title: 'Les Bases PHP',
                 icon: '🎯',
                 lessons: [
                     { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES_BASES/001_introduction_programmation.md', duration: '15 min' },

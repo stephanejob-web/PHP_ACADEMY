@@ -186,16 +186,22 @@ class PHPHeroApp {
 
         theme.modules.forEach((module, moduleIndex) => {
             const moduleEl = document.createElement('div');
-            moduleEl.className = `module module-${module.id}`;
+            const isComingSoon = module.comingSoon === true;
+            moduleEl.className = `module module-${module.id}${isComingSoon ? ' coming-soon' : ''}`;
+
+            const onclickAttr = isComingSoon ? '' : `onclick="app.toggleModule(${moduleIndex})"`;
+            const comingSoonBadge = isComingSoon ? '<span class="coming-soon-badge">Bientôt</span>' : '';
+
             moduleEl.innerHTML = `
-                <div class="module-header" onclick="app.toggleModule(${moduleIndex})">
+                <div class="module-header" ${onclickAttr}>
                     <div class="module-title">
                         <span class="module-icon">${module.icon}</span>
                         <span>${module.title}</span>
                     </div>
-                    <svg class="module-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    ${comingSoonBadge}
+                    ${!isComingSoon ? `<svg class="module-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
+                    </svg>` : ''}
                 </div>
                 <div class="module-lessons">
                     ${module.lessons.map(lesson => this.generateLessonItem(module, lesson)).join('')}
