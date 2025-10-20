@@ -120,7 +120,7 @@ Crée un fichier appelé **`cout-recettes.php`** et tape ce code dedans :
     <hr>
 
     <?php
-    // 👉 C'est ici qu'on va mettre notre code PHP !
+    // 👉 C`est ici qu`on va mettre notre code PHP !
     ?>
 
 </body>
@@ -152,7 +152,7 @@ C`est comme ton garde-manger : chaque ingrédient a un nom, un prix, un stock…
 ```php
 <?php
 
-// 🍳 Notre stock d'ingrédients du garde-manger
+// 🍳 Notre stock d`ingrédients du garde-manger
 $ingredients = [
     [
         "nom" => "Farine (1kg)",
@@ -218,7 +218,7 @@ Plutôt que de réécrire 5 fois la même formule, on crée une fonction réutil
 **Ajoute ce code juste après ton tableau `$ingredients` :**
 
 ```php
-// 💰 Fonction pour calculer le prix d'un ingrédient
+// 💰 Fonction pour calculer le prix d`un ingrédient
 function calculerPrix($prix_unitaire, $quantite) {
     return $prix_unitaire * $quantite;
 }
@@ -234,7 +234,7 @@ function appliquerReduction($prix_total, $quantite) {
 
 // 💶 Fonction pour formater un prix (afficher avec le symbole euro)
 function formaterPrix($montant) {
-    return number_format($montant, 2, ',', ' ') . " €";
+    return number_format($montant, 2, `,`, ` `) . " €";
 }
 ```
 
@@ -288,17 +288,17 @@ foreach ($ingredients as $ingredient) {
     // 👉 Attention : maintenant on va "cracher" du HTML avec PHP
     // On utilise "echo" pour dire à PHP : "affiche ça sur la page"
 
-    echo '<h3>🥘 ' . $ingredient["nom"] . '</h3>';
-    echo '<p><strong>Prix unitaire :</strong> ' . formaterPrix($ingredient["prix_unitaire"]) . '</p>';
-    echo '<p><strong>Quantité utilisée :</strong> ' . $ingredient["quantite_utilisee"] . '</p>';
-    echo '<p><strong>Stock disponible :</strong> ' . $ingredient["stock"] . '</p>';
+    echo `<h3>🥘 ` . $ingredient["nom"] . `</h3>`;
+    echo `<p><strong>Prix unitaire :</strong> ` . formaterPrix($ingredient["prix_unitaire"]) . `</p>`;
+    echo `<p><strong>Quantité utilisée :</strong> ` . $ingredient["quantite_utilisee"] . `</p>`;
+    echo `<p><strong>Stock disponible :</strong> ` . $ingredient["stock"] . `</p>`;
 
 
     // ========== CONDITION : Alerte stock faible ==========
 
     // Si le stock est en dessous de 5, on affiche un message rouge
     if ($ingredient["stock"] < 5) {
-        echo '<p style="color: red;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>';
+        echo `<p style="color: red;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>`;
     }
 
 
@@ -306,15 +306,15 @@ foreach ($ingredients as $ingredient) {
 
     // Si il y a une réduction, on affiche en vert
     if ($reduction > 0) {
-        echo '<p style="color: green;"><strong>🎁 Réduction de -10% : -' . formaterPrix($reduction) . '</strong></p>';
+        echo `<p style="color: green;"><strong>🎁 Réduction de -10% : -` . formaterPrix($reduction) . `</strong></p>`;
     }
 
 
     // Prix final de cet ingrédient
-    echo '<p><strong>Prix total :</strong> ' . formaterPrix($prix_final) . '</p>';
+    echo `<p><strong>Prix total :</strong> ` . formaterPrix($prix_final) . `</p>`;
 
     // Petite ligne de séparation pour que ce soit plus clair
-    echo '<hr>';
+    echo `<hr>`;
 }
 ```
 
@@ -368,7 +368,7 @@ Si tu bloques ici, **c`est que t`as pas bien compris les cours précédents**. P
 **Maintenant attention, c`est là que ça devient bizarre.**
 
 ```php
-echo '<h3>🥘 ' . $ingredient["nom"] . '</h3>';
+echo `<h3>🥘 ` . $ingredient["nom"] . `</h3>`;
 ```
 
 💬 **Ça veut dire quoi ?**
@@ -377,12 +377,12 @@ echo '<h3>🥘 ' . $ingredient["nom"] . '</h3>';
 
 **Le truc à comprendre :**
 - `echo` = affiche quelque chose sur la page
-- `'<h3>…</h3>'` = du code HTML **écrit comme du texte**
+- ``<h3>…</h3>`` = du code HTML **écrit comme du texte**
 - Le point `.` sert à **coller des morceaux ensemble**
 
 **Donc ce code PHP :**
 ```php
-echo '<h3>🥘 ' . $ingredient["nom"] . '</h3>';
+echo `<h3>🥘 ` . $ingredient["nom"] . `</h3>`;
 ```
 
 **Va produire ce HTML :**
@@ -402,7 +402,7 @@ Le navigateur affiche le HTML.
 
 ```php
 if ($ingredient["stock"] < 5) {
-    echo '<p style="color: red;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>';
+    echo `<p style="color: red;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>`;
 }
 ```
 
@@ -428,8 +428,8 @@ Maintenant qu`on a calculé tous les prix, on affiche le **total général** !
 
 ```php
 // 💰 Affichage du total final
-echo '<hr>';
-echo '<h2 style="color: orange;">💰 COÛT TOTAL DE LA RECETTE : ' . formaterPrix($total_general) . '</h2>';
+echo `<hr>`;
+echo `<h2 style="color: orange;">💰 COÛT TOTAL DE LA RECETTE : ` . formaterPrix($total_general) . `</h2>`;
 
 ?>
 ```
@@ -515,7 +515,7 @@ Si jamais tu veux vérifier ton code, voici **le fichier complet** :
 
     <?php
 
-    // 🍳 Notre stock d'ingrédients du garde-manger
+    // 🍳 Notre stock d`ingrédients du garde-manger
     $ingredients = [
         [
             "nom" => "Farine (1kg)",
@@ -549,7 +549,7 @@ Si jamais tu veux vérifier ton code, voici **le fichier complet** :
         ]
     ];
 
-    // 💰 Fonction pour calculer le prix d'un ingrédient
+    // 💰 Fonction pour calculer le prix d`un ingrédient
     function calculerPrix($prix_unitaire, $quantite) {
         return $prix_unitaire * $quantite;
     }
@@ -564,7 +564,7 @@ Si jamais tu veux vérifier ton code, voici **le fichier complet** :
 
     // 💶 Fonction pour formater un prix
     function formaterPrix($montant) {
-        return number_format($montant, 2, ',', ' ') . " €";
+        return number_format($montant, 2, `,`, ` `) . " €";
     }
 
     // 🍳 Variable pour stocker le total général
@@ -580,25 +580,25 @@ Si jamais tu veux vérifier ton code, voici **le fichier complet** :
         $total_general += $prix_final;
 
         // Affichage
-        echo '<h3>🥘 ' . $ingredient["nom"] . '</h3>';
-        echo '<p><strong>Prix unitaire :</strong> ' . formaterPrix($ingredient["prix_unitaire"]) . '</p>';
-        echo '<p><strong>Quantité utilisée :</strong> ' . $ingredient["quantite_utilisee"] . '</p>';
-        echo '<p><strong>Stock disponible :</strong> ' . $ingredient["stock"] . '</p>';
+        echo `<h3>🥘 ` . $ingredient["nom"] . `</h3>`;
+        echo `<p><strong>Prix unitaire :</strong> ` . formaterPrix($ingredient["prix_unitaire"]) . `</p>`;
+        echo `<p><strong>Quantité utilisée :</strong> ` . $ingredient["quantite_utilisee"] . `</p>`;
+        echo `<p><strong>Stock disponible :</strong> ` . $ingredient["stock"] . `</p>`;
 
         if ($ingredient["stock"] < 5) {
-            echo '<p style="color: red;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>';
+            echo `<p style="color: red;"><strong>⚠️ ATTENTION : Stock faible !</strong></p>`;
         }
 
         if ($reduction > 0) {
-            echo '<p style="color: green;"><strong>🎁 Réduction de -10% : -' . formaterPrix($reduction) . '</strong></p>';
+            echo `<p style="color: green;"><strong>🎁 Réduction de -10% : -` . formaterPrix($reduction) . `</strong></p>`;
         }
 
-        echo '<p><strong>Prix total :</strong> ' . formaterPrix($prix_final) . '</p>';
-        echo '<hr>';
+        echo `<p><strong>Prix total :</strong> ` . formaterPrix($prix_final) . `</p>`;
+        echo `<hr>`;
     }
 
     // Total final
-    echo '<h2 style="color: orange;">💰 COÛT TOTAL DE LA RECETTE : ' . formaterPrix($total_general) . '</h2>';
+    echo `<h2 style="color: orange;">💰 COÛT TOTAL DE LA RECETTE : ` . formaterPrix($total_general) . `</h2>`;
 
     ?>
 

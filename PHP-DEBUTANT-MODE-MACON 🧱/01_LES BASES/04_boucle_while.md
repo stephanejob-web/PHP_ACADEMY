@@ -172,7 +172,7 @@ for ($i = 1; $i <= 10; $i++) {
 Tu utilises `while` quand tu ne sais **pas à l`avance** combien de tours tu vas faire.
 
 ```php
-// Je ne sais pas combien de seaux il faut, je remplis TANT QUE le camion n'est pas plein
+// Je ne sais pas combien de seaux il faut, je remplis TANT QUE le camion n`est pas plein
 $seaux_remplis = 0;
 $capacite_camion = 15;
 
@@ -210,9 +210,9 @@ $briques = 0;
 
 while ($briques < 5) {
     echo "Je pose une brique<br>";
-    // ERREUR : On n'augmente JAMAIS $briques !
+    // ERREUR : On n`augmente JAMAIS $briques !
 }
-// Cette boucle va tourner à l'infini ! 💥
+// Cette boucle va tourner à l`infini ! 💥
 ```
 
 💬 **Ce qui se passe :**
@@ -291,7 +291,7 @@ $budget = 100; // euros
 $prix_brique = 15;
 $briques_achetees = 0;
 
-echo "J'ai $budget euros pour acheter des briques :<br>";
+echo "J`ai $budget euros pour acheter des briques :<br>";
 
 while ($budget >= $prix_brique) {
     $budget -= $prix_brique;
@@ -304,7 +304,7 @@ echo "Je ne peux plus acheter de briques ! Il me reste $budget euros.";
 
 **Résultat :**
 ```
-J'ai 100 euros pour acheter des briques :
+J`ai 100 euros pour acheter des briques :
 Brique 1 achetée (reste 85 euros)
 Brique 2 achetée (reste 70 euros)
 Brique 3 achetée (reste 55 euros)
@@ -386,7 +386,7 @@ $briques = 0;
 $budget = 50;
 $prix_brique = 12;
 
-echo "Je pose des briques tant que j'ai du budget ET moins de 10 briques :<br>";
+echo "Je pose des briques tant que j`ai du budget ET moins de 10 briques :<br>";
 
 while ($briques < 10 && $budget >= $prix_brique) {
     $briques++;
@@ -395,20 +395,20 @@ while ($briques < 10 && $budget >= $prix_brique) {
 }
 
 if ($briques < 10) {
-    echo "Je m'arrête : plus de budget ! 💸";
+    echo "Je m`arrête : plus de budget ! 💸";
 } else {
-    echo "Je m'arrête : j'ai posé 10 briques ! 🧱";
+    echo "Je m`arrête : j`ai posé 10 briques ! 🧱";
 }
 ```
 
 **Résultat :**
 ```
-Je pose des briques tant que j'ai du budget ET moins de 10 briques :
+Je pose des briques tant que j`ai du budget ET moins de 10 briques :
 Brique 1 posée (reste 38 euros)
 Brique 2 posée (reste 26 euros)
 Brique 3 posée (reste 14 euros)
 Brique 4 posée (reste 2 euros)
-Je m'arrête : plus de budget ! 💸
+Je m`arrête : plus de budget ! 💸
 ```
 
 ---
@@ -833,7 +833,7 @@ Brique 3 achetée (reste 55 euros)
 Brique 4 achetée (reste 40 euros)
 Brique 5 achetée (reste 25 euros)
 Brique 6 achetée (reste 10 euros)
-J'ai acheté 6 briques. Il me reste 10 euros.
+J`ai acheté 6 briques. Il me reste 10 euros.
 ```
 
 <details>
@@ -852,7 +852,7 @@ while ($briques < $max_briques && $budget >= $prix) {
     echo "Brique $briques achetée (reste $budget euros)<br>";
 }
 
-echo "J'ai acheté $briques briques. Il me reste $budget euros.<br>";
+echo "J`ai acheté $briques briques. Il me reste $budget euros.<br>";
 ?>
 ```
 </details>

@@ -10,16 +10,16 @@ Imagine que tu dois **servir 10 assiettes** une par une 🍽️
 
 Tu pourrais écrire :
 ```php
-echo "Je sers l'assiette numéro 1<br>";
-echo "Je sers l'assiette numéro 2<br>";
-echo "Je sers l'assiette numéro 3<br>";
-echo "Je sers l'assiette numéro 4<br>";
-echo "Je sers l'assiette numéro 5<br>";
-echo "Je sers l'assiette numéro 6<br>";
-echo "Je sers l'assiette numéro 7<br>";
-echo "Je sers l'assiette numéro 8<br>";
-echo "Je sers l'assiette numéro 9<br>";
-echo "Je sers l'assiette numéro 10<br>";
+echo "Je sers l`assiette numéro 1<br>";
+echo "Je sers l`assiette numéro 2<br>";
+echo "Je sers l`assiette numéro 3<br>";
+echo "Je sers l`assiette numéro 4<br>";
+echo "Je sers l`assiette numéro 5<br>";
+echo "Je sers l`assiette numéro 6<br>";
+echo "Je sers l`assiette numéro 7<br>";
+echo "Je sers l`assiette numéro 8<br>";
+echo "Je sers l`assiette numéro 9<br>";
+echo "Je sers l`assiette numéro 10<br>";
 ```
 
 Mais là, soyons honnêtes…
@@ -43,22 +43,22 @@ Et lui, il obéit sans broncher 👨‍🍳
 
 ```php
 for ($i = 1; $i <= 10; $i++) {
-    echo "Je sers l'assiette numéro $i<br>";
+    echo "Je sers l`assiette numéro $i<br>";
 }
 ```
 
 **Résultat :**
 ```
-Je sers l'assiette numéro 1
-Je sers l'assiette numéro 2
-Je sers l'assiette numéro 3
-Je sers l'assiette numéro 4
-Je sers l'assiette numéro 5
-Je sers l'assiette numéro 6
-Je sers l'assiette numéro 7
-Je sers l'assiette numéro 8
-Je sers l'assiette numéro 9
-Je sers l'assiette numéro 10
+Je sers l`assiette numéro 1
+Je sers l`assiette numéro 2
+Je sers l`assiette numéro 3
+Je sers l`assiette numéro 4
+Je sers l`assiette numéro 5
+Je sers l`assiette numéro 6
+Je sers l`assiette numéro 7
+Je sers l`assiette numéro 8
+Je sers l`assiette numéro 9
+Je sers l`assiette numéro 10
 ```
 
 ---
@@ -76,7 +76,7 @@ C`est comme une **phrase magique en trois étapes** ✨
 
 ```php
 for (ÉTAPE 1 ; ÉTAPE 2 ; ÉTAPE 3) {
-    // Ce qu'on fait à chaque tour
+    // Ce qu`on fait à chaque tour
 }
 ```
 
@@ -84,7 +84,7 @@ Ou en vrai PHP :
 
 ```php
 for ($i = 1 ; $i <= 10 ; $i++) {
-    echo "Je sers l'assiette numéro $i<br>";
+    echo "Je sers l`assiette numéro $i<br>";
 }
 ```
 
@@ -201,7 +201,7 @@ Par exemple :
 
 ```php
 for ($assiette = 1; $assiette <= 10; $assiette++) {
-    echo "Je sers l'assiette numéro $assiette<br>";
+    echo "Je sers l`assiette numéro $assiette<br>";
 }
 ```
 
@@ -209,7 +209,7 @@ ou même :
 
 ```php
 for ($service = 1; $service <= 10; $service++) {
-    echo "Je sers l'assiette numéro $service<br>";
+    echo "Je sers l`assiette numéro $service<br>";
 }
 ```
 
@@ -318,7 +318,7 @@ Pas de panique, c`est juste la façon de PHP de dire :
 
 ## 🔙 SUPER IMPORTANT : Compter à l`envers (10, 9, 8, 7...)
 
-### 🚨 C`EST ICI QU'IL FAUT VRAIMENT ÊTRE ATTENTIF ! 🚨
+### 🚨 C`EST ICI QU`IL FAUT VRAIMENT ÊTRE ATTENTIF ! 🚨
 
 Pour compter **à l`envers**, il faut **changer LES TROIS PARTIES** de la boucle :
 
@@ -456,7 +456,7 @@ echo "Cuisson terminée dans :<br>";
 for ($i = 10; $i >= 1; $i--) {
     echo "$i secondes...<br>";
 }
-echo "⏰ C'EST PRÊT !";
+echo "⏰ C`EST PRÊT !";
 ```
 
 ---
@@ -490,7 +490,7 @@ $oeufs = 8;
 for ($i = $oeufs; $i >= 1; $i--) {
     echo "Il reste $i œufs<br>";
 }
-echo "Plus d'œufs !";
+echo "Plus d`œufs !";
 ```
 
 **Résultat :**
@@ -503,7 +503,7 @@ Il reste 4 œufs
 Il reste 3 œufs
 Il reste 2 œufs
 Il reste 1 œufs
-Plus d'œufs !
+Plus d`œufs !
 ```
 
 ---
@@ -639,11 +639,11 @@ pour X allant de **1 à 5**.
 
 **Exemple de résultat attendu :**
 ```
-Je sers l'assiette numéro 1
-Je sers l'assiette numéro 2
-Je sers l'assiette numéro 3
-Je sers l'assiette numéro 4
-Je sers l'assiette numéro 5
+Je sers l`assiette numéro 1
+Je sers l`assiette numéro 2
+Je sers l`assiette numéro 3
+Je sers l`assiette numéro 4
+Je sers l`assiette numéro 5
 ```
 
 <details>
@@ -652,7 +652,7 @@ Je sers l'assiette numéro 5
 ```php
 <?php
 for ($i = 1; $i <= 5; $i++) {
-    echo "Je sers l'assiette numéro $i<br>";
+    echo "Je sers l`assiette numéro $i<br>";
 }
 ?>
 ```
@@ -673,9 +673,9 @@ pour X allant de **1 à 3**.
 
 **Exemple de résultat attendu :**
 ```
-Je casse l'œuf numéro 1
-Je casse l'œuf numéro 2
-Je casse l'œuf numéro 3
+Je casse l`œuf numéro 1
+Je casse l`œuf numéro 2
+Je casse l`œuf numéro 3
 ```
 
 <details>
@@ -684,7 +684,7 @@ Je casse l'œuf numéro 3
 ```php
 <?php
 for ($i = 1; $i <= 3; $i++) {
-    echo "Je casse l'œuf numéro $i<br>";
+    echo "Je casse l`œuf numéro $i<br>";
 }
 ?>
 ```
@@ -738,12 +738,12 @@ pour X allant de **1 à 6**.
 
 **Exemple de résultat attendu :**
 ```
-Je dresse le dessert numéro 1 dans l'assiette.
-Je dresse le dessert numéro 2 dans l'assiette.
-Je dresse le dessert numéro 3 dans l'assiette.
-Je dresse le dessert numéro 4 dans l'assiette.
-Je dresse le dessert numéro 5 dans l'assiette.
-Je dresse le dessert numéro 6 dans l'assiette.
+Je dresse le dessert numéro 1 dans l`assiette.
+Je dresse le dessert numéro 2 dans l`assiette.
+Je dresse le dessert numéro 3 dans l`assiette.
+Je dresse le dessert numéro 4 dans l`assiette.
+Je dresse le dessert numéro 5 dans l`assiette.
+Je dresse le dessert numéro 6 dans l`assiette.
 ```
 
 <details>
@@ -752,7 +752,7 @@ Je dresse le dessert numéro 6 dans l'assiette.
 ```php
 <?php
 for ($i = 1; $i <= 6; $i++) {
-    echo "Je dresse le dessert numéro $i dans l'assiette.<br>";
+    echo "Je dresse le dessert numéro $i dans l`assiette.<br>";
 }
 ?>
 ```
@@ -819,7 +819,7 @@ Crée un décompte de minuteur qui affiche :
 3
 2
 1
-⏰ C'EST PRÊT !
+⏰ C`EST PRÊT !
 ```
 
 <details>
@@ -830,7 +830,7 @@ Crée un décompte de minuteur qui affiche :
 for ($i = 10; $i >= 1; $i--) {
     echo "$i<br>";
 }
-echo "⏰ C'EST PRÊT !<br>";
+echo "⏰ C`EST PRÊT !<br>";
 ?>
 ```
 </details>
@@ -1039,7 +1039,7 @@ Il reste 4 œufs
 Il reste 3 œufs
 Il reste 2 œufs
 Il reste 1 œufs
-Plus d'œufs !
+Plus d`œufs !
 ```
 
 <details>
@@ -1050,7 +1050,7 @@ Plus d'œufs !
 for ($oeufs = 8; $oeufs >= 1; $oeufs--) {
     echo "Il reste $oeufs œufs<br>";
 }
-echo "Plus d'œufs !<br>";
+echo "Plus d`œufs !<br>";
 ?>
 ```
 </details>
@@ -1187,12 +1187,12 @@ Fais une boucle de **1 à 5** qui :
 
 **Exemple de résultat attendu :**
 ```
-Je sers l'assiette numéro 1
-Je sers l'assiette numéro 2
-Je sers l'assiette numéro 3
-Je sers l'assiette numéro 4
-Je sers l'assiette numéro 5
-J'ai servi 5 assiettes au total.
+Je sers l`assiette numéro 1
+Je sers l`assiette numéro 2
+Je sers l`assiette numéro 3
+Je sers l`assiette numéro 4
+Je sers l`assiette numéro 5
+J`ai servi 5 assiettes au total.
 ```
 
 <details>
@@ -1202,10 +1202,10 @@ J'ai servi 5 assiettes au total.
 <?php
 $total_assiettes = 0;
 for ($i = 1; $i <= 5; $i++) {
-    echo "Je sers l'assiette numéro $i<br>";
+    echo "Je sers l`assiette numéro $i<br>";
     $total_assiettes++;
 }
-echo "J'ai servi $total_assiettes assiettes au total.<br>";
+echo "J`ai servi $total_assiettes assiettes au total.<br>";
 ?>
 ```
 </details>

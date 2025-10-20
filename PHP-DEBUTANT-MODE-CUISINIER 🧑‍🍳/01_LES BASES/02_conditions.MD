@@ -37,8 +37,8 @@ C`est **OUI ou NON**, point barre.
 | L`eau ne bout pas | `false` | Non, c`est faux ❌ |
 
 ```php
-$eau_bout = true;  // Oui, l'eau bout 💧
-$eau_bout = false; // Non, l'eau ne bout pas ⏳
+$eau_bout = true;  // Oui, l`eau bout 💧
+$eau_bout = false; // Non, l`eau ne bout pas ⏳
 ```
 
 🧠 Quand PHP voit une **valeur vraie (`true`)**, il exécute ton code.
@@ -54,7 +54,7 @@ Quand c`est **faux (`false`)**, il ne fait rien.
 $eau_bout = true;
 
 if ($eau_bout) {
-    echo "L'eau bout, je mets les pâtes.";
+    echo "L`eau bout, je mets les pâtes.";
 }
 ```
 
@@ -77,9 +77,9 @@ Et si `$eau_bout` est `false` ?
 $eau_bout = false;
 
 if ($eau_bout) {
-    echo "L'eau bout, je mets les pâtes.";
+    echo "L`eau bout, je mets les pâtes.";
 } else {
-    echo "L'eau ne bout pas, j'attends encore.";
+    echo "L`eau ne bout pas, j`attends encore.";
 }
 ```
 
@@ -106,9 +106,9 @@ $temperature = 120;
 if ($temperature > 200) {
     echo "Trop chaud, je baisse le four.";
 } elseif ($temperature < 150) {
-    echo "Tiède, j'attends encore.";
+    echo "Tiède, j`attends encore.";
 } else {
-    echo "Bonne température, j'enfourne !";
+    echo "Bonne température, j`enfourne !";
 }
 ```
 
@@ -173,7 +173,7 @@ $minuteur = true;
 if ($plat_cuit || $minuteur) {
     echo "Je vérifie la cuisson.";
 } else {
-    echo "Tout est sous contrôle, j'attends.";
+    echo "Tout est sous contrôle, j`attends.";
 }
 ```
 
@@ -235,7 +235,7 @@ Lui, il exécute **ce que tu lui dis**, mais seulement **si la condition est vra
 ```php
 $eau_bout = true;
 if ($eau_bout) {
-    echo "L'eau bout, je mets les pâtes.";
+    echo "L`eau bout, je mets les pâtes.";
 }
 ```
 </details>
@@ -254,9 +254,9 @@ if ($eau_bout) {
 ```php
 $eau_bout = false;
 if ($eau_bout) {
-    echo "L'eau bout, je mets les pâtes.";
+    echo "L`eau bout, je mets les pâtes.";
 } else {
-    echo "L'eau ne bout pas, j'attends encore.";
+    echo "L`eau ne bout pas, j`attends encore.";
 }
 ```
 </details>
@@ -277,9 +277,9 @@ $temperature = 120;
 if ($temperature > 200) {
     echo "Trop chaud, je baisse le four.";
 } elseif ($temperature < 150) {
-    echo "Tiède, j'attends encore.";
+    echo "Tiède, j`attends encore.";
 } else {
-    echo "Bonne température, j'enfourne !";
+    echo "Bonne température, j`enfourne !";
 }
 ```
 </details>
@@ -323,7 +323,7 @@ $minuteur = true;
 if ($plat_cuit || $minuteur) {
     echo "Je vérifie la cuisson.";
 } else {
-    echo "Tout est sous contrôle, j'attends.";
+    echo "Tout est sous contrôle, j`attends.";
 }
 ```
 </details>
@@ -343,7 +343,7 @@ $tablier_propre = true;
 if ($mains_lavees && $tablier_propre) {
     echo "Tu peux cuisiner en toute sécurité.";
 } else {
-    echo "Il te manque quelque chose pour l'hygiène.";
+    echo "Il te manque quelque chose pour l`hygiène.";
 }
 ```
 </details>
