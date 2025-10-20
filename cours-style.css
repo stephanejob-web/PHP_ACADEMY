@@ -539,6 +539,204 @@ var {
     transform: translateY(-1px);
 }
 
+/* Styles pour les exercices avec solutions */
+.exercise-container {
+    margin: 2.5rem 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.exercise-challenge {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 2.5rem;
+    border: 3px solid #0ea5e9;
+}
+
+[data-theme="dark"] .exercise-challenge {
+    background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+}
+
+.challenge-badge {
+    display: inline-block;
+    background: #0ea5e9;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(14, 165, 233, 0);
+    }
+}
+
+.exercise-challenge h4 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem 0;
+}
+
+.exercise-challenge p {
+    color: var(--text-secondary);
+    margin: 0 0 1.5rem 0;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.btn-try,
+.btn-solution-big {
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.btn-try {
+    background: white;
+    color: #0ea5e9;
+    border: 3px solid #0ea5e9;
+}
+
+[data-theme="dark"] .btn-try {
+    background: var(--bg-primary);
+    color: #0ea5e9;
+}
+
+.btn-try:hover {
+    background: #0ea5e9;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(14, 165, 233, 0.3);
+}
+
+.btn-solution-big {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-solution-big::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-solution-big:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-solution-big:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(16, 185, 129, 0.4);
+}
+
+.btn-solution-big .icon {
+    font-size: 1.4rem;
+    animation: pulse-icon 1.5s infinite;
+}
+
+@keyframes pulse-icon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.btn-solution-big .arrow {
+    transition: transform 0.3s ease;
+}
+
+.btn-solution-big:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Panneau de solution */
+.solution-panel {
+    background: var(--bg-primary);
+    border-top: 4px solid var(--success);
+}
+
+.solution-header {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.solution-badge {
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.close-solution {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-solution:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.solution-content {
+    padding: 2rem;
+}
+
+/* Animation d'apparition */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .welcome-content h1 {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
@@ -1611,6 +1809,57 @@ var {
     #lastLessonInfo > div > div {
         justify-content: center;
         text-align: center;
+    }
+
+    /* Exercices en mobile */
+    .exercise-challenge {
+        padding: 1.5rem;
+    }
+
+    .challenge-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .exercise-challenge h4 {
+        font-size: 1.2rem;
+    }
+
+    .exercise-challenge p {
+        font-size: 0.95rem;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .btn-try,
+    .btn-solution-big {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .btn-solution-big {
+        order: -1; /* Mettre "Voir la Solution" en premier sur mobile */
+    }
+
+    .solution-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .solution-badge {
+        font-size: 1rem;
+    }
+
+    .close-solution {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+
+    .solution-content {
+        padding: 1.5rem;
     }
 
     /* Cartes de thème */
