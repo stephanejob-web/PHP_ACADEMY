@@ -289,7 +289,7 @@ $mur_salon->hauteur = 2.5;
 $mur_salon->largeur = 4;
 $mur_salon->materiaux = "brique rouge";
 
-// J'affiche les infos
+// J`affiche les infos
 echo "Le mur du salon mesure " . $mur_salon->hauteur . " mètres de haut<br>";
 echo "Il fait " . $mur_salon->largeur . " mètres de large<br>";
 echo "Il est en " . $mur_salon->materiaux . "<br>";
@@ -344,7 +344,7 @@ $mur_garage->hauteur = 3;
 $mur_garage->largeur = 6;
 $mur_garage->materiaux = "parpaing";
 
-// J'affiche tout
+// J`affiche tout
 echo "Salon : " . $mur_salon->materiaux . " (" . $mur_salon->hauteur . "m de haut)<br>";
 echo "Chambre : " . $mur_chambre->materiaux . " (" . $mur_chambre->hauteur . "m de haut)<br>";
 echo "Garage : " . $mur_garage->materiaux . " (" . $mur_garage->hauteur . "m de haut)<br>";
@@ -352,6 +352,7 @@ echo "Garage : " . $mur_garage->materiaux . " (" . $mur_garage->hauteur . "m de 
 ```
 
 ---
+
 
 ### 📺 Résultat :
 
