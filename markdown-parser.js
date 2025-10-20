@@ -107,18 +107,11 @@ class MarkdownParser {
         <h4>Essaye par toi-même !</h4>
         <p>Prends quelques minutes pour résoudre cet exercice avant de regarder la solution.</p>
 
-        <div class="action-buttons">
-            <button class="btn-try" onclick="scrollToExercise(this)">
-                <span class="icon">✍️</span>
-                <span class="text">Je tente !</span>
-            </button>
-
-            <button class="btn-solution-big" onclick="showSolution(this)">
-                <span class="icon">💡</span>
-                <span class="text">Voir la Solution</span>
-                <span class="arrow">→</span>
-            </button>
-        </div>
+        <button class="btn-solution-big" onclick="showSolution(this)">
+            <span class="icon">💡</span>
+            <span class="text">Voir la Solution</span>
+            <span class="arrow">→</span>
+        </button>
     </div>
 
     <div class="solution-panel" style="display: none;">
