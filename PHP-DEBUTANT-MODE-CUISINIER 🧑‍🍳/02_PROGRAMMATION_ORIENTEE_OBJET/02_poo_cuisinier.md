@@ -394,40 +394,6 @@ C`est comme dans un restaurant : **une fiche recette, cent plats préparés** !
 
 ---
 
-## ✍️ EXERCICE PRATIQUE (à faire absolument !)
-
-Crée un fichier `ma_premiere_recette.php` sur ton ordinateur et fais ceci :
-
-### Instructions :
-
-1. Crée la classe `Recette` avec les propriétés : `nom`, `temps_cuisson`, `temperature`, `portions`
-2. Prépare une recette pour **une quiche lorraine**
-3. Donne-lui ces infos :
-   - **Nom :** Quiche lorraine
-   - **Temps de cuisson :** 45 minutes
-   - **Température :** 200°C
-   - **Portions :** 6 personnes
-4. Affiche toutes ses infos avec `echo`
-
----
-
-### Résultat attendu :
-
-```
-Recette : Quiche lorraine
-Temps de cuisson : 45 minutes
-Température : 200°C
-Portions : 6 personnes
-```
-
----
-
-**Lance ton fichier PHP dans ton navigateur et vérifie que ça marche !**
-
-Si ça ne marche pas, relis le cours et essaie de trouver ton erreur.  
-Si ça marche, **BRAVO, TU ES UN CHAMPION !** 🏆
-
----
 
 ## 🧠 Ce que tu DOIS retenir de ce cours
 
@@ -459,13 +425,6 @@ Par exemple :
 
 Ta recette va devenir **INTELLIGENTE** ! 🧠
 
----
-
-Mais pour l`instant, **FAIS L`EXERCICE !**
-
-Sérieux, prends 10 minutes et fais-le. C`est en **PRATIQUANT** qu`on apprend, pas en lisant.
-
-Si tu sautes cet exercice, tu vas galérer au prochain cours. Je te préviens ! 😊
 
 ---
 

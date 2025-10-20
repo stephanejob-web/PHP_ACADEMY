@@ -360,7 +360,7 @@ $mage->pv = 80;
 $mage->force = 10;
 $mage->arme = "Bâton magique";
 
-// Personnage 3 : L'archer
+// Personnage 3 : L`archer
 $archer = new Personnage();
 $archer->nom = "Legolas";
 $archer->pv = 100;
@@ -397,42 +397,6 @@ C`est comme dans un MMORPG : **un template de classe, des milliers de personnage
 
 ---
 
-## ✍️ EXERCICE PRATIQUE (à faire absolument !)
-
-Crée un fichier `mon_premier_personnage.php` sur ton ordinateur et fais ceci :
-
-### Instructions :
-
-1. Crée la classe `Personnage` avec les propriétés : `nom`, `pv`, `force`, `arme`
-2. Spawn un personnage pour **un assassin**
-3. Donne-lui ces stats :
-   - **Nom :** Shadow
-   - **PV :** 90
-   - **Force :** 25
-   - **Arme :** Dagues empoisonnées
-4. Affiche toutes ses stats avec `echo`
-
----
-
-### Résultat attendu :
-
-```
-=== FICHE PERSONNAGE ===
-Nom : Shadow
-PV : 90
-Force : 25
-Arme : Dagues empoisonnées
-========================
-```
-
----
-
-**Lance ton fichier PHP dans ton navigateur et vérifie que ça marche !**
-
-Si ça ne marche pas, relis le cours et essaie de trouver ton erreur.  
-Si ça marche, **BRAVO, TU ES UN CHAMPION !** 🏆
-
----
 
 ## 🧠 Ce que tu DOIS retenir de ce cours
 
@@ -463,14 +427,6 @@ Par exemple :
 - Level up **tout seul**
 
 Ton personnage va devenir **INTELLIGENT** ! 🧠
-
----
-
-Mais pour l`instant, **FAIS L`EXERCICE !**
-
-Sérieux, prends 10 minutes et fais-le. C`est en **PRATIQUANT** qu`on apprend, pas en lisant.
-
-Si tu sautes cet exercice, tu vas galérer au prochain cours. Je te préviens ! 😊
 
 ---
 

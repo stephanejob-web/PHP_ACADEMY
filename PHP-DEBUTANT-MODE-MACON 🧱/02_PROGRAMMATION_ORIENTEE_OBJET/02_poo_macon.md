@@ -289,7 +289,7 @@ $mur_salon->hauteur = 2.5;
 $mur_salon->largeur = 4;
 $mur_salon->materiaux = "brique rouge";
 
-// J'affiche les infos
+// J`affiche les infos
 echo "Le mur du salon mesure " . $mur_salon->hauteur . " mètres de haut<br>";
 echo "Il fait " . $mur_salon->largeur . " mètres de large<br>";
 echo "Il est en " . $mur_salon->materiaux . "<br>";
@@ -344,7 +344,7 @@ $mur_garage->hauteur = 3;
 $mur_garage->largeur = 6;
 $mur_garage->materiaux = "parpaing";
 
-// J'affiche tout
+// J`affiche tout
 echo "Salon : " . $mur_salon->materiaux . " (" . $mur_salon->hauteur . "m de haut)<br>";
 echo "Chambre : " . $mur_chambre->materiaux . " (" . $mur_chambre->hauteur . "m de haut)<br>";
 echo "Garage : " . $mur_garage->materiaux . " (" . $mur_garage->hauteur . "m de haut)<br>";
@@ -352,6 +352,7 @@ echo "Garage : " . $mur_garage->materiaux . " (" . $mur_garage->hauteur . "m de 
 ```
 
 ---
+
 
 ### 📺 Résultat :
 
@@ -371,41 +372,6 @@ Garage : parpaing (3m de haut)
 - Mais ils utilisent tous **le même modèle** !
 
 C`est comme une usine qui fabrique des voitures : **un seul plan, mille voitures différentes** !
-
----
-
-## ✍️ EXERCICE PRATIQUE (à faire absolument !)
-
-Crée un fichier `mon_premier_mur.php` sur ton ordinateur et fais ceci :
-
-### Instructions :
-
-1. Crée la classe `Mur` avec les propriétés : `hauteur`, `largeur`, `materiaux`
-2. Construis un mur pour **ta cuisine**
-3. Donne-lui ces dimensions :
-   - **Hauteur :** 2.6 mètres
-   - **Largeur :** 5 mètres
-   - **Matériau :** brique jaune
-4. Affiche toutes ses infos avec `echo`
-
----
-
-### Résultat attendu :
-
-```
-Le mur de la cuisine mesure 2.6 mètres de haut
-Il fait 5 mètres de large
-Il est en brique jaune
-```
-
----
-
-**Lance ton fichier PHP dans ton navigateur et vérifie que ça marche !**
-
-Si ça ne marche pas, relis le cours et essaie de trouver ton erreur.  
-Si ça marche, **BRAVO, TU ES UN CHAMPION !** 🏆
-
----
 
 ## 🧠 Ce que tu DOIS retenir de ce cours
 
@@ -439,14 +405,4 @@ Ton mur va devenir **INTELLIGENT** ! 🧠
 
 ---
 
-Mais pour l`instant, **FAIS L`EXERCICE !**
-
-Sérieux, prends 10 minutes et fais-le. C`est en **PRATIQUANT** qu`on apprend, pas en lisant.
-
-Si tu sautes cet exercice, tu vas galérer au prochain cours. Je te préviens ! 😊
-
----
-
 **👷 Allez, au boulot ! Tu es sur la bonne voie !**
-
-*PS : Si tu as réussi l`exercice du premier coup, tu peux te féliciter. Tu es en train de devenir un vrai développeur ! 🎉*
