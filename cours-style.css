@@ -358,131 +358,304 @@ var {
 
 .module {
     margin-bottom: 1.5rem;
-    border-left: 3px solid transparent;
-    border-radius: 8px;
+    border-left: 4px solid transparent;
+    border-radius: 12px;
     overflow: hidden;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.module:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Effet de brillance animé au survol */
+.module::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.module:hover::before {
+    left: 100%;
 }
 
 /* Couleurs pour chaque type de module */
 .module-intro {
     border-left-color: var(--module-intro);
+    background: linear-gradient(135deg, var(--module-intro-light) 0%, var(--bg-primary) 100%);
+}
+
+.module-intro:hover {
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
 }
 
 .module-intro .module-header {
-    background: var(--module-intro-light);
+    background: linear-gradient(135deg, var(--module-intro-light) 0%, rgba(37, 99, 235, 0.05) 100%);
+    border-bottom: 2px solid rgba(37, 99, 235, 0.1);
 }
 
 .module-intro .module-icon {
     color: var(--module-intro);
+    filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.3));
+    transition: all 0.3s ease;
+}
+
+.module-intro:hover .module-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px rgba(37, 99, 235, 0.5));
 }
 
 .module-bases {
     border-left-color: var(--module-bases);
+    background: linear-gradient(135deg, var(--module-bases-light) 0%, var(--bg-primary) 100%);
+}
+
+.module-bases:hover {
+    box-shadow: 0 8px 25px rgba(8, 145, 178, 0.25);
 }
 
 .module-bases .module-header {
-    background: var(--module-bases-light);
+    background: linear-gradient(135deg, var(--module-bases-light) 0%, rgba(8, 145, 178, 0.05) 100%);
+    border-bottom: 2px solid rgba(8, 145, 178, 0.1);
 }
 
 .module-bases .module-icon {
     color: var(--module-bases);
+    filter: drop-shadow(0 0 8px rgba(8, 145, 178, 0.3));
+    transition: all 0.3s ease;
+}
+
+.module-bases:hover .module-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px rgba(8, 145, 178, 0.5));
 }
 
 .module-poo {
     border-left-color: var(--module-poo);
+    background: linear-gradient(135deg, var(--module-poo-light) 0%, var(--bg-primary) 100%);
+}
+
+.module-poo:hover {
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.25);
 }
 
 .module-poo .module-header {
-    background: var(--module-poo-light);
+    background: linear-gradient(135deg, var(--module-poo-light) 0%, rgba(124, 58, 237, 0.05) 100%);
+    border-bottom: 2px solid rgba(124, 58, 237, 0.1);
 }
 
 .module-poo .module-icon {
     color: var(--module-poo);
+    filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.3));
+    transition: all 0.3s ease;
+}
+
+.module-poo:hover .module-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.5));
 }
 
 .module-database {
     border-left-color: var(--module-database);
+    background: linear-gradient(135deg, var(--module-database-light) 0%, var(--bg-primary) 100%);
+}
+
+.module-database:hover {
+    box-shadow: 0 8px 25px rgba(5, 150, 105, 0.25);
 }
 
 .module-database .module-header {
-    background: var(--module-database-light);
+    background: linear-gradient(135deg, var(--module-database-light) 0%, rgba(5, 150, 105, 0.05) 100%);
+    border-bottom: 2px solid rgba(5, 150, 105, 0.1);
 }
 
 .module-database .module-icon {
     color: var(--module-database);
+    filter: drop-shadow(0 0 8px rgba(5, 150, 105, 0.3));
+    transition: all 0.3s ease;
+}
+
+.module-database:hover .module-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px rgba(5, 150, 105, 0.5));
 }
 
 .module-git {
     border-left-color: var(--module-git);
+    background: linear-gradient(135deg, var(--module-git-light) 0%, var(--bg-primary) 100%);
+}
+
+.module-git:hover {
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.25);
 }
 
 .module-git .module-header {
-    background: var(--module-git-light);
+    background: linear-gradient(135deg, var(--module-git-light) 0%, rgba(220, 38, 38, 0.05) 100%);
+    border-bottom: 2px solid rgba(220, 38, 38, 0.1);
 }
 
 .module-git .module-icon {
     color: var(--module-git);
+    filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.3));
+    transition: all 0.3s ease;
+}
+
+.module-git:hover .module-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px rgba(220, 38, 38, 0.5));
 }
 
 .module-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
+    padding: 1.25rem 1.5rem;
     background: var(--bg-tertiary);
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     user-select: none;
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px);
 }
 
 .module-header:hover {
-    opacity: 0.9;
-    transform: translateX(3px);
+    transform: translateX(4px);
+}
+
+.module-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+    transition: width 0.3s ease;
+}
+
+.module-header:hover::after {
+    width: 100%;
 }
 
 .module-title {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    font-size: 0.95rem;
+    gap: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--text-primary);
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    letter-spacing: 0.01em;
 }
 
 .module-icon {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .module-toggle {
-    width: 20px;
-    height: 20px;
-    transition: var(--transition);
+    width: 24px;
+    height: 24px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    stroke-width: 2.5;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.module:hover .module-toggle {
+    transform: scale(1.1);
 }
 
 .module.collapsed .module-toggle {
     transform: rotate(-90deg);
 }
 
+.module.collapsed:hover .module-toggle {
+    transform: rotate(-90deg) scale(1.1);
+}
+
 .module-lessons {
     max-height: 1000px;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0.5rem 0;
 }
 
 .module.collapsed .module-lessons {
     max-height: 0;
+    padding: 0;
 }
 
 .lesson-item {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 0.875rem 1.5rem 0.875rem 3rem;
+    padding: 1rem 1.5rem 1rem 3rem;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-left: 3px solid transparent;
     position: relative;
+    margin: 0.25rem 0.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    animation: slideInLesson 0.3s ease-out backwards;
+}
+
+/* Animation d'apparition progressive des leçons */
+.lesson-item:nth-child(1) { animation-delay: 0.05s; }
+.lesson-item:nth-child(2) { animation-delay: 0.1s; }
+.lesson-item:nth-child(3) { animation-delay: 0.15s; }
+.lesson-item:nth-child(4) { animation-delay: 0.2s; }
+.lesson-item:nth-child(5) { animation-delay: 0.25s; }
+.lesson-item:nth-child(6) { animation-delay: 0.3s; }
+.lesson-item:nth-child(7) { animation-delay: 0.35s; }
+.lesson-item:nth-child(8) { animation-delay: 0.4s; }
+.lesson-item:nth-child(9) { animation-delay: 0.45s; }
+
+@keyframes slideInLesson {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.lesson-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 0;
+    background: currentColor;
+    transition: height 0.3s ease;
+    border-radius: 0 2px 2px 0;
+}
+
+.lesson-item:hover::before {
+    height: 100%;
 }
 
 .lesson-item:hover {
@@ -492,22 +665,32 @@ var {
 /* Hover coloré pour chaque type de module */
 .module-intro .lesson-item:hover {
     background: var(--module-intro-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
 }
 
 .module-bases .lesson-item:hover {
     background: var(--module-bases-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(8, 145, 178, 0.15);
 }
 
 .module-poo .lesson-item:hover {
     background: var(--module-poo-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
 }
 
 .module-database .lesson-item:hover {
     background: var(--module-database-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
 }
 
 .module-git .lesson-item:hover {
     background: var(--module-git-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
 }
 
 .lesson-item.active {
@@ -518,44 +701,70 @@ var {
 
 /* Couleurs actives pour chaque type de module */
 .module-intro .lesson-item.active {
-    background: var(--module-intro);
+    background: linear-gradient(135deg, var(--module-intro) 0%, rgba(37, 99, 235, 0.8) 100%);
     border-left-color: var(--module-intro);
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
 }
 
 .module-bases .lesson-item.active {
-    background: var(--module-bases);
+    background: linear-gradient(135deg, var(--module-bases) 0%, rgba(8, 145, 178, 0.8) 100%);
     border-left-color: var(--module-bases);
+    box-shadow: 0 4px 20px rgba(8, 145, 178, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
 }
 
 .module-poo .lesson-item.active {
-    background: var(--module-poo);
+    background: linear-gradient(135deg, var(--module-poo) 0%, rgba(124, 58, 237, 0.8) 100%);
     border-left-color: var(--module-poo);
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
 }
 
 .module-database .lesson-item.active {
-    background: var(--module-database);
+    background: linear-gradient(135deg, var(--module-database) 0%, rgba(5, 150, 105, 0.8) 100%);
     border-left-color: var(--module-database);
+    box-shadow: 0 4px 20px rgba(5, 150, 105, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
 }
 
 .module-git .lesson-item.active {
-    background: var(--module-git);
+    background: linear-gradient(135deg, var(--module-git) 0%, rgba(220, 38, 38, 0.8) 100%);
     border-left-color: var(--module-git);
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
 }
 
-.lesson-item.completed::before {
+.lesson-item.completed::after {
     content: '✓';
     position: absolute;
     left: 1rem;
-    width: 24px;
-    height: 24px;
-    background: var(--success);
-    color: var(--white);
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 700;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    animation: checkBounce 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes checkBounce {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
 }
 
 .lesson-info {
