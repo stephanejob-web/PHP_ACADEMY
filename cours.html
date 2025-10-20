@@ -80,6 +80,15 @@
                         <h1>Bienvenue sur PHP Hero Academy</h1>
                         <p class="welcome-subtitle">Choisissez votre univers préféré pour commencer l'aventure</p>
 
+                        <!-- Bouton Continuer (affiché si progression existante) -->
+                        <div id="continueSection" style="display: none; margin-bottom: 2rem;">
+                            <button class="btn-continue" onclick="continueLastLesson()">
+                                ▶️ Continuer où vous en étiez
+                            </button>
+                            <div id="lastLessonInfo" style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem;">
+                            </div>
+                        </div>
+
                         <div class="theme-cards">
                             <div class="theme-card" data-theme="macon">
                                 <div class="theme-card-icon">👷‍♂️</div>
@@ -123,6 +132,13 @@
 
                         <div class="welcome-note">
                             <p>💡 Les mêmes concepts, 3 façons différentes de les apprendre</p>
+                        </div>
+
+                        <!-- Bouton de débogage pour effacer le cache -->
+                        <div style="margin-top: 2rem; text-align: center;">
+                            <button onclick="clearCache()" style="padding: 0.5rem 1rem; background: #ef4444; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 0.9rem;">
+                                🗑️ Réinitialiser (effacer la progression)
+                            </button>
                         </div>
                     </div>
                 </div>
