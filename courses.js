@@ -17,8 +17,22 @@ const coursesData = {
                 ]
             },
             {
+                id: 'html',
+                title: 'HTML',
+                icon: '🌐',
+                comingSoon: true,
+                lessons: []
+            },
+            {
+                id: 'css',
+                title: 'CSS',
+                icon: '🎨',
+                comingSoon: true,
+                lessons: []
+            },
+            {
                 id: 'bases',
-                title: 'Les Bases',
+                title: 'Les Bases PHP',
                 icon: '🧱',
                 lessons: [
                     { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES BASES/001_introduction-programmation.md', duration: '15 min' },
@@ -48,7 +62,7 @@ const coursesData = {
             },
             {
                 id: 'database',
-                title: 'Base de Données',
+                title: 'Base de Données SQL',
                 icon: '💾',
                 lessons: [
                     { id: 'bdd-intro', title: 'C\'est quoi une BDD?', file: '03_BASE_DE_DONNEES/01_apprendre_sql_debutant_c_est_quoi_une_base_de_donnees.md', duration: '20 min' },
@@ -95,8 +109,22 @@ const coursesData = {
                 ]
             },
             {
+                id: 'html',
+                title: 'HTML',
+                icon: '🌐',
+                comingSoon: true,
+                lessons: []
+            },
+            {
+                id: 'css',
+                title: 'CSS',
+                icon: '🎨',
+                comingSoon: true,
+                lessons: []
+            },
+            {
                 id: 'bases',
-                title: 'Les Bases',
+                title: 'Les Bases PHP',
                 icon: '🥘',
                 lessons: [
                     { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES BASES/001_introduction-programmation.md', duration: '15 min' },
@@ -123,6 +151,13 @@ const coursesData = {
                     { id: 'poo-6', title: 'Concepts Avancés', file: '02_PROGRAMMATION_ORIENTEE_OBJET/06_poo_cuisinier.md', duration: '45 min' },
                     { id: 'exercices-poo', title: 'Exercices POO Corrigés', file: '02_PROGRAMMATION_ORIENTEE_OBJET/Exercices_POO_Corriges.md', duration: '60 min' }
                 ]
+            },
+            {
+                id: 'database',
+                title: 'Base de Données SQL',
+                icon: '💾',
+                comingSoon: true,
+                lessons: []
             },
             {
                 id: 'git',
@@ -157,8 +192,22 @@ const coursesData = {
                 ]
             },
             {
+                id: 'html',
+                title: 'HTML',
+                icon: '🌐',
+                comingSoon: true,
+                lessons: []
+            },
+            {
+                id: 'css',
+                title: 'CSS',
+                icon: '🎨',
+                comingSoon: true,
+                lessons: []
+            },
+            {
                 id: 'bases',
-                title: 'Les Bases',
+                title: 'Les Bases PHP',
                 icon: '🎯',
                 lessons: [
                     { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES_BASES/001_introduction_programmation.md', duration: '15 min' },
@@ -185,6 +234,13 @@ const coursesData = {
                     { id: 'poo-6', title: 'Concepts Avancés', file: '02_PROGRAMMATION_ORIENTEE_OBJET/06_poo_gamer.md', duration: '45 min' },
                     { id: 'exercices-poo', title: 'Exercices POO Corrigés', file: '02_PROGRAMMATION_ORIENTEE_OBJET/Exercices_POO_Corriges.md', duration: '60 min' }
                 ]
+            },
+            {
+                id: 'database',
+                title: 'Base de Données SQL',
+                icon: '💾',
+                comingSoon: true,
+                lessons: []
             },
             {
                 id: 'git',
