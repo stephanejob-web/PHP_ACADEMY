@@ -35,6 +35,7 @@ const coursesData = {
                 title: 'Les Bases PHP',
                 icon: '🧱',
                 lessons: [
+                    { id: 'installation', title: 'Installer son environnement', file: '01_LES BASES/00_installation_environnement.md', duration: '10 min' },
                     { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES BASES/001_introduction-programmation.md', duration: '15 min' },
                     { id: 'variables', title: 'Les Variables', file: '01_LES BASES/01_variables.md', duration: '15 min' },
                     { id: 'conditions', title: 'Les Conditions', file: '01_LES BASES/02_conditions.md', duration: '20 min' },
@@ -127,6 +128,7 @@ const coursesData = {
                 title: 'Les Bases PHP',
                 icon: '🥘',
                 lessons: [
+                    { id: 'installation', title: 'Installer son environnement', file: '01_LES BASES/00_installation_environnement.md', duration: '10 min' },
                     { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES BASES/001_introduction-programmation.md', duration: '15 min' },
                     { id: 'variables', title: 'Les Variables', file: '01_LES BASES/01_variables.MD', duration: '15 min' },
                     { id: 'conditions', title: 'Les Conditions', file: '01_LES BASES/02_conditions.MD', duration: '20 min' },
@@ -210,6 +212,7 @@ const coursesData = {
                 title: 'Les Bases PHP',
                 icon: '🎯',
                 lessons: [
+                    { id: 'installation', title: 'Installer son environnement', file: '01_LES_BASES/00_installation_environnement.md', duration: '10 min' },
                     { id: 'introduction', title: 'Introduction à la programmation', file: '01_LES_BASES/001_introduction_programmation.md', duration: '15 min' },
                     { id: 'variables', title: 'Les Variables', file: '01_LES_BASES/01_variables.MD', duration: '15 min' },
                     { id: 'conditions', title: 'Les Conditions', file: '01_LES_BASES/02_conditions.MD', duration: '20 min' },
