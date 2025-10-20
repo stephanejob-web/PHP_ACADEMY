@@ -513,6 +513,32 @@ var {
     padding: 2rem 0;
 }
 
+/* Bouton Continuer */
+.btn-continue {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--success), #059669);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-continue:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-continue:active {
+    transform: translateY(-1px);
+}
+
 .welcome-content h1 {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
@@ -1565,6 +1591,26 @@ var {
         justify-content: center;
         padding: 0.875rem 1.5rem;
         font-size: 1rem;
+    }
+
+    /* Bouton continuer en mobile */
+    .btn-continue {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    #lastLessonInfo {
+        font-size: 0.85rem;
+    }
+
+    #lastLessonInfo > div {
+        flex-direction: column !important;
+    }
+
+    #lastLessonInfo > div > div {
+        justify-content: center;
+        text-align: center;
     }
 
     /* Cartes de thème */

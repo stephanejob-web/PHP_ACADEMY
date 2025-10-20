@@ -3,25 +3,56 @@ class PHPHeroApp {
     constructor() {
         this.currentTheme = null;
         this.currentLesson = null;
+        this.lastLesson = null; // Dernière leçon visitée
         this.completedLessons = new Set();
+        this.lastVisit = null; // Date de dernière visite
         this.parser = new MarkdownParser();
         this.init();
     }
 
     init() {
+        console.log('🚀 Initialisation de PHPHeroApp');
+
         // Charger les données depuis localStorage
         this.loadProgress();
-
-        // Vérifier si un thème est déjà sélectionné
-        if (this.currentTheme) {
-            this.loadTheme(this.currentTheme);
-        }
+        console.log('📦 Thème chargé depuis localStorage:', this.currentTheme);
 
         // Event listeners
         this.setupEventListeners();
 
-        // Charger la leçon depuis l'URL si présente
-        this.loadFromURL();
+        // Vérifier que coursesData est chargé
+        if (typeof coursesData === 'undefined') {
+            console.error('❌ coursesData non défini');
+            this.showError('Les données des cours ne sont pas chargées. Veuillez recharger la page.');
+            return;
+        }
+        console.log('✅ coursesData chargé:', Object.keys(coursesData));
+
+        // Vérifier s'il y a des paramètres dans l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlTheme = urlParams.get('theme');
+        const forceWelcome = urlParams.get('welcome') === 'true';
+
+        console.log('🔗 Paramètres URL - theme:', urlTheme, 'forceWelcome:', forceWelcome);
+
+        // Si le paramètre welcome=true est présent, forcer l'écran de bienvenue
+        if (forceWelcome) {
+            console.log('👋 Affichage forcé de l\'écran de bienvenue');
+            this.showWelcomeScreen();
+            return;
+        }
+
+        // Priorité à l'URL, sinon localStorage, sinon écran de bienvenue
+        if (urlTheme && coursesData[urlTheme]) {
+            console.log('📖 Chargement depuis URL:', urlTheme);
+            this.loadFromURL();
+        } else if (this.currentTheme && coursesData[this.currentTheme]) {
+            console.log('💾 Chargement du thème sauvegardé:', this.currentTheme);
+            this.loadTheme(this.currentTheme);
+        } else {
+            console.log('👋 Aucun thème - Affichage écran de bienvenue');
+            this.showWelcomeScreen();
+        }
     }
 
     setupEventListeners() {
@@ -52,6 +83,15 @@ class PHPHeroApp {
                 const data = JSON.parse(saved);
                 this.currentTheme = data.currentTheme || null;
                 this.completedLessons = new Set(data.completedLessons || []);
+                this.lastLesson = data.lastLesson || null;
+                this.lastVisit = data.lastVisit || null;
+
+                console.log('📊 Progression chargée:', {
+                    theme: this.currentTheme,
+                    lessonsCompleted: this.completedLessons.size,
+                    lastLesson: this.lastLesson,
+                    lastVisit: this.lastVisit
+                });
             }
         } catch (e) {
             console.error('Erreur lors du chargement de la progression:', e);
@@ -62,9 +102,12 @@ class PHPHeroApp {
         try {
             const data = {
                 currentTheme: this.currentTheme,
-                completedLessons: Array.from(this.completedLessons)
+                completedLessons: Array.from(this.completedLessons),
+                lastLesson: this.lastLesson,
+                lastVisit: new Date().toISOString()
             };
             localStorage.setItem('phpHeroProgress', JSON.stringify(data));
+            console.log('💾 Progression sauvegardée:', data);
         } catch (e) {
             console.error('Erreur lors de la sauvegarde de la progression:', e);
         }
@@ -200,6 +243,17 @@ class PHPHeroApp {
 
     async loadLesson(module, lesson) {
         this.currentLesson = { ...lesson, moduleId: module.id };
+
+        // Sauvegarder la dernière leçon visitée
+        this.lastLesson = {
+            themeId: this.currentTheme,
+            moduleId: module.id,
+            lessonId: lesson.id,
+            lessonTitle: lesson.title,
+            moduleTitle: module.title
+        };
+        this.saveProgress();
+
         this.updateURL(lesson.id);
 
         // Afficher l'état de chargement
@@ -260,7 +314,6 @@ class PHPHeroApp {
     }
 
     updateNavigationButtons() {
-        const theme = coursesData[this.currentTheme];
         const { prev, next } = this.getAdjacentLessons();
 
         const btnPrev = document.getElementById('btnPrev');
@@ -407,6 +460,76 @@ class PHPHeroApp {
         document.getElementById('errorMessage').textContent = message;
     }
 
+    showWelcomeScreen() {
+        console.log('👋 showWelcomeScreen() appelé');
+
+        // Afficher l'écran de sélection de thème
+        const welcomeScreen = document.getElementById('welcomeScreen');
+        const lessonContent = document.getElementById('lessonContent');
+        const loadingState = document.getElementById('loadingState');
+        const errorState = document.getElementById('errorState');
+
+        if (welcomeScreen) {
+            welcomeScreen.style.display = 'block';
+            console.log('✅ welcomeScreen affiché');
+        } else {
+            console.error('❌ welcomeScreen non trouvé dans le DOM');
+        }
+
+        if (lessonContent) lessonContent.style.display = 'none';
+        if (loadingState) loadingState.style.display = 'none';
+        if (errorState) errorState.style.display = 'none';
+
+        // Afficher le bouton "Continuer" si une progression existe
+        this.updateContinueButton();
+
+        console.log('📊 États des écrans:', {
+            welcomeScreen: welcomeScreen?.style.display,
+            lessonContent: lessonContent?.style.display,
+            loadingState: loadingState?.style.display,
+            errorState: errorState?.style.display
+        });
+    }
+
+    updateContinueButton() {
+        const continueSection = document.getElementById('continueSection');
+        const lastLessonInfo = document.getElementById('lastLessonInfo');
+
+        if (this.lastLesson && this.currentTheme && continueSection && lastLessonInfo) {
+            // Calculer la progression
+            const theme = coursesData[this.currentTheme];
+            let totalLessons = 0;
+            theme.modules.forEach(m => totalLessons += m.lessons.length);
+            const completedCount = this.completedLessons.size;
+            const progressPercent = Math.round((completedCount / totalLessons) * 100);
+
+            // Afficher les informations
+            const themeEmoji = theme.emoji;
+            const lastVisitDate = this.lastVisit ? new Date(this.lastVisit).toLocaleDateString('fr-FR') : '';
+
+            lastLessonInfo.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-primary);">
+                    <div style="font-weight: 600;">
+                        ${themeEmoji} ${theme.name} • ${this.lastLesson.moduleTitle}
+                    </div>
+                    <div style="color: var(--text-secondary);">
+                        Dernière leçon : ${this.lastLesson.lessonTitle}
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 0.5rem;">
+                        <span>Progression : ${completedCount}/${totalLessons} leçons (${progressPercent}%)</span>
+                        ${lastVisitDate ? `<span>Dernière visite : ${lastVisitDate}</span>` : ''}
+                    </div>
+                </div>
+            `;
+
+            continueSection.style.display = 'block';
+            console.log('✅ Bouton "Continuer" affiché');
+        } else {
+            if (continueSection) continueSection.style.display = 'none';
+            console.log('ℹ️ Aucune progression à reprendre');
+        }
+    }
+
     openThemeModal() {
         document.getElementById('themeModal').style.display = 'flex';
     }
@@ -458,5 +581,46 @@ function markComplete() {
     app.markComplete();
 }
 
-// Initialiser l'application
-const app = new PHPHeroApp();
+// Fonction pour effacer le cache et réinitialiser
+function clearCache() {
+    if (confirm('Êtes-vous sûr de vouloir effacer toute votre progression ?')) {
+        console.log('🗑️ Effacement du localStorage');
+        localStorage.removeItem('phpHeroProgress');
+        console.log('✅ Cache effacé, rechargement...');
+        window.location.href = 'cours.html?welcome=true';
+    }
+}
+
+// Fonction pour reprendre la dernière leçon
+function continueLastLesson() {
+    if (app && app.lastLesson) {
+        console.log('▶️ Reprise de la dernière leçon:', app.lastLesson);
+
+        // Charger le thème si ce n'est pas déjà fait
+        if (!app.currentTheme || app.currentTheme !== app.lastLesson.themeId) {
+            app.loadTheme(app.lastLesson.themeId);
+        }
+
+        // Charger la dernière leçon
+        const theme = coursesData[app.lastLesson.themeId];
+        const module = theme.modules.find(m => m.id === app.lastLesson.moduleId);
+        const lesson = module?.lessons.find(l => l.id === app.lastLesson.lessonId);
+
+        if (module && lesson) {
+            app.loadLesson(module, lesson);
+        } else {
+            console.error('❌ Impossible de trouver la leçon à reprendre');
+        }
+    }
+}
+
+// Initialiser l'application après le chargement du DOM
+let app;
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        app = new PHPHeroApp();
+    });
+} else {
+    // DOM déjà chargé
+    app = new PHPHeroApp();
+}
