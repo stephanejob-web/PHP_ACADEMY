@@ -541,15 +541,15 @@ var {
 
 /* Styles pour les exercices avec solutions */
 .exercise-container {
-    margin: 2.5rem 0;
-    border-radius: 16px;
+    margin: 2rem 0;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 .exercise-challenge {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    padding: 2.5rem;
+    padding: 1.5rem;
     border: 3px solid #0ea5e9;
 }
 
@@ -561,11 +561,11 @@ var {
     display: inline-block;
     background: #0ea5e9;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.9rem;
     border-radius: 20px;
     font-weight: 700;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
     animation: pulse-badge 2s infinite;
 }
 
@@ -581,28 +581,23 @@ var {
 }
 
 .exercise-challenge h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--text-primary);
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.4rem 0;
 }
 
 .exercise-challenge p {
     color: var(--text-secondary);
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 1.2rem 0;
+    font-size: 0.95rem;
 }
 
-.action-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.btn-try,
 .btn-solution-big {
-    padding: 1.2rem 2rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
     border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
+    border-radius: 10px;
+    font-size: 1.05rem;
     font-weight: 700;
     cursor: pointer;
     display: flex;
@@ -610,27 +605,6 @@ var {
     justify-content: center;
     gap: 0.75rem;
     transition: all 0.3s ease;
-}
-
-.btn-try {
-    background: white;
-    color: #0ea5e9;
-    border: 3px solid #0ea5e9;
-}
-
-[data-theme="dark"] .btn-try {
-    background: var(--bg-primary);
-    color: #0ea5e9;
-}
-
-.btn-try:hover {
-    background: #0ea5e9;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(14, 165, 233, 0.3);
-}
-
-.btn-solution-big {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: white;
     position: relative;
@@ -1812,36 +1786,31 @@ var {
     }
 
     /* Exercices en mobile */
+    .exercise-container {
+        margin: 1.5rem 0;
+    }
+
     .exercise-challenge {
-        padding: 1.5rem;
+        padding: 1.2rem;
     }
 
     .challenge-badge {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+        padding: 0.35rem 0.75rem;
     }
 
     .exercise-challenge h4 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .exercise-challenge p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-solution-big {
+        padding: 0.9rem 1.2rem;
         font-size: 0.95rem;
-    }
-
-    .action-buttons {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-    }
-
-    .btn-try,
-    .btn-solution-big {
-        padding: 1rem 1.5rem;
-        font-size: 1rem;
-    }
-
-    .btn-solution-big {
-        order: -1; /* Mettre "Voir la Solution" en premier sur mobile */
     }
 
     .solution-header {
@@ -1849,7 +1818,7 @@ var {
     }
 
     .solution-badge {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .close-solution {
@@ -1859,7 +1828,7 @@ var {
     }
 
     .solution-content {
-        padding: 1.5rem;
+        padding: 1.2rem;
     }
 
     /* Cartes de thème */
