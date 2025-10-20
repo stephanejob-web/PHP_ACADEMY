@@ -244,7 +244,7 @@ $gateau_chocolat->calories_par_portion = 350;
 
 echo "Portions actuelles : " . $gateau_chocolat->portions . "<br>";
 
-// J'ajuste pour 12 personnes
+// J`ajuste pour 12 personnes
 $gateau_chocolat->ajusterPortions(12);
 
 echo "Nouvelles portions : " . $gateau_chocolat->portions . "<br>";
@@ -411,7 +411,7 @@ public function calculerCaloriesTotales() {
 
 **Appel :**
 ```php
-$calories = $recette->calculerCaloriesTotales(); // Pas besoin de donner d'info
+$calories = $recette->calculerCaloriesTotales(); // Pas besoin de donner d`info
 ```
 
 ---
