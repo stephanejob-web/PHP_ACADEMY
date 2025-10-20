@@ -892,6 +892,134 @@
             font-size: 1.05rem;
         }
 
+        /* Testimonials Section */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: var(--bg-secondary);
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 120px;
+            color: var(--primary);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .testimonial-info h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .testimonial-rating {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-theme {
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .theme-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .theme-badge-macon {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+        }
+
+        .theme-badge-cuisinier {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+        }
+
+        .theme-badge-gamer {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+        }
+
         /* Learning Path */
         .learning-path {
             padding: 6rem 2rem;
@@ -2256,6 +2384,76 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <div class="section-header">
+                <span class="section-label">ILS ONT APPRIS AVEC NOUS</span>
+                <h2 class="section-title">Ce Que Disent Nos Apprenants</h2>
+                <p class="section-description">Découvrez les témoignages de ceux qui ont commencé leur aventure dans le développement web.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-info">
+                            <h4>Mickaël</h4>
+                            <p class="testimonial-role">Maçon → Développeur Web Junior</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="testimonial-text">
+                        "Le mode Maçon m'a vraiment parlé ! Les analogies avec mon métier ont rendu l'apprentissage du code tellement plus simple. En 3 mois, j'ai pu créer mon premier site de présentation pour mon entreprise. Je recommande à 100% !"
+                    </p>
+                    <div class="testimonial-theme">
+                        <span class="theme-badge theme-badge-macon">👷‍♂️ Mode Maçon</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">L</div>
+                        <div class="testimonial-info">
+                            <h4>Laetitia</h4>
+                            <p class="testimonial-role">Reconversion Professionnelle</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="testimonial-text">
+                        "Après 10 ans dans la restauration, je cherchais une reconversion. Le mode Cuisinier a été une révélation ! Apprendre à coder en le comparant à des recettes de cuisine, c'est juste génial. Aujourd'hui je développe des sites pour des restaurants locaux."
+                    </p>
+                    <div class="testimonial-theme">
+                        <span class="theme-badge theme-badge-cuisinier">👨‍🍳 Mode Cuisinier</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">E</div>
+                        <div class="testimonial-info">
+                            <h4>Emmanuelle</h4>
+                            <p class="testimonial-role">Étudiante en Informatique</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="testimonial-text">
+                        "En tant que gameuse, le mode Gamer m'a totalement accro ! Voir le code comme un inventaire RPG a rendu l'apprentissage fun et addictif. Les exercices sont bien pensés et la progression est claire. Parfait pour débuter en s'amusant !"
+                    </p>
+                    <div class="testimonial-theme">
+                        <span class="theme-badge theme-badge-gamer">🎮 Mode Gamer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Learning Path -->
     <section class="learning-path" id="parcours">
         <div class="path-container">
@@ -2550,7 +2748,7 @@
         }, observerOptions);
 
         // Observe all animated elements
-        document.querySelectorAll('.feature-card, .theme-card, .path-item, .coming-card, .enrichment-card, .timeline-item, .roadmap-title, .enrichments-section .section-header').forEach(el => {
+        document.querySelectorAll('.feature-card, .theme-card, .path-item, .coming-card, .enrichment-card, .timeline-item, .roadmap-title, .enrichments-section .section-header, .testimonial-card').forEach(el => {
             observer.observe(el);
         });
 
