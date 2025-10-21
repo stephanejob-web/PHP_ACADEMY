@@ -113,10 +113,10 @@
     --bg-secondary: #21222c;      /* Fond un peu plus sombre */
     --bg-tertiary: #343746;       /* Fond éléments */
     --text-primary: #f8f8f2;      /* Texte blanc cassé */
-    --text-secondary: #6272a4;    /* Texte secondaire bleu gris */
-    --border-color: #44475a;      /* Bordures grises */
+    --text-secondary: #a0a9d1;    /* Texte secondaire bleu gris (amélioré) */
+    --border-color: #6272a4;      /* Bordures grises (améliorées) */
     --shadow: rgba(0, 0, 0, 0.6); /* Ombres prononcées */
-    --gray-lighter: #44475a;
+    --gray-lighter: #6272a4;
     --light: #21222c;
 
     /* Couleurs d'accent Dracula */
@@ -126,6 +126,7 @@
     --accent: #f1fa8c;            /* Jaune/Yellow */
     --success: #50fa7b;           /* Vert/Green */
     --danger: #ff5555;            /* Rouge/Red */
+    --gray: #a0a9d1;              /* Gris amélioré pour meilleur contraste */
 
     /* Module colors - Dracula theme */
     --module-intro: #bd93f9;      /* Violet pour intro */
@@ -664,6 +665,10 @@ var {
     font-size: 0.875rem;
     font-weight: 600;
     color: var(--gray);
+}
+
+[data-theme="dracula"] .progress-text {
+    color: #a0a9d1;
 }
 
 .progress-bar-mini {
@@ -1285,6 +1290,10 @@ var {
     margin-top: 0.25rem;
 }
 
+[data-theme="dracula"] .lesson-item-duration {
+    color: #a0a9d1;
+}
+
 .lesson-item.active .lesson-item-duration {
     color: rgba(255,255,255,0.8);
 }
@@ -1621,6 +1630,10 @@ var {
     font-weight: 600;
 }
 
+[data-theme="dracula"] .theme-stats {
+    color: #a0a9d1;
+}
+
 .btn-select-theme {
     width: 100%;
     padding: 0.875rem 1.5rem;
@@ -1754,6 +1767,10 @@ var {
     gap: 0.5rem;
 }
 
+[data-theme="dracula"] .lesson-duration {
+    color: #a0a9d1;
+}
+
 .lesson-duration::before {
     content: '⏱️';
 }
@@ -1806,6 +1823,15 @@ var {
     color: #d6deeb;
 }
 
+[data-theme="dracula"] .lesson-body h1,
+[data-theme="dracula"] .lesson-body h2,
+[data-theme="dracula"] .lesson-body h3,
+[data-theme="dracula"] .lesson-body h4,
+[data-theme="dracula"] .lesson-body h5,
+[data-theme="dracula"] .lesson-body h6 {
+    color: #f8f8f2;
+}
+
 .lesson-body p {
     margin-bottom: 1.5rem;
     line-height: 1.8;
@@ -1814,6 +1840,10 @@ var {
 
 [data-theme="dark"] .lesson-body p {
     color: #d6deeb;
+}
+
+[data-theme="dracula"] .lesson-body p {
+    color: #f8f8f2;
 }
 
 .lesson-body a {
@@ -1836,6 +1866,15 @@ var {
 [data-theme="dark"] .lesson-body a:hover {
     color: #addb67;
     border-bottom-color: #addb67;
+}
+
+[data-theme="dracula"] .lesson-body a {
+    color: #8be9fd;
+}
+
+[data-theme="dracula"] .lesson-body a:hover {
+    color: #50fa7b;
+    border-bottom-color: #50fa7b;
 }
 
 .lesson-body ul,
@@ -1865,6 +1904,12 @@ var {
     background: #0b2942;
     border-left-color: #82aaff;
     color: #7fdbca;
+}
+
+[data-theme="dracula"] .lesson-body blockquote {
+    background: #44475a;
+    border-left-color: #bd93f9;
+    color: #f8f8f2;
 }
 
 .lesson-body hr {
@@ -1924,6 +1969,10 @@ var {
     letter-spacing: 0.5px;
 }
 
+[data-theme="dracula"] .code-lang {
+    color: #a0a9d1;
+}
+
 .copy-btn {
     display: flex;
     align-items: center;
@@ -1937,6 +1986,11 @@ var {
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+}
+
+[data-theme="dracula"] .copy-btn {
+    color: #a0a9d1;
+    background: #44475a;
 }
 
 .copy-btn:hover {
@@ -1962,7 +2016,7 @@ var {
     font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
     font-size: 1.15rem;
     line-height: 1.8;
-    color: #1e293b;  /* Couleur sombre pour le thème clair */
+    color: #cbcfd5;  /* Couleur sombre pour le thème clair */
     font-weight: 400;
     display: block;
     white-space: pre;  /* Préserve les espaces et les retours à la ligne */
@@ -1995,19 +2049,25 @@ var {
 
 .inline-code {
     padding: 0.2rem 0.5rem;
-    /* background: var(--bg-tertiary); */
+    background: var(--bg-tertiary);
     color: var(--text-primary);
     border-radius: 4px;
     font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
     font-size: 1em;
     font-weight: 500;
-    /* border: 1px solid var(--border-color); */
+    border: 1px solid var(--border-color);
 }
 
 [data-theme="dark"] .inline-code {
-    /* background: #0b2942; */
-    /* color: #82aaff; */
+    background: #0b2942;
+    color: #82aaff;
     border-color: #1e3a50;
+}
+
+[data-theme="dracula"] .inline-code {
+    /* background: #44475a; */
+    color: #50fa7b;
+    /* border-color: #6272a4; */
 }
 
 /* Syntax highlighting - Winter is Coming colors */
@@ -2301,9 +2361,17 @@ var {
     transition: var(--transition);
 }
 
+[data-theme="dracula"] .modal-close {
+    color: #a0a9d1;
+}
+
 .modal-close:hover {
     color: var(--dark);
     transform: rotate(90deg);
+}
+
+[data-theme="dracula"] .modal-close:hover {
+    color: #f8f8f2;
 }
 
 .modal-body {
