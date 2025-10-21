@@ -504,7 +504,7 @@ var {
 }
 
 .theme-icon {
-    font-size: 1.4rem;
+    font-size: 1.2em;
     transition: transform 0.3s ease;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
     z-index: 1;
@@ -1367,30 +1367,50 @@ var {
     padding: 2rem 0;
 }
 
-/* Bouton Continuer */
+/* Bouton Continuer - Flottant en bas à droite */
 .btn-continue {
-    display: inline-flex;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
     background: linear-gradient(135deg, var(--success), #059669);
     color: var(--white);
     border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
+    border-radius: 50px;
+    font-size: 1.15rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+    z-index: 999;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    animation: pulse-float 2s ease-in-out infinite;
+}
+
+@keyframes pulse-float {
+    0%, 100% {
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+        transform: translateY(0);
+    }
+    50% {
+        box-shadow: 0 12px 32px rgba(16, 185, 129, 0.6);
+        transform: translateY(-5px);
+    }
 }
 
 .btn-continue:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 16px 40px rgba(16, 185, 129, 0.5);
+    animation: none;
 }
 
 .btn-continue:active {
-    transform: translateY(-1px);
+    transform: translateY(-6px) scale(1.03);
 }
 
 /* Styles pour les exercices avec solutions */
@@ -2678,11 +2698,13 @@ var {
         font-size: 1rem;
     }
 
-    /* Bouton continuer en mobile */
+    /* Bouton continuer en mobile - reste flottant mais adapté */
     .btn-continue {
-        width: 100%;
-        justify-content: center;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        padding: 1rem 1.75rem;
         font-size: 1rem;
+        border-radius: 40px;
     }
 
     #lastLessonInfo {
@@ -2815,5 +2837,13 @@ var {
     .btn-complete {
         padding: 0.75rem 1rem;
         font-size: 0.9375rem;
+    }
+
+    /* Bouton continuer sur très petits écrans */
+    .btn-continue {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
     }
 }
