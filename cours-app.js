@@ -165,6 +165,14 @@ class PHPHeroApp {
 
         // Cacher l'écran d'accueil
         document.getElementById('welcomeScreen').style.display = 'none';
+
+        // Réappliquer le thème de couleur sauvegardé (Winter is Coming, Dracula, etc.)
+        const savedColorTheme = localStorage.getItem('theme');
+        if (savedColorTheme && window.changeTheme) {
+            setTimeout(() => {
+                window.changeTheme(savedColorTheme);
+            }, 50); // Petit délai pour s'assurer que le DOM est à jour
+        }
     }
 
     updateThemeUI(theme) {
@@ -575,7 +583,7 @@ function selectTheme(themeId) {
     }
 }
 
-function changeTheme(themeId) {
+function changeMode(themeId) {
     app.changeTheme(themeId);
 }
 
