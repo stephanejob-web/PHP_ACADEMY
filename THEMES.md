@@ -80,7 +80,7 @@ Le site propose **3 thèmes** au choix, chacun avec son ambiance unique. Vous po
 | Fond principal | Gris foncé | `#282a36` |
 | Fond secondaire | Gris très foncé | `#21222c` |
 | Texte principal | Blanc cassé | `#f8f8f2` |
-| Texte secondaire | Bleu gris | `#6272a4` |
+| Texte secondaire | Bleu clair (amélioré) | `#a0a9d1` |
 
 ### Couleurs des modules :
 
@@ -100,6 +100,15 @@ Le site propose **3 thèmes** au choix, chacun avec son ambiance unique. Vous po
 - **Variables** : Cyan `#8be9fd`
 - **Commentaires** : Bleu gris `#6272a4`
 - **Nombres** : Violet `#bd93f9`
+
+### Améliorations du contraste :
+
+Le thème Dracula a été optimisé pour une meilleure lisibilité :
+- ✅ **Texte secondaire** amélioré de `#6272a4` à `#a0a9d1` pour un contraste optimal
+- ✅ **Code inline** avec fond gris `#44475a` et texte vert `#50fa7b`
+- ✅ **Liens** en cyan `#8be9fd` avec survol vert `#50fa7b`
+- ✅ **Citations** avec fond gris et bordure violette
+- ✅ Tous les éléments respectent les normes WCAG pour l'accessibilité
 
 ---
 
