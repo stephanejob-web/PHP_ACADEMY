@@ -221,7 +221,7 @@ class PHPHeroApp {
             const isComingSoon = module.comingSoon === true;
             moduleEl.className = `module module-${module.id}${isComingSoon ? ' coming-soon' : ''}`;
 
-            const onclickAttr = isComingSoon ? '' : `onclick="app.toggleModule(${moduleIndex})"`;
+            const onclickAttr = `onclick="app.toggleModule(${moduleIndex})"`;
             const comingSoonBadge = isComingSoon ? '<span class="coming-soon-badge">Bientôt</span>' : '';
 
             moduleEl.innerHTML = `
@@ -231,9 +231,9 @@ class PHPHeroApp {
                         <span>${module.title}</span>
                     </div>
                     ${comingSoonBadge}
-                    ${!isComingSoon ? `<svg class="module-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="module-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>` : ''}
+                    </svg>
                 </div>
                 <div class="module-lessons">
                     ${module.lessons.map(lesson => this.generateLessonItem(module, lesson)).join('')}
