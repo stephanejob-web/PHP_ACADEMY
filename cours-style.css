@@ -1460,12 +1460,54 @@ var {
 .lesson-item[data-lesson-id="introduction"] {
     padding-left: 4.5rem;
     position: relative;
+    overflow: hidden;
 }
 
+/* Arrière-plan binaire complet - Prend tout l'espace */
 .lesson-item[data-lesson-id="introduction"]::before {
+    content: '01010000 01001000 01010000 00100000 01001000 01100101 01110010 01101111 00100000 01000001 01100011 01100001 01100100 01100101 01101101 01111001 00100000 00101101 00100000 01001100 01100101 01100001 01110010 01101110 00100000 01010000 01001000 01010000 00100000 01010000 01110010 01101111 01100111 01110010 01100001 01101101 01101101 01101001 01101110 01100111 00100000 00101101 00100000 00110000 00110001 00110000 00110001 00100000 00110001 00110001 00110000 00110000 00100000 00110001 00110000 00110001 00110000 00100000 00110000 00110001 00110001 00110001 00100000 01000011 01101111 01100100 01100101 00100000 00110000 00110001 00110000 00110001 00110000 00110001 00110000 00110001 00100000 01010000 01001000 01010000 00100000 01001000 01100101 01110010 01101111 00100000 00110000 00110000 00110001 00110001 00110001 00110000 00110000 00110001 00100000 01000001 01100011 01100001 01100100 01100101 01101101 01111001 00100000 00110001 00110000 00110001 00110001 00110000 00110000 00110001 00110001';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 300%;
+    height: 100%;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.8rem;
+    line-height: 2.5;
+    color: rgba(99, 102, 241, 0.2);
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    z-index: 0;
+    animation: binaryScrollBackground 25s linear infinite;
+    pointer-events: none;
+    letter-spacing: 3px;
+}
+
+/* Seconde couche de binaire qui défile plus vite */
+.lesson-item[data-lesson-id="introduction"] .lesson-info::before {
+    content: '01001001 01101110 01110100 01110010 01101111 00100000 01010000 01001000 01010000 00100000 01000011 01101111 01100100 01101001 01101110 01100111 00100000 00110001 00110000 00110001 00110000 00100000 01010000 01110010 01101111 01100111 01110010 01100001 01101101 01101101 01101001 01101110 01100111 00100000 00110000 00110001 00110001 00110000 00100000 01001100 01100101 01100001 01110010 01101110 00100000 01010000 01001000 01010000 00100000 00110001 00110001 00110000 00110000 00110001 00110001 00100000 01000011 01101111 01100100 01100101 00100000 00110000 00110001 00110000 00110001 00110000 00110001 00110000 00110001';
+    position: absolute;
+    right: -100%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(99, 102, 241, 0.3);
+    white-space: nowrap;
+    z-index: 1;
+    animation: binarySlide 18s linear infinite;
+    pointer-events: none;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+/* Livre 3D - Page gauche */
+.lesson-item[data-lesson-id="introduction"] .lesson-item-title::before {
     content: '';
     position: absolute;
-    left: 1rem;
+    left: -3.5rem;
     top: 50%;
     transform: translateY(-50%) perspective(200px) rotateY(-15deg);
     width: 20px;
@@ -1477,13 +1519,14 @@ var {
         inset -2px 0 4px rgba(0, 0, 0, 0.2),
         inset 1px 0 2px rgba(255, 255, 255, 0.3);
     transform-style: preserve-3d;
+    z-index: 10;
 }
 
-/* Page droite du livre */
-.lesson-item[data-lesson-id="introduction"]::after {
+/* Livre 3D - Page droite */
+.lesson-item[data-lesson-id="introduction"] .lesson-item-title::after {
     content: '';
     position: absolute;
-    left: 2rem;
+    left: -2.5rem;
     top: 50%;
     transform: translateY(-50%) perspective(200px) rotateY(15deg);
     width: 20px;
@@ -1495,6 +1538,34 @@ var {
         inset 2px 0 4px rgba(0, 0, 0, 0.2),
         inset -1px 0 2px rgba(255, 255, 255, 0.3);
     transform-style: preserve-3d;
+    z-index: 10;
+}
+
+.lesson-item[data-lesson-id="introduction"] .lesson-item-title {
+    position: relative;
+}
+
+.lesson-item[data-lesson-id="introduction"] .lesson-info {
+    position: relative;
+    z-index: 5;
+}
+
+@keyframes binarySlide {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 120%;
+    }
+}
+
+@keyframes binaryScrollBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(33.33%);
+    }
 }
 
 /* Animations au hover */
@@ -1512,11 +1583,11 @@ var {
         0 0 12px rgba(96, 165, 250, 0.7);
 }
 
-.lesson-item[data-lesson-id="introduction"]:hover::before {
+.lesson-item[data-lesson-id="introduction"]:hover .lesson-item-title::before {
     transform: translateY(-50%) perspective(200px) rotateY(-20deg) translateX(-2px);
 }
 
-.lesson-item[data-lesson-id="introduction"]:hover::after {
+.lesson-item[data-lesson-id="introduction"]:hover .lesson-item-title::after {
     transform: translateY(-50%) perspective(200px) rotateY(20deg) translateX(2px);
 }
 
@@ -1530,8 +1601,8 @@ var {
     animation: serverPulse 2s ease-in-out infinite;
 }
 
-.lesson-item[data-lesson-id="introduction"].active::before,
-.lesson-item[data-lesson-id="introduction"].active::after {
+.lesson-item[data-lesson-id="introduction"].active .lesson-item-title::before,
+.lesson-item[data-lesson-id="introduction"].active .lesson-item-title::after {
     box-shadow:
         2px 3px 12px rgba(99, 102, 241, 0.6),
         0 0 20px rgba(139, 92, 246, 0.5),
@@ -1562,14 +1633,33 @@ var {
         inset 0 -2px 4px rgba(0, 0, 0, 0.3);
 }
 
-[data-theme="dark"] .lesson-item[data-lesson-id="introduction"]::before,
-[data-theme="dark"] .lesson-item[data-lesson-id="introduction"]::after,
-[data-theme="dracula"] .lesson-item[data-lesson-id="introduction"]::before,
-[data-theme="dracula"] .lesson-item[data-lesson-id="introduction"]::after {
+/* Thème sombre - Livre plus visible */
+[data-theme="dark"] .lesson-item[data-lesson-id="introduction"] .lesson-item-title::before,
+[data-theme="dark"] .lesson-item[data-lesson-id="introduction"] .lesson-item-title::after,
+[data-theme="dracula"] .lesson-item[data-lesson-id="introduction"] .lesson-item-title::before,
+[data-theme="dracula"] .lesson-item[data-lesson-id="introduction"] .lesson-item-title::after {
     box-shadow:
         2px 3px 12px rgba(99, 102, 241, 0.6),
         inset -2px 0 4px rgba(0, 0, 0, 0.3),
         inset 1px 0 2px rgba(255, 255, 255, 0.4);
+}
+
+/* Binaire plus visible en mode sombre - Arrière-plan */
+[data-theme="dark"] .lesson-item[data-lesson-id="introduction"]::before {
+    color: rgba(99, 102, 241, 0.3);
+}
+
+[data-theme="dracula"] .lesson-item[data-lesson-id="introduction"]::before {
+    color: rgba(189, 147, 249, 0.3);
+}
+
+/* Binaire plus visible en mode sombre - Couche du haut */
+[data-theme="dark"] .lesson-item[data-lesson-id="introduction"] .lesson-info::before {
+    color: rgba(99, 102, 241, 0.35);
+}
+
+[data-theme="dracula"] .lesson-item[data-lesson-id="introduction"] .lesson-info::before {
+    color: rgba(189, 147, 249, 0.35);
 }
 
 /* Contenu principal */
