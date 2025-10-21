@@ -40,10 +40,15 @@
     --module-html-light: #fed7aa;
     --module-css: #2965f1;
     --module-css-light: #bfdbfe;
+    --module-js-debutant: #f59e0b;
+    --module-js-debutant-light: #fef3c7;
+    --module-js-intermediaire: #d97706;
+    --module-js-intermediaire-light: #fed7aa;
 
     /* Scroll progress bar colors */
     --scroll-html: #e97528;
     --scroll-css: #2965f1;
+    --scroll-js: #f59e0b;
     --scroll-php: #ef4444;
     --scroll-poo: #7c3aed;
     --scroll-sql: #059669;
@@ -95,6 +100,10 @@
     --module-html-light: #3a2520;
     --module-css: #82aaff;
     --module-css-light: #1e3a50;
+    --module-js-debutant: #ffcb8b;
+    --module-js-debutant-light: #3a3220;
+    --module-js-intermediaire: #f59e0b;
+    --module-js-intermediaire-light: #3a2f20;
 
     /* Couleurs pour le code */
     --code-bg: #0b2942;
@@ -143,6 +152,10 @@
     --module-html-light: #3d362f;
     --module-css: #8be9fd;        /* Cyan pour CSS */
     --module-css-light: #2f363d;
+    --module-js-debutant: #f1fa8c;      /* Jaune pour JS Débutant */
+    --module-js-debutant-light: #3d3d2f;
+    --module-js-intermediaire: #ffb86c; /* Orange pour JS Intermédiaire */
+    --module-js-intermediaire-light: #3d362f;
 
     /* Couleurs pour le code - Dracula */
     --code-bg: #21222c;
@@ -997,6 +1010,106 @@ var {
     filter: drop-shadow(0 0 12px rgba(41, 101, 241, 0.5));
 }
 
+.module-javascript-debutant {
+    border-left-color: var(--module-js-debutant);
+    background: linear-gradient(135deg, var(--module-js-debutant-light) 0%, var(--bg-primary) 100%);
+}
+
+.module-javascript-debutant:hover {
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.25);
+}
+
+.module-javascript-debutant .module-header {
+    background: linear-gradient(135deg, var(--module-js-debutant-light) 0%, rgba(245, 158, 11, 0.05) 100%);
+    border-bottom: 2px solid rgba(245, 158, 11, 0.1);
+}
+
+.module-javascript-debutant .module-icon {
+    color: var(--module-js-debutant);
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.3));
+    transition: all 0.3s ease;
+}
+
+.module-javascript-debutant:hover .module-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.5));
+}
+
+.module-javascript-intermediaire {
+    border-left-color: var(--module-js-intermediaire);
+    background: linear-gradient(135deg, var(--module-js-intermediaire-light) 0%, var(--bg-primary) 100%);
+}
+
+.module-javascript-intermediaire:hover {
+    box-shadow: 0 8px 25px rgba(217, 119, 6, 0.25);
+}
+
+.module-javascript-intermediaire .module-header {
+    background: linear-gradient(135deg, var(--module-js-intermediaire-light) 0%, rgba(217, 119, 6, 0.05) 100%);
+    border-bottom: 2px solid rgba(217, 119, 6, 0.1);
+}
+
+.module-javascript-intermediaire .module-icon {
+    color: var(--module-js-intermediaire);
+    filter: drop-shadow(0 0 8px rgba(217, 119, 6, 0.3));
+    transition: all 0.3s ease;
+}
+
+.module-javascript-intermediaire:hover .module-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px rgba(217, 119, 6, 0.5));
+}
+
+.module-php-debutant {
+    border-left-color: var(--module-bases);
+    background: linear-gradient(135deg, var(--module-bases-light) 0%, var(--bg-primary) 100%);
+}
+
+.module-php-debutant:hover {
+    box-shadow: 0 8px 25px rgba(8, 145, 178, 0.25);
+}
+
+.module-php-debutant .module-header {
+    background: linear-gradient(135deg, var(--module-bases-light) 0%, rgba(8, 145, 178, 0.05) 100%);
+    border-bottom: 2px solid rgba(8, 145, 178, 0.1);
+}
+
+.module-php-debutant .module-icon {
+    color: var(--module-bases);
+    filter: drop-shadow(0 0 8px rgba(8, 145, 178, 0.3));
+    transition: all 0.3s ease;
+}
+
+.module-php-debutant:hover .module-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px rgba(8, 145, 178, 0.5));
+}
+
+.module-php-intermediaire {
+    border-left-color: var(--module-poo);
+    background: linear-gradient(135deg, var(--module-poo-light) 0%, var(--bg-primary) 100%);
+}
+
+.module-php-intermediaire:hover {
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.25);
+}
+
+.module-php-intermediaire .module-header {
+    background: linear-gradient(135deg, var(--module-poo-light) 0%, rgba(124, 58, 237, 0.05) 100%);
+    border-bottom: 2px solid rgba(124, 58, 237, 0.1);
+}
+
+.module-php-intermediaire .module-icon {
+    color: var(--module-poo);
+    filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.3));
+    transition: all 0.3s ease;
+}
+
+.module-php-intermediaire:hover .module-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.5));
+}
+
 /* Modules "Bientôt disponible" */
 .module.coming-soon {
     opacity: 0.6;
@@ -1232,6 +1345,42 @@ var {
     box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
 }
 
+.module-html .lesson-item:hover {
+    background: var(--module-html-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(233, 117, 40, 0.15);
+}
+
+.module-css .lesson-item:hover {
+    background: var(--module-css-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(41, 101, 241, 0.15);
+}
+
+.module-javascript-debutant .lesson-item:hover {
+    background: var(--module-js-debutant-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+}
+
+.module-javascript-intermediaire .lesson-item:hover {
+    background: var(--module-js-intermediaire-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.15);
+}
+
+.module-php-debutant .lesson-item:hover {
+    background: var(--module-bases-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(8, 145, 178, 0.15);
+}
+
+.module-php-intermediaire .lesson-item:hover {
+    background: var(--module-poo-light);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+}
+
 .lesson-item.active {
     background: var(--primary);
     color: var(--white);
@@ -1271,6 +1420,48 @@ var {
     background: linear-gradient(135deg, var(--module-git) 0%, rgba(220, 38, 38, 0.8) 100%);
     border-left-color: var(--module-git);
     box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
+}
+
+.module-html .lesson-item.active {
+    background: linear-gradient(135deg, var(--module-html) 0%, rgba(233, 117, 40, 0.8) 100%);
+    border-left-color: var(--module-html);
+    box-shadow: 0 4px 20px rgba(233, 117, 40, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
+}
+
+.module-css .lesson-item.active {
+    background: linear-gradient(135deg, var(--module-css) 0%, rgba(41, 101, 241, 0.8) 100%);
+    border-left-color: var(--module-css);
+    box-shadow: 0 4px 20px rgba(41, 101, 241, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
+}
+
+.module-javascript-debutant .lesson-item.active {
+    background: linear-gradient(135deg, var(--module-js-debutant) 0%, rgba(245, 158, 11, 0.8) 100%);
+    border-left-color: var(--module-js-debutant);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
+}
+
+.module-javascript-intermediaire .lesson-item.active {
+    background: linear-gradient(135deg, var(--module-js-intermediaire) 0%, rgba(217, 119, 6, 0.8) 100%);
+    border-left-color: var(--module-js-intermediaire);
+    box-shadow: 0 4px 20px rgba(217, 119, 6, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
+}
+
+.module-php-debutant .lesson-item.active {
+    background: linear-gradient(135deg, var(--module-bases) 0%, rgba(8, 145, 178, 0.8) 100%);
+    border-left-color: var(--module-bases);
+    box-shadow: 0 4px 20px rgba(8, 145, 178, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateX(8px) scale(1.02);
+}
+
+.module-php-intermediaire .lesson-item.active {
+    background: linear-gradient(135deg, var(--module-poo) 0%, rgba(124, 58, 237, 0.8) 100%);
+    border-left-color: var(--module-poo);
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     transform: translateX(8px) scale(1.02);
 }
 
