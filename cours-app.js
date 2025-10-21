@@ -229,6 +229,7 @@ class PHPHeroApp {
 
         return `
             <div class="lesson-item ${isCompleted ? 'completed' : ''} ${isActive ? 'active' : ''} ${isImportant ? 'important' : ''}"
+                 data-lesson-id="${lesson.id}"
                  onclick="app.loadLessonByIds('${module.id}', '${lesson.id}')">
                 <div class="lesson-info">
                     <div class="lesson-item-title">${lesson.title}</div>

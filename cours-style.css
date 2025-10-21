@@ -1298,52 +1298,278 @@ var {
     color: rgba(255,255,255,0.8);
 }
 
-/* Style spécial pour "Lis-moi d'abord" */
+/* Style spécial pour "Lis-moi d'abord" - Design premium */
 .lesson-item.important {
-    background: linear-gradient(135deg, #fef3c7, #fde68a);
-    border-left: 4px solid var(--accent);
-    font-weight: 700;
-    animation: pulse 2s infinite;
+    background: linear-gradient(to right, rgba(99, 102, 241, 0.08), rgba(168, 85, 247, 0.04));
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #6366f1, #a855f7) 1;
+    border-radius: 12px;
     position: relative;
+    padding-left: 4rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Indicateur "START" élégant */
+.lesson-item.important::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 .lesson-item.important::after {
-    content: '⚠️ IMPORTANT';
+    content: '→';
     position: absolute;
-    right: 1rem;
+    left: 1.6rem;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--accent);
-    color: var(--white);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.7rem;
+    color: #ffffff;
+    font-size: 1.2rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
+/* Titre élégant */
+.lesson-item.important .lesson-item-title {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.05rem;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.lesson-item.important .lesson-item-duration {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Hover sophistiqué */
 .lesson-item.important:hover {
-    background: linear-gradient(135deg, #fde68a, #fcd34d);
-    transform: translateX(5px);
+    background: linear-gradient(to right, rgba(99, 102, 241, 0.12), rgba(168, 85, 247, 0.08));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
 }
 
+.lesson-item.important:hover::before {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+
+/* État actif */
 .lesson-item.important.active {
-    background: linear-gradient(135deg, var(--accent), #d97706);
-    color: var(--white);
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    border: 2px solid transparent;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+.lesson-item.important.active::before {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .lesson-item.important.active::after {
-    background: rgba(255,255,255,0.3);
+    color: #ffffff;
 }
 
-@keyframes pulse {
+.lesson-item.important.active .lesson-item-title {
+    color: #ffffff;
+    background: none;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.lesson-item.important.active .lesson-item-duration {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Thème sombre */
+[data-theme="dark"] .lesson-item.important {
+    background: linear-gradient(to right, rgba(99, 102, 241, 0.15), rgba(168, 85, 247, 0.1));
+}
+
+[data-theme="dark"] .lesson-item.important:hover {
+    background: linear-gradient(to right, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.15));
+}
+
+[data-theme="dracula"] .lesson-item.important {
+    background: linear-gradient(to right, rgba(189, 147, 249, 0.15), rgba(255, 121, 198, 0.1));
+    border-image: linear-gradient(135deg, #bd93f9, #ff79c6) 1;
+}
+
+[data-theme="dracula"] .lesson-item.important::before {
+    background: linear-gradient(135deg, #bd93f9, #ff79c6);
+}
+
+[data-theme="dracula"] .lesson-item.important .lesson-item-title {
+    background: linear-gradient(135deg, #bd93f9, #ff79c6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* 🎨 Icônes 3D pour leçons spéciales */
+
+/* Icône 3D pour "Installer son environnement" - Serveur/PC */
+.lesson-item[data-lesson-id="installation"] {
+    padding-left: 4.5rem;
+    position: relative;
+}
+
+.lesson-item[data-lesson-id="installation"]::before {
+    content: '';
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 36px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 8px 8px 4px 4px;
+    box-shadow:
+        0 6px 20px rgba(59, 130, 246, 0.4),
+        inset 0 2px 4px rgba(255, 255, 255, 0.2),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Écran du serveur */
+.lesson-item[data-lesson-id="installation"]::after {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    top: calc(50% - 6px);
+    width: 34px;
+    height: 20px;
+    background: linear-gradient(180deg, #60a5fa 0%, #3b82f6 100%);
+    border-radius: 3px;
+    box-shadow:
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 8px rgba(96, 165, 250, 0.5);
+    z-index: 1;
+}
+
+/* Icône 3D pour "Introduction à la programmation" - Livre ouvert */
+.lesson-item[data-lesson-id="introduction"] {
+    padding-left: 4.5rem;
+    position: relative;
+}
+
+.lesson-item[data-lesson-id="introduction"]::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%) perspective(200px) rotateY(-15deg);
+    width: 20px;
+    height: 30px;
+    background: linear-gradient(to right, #6366f1 0%, #4f46e5 100%);
+    border-radius: 2px 0 0 2px;
+    box-shadow:
+        2px 3px 8px rgba(99, 102, 241, 0.4),
+        inset -2px 0 4px rgba(0, 0, 0, 0.2),
+        inset 1px 0 2px rgba(255, 255, 255, 0.3);
+    transform-style: preserve-3d;
+}
+
+/* Page droite du livre */
+.lesson-item[data-lesson-id="introduction"]::after {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%) perspective(200px) rotateY(15deg);
+    width: 20px;
+    height: 30px;
+    background: linear-gradient(to left, #8b5cf6 0%, #7c3aed 100%);
+    border-radius: 0 2px 2px 0;
+    box-shadow:
+        -2px 3px 8px rgba(139, 92, 246, 0.4),
+        inset 2px 0 4px rgba(0, 0, 0, 0.2),
+        inset -1px 0 2px rgba(255, 255, 255, 0.3);
+    transform-style: preserve-3d;
+}
+
+/* Animations au hover */
+.lesson-item[data-lesson-id="installation"]:hover::before {
+    transform: translateY(-50%) translateY(-3px);
+    box-shadow:
+        0 8px 25px rgba(59, 130, 246, 0.5),
+        inset 0 2px 4px rgba(255, 255, 255, 0.2),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-item[data-lesson-id="installation"]:hover::after {
+    box-shadow:
+        inset 0 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 12px rgba(96, 165, 250, 0.7);
+}
+
+.lesson-item[data-lesson-id="introduction"]:hover::before {
+    transform: translateY(-50%) perspective(200px) rotateY(-20deg) translateX(-2px);
+}
+
+.lesson-item[data-lesson-id="introduction"]:hover::after {
+    transform: translateY(-50%) perspective(200px) rotateY(20deg) translateX(2px);
+}
+
+/* État actif - Icônes brillantes */
+.lesson-item[data-lesson-id="installation"].active::before {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    box-shadow:
+        0 6px 20px rgba(96, 165, 250, 0.6),
+        0 0 30px rgba(96, 165, 250, 0.4),
+        inset 0 2px 4px rgba(255, 255, 255, 0.3);
+    animation: serverPulse 2s ease-in-out infinite;
+}
+
+.lesson-item[data-lesson-id="introduction"].active::before,
+.lesson-item[data-lesson-id="introduction"].active::after {
+    box-shadow:
+        2px 3px 12px rgba(99, 102, 241, 0.6),
+        0 0 20px rgba(139, 92, 246, 0.5),
+        inset -2px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes serverPulse {
     0%, 100% {
-        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+        box-shadow:
+            0 6px 20px rgba(96, 165, 250, 0.6),
+            0 0 30px rgba(96, 165, 250, 0.4),
+            inset 0 2px 4px rgba(255, 255, 255, 0.3);
     }
     50% {
-        box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+        box-shadow:
+            0 6px 20px rgba(96, 165, 250, 0.8),
+            0 0 40px rgba(96, 165, 250, 0.6),
+            inset 0 2px 4px rgba(255, 255, 255, 0.4);
     }
+}
+
+/* Thème sombre */
+[data-theme="dark"] .lesson-item[data-lesson-id="installation"]::before,
+[data-theme="dracula"] .lesson-item[data-lesson-id="installation"]::before {
+    box-shadow:
+        0 6px 20px rgba(59, 130, 246, 0.6),
+        inset 0 2px 4px rgba(255, 255, 255, 0.3),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .lesson-item[data-lesson-id="introduction"]::before,
+[data-theme="dark"] .lesson-item[data-lesson-id="introduction"]::after,
+[data-theme="dracula"] .lesson-item[data-lesson-id="introduction"]::before,
+[data-theme="dracula"] .lesson-item[data-lesson-id="introduction"]::after {
+    box-shadow:
+        2px 3px 12px rgba(99, 102, 241, 0.6),
+        inset -2px 0 4px rgba(0, 0, 0, 0.3),
+        inset 1px 0 2px rgba(255, 255, 255, 0.4);
 }
 
 /* Contenu principal */
