@@ -2079,15 +2079,15 @@ var {
 }
 
 [data-theme="dark"] .inline-code {
-    background: #0b2942;
+    /* background: #0b2942; */
     color: #82aaff;
     border-color: #1e3a50;
 }
 
 [data-theme="dracula"] .inline-code {
-    /* background: #44475a; */
+    background: #44475a;
     color: #50fa7b;
-    /* border-color: #6272a4; */
+    border-color: #6272a4;
 }
 
 /* Syntax highlighting - Winter is Coming colors */
@@ -2243,6 +2243,8 @@ var {
 
 [data-theme="dark"] .markdown-table {
     border-color: #1e3a50;
+
+    
 }
 
 [data-theme="dark"] .markdown-table th {
