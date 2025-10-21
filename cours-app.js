@@ -15,6 +15,7 @@ class PHPHeroApp {
 
         // Charger les données depuis localStorage
         this.loadProgress();
+        this.loadSidebarState();
         console.log('📦 Thème chargé depuis localStorage:', this.currentTheme);
 
         // Event listeners
@@ -61,9 +62,14 @@ class PHPHeroApp {
             this.openThemeModal();
         });
 
-        // Gestion du responsive sidebar
+        // Gestion du toggle sidebar (masquer/afficher)
         document.getElementById('sidebarToggle')?.addEventListener('click', () => {
-            document.getElementById('sidebar').classList.toggle('open');
+            this.toggleSidebar();
+        });
+
+        // Bouton flottant pour réafficher la sidebar
+        document.getElementById('floatingCoursesBtn')?.addEventListener('click', () => {
+            this.toggleSidebar();
         });
 
         // Gestion de la navigation avec les touches clavier
@@ -74,6 +80,24 @@ class PHPHeroApp {
                 this.navigateNext();
             }
         });
+    }
+
+    toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const isCollapsed = sidebar.classList.toggle('collapsed');
+
+        // Sauvegarder l'état dans localStorage
+        localStorage.setItem('sidebarCollapsed', isCollapsed);
+
+        console.log('Sidebar:', isCollapsed ? 'Masquée' : 'Affichée');
+    }
+
+    loadSidebarState() {
+        // Charger l'état de la sidebar depuis localStorage
+        const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+        if (isCollapsed) {
+            document.getElementById('sidebar')?.classList.add('collapsed');
+        }
     }
 
     loadProgress() {
