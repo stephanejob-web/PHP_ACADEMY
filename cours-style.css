@@ -1422,7 +1422,7 @@ var {
 }
 
 .exercise-challenge {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    background: #282A36;
     padding: 1.5rem;
     border: 3px solid #0ea5e9;
 }
