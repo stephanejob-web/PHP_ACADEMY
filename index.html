@@ -594,7 +594,7 @@
         }
 
         .theme-icon {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             transition: transform 0.3s ease;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
             z-index: 1;
@@ -2358,27 +2358,37 @@
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             color: white;
             border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 0.9rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
             cursor: pointer;
             z-index: 998;
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
-            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5),
+                        0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: none;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
+            white-space: nowrap;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            min-width: fit-content;
+        }
+
+        /* Position ajustée quand la bannière est visible */
+        body:has(.construction-banner:not(.hidden)) .banner-toggle-btn {
+            top: 85px;
         }
 
         .banner-toggle-btn.show {
             display: flex;
-            animation: slideInRight 0.3s ease;
+            animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         @keyframes slideInRight {
             from {
-                transform: translateX(100px);
+                transform: translateX(120px);
                 opacity: 0;
             }
             to {
@@ -2388,8 +2398,44 @@
         }
 
         .banner-toggle-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.5);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6),
+                        0 4px 12px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .banner-toggle-btn:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        /* Media query pour grands écrans */
+        @media (min-width: 1441px) {
+            .banner-toggle-btn {
+                top: 90px;
+                right: 3rem;
+                padding: 1rem 2.2rem;
+                font-size: 1.05rem;
+                border-radius: 35px;
+            }
+        }
+
+        @media (min-width: 1920px) {
+            .banner-toggle-btn {
+                top: 95px;
+                right: 5rem;
+                padding: 1.1rem 2.5rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Media query pour tablettes */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .banner-toggle-btn {
+                top: 85px;
+                right: 1.5rem;
+                padding: 0.85rem 1.5rem;
+                font-size: 0.95rem;
+            }
         }
 
         /* Adjust hero section when banner is visible */
@@ -2502,9 +2548,10 @@
             .banner-toggle-btn {
                 top: 80px;
                 right: 1rem;
-                padding: 0.7rem 1rem;
-                font-size: 0.75rem;
-                gap: 0.3rem;
+                padding: 0.8rem 1.2rem;
+                font-size: 0.85rem;
+                gap: 0.4rem;
+                border-radius: 20px;
             }
 
             .hero-with-banner {
@@ -2529,6 +2576,47 @@
                 font-size: 0.85rem;
                 padding: 0.6rem 1rem;
             }
+
+            /* Navbar optimisations pour petits écrans */
+            .nav-container {
+                padding: 0.8rem 0.8rem !important;
+            }
+
+            .logo {
+                font-size: 1.1rem !important;
+            }
+
+            .nav-cta-desktop {
+                padding: 0.5rem 0.8rem !important;
+                font-size: 0.8rem !important;
+            }
+
+            .nav-right {
+                gap: 0.4rem !important;
+            }
+
+            .theme-toggle-btn {
+                width: 36px !important;
+                height: 36px !important;
+            }
+
+            .mobile-menu-btn {
+                width: 36px !important;
+                height: 36px !important;
+            }
+
+            .theme-icon {
+                font-size: 0.8rem !important;
+            }
+
+            .banner-toggle-btn {
+                top: 75px !important;
+                right: 0.8rem !important;
+                padding: 0.7rem 1rem !important;
+                font-size: 0.8rem !important;
+                gap: 0.35rem !important;
+                border-radius: 18px !important;
+            }
         }
 
         /* Responsive - Tablettes */
@@ -2544,6 +2632,30 @@
 
             .hero-stats {
                 justify-content: center;
+            }
+        }
+
+        /* Responsive - Tablette (iPad) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .nav-container {
+                padding: 1rem 2rem;
+            }
+
+            .nav-cta {
+                padding: 0.65rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .theme-toggle-btn {
+                padding: 0.65rem 1rem !important;
+            }
+
+            .theme-icon {
+                font-size: 0.9rem;
+            }
+
+            .nav-right {
+                gap: 1.2rem;
             }
         }
 
@@ -2624,28 +2736,34 @@
             }
 
             .nav-cta-desktop {
-                display: none;
+                display: inline-flex !important;
+                padding: 0.6rem 1rem !important;
+                font-size: 0.85rem !important;
+                border-radius: 8px !important;
+                white-space: nowrap;
             }
 
             .nav-container {
-                padding: 1rem 1.5rem;
+                padding: 1rem 1rem;
             }
 
             .logo {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
+                flex-shrink: 0;
             }
 
             .nav-right {
                 display: flex;
                 align-items: center;
-                gap: 1rem;
+                gap: 0.5rem;
             }
 
             .theme-toggle-btn {
-                width: 44px;
-                height: 44px;
+                width: 40px;
+                height: 40px;
                 padding: 0.5rem !important;
                 justify-content: center;
+                flex-shrink: 0;
             }
 
             .theme-label,
@@ -2659,11 +2777,13 @@
 
             .theme-icon {
                 margin: 0 !important;
+                font-size: 0.85rem !important;
             }
 
             .mobile-menu-btn {
-                width: 44px;
-                height: 44px;
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
             }
 
             .hero {
@@ -3543,32 +3663,70 @@
             const showBannerBtn = document.getElementById('showBanner');
             const heroSection = document.getElementById('heroSection');
 
+            // Fonction pour mettre à jour le texte du bouton
+            function updateButtonText(isHidden) {
+                if (window.innerWidth > 768) {
+                    // Sur desktop, toujours afficher le bouton avec le texte approprié
+                    showBannerBtn.classList.add('show');
+                    if (isHidden) {
+                        showBannerBtn.innerHTML = '🚧 Afficher Infos Construction';
+                    } else {
+                        showBannerBtn.innerHTML = '🚧 Masquer Infos Construction';
+                    }
+                } else {
+                    // Sur mobile, afficher uniquement quand caché
+                    if (isHidden) {
+                        showBannerBtn.classList.add('show');
+                        showBannerBtn.innerHTML = '🚧 Infos Construction';
+                    } else {
+                        showBannerBtn.classList.remove('show');
+                    }
+                }
+            }
+
             // Vérifier l'état sauvegardé
             const bannerHidden = localStorage.getItem('bannerHidden') === 'true';
 
             // Appliquer l'état initial
             if (bannerHidden) {
                 banner.classList.add('hidden');
-                showBannerBtn.classList.add('show');
                 heroSection.classList.remove('hero-with-banner');
             } else {
                 heroSection.classList.add('hero-with-banner');
             }
+            updateButtonText(bannerHidden);
 
             // Masquer la bannière
             hideBannerBtn.addEventListener('click', function() {
                 banner.classList.add('hidden');
-                showBannerBtn.classList.add('show');
                 heroSection.classList.remove('hero-with-banner');
                 localStorage.setItem('bannerHidden', 'true');
+                updateButtonText(true);
             });
 
-            // Afficher la bannière
+            // Afficher/Masquer la bannière avec le bouton toggle
             showBannerBtn.addEventListener('click', function() {
-                banner.classList.remove('hidden');
-                showBannerBtn.classList.remove('show');
-                heroSection.classList.add('hero-with-banner');
-                localStorage.setItem('bannerHidden', 'false');
+                const isCurrentlyHidden = banner.classList.contains('hidden');
+
+                if (isCurrentlyHidden) {
+                    // Afficher la bannière
+                    banner.classList.remove('hidden');
+                    heroSection.classList.add('hero-with-banner');
+                    localStorage.setItem('bannerHidden', 'false');
+                    updateButtonText(false);
+                } else {
+                    // Masquer la bannière
+                    banner.classList.add('hidden');
+                    heroSection.classList.remove('hero-with-banner');
+                    localStorage.setItem('bannerHidden', 'true');
+                    updateButtonText(true);
+                }
+            });
+
+            // Mettre à jour au redimensionnement de la fenêtre
+            window.addEventListener('resize', function() {
+                const isHidden = banner.classList.contains('hidden');
+                updateButtonText(isHidden);
             });
         });
     </script>
