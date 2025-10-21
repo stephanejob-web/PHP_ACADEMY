@@ -35,7 +35,18 @@ const coursesData = {
                 prerequisites: ['01'],
                 description: 'Structure et contenu des pages web',
                 comingSoon: true,
-                lessons: []
+                lessons: [
+                    { id: 'intro-html', title: 'Introduction au HTML', file: 'HTML/01_introduction_html.md', duration: '15 min' },
+                    { id: 'structure-page', title: 'Structure d\'une page HTML', file: 'HTML/02_structure_page.md', duration: '20 min' },
+                    { id: 'balises-texte', title: 'Les balises de texte', file: 'HTML/03_balises_texte.md', duration: '25 min' },
+                    { id: 'liens-images', title: 'Les liens et images', file: 'HTML/04_liens_images.md', duration: '20 min' },
+                    { id: 'listes', title: 'Les listes', file: 'HTML/05_listes.md', duration: '15 min' },
+                    { id: 'tableaux', title: 'Les tableaux', file: 'HTML/06_tableaux.md', duration: '20 min' },
+                    { id: 'formulaires', title: 'Les formulaires', file: 'HTML/07_formulaires.md', duration: '30 min' },
+                    { id: 'html-semantique', title: 'HTML Sémantique', file: 'HTML/08_html_semantique.md', duration: '25 min' },
+                    { id: 'accessibilite', title: 'Accessibilité web', file: 'HTML/09_accessibilite.md', duration: '20 min' },
+                    { id: 'projet-html', title: '🏆 Projet Final : Site Vitrine Entreprise', file: 'HTML/10_projet_site_vitrine.md', duration: '60 min' }
+                ]
             },
             {
                 id: 'css',
@@ -48,7 +59,19 @@ const coursesData = {
                 prerequisites: ['02'],
                 description: 'Mise en forme et design des pages web',
                 comingSoon: true,
-                lessons: []
+                lessons: [
+                    { id: 'intro-css', title: 'Introduction au CSS', file: 'CSS/01_introduction_css.md', duration: '15 min' },
+                    { id: 'selecteurs', title: 'Sélecteurs et propriétés', file: 'CSS/02_selecteurs_proprietes.md', duration: '25 min' },
+                    { id: 'couleurs-typo', title: 'Couleurs et typographie', file: 'CSS/03_couleurs_typographie.md', duration: '20 min' },
+                    { id: 'modele-boite', title: 'Le modèle de boîte', file: 'CSS/04_modele_boite.md', duration: '30 min' },
+                    { id: 'positionnement', title: 'Positionnement et layout', file: 'CSS/05_positionnement_layout.md', duration: '35 min' },
+                    { id: 'flexbox', title: 'Flexbox', file: 'CSS/06_flexbox.md', duration: '30 min' },
+                    { id: 'grid', title: 'Grid CSS', file: 'CSS/07_grid.md', duration: '35 min' },
+                    { id: 'responsive', title: 'Responsive Design', file: 'CSS/08_responsive_design.md', duration: '30 min' },
+                    { id: 'animations', title: 'Animations et transitions', file: 'CSS/09_animations_transitions.md', duration: '25 min' },
+                    { id: 'bonnes-pratiques', title: 'Bonnes pratiques CSS', file: 'CSS/10_bonnes_pratiques.md', duration: '20 min' },
+                    { id: 'projet-css', title: '🏆 Projet Final : Design Complet', file: 'CSS/11_projet_design_complet.md', duration: '90 min' }
+                ]
             },
             {
                 id: 'javascript-debutant',
@@ -196,7 +219,18 @@ const coursesData = {
                 prerequisites: ['01'],
                 description: 'Structure et contenu des pages web',
                 comingSoon: true,
-                lessons: []
+                lessons: [
+                    { id: 'intro-html', title: 'Introduction au HTML', file: 'HTML/01_introduction_html.md', duration: '15 min' },
+                    { id: 'structure-page', title: 'Structure d\'une page HTML', file: 'HTML/02_structure_page.md', duration: '20 min' },
+                    { id: 'balises-texte', title: 'Les balises de texte', file: 'HTML/03_balises_texte.md', duration: '25 min' },
+                    { id: 'liens-images', title: 'Les liens et images', file: 'HTML/04_liens_images.md', duration: '20 min' },
+                    { id: 'listes', title: 'Les listes', file: 'HTML/05_listes.md', duration: '15 min' },
+                    { id: 'tableaux', title: 'Les tableaux', file: 'HTML/06_tableaux.md', duration: '20 min' },
+                    { id: 'formulaires', title: 'Les formulaires', file: 'HTML/07_formulaires.md', duration: '30 min' },
+                    { id: 'html-semantique', title: 'HTML Sémantique', file: 'HTML/08_html_semantique.md', duration: '25 min' },
+                    { id: 'accessibilite', title: 'Accessibilité web', file: 'HTML/09_accessibilite.md', duration: '20 min' },
+                    { id: 'projet-html', title: '🏆 Projet Final : Site Vitrine Entreprise', file: 'HTML/10_projet_site_vitrine.md', duration: '60 min' }
+                ]
             },
             {
                 id: 'css',
@@ -209,7 +243,19 @@ const coursesData = {
                 prerequisites: ['02'],
                 description: 'Mise en forme et design des pages web',
                 comingSoon: true,
-                lessons: []
+                lessons: [
+                    { id: 'intro-css', title: 'Introduction au CSS', file: 'CSS/01_introduction_css.md', duration: '15 min' },
+                    { id: 'selecteurs', title: 'Sélecteurs et propriétés', file: 'CSS/02_selecteurs_proprietes.md', duration: '25 min' },
+                    { id: 'couleurs-typo', title: 'Couleurs et typographie', file: 'CSS/03_couleurs_typographie.md', duration: '20 min' },
+                    { id: 'modele-boite', title: 'Le modèle de boîte', file: 'CSS/04_modele_boite.md', duration: '30 min' },
+                    { id: 'positionnement', title: 'Positionnement et layout', file: 'CSS/05_positionnement_layout.md', duration: '35 min' },
+                    { id: 'flexbox', title: 'Flexbox', file: 'CSS/06_flexbox.md', duration: '30 min' },
+                    { id: 'grid', title: 'Grid CSS', file: 'CSS/07_grid.md', duration: '35 min' },
+                    { id: 'responsive', title: 'Responsive Design', file: 'CSS/08_responsive_design.md', duration: '30 min' },
+                    { id: 'animations', title: 'Animations et transitions', file: 'CSS/09_animations_transitions.md', duration: '25 min' },
+                    { id: 'bonnes-pratiques', title: 'Bonnes pratiques CSS', file: 'CSS/10_bonnes_pratiques.md', duration: '20 min' },
+                    { id: 'projet-css', title: '🏆 Projet Final : Design Complet', file: 'CSS/11_projet_design_complet.md', duration: '90 min' }
+                ]
             },
             {
                 id: 'php-debutant',
@@ -322,7 +368,18 @@ const coursesData = {
                 prerequisites: ['01'],
                 description: 'Structure et contenu des pages web',
                 comingSoon: true,
-                lessons: []
+                lessons: [
+                    { id: 'intro-html', title: 'Introduction au HTML', file: 'HTML/01_introduction_html.md', duration: '15 min' },
+                    { id: 'structure-page', title: 'Structure d\'une page HTML', file: 'HTML/02_structure_page.md', duration: '20 min' },
+                    { id: 'balises-texte', title: 'Les balises de texte', file: 'HTML/03_balises_texte.md', duration: '25 min' },
+                    { id: 'liens-images', title: 'Les liens et images', file: 'HTML/04_liens_images.md', duration: '20 min' },
+                    { id: 'listes', title: 'Les listes', file: 'HTML/05_listes.md', duration: '15 min' },
+                    { id: 'tableaux', title: 'Les tableaux', file: 'HTML/06_tableaux.md', duration: '20 min' },
+                    { id: 'formulaires', title: 'Les formulaires', file: 'HTML/07_formulaires.md', duration: '30 min' },
+                    { id: 'html-semantique', title: 'HTML Sémantique', file: 'HTML/08_html_semantique.md', duration: '25 min' },
+                    { id: 'accessibilite', title: 'Accessibilité web', file: 'HTML/09_accessibilite.md', duration: '20 min' },
+                    { id: 'projet-html', title: '🏆 Projet Final : Site Vitrine Entreprise', file: 'HTML/10_projet_site_vitrine.md', duration: '60 min' }
+                ]
             },
             {
                 id: 'css',
@@ -335,7 +392,19 @@ const coursesData = {
                 prerequisites: ['02'],
                 description: 'Mise en forme et design des pages web',
                 comingSoon: true,
-                lessons: []
+                lessons: [
+                    { id: 'intro-css', title: 'Introduction au CSS', file: 'CSS/01_introduction_css.md', duration: '15 min' },
+                    { id: 'selecteurs', title: 'Sélecteurs et propriétés', file: 'CSS/02_selecteurs_proprietes.md', duration: '25 min' },
+                    { id: 'couleurs-typo', title: 'Couleurs et typographie', file: 'CSS/03_couleurs_typographie.md', duration: '20 min' },
+                    { id: 'modele-boite', title: 'Le modèle de boîte', file: 'CSS/04_modele_boite.md', duration: '30 min' },
+                    { id: 'positionnement', title: 'Positionnement et layout', file: 'CSS/05_positionnement_layout.md', duration: '35 min' },
+                    { id: 'flexbox', title: 'Flexbox', file: 'CSS/06_flexbox.md', duration: '30 min' },
+                    { id: 'grid', title: 'Grid CSS', file: 'CSS/07_grid.md', duration: '35 min' },
+                    { id: 'responsive', title: 'Responsive Design', file: 'CSS/08_responsive_design.md', duration: '30 min' },
+                    { id: 'animations', title: 'Animations et transitions', file: 'CSS/09_animations_transitions.md', duration: '25 min' },
+                    { id: 'bonnes-pratiques', title: 'Bonnes pratiques CSS', file: 'CSS/10_bonnes_pratiques.md', duration: '20 min' },
+                    { id: 'projet-css', title: '🏆 Projet Final : Design Complet', file: 'CSS/11_projet_design_complet.md', duration: '90 min' }
+                ]
             },
             {
                 id: 'php-debutant',
