@@ -5,6 +5,7 @@ class PHPHeroApp {
         this.currentLesson = null;
         this.lastLesson = null; // Dernière leçon visitée
         this.completedLessons = new Set();
+        this.bookmarkedLessons = []; // Leçons bookmarkées (avec timestamp)
         this.lastVisit = null; // Date de dernière visite
         this.parser = new MarkdownParser();
         this.init();
@@ -107,12 +108,14 @@ class PHPHeroApp {
                 const data = JSON.parse(saved);
                 this.currentTheme = data.currentTheme || null;
                 this.completedLessons = new Set(data.completedLessons || []);
+                this.bookmarkedLessons = data.bookmarkedLessons || [];
                 this.lastLesson = data.lastLesson || null;
                 this.lastVisit = data.lastVisit || null;
 
                 console.log('📊 Progression chargée:', {
                     theme: this.currentTheme,
                     lessonsCompleted: this.completedLessons.size,
+                    bookmarksCount: this.bookmarkedLessons.length,
                     lastLesson: this.lastLesson,
                     lastVisit: this.lastVisit
                 });
@@ -127,6 +130,7 @@ class PHPHeroApp {
             const data = {
                 currentTheme: this.currentTheme,
                 completedLessons: Array.from(this.completedLessons),
+                bookmarkedLessons: this.bookmarkedLessons,
                 lastLesson: this.lastLesson,
                 lastVisit: new Date().toISOString()
             };
@@ -216,6 +220,41 @@ class PHPHeroApp {
         const container = document.getElementById('sidebarContent');
         container.innerHTML = '';
 
+        // Section Favoris
+        if (this.bookmarkedLessons.length > 0) {
+            const bookmarksSection = document.createElement('div');
+            bookmarksSection.className = 'bookmarks-section';
+
+            const recentBookmarks = this.getRecentBookmarks(3);
+            const hasMore = this.bookmarkedLessons.length > 3;
+
+            bookmarksSection.innerHTML = `
+                <div class="bookmarks-header">
+                    <div class="bookmarks-title">
+                        <span class="bookmarks-icon">📌</span>
+                        <span>Mes Favoris</span>
+                        <span class="bookmarks-count">(${this.bookmarkedLessons.length})</span>
+                    </div>
+                    ${hasMore ? `<button class="bookmarks-view-all" onclick="app.openBookmarksPanel()" title="Voir tous les favoris">↗</button>` : ''}
+                </div>
+                <div class="bookmarks-list">
+                    ${recentBookmarks.map(bookmark => `
+                        <div class="bookmark-quick-item" onclick="app.loadBookmarkedLesson('${bookmark.themeId}', '${bookmark.moduleId}', '${bookmark.lessonId}')">
+                            <span class="bookmark-quick-icon">⭐</span>
+                            <span class="bookmark-quick-title">${bookmark.lessonTitle}</span>
+                        </div>
+                    `).join('')}
+                    ${hasMore ? `
+                        <div class="bookmarks-see-more" onclick="app.openBookmarksPanel()">
+                            • • • Voir tous (${this.bookmarkedLessons.length})
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+
+            container.appendChild(bookmarksSection);
+        }
+
         theme.modules.forEach((module, moduleIndex) => {
             const moduleEl = document.createElement('div');
             const isComingSoon = module.comingSoon === true;
@@ -243,6 +282,7 @@ class PHPHeroApp {
         });
 
         this.updateProgressBar();
+        this.updateFloatingBookmarksButton();
     }
 
     generateLessonItem(module, lesson) {
@@ -250,15 +290,22 @@ class PHPHeroApp {
         const isCompleted = this.completedLessons.has(lessonKey);
         const isActive = this.currentLesson?.id === lesson.id;
         const isImportant = lesson.id === 'lis-moi';
+        const isBookmarked = this.isBookmarked(this.currentTheme, module.id, lesson.id);
 
         return `
             <div class="lesson-item ${isCompleted ? 'completed' : ''} ${isActive ? 'active' : ''} ${isImportant ? 'important' : ''}"
-                 data-lesson-id="${lesson.id}"
-                 onclick="app.loadLessonByIds('${module.id}', '${lesson.id}')">
-                <div class="lesson-info">
+                 data-lesson-id="${lesson.id}">
+                <div class="lesson-info" onclick="app.loadLessonByIds('${module.id}', '${lesson.id}')">
                     <div class="lesson-item-title">${lesson.title}</div>
                     <div class="lesson-item-duration">${lesson.duration}</div>
                 </div>
+                <button class="lesson-bookmark-btn ${isBookmarked ? 'bookmarked' : ''}"
+                        onclick="event.stopPropagation(); app.toggleBookmark('${this.currentTheme}', '${module.id}', '${lesson.id}', '${lesson.title.replace(/'/g, "\\'")}', '${module.title.replace(/'/g, "\\'")}')"
+                        title="${isBookmarked ? 'Retirer des favoris' : 'Ajouter aux favoris'}">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="${isBookmarked ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </button>
             </div>
         `;
     }
@@ -350,6 +397,9 @@ class PHPHeroApp {
 
         // Mettre à jour le bouton "Marquer comme terminé"
         this.updateCompleteButton();
+
+        // Mettre à jour le bouton "Bookmark"
+        this.updateBookmarkButton();
 
         // Mettre à jour la couleur de la barre de progression
         if (typeof window.updateScrollProgressColor === 'function') {
@@ -488,6 +538,245 @@ class PHPHeroApp {
 
         document.getElementById('progressFillMini').style.width = `${percent}%`;
         document.getElementById('progressPercent').textContent = `${percent}%`;
+    }
+
+    // ========== GESTION DES BOOKMARKS ==========
+
+    toggleBookmark(themeId, moduleId, lessonId, lessonTitle, moduleTitle) {
+        const bookmarkKey = `${themeId}-${moduleId}-${lessonId}`;
+        const existingIndex = this.bookmarkedLessons.findIndex(b => b.key === bookmarkKey);
+
+        if (existingIndex !== -1) {
+            // Retirer le bookmark
+            this.bookmarkedLessons.splice(existingIndex, 1);
+            this.showToast('🗑️ Retiré des favoris', 'info');
+            console.log('📌 Bookmark retiré:', bookmarkKey);
+        } else {
+            // Ajouter le bookmark (max 15)
+            if (this.bookmarkedLessons.length >= 15) {
+                this.showToast('⚠️ Maximum 15 favoris atteint', 'warning');
+                return;
+            }
+
+            this.bookmarkedLessons.unshift({
+                key: bookmarkKey,
+                themeId,
+                moduleId,
+                lessonId,
+                lessonTitle,
+                moduleTitle,
+                timestamp: new Date().toISOString()
+            });
+
+            this.showToast('⭐ Ajouté aux favoris', 'success');
+            console.log('📌 Bookmark ajouté:', bookmarkKey);
+        }
+
+        this.saveProgress();
+        this.updateSidebar();
+        this.updateBookmarksPanel();
+        this.updateBookmarkButton();
+        this.updateFloatingBookmarksButton();
+    }
+
+    isBookmarked(themeId, moduleId, lessonId) {
+        const bookmarkKey = `${themeId}-${moduleId}-${lessonId}`;
+        return this.bookmarkedLessons.some(b => b.key === bookmarkKey);
+    }
+
+    getRecentBookmarks(count = 3) {
+        return this.bookmarkedLessons.slice(0, count);
+    }
+
+    updateBookmarkButton() {
+        if (!this.currentLesson) return;
+
+        const btn = document.getElementById('btnBookmark');
+        if (!btn) return;
+
+        const isBookmarked = this.isBookmarked(
+            this.currentTheme,
+            this.currentLesson.moduleId,
+            this.currentLesson.id
+        );
+
+        if (isBookmarked) {
+            btn.classList.add('bookmarked');
+            btn.innerHTML = `
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                Favori
+            `;
+        } else {
+            btn.classList.remove('bookmarked');
+            btn.innerHTML = `
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                Ajouter aux favoris
+            `;
+        }
+    }
+
+    openBookmarksPanel() {
+        const panel = document.getElementById('bookmarksPanel');
+        if (panel) {
+            panel.classList.add('open');
+            this.updateBookmarksPanel();
+        }
+    }
+
+    closeBookmarksPanel() {
+        const panel = document.getElementById('bookmarksPanel');
+        if (panel) {
+            panel.classList.remove('open');
+        }
+    }
+
+    updateBookmarksPanel() {
+        const container = document.getElementById('bookmarksPanelContent');
+        if (!container) return;
+
+        if (this.bookmarkedLessons.length === 0) {
+            container.innerHTML = `
+                <div class="empty-bookmarks">
+                    <div class="empty-icon">⭐</div>
+                    <p>Aucun favori pour le moment</p>
+                    <p class="empty-hint">Cliquez sur ⭐ pour ajouter une leçon à vos favoris</p>
+                </div>
+            `;
+            return;
+        }
+
+        // Grouper par module
+        const groupedBookmarks = {};
+        this.bookmarkedLessons.forEach(bookmark => {
+            if (!groupedBookmarks[bookmark.moduleTitle]) {
+                groupedBookmarks[bookmark.moduleTitle] = [];
+            }
+            groupedBookmarks[bookmark.moduleTitle].push(bookmark);
+        });
+
+        let html = '';
+        Object.entries(groupedBookmarks).forEach(([moduleTitle, bookmarks]) => {
+            html += `
+                <div class="bookmarks-group">
+                    <div class="bookmarks-group-title">${moduleTitle}</div>
+                    ${bookmarks.map(bookmark => this.generateBookmarkItem(bookmark)).join('')}
+                </div>
+            `;
+        });
+
+        container.innerHTML = html;
+    }
+
+    generateBookmarkItem(bookmark) {
+        // Calculer si c'est récent (<24h)
+        const isRecent = (new Date() - new Date(bookmark.timestamp)) < 24 * 60 * 60 * 1000;
+        const recentBadge = isRecent ? '<span class="recent-badge">🔥 Récent</span>' : '';
+
+        return `
+            <div class="bookmark-item" onclick="app.loadBookmarkedLesson('${bookmark.themeId}', '${bookmark.moduleId}', '${bookmark.lessonId}')">
+                <div class="bookmark-info">
+                    <div class="bookmark-title">⭐ ${bookmark.lessonTitle}</div>
+                    ${recentBadge}
+                </div>
+                <button class="bookmark-remove" onclick="event.stopPropagation(); app.removeBookmark('${bookmark.key}')" title="Retirer des favoris">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        `;
+    }
+
+    removeBookmark(bookmarkKey) {
+        const index = this.bookmarkedLessons.findIndex(b => b.key === bookmarkKey);
+        if (index !== -1) {
+            this.bookmarkedLessons.splice(index, 1);
+            this.saveProgress();
+            this.updateSidebar();
+            this.updateBookmarksPanel();
+            this.updateBookmarkButton();
+            this.updateFloatingBookmarksButton();
+            this.showToast('🗑️ Retiré des favoris', 'info');
+        }
+    }
+
+    loadBookmarkedLesson(themeId, moduleId, lessonId) {
+        // Charger le thème si nécessaire
+        if (this.currentTheme !== themeId) {
+            this.loadTheme(themeId);
+        }
+
+        // Charger la leçon
+        const theme = coursesData[themeId];
+        const module = theme.modules.find(m => m.id === moduleId);
+        const lesson = module?.lessons.find(l => l.id === lessonId);
+
+        if (module && lesson) {
+            this.loadLesson(module, lesson);
+            this.closeBookmarksPanel();
+        }
+    }
+
+    clearAllBookmarks() {
+        if (this.bookmarkedLessons.length === 0) {
+            this.showToast('ℹ️ Aucun favori à supprimer', 'info');
+            return;
+        }
+
+        // Demander confirmation
+        const count = this.bookmarkedLessons.length;
+        const confirmation = confirm(`Voulez-vous vraiment supprimer tous vos favoris (${count}) ?\n\nCette action est irréversible.`);
+
+        if (confirmation) {
+            this.bookmarkedLessons = [];
+            this.saveProgress();
+            this.updateSidebar();
+            this.updateBookmarksPanel();
+            this.updateBookmarkButton();
+            this.updateFloatingBookmarksButton();
+            this.showToast(`🗑️ ${count} favori${count > 1 ? 's supprimés' : ' supprimé'}`, 'info');
+            console.log('🗑️ Tous les bookmarks ont été supprimés');
+        }
+    }
+
+    showToast(message, type = 'info') {
+        // Créer le toast s'il n'existe pas
+        let toast = document.getElementById('toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'toast';
+            toast.className = 'toast';
+            document.body.appendChild(toast);
+        }
+
+        // Définir le type et le message
+        toast.className = `toast ${type}`;
+        toast.textContent = message;
+        toast.classList.add('show');
+
+        // Retirer après 3 secondes
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+
+    updateFloatingBookmarksButton() {
+        const btn = document.getElementById('floatingBookmarksBtn');
+        const count = document.getElementById('floatingBookmarksCount');
+
+        if (!btn || !count) return;
+
+        if (this.bookmarkedLessons.length > 0) {
+            btn.style.display = 'flex';
+            count.textContent = this.bookmarkedLessons.length;
+        } else {
+            btn.style.display = 'none';
+        }
     }
 
     showLoading() {
