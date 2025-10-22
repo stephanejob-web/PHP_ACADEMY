@@ -206,6 +206,12 @@
                                 </svg>
                                 Marquer comme terminé
                             </button>
+                            <button class="btn-bookmark" id="btnBookmark" onclick="app.toggleBookmark(app.currentTheme, app.currentLesson.moduleId, app.currentLesson.id, app.currentLesson.title, coursesData[app.currentTheme].modules.find(m => m.id === app.currentLesson.moduleId).title)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                                Ajouter aux favoris
+                            </button>
                             <button class="btn-nav btn-next" id="btnNext" onclick="navigateNext()">
                                 Suivant
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -260,6 +266,36 @@
             </div>
         </div>
     </div>
+
+    <!-- Panneau Bookmarks (Slide-in) -->
+    <div class="bookmarks-panel" id="bookmarksPanel">
+        <div class="bookmarks-panel-overlay" onclick="app.closeBookmarksPanel()"></div>
+        <div class="bookmarks-panel-content">
+            <div class="bookmarks-panel-header">
+                <h2>📌 Mes Favoris</h2>
+                <div class="bookmarks-panel-actions">
+                    <button class="bookmarks-clear-all" id="bookmarksClearAll" onclick="app.clearAllBookmarks()" title="Supprimer tous les favoris">
+                        🗑️ Tout supprimer
+                    </button>
+                    <button class="bookmarks-panel-close" onclick="app.closeBookmarksPanel()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="bookmarks-panel-body" id="bookmarksPanelContent">
+                <!-- Contenu généré par JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton flottant Favoris (Mobile) -->
+    <button class="floating-bookmarks-btn" id="floatingBookmarksBtn" onclick="app.openBookmarksPanel()" title="Mes favoris" style="display: none;">
+        ⭐
+        <span class="floating-bookmarks-count" id="floatingBookmarksCount">0</span>
+    </button>
 
     <!-- Scripts -->
     <script src="mobile-menu.js"></script>
