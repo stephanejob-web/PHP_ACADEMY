@@ -131,6 +131,7 @@ const coursesData = {
                 prerequisites: ['06'],
                 description: 'Maîtrise la Programmation Orientée Objet (POO)',
                 lessons: [
+                    { id: 'poo-0', title: '⚠️ Lis-moi avant de commencer', file: '02_PROGRAMMATION_ORIENTEE_OBJET/00_introduction.md', duration: '10 min' },
                     { id: 'poo-1', title: 'Introduction POO', file: '02_PROGRAMMATION_ORIENTEE_OBJET/01_poo_macon.md', duration: '30 min' },
                     { id: 'poo-2', title: 'Classes et Objets', file: '02_PROGRAMMATION_ORIENTEE_OBJET/02_poo_macon.md', duration: '35 min' },
                     { id: 'poo-3', title: 'Héritage', file: '02_PROGRAMMATION_ORIENTEE_OBJET/03_poo_macon.md', duration: '40 min' },
@@ -289,6 +290,7 @@ const coursesData = {
                 prerequisites: ['06'],
                 description: 'Maîtrise la Programmation Orientée Objet (POO)',
                 lessons: [
+                    { id: 'poo-0', title: '⚠️ Lis-moi avant de commencer', file: '02_PROGRAMMATION_ORIENTEE_OBJET/00_introduction.md', duration: '10 min' },
                     { id: 'poo-1', title: 'Introduction POO', file: '02_PROGRAMMATION_ORIENTEE_OBJET/01_poo_cuisinier.md', duration: '30 min' },
                     { id: 'poo-2', title: 'Classes et Objets', file: '02_PROGRAMMATION_ORIENTEE_OBJET/02_poo_cuisinier.md', duration: '35 min' },
                     { id: 'poo-3', title: 'Héritage', file: '02_PROGRAMMATION_ORIENTEE_OBJET/03_poo_cuisinier.md', duration: '40 min' },
@@ -438,6 +440,7 @@ const coursesData = {
                 prerequisites: ['06'],
                 description: 'Maîtrise la Programmation Orientée Objet (POO)',
                 lessons: [
+                    { id: 'poo-0', title: '⚠️ Lis-moi avant de commencer', file: '02_PROGRAMMATION_ORIENTEE_OBJET/00_introduction.md', duration: '10 min' },
                     { id: 'poo-1', title: 'Introduction POO', file: '02_PROGRAMMATION_ORIENTEE_OBJET/01_poo_gamer.md', duration: '30 min' },
                     { id: 'poo-2', title: 'Classes et Objets', file: '02_PROGRAMMATION_ORIENTEE_OBJET/02_poo_gamer.md', duration: '35 min' },
                     { id: 'poo-3', title: 'Héritage', file: '02_PROGRAMMATION_ORIENTEE_OBJET/03_poo_gamer.md', duration: '40 min' },
