@@ -502,107 +502,113 @@
             font-size: 1.15rem !important;
             font-weight: 600 !important;
             letter-spacing: -0.2px !important;
+            color: white !important;
+            text-shadow:
+                0 1px 2px rgba(0, 0, 0, 0.3),
+                0 0 8px rgba(255, 255, 255, 0.4),
+                1px 1px 0 rgba(255, 255, 255, 0.3),
+                -1px -1px 0 rgba(0, 0, 0, 0.2) !important;
 
-            /* Liquid Glass Effect - Fond coloré transparent */
+            /* Liquid Glass Effect - Verre vraiment transparent */
             background: linear-gradient(
                 145deg,
-                rgba(59, 130, 246, 0.4) 0%,
-                rgba(37, 99, 235, 0.5) 50%,
-                rgba(29, 78, 216, 0.45) 100%
+                rgba(255, 255, 255, 0.08) 0%,
+                rgba(255, 255, 255, 0.12) 50%,
+                rgba(255, 255, 255, 0.06) 100%
             ) !important;
-            backdrop-filter: blur(30px) saturate(180%) brightness(1.1) !important;
-            -webkit-backdrop-filter: blur(30px) saturate(180%) brightness(1.1) !important;
+            backdrop-filter: blur(40px) saturate(200%) brightness(1.15) !important;
+            -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(1.15) !important;
 
-            /* Bordure lumineuse supérieure */
+            /* Bordure lumineuse supérieure - Effet de verre */
             border: 1px solid transparent !important;
-            border-top-color: rgba(255, 255, 255, 0.8) !important;
-            border-left-color: rgba(255, 255, 255, 0.5) !important;
-            border-right-color: rgba(255, 255, 255, 0.2) !important;
-            border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+            border-top-color: rgba(255, 255, 255, 0.5) !important;
+            border-left-color: rgba(255, 255, 255, 0.35) !important;
+            border-right-color: rgba(255, 255, 255, 0.12) !important;
+            border-bottom-color: rgba(255, 255, 255, 0.05) !important;
 
             box-shadow:
-                0 8px 32px rgba(37, 99, 235, 0.4),
-                0 4px 16px rgba(37, 99, 235, 0.3),
-                0 2px 8px rgba(59, 130, 246, 0.2),
-                inset 0 1px 1px rgba(255, 255, 255, 0.8),
-                inset 0 -1px 2px rgba(0, 0, 0, 0.1) !important;
+                0 8px 32px rgba(0, 0, 0, 0.12),
+                0 4px 16px rgba(0, 0, 0, 0.08),
+                0 2px 8px rgba(0, 0, 0, 0.05),
+                inset 0 1px 1px rgba(255, 255, 255, 0.5),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.12) !important;
 
             overflow: visible !important;
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
             animation: liquid-glass-float 4s ease-in-out infinite !important;
         }
 
-        /* Halo lumineux sous le bouton */
+        /* Halo lumineux sous le bouton - Subtil pour transparence */
         .nav-cta-desktop::before {
             content: '';
             position: absolute;
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            background: linear-gradient(
-                145deg,
-                rgba(147, 197, 253, 0.6) 0%,
-                rgba(59, 130, 246, 0.5) 50%,
-                rgba(37, 99, 235, 0.4) 100%
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: radial-gradient(
+                ellipse at 50% 50%,
+                rgba(255, 255, 255, 0.25) 0%,
+                rgba(255, 255, 255, 0.12) 30%,
+                transparent 70%
             );
             border-radius: 50px;
-            opacity: 0.6;
-            filter: blur(20px);
+            opacity: 0.4;
+            filter: blur(18px);
             z-index: -1;
             animation: glow-pulse 3s ease-in-out infinite;
         }
 
         @keyframes glow-pulse {
             0%, 100% {
-                opacity: 0.5;
-                filter: blur(20px);
+                opacity: 0.3;
+                filter: blur(18px);
             }
             50% {
-                opacity: 0.8;
-                filter: blur(25px);
+                opacity: 0.6;
+                filter: blur(22px);
             }
         }
 
-        /* Animation de flottement avec effet liquide */
+        /* Animation de flottement avec effet verre transparent */
         @keyframes liquid-glass-float {
             0%, 100% {
                 transform: translateY(0);
                 box-shadow:
-                    0 8px 32px rgba(37, 99, 235, 0.4),
-                    0 4px 16px rgba(37, 99, 235, 0.3),
-                    0 2px 8px rgba(59, 130, 246, 0.2),
-                    inset 0 1px 1px rgba(255, 255, 255, 0.8),
-                    inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+                    0 8px 32px rgba(0, 0, 0, 0.12),
+                    0 4px 16px rgba(0, 0, 0, 0.08),
+                    0 2px 8px rgba(0, 0, 0, 0.05),
+                    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+                    inset 0 -1px 2px rgba(0, 0, 0, 0.12);
             }
             50% {
                 transform: translateY(-5px);
                 box-shadow:
-                    0 12px 40px rgba(37, 99, 235, 0.45),
-                    0 6px 20px rgba(37, 99, 235, 0.35),
-                    0 3px 12px rgba(59, 130, 246, 0.25),
-                    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+                    0 12px 40px rgba(0, 0, 0, 0.16),
+                    0 6px 20px rgba(0, 0, 0, 0.1),
+                    0 3px 12px rgba(0, 0, 0, 0.08),
+                    inset 0 1px 1px rgba(255, 255, 255, 0.6),
                     inset 0 -1px 2px rgba(0, 0, 0, 0.15);
             }
         }
 
-        /* Reflet de verre brillant sur le dessus */
+        /* Reflet de verre brillant sur le dessus - Plus subtil */
         .nav-cta-desktop::after {
             content: '';
             position: absolute;
             top: 1px;
-            left: 4%;
-            right: 4%;
-            height: 45%;
+            left: 6%;
+            right: 6%;
+            height: 42%;
             background: linear-gradient(
                 180deg,
-                rgba(255, 255, 255, 0.9) 0%,
-                rgba(255, 255, 255, 0.4) 30%,
-                rgba(255, 255, 255, 0.1) 60%,
+                rgba(255, 255, 255, 0.6) 0%,
+                rgba(255, 255, 255, 0.25) 30%,
+                rgba(255, 255, 255, 0.06) 60%,
                 transparent 100%
             );
             border-radius: 50px 50px 80px 80px / 50px 50px 40px 40px;
-            opacity: 0.7;
+            opacity: 0.85;
             filter: blur(0.5px);
             pointer-events: none;
             animation: glass-shimmer 4s ease-in-out infinite;
@@ -610,11 +616,11 @@
 
         @keyframes glass-shimmer {
             0%, 100% {
-                opacity: 0.7;
+                opacity: 0.85;
                 transform: translateY(0);
             }
             50% {
-                opacity: 0.85;
+                opacity: 0.95;
                 transform: translateY(1px);
             }
         }
@@ -639,33 +645,35 @@
             box-shadow: 0 6px 25px rgba(37, 99, 235, 0.4);
         }
 
-        /* Effet hover - Liquid glass intensifié */
+        /* Effet hover - Verre transparent plus lumineux */
         .nav-cta-desktop:hover {
             transform: translateY(-8px) scale(1.03);
             background: linear-gradient(
                 145deg,
-                rgba(59, 130, 246, 0.5) 0%,
-                rgba(37, 99, 235, 0.6) 50%,
-                rgba(29, 78, 216, 0.55) 100%
+                rgba(255, 255, 255, 0.16) 0%,
+                rgba(255, 255, 255, 0.22) 50%,
+                rgba(255, 255, 255, 0.12) 100%
             ) !important;
-            border-top-color: rgba(255, 255, 255, 0.95) !important;
-            border-left-color: rgba(255, 255, 255, 0.65) !important;
+            backdrop-filter: blur(40px) saturate(220%) brightness(1.25) !important;
+            -webkit-backdrop-filter: blur(40px) saturate(220%) brightness(1.25) !important;
+            border-top-color: rgba(255, 255, 255, 0.7) !important;
+            border-left-color: rgba(255, 255, 255, 0.5) !important;
             box-shadow:
-                0 16px 48px rgba(37, 99, 235, 0.5),
-                0 8px 24px rgba(37, 99, 235, 0.4),
-                0 4px 12px rgba(59, 130, 246, 0.3),
-                inset 0 1px 1px rgba(255, 255, 255, 0.95),
-                inset 0 -1px 2px rgba(0, 0, 0, 0.15) !important;
+                0 16px 48px rgba(0, 0, 0, 0.2),
+                0 8px 24px rgba(0, 0, 0, 0.12),
+                0 4px 12px rgba(0, 0, 0, 0.08),
+                inset 0 1px 1px rgba(255, 255, 255, 0.7),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.18) !important;
             animation: none !important;
         }
 
         .nav-cta-desktop:hover::before {
-            opacity: 1;
-            filter: blur(28px);
+            opacity: 0.8;
+            filter: blur(25px);
         }
 
         .nav-cta-desktop:hover::after {
-            opacity: 0.9;
+            opacity: 1;
         }
 
         .nav-cta:active {
@@ -676,16 +684,56 @@
             transform: translateY(-4px) scale(0.98);
             background: linear-gradient(
                 145deg,
-                rgba(59, 130, 246, 0.55) 0%,
-                rgba(37, 99, 235, 0.65) 50%,
-                rgba(29, 78, 216, 0.6) 100%
+                rgba(255, 255, 255, 0.18) 0%,
+                rgba(255, 255, 255, 0.25) 50%,
+                rgba(255, 255, 255, 0.15) 100%
             ) !important;
+            backdrop-filter: blur(40px) saturate(200%) brightness(1.2) !important;
+            -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(1.2) !important;
             box-shadow:
-                0 10px 36px rgba(37, 99, 235, 0.45),
-                0 5px 18px rgba(37, 99, 235, 0.35),
-                0 2px 10px rgba(59, 130, 246, 0.25),
-                inset 0 1px 1px rgba(255, 255, 255, 0.9),
-                inset 0 -1px 2px rgba(0, 0, 0, 0.2) !important;
+                0 10px 36px rgba(0, 0, 0, 0.18),
+                0 5px 18px rgba(0, 0, 0, 0.1),
+                0 2px 10px rgba(0, 0, 0, 0.06),
+                inset 0 1px 1px rgba(255, 255, 255, 0.65),
+                inset 0 -1px 2px rgba(0, 0, 0, 0.22) !important;
+        }
+
+        /* Adaptation du bouton pour les thèmes clairs */
+        [data-theme="light"] .nav-cta-desktop,
+        [data-theme="minimal"] .nav-cta-desktop,
+        body:not([data-theme]) .nav-cta-desktop {
+            color: rgba(0, 0, 0, 0.85) !important;
+            text-shadow:
+                0 1px 2px rgba(255, 255, 255, 0.8),
+                0 0 8px rgba(255, 255, 255, 0.6),
+                1px 1px 0 rgba(255, 255, 255, 0.5),
+                -1px -1px 0 rgba(0, 0, 0, 0.15) !important;
+            background: linear-gradient(
+                145deg,
+                rgba(0, 0, 0, 0.04) 0%,
+                rgba(0, 0, 0, 0.08) 50%,
+                rgba(0, 0, 0, 0.03) 100%
+            ) !important;
+            backdrop-filter: blur(40px) saturate(200%) brightness(0.95) !important;
+            -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(0.95) !important;
+            border-top-color: rgba(255, 255, 255, 0.8) !important;
+            border-left-color: rgba(255, 255, 255, 0.6) !important;
+            border-right-color: rgba(0, 0, 0, 0.08) !important;
+            border-bottom-color: rgba(0, 0, 0, 0.05) !important;
+        }
+
+        [data-theme="light"] .nav-cta-desktop:hover,
+        [data-theme="minimal"] .nav-cta-desktop:hover,
+        body:not([data-theme]) .nav-cta-desktop:hover {
+            color: rgba(0, 0, 0, 0.9) !important;
+            background: linear-gradient(
+                145deg,
+                rgba(0, 0, 0, 0.08) 0%,
+                rgba(0, 0, 0, 0.12) 50%,
+                rgba(0, 0, 0, 0.06) 100%
+            ) !important;
+            backdrop-filter: blur(40px) saturate(220%) brightness(0.92) !important;
+            -webkit-backdrop-filter: blur(40px) saturate(220%) brightness(0.92) !important;
         }
 
         .nav-right {
