@@ -60,13 +60,12 @@ class MobileMenu {
     openSidebar() {
         this.sidebar.classList.add('sidebar-open');
         this.overlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Empêcher le scroll du body
+        // Ne pas bloquer le scroll du body pour permettre le scroll de la content-area
     }
 
     closeSidebar() {
         this.sidebar.classList.remove('sidebar-open');
         this.overlay.classList.remove('active');
-        document.body.style.overflow = ''; // Restaurer le scroll
     }
 
     setupLessonLinks() {

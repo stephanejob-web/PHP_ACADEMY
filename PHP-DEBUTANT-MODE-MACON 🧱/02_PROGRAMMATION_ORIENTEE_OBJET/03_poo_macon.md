@@ -89,7 +89,7 @@ echo "La surface du mur est : " . $surface . " m²";
 ### 📺 Résultat dans le navigateur :
 
 ```
-La surface du mur est : 16 m²
+La surface du mur est : 10 m²
 ```
 
 **LE MUR A CALCULÉ TOUT SEUL !** 💥
