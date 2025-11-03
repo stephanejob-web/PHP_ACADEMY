@@ -49,7 +49,13 @@ class MarkdownParser {
         const codeBlocks = [];
         html = html.replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
             const placeholder = `__CODE_BLOCK_${codeBlocks.length}__`;
-            codeBlocks.push({ lang: lang || 'php', code: code.trim() });
+            // Détecter si c'est un schéma ASCII (contient des caractères de dessin)
+            const isAsciiArt = /[┌┐└┘├┤┬┴┼─│╔╗╚╝╠╣╦╩╬═║▲▼◄►→←↑↓⬆⬇⬅➡]/.test(code);
+            codeBlocks.push({
+                lang: lang || (isAsciiArt ? 'ascii' : 'php'),
+                code: code.trim(),
+                isAsciiArt: isAsciiArt
+            });
             return placeholder;
         });
 
@@ -80,8 +86,16 @@ class MarkdownParser {
 
         // Restaurer les blocs de code avec coloration
         codeBlocks.forEach((block, index) => {
-            const highlighted = this.highlightCode(block.code, block.lang);
-            const codeHtml = `<div class="code-block"><div class="code-header"><span class="code-lang">${block.lang}</span><button class="copy-btn" onclick="copyCode(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copier</button></div><pre><code class="language-${block.lang}">${highlighted}</code></pre></div>`;
+            let codeHtml;
+            if (block.isAsciiArt) {
+                // Pour les schémas ASCII, pas de coloration ni de numérotation
+                const escapedCode = this.escapeHtml(block.code);
+                codeHtml = `<div class="code-block ascii-art-block"><div class="code-header"><span class="code-lang">Schéma</span><button class="copy-btn" onclick="copyCode(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copier</button></div><pre><code class="ascii-art">${escapedCode}</code></pre></div>`;
+            } else {
+                // Code normal avec coloration
+                const highlighted = this.highlightCode(block.code, block.lang);
+                codeHtml = `<div class="code-block"><div class="code-header"><span class="code-lang">${block.lang}</span><button class="copy-btn" onclick="copyCode(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copier</button></div><pre><code class="language-${block.lang}">${highlighted}</code></pre></div>`;
+            }
             const placeholder = `__CODE_BLOCK_${index}__`;
             html = html.replace(new RegExp(placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), codeHtml);
         });
@@ -320,9 +334,16 @@ function copyCode(button) {
     const codeBlock = button.closest('.code-block');
     const codeElement = codeBlock.querySelector('code');
 
-    // Extraire le texte des lignes sans les numéros
-    const lines = codeElement.querySelectorAll('.line');
-    const code = Array.from(lines).map(line => line.textContent).join('\n');
+    // Extraire le texte
+    let code;
+    if (codeElement.classList.contains('ascii-art')) {
+        // Pour les schémas ASCII, copier directement le contenu texte
+        code = codeElement.textContent;
+    } else {
+        // Pour le code normal, extraire le texte des lignes sans les numéros
+        const lines = codeElement.querySelectorAll('.line');
+        code = Array.from(lines).map(line => line.textContent).join('\n');
+    }
 
     navigator.clipboard.writeText(code).then(() => {
         const originalText = button.innerHTML;

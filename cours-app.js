@@ -258,7 +258,15 @@ class PHPHeroApp {
         theme.modules.forEach((module, moduleIndex) => {
             const moduleEl = document.createElement('div');
             const isComingSoon = module.comingSoon === true;
-            moduleEl.className = `module module-${module.id}${isComingSoon ? ' coming-soon' : ''}`;
+
+            // Vérifier si ce module contient la leçon active
+            const hasActiveLesson = this.currentLesson &&
+                module.lessons.some(lesson => lesson.id === this.currentLesson.id);
+
+            // Par défaut, tous les modules sont fermés sauf celui qui contient la leçon active
+            const isCollapsed = !hasActiveLesson;
+
+            moduleEl.className = `module module-${module.id}${isComingSoon ? ' coming-soon' : ''}${isCollapsed ? ' collapsed' : ''}`;
 
             const onclickAttr = `onclick="app.toggleModule(${moduleIndex})"`;
             const comingSoonBadge = isComingSoon ? '<span class="coming-soon-badge">Bientôt</span>' : '';
