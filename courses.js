@@ -182,6 +182,37 @@ const coursesData = {
                     { id: 'git-github', title: 'Travailler avec GitHub', file: 'GIT/06_Travaille_ avec_ GitHub.md', duration: '30 min' },
                     { id: 'git-equipe', title: 'Collaborer en équipe', file: 'GIT/07_ Collaborer_en_ équipe.md', duration: '35 min' }
                 ]
+            },
+            {
+                id: 'docker',
+                number: '10',
+                title: 'Docker',
+                icon: '🐳',
+                level: 'intermédiaire',
+                levelBadge: '🟡 INTERMÉDIAIRE',
+                estimatedTime: '22h',
+                prerequisites: ['06'],
+                description: 'Conteneurise tes applications comme un pro du chantier',
+                lessons: [
+                    { id: 'docker-installation', title: 'Installation de Docker', file: 'DOCKER/cours-00-installation.md', duration: '45 min' },
+                    { id: 'docker-pourquoi', title: 'Pourquoi Docker?', file: 'DOCKER/cours-01-pourquoi-docker.md', duration: '30 min' },
+                    { id: 'docker-concepts', title: 'Les concepts de base', file: 'DOCKER/cours-02-concepts-base.md', duration: '30 min' },
+                    { id: 'docker-commandes', title: 'Premières commandes', file: 'DOCKER/cours-03-premieres-commandes.md', duration: '2h' },
+                    { id: 'docker-ports', title: 'Les ports', file: 'DOCKER/cours-04-les-ports.md', duration: '1h' },
+                    { id: 'docker-volumes', title: 'Les volumes', file: 'DOCKER/cours-05-volumes.md', duration: '1h30' },
+                    { id: 'docker-reseaux', title: 'Les réseaux', file: 'DOCKER/cours-06-les-reseaux.md', duration: '1h30' },
+                    { id: 'docker-variables', title: 'Variables d\'environnement', file: 'DOCKER/cours-07-variables-environnement.md', duration: '1h' },
+                    { id: 'docker-projet-php', title: '🏆 Projet PHP + MariaDB', file: 'DOCKER/cours-08-projet-php-mariadb.md', duration: '2h30' },
+                    { id: 'docker-dockerfile', title: 'Le Dockerfile', file: 'DOCKER/cours-09-dockerfile.md', duration: '2h' },
+                    { id: 'docker-compose', title: 'Docker Compose', file: 'DOCKER/cours-10-docker-compose.md', duration: '2h' },
+                    { id: 'docker-optimisation', title: 'Optimisation', file: 'DOCKER/cours-11-optimisation.md', duration: '1h30' },
+                    { id: 'docker-reseaux-avances', title: 'Réseaux avancés', file: 'DOCKER/cours-12-reseaux-avances.md', duration: '1h30' },
+                    { id: 'docker-production', title: 'Production', file: 'DOCKER/cours-13-production.md', duration: '2h' },
+                    { id: 'docker-debug', title: 'Debug & Troubleshooting', file: 'DOCKER/cours-14-debug-troubleshooting.md', duration: '1h30' },
+                    { id: 'docker-projet-final', title: '🏆 Projet Final', file: 'DOCKER/cours-15-projet-final.md', duration: '3h' },
+                    { id: 'docker-aide-memoire', title: '📋 Aide-mémoire Docker', file: 'DOCKER/aide-memoire-docker.md', duration: '15 min' },
+                    { id: 'docker-commandes-ref', title: '📚 Référence des commandes', file: 'DOCKER/commandes_docker.md', duration: '15 min' }
+                ]
             }
         ]
     },
@@ -332,6 +363,37 @@ const coursesData = {
                     { id: 'git-github', title: 'Travailler avec GitHub', file: 'GIT/06_Travaille_ avec_ GitHub.md', duration: '30 min' },
                     { id: 'git-equipe', title: 'Collaborer en équipe', file: 'GIT/07_ Collaborer_en_ équipe.md', duration: '35 min' }
                 ]
+            },
+            {
+                id: 'docker',
+                number: '08',
+                title: 'Docker',
+                icon: '🐳',
+                level: 'intermédiaire',
+                levelBadge: '🟡 INTERMÉDIAIRE',
+                estimatedTime: '22h',
+                prerequisites: ['04'],
+                description: 'Conteneurise tes applications comme un chef prépare ses ingrédients',
+                lessons: [
+                    { id: 'docker-installation', title: 'Installation de Docker', file: 'DOCKER/cours-00-installation.md', duration: '45 min' },
+                    { id: 'docker-pourquoi', title: 'Pourquoi Docker?', file: 'DOCKER/cours-01-pourquoi-docker.md', duration: '30 min' },
+                    { id: 'docker-concepts', title: 'Les concepts de base', file: 'DOCKER/cours-02-concepts-base.md', duration: '30 min' },
+                    { id: 'docker-commandes', title: 'Premières commandes', file: 'DOCKER/cours-03-premieres-commandes.md', duration: '2h' },
+                    { id: 'docker-ports', title: 'Les ports', file: 'DOCKER/cours-04-les-ports.md', duration: '1h' },
+                    { id: 'docker-volumes', title: 'Les volumes', file: 'DOCKER/cours-05-volumes.md', duration: '1h30' },
+                    { id: 'docker-reseaux', title: 'Les réseaux', file: 'DOCKER/cours-06-les-reseaux.md', duration: '1h30' },
+                    { id: 'docker-variables', title: 'Variables d\'environnement', file: 'DOCKER/cours-07-variables-environnement.md', duration: '1h' },
+                    { id: 'docker-projet-php', title: '🏆 Projet PHP + MariaDB', file: 'DOCKER/cours-08-projet-php-mariadb.md', duration: '2h30' },
+                    { id: 'docker-dockerfile', title: 'Le Dockerfile', file: 'DOCKER/cours-09-dockerfile.md', duration: '2h' },
+                    { id: 'docker-compose', title: 'Docker Compose', file: 'DOCKER/cours-10-docker-compose.md', duration: '2h' },
+                    { id: 'docker-optimisation', title: 'Optimisation', file: 'DOCKER/cours-11-optimisation.md', duration: '1h30' },
+                    { id: 'docker-reseaux-avances', title: 'Réseaux avancés', file: 'DOCKER/cours-12-reseaux-avances.md', duration: '1h30' },
+                    { id: 'docker-production', title: 'Production', file: 'DOCKER/cours-13-production.md', duration: '2h' },
+                    { id: 'docker-debug', title: 'Debug & Troubleshooting', file: 'DOCKER/cours-14-debug-troubleshooting.md', duration: '1h30' },
+                    { id: 'docker-projet-final', title: '🏆 Projet Final', file: 'DOCKER/cours-15-projet-final.md', duration: '3h' },
+                    { id: 'docker-aide-memoire', title: '📋 Aide-mémoire Docker', file: 'DOCKER/aide-memoire-docker.md', duration: '15 min' },
+                    { id: 'docker-commandes-ref', title: '📚 Référence des commandes', file: 'DOCKER/commandes_docker.md', duration: '15 min' }
+                ]
             }
         ]
     },
@@ -481,6 +543,37 @@ const coursesData = {
                     { id: 'git-conflits', title: 'Résoudre des conflits', file: 'GIT/05_Résoudre_des_conflits.md', duration: '30 min' },
                     { id: 'git-github', title: 'Travailler avec GitHub', file: 'GIT/06_Travaille_ avec_ GitHub.md', duration: '30 min' },
                     { id: 'git-equipe', title: 'Collaborer en équipe', file: 'GIT/07_ Collaborer_en_ équipe.md', duration: '35 min' }
+                ]
+            },
+            {
+                id: 'docker',
+                number: '08',
+                title: 'Docker',
+                icon: '🐳',
+                level: 'intermédiaire',
+                levelBadge: '🟡 INTERMÉDIAIRE',
+                estimatedTime: '22h',
+                prerequisites: ['04'],
+                description: 'Conteneurise tes applications comme tu gères ton inventaire RPG',
+                lessons: [
+                    { id: 'docker-installation', title: 'Installation de Docker', file: 'DOCKER/cours-00-installation.md', duration: '45 min' },
+                    { id: 'docker-pourquoi', title: 'Pourquoi Docker?', file: 'DOCKER/cours-01-pourquoi-docker.md', duration: '30 min' },
+                    { id: 'docker-concepts', title: 'Les concepts de base', file: 'DOCKER/cours-02-concepts-base.md', duration: '30 min' },
+                    { id: 'docker-commandes', title: 'Premières commandes', file: 'DOCKER/cours-03-premieres-commandes.md', duration: '2h' },
+                    { id: 'docker-ports', title: 'Les ports', file: 'DOCKER/cours-04-les-ports.md', duration: '1h' },
+                    { id: 'docker-volumes', title: 'Les volumes', file: 'DOCKER/cours-05-volumes.md', duration: '1h30' },
+                    { id: 'docker-reseaux', title: 'Les réseaux', file: 'DOCKER/cours-06-les-reseaux.md', duration: '1h30' },
+                    { id: 'docker-variables', title: 'Variables d\'environnement', file: 'DOCKER/cours-07-variables-environnement.md', duration: '1h' },
+                    { id: 'docker-projet-php', title: '🏆 Projet PHP + MariaDB', file: 'DOCKER/cours-08-projet-php-mariadb.md', duration: '2h30' },
+                    { id: 'docker-dockerfile', title: 'Le Dockerfile', file: 'DOCKER/cours-09-dockerfile.md', duration: '2h' },
+                    { id: 'docker-compose', title: 'Docker Compose', file: 'DOCKER/cours-10-docker-compose.md', duration: '2h' },
+                    { id: 'docker-optimisation', title: 'Optimisation', file: 'DOCKER/cours-11-optimisation.md', duration: '1h30' },
+                    { id: 'docker-reseaux-avances', title: 'Réseaux avancés', file: 'DOCKER/cours-12-reseaux-avances.md', duration: '1h30' },
+                    { id: 'docker-production', title: 'Production', file: 'DOCKER/cours-13-production.md', duration: '2h' },
+                    { id: 'docker-debug', title: 'Debug & Troubleshooting', file: 'DOCKER/cours-14-debug-troubleshooting.md', duration: '1h30' },
+                    { id: 'docker-projet-final', title: '🏆 Projet Final', file: 'DOCKER/cours-15-projet-final.md', duration: '3h' },
+                    { id: 'docker-aide-memoire', title: '📋 Aide-mémoire Docker', file: 'DOCKER/aide-memoire-docker.md', duration: '15 min' },
+                    { id: 'docker-commandes-ref', title: '📚 Référence des commandes', file: 'DOCKER/commandes_docker.md', duration: '15 min' }
                 ]
             }
         ]
