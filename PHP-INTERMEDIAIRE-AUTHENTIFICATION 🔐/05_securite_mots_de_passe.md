@@ -1,8 +1,8 @@
 # 🔐 PDO Pour Débutants - Cours 05 : Sécurité des mots de passe
 
-## 👋 Salut l'apprenti dev !
+## 👋 Salut l`apprenti dev !
 
-Aujourd'hui, on va parler d'un sujet **CRUCIAL** : **la sécurité des mots de passe**.
+Aujourd`hui, on va parler d`un sujet **CRUCIAL** : **la sécurité des mots de passe**.
 
 **⚠️ RÈGLE N°1 DE LA SÉCURITÉ :**
 
@@ -10,7 +10,7 @@ Aujourd'hui, on va parler d'un sujet **CRUCIAL** : **la sécurité des mots de p
 
 ---
 
-## 🤔 Pourquoi c'est si important ?
+## 🤔 Pourquoi c`est si important ?
 
 Imagine que tu crées un site et que tu stockes les mots de passe comme ça :
 
@@ -26,9 +26,9 @@ Si un pirate **vole ta base de données**, il voit **TOUS les mots de passe en c
 
 Il peut :
 - Se connecter sur TON site avec les comptes
-- Essayer ces mots de passe sur d'autres sites (Gmail, Facebook, banque...)
+- Essayer ces mots de passe sur d`autres sites (Gmail, Facebook, banque...)
 
-**C'est une CATASTROPHE !** 💀
+**C`est une CATASTROPHE !** 💀
 
 ---
 
@@ -40,9 +40,9 @@ Au lieu de stocker `azerty123`, on stocke un **HASH** :
 $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
 ```
 
-**C'est quoi un hash ?**
+**C`est quoi un hash ?**
 
-C'est une **transformation irréversible** du mot de passe.
+C`est une **transformation irréversible** du mot de passe.
 
 ```
 azerty123  →  [FONCTION DE HASHAGE]  →  $2y$10$92IXU...
@@ -71,9 +71,9 @@ Imagine que tu prépares une **pizza**.
 
 *"Est-ce que tu peux récupérer la pâte, les tomates et le fromage SÉPARÉS à partir de la pizza cuite ?"*
 
-**Non ! C'est IMPOSSIBLE !** La transformation est **irréversible**.
+**Non ! C`est IMPOSSIBLE !** La transformation est **irréversible**.
 
-**C'est EXACTEMENT comme ça que fonctionne le hashage !**
+**C`est EXACTEMENT comme ça que fonctionne le hashage !**
 
 Tu mets ton mot de passe → Tu obtiens un hash → Tu ne peux plus revenir en arrière.
 
@@ -106,7 +106,7 @@ echo $hash;
 $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
 ```
 
-**C'est ÇA qu'on va stocker dans la base de données !**
+**C`est ÇA qu`on va stocker dans la base de données !**
 
 ---
 
@@ -121,13 +121,13 @@ $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
 **Décomposition :**
 
 - **`$2y$`** → Algorithme utilisé (bcrypt)
-- **`10`** → Coût (nombre d'itérations, de 4 à 31)
+- **`10`** → Coût (nombre d`itérations, de 4 à 31)
 - **`92IXUNpkjO0rOQ5byMi.`** → Le salt (sel aléatoire)
 - **`Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi`** → Le hash du mot de passe
 
-**Le salt, c'est quoi ?**
+**Le salt, c`est quoi ?**
 
-C'est une **chaîne aléatoire** ajoutée au mot de passe avant le hashage.
+C`est une **chaîne aléatoire** ajoutée au mot de passe avant le hashage.
 
 **Pourquoi ?**
 
@@ -178,7 +178,7 @@ if (password_verify($password_saisi, $hash_stocke)) {
 1. `password_verify()` extrait le **salt** du hash
 2. Il hashe le mot de passe saisi avec ce salt
 3. Il compare les deux hash
-4. Si c'est identique → Mot de passe correct !
+4. Si c`est identique → Mot de passe correct !
 
 ---
 
@@ -186,7 +186,7 @@ if (password_verify($password_saisi, $hash_stocke)) {
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 $login = "alice";
 $password = "monsupermotdepasse";
@@ -197,8 +197,8 @@ $password_hash = password_hash($password, PASSWORD_DEFAULT);
 // 2. Insérer dans la base
 $stmt = $pdo->prepare("INSERT INTO users (login, password) VALUES (:login, :password)");
 $stmt->execute([
-    ':login' => $login,
-    ':password' => $password_hash  // On stocke le HASH, pas le mot de passe !
+    `:login` => $login,
+    `:password` => $password_hash  // On stocke le HASH, pas le mot de passe !
 ]);
 
 echo "✅ Utilisateur créé !";
@@ -211,7 +211,7 @@ echo "✅ Utilisateur créé !";
 |----|-------|----------|
 | 1  | alice | $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi |
 
-**Le mot de passe en clair (`monsupermotdepasse`) n'est JAMAIS stocké ! ✅**
+**Le mot de passe en clair (`monsupermotdepasse`) n`est JAMAIS stocké ! ✅**
 
 ---
 
@@ -219,17 +219,17 @@ echo "✅ Utilisateur créé !";
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 $login = "alice";
 $password = "monsupermotdepasse";
 
-// 1. Récupérer l'utilisateur
+// 1. Récupérer l`utilisateur
 $stmt = $pdo->prepare("SELECT * FROM users WHERE login = :login");
-$stmt->execute([':login' => $login]);
+$stmt->execute([`:login` => $login]);
 $user = $stmt->fetch();
 
-// 2. Vérifier si l'utilisateur existe
+// 2. Vérifier si l`utilisateur existe
 if (!$user) {
     echo "❌ Login ou mot de passe incorrect !";
     exit;
@@ -255,8 +255,8 @@ if (password_verify($password, $user["password"])) {
 // ❌ NE JAMAIS FAIRE ÇA !
 $stmt = $pdo->prepare("INSERT INTO users (login, password) VALUES (:login, :password)");
 $stmt->execute([
-    ':login' => $login,
-    ':password' => $password  // ❌ Mot de passe en clair !
+    `:login` => $login,
+    `:password` => $password  // ❌ Mot de passe en clair !
 ]);
 ```
 
@@ -270,10 +270,10 @@ $hash = md5($password);  // ❌ md5() est CASSÉ !
 $hash = sha1($password); // ❌ sha1() est CASSÉ !
 ```
 
-**Pourquoi c'est dangereux ?**
+**Pourquoi c`est dangereux ?**
 
 - md5() et sha1() sont **trop rapides** → Un pirate peut tester des milliards de combinaisons par seconde
-- Ils n'utilisent **pas de salt** → Vulnérable aux rainbow tables
+- Ils n`utilisent **pas de salt** → Vulnérable aux rainbow tables
 - Ils sont **obsolètes** pour les mots de passe
 
 **➡️ TOUJOURS utiliser `password_hash()` et `password_verify()` !**
@@ -289,7 +289,7 @@ if ($user["password"] == $password_hash) {
 }
 ```
 
-**Pourquoi c'est faux ?**
+**Pourquoi c`est faux ?**
 
 Chaque appel à `password_hash()` génère un **salt différent**, donc un **hash différent** !
 
@@ -307,7 +307,7 @@ echo password_hash("test", PASSWORD_DEFAULT);  // $2y$10$xyz...  (DIFFÉRENT !)
 Tu peux ajuster le **coût** du hashage :
 
 ```php
-$options = ['cost' => 12];
+$options = [`cost` => 12];
 $hash = password_hash($password, PASSWORD_DEFAULT, $options);
 ```
 
@@ -317,8 +317,8 @@ $hash = password_hash($password, PASSWORD_DEFAULT, $options);
 - Max : **31** (très lent, très sécurisé)
 
 **Plus le coût est élevé :**
-- ✅ Plus c'est sécurisé (le pirate met plus de temps à casser)
-- ❌ Plus c'est lent (ton serveur met plus de temps à hasher)
+- ✅ Plus c`est sécurisé (le pirate met plus de temps à casser)
+- ❌ Plus c`est lent (ton serveur met plus de temps à hasher)
 
 **Conseil :**
 
@@ -329,12 +329,12 @@ $hash = password_hash($password, PASSWORD_DEFAULT, $options);
 
 ```php
 $start = microtime(true);
-password_hash("test", PASSWORD_DEFAULT, ['cost' => 10]);
+password_hash("test", PASSWORD_DEFAULT, [`cost` => 10]);
 $end = microtime(true);
 echo "Coût 10 : " . ($end - $start) . " secondes<br>";
 
 $start = microtime(true);
-password_hash("test", PASSWORD_DEFAULT, ['cost' => 12]);
+password_hash("test", PASSWORD_DEFAULT, [`cost` => 12]);
 $end = microtime(true);
 echo "Coût 12 : " . ($end - $start) . " secondes<br>";
 ```
@@ -349,7 +349,7 @@ echo "Coût 12 : " . ($end - $start) . " secondes<br>";
 
 ✅ **password_verify()** pour vérifier (connexion)
 
-✅ **PASSWORD_DEFAULT** utilise l'algorithme le plus sûr
+✅ **PASSWORD_DEFAULT** utilise l`algorithme le plus sûr
 
 ✅ **Le salt est automatique** (géré par PHP)
 
@@ -365,18 +365,18 @@ echo "Coût 12 : " . ($end - $start) . " secondes<br>";
 |----------|-------|---------|
 | **password_hash()** | Inscription | `$hash = password_hash($pass, PASSWORD_DEFAULT);` |
 | **password_verify()** | Connexion | `if (password_verify($pass, $hash)) {...}` |
-| **md5()** | ❌ Obsolète | N'UTILISE PAS |
-| **sha1()** | ❌ Obsolète | N'UTILISE PAS |
+| **md5()** | ❌ Obsolète | N`UTILISE PAS |
+| **sha1()** | ❌ Obsolète | N`UTILISE PAS |
 
 ---
 
 ## ✍️ EXERCICE PRATIQUE
 
-**Objectif :** Sécuriser un système d'inscription
+**Objectif :** Sécuriser un système d`inscription
 
-1. Crée un formulaire d'inscription
+1. Crée un formulaire d`inscription
 2. Hashe le mot de passe avec `password_hash()`
-3. Insère l'utilisateur dans la base
+3. Insère l`utilisateur dans la base
 4. Crée un formulaire de connexion
 5. Vérifie le mot de passe avec `password_verify()`
 6. Si correct, affiche "Bienvenue !"
@@ -390,18 +390,18 @@ echo "Coût 12 : " . ($end - $start) . " secondes<br>";
 
 ## ⏭️ Dans le prochain cours...
 
-Maintenant qu'on sait sécuriser les mots de passe, on va apprendre les **SESSIONS** !
+Maintenant qu`on sait sécuriser les mots de passe, on va apprendre les **SESSIONS** !
 
 On va voir :
-- C'est quoi une session ?
+- C`est quoi une session ?
 - Comment démarrer une session
 - Comment stocker des infos (user_id, login...)
-- Comment vérifier qu'un utilisateur est connecté
+- Comment vérifier qu`un utilisateur est connecté
 
-**Prêt à garder tes utilisateurs connectés ? Let's go ! 🚀**
+**Prêt à garder tes utilisateurs connectés ? Let`s go ! 🚀**
 
 ---
 
 **🔐 Bravo ! Tu sais maintenant sécuriser les mots de passe comme un pro !**
 
-*PS : Si un jour quelqu'un te demande de stocker un mot de passe en clair, tu peux lui dire NON ! 💪*
+*PS : Si un jour quelqu`un te demande de stocker un mot de passe en clair, tu peux lui dire NON ! 💪*

@@ -2,30 +2,30 @@
 
 ## 👋 Salut !
 
-Aujourd'hui, on va parler des **SESSIONS**.
+Aujourd`hui, on va parler des **SESSIONS**.
 
 **Question :**
 
-*"Quand tu te connectes sur Facebook, comment le site se souvient que c'est TOI sur toutes les pages ?"*
+*"Quand tu te connectes sur Facebook, comment le site se souvient que c`est TOI sur toutes les pages ?"*
 
 **Réponse : Les SESSIONS ! 🎯**
 
 ---
 
-## 🤔 C'est quoi une session ?
+## 🤔 C`est quoi une session ?
 
-Une **session**, c'est une **mémoire temporaire** pour le site web.
+Une **session**, c`est une **mémoire temporaire** pour le site web.
 
 **Analogie : Le bracelet à un festival**
 
 Tu vas à un festival de musique.
 
-1. **À l'entrée**, on te donne un **bracelet** avec un numéro unique
+1. **À l`entrée**, on te donne un **bracelet** avec un numéro unique
 2. **À chaque stand**, tu montres ton bracelet
 3. Le vendeur regarde le numéro et sait qui tu es
 4. **À la sortie**, tu enlèves le bracelet
 
-**Les sessions, c'est PAREIL !**
+**Les sessions, c`est PAREIL !**
 
 1. **Connexion** → PHP crée une session avec un ID unique
 2. **Navigation** → À chaque page, PHP vérifie ton ID
@@ -52,7 +52,7 @@ Quand tu visites un site PHP :
 │ Cookie:         │  ──────────────> │ Fichier:         │
 │ ID=3f7h9k2m5p1q │                  │ sess_3f7h9k2m5p1q│
 │                 │  <────────────── │                  │
-│                 │                  │ $_SESSION['user']│
+│                 │                  │ $_SESSION[`user`]│
 └─────────────────┘                  └──────────────────┘
 ```
 
@@ -132,9 +132,9 @@ Warning: session_start(): Cannot send session cookie - headers already sent
 session_start();
 
 // Stocker des infos
-$_SESSION['user_id'] = 5;
-$_SESSION['user_login'] = 'alice';
-$_SESSION['user_role'] = 'admin';
+$_SESSION[`user_id`] = 5;
+$_SESSION[`user_login`] = `alice`;
+$_SESSION[`user_role`] = `admin`;
 
 echo "Infos stockées en session !";
 ?>
@@ -153,9 +153,9 @@ Sur une autre page :
 session_start();
 
 // Récupérer les infos
-echo "ID : " . $_SESSION['user_id'];        // 5
-echo "Login : " . $_SESSION['user_login'];  // alice
-echo "Rôle : " . $_SESSION['user_role'];    // admin
+echo "ID : " . $_SESSION[`user_id`];        // 5
+echo "Login : " . $_SESSION[`user_login`];  // alice
+echo "Rôle : " . $_SESSION[`user_role`];    // admin
 ?>
 ```
 
@@ -163,18 +163,18 @@ echo "Rôle : " . $_SESSION['user_role'];    // admin
 
 ---
 
-## 🔍 Vérifier qu'un utilisateur est connecté
+## 🔍 Vérifier qu`un utilisateur est connecté
 
-Pour savoir si un utilisateur est connecté, on vérifie si `$_SESSION['user_id']` existe :
+Pour savoir si un utilisateur est connecté, on vérifie si `$_SESSION[`user_id`]` existe :
 
 ```php
 <?php
 session_start();
 
-if (isset($_SESSION['user_id'])) {
-    echo "Bienvenue " . $_SESSION['user_login'] . " !";
+if (isset($_SESSION[`user_id`])) {
+    echo "Bienvenue " . $_SESSION[`user_login`] . " !";
 } else {
-    echo "Vous n'êtes pas connecté.";
+    echo "Vous n`êtes pas connecté.";
 }
 ?>
 ```
@@ -189,13 +189,13 @@ Pour créer une page **accessible seulement si connecté** :
 <?php
 session_start();
 
-// Si l'utilisateur n'est PAS connecté
-if (!isset($_SESSION['user_id'])) {
-    header('Location: connexion.php');  // Redirection vers la connexion
+// Si l`utilisateur n`est PAS connecté
+if (!isset($_SESSION[`user_id`])) {
+    header(`Location: connexion.php`);  // Redirection vers la connexion
     exit;  // Important : arrêter le script
 }
 
-// À partir d'ici, l'utilisateur est forcément connecté
+// À partir d`ici, l`utilisateur est forcément connecté
 ?>
 <!DOCTYPE html>
 <html>
@@ -203,14 +203,14 @@ if (!isset($_SESSION['user_id'])) {
     <title>Page protégée</title>
 </head>
 <body>
-    <h1>Bienvenue <?php echo $_SESSION['user_login']; ?> !</h1>
+    <h1>Bienvenue <?php echo $_SESSION[`user_login`]; ?> !</h1>
     <p>Cette page est réservée aux utilisateurs connectés.</p>
     <a href="deconnexion.php">Se déconnecter</a>
 </body>
 </html>
 ```
 
-**Si quelqu'un essaie d'accéder sans être connecté → Redirection ! 🚫**
+**Si quelqu`un essaie d`accéder sans être connecté → Redirection ! 🚫**
 
 ---
 
@@ -222,7 +222,7 @@ Pour supprimer **UNE SEULE** variable :
 <?php
 session_start();
 
-unset($_SESSION['user_role']);  // Supprime seulement 'user_role'
+unset($_SESSION[`user_role`]);  // Supprime seulement `user_role`
 ?>
 ```
 
@@ -253,7 +253,7 @@ echo "Vous êtes déconnecté !";
 session_start();
 $_SESSION = array();
 session_destroy();
-header('Location: connexion.php');
+header(`Location: connexion.php`);
 exit;
 ?>
 ```
@@ -267,24 +267,24 @@ exit;
 ```php
 <?php
 session_start();
-require 'config.php';
+require `config.php`;
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER[`REQUEST_METHOD`] == `POST`) {
     $login = $_POST["login"];
     $password = $_POST["password"];
 
-    // 1. Récupérer l'utilisateur
+    // 1. Récupérer l`utilisateur
     $stmt = $pdo->prepare("SELECT * FROM users WHERE login = :login");
-    $stmt->execute([':login' => $login]);
+    $stmt->execute([`:login` => $login]);
     $user = $stmt->fetch();
 
     // 2. Vérifier
     if ($user && password_verify($password, $user["password"])) {
         // ✅ Connexion réussie !
-        $_SESSION['user_id'] = $user["id"];
-        $_SESSION['user_login'] = $user["login"];
+        $_SESSION[`user_id`] = $user["id"];
+        $_SESSION[`user_login`] = $user["login"];
 
-        header('Location: accueil.php');
+        header(`Location: accueil.php`);
         exit;
     } else {
         $erreur = "Login ou mot de passe incorrect.";
@@ -325,9 +325,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <?php
 session_start();
 
-// Vérifier que l'utilisateur est connecté
-if (!isset($_SESSION['user_id'])) {
-    header('Location: connexion.php');
+// Vérifier que l`utilisateur est connecté
+if (!isset($_SESSION[`user_id`])) {
+    header(`Location: connexion.php`);
     exit;
 }
 ?>
@@ -338,7 +338,7 @@ if (!isset($_SESSION['user_id'])) {
     <title>Accueil</title>
 </head>
 <body>
-    <h1>Bienvenue <?php echo $_SESSION['user_login']; ?> !</h1>
+    <h1>Bienvenue <?php echo $_SESSION[`user_login`]; ?> !</h1>
     <p>Vous êtes connecté.</p>
     <a href="deconnexion.php">Se déconnecter</a>
 </body>
@@ -354,7 +354,7 @@ if (!isset($_SESSION['user_id'])) {
 session_start();
 $_SESSION = array();
 session_destroy();
-header('Location: connexion.php');
+header(`Location: connexion.php`);
 exit;
 ?>
 ```
@@ -368,7 +368,7 @@ exit;
 ```php
 <?php
 // ❌ ERREUR : pas de session_start() !
-$_SESSION['user_id'] = 5;  // ❌ Ne marchera pas !
+$_SESSION[`user_id`] = 5;  // ❌ Ne marchera pas !
 ?>
 ```
 
@@ -400,12 +400,12 @@ Warning: session_start(): Cannot send session cookie - headers already sent
 
 ```php
 <?php
-if (!isset($_SESSION['user_id'])) {
-    header('Location: connexion.php');
+if (!isset($_SESSION[`user_id`])) {
+    header(`Location: connexion.php`);
     // ❌ ERREUR : le code continue !
 }
 
-// Le code ici s'exécutera quand même !
+// Le code ici s`exécutera quand même !
 ?>
 ```
 
@@ -415,7 +415,7 @@ if (!isset($_SESSION['user_id'])) {
 
 ## 🔐 Sécurité des sessions
 
-### 1. Regénérer l'ID après connexion
+### 1. Regénérer l`ID après connexion
 
 Pour éviter le **session hijacking** (vol de session) :
 
@@ -428,21 +428,21 @@ session_regenerate_id(true);  // Génère un nouvel ID
 
 ### 2. Définir un timeout
 
-Pour déconnecter après 30 minutes d'inactivité :
+Pour déconnecter après 30 minutes d`inactivité :
 
 ```php
 session_start();
 
 $timeout = 1800;  // 30 minutes (en secondes)
 
-if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']) > $timeout) {
+if (isset($_SESSION[`LAST_ACTIVITY`]) && (time() - $_SESSION[`LAST_ACTIVITY`]) > $timeout) {
     session_unset();
     session_destroy();
-    header('Location: connexion.php');
+    header(`Location: connexion.php`);
     exit;
 }
 
-$_SESSION['LAST_ACTIVITY'] = time();  // Mise à jour du timestamp
+$_SESSION[`LAST_ACTIVITY`] = time();  // Mise à jour du timestamp
 ?>
 ```
 
@@ -454,9 +454,9 @@ $_SESSION['LAST_ACTIVITY'] = time();  // Mise à jour du timestamp
 
 ✅ **$_SESSION** = tableau pour stocker des données
 
-✅ **isset($_SESSION['user_id'])** = vérifier si connecté
+✅ **isset($_SESSION[`user_id`])** = vérifier si connecté
 
-✅ **session_destroy()** = déconnecter l'utilisateur
+✅ **session_destroy()** = déconnecter l`utilisateur
 
 ✅ **header() + exit** = rediriger et arrêter le script
 
@@ -469,11 +469,11 @@ $_SESSION['LAST_ACTIVITY'] = time();  // Mise à jour du timestamp
 | Fonction | Usage |
 |----------|-------|
 | **session_start()** | Démarrer/reprendre une session |
-| **$_SESSION['key'] = value** | Stocker une info |
-| **$_SESSION['key']** | Lire une info |
-| **unset($_SESSION['key'])** | Supprimer une info |
+| **$_SESSION[`key`] = value** | Stocker une info |
+| **$_SESSION[`key`]** | Lire une info |
+| **unset($_SESSION[`key`])** | Supprimer une info |
 | **session_destroy()** | Détruire toute la session |
-| **isset($_SESSION['key'])** | Vérifier si une info existe |
+| **isset($_SESSION[`key`])** | Vérifier si une info existe |
 
 ---
 
@@ -488,7 +488,7 @@ $_SESSION['LAST_ACTIVITY'] = time();  // Mise à jour du timestamp
    - Redirige vers `accueil.php`
 
 2. Crée `accueil.php` :
-   - Vérifie que l'utilisateur est connecté
+   - Vérifie que l`utilisateur est connecté
    - Affiche "Bienvenue [login] !"
    - Lien vers `deconnexion.php`
 
@@ -497,7 +497,7 @@ $_SESSION['LAST_ACTIVITY'] = time();  // Mise à jour du timestamp
    - Redirige vers `connexion.php`
 
 **Teste :**
-- Essaie d'accéder à `accueil.php` sans te connecter → Redirection
+- Essaie d`accéder à `accueil.php` sans te connecter → Redirection
 - Connecte-toi → Tu arrives sur `accueil.php`
 - Déconnecte-toi → Tu retournes sur `connexion.php`
 
@@ -505,18 +505,18 @@ $_SESSION['LAST_ACTIVITY'] = time();  // Mise à jour du timestamp
 
 ## ⏭️ Dans le prochain cours...
 
-Maintenant qu'on maîtrise tout (PDO, sécurité, sessions), on va créer un **PROJET COMPLET** !
+Maintenant qu`on maîtrise tout (PDO, sécurité, sessions), on va créer un **PROJET COMPLET** !
 
-On va créer un système d'authentification avec :
-- Page d'inscription
+On va créer un système d`authentification avec :
+- Page d`inscription
 - Page de connexion
-- Page d'accueil protégée
+- Page d`accueil protégée
 - Déconnexion
 
-**Prêt à créer ton premier vrai projet ? Let's go ! 🚀**
+**Prêt à créer ton premier vrai projet ? Let`s go ! 🚀**
 
 ---
 
 **🍪 Bravo ! Tu maîtrises maintenant les sessions PHP !**
 
-*PS : Les sessions, c'est la base de TOUS les sites avec authentification ! 💪*
+*PS : Les sessions, c`est la base de TOUS les sites avec authentification ! 💪*

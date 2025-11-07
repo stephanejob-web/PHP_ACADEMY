@@ -1,26 +1,26 @@
-# 🚀 PROJET COMPLET : Système d'authentification avec PDO
+# 🚀 PROJET COMPLET : Système d`authentification avec PDO
 
 ## 🎯 Objectif du projet
 
-Créer un système d'authentification complet avec :
-- ✅ Page d'inscription
+Créer un système d`authentification complet avec :
+- ✅ Page d`inscription
 - ✅ Page de connexion
-- ✅ Page d'accueil protégée
+- ✅ Page d`accueil protégée
 - ✅ Déconnexion
 
-**Tout ce qu'on a appris dans les cours précédents, ON VA LE METTRE EN PRATIQUE !** 💪
+**Tout ce qu`on a appris dans les cours précédents, ON VA LE METTRE EN PRATIQUE !** 💪
 
 ---
 
 ## 📁 Structure du projet
 
-Voici les fichiers qu'on va créer :
+Voici les fichiers qu`on va créer :
 
 ```
 mon_projet/
 ├── config.php          # Connexion à la base
 ├── database.sql        # Structure de la base
-├── inscription.php     # Formulaire d'inscription
+├── inscription.php     # Formulaire d`inscription
 ├── connexion.php       # Formulaire de connexion
 ├── accueil.php         # Page protégée
 ├── deconnexion.php     # Script de déconnexion
@@ -46,7 +46,7 @@ mon_projet/
 Crée un fichier `database.sql` :
 
 ```sql
--- Créer la base (si elle n'existe pas)
+-- Créer la base (si elle n`existe pas)
 CREATE DATABASE IF NOT EXISTS auth_db;
 USE auth_db;
 
@@ -64,7 +64,7 @@ CREATE TABLE users (
 
 **Exécution :**
 1. Clique sur la base `auth_db`
-2. Clique sur l'onglet **SQL**
+2. Clique sur l`onglet **SQL**
 3. Copie-colle le contenu de `database.sql`
 4. Clique sur **"Exécuter"**
 
@@ -84,16 +84,16 @@ Crée un fichier `config.php` :
  */
 
 // Informations de connexion
-$host = 'localhost';
-$dbname = 'auth_db';
-$username = 'root';
-$password = '';  // Vide sur XAMPP/WAMP
+$host = `localhost`;
+$dbname = `auth_db`;
+$username = `root`;
+$password = ``;  // Vide sur XAMPP/WAMP
 
 try {
     // Créer la connexion PDO
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
 
-    // Mode d'erreur : exception
+    // Mode d`erreur : exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Mode de récupération : tableau associatif
@@ -115,18 +115,18 @@ echo "✅ Connexion réussie !";
 
 Va sur : http://localhost/mon_projet/config.php
 
-Si tu vois "✅ Connexion réussie !", c'est bon ! Retire l'echo après.
+Si tu vois "✅ Connexion réussie !", c`est bon ! Retire l`echo après.
 
 ---
 
-## 📝 ÉTAPE 3 : Page d'inscription (inscription.php)
+## 📝 ÉTAPE 3 : Page d`inscription (inscription.php)
 
 Crée un fichier `inscription.php` :
 
 ```php
 <?php
 /**
- * PAGE D'INSCRIPTION
+ * PAGE D`INSCRIPTION
  * Permet de créer un nouveau compte utilisateur
  */
 
@@ -134,72 +134,72 @@ Crée un fichier `inscription.php` :
 session_start();
 
 // Inclure la connexion à la base
-require 'config.php';
+require `config.php`;
 
 // Variables pour les messages
-$message = '';
-$message_type = '';  // 'success' ou 'error'
+$message = ``;
+$message_type = ``;  // `success` ou `error`
 
 // Traitement du formulaire
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER[`REQUEST_METHOD`] == `POST`) {
 
     // Récupérer et nettoyer les données
     $login = trim($_POST["login"]);
     $password = trim($_POST["password"]);
-    $password_confirm = trim($_POST['password_confirm']);
+    $password_confirm = trim($_POST[`password_confirm`]);
 
     // --- VALIDATION ---
 
     // Vérifier que tous les champs sont remplis
     if (empty($login) || empty($password) || empty($password_confirm)) {
         $message = "⚠️ Tous les champs sont obligatoires !";
-        $message_type = 'error';
+        $message_type = `error`;
     }
     // Vérifier la longueur du login
     elseif (strlen($login) < 3) {
         $message = "⚠️ Le login doit contenir au moins 3 caractères.";
-        $message_type = 'error';
+        $message_type = `error`;
     }
     // Vérifier la longueur du mot de passe
     elseif (strlen($password) < 6) {
         $message = "⚠️ Le mot de passe doit contenir au moins 6 caractères.";
-        $message_type = 'error';
+        $message_type = `error`;
     }
     // Vérifier que les mots de passe correspondent
     elseif ($password !== $password_confirm) {
         $message = "⚠️ Les mots de passe ne correspondent pas.";
-        $message_type = 'error';
+        $message_type = `error`;
     }
     // Si tout est OK, on insère
     else {
         try {
             // Vérifier si le login existe déjà
             $stmt = $pdo->prepare("SELECT id FROM users WHERE login = :login");
-            $stmt->execute([':login' => $login]);
+            $stmt->execute([`:login` => $login]);
             $user_existe = $stmt->fetch();
 
             if ($user_existe) {
                 $message = "❌ Ce login est déjà utilisé !";
-                $message_type = 'error';
+                $message_type = `error`;
             }
             else {
                 // Hasher le mot de passe
                 $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-                // Insérer l'utilisateur
+                // Insérer l`utilisateur
                 $stmt = $pdo->prepare("INSERT INTO users (login, password) VALUES (:login, :password)");
                 $stmt->execute([
-                    ':login' => $login,
-                    ':password' => $password_hash
+                    `:login` => $login,
+                    `:password` => $password_hash
                 ]);
 
                 $message = "✅ Compte créé avec succès ! Vous pouvez maintenant vous connecter.";
-                $message_type = 'success';
+                $message_type = `success`;
             }
 
         } catch (PDOException $e) {
             $message = "❌ Erreur lors de la création du compte : " . $e->getMessage();
-            $message_type = 'error';
+            $message_type = `error`;
         }
     }
 }
@@ -276,7 +276,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             type="text"
             id="login"
             name="login"
-            placeholder="Choisissez un nom d'utilisateur"
+            placeholder="Choisissez un nom d`utilisateur"
             required
         >
 
@@ -298,7 +298,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             required
         >
 
-        <button type="submit">S'inscrire</button>
+        <button type="submit">S`inscrire</button>
     </form>
 
     <div class="link">
@@ -324,20 +324,20 @@ Crée un fichier `connexion.php` :
 // Démarrer la session
 session_start();
 
-// Si l'utilisateur est déjà connecté, rediriger vers l'accueil
-if (isset($_SESSION['user_id'])) {
-    header('Location: accueil.php');
+// Si l`utilisateur est déjà connecté, rediriger vers l`accueil
+if (isset($_SESSION[`user_id`])) {
+    header(`Location: accueil.php`);
     exit;
 }
 
 // Inclure la connexion à la base
-require 'config.php';
+require `config.php`;
 
 // Variables pour les messages
-$message = '';
+$message = ``;
 
 // Traitement du formulaire
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER[`REQUEST_METHOD`] == `POST`) {
 
     // Récupérer et nettoyer les données
     $login = trim($_POST["login"]);
@@ -349,21 +349,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     else {
         try {
-            // Rechercher l'utilisateur
+            // Rechercher l`utilisateur
             $stmt = $pdo->prepare("SELECT * FROM users WHERE login = :login");
-            $stmt->execute([':login' => $login]);
+            $stmt->execute([`:login` => $login]);
             $user = $stmt->fetch();
 
-            // Vérifier si l'utilisateur existe ET si le mot de passe est correct
+            // Vérifier si l`utilisateur existe ET si le mot de passe est correct
             if ($user && password_verify($password, $user["password"])) {
                 // ✅ Connexion réussie !
 
                 // Stocker les infos en session
-                $_SESSION['user_id'] = $user["id"];
-                $_SESSION['user_login'] = $user["login"];
+                $_SESSION[`user_id`] = $user["id"];
+                $_SESSION[`user_login`] = $user["login"];
 
-                // Rediriger vers la page d'accueil
-                header('Location: accueil.php');
+                // Rediriger vers la page d`accueil
+                header(`Location: accueil.php`);
                 exit;
             }
             else {
@@ -427,7 +427,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <h1>🔐 Connexion</h1>
 
-    <!-- Affichage du message d'erreur -->
+    <!-- Affichage du message d`erreur -->
     <?php if ($message): ?>
         <div class="message">
             <?php echo $message; ?>
@@ -441,7 +441,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             type="text"
             id="login"
             name="login"
-            placeholder="Votre nom d'utilisateur"
+            placeholder="Votre nom d`utilisateur"
             required
         >
 
@@ -458,7 +458,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </form>
 
     <div class="link">
-        Pas encore de compte ? <a href="inscription.php">S'inscrire</a>
+        Pas encore de compte ? <a href="inscription.php">S`inscrire</a>
     </div>
 </body>
 </html>
@@ -466,28 +466,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ---
 
-## 🏠 ÉTAPE 5 : Page d'accueil protégée (accueil.php)
+## 🏠 ÉTAPE 5 : Page d`accueil protégée (accueil.php)
 
 Crée un fichier `accueil.php` :
 
 ```php
 <?php
 /**
- * PAGE D'ACCUEIL PROTÉGÉE
- * Accessible seulement si l'utilisateur est connecté
+ * PAGE D`ACCUEIL PROTÉGÉE
+ * Accessible seulement si l`utilisateur est connecté
  */
 
 // Démarrer la session
 session_start();
 
-// Vérifier si l'utilisateur est connecté
-if (!isset($_SESSION['user_id'])) {
+// Vérifier si l`utilisateur est connecté
+if (!isset($_SESSION[`user_id`])) {
     // Non connecté → Redirection vers la connexion
-    header('Location: connexion.php');
+    header(`Location: connexion.php`);
     exit;
 }
 
-// À partir d'ici, l'utilisateur est forcément connecté
+// À partir d`ici, l`utilisateur est forcément connecté
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -537,14 +537,14 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 <body>
     <div class="welcome-box">
-        <h1>🎉 Bienvenue <?php echo htmlspecialchars($_SESSION['user_login']); ?> !</h1>
+        <h1>🎉 Bienvenue <?php echo htmlspecialchars($_SESSION[`user_login`]); ?> !</h1>
         <p>Vous êtes maintenant connecté.</p>
     </div>
 
     <div class="info">
         <h3>Informations de session</h3>
-        <p><strong>ID utilisateur :</strong> <?php echo $_SESSION['user_id']; ?></p>
-        <p><strong>Login :</strong> <?php echo htmlspecialchars($_SESSION['user_login']); ?></p>
+        <p><strong>ID utilisateur :</strong> <?php echo $_SESSION[`user_id`]; ?></p>
+        <p><strong>Login :</strong> <?php echo htmlspecialchars($_SESSION[`user_login`]); ?></p>
     </div>
 
     <p>Cette page est protégée. Seuls les utilisateurs connectés peuvent y accéder.</p>
@@ -577,7 +577,7 @@ $_SESSION = array();
 session_destroy();
 
 // Rediriger vers la page de connexion
-header('Location: connexion.php');
+header(`Location: connexion.php`);
 exit;
 ?>
 ```
@@ -596,7 +596,7 @@ Crée un fichier `style.css` (optionnel) :
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: `Segoe UI`, Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
@@ -616,7 +616,7 @@ body {
 1. Va sur : http://localhost/mon_projet/inscription.php
 2. Crée un compte (login: `test`, password: `test123`)
 3. Tu dois voir : "✅ Compte créé avec succès !"
-4. Vérifie dans phpMyAdmin que l'utilisateur est bien créé
+4. Vérifie dans phpMyAdmin que l`utilisateur est bien créé
 5. Vérifie que le mot de passe est **hashé** (commence par `$2y$`)
 
 ---
@@ -633,7 +633,7 @@ body {
 ### Test 3 : Protection de page
 
 1. Déconnecte-toi
-2. Essaie d'aller directement sur : http://localhost/mon_projet/accueil.php
+2. Essaie d`aller directement sur : http://localhost/mon_projet/accueil.php
 3. Tu dois être **redirigé** vers `connexion.php`
 4. ✅ La page est bien protégée !
 
@@ -644,7 +644,7 @@ body {
 1. Connecte-toi
 2. Clique sur "Se déconnecter"
 3. Tu dois être redirigé vers `connexion.php`
-4. Essaie d'accéder à `accueil.php` → Tu es redirigé
+4. Essaie d`accéder à `accueil.php` → Tu es redirigé
 5. ✅ La déconnexion marche !
 
 ---
@@ -657,12 +657,12 @@ body {
 ✅ **Insérer des utilisateurs** avec `INSERT`
 ✅ **Hasher les mots de passe** avec `password_hash()`
 ✅ **Vérifier les mots de passe** avec `password_verify()`
-✅ **Utiliser les sessions** pour garder l'utilisateur connecté
-✅ **Protéger des pages** avec `if (!isset($_SESSION['user_id']))`
-✅ **Rediriger** avec `header('Location: ...')`
+✅ **Utiliser les sessions** pour garder l`utilisateur connecté
+✅ **Protéger des pages** avec `if (!isset($_SESSION[`user_id`]))`
+✅ **Rediriger** avec `header(`Location: ...`)`
 ✅ **Valider des formulaires** (champs vides, longueur...)
 
-**BRAVO ! Tu as créé ton premier système d'authentification complet ! 🎉**
+**BRAVO ! Tu as créé ton premier système d`authentification complet ! 🎉**
 
 ---
 
@@ -670,13 +670,13 @@ body {
 
 Pour aller plus loin, tu peux ajouter :
 
-1. **Un champ email** à l'inscription
+1. **Un champ email** à l`inscription
 2. **Une page de profil** pour modifier ses infos
 3. **Un système "Se souvenir de moi"** avec des cookies
 4. **Une fonction "Mot de passe oublié"**
 5. **Des rôles** (admin, utilisateur...)
-6. **Une page d'administration** pour voir tous les utilisateurs
+6. **Une page d`administration** pour voir tous les utilisateurs
 
 ---
 
-**💪 Félicitations ! Tu es maintenant capable de créer des systèmes d'authentification sécurisés !**
+**💪 Félicitations ! Tu es maintenant capable de créer des systèmes d`authentification sécurisés !**

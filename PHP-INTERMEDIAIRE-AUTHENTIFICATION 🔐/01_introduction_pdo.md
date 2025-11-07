@@ -1,16 +1,16 @@
-# 🔐 PDO Pour Débutants - Cours 01 : C'est quoi PDO ?
+# 🔐 PDO Pour Débutants - Cours 01 : C`est quoi PDO ?
 
-## 👋 Salut l'apprenti développeur !
+## 👋 Salut l`apprenti développeur !
 
-Aujourd'hui, on va parler de **PDO**.
+Aujourd`hui, on va parler de **PDO**.
 
-Tu te demandes sûrement : *"C'est quoi ce truc avec un nom bizarre ?"*
+Tu te demandes sûrement : *"C`est quoi ce truc avec un nom bizarre ?"*
 
-Pas de panique ! Je vais tout t'expliquer **TRÈS SIMPLEMENT**.
+Pas de panique ! Je vais tout t`expliquer **TRÈS SIMPLEMENT**.
 
 ---
 
-## 🤔 PDO, c'est quoi exactement ?
+## 🤔 PDO, c`est quoi exactement ?
 
 **PDO** = **P**HP **D**ata **O**bjects
 
@@ -18,13 +18,13 @@ En français : *"Objets de données PHP"*
 
 **Traduction en vrai français :**
 
-PDO, c'est un **outil de PHP** qui te permet de **parler avec une base de données**.
+PDO, c`est un **outil de PHP** qui te permet de **parler avec une base de données**.
 
 ---
 
 ## 📚 Analogie simple : Le traducteur
 
-Imagine que tu es Français et que tu veux parler avec quelqu'un qui parle chinois.
+Imagine que tu es Français et que tu veux parler avec quelqu`un qui parle chinois.
 
 **Problème** : Tu ne parles pas chinois ! 😰
 
@@ -37,7 +37,7 @@ Le traducteur va :
 
 ---
 
-**C'est EXACTEMENT comme ça que fonctionne PDO !**
+**C`est EXACTEMENT comme ça que fonctionne PDO !**
 
 - **TOI** (PHP) → Tu veux récupérer des utilisateurs
 - **PDO** (le traducteur) → Traduit ta demande en langage SQL
@@ -65,7 +65,7 @@ Avant PDO, il y avait des fonctions comme :
 
 ❌ Ces fonctions sont **OBSOLÈTES** (elles ne marchent plus sur PHP moderne)
 ❌ Elles étaient **PAS SÉCURISÉES** (risque de piratage !)
-❌ Elles ne marchaient qu'avec MySQL
+❌ Elles ne marchaient qu`avec MySQL
 
 ---
 
@@ -87,7 +87,7 @@ Avec PDO, tu vas pouvoir :
 4. **Modifier** des données (changer un email)
 5. **Supprimer** des données (supprimer un utilisateur)
 
-**En gros : TOUT ce qu'on fait avec une base de données !**
+**En gros : TOUT ce qu`on fait avec une base de données !**
 
 ---
 
@@ -101,7 +101,7 @@ Peu importe ce que tu fais avec PDO, ça se passe TOUJOURS en 3 étapes :
 $pdo = new PDO("mysql:host=localhost;dbname=ma_base", "root", "");
 ```
 
-**Traduction :** "Hé PDO, connecte-toi à ma base MySQL qui s'appelle `ma_base`"
+**Traduction :** "Hé PDO, connecte-toi à ma base MySQL qui s`appelle `ma_base`"
 
 ---
 
@@ -157,15 +157,15 @@ bob
 charlie
 ```
 
-**3 lignes de code pour parler à la base ! C'est ça la puissance de PDO !** 💪
+**3 lignes de code pour parler à la base ! C`est ça la puissance de PDO !** 💪
 
 ---
 
 ## 🛡️ PDO protège contre les injections SQL
 
-**C'est quoi une injection SQL ?**
+**C`est quoi une injection SQL ?**
 
-C'est quand un **pirate** essaie de **pirater ta base de données** en envoyant du code malveillant.
+C`est quand un **pirate** essaie de **pirater ta base de données** en envoyant du code malveillant.
 
 ---
 
@@ -174,19 +174,19 @@ C'est quand un **pirate** essaie de **pirater ta base de données** en envoyant 
 ```php
 // ❌ NE JAMAIS FAIRE ÇA !
 $login = $_POST["login"];
-$query = "SELECT * FROM users WHERE login = '$login'";
+$query = "SELECT * FROM users WHERE login = `$login`";
 ```
 
 **Si un pirate tape :**
 
 ```
-admin' OR '1'='1
+admin` OR `1`=`1
 ```
 
 **La requête devient :**
 
 ```sql
-SELECT * FROM users WHERE login = 'admin' OR '1'='1'
+SELECT * FROM users WHERE login = `admin` OR `1`=`1`
 ```
 
 **Résultat : Le pirate récupère TOUS les utilisateurs ! 💀**
@@ -196,15 +196,15 @@ SELECT * FROM users WHERE login = 'admin' OR '1'='1'
 ### Exemple SÉCURISÉ (avec PDO) :
 
 ```php
-// ✅ C'EST COMME ÇA QU'ON FAIT !
+// ✅ C`EST COMME ÇA QU`ON FAIT !
 $login = $_POST["login"];
 $stmt = $pdo->prepare("SELECT * FROM users WHERE login = :login");
-$stmt->execute([':login' => $login]);
+$stmt->execute([`:login` => $login]);
 ```
 
 **PDO va automatiquement :**
 1. Échapper les caractères dangereux
-2. Empêcher le pirate d'injecter du code
+2. Empêcher le pirate d`injecter du code
 3. Traiter `$login` comme une simple chaîne de caractères
 
 **Résultat : Ton site est protégé ! 🛡️**
@@ -213,14 +213,14 @@ $stmt->execute([':login' => $login]);
 
 ## 🧩 Les morceaux importants de PDO
 
-### 1. L'objet PDO
+### 1. L`objet PDO
 
 ```php
 $pdo = new PDO(...);
 ```
 
-C'est **la connexion** à la base de données.
-Tu l'utilises pour **toutes** tes requêtes.
+C`est **la connexion** à la base de données.
+Tu l`utilises pour **toutes** tes requêtes.
 
 ---
 
@@ -230,18 +230,18 @@ Tu l'utilises pour **toutes** tes requêtes.
 $stmt = $pdo->prepare("...");
 ```
 
-C'est **la requête** que tu prépares.
-Tu ne l'exécutes pas tout de suite, tu la **prépares d'abord**.
+C`est **la requête** que tu prépares.
+Tu ne l`exécutes pas tout de suite, tu la **prépares d`abord**.
 
 ---
 
-### 3. L'exécution
+### 3. L`exécution
 
 ```php
 $stmt->execute([...]);
 ```
 
-C'est là que **la requête part vers la base de données**.
+C`est là que **la requête part vers la base de données**.
 
 ---
 
@@ -252,7 +252,7 @@ $result = $stmt->fetch();       // Un seul résultat
 $results = $stmt->fetchAll();   // Tous les résultats
 ```
 
-C'est là que tu **récupères les données** renvoyées par la base.
+C`est là que tu **récupères les données** renvoyées par la base.
 
 ---
 
@@ -265,7 +265,7 @@ C'est là que tu **récupères les données** renvoyées par la base.
        │
        ▼
 ┌─────────────┐
-│     PDO     │  "Ok, je traduis et j'envoie"
+│     PDO     │  "Ok, je traduis et j`envoie"
 └──────┬──────┘
        │
        ▼
@@ -315,14 +315,14 @@ C'est là que tu **récupères les données** renvoyées par la base.
 
 ## ❓ Questions fréquentes
 
-**Q : C'est compliqué PDO ?**
+**Q : C`est compliqué PDO ?**
 R : Non ! Les 3 étapes (connexion, requête, résultat) sont toujours les mêmes.
 
-**Q : Ça marche avec n'importe quelle base de données ?**
+**Q : Ça marche avec n`importe quelle base de données ?**
 R : Oui ! MySQL, PostgreSQL, SQLite... Il suffit de changer une ligne.
 
-**Q : C'est vraiment sécurisé ?**
-R : Oui, à condition d'utiliser les **requêtes préparées** (on va apprendre ça !)
+**Q : C`est vraiment sécurisé ?**
+R : Oui, à condition d`utiliser les **requêtes préparées** (on va apprendre ça !)
 
 **Q : Je dois apprendre SQL avant ?**
 R : Oui, un peu. Mais on va tout revoir ensemble dans les prochains cours.
@@ -347,11 +347,11 @@ On va voir :
 
 Avant de passer au prochain cours, réfléchis à ces questions :
 
-1. **C'est quoi le rôle de PDO ?**
+1. **C`est quoi le rôle de PDO ?**
    (Réponse : Faire le lien entre PHP et MySQL)
 
-2. **Pourquoi on n'utilise plus mysql_connect() ?**
-   (Réponse : C'est obsolète et pas sécurisé)
+2. **Pourquoi on n`utilise plus mysql_connect() ?**
+   (Réponse : C`est obsolète et pas sécurisé)
 
 3. **Quelles sont les 3 étapes de base avec PDO ?**
    (Réponse : Connexion, Requête, Résultat)
@@ -360,4 +360,4 @@ Si tu arrives à répondre à ces 3 questions, **tu as COMPRIS !** 🎉
 
 ---
 
-**👍 Prêt pour le prochain cours ? Let's go !**
+**👍 Prêt pour le prochain cours ? Let`s go !**

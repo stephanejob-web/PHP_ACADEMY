@@ -2,15 +2,15 @@
 
 ## 👋 On se retrouve !
 
-Dans le cours précédent, tu as appris **ce qu'est PDO**.
+Dans le cours précédent, tu as appris **ce qu`est PDO**.
 
-Aujourd'hui, on passe à l'**ACTION** !
+Aujourd`hui, on passe à l`**ACTION** !
 
 On va apprendre à **se connecter à une base de données MySQL** avec PDO.
 
 ---
 
-## 🎯 Ce qu'on va faire aujourd'hui
+## 🎯 Ce qu`on va faire aujourd`hui
 
 1. Créer une base de données dans phpMyAdmin
 2. Écrire le code PHP pour se connecter avec PDO
@@ -22,7 +22,7 @@ On va apprendre à **se connecter à une base de données MySQL** avec PDO.
 
 ## 📦 Étape 1 : Créer la base de données
 
-Avant de te connecter à une base, **il faut qu'elle existe** !
+Avant de te connecter à une base, **il faut qu`elle existe** !
 
 ### Ouvre phpMyAdmin
 
@@ -43,10 +43,10 @@ Avant de te connecter à une base, **il faut qu'elle existe** !
 
 ---
 
-### Crée une table d'utilisateurs
+### Crée une table d`utilisateurs
 
 1. Clique sur la base `auth_db` (à gauche)
-2. Clique sur l'onglet **SQL**
+2. Clique sur l`onglet **SQL**
 3. Copie-colle ce code :
 
 ```sql
@@ -72,10 +72,10 @@ Crée un fichier `config.php` :
 
 ```php
 <?php
-$host = 'localhost';
-$dbname = 'auth_db';
-$username = 'root';
-$password = '';
+$host = `localhost`;
+$dbname = `auth_db`;
+$username = `root`;
+$password = ``;
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
@@ -94,20 +94,20 @@ try {
 ### Les informations de connexion
 
 ```php
-$host = 'localhost';
-$dbname = 'auth_db';
-$username = 'root';
-$password = '';
+$host = `localhost`;
+$dbname = `auth_db`;
+$username = `root`;
+$password = ``;
 ```
 
-**`$host`** → L'adresse du serveur MySQL
+**`$host`** → L`adresse du serveur MySQL
 - `localhost` = sur ton ordinateur
 - En production, ça pourrait être `192.168.1.10` ou `monserveur.com`
 
 **`$dbname`** → Le nom de ta base de données
-- C'est `auth_db` qu'on vient de créer
+- C`est `auth_db` qu`on vient de créer
 
-**`$username`** → Le nom d'utilisateur MySQL
+**`$username`** → Le nom d`utilisateur MySQL
 - `root` par défaut sur XAMPP/WAMP
 - En production, tu auras un utilisateur spécifique
 
@@ -133,12 +133,12 @@ try {
 **Pourquoi ?**
 
 Parce que se connecter à une base **peut échouer** :
-- La base n'existe pas
+- La base n`existe pas
 - Le mot de passe est incorrect
-- MySQL n'est pas démarré
+- MySQL n`est pas démarré
 - ...
 
-Au lieu que PHP plante complètement, on **attrape** l'erreur et on affiche un message.
+Au lieu que PHP plante complètement, on **attrape** l`erreur et on affiche un message.
 
 ---
 
@@ -148,7 +148,7 @@ Au lieu que PHP plante complètement, on **attrape** l'erreur et on affiche un m
 $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
 ```
 
-C'est **LA ligne la plus importante** !
+C`est **LA ligne la plus importante** !
 
 **`new PDO(...)`** → On crée un nouvel objet PDO (une connexion)
 
@@ -164,7 +164,7 @@ Décomposons :
 - **`dbname=$dbname`** → Nom de la base (`auth_db`)
 - **`charset=utf8`** → Encodage (pour les accents français)
 
-**Deuxième paramètre** : Le nom d'utilisateur (`root`)
+**Deuxième paramètre** : Le nom d`utilisateur (`root`)
 
 **Troisième paramètre** : Le mot de passe (vide ici)
 
@@ -184,13 +184,13 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 **Traduction :**
 
-*"PDO, si tu rencontres une erreur, déclenche une exception pour que je puisse l'attraper avec `catch`"*
+*"PDO, si tu rencontres une erreur, déclenche une exception pour que je puisse l`attraper avec `catch`"*
 
-**C'est IMPORTANT !** Sans ça, PDO affiche juste un warning et continue. On veut qu'il s'arrête !
+**C`est IMPORTANT !** Sans ça, PDO affiche juste un warning et continue. On veut qu`il s`arrête !
 
 ---
 
-### La gestion de l'erreur
+### La gestion de l`erreur
 
 ```php
 catch (PDOException $e) {
@@ -198,16 +198,16 @@ catch (PDOException $e) {
 }
 ```
 
-**`catch (PDOException $e)`** → Attrape l'exception dans la variable `$e`
+**`catch (PDOException $e)`** → Attrape l`exception dans la variable `$e`
 
-**`$e->getMessage()`** → Récupère le message d'erreur
+**`$e->getMessage()`** → Récupère le message d`erreur
 
 **`die(...)`** → Affiche un message et arrête le script
 
-**Exemple de message d'erreur :**
+**Exemple de message d`erreur :**
 
 ```
-❌ Erreur de connexion : SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost'
+❌ Erreur de connexion : SQLSTATE[HY000] [1045] Access denied for user `root`@`localhost`
 ```
 
 Ça te dit **exactement** ce qui ne va pas !
@@ -238,7 +238,7 @@ Maintenant, on va **provoquer une erreur** pour voir comment PDO la gère.
 Change le nom de la base :
 
 ```php
-$dbname = 'mauvais_nom';  // Base qui n'existe pas
+$dbname = `mauvais_nom`;  // Base qui n`existe pas
 ```
 
 Recharge la page.
@@ -246,10 +246,10 @@ Recharge la page.
 **Résultat attendu :**
 
 ```
-❌ Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'mauvais_nom'
+❌ Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database `mauvais_nom`
 ```
 
-**Le message d'erreur est clair ! PDO nous dit que la base n'existe pas.**
+**Le message d`erreur est clair ! PDO nous dit que la base n`existe pas.**
 
 Remets le bon nom (`auth_db`) après le test.
 
@@ -265,27 +265,27 @@ Voici une version améliorée :
 
 ```php
 <?php
-$host = 'localhost';
-$dbname = 'auth_db';
-$username = 'root';
-$password = '';
+$host = `localhost`;
+$dbname = `auth_db`;
+$username = `root`;
+$password = ``;
 
-// Mode : 'dev' ou 'prod'
-$mode = 'dev';
+// Mode : `dev` ou `prod`
+$mode = `dev`;
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-    if ($mode === 'dev') {
+    if ($mode === `dev`) {
         echo "✅ Connexion réussie !";
     }
 } catch (PDOException $e) {
-    if ($mode === 'dev') {
+    if ($mode === `dev`) {
         die("❌ Erreur de connexion : " . $e->getMessage());
     } else {
-        die("❌ Erreur de connexion à la base de données. Veuillez contacter l'administrateur.");
+        die("❌ Erreur de connexion à la base de données. Veuillez contacter l`administrateur.");
     }
 }
 ?>
@@ -305,15 +305,15 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 Sans cette ligne :
 ```php
-[0 => 1, 'id' => 1, 1 => 'alice', 'login' => 'alice']  // Mélange d'indices
+[0 => 1, `id` => 1, 1 => `alice`, `login` => `alice`]  // Mélange d`indices
 ```
 
 Avec cette ligne :
 ```php
-['id' => 1, 'login' => 'alice']  // Propre et clair !
+[`id` => 1, `login` => `alice`]  // Propre et clair !
 ```
 
-**C'est beaucoup plus lisible ! ✅**
+**C`est beaucoup plus lisible ! ✅**
 
 ---
 
@@ -326,7 +326,7 @@ Le fichier `config.php` est conçu pour être **inclus** dans tous tes autres fi
 ```php
 <?php
 // Dans inscription.php
-require 'config.php';  // On inclut la connexion
+require `config.php`;  // On inclut la connexion
 
 // Maintenant on peut utiliser $pdo
 $stmt = $pdo->prepare("SELECT * FROM users");
@@ -347,7 +347,7 @@ Tu écris le code de connexion **UNE SEULE FOIS** et tu le réutilises partout !
 Le fichier `config.php` contient des **informations sensibles** :
 - Mot de passe de la base de données
 - Nom de la base
-- Nom d'utilisateur
+- Nom d`utilisateur
 
 **En production, ces infos sont SECRÈTES !**
 
@@ -357,10 +357,10 @@ Le fichier `config.php` contient des **informations sensibles** :
 
 ```php
 <?php
-$host = 'localhost';
-$dbname = 'votre_base';
-$username = 'votre_user';
-$password = 'votre_password';
+$host = `localhost`;
+$dbname = `votre_base`;
+$username = `votre_user`;
+$password = `votre_password`;
 // ... reste du code
 ?>
 ```
@@ -396,12 +396,12 @@ config.php
 
 ## 📊 Checklist de connexion
 
-Avant d'utiliser PDO, vérifie :
+Avant d`utiliser PDO, vérifie :
 
 - [ ] MySQL est démarré (XAMPP/WAMP)
 - [ ] La base de données existe
 - [ ] Le nom de la base est correct dans `$dbname`
-- [ ] Le nom d'utilisateur est correct (`root`)
+- [ ] Le nom d`utilisateur est correct (`root`)
 - [ ] Le mot de passe est correct (vide par défaut)
 - [ ] Tu as configuré `ERRMODE_EXCEPTION`
 - [ ] Tu as configuré `FETCH_ASSOC`
@@ -417,9 +417,9 @@ Avant d'utiliser PDO, vérifie :
 3. Écris le code de connexion (sans copier-coller !)
 4. Teste que ça marche
 5. Provoque une erreur volontaire (mauvais nom de base)
-6. Vérifie que l'erreur s'affiche correctement
+6. Vérifie que l`erreur s`affiche correctement
 
-**Conseil :** Fais-le vraiment ! C'est en tapant le code qu'on apprend. 💪
+**Conseil :** Fais-le vraiment ! C`est en tapant le code qu`on apprend. 💪
 
 ---
 
@@ -431,9 +431,9 @@ On va voir :
 - Comment ajouter un utilisateur dans la base
 - Les requêtes préparées (SÉCURISÉ)
 - La différence entre `execute([])` et concaténation
-- Comment récupérer l'ID du dernier utilisateur inséré
+- Comment récupérer l`ID du dernier utilisateur inséré
 
-**Prêt à créer ton premier utilisateur ? Let's go ! 🚀**
+**Prêt à créer ton premier utilisateur ? Let`s go ! 🚀**
 
 ---
 

@@ -4,13 +4,13 @@
 
 Dans le cours précédent, tu as appris à **INSÉRER** des données.
 
-Aujourd'hui, on va apprendre à **LIRE** (récupérer) des données depuis la base !
+Aujourd`hui, on va apprendre à **LIRE** (récupérer) des données depuis la base !
 
 On va utiliser la requête SQL **SELECT**.
 
 ---
 
-## 🎯 Ce qu'on va faire
+## 🎯 Ce qu`on va faire
 
 1. Comprendre la requête SELECT
 2. Récupérer UN utilisateur avec `fetch()`
@@ -37,7 +37,7 @@ SELECT colonnes FROM nom_table;
 -- Récupérer TOUTES les colonnes de TOUS les utilisateurs
 SELECT * FROM users;
 
--- Récupérer seulement le login et l'id
+-- Récupérer seulement le login et l`id
 SELECT id, login FROM users;
 
 -- Récupérer UN utilisateur précis
@@ -50,17 +50,17 @@ SELECT * FROM users WHERE id = 5;
 
 **`fetch()`** récupère **UNE SEULE ligne** de résultat.
 
-**Exemple : Récupérer l'utilisateur avec l'ID 1**
+**Exemple : Récupérer l`utilisateur avec l`ID 1**
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 // Préparer la requête
 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
 
 // Exécuter
-$stmt->execute([':id' => 1]);
+$stmt->execute([`:id` => 1]);
 
 // Récupérer le résultat
 $user = $stmt->fetch();
@@ -84,7 +84,7 @@ Créé le : 2025-01-15 10:30:00
 
 ---
 
-## 🔍 Qu'est-ce que fetch() retourne ?
+## 🔍 Qu`est-ce que fetch() retourne ?
 
 **Si un résultat est trouvé :**
 
@@ -92,10 +92,10 @@ Créé le : 2025-01-15 10:30:00
 
 ```php
 [
-    'id' => 1,
-    'login' => 'alice',
-    'password' => '$2y$10$abc...',
-    'created_at' => '2025-01-15 10:30:00'
+    `id` => 1,
+    `login` => `alice`,
+    `password` => `$2y$10$abc...`,
+    `created_at` => `2025-01-15 10:30:00`
 ]
 ```
 
@@ -103,7 +103,7 @@ Créé le : 2025-01-15 10:30:00
 
 `fetch()` retourne **`false`**.
 
-C'est pour ça qu'on vérifie avec `if ($user)`.
+C`est pour ça qu`on vérifie avec `if ($user)`.
 
 ---
 
@@ -115,7 +115,7 @@ C'est pour ça qu'on vérifie avec `if ($user)`.
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 // Préparer la requête
 $stmt = $pdo->prepare("SELECT * FROM users");
@@ -143,29 +143,29 @@ foreach ($users as $user) {
 
 ---
 
-## 🔍 Qu'est-ce que fetchAll() retourne ?
+## 🔍 Qu`est-ce que fetchAll() retourne ?
 
 Un **tableau de tableaux** :
 
 ```php
 [
     [
-        'id' => 1,
-        'login' => 'alice',
-        'password' => '...',
-        'created_at' => '...'
+        `id` => 1,
+        `login` => `alice`,
+        `password` => `...`,
+        `created_at` => `...`
     ],
     [
-        'id' => 2,
-        'login' => 'bob',
-        'password' => '...',
-        'created_at' => '...'
+        `id` => 2,
+        `login` => `bob`,
+        `password` => `...`,
+        `created_at` => `...`
     ],
     [
-        'id' => 3,
-        'login' => 'charlie',
-        'password' => '...',
-        'created_at' => '...'
+        `id` => 3,
+        `login` => `charlie`,
+        `password` => `...`,
+        `created_at` => `...`
     ]
 ]
 ```
@@ -182,12 +182,12 @@ On peut le parcourir avec une **boucle foreach**.
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 $login = "alice";
 
 $stmt = $pdo->prepare("SELECT * FROM users WHERE login = :login");
-$stmt->execute([':login' => $login]);
+$stmt->execute([`:login` => $login]);
 $user = $stmt->fetch();
 
 if ($user) {
@@ -204,10 +204,10 @@ if ($user) {
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 $stmt = $pdo->prepare("SELECT * FROM users WHERE created_at > :date");
-$stmt->execute([':date' => '2025-01-01']);
+$stmt->execute([`:date` => `2025-01-01`]);
 $users = $stmt->fetchAll();
 
 foreach ($users as $user) {
@@ -224,7 +224,7 @@ foreach ($users as $user) {
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 $stmt = $pdo->prepare("SELECT * FROM users");
 $stmt->execute();
@@ -242,13 +242,13 @@ echo "Il y a " . $nombre . " utilisateurs.";
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 $stmt = $pdo->prepare("SELECT COUNT(*) as total FROM users");
 $stmt->execute();
 $result = $stmt->fetch();
 
-echo "Il y a " . $result['total'] . " utilisateurs.";
+echo "Il y a " . $result[`total`] . " utilisateurs.";
 ?>
 ```
 
@@ -262,7 +262,7 @@ Pour récupérer seulement **les 5 premiers** utilisateurs :
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 $stmt = $pdo->prepare("SELECT * FROM users LIMIT 5");
 $stmt->execute();
@@ -282,7 +282,7 @@ Pour trier par ordre alphabétique :
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 // Ordre croissant (A → Z)
 $stmt = $pdo->prepare("SELECT * FROM users ORDER BY login ASC");
@@ -300,25 +300,25 @@ foreach ($users as $user) {
 
 ---
 
-## 🎨 Exemple complet : Recherche d'utilisateur
+## 🎨 Exemple complet : Recherche d`utilisateur
 
 Voici un exemple avec un formulaire de recherche :
 
 ```php
 <?php
-require 'config.php';
+require `config.php`;
 
 $resultats = [];
-$recherche = '';
+$recherche = ``;
 
 // Si le formulaire est soumis
-if (isset($_GET['recherche'])) {
-    $recherche = trim($_GET['recherche']);
+if (isset($_GET[`recherche`])) {
+    $recherche = trim($_GET[`recherche`]);
 
     if (!empty($recherche)) {
         // Recherche avec LIKE (recherche partielle)
         $stmt = $pdo->prepare("SELECT * FROM users WHERE login LIKE :recherche");
-        $stmt->execute([':recherche' => '%' . $recherche . '%']);
+        $stmt->execute([`:recherche` => `%` . $recherche . `%`]);
         $resultats = $stmt->fetchAll();
     }
 }
@@ -327,10 +327,10 @@ if (isset($_GET['recherche'])) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Recherche d'utilisateurs</title>
+    <title>Recherche d`utilisateurs</title>
 </head>
 <body>
-    <h1>🔍 Recherche d'utilisateurs</h1>
+    <h1>🔍 Recherche d`utilisateurs</h1>
 
     <!-- Formulaire de recherche -->
     <form method="GET" action="">
@@ -375,13 +375,13 @@ if (isset($_GET['recherche'])) {
 
 ```sql
 -- Commence par "al"
-WHERE login LIKE 'al%'     → alice, alfred
+WHERE login LIKE `al%`     → alice, alfred
 
 -- Contient "ob"
-WHERE login LIKE '%ob%'    → bob, roberto
+WHERE login LIKE `%ob%`    → bob, roberto
 
 -- Termine par "ce"
-WHERE login LIKE '%ce'     → alice, bruce
+WHERE login LIKE `%ce`     → alice, bruce
 ```
 
 ---
@@ -426,7 +426,7 @@ WHERE login LIKE '%ce'     → alice, bruce
    - Colonne 1 : ID
    - Colonne 2 : Login
    - Colonne 3 : Date de création
-4. Affiche le nombre total d'utilisateurs en bas
+4. Affiche le nombre total d`utilisateurs en bas
 
 **Bonus :**
 - Ajoute un tri par ordre alphabétique
@@ -437,17 +437,17 @@ WHERE login LIKE '%ce'     → alice, bruce
 
 ## ⏭️ Dans le prochain cours...
 
-Maintenant qu'on sait LIRE et INSÉRER des données, on va apprendre la **SÉCURITÉ DES MOTS DE PASSE** !
+Maintenant qu`on sait LIRE et INSÉRER des données, on va apprendre la **SÉCURITÉ DES MOTS DE PASSE** !
 
 On va voir :
 - Pourquoi on ne stocke JAMAIS un mot de passe en clair
 - Comment hasher un mot de passe avec `password_hash()`
 - Comment vérifier un mot de passe avec `password_verify()`
 
-**C'est CRUCIAL pour la sécurité ! 🔐**
+**C`est CRUCIAL pour la sécurité ! 🔐**
 
 ---
 
 **📖 Bien joué ! Tu sais maintenant lire des données avec PDO !**
 
-*PS : N'oublie pas de faire l'exercice ! C'est en pratiquant qu'on progresse ! 💪*
+*PS : N`oublie pas de faire l`exercice ! C`est en pratiquant qu`on progresse ! 💪*
