@@ -184,6 +184,28 @@ const coursesData = {
                 ]
             },
             {
+                id: 'pdo-auth',
+                number: '09.5',
+                title: 'PDO & Authentification',
+                icon: '🔐',
+                level: 'intermédiaire',
+                levelBadge: '🟡 INTERMÉDIAIRE',
+                estimatedTime: '8h',
+                prerequisites: ['06', '08'],
+                description: 'Apprends à sécuriser tes applications avec PDO et les sessions',
+                lessons: [
+                    { id: 'plan-cours', title: '📋 Plan du cours', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/00_PLAN_DE_COURS.md', duration: '10 min' },
+                    { id: 'intro-pdo', title: `C'est quoi PDO ?`, file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/01_introduction_pdo.md', duration: '30 min' },
+                    { id: 'connexion-bdd', title: 'Se connecter à une base', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/02_connexion_base_donnees.md', duration: '45 min' },
+                    { id: 'inserer-donnees', title: 'Insérer des données (INSERT)', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/03_inserer_donnees.md', duration: '1h' },
+                    { id: 'lire-donnees', title: 'Lire des données (SELECT)', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/04_lire_donnees.md', duration: '45 min' },
+                    { id: 'securite-mdp', title: 'Sécurité des mots de passe', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/05_securite_mots_de_passe.md', duration: '1h' },
+                    { id: 'les-sessions', title: 'Les sessions PHP', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/06_les_sessions.md', duration: '1h' },
+                    { id: 'projet-complet', title: '🏆 Projet complet', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/07_projet_complet_authentification.md', duration: '2h' },
+                    { id: 'projet-detaille', title: '🏆 Projet ultra-détaillé', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/08_PROJET_INSCRIPTION_EXPLIQUE.md', duration: '2h' }
+                ]
+            },
+            {
                 id: 'docker',
                 number: '10',
                 title: 'Docker',
@@ -365,6 +387,28 @@ const coursesData = {
                 ]
             },
             {
+                id: 'pdo-auth',
+                number: '07.5',
+                title: 'PDO & Authentification',
+                icon: '🔐',
+                level: 'intermédiaire',
+                levelBadge: '🟡 INTERMÉDIAIRE',
+                estimatedTime: '8h',
+                prerequisites: ['04', '08'],
+                description: 'Apprends à sécuriser tes applications avec PDO et les sessions',
+                lessons: [
+                    { id: 'plan-cours', title: '📋 Plan du cours', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/00_PLAN_DE_COURS.md', duration: '10 min' },
+                    { id: 'intro-pdo', title: `C'est quoi PDO ?`, file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/01_introduction_pdo.md', duration: '30 min' },
+                    { id: 'connexion-bdd', title: 'Se connecter à une base', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/02_connexion_base_donnees.md', duration: '45 min' },
+                    { id: 'inserer-donnees', title: 'Insérer des données (INSERT)', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/03_inserer_donnees.md', duration: '1h' },
+                    { id: 'lire-donnees', title: 'Lire des données (SELECT)', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/04_lire_donnees.md', duration: '45 min' },
+                    { id: 'securite-mdp', title: 'Sécurité des mots de passe', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/05_securite_mots_de_passe.md', duration: '1h' },
+                    { id: 'les-sessions', title: 'Les sessions PHP', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/06_les_sessions.md', duration: '1h' },
+                    { id: 'projet-complet', title: '🏆 Projet complet', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/07_projet_complet_authentification.md', duration: '2h' },
+                    { id: 'projet-detaille', title: '🏆 Projet ultra-détaillé', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/08_PROJET_INSCRIPTION_EXPLIQUE.md', duration: '2h' }
+                ]
+            },
+            {
                 id: 'docker',
                 number: '08',
                 title: 'Docker',
@@ -543,6 +587,28 @@ const coursesData = {
                     { id: 'git-conflits', title: 'Résoudre des conflits', file: 'GIT/05_Résoudre_des_conflits.md', duration: '30 min' },
                     { id: 'git-github', title: 'Travailler avec GitHub', file: 'GIT/06_Travaille_ avec_ GitHub.md', duration: '30 min' },
                     { id: 'git-equipe', title: 'Collaborer en équipe', file: 'GIT/07_ Collaborer_en_ équipe.md', duration: '35 min' }
+                ]
+            },
+            {
+                id: 'pdo-auth',
+                number: '07.5',
+                title: 'PDO & Authentification',
+                icon: '🔐',
+                level: 'intermédiaire',
+                levelBadge: '🟡 INTERMÉDIAIRE',
+                estimatedTime: '8h',
+                prerequisites: ['04', '08'],
+                description: 'Apprends à sécuriser tes applications avec PDO et les sessions',
+                lessons: [
+                    { id: 'plan-cours', title: '📋 Plan du cours', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/00_PLAN_DE_COURS.md', duration: '10 min' },
+                    { id: 'intro-pdo', title: `C'est quoi PDO ?`, file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/01_introduction_pdo.md', duration: '30 min' },
+                    { id: 'connexion-bdd', title: 'Se connecter à une base', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/02_connexion_base_donnees.md', duration: '45 min' },
+                    { id: 'inserer-donnees', title: 'Insérer des données (INSERT)', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/03_inserer_donnees.md', duration: '1h' },
+                    { id: 'lire-donnees', title: 'Lire des données (SELECT)', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/04_lire_donnees.md', duration: '45 min' },
+                    { id: 'securite-mdp', title: 'Sécurité des mots de passe', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/05_securite_mots_de_passe.md', duration: '1h' },
+                    { id: 'les-sessions', title: 'Les sessions PHP', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/06_les_sessions.md', duration: '1h' },
+                    { id: 'projet-complet', title: '🏆 Projet complet', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/07_projet_complet_authentification.md', duration: '2h' },
+                    { id: 'projet-detaille', title: '🏆 Projet ultra-détaillé', file: '../PHP-INTERMEDIAIRE-AUTHENTIFICATION 🔐/08_PROJET_INSCRIPTION_EXPLIQUE.md', duration: '2h' }
                 ]
             },
             {
